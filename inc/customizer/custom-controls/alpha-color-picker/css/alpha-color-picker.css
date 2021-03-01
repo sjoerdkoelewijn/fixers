@@ -1,0 +1,12 @@
+.customize-control-roxtar-color .wp-picker-open+.wp-picker-input-wrap {
+	display: inline-flex;
+}
+
+.customize-control-roxtar-color .roxtar-color-picker-alpha.wp-color-picker {
+	max-width: 96px;
+	line-height: 17px;
+}
+
+.customize-control-roxtar-color .wp-picker-clear {
+	margin-left: 2%;
+}
