@@ -82,6 +82,13 @@ class Roxtar_Get_CSS {
 				--page-header-padding-bottom:'. esc_attr( $options['page_header_padding_bottom']) . 'px' .';
 				--page-header-margin-bottom:'. esc_attr( $options['page_header_margin_bottom']) . 'px' .';
 
+				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
+				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
+				--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
+				--header-size-4: '. esc_attr( ($options['heading_h4_font_size']) / 10) . 'rem' .';
+				--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
+				--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
+
 			} 
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
@@ -581,30 +588,7 @@ class Roxtar_Get_CSS {
 				line-height: ' . esc_attr( $options['heading_line_height'] ) . ';
 				color: ' . esc_attr( $options['heading_color'] ) . ';
 			}
-			h1,
-			.has-roxtar-heading-1-font-size{
-				font-size: ' . esc_attr( $options['heading_h1_font_size'] ) . 'px;
-			}
-			h2,
-			.has-roxtar-heading-2-font-size{
-				font-size: ' . esc_attr( $options['heading_h2_font_size'] ) . 'px;
-			}
-			h3,
-			.has-roxtar-heading-3-font-size{
-				font-size: ' . esc_attr( $options['heading_h3_font_size'] ) . 'px;
-			}
-			h4,
-			.has-roxtar-heading-4-font-size{
-				font-size: ' . esc_attr( $options['heading_h4_font_size'] ) . 'px;
-			}
-			h5,
-			.has-roxtar-heading-5-font-size{
-				font-size: ' . esc_attr( $options['heading_h5_font_size'] ) . 'px;
-			}
-			h6,
-			.has-roxtar-heading-6-font-size{
-				font-size: ' . esc_attr( $options['heading_h6_font_size'] ) . 'px;
-			}
+			
 
 			.product-loop-meta .price,
 			.variations label,
