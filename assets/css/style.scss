@@ -160,6 +160,8 @@ button, .button, .wp-block-button__link {
     text-decoration:none;
     cursor: pointer;
     border:0;
+
+    font-size:95%;
     
     svg {
         path {
@@ -300,7 +302,7 @@ form {
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
 }
 
-.wp-block-group.alignfull, .wp-block-cover.alignfull  {
+.wp-block-group.alignfull, .wp-block-cover.alignfull {
 
     .wp-block-group__inner-container, .wp-block-cover__inner-container > * { // Make all child elements the default width
 
@@ -320,6 +322,16 @@ form {
   img {
     width:100%;
   }
+}
+
+
+.wp-block-kioken-rowlayout {
+  padding:1em;
+}
+
+.wp-block-kioken-rowlayout.alignfull {
+  width:100vw;
+  padding:1em;
 }
 
 
@@ -1196,8 +1208,111 @@ form.woocommerce-checkout {
 
 
 
+/*************************** Reusable Block - Product Categories **********************************/
+
+.product_category_row {
+  width:100%;
+  overflow-x:scroll;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  //scroll-padding-right:40px;
+  scroll-snap-type: y mandatory;
 
 
+  // overwrite default kioken style
+  @media (max-width: 766px) {
+    .kt-row-column-wrap.kt-mobile-layout-row:not(.kt-has-1-columns) {
+        -ms-flex-direction: row;
+        flex-direction: row; 
+    }
+
+  } 
+
+  &::-webkit-scrollbar-track
+  {
+    background-color: var(--background-color);
+  }
+
+  &::-webkit-scrollbar
+  {
+    height: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: var(--theme-color);
+  }
+
+  .inner-column-1 {
+    padding:0 10px;
+    min-width:300px;
+    
+    @include phone {
+      min-width:220px;
+      max-width:220px;
+    }
+  }
+
+
+  p {
+    font-size:90%;
+  }
+
+  .section_header {
+    font-size:150%;    
+  }
+
+  .kt-gutter-default>.wp-block-kioken-column {
+    margin-right:25px;    
+    
+  }
+
+  .product_category_block {
+    min-width:254px;
+    max-width:300px;
+    scroll-snap-align: start;
+            
+    .kt-inside-inner-col {
+      flex:1;
+      border-radius: var(--border-radius);
+      padding-bottom:20px;
+
+      
+    }
+
+    h1, h2, h3, h4 {
+      font-size:100%;
+      color:var(--background-color);
+      padding:0 18px;
+      line-height: 22px;
+    }
+
+    figure {
+      margin:0;
+      
+      img {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+      }
+    }
+
+    p {
+      font-size:15px;
+      padding:0 20px;
+      line-height: 22px;
+    }
+
+    p a {
+      color:var(--background-color);
+      font-size:90%;
+      
+      font-weight:700;
+      position:absolute;
+      bottom:18px;
+    }
+    
+  }
+
+}
 
 
 
