@@ -1965,7 +1965,7 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 		$search_icon     = apply_filters( 'roxtar_header_search_icon', 'ti-search' );
 		$wishlist_icon   = apply_filters( 'roxtar_header_wishlist_icon', 'ti-heart' );
 		$my_account_icon = apply_filters( 'roxtar_header_my_account_icon', 'ti-user' );
-		$shop_bag_icon   = apply_filters( 'roxtar_header_shop_bag_icon', 'ti-shopping-cart cart-icon-rotate' );
+		$shop_bag_icon   = apply_filters( 'roxtar_header_shop_bag_icon', 'custom-shopping-cart cart-icon-rotate' );
 		?>
 
 		<div class="site-tools">

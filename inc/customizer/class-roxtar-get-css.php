@@ -646,9 +646,6 @@ class Roxtar_Get_CSS {
 				color: ' . esc_attr( $options['accent_color'] ) . ';
 			}
 
-			.roxtar-icon-bar span{
-				background-color: ' . esc_attr( $options['accent_color'] ) . ';
-			}
 		';
 
 		// Buttons.
@@ -754,7 +751,7 @@ class Roxtar_Get_CSS {
 				}
 
 				.has-header-transparent .active .primary-navigation > li > a {
-					color: ' . esc_attr( $options['theme_color'] ) . ';
+					color: ' . esc_attr( $options['text_color'] ) . ';
 
 				}
 
