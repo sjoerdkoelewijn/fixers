@@ -756,7 +756,7 @@ class Roxtar_Get_CSS {
 				}
 
 				.has-header-transparent .active .site-tools .tools-icon {
-					color: ' . esc_attr( $options['theme_color'] ) . ';
+					color: ' . esc_attr( $options['text_color'] ) . ';
 				}
 			';
 		}
