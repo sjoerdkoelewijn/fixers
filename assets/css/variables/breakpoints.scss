@@ -46,3 +46,9 @@ $large-uhd-width: 3840px;
         @content;
     }
 }
+
+@mixin uhd {
+    @media (min-width: #{$small-uhd-width}) {
+        @content;
+    }
+}

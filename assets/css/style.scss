@@ -348,6 +348,10 @@ form {
   max-width:var(--content-width);
   margin:0 auto;
 
+  @include uhd {
+    max-width:calc(var(--content-width) * 1.2);
+  }
+
   @include phone {
     max-width:90vw;
   }
@@ -362,6 +366,10 @@ form {
     margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
 
+    @include uhd {
+      margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
+    }
+
     @include phone {
       margin-left:-5vw !important;
     }
@@ -374,6 +382,9 @@ form {
         max-width:var(--content-width);
         margin:0 auto;
         
+        @include uhd {
+          max-width:calc(var(--content-width) * 1.2);
+        }
     }
 
 }
@@ -1310,6 +1321,10 @@ form.woocommerce-checkout {
     background-color: var(--theme-color);
   }
 
+  .kio-row-layout-inner {
+    margin: 0 auto;
+  }
+
   .inner-column-1 {
     padding:0 10px;
     min-width:300px;
@@ -1495,6 +1510,12 @@ form.woocommerce-checkout {
     align-items: flex-start;
     width:var(--content-width);
     max-width:100%;
+
+    @include uhd {
+      width:calc(var(--content-width) * 1.2);
+
+    } 
+    
     
   }
 
@@ -1505,6 +1526,10 @@ form.woocommerce-checkout {
   .content-align-right {
     align-items: flex-end;
     width:var(--content-width);
+
+    @include uhd {
+      width:calc(var(--content-width) * 1.2);
+    }
   }
 
   .content-align-justify {
@@ -2126,8 +2151,6 @@ form.woocommerce-checkout {
 
   h1, h2, h3, h4, h5, h6 {
     color:var(--footer-heading-color);
-    font-size:1.2rem;
-    font-weight: 700;
   }
 
   .site-footer-widget {
@@ -2136,6 +2159,10 @@ form.woocommerce-checkout {
     margin:0 auto;
     display:flex;
     padding:70px 0;
+
+    @include uhd {
+      width:calc(var(--content-width) * 1.2);
+    }
 
     @include phone {
       flex-direction: column;
