@@ -759,10 +759,10 @@ if ( ! function_exists( 'roxtar_wishlist_page_url' ) ) {
 
 
 
-/* remove custom_permalink from backend url box */
+/* remove bwlm-shop from backend url box and replace with product - Permalink Manager for WooCommerce */
 
 function custom_frontend_url( $permalink, $post ) { 
-	$custom_permalink = str_replace( '/roxtar_custom_permalink', '',  $permalink );
+	$custom_permalink = str_replace( '/bwlm-shop', '/products',  $permalink );
 
 	return $custom_permalink; 
 } 
