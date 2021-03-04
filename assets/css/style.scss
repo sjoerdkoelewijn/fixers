@@ -700,7 +700,8 @@ form {
   .site_header.active { 
     position: fixed;
     top: 0;
-    margin-top:0; 
+    margin-top:0;
+    border-top:none; 
 
     .site_header_inner {
       background-color:var(--header-background-color);    
