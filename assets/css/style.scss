@@ -419,13 +419,15 @@ form {
 }
 
 
-.wp-block-kioken-rowlayout {
-  padding:1em;
-}
-
 .wp-block-kioken-rowlayout.alignfull {
   width:100vw;
   padding:1em;
+}
+
+@include phone {
+  .wp-block-kioken-rowlayout {
+    padding:1em;
+  }
 }
 
 

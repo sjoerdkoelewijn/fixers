@@ -2008,7 +2008,7 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 
 						<?php } else { ?>
 
-							<a href="<?php _e( '/register/', 'roxtar' ) ?>" class="tools-icon my-account-icon <?php echo esc_attr( $my_account_icon ); ?>"></a>
+							<a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>" class="tools-icon my-account-icon <?php echo esc_attr( $my_account_icon ); ?>"></a>
 
 						<?php } ?>
 						
@@ -2023,7 +2023,7 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 										$login_reg_button = '<a href="' . get_permalink( $page_account_id ) . '" class="text-center">' . esc_html__( 'Login / Register', 'roxtar' ) . '</a>';
 										?>
 										<li>
-											<a href="<?php _e( '/register/', 'roxtar' ) ?>"><?php _e( 'Become a client', 'roxtar' ) ?></a>
+											<a href="<?php _e( '/register/', 'roxtar' ) ?>"><?php _e( 'Register', 'roxtar' ) ?></a>
 										</li>
 										<?php
 									} else {
