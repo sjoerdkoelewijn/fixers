@@ -1892,7 +1892,8 @@ if ( ! function_exists( 'roxtar_sidebar_menu_action' ) ) {
 				<?php do_action( 'roxtar_sidebar_account_top' ); ?>
 
 				<?php if ( ! is_user_logged_in() ) : ?>
-					<li><a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>"><?php esc_html_e( 'Login / Register', 'roxtar' ); ?></a></li>
+					<li><a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>"><?php esc_html_e( 'Login', 'roxtar' ); ?></a></li>
+					<li><a href="/register/"><?php esc_html_e( 'Register', 'roxtar' ); ?></a></li>
 				<?php else : ?>
 					<li>
 						<a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>"><?php esc_html_e( 'Dashboard', 'roxtar' ); ?></a>
@@ -2020,7 +2021,7 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 									do_action( 'roxtar_header_account_subbox_start' );
 
 									if ( ! is_user_logged_in() ) {
-										$login_reg_button = '<a href="' . get_permalink( $page_account_id ) . '" class="text-center">' . esc_html__( 'Login / Register', 'roxtar' ) . '</a>';
+										$login_reg_button = '<a href="' . get_permalink( $page_account_id ) . '" class="text-center">' . esc_html__( 'Login', 'roxtar' ) . '</a>';
 										?>
 										<li>
 											<a href="<?php _e( '/register/', 'roxtar' ) ?>"><?php _e( 'Register', 'roxtar' ) ?></a>
