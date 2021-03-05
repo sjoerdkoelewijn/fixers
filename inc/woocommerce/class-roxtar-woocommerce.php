@@ -123,7 +123,8 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 				add_action( 'wp', 'custom_rank_math_the_breadcrumbs' );	
 				add_action( 'roxtar_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
 				add_filter( 'woocommerce_breadcrumb_defaults', 'roxtar_modifided_woocommerce_breadcrumb' );
-				add_filter( 'woocommerce_get_breadcrumb', 'roxtar_get_modifided_woocommerce_breadcrumb' );	
+				add_filter( 'woocommerce_get_breadcrumb', 'roxtar_get_modifided_woocommerce_breadcrumb' );
+				
 
 			} else {
 

@@ -2001,7 +2001,17 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 					$subbox = apply_filters( 'roxtar_header_account_subbox', true );
 					?>
 					<div class="tools-icon my-account">
-						<a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>" class="tools-icon my-account-icon <?php echo esc_attr( $my_account_icon ); ?>"></a>
+
+						<?php if(is_user_logged_in()) { ?>
+
+							<a href="<?php echo esc_url( get_permalink( $page_account_id ) ); ?>" class="tools-icon my-account-icon <?php echo esc_attr( $my_account_icon ); ?>"></a>
+
+						<?php } else { ?>
+
+							<a href="<?php _e( '/register/', 'roxtar' ) ?>" class="tools-icon my-account-icon <?php echo esc_attr( $my_account_icon ); ?>"></a>
+
+						<?php } ?>
+						
 
 						<?php if ( $subbox ) { ?>
 							<div class="subbox">
@@ -2012,7 +2022,9 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 									if ( ! is_user_logged_in() ) {
 										$login_reg_button = '<a href="' . get_permalink( $page_account_id ) . '" class="text-center">' . esc_html__( 'Login / Register', 'roxtar' ) . '</a>';
 										?>
-										<li><?php echo wp_kses_post( apply_filters( 'roxtar_header_account_subbox_login_register_link', $login_reg_button ) ); ?></li>
+										<li>
+											<a href="<?php _e( '/register/', 'roxtar' ) ?>"><?php _e( 'Become a client', 'roxtar' ) ?></a>
+										</li>
 										<?php
 									} else {
 										$dasboard = '<a href="' . get_permalink( $page_account_id ) . '">' . esc_html__( 'Dashboard', 'roxtar' ) . '</a>';
