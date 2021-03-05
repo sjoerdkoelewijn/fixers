@@ -5907,64 +5907,7 @@
     font-size: 18px;
   }
   
-  #commentform {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 33px;
-  }
-  
-  #commentform #comment {
-    flex-basis: 100%;
-    border: 1px solid var(--line-color);
-    padding: 15px;
-    height: 200px;
-    font-size: 12px;
-    margin-bottom: 20px;
-    resize: none;
-    border-radius: 2px;
-  }
-  
-  #commentform #comment:focus {
-    border-color: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  #commentform #email,
-  #commentform #author {
-    flex: 5;
-    height: 50px;
-    border: 1px solid var(--line-color);
-    padding: 0 15px;
-    font-size: 12px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-  }
-  
-  #commentform #email:focus,
-  #commentform #author:focus {
-    border-color: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  #commentform #author {
-    margin-right: 20px;
-  }
-  
-  #commentform .form-submit {
-    flex-basis: 100%;
-    margin-bottom: 0;
-  }
-  
-  #commentform input[type="submit"] {
-    height: 50px;
-    padding: 0 15px;
-    border: 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    min-width: 130px;
-  }
+
   
   #respond .logged-in-as a:hover {
     text-decoration: underline;
