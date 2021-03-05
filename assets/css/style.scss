@@ -254,6 +254,12 @@ h6, .has-roxtar-heading-6-font-size{
   border-left: .25em solid var(--text-color);
 }
 
+@include phone {
+  .has-custom-size {
+    font-size:80%;
+  }
+}
+
 
 /*************************** Forms  **********************************/
 
