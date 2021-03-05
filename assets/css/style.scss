@@ -1,7 +1,9 @@
 @import "variables/breakpoints";
 @import "variables/original";
 
-
+:root {
+  --scrollbar-width:17px;
+}
 
 /*************************** Global Styles **********************************/
 
@@ -245,7 +247,7 @@ h6, .has-roxtar-heading-6-font-size{
 
 
 .has-drop-cap:not(:focus):first-letter {
-  font-size: 4.4em;  
+  font-size: 4.4em !important;  
 }
 
 .wp-block-quote {
@@ -356,7 +358,7 @@ form {
 .site_content {
   max-width:var(--content-width);
   margin:0 auto;
-
+ 
   @include uhd {
     max-width:calc(var(--content-width) * 1.2);
   }
@@ -365,6 +367,10 @@ form {
     max-width:90vw;
   }
  
+}
+
+.site-main > * > * {
+  padding:0 1em;
 }
 
 /*************************** Block editor - block styles **********************************/
@@ -382,7 +388,7 @@ form {
     width:100vw;
     margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
-
+    
     @include uhd {
       margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
     }
@@ -427,6 +433,20 @@ form {
 @include phone {
   .wp-block-kioken-rowlayout {
     padding:1em;
+  }
+}
+
+.wp-block-embed .wp-block-embed__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
   }
 }
 
@@ -491,12 +511,13 @@ form {
 
   .topbar_inner {
     width:var(--header-width);
-    max-width:calc(100vw - var(--scrollbar-width));
+    //max-width:calc(100vw - var(--scrollbar-width));
+    max-width:100%;
     margin:0 auto;
     display:flex;
     justify-content:space-between;
     padding-left:var(--content-spacing);
-    padding-right:var(--content-spacing);
+    padding-right:calc(var(--content-spacing) + var(--scrollbar-width));
 
     font-size:80%;
 
@@ -746,6 +767,12 @@ form {
 
   }
   
+}
+
+.page-header {
+  .content-align-left {
+    padding:0 1em;
+  }
 }
 
 
