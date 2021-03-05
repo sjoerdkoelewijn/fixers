@@ -40,8 +40,7 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_scripts' ), 200 );
 			add_filter( 'body_class', array( $this, 'woocommerce_body_class' ) );
 
-			// GENERAL.
-			add_action( 'wp', 'roxtar_breadcrumb_for_product_page' );
+			// GENERAL.			
 			add_action( 'init', 'roxtar_detect_clear_cart_submit' );
 			add_filter( 'loop_shop_columns', 'roxtar_products_per_row' );
 			add_filter( 'loop_shop_per_page', 'roxtar_products_per_page' );
@@ -67,9 +66,7 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			// Update checkout.
 			add_action( 'wp_ajax_update_checkout', 'roxtar_ajax_update_checkout' );
 			add_action( 'wp_ajax_nopriv_update_checkout', 'roxtar_ajax_update_checkout' );
-			// Modified woocommerce breadcrumb.
-			add_filter( 'woocommerce_breadcrumb_defaults', 'roxtar_modifided_woocommerce_breadcrumb' );
-			add_filter( 'woocommerce_get_breadcrumb', 'roxtar_get_modifided_woocommerce_breadcrumb' );
+			
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'roxtar_update_quantity_mini_cart', 10, 3 );
 
@@ -120,12 +117,26 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 
 			add_action( 'woocommerce_after_single_product_summary', 'roxtar_single_product_wrapper_summary_close', 0 );
 
+			// Breadcrumbs
+			if (function_exists('rank_math_the_breadcrumbs')) {				
+				
+				add_action( 'wp', 'custom_rank_math_the_breadcrumbs' );	
+				add_action( 'roxtar_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				add_filter( 'woocommerce_breadcrumb_defaults', 'roxtar_modifided_woocommerce_breadcrumb' );
+				add_filter( 'woocommerce_get_breadcrumb', 'roxtar_get_modifided_woocommerce_breadcrumb' );	
 
+			} else {
 
+				add_action( 'wp', 'roxtar_breadcrumb_for_product_page' );
+				add_action( 'roxtar_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				add_filter( 'woocommerce_breadcrumb_defaults', 'roxtar_modifided_woocommerce_breadcrumb' );
+				add_filter( 'woocommerce_get_breadcrumb', 'roxtar_get_modifided_woocommerce_breadcrumb' );
+
+			}
+			
 			// Archive Page
 
-			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
-			add_action( 'roxtar_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
 
 
 			add_action( 'woocommerce_single_product_summary', 'roxtar_trust_badge_image', 200 );

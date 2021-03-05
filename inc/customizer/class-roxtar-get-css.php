@@ -527,6 +527,7 @@ class Roxtar_Get_CSS {
 			.woocommerce-cart-form__contents .product-remove a,
 			.comment-body .comment-meta .comment-date,
 			.roxtar-breadcrumb a,
+			.rank-math-breadcrumb a,
 			.breadcrumb-separator,
 			.has-roxtar-text-color,
 			.button.loop-add-to-cart-icon-btn,
@@ -817,7 +818,9 @@ class Roxtar_Get_CSS {
 				}
 
 				.roxtar-breadcrumb,
-				.roxtar-breadcrumb a{
+				.roxtar-breadcrumb a,
+				.rank-math-breadcrumb,
+				.rank-math-breadcrumb a{
 					color: ' . esc_attr( $options['page_header_breadcrumb_text_color'] ) . ';
 					
 				}

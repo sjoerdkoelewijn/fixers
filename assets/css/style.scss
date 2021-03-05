@@ -244,6 +244,15 @@ h6, .has-roxtar-heading-6-font-size{
 }
 
 
+.has-drop-cap:not(:focus):first-letter {
+  font-size: 4.4em;  
+}
+
+.wp-block-quote {
+  border-left: .25em solid var(--text-color);
+}
+
+
 /*************************** Forms  **********************************/
 
 form {
@@ -397,6 +406,7 @@ form {
 .post-cover-image, .entry-image-link {
   img {
     width:100%;
+    max-height:350px;
   }
 }
 
@@ -1082,16 +1092,54 @@ form.woocommerce-checkout {
 /*************************** Breadcrumb **********************************/
 
 
-.roxtar-breadcrumb {
+.roxtar-breadcrumb, .rank-math-breadcrumb {
   font-size:80%;
   
-  a, .delimiter {
+  a, .delimiter, .separator {
     font-weight:700;
+  }
+
+  .delimiter, .separator {
+    margin: 0 5px;
   }
   
 }
 
+  /* Breadcrumb */
+  .single-product .roxtar-breadcrumb {
+    padding-bottom: 20px;
+  }
+  
+  .roxtar-breadcrumb .item-bread {
+    display: inline-block;
+  }
+  
+  .roxtar-breadcrumb.roxtar-theme-breadcrumb .item-bread:after {
+    content: "/";
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+  
+  .roxtar-breadcrumb.roxtar-theme-breadcrumb .item-bread:last-of-type:after {
+    content: none;
+  }
+  
+  @media (max-width: 991px) {
+    .product-summary {
+      margin-top: 50px;
+      width: 100%;
+    }
+    .single-product .roxtar-breadcrumb, .single-product .rank-math-breadcrumb {
+      display: none;
+    }
+  }
 
+  @media (max-width: 991px) {
+    .single-product .wc-breadcrumb, .single-product .rank-math-breadcrumb {
+      text-align: center;
+      padding-bottom: 0;
+    }
+  }
 
 /*************************** Site Header **********************************/
 

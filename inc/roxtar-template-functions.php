@@ -2299,4 +2299,3 @@ if ( ! function_exists( 'roxtar_scroll_to_top' ) ) {
 		<?php
 	}
 }
-

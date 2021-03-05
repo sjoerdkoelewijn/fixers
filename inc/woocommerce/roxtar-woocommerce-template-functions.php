@@ -366,7 +366,7 @@ if ( ! function_exists( 'roxtar_modify_loop_add_to_cart_class' ) ) {
 			( ! in_array( $options['shop_page_add_to_cart_button_position'], array( 'none', 'icon' ), true ) && $options['shop_product_add_to_cart_icon'] ) ||
 			'icon' === $options['shop_page_add_to_cart_button_position']
 		) {
-			$icon_class = apply_filters( 'roxtar_pro_loop_add_to_cart_icon', 'ti-shopping-cart' );
+			$icon_class = apply_filters( 'roxtar_pro_loop_add_to_cart_icon', 'custom-shopping-cart' );
 		}
 
 		if ( 'image' === $options['shop_page_add_to_cart_button_position'] ) {
@@ -480,7 +480,7 @@ if ( ! function_exists( 'roxtar_get_modifided_woocommerce_breadcrumb' ) ) {
 			array_splice( $crumbs, 0, 1, array( $home, $blog ) );
 		} elseif ( roxtar_is_woocommerce_activated() && ( is_product_tag() || is_singular( 'product' ) || is_product_category() ) ) {
 			//For all shop page.
-			array_splice( $crumbs, 0, 1, array( $home, $shop ) );
+			//array_splice( $crumbs, 0, 1, array( $home, $shop ) );
 		} elseif ( is_checkout() ) {
 			//do not show breadcrumb on checkout pages
 			return;
@@ -495,6 +495,16 @@ if ( ! function_exists( 'roxtar_breadcrumb_for_product_page' ) ) {
 	 * Add breadcrumb for Product page
 	 */
 	function roxtar_breadcrumb_for_product_page() {
+		
+	}
+}
+
+
+if ( ! function_exists( 'custom_rank_math_the_breadcrumbs' ) ) {
+	/**
+	 * Custom rankmath breadcrumbs
+	 */
+	function custom_rank_math_the_breadcrumbs() {
 		// Hooked to `roxtar_content_top` only Product page.
 		if ( ! is_singular( 'product' ) ) {
 			return;
@@ -503,14 +513,17 @@ if ( ! function_exists( 'roxtar_breadcrumb_for_product_page' ) ) {
 		$options = roxtar_options( false );
 
 		if ( $options['shop_single_breadcrumb'] ) {
-			add_action( 'roxtar_content_top', 'woocommerce_breadcrumb', 40 );
+			
+			add_action( 'roxtar_content_top', 'rank_math_the_breadcrumbs', 40 );
+			
 		}
 
 		if ( $options['shop_single_product_navigation'] ) {
 			add_action( 'roxtar_content_top', 'roxtar_product_navigation', 50 );
-		}
+		}	
 	}
 }
+
 
 if ( ! function_exists( 'roxtar_related_products_args' ) ) {
 	/**
