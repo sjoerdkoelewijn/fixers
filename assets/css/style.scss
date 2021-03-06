@@ -430,6 +430,10 @@ form {
   padding:0 1em;
 }
 
+.loop-post-inner {
+  padding:0;
+}
+
 /*************************** Block editor - block styles **********************************/
 
 .wp-block-media-text {
@@ -2294,6 +2298,7 @@ form.woocommerce-checkout {
 
 
 .related, .up-sells  {
+  padding:1em;
   
   h2 {
     font-size:100%;
