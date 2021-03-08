@@ -930,7 +930,14 @@ a:hover{
 .has-multi-step-checkout .multi-step-item:after,
 .has-multi-step-checkout .multi-step-item.active:before,
 .roxtar-single-product-stock .roxtar-single-product-stock-progress-bar {
-  background-color: var(--theme-color);
+  background-color: var(--theme-color);  
+}
+
+.has-roxtar-primary-background-color {
+  &:hover {
+    background-color: var(--background-color);
+    color:var(--theme-color);
+  }
 }
 
 .woocommerce-thankyou-order-received,
