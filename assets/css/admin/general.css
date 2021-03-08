@@ -234,7 +234,7 @@ body[class*="roxtar-welcome"] #wpcontent, body[class*="roxtar-options_page"] #wp
 }
 
 
-.forminator-ui input, .forminator-ui select {
+.forminator-ui input, .forminator-ui textarea {
   width:100%;
   background:#fff;
   border: 1px solid #e8e8e8;
