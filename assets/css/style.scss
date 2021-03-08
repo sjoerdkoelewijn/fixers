@@ -1724,7 +1724,7 @@ form.woocommerce-checkout {
   margin: 0;
 
   @include phone {
-    padding:var(--content-spacing);
+    //padding:var(--content-spacing);
 
   }
 
@@ -2162,6 +2162,10 @@ form.woocommerce-checkout {
         //font-size: 18px;
         font-weight:700;
         color:var(--text-color);
+
+        @include phone {
+          font-size: 16px;
+        }
       }    
 
     }
@@ -2169,9 +2173,22 @@ form.woocommerce-checkout {
     .active {
       color:var(--theme-color);
       border-bottom:3px solid var(--theme-color);
+
+      @include phone {
+        border-bottom:0;    
+        
+        a {
+          background:var(--theme-color);
+          color:var(--background-color);
+        }
+      }
+
+
     }
 
   }
+
+  
  
 
 }
@@ -2212,8 +2229,18 @@ form.woocommerce-checkout {
  
   .woocommerce-product-attributes-item__label {
     width:200px;
+
+    @include phone{
+      width:150px;
+    }
   }
 
+}
+
+.woocommerce-product-attributes-item__value {
+  p {
+    margin-top:0;
+  }
 }
 
 .woocommerce-tabs .woocommerce-Tabs-panel > h2:first-child {
