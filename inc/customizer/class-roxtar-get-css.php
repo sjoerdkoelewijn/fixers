@@ -747,6 +747,9 @@ class Roxtar_Get_CSS {
 				.has-header-transparent .sidebar-menu .primary-navigation > li > a {
 					color: ' . esc_attr( $options['text_color'] ) . ';
 				}
+				.has-header-transparent .sidebar-menu .primary-navigation > li > a:hover {
+					color: ' . esc_attr( $options['text_color'] ) . ';
+				}
 				.has-header-transparent .site-tools .tools-icon {
 					color: ' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				}

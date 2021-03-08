@@ -790,6 +790,7 @@ form {
     margin-top:30px;  
     //background:rgba(0, 0, 0, 0.2);
     border-top:1px solid rgba(255, 255, 255, 0.08);
+    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
     
 
     @include phone {
@@ -816,6 +817,11 @@ form {
     top: 0;
     margin-top:0;
     border-top:none; 
+    text-shadow: none;
+
+    .sub-menu {
+      text-shadow: none;
+    }
 
     .site_header_inner {
       background-color:var(--header-background-color);    

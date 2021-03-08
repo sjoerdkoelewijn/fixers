@@ -553,7 +553,7 @@ if ( ! function_exists( 'roxtar_change_woocommerce_arrow_pagination' ) ) {
 	 * @param array $args Woocommerce pagination.
 	 */
 	function roxtar_change_woocommerce_arrow_pagination( $args ) {
-		$args['prev_text'] = __( 'Prev', 'roxtar' );
+		$args['prev_text'] = __( 'Previous', 'roxtar' );
 		$args['next_text'] = __( 'Next', 'roxtar' );
 		return $args;
 	}
