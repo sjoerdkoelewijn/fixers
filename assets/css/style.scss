@@ -479,7 +479,6 @@ form {
 .wp-block-group.has-background {
   padding:30px;
   border-radius:var(--border-radius);
-  text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post-cover-image, .entry-image-link {
@@ -784,7 +783,7 @@ form {
     margin-top:30px;  
     //background:rgba(0, 0, 0, 0.2);
     border-top:1px solid rgba(255, 255, 255, 0.08);
-    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
+    
 
     @include phone {
       margin-top:0;
