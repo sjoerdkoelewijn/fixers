@@ -417,7 +417,7 @@ form {
 
 .site_content {
   max-width:var(--content-width);
-  margin:0 auto;
+  margin:0 var(--content-spacing);
  
   @include uhd {
     max-width:calc(var(--content-width) * 1.2);
@@ -429,9 +429,8 @@ form {
  
 }
 
-.site-main > * > * {
-  padding:0 1em;
-}
+
+
 
 .loop-post-inner {
   padding:0;
@@ -450,7 +449,7 @@ form {
 
 .alignfull {
     width:100vw;
-    margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+    margin-left:calc( (100vw - var(--content-width) / 2) * -1 );
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
     
     @include uhd {
@@ -583,6 +582,10 @@ form {
     padding-left:var(--content-spacing);
     padding-right:calc(var(--content-spacing) + var(--scrollbar-width));
 
+    @include tablet-down {
+      padding-right:var(--content-spacing);
+    }
+
     font-size:80%;
 
     .topbar-item {
@@ -639,8 +642,8 @@ form {
         justify-content: space-between;
         align-items:center;
         width:var(--header-width);
-        max-width:calc(100vw - var(--scrollbar-width)); 
-        padding:var(--content-spacing);
+        max-width:100%; 
+        padding:var(--content-spacing) calc(var(--scrollbar-width) + var(--content-spacing)) var(--content-spacing) var(--content-spacing);
         margin:0 auto;  
         background:var(--header-background-color);
         box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.03);
@@ -648,6 +651,10 @@ form {
         
         @include phone {
           max-width:100vw;
+        }
+
+        @include tablet-down {
+          padding:var(--content-spacing);
         }
         
         .logo {
@@ -2303,7 +2310,6 @@ form.woocommerce-checkout {
 
 
 .related, .up-sells  {
-  padding:1em;
   
   h2 {
     font-size:100%;

@@ -93,7 +93,7 @@ class Roxtar_Get_CSS {
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
 				.alignfull {
-					margin:0;
+					margin:0 0 0 calc(var(--content-spacing) * -1);
 				}
 			}
 
