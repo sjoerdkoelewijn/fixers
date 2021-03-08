@@ -417,7 +417,7 @@ form {
 
 .site_content {
   max-width:var(--content-width);
-  margin:0 var(--content-spacing);
+  margin:0 auto;
  
   @include uhd {
     max-width:calc(var(--content-width) * 1.2);
@@ -449,7 +449,7 @@ form {
 
 .alignfull {
     width:100vw;
-    margin-left:calc( (100vw - var(--content-width) / 2) * -1 );
+    margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
     
     @include uhd {

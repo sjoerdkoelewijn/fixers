@@ -95,6 +95,10 @@ class Roxtar_Get_CSS {
 				.alignfull {
 					margin:0 0 0 calc(var(--content-spacing) * -1);
 				}
+				.site_content {
+					max-width:var(--content-width);
+					margin:0 var(--content-spacing);
+				}
 			}
 
 			
