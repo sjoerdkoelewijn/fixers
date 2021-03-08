@@ -207,6 +207,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			 */
 			add_theme_support( 'post-thumbnails' );
 
+
 			// Post formats.
 			add_theme_support(
 				'post-formats',
@@ -267,11 +268,11 @@ if ( ! class_exists( 'Roxtar' ) ) {
 						'gallery',
 						'caption',
 						'widgets',
+						'script',
+						'style',
 					)
 				)
 			);
-
-
 
 			/**
 			 * Declare support for title theme feature.
