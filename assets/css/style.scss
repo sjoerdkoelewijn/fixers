@@ -424,7 +424,8 @@ form {
   }
 
   @include phone {
-    max-width:90vw;
+    max-width:90vw !important;
+    margin: 0 auto !important;
   }
  
 }
@@ -848,11 +849,6 @@ form {
   
 }
 
-.page-header {
-  .content-align-left {
-    padding:0 1em;
-  }
-}
 
 
 @media (min-width: 992px) {
@@ -1235,6 +1231,12 @@ form.woocommerce-checkout {
   
   .roxtar-breadcrumb .item-bread {
     display: inline-block;
+  }
+
+  @include phone {
+    .roxtar-breadcrumb .item-bread:last-of-type { 
+      display: none;
+    }
   }
   
   .roxtar-breadcrumb.roxtar-theme-breadcrumb .item-bread:after {
@@ -1725,7 +1727,6 @@ form.woocommerce-checkout {
 
   @include phone {
     //padding:var(--content-spacing);
-
   }
 
   .product {
@@ -2396,6 +2397,13 @@ form.woocommerce-checkout {
 
   .summary-text {
     padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
+  }
+}
+
+.single-post {
+  .entry-meta {
+    font-size:80%;
+    font-weight:700;
   }
 }
 
