@@ -374,8 +374,8 @@ if ( ! function_exists( 'roxtar_site_branding' ) ) {
 			if ( ! empty( $transparent_logo_src ) ) {
 				?>
 					<a class="custom-transparent-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
-						<img class="custom-transparent-logo" src="<?php echo esc_url( $transparent_logo_src ); ?>" alt="<?php echo esc_attr( 'Logo transparent' ); ?>" itemprop="logo">
-						<img class="normal-logo-active" src="<?php echo $normal_logo[0]; ?>" alt="<?php echo esc_attr( 'Logo' ); ?>" itemprop="logo">
+						<img width="95px" height="61px" class="custom-transparent-logo" src="<?php echo esc_url( $transparent_logo_src ); ?>" alt="<?php echo esc_attr( 'Logo transparent' ); ?>" itemprop="logo">
+						<img width="95px" height="61px" class="normal-logo-active" src="<?php echo $normal_logo[0]; ?>" alt="<?php echo esc_attr( 'Logo' ); ?>" itemprop="logo">
 					</a>
 				<?php
 			} else {
