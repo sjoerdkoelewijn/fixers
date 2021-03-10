@@ -1771,7 +1771,7 @@ if ( ! function_exists( 'roxtar_sidebar_class' ) ) {
 			$dokan_store_sidebar = true;
 		}
 
-		if ( roxtar_is_elementor_page() || is_404() || $dokan_store_sidebar || ( class_exists( 'woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) ) {
+		if (is_404() || ( class_exists( 'woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) ) {
 			return $sidebar;
 		}
 
@@ -1810,7 +1810,7 @@ if ( ! function_exists( 'roxtar_get_sidebar' ) ) {
 			$dokan_store_sidebar = true;
 		}
 
-		if ( false !== strpos( $sidebar, 'no-sidebar' ) || ! $sidebar || roxtar_is_elementor_page() || $dokan_store_sidebar ) {
+		if ( false !== strpos( $sidebar, 'no-sidebar' ) || ! $sidebar ) {
 			return;
 		}
 

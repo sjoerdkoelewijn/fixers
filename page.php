@@ -12,11 +12,6 @@
 
 get_header();
 
-if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_location( 'single' ) && roxtar_elementor_has_location( 'single' ) ) {
-	$frontend = new \Elementor\Frontend();
-	echo $frontend->get_builder_content_for_display( get_the_ID(), true ); // phpcs:ignore
-	wp_reset_postdata();
-} else {
 	?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
@@ -42,6 +37,6 @@ if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_loca
 	<?php
 
 	do_action( 'roxtar_sidebar' );
-}
+
 
 get_footer();

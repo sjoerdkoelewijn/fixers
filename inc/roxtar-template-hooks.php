@@ -118,19 +118,8 @@ add_action( 'roxtar_page', 'roxtar_page_content', 20 );
 add_action( 'roxtar_page_after', 'roxtar_display_comments', 10 );
 
 
-/**
- * Elementor
- */
 
 // Template builder. See inc/roxtar-template-builder.php.
 add_action( 'roxtar_theme_single', 'roxtar_template_single' );
 add_action( 'roxtar_theme_archive', 'roxtar_template_archive' );
 add_action( 'roxtar_theme_404', 'roxtar_template_404' );
-
-// Add Cart sidebar for Page using Elementor Canvas.
-if ( roxtar_is_woocommerce_activated() ) {
-	add_action( 'elementor/page_templates/canvas/after_content', 'roxtar_woocommerce_cart_sidebar', 20 );
-}
-add_action( 'elementor/page_templates/canvas/after_content', 'roxtar_overlay', 30 );
-add_action( 'elementor/page_templates/canvas/after_content', 'roxtar_footer_action', 40 );
-add_action( 'elementor/page_templates/canvas/after_content', 'roxtar_dialog_search', 50 );

@@ -117,7 +117,7 @@ class Roxtar_Get_CSS {
 		if ( $logo_width && $logo_width > 0 ) {
 			$styles .= '
 				@media ( min-width: 769px ) {
-					.elementor .site-branding img,
+					
 					.site-branding img{
 						max-width: ' . esc_attr( $logo_width ) . 'px;
 					}
@@ -128,7 +128,7 @@ class Roxtar_Get_CSS {
 		if ( $tablet_logo_width && $tablet_logo_width > 0 ) {
 			$styles .= '
 				@media ( min-width: 481px ) and ( max-width: 768px ) {
-					.elementor .site-branding img,
+					
 					.site-branding img{
 						max-width: ' . esc_attr( $tablet_logo_width ) . 'px;
 					}
@@ -139,7 +139,7 @@ class Roxtar_Get_CSS {
 		if ( $mobile_logo_width && $mobile_logo_width > 0 ) {
 			$styles .= '
 				@media ( max-width: 480px ) {
-					.elementor .site-branding img,
+					
 					.site-branding img{
 						max-width: ' . esc_attr( $mobile_logo_width ) . 'px;
 					}
@@ -546,10 +546,7 @@ class Roxtar_Get_CSS {
 				background-color: ' . esc_attr( $options['text_color'] ) . ';
 			}
 
-			.elementor-add-to-cart .quantity {
-				border: 1px solid ' . esc_attr( $options['text_color'] ) . ';
-			}
-
+		
 			.product .woocommerce-loop-product__title{
 				font-size: ' . esc_attr( $options['body_font_size'] ) . 'px;
 			}
@@ -613,8 +610,7 @@ class Roxtar_Get_CSS {
 			.wc-breadcrumb .roxtar-breadcrumb,
 			.sidebar-menu .primary-navigation .arrow-icon,
 			
-			.roxtar-subscribe-form input,
-			.roxtar-shop-category .elementor-widget-image .widget-image-caption,
+			.roxtar-subscribe-form input,			
 			.shop_table_responsive td:before,
 			.dialog-search-title,
 			.cart-collaterals th,

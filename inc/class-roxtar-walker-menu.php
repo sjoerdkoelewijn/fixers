@@ -45,7 +45,6 @@ if ( ! class_exists( 'Roxtar_Walker_Menu' ) ) {
 				$classes[] = 'menu-item-has-children';
 				$classes[] = 'menu-item-has-mega-menu';
 				$classes[] = 'has-mega-menu-' . $this->megamenu_width . '-width';
-				$classes[] = roxtar_is_elementor_page( $item->object_id ) ? 'mega-menu-elementor' : '';
 			}
 			$classes = array_filter( $classes );
 
@@ -109,13 +108,7 @@ if ( ! class_exists( 'Roxtar_Walker_Menu' ) ) {
 			if ( 'mega_menu' === $item->object && 0 === $depth ) {
 				$item_output .= '<ul class="sub-mega-menu">';
 				$item_output .= '<div class="mega-menu-wrapper">';
-
-				if ( roxtar_is_elementor_page( $item->object_id ) ) {
-					$frontend     = new \Elementor\Frontend();
-					$item_output .= $frontend->get_builder_content_for_display( $item->object_id, true );
-					wp_enqueue_style( 'elementor-frontend' );
-					wp_reset_postdata();
-				} else {
+			
 					$mega_args = array(
 						'p'                   => $item->object_id,
 						'post_type'           => 'mega_menu',
@@ -140,7 +133,7 @@ if ( ! class_exists( 'Roxtar_Walker_Menu' ) ) {
 						// Reset post data.
 						wp_reset_postdata();
 					}
-				}
+				
 
 				$item_output .= '</div>';
 				$item_output .= '</ul>';

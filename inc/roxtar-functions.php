@@ -64,49 +64,6 @@ if ( ! function_exists( 'roxtar_is_woocommerce_activated' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_is_elementor_activated' ) ) {
-	/**
-	 * Check Elementor active
-	 *
-	 * @return     bool
-	 */
-	function roxtar_is_elementor_activated() {
-		return defined( 'ELEMENTOR_VERSION' );
-	}
-}
-
-if ( ! function_exists( 'roxtar_is_elementor_page' ) ) {
-	/**
-	 * Detect Elementor Page editor with current page
-	 *
-	 * @param int $page_id The page id.
-	 * @return     bool
-	 */
-	function roxtar_is_elementor_page( $page_id = false ) {
-		if ( ! roxtar_is_elementor_activated() ) {
-			return false;
-		}
-
-		if ( ! $page_id ) {
-			$page_id = roxtar_get_page_id();
-		}
-
-		$edit_mode = get_post_meta( $page_id, '_elementor_edit_mode', true );
-		$edit_mode = 'builder' === $edit_mode ? true : false;
-
-		// Priority first.
-		if ( 'mega_menu' === get_post_type( $page_id ) ) {
-			return $edit_mode;
-		}
-
-		if ( ! $page_id || is_tax() || is_singular( 'product' ) ) {
-			$edit_mode = false;
-		}
-
-		return $edit_mode;
-	}
-}
-
 if ( ! function_exists( 'roxtar_get_product_id' ) ) {
 	/**
 	 * Get product id
@@ -124,72 +81,9 @@ if ( ! function_exists( 'roxtar_get_product_id' ) ) {
 			}
 		}
 
-		$product_id = roxtar_is_elementor_editor() ? $last_product_id : roxtar_get_page_id();
+		$product_id = roxtar_get_page_id();
 
 		return apply_filters( 'roxtar_get_product_id', $product_id );
-	}
-}
-
-if ( ! function_exists( 'roxtar_elementor_has_location' ) ) {
-	/**
-	 * Detect if a page has Elementor location template.
-	 *
-	 * @param      string $location The location.
-	 * @return     boolean
-	 */
-	function roxtar_elementor_has_location( $location ) {
-		if ( ! did_action( 'elementor_pro/init' ) ) {
-			return false;
-		}
-
-		$conditions_manager = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'theme-builder' )->get_conditions_manager();
-		$documents          = $conditions_manager->get_documents_for_location( $location );
-
-		return ! empty( $documents );
-	}
-}
-
-if ( ! function_exists( 'roxtar_is_elementor_editor' ) ) {
-	/**
-	 * Condition if Current screen is Edit mode || Preview mode.
-	 */
-	function roxtar_is_elementor_editor() {
-		if ( ! roxtar_is_elementor_activated() ) {
-			return false;
-		}
-
-		$editor = ( \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->preview->is_preview_mode() );
-
-		return $editor;
-	}
-}
-
-if ( ! function_exists( 'roxtar_is_divi_page' ) ) {
-	/**
-	 * Get Divi page content
-	 *
-	 * @param int $id The page id.
-	 */
-	function roxtar_is_divi_page( $id = false ) {
-		if ( ! defined( 'ET_BUILDER_PLUGIN_VERSION' ) ) {
-			return false;
-		}
-
-		if ( ! $id ) {
-			$id = roxtar_get_page_id();
-		}
-
-		if ( ! $id || is_tax() ) {
-			return false;
-		}
-
-		$content_post = get_post( $id );
-		$content      = $content_post->post_content;
-		if ( false !== strpos( $content, '<!-- wp:divi/placeholder -->' ) || false !== strpos( $content, '[et_pb_' ) ) {
-			return true;
-		}
-
-		return false;
 	}
 }
 

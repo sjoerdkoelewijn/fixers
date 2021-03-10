@@ -50,12 +50,6 @@ class Roxtar_Elementor_Single_Product_Images extends Widget_Base {
 		return array( 'roxtar', 'woocommerce', 'shop', 'store', 'image', 'product', 'gallery', 'lightbox' );
 	}
 
-	/**
-	 * Add a style.
-	 */
-	public function get_style_depends() {
-		return array( 'elementor-frontend' );
-	}
 
 	/**
 	 * Controls

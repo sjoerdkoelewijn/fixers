@@ -46,18 +46,6 @@ if ( ! function_exists( 'roxtar_get_last_product_id' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_elementor_preview_product_page_scripts' ) ) {
-	/**
-	 * Global variation gallery
-	 */
-	function roxtar_elementor_preview_product_page_scripts() {
-		$product = wc_get_product( roxtar_get_last_product_id() );
-		if ( ! is_object( $product ) ) {
-			roxtar_global_for_vartiation_gallery( $product );
-		}
-	}
-}
-
 if ( ! function_exists( 'roxtar_ajax_update_quantity_in_mini_cart' ) ) {
 	/**
 	 * Update product quantity in minicart

@@ -44,7 +44,6 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			add_action( 'init', 'roxtar_detect_clear_cart_submit' );
 			add_filter( 'loop_shop_columns', 'roxtar_products_per_row' );
 			add_filter( 'loop_shop_per_page', 'roxtar_products_per_page' );
-			add_action( 'elementor/preview/enqueue_scripts', 'roxtar_elementor_preview_product_page_scripts' );
 			add_filter( 'woocommerce_cross_sells_total', 'roxtar_change_cross_sells_total' );
 			add_filter( 'woocommerce_cross_sells_columns', 'roxtar_change_cross_sells_columns' );
 			add_filter( 'woocommerce_show_page_title', 'roxtar_remove_woocommerce_shop_title' );
@@ -187,10 +186,6 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			$product    = $product_id ? wc_get_product( $product_id ) : false;
 			$options    = roxtar_options( false );
 
-			// Remove Divi css on TI wishlist page.
-			if ( function_exists( 'is_wishlist' ) && is_wishlist() && function_exists( 'et_is_builder_plugin_active' ) && et_is_builder_plugin_active() ) {
-				wp_dequeue_style( 'et-builder-modules-style' );
-			}
 
 			// Main woocommerce js file.
 			wp_enqueue_script( 'roxtar-woocommerce' );
@@ -301,7 +296,7 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 				$classes[] = 'has-gallery-list-layout';
 			}
 
-			if ( $gallery || is_singular( 'elementor_library' ) || is_singular( 'woo_builder' ) ) {
+			if ( $gallery || is_singular( 'woo_builder' ) ) {
 				$classes[] = 'has-gallery-layout-' . $options['shop_single_gallery_layout'];
 			}
 
@@ -356,15 +351,8 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 				}
 			}
 
-			// Dokan support.
-			if ( class_exists( 'WeDevs_Dokan' ) && roxtar_is_woocommerce_activated() && dokan_is_store_page() ) {
-				$classes[] = 'off' === dokan_get_option( 'enable_theme_store_sidebar', 'dokan_appearance', 'off' ) ? 'has-dokan-sidebar' : 'dokan-with-theme-sidebar';
-			}
 
-			// Elementor theme builder shop archive.
-			if ( is_shop() && roxtar_elementor_has_location( 'archive' ) ) {
-				$classes[] = 'has-elementor-location-shop-archive';
-			}
+		
 
 			return array_filter( $classes );
 		}

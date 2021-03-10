@@ -338,7 +338,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
 		<div class="product-images">
 			<div id="product-images">
 				<figure class="image-item ez-zoom">
-					<a href="<?php echo esc_url( $image_full_src[0] ); ?>" data-size="<?php echo esc_attr( $image_size ); ?>" data-elementor-open-lightbox="no">
+					<a href="<?php echo esc_url( $image_full_src[0] ); ?>" data-size="<?php echo esc_attr( $image_size ); ?>" >
 						<img width="<?php echo esc_attr( $image_full_src[1] ); ?>" height="<?php echo esc_attr( $image_full_src[2] ); ?>" srcset="<?php echo wp_kses_post( $image_srcset ); ?>" src="<?php echo esc_url( $image_medium_src[0] ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
 					</a>
 				</figure>
@@ -353,7 +353,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
 						$g_img_srcset     = function_exists( 'wp_get_attachment_image_srcset' ) ? wp_get_attachment_image_srcset( $key, 'woocommerce_single' ) : '';
 						?>
 						<figure class="image-item ez-zoom">
-							<a href="<?php echo esc_url( $g_full_img_src[0] ); ?>" data-size="<?php echo esc_attr( $g_image_size ); ?>" data-elementor-open-lightbox="no">
+							<a href="<?php echo esc_url( $g_full_img_src[0] ); ?>" data-size="<?php echo esc_attr( $g_image_size ); ?>" >
 								<img width="<?php echo esc_attr( $g_full_img_src[1] ); ?>" height="<?php echo esc_attr( $g_full_img_src[2] ); ?>"  src="<?php echo esc_url( $g_medium_img_src[0] ); ?>" alt="<?php echo esc_attr( $g_img_alt ); ?>" srcset="<?php echo wp_kses_post( $g_img_srcset ); ?>">
 							</a>
 						</figure>
@@ -582,7 +582,7 @@ if ( ! function_exists( 'roxtar_product_recently_viewed_template' ) ) {
 	function roxtar_product_recently_viewed_template() {
 		$options = roxtar_options( false );
 		$cookies = isset( $_COOKIE['roxtar_product_recently_viewed'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['roxtar_product_recently_viewed'] ) ) : false;
-		if ( ! $cookies || ! $options['shop_single_product_recently_viewed'] || ! is_singular( 'product' ) || roxtar_elementor_has_location( 'single' ) ) {
+		if ( ! $cookies || ! $options['shop_single_product_recently_viewed'] || ! is_singular( 'product' ) ) {
 			return;
 		}
 

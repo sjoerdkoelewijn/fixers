@@ -25,15 +25,10 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			add_filter( 'language_attributes', 'roxtar_info' );
 
 			add_action( 'after_setup_theme', array( $this, 'roxtar_setup' ) );
-			add_action( 'wp', array( $this, 'roxtar_wp_action' ) );
 			add_action( 'widgets_init', array( $this, 'roxtar_widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'roxtar_scripts' ), 10 );
 			add_filter( 'wpcf7_load_css', '__return_false' );
 			add_filter( 'excerpt_length', array( $this, 'roxtar_limit_excerpt_character' ), 99 );
-
-			// ELEMENTOR.
-			add_action( 'elementor/theme/register_locations', array( $this, 'roxtar_register_elementor_locations' ) );
-			add_action( 'elementor/preview/enqueue_scripts', array( $this, 'roxtar_elementor_preview_scripts' ) );
 
 			// Add Image column on blog list in admin screen.
 			add_filter( 'manage_post_posts_columns', array( $this, 'roxtar_columns_head' ), 10 );
@@ -47,56 +42,12 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			add_filter( 'excerpt_more', array( $this, 'roxtar_modify_excerpt_more' ) );
 
 			// Compatibility.
-			add_action( 'elementor/widgets/widgets_registered', array( $this, 'roxtar_add_elementor_widget' ) );
-			add_filter( 'the_content', array( $this, 'roxtar_modify_the_content' ) );
-			add_action( 'init', array( $this, 'roxtar_override_divi_color_pciker' ), 12 );
+			//add_filter( 'the_content', array( $this, 'roxtar_modify_the_content' ) );
 		}
 
-		/**
-		 * Add elementor widget
-		 */
-		public function roxtar_add_elementor_widget() {
-			if ( ! roxtar_is_elementor_activated() ) {
-				return;
-			}
 
-			require_once ROXTAR_THEME_DIR . 'inc/compatibility/elementor/class-roxtar-elementor-single-product-images.php';
-		}
+	
 
-		/**
-		 * Modify content
-		 *
-		 * @param      object $content The content.
-		 */
-		public function roxtar_modify_the_content( $content ) {
-			if ( ! defined( 'ET_BUILDER_PLUGIN_VERSION' ) ) {
-				return $content;
-			}
-
-			return et_builder_get_layout_opening_wrapper() . $content . et_builder_get_layout_closing_wrapper();
-		}
-
-		/**
-		 * Modify again for Divi, lol
-		 */
-		public function roxtar_override_divi_color_pciker() {
-			if ( ! defined( 'ET_BUILDER_PLUGIN_VERSION' ) || ! is_customize_preview() ) {
-				return;
-			}
-
-			wp_localize_script(
-				'wp-color-picker',
-				'wpColorPickerL10n',
-				array(
-					'clear'            => __( 'Clear', 'roxtar' ),
-					'clearAriaLabel'   => __( 'Clear color', 'roxtar' ),
-					'defaultString'    => __( 'Default', 'roxtar' ),
-					'defaultAriaLabel' => __( 'Select default color', 'roxtar' ),
-					'pick'             => __( 'Select Color', 'roxtar' ),
-					'defaultLabel'     => __( 'Color value', 'roxtar' ),
-				)
-			);
-		}
 
 		/**
 		 * Includes
@@ -367,21 +318,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 		/**
 		 * WP Action
 		 */
-		public function roxtar_wp_action() {
-			// Support Elementor Pro - Theme Builder.
-			if ( ! defined( 'ELEMENTOR_PRO_VERSION' ) ) {
-				return;
-			}
 
-			if ( roxtar_elementor_has_location( 'header' ) && roxtar_elementor_has_location( 'footer' ) ) {
-				add_action( 'roxtar_theme_header', 'roxtar_view_open', 0 );
-				add_action( 'roxtar_after_footer', 'roxtar_view_close', 0 );
-			} elseif ( roxtar_elementor_has_location( 'header' ) && ! roxtar_elementor_has_location( 'footer' ) ) {
-				add_action( 'roxtar_theme_header', 'roxtar_view_open', 0 );
-			} elseif ( ! roxtar_elementor_has_location( 'header' ) && roxtar_elementor_has_location( 'footer' ) ) {
-				add_action( 'roxtar_after_footer', 'roxtar_view_close', 0 );
-			}
-		}
 
 		/**
 		 * Register widget area.
@@ -670,63 +607,6 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			}
 		}
 
-		/**
-		 * Support Elementor Location
-		 *
-		 * @param      array|object $elementor_theme_manager  The elementor theme manager.
-		 */
-		public function roxtar_register_elementor_locations( $elementor_theme_manager ) {
-			$elementor_theme_manager->register_location(
-				'header',
-				array(
-					'hook'         => 'roxtar_theme_header',
-					'remove_hooks' => array( 'roxtar_template_header' ),
-				)
-			);
-			$elementor_theme_manager->register_location(
-				'footer',
-				array(
-					'hook'         => 'roxtar_theme_footer',
-					'remove_hooks' => array( 'roxtar_template_footer' ),
-				)
-			);
-			$elementor_theme_manager->register_location(
-				'single',
-				array(
-					'hook'         => 'roxtar_theme_single',
-					'remove_hooks' => array( 'roxtar_template_single' ),
-				)
-			);
-			$elementor_theme_manager->register_location(
-				'product_archive',
-				array(
-					'hook'         => 'roxtar_theme_archive',
-					'remove_hooks' => array( 'roxtar_template_archive' ),
-				)
-			);
-			$elementor_theme_manager->register_location(
-				'404',
-				array(
-					'hook'         => 'roxtar_theme_404',
-					'remove_hooks' => array( 'roxtar_template_404' ),
-					'label'        => __( 'Roxtar 404', 'roxtar' ),
-				)
-			);
-		}
-
-		/**
-		 * Elementor pewview scripts
-		 */
-		public function roxtar_elementor_preview_scripts() {
-			// Elementor widgets js.
-			wp_enqueue_script(
-				'roxtar-elementor-live-preview',
-				ROXTAR_THEME_URI . 'assets/js/elementor-preview' . roxtar_suffix() . '.js',
-				array(),
-				roxtar_version(),
-				true
-			);
-		}
 
 		/**
 		 * Limit the character length in exerpt
@@ -794,10 +674,6 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				$classes[] = 'blog-layout-' . $options['blog_list_layout'];
 			}
 
-			// Detect page created by Divi builder.
-			if ( roxtar_is_divi_page() ) {
-				$classes[] = 'edited-by-divi-builder';
-			}
 
 			return array_filter( $classes );
 		}
