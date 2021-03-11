@@ -445,9 +445,6 @@ form {
   }
 }
 
-
-/*************************** Utility Styles **********************************/
-
 .alignfull {
     width:100vw;
     margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
@@ -474,6 +471,18 @@ form {
         }
     }
 
+}
+
+.wp-block-cover {
+  picture.wp-block-cover__image-background {
+    width:100%;
+
+    img {
+      z-index: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }  
 }
 
 .wp-block-group.has-background {
