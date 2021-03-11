@@ -474,12 +474,14 @@ form {
 }
 
 .wp-block-cover {
+  
   picture.wp-block-cover__image-background {
     width:100%;
+    position: absolute;
 
     img {
       z-index: 0;
-      position: absolute;
+      
       width: 100%;
     }
   }  
