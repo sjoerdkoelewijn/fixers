@@ -776,7 +776,6 @@ form {
     position:absolute;
     height:30px;
     z-index:100;
-    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
   }
 
   .site_header {
@@ -787,9 +786,7 @@ form {
     top:auto;
     margin-top:30px;  
     //background:rgba(0, 0, 0, 0.2);
-    border-top:1px solid rgba(255, 255, 255, 0.08);
-    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
-    
+    border-top:1px solid rgba(255, 255, 255, 0.08);    
 
     @include phone {
       margin-top:0;
@@ -815,11 +812,6 @@ form {
     top: 0;
     margin-top:0;
     border-top:none; 
-    text-shadow: none;
-
-    .sub-menu {
-      text-shadow: none;
-    }
 
     .site_header_inner {
       background-color:var(--header-background-color);    
