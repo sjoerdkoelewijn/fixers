@@ -250,6 +250,7 @@ $wp_customize->add_control(
 			'dependency' => array(
 				'roxtar_setting[shop_single_gallery_layout]',
 				'roxtar_setting[shop_single_image_zoom]',
+				'roxtar_setting[shop_single_product_image_height]',
 				'roxtar_setting[shop_single_image_lightbox]',
 				'roxtar_setting[shop_single_product_sticky_top_space]',
 				'roxtar_setting[shop_single_product_sticky_bottom_space]',
@@ -288,6 +289,45 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+
+
+
+// Main image height
+$wp_customize->add_setting(
+	'roxtar_setting[shop_single_product_image_height]',
+	array(
+		'default'           => $defaults['shop_single_product_image_height'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+$wp_customize->add_control(
+	new Roxtar_Range_Slider_Control(
+		$wp_customize,
+		'roxtar_setting[shop_single_product_image_height]',
+		array(
+			'label'    => __( 'Product image height', 'roxtar' ),
+			'section'  => 'roxtar_shop_single',
+			'settings' => array(
+				'desktop' => 'roxtar_setting[shop_single_product_image_height]',
+			),
+			'choices' => array(
+				'desktop' => array(
+					'min'  => apply_filters( 'roxtar_shop_single_product_image_height_min_step', 300 ),
+					'max'  => apply_filters( 'roxtar_shop_single_product_image_height_max_step', 1000 ),
+					'step' => 50,
+					'edit' => true,
+					'unit' => 'px',
+				),
+			),
+		)
+	)
+);
+
+
+
 
 // Image zoom.
 $wp_customize->add_setting(

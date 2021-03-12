@@ -244,6 +244,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'shop_single_content_background'          => '#f3f3f3',
 				'shop_single_trust_badge_image'           => '',
 				'shop_single_gallery_layout'              => 'vertical',
+				'shop_single_product_image_height'        => '550',
 				'shop_single_image_zoom'                  => true,
 				'shop_single_image_lightbox'              => true,
 				'shop_single_product_sticky_top_space'    => 50,

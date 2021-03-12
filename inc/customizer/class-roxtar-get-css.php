@@ -89,6 +89,8 @@ class Roxtar_Get_CSS {
 				--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
 				--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
 
+				--product-image-height:'. esc_attr( $options['shop_single_product_image_height']) . 'px' .';
+
 			} 
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
