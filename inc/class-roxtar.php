@@ -514,43 +514,16 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				true
 			);
 
-			if ( $options['shop_single_image_zoom'] ) {
-				// Product gallery zoom.
-				wp_register_script(
-					'easyzoom',
-					ROXTAR_THEME_URI . 'assets/js/easyzoom' . roxtar_suffix() . '.js',
-					array( 'jquery' ),
-					roxtar_version(),
-					true
-				);
+			
 
-				// Product gallery zoom handle.
-				wp_register_script(
-					'easyzoom-handle',
-					ROXTAR_THEME_URI . 'assets/js/woocommerce/easyzoom-handle' . roxtar_suffix() . '.js',
-					array( 'easyzoom' ),
-					roxtar_version(),
-					true
-				);
-			}
-
-			// Product varitions.
+			// Product variations.
 			wp_register_script(
 				'roxtar-product-variation',
 				ROXTAR_THEME_URI . 'assets/js/woocommerce/product-variation' . roxtar_suffix() . '.js',
 				array( 'jquery' ),
 				roxtar_version(),
 				true
-			);
-
-			// Lightbox js.
-			wp_register_script(
-				'lity',
-				ROXTAR_THEME_URI . 'assets/js/lity' . roxtar_suffix() . '.js',
-				array( 'jquery' ),
-				roxtar_version(),
-				true
-			);
+			);			
 
 			// Sticky sidebar js.
 			wp_register_script(
@@ -561,33 +534,67 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				true
 			);
 
-			// Tiny slider js.
-			wp_register_script(
-				'tiny-slider',
-				ROXTAR_THEME_URI . 'assets/js/tiny-slider' . roxtar_suffix() . '.js',
-				array(),
-				roxtar_version(),
-				true
-			);
+			// Only load on woocommerce single product page
+			if ( is_product() ){
 
-			// Product images ( Tiny slider ).
-			wp_register_script(
-				'roxtar-product-images',
-				ROXTAR_THEME_URI . 'assets/js/woocommerce/product-images' . roxtar_suffix() . '.js',
-				array( 'jquery', 'tiny-slider' ),
-				roxtar_version(),
-				true
-			);
+				if ( $options['shop_single_image_zoom'] ) {
+					// Product gallery zoom.
+					wp_register_script(
+						'easyzoom',
+						ROXTAR_THEME_URI . 'assets/js/easyzoom' . roxtar_suffix() . '.js',
+						array( 'jquery' ),
+						roxtar_version(),
+						true
+					);
+	
+					// Product gallery zoom handle.
+					wp_register_script(
+						'easyzoom-handle',
+						ROXTAR_THEME_URI . 'assets/js/woocommerce/easyzoom-handle' . roxtar_suffix() . '.js',
+						array( 'easyzoom' ),
+						roxtar_version(),
+						true
+					);
+				}
 
-			if ( $options['shop_single_image_lightbox'] ) {
-				// Photoswipe init js.
+				// Lightbox js.
 				wp_register_script(
-					'photoswipe-init',
-					ROXTAR_THEME_URI . 'assets/js/photoswipe-init' . roxtar_suffix() . '.js',
-					array( 'photoswipe', 'photoswipe-ui-default' ),
+					'lity',
+					ROXTAR_THEME_URI . 'assets/js/lity' . roxtar_suffix() . '.js',
+					array( 'jquery' ),
 					roxtar_version(),
 					true
 				);
+
+				// Tiny slider js.
+				wp_register_script(
+					'tiny-slider',
+					ROXTAR_THEME_URI . 'assets/js/tiny-slider' . roxtar_suffix() . '.js',
+					array(),
+					roxtar_version(),
+					true
+				);
+
+				// Product images ( Tiny slider ).
+				wp_register_script(
+					'roxtar-product-images',
+					ROXTAR_THEME_URI . 'assets/js/woocommerce/product-images' . roxtar_suffix() . '.js',
+					array( 'jquery', 'tiny-slider' ),
+					roxtar_version(),
+					true
+				);
+
+				if ( $options['shop_single_image_lightbox'] ) {
+					// Photoswipe init js.
+					wp_register_script(
+						'photoswipe-init',
+						ROXTAR_THEME_URI . 'assets/js/photoswipe-init' . roxtar_suffix() . '.js',
+						array( 'photoswipe', 'photoswipe-ui-default' ),
+						roxtar_version(),
+						true
+					);
+				}
+
 			}
 
 			// Ajax single add to cart.
