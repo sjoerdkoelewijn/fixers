@@ -365,7 +365,7 @@ if ( ! function_exists( 'roxtar_site_branding' ) ) {
 				$mobile_logo_id  = attachment_url_to_postid( $mobile_logo_src );
 				$mobile_logo_alt = roxtar_image_alt( $mobile_logo_id, __( 'Roxtar mobile logo', 'roxtar' ) );
 				?>
-					<a class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
+					<a class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" >
 						<img class="custom-mobile-logo" src="<?php echo esc_url( $mobile_logo_src ); ?>" alt="<?php echo esc_attr( $mobile_logo_alt ); ?>" itemprop="logo">
 					</a>
 				<?php
@@ -373,7 +373,7 @@ if ( ! function_exists( 'roxtar_site_branding' ) ) {
 		} else {
 			if ( ! empty( $transparent_logo_src ) ) {
 				?>
-					<a class="custom-transparent-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
+					<a class="custom-transparent-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img width="95px" height="61px" class="custom-transparent-logo" src="<?php echo esc_url( $transparent_logo_src ); ?>" alt="<?php echo esc_attr( 'Logo transparent' ); ?>" itemprop="logo">
 						<img width="95px" height="61px" class="normal-logo-active" src="<?php echo $normal_logo[0]; ?>" alt="<?php echo esc_attr( 'Logo' ); ?>" itemprop="logo">
 					</a>
@@ -385,7 +385,7 @@ if ( ! function_exists( 'roxtar_site_branding' ) ) {
 					$mobile_logo_id  = attachment_url_to_postid( $mobile_logo_src );
 					$mobile_logo_alt = roxtar_image_alt( $mobile_logo_id, __( 'Roxtar mobile logo', 'roxtar' ) );
 					?>
-						<a class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
+						<a class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" >
 							<img class="custom-mobile-logo" src="<?php echo esc_url( $mobile_logo_src ); ?>" alt="<?php echo esc_attr( $mobile_logo_alt ); ?>" itemprop="logo">
 						</a>
 					<?php
