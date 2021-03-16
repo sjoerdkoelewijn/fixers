@@ -116,6 +116,7 @@ class Roxtar_Get_CSS {
 		$logo_width        = $options['logo_width'];
 		$tablet_logo_width = $options['tablet_logo_width'];
 		$mobile_logo_width = $options['mobile_logo_width'];
+
 		if ( $logo_width && $logo_width > 0 ) {
 			$styles .= '
 				@media ( min-width: 769px ) {
@@ -148,9 +149,11 @@ class Roxtar_Get_CSS {
 				}
 			';
 		}
-
 		// Topbar.
-		$styles .= '
+		$topbar_display = $options['topbar_display'];
+		
+		if ( $topbar_display ) {
+			$styles .= '
 			.topbar{
 				background-color: ' . esc_attr( $options['topbar_background_color'] ) . ';
 				padding: ' . esc_attr( $options['topbar_space'] ) . 'px 0;
@@ -158,7 +161,14 @@ class Roxtar_Get_CSS {
 			.topbar *{
 				color: ' . esc_attr( $options['topbar_text_color'] ) . ';
 			}
-		';
+			.has-header-transparent.header-transparent-for-all-devices .site_header {
+				margin-top:30px;
+				border-top:1px solid rgba(255, 255, 255, 0.08);  
+			}
+			';			
+		}
+		
+		
 
 		// Menu Breakpoint.
 		$styles .= '

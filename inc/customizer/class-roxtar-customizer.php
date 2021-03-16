@@ -86,7 +86,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'second_background_color'				  => '#ffffff',
 				'line_color'						  	  => '#DDDDDD',
 				// TOPBAR.
-				'topbar_display'                          => true,
+				'topbar_display'                          => false,
 				'topbar_text_color'                       => '#ffffff',
 				'topbar_background_color'                 => '#292f34',
 				'topbar_space'                            => 0,
