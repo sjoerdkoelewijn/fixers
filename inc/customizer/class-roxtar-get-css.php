@@ -162,7 +162,7 @@ class Roxtar_Get_CSS {
 				color: ' . esc_attr( $options['topbar_text_color'] ) . ';
 			}
 			.has-header-transparent.header-transparent-for-all-devices .site_header {
-				margin-top:30px;
+				margin-top:calc(' . esc_attr( $options['topbar_space'] ) . 'px * 2); 
 				border-top:1px solid rgba(255, 255, 255, 0.08);  
 			}
 			';			
