@@ -156,13 +156,17 @@ class Roxtar_Get_CSS {
 			$styles .= '
 			.topbar{
 				background-color: ' . esc_attr( $options['topbar_background_color'] ) . ';
-				padding: ' . esc_attr( $options['topbar_space'] ) . 'px 0;
+				height:' . esc_attr( $options['topbar_space'] ) . 'px ;
 			}
 			.topbar *{
 				color: ' . esc_attr( $options['topbar_text_color'] ) . ';
 			}
 			.has-header-transparent.header-transparent-for-all-devices .site_header {
 				margin-top:calc(' . esc_attr( $options['topbar_space'] ) . 'px * 2); 
+				border-top:1px solid rgba(255, 255, 255, 0.08);  
+			}
+			.has-header-transparent.header-transparent-for-all-devices .site_header {
+				margin-top:' . esc_attr( $options['topbar_space'] ) . 'px; 
 				border-top:1px solid rgba(255, 255, 255, 0.08);  
 			}
 			';			
