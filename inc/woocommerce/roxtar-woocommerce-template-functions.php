@@ -46,6 +46,21 @@ if ( ! function_exists( 'roxtar_get_last_product_id' ) ) {
 	}
 }
 
+if ( ! function_exists( 'roxtar_woocommerce_no_js' ) ) {
+
+	function roxtar_woocommerce_no_js() { ?>
+
+		<script>
+			(function () {
+				var c = document.body.className;
+				c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+				document.body.className = c;
+			})();
+		</script>
+			
+	<?php }
+}
+
 if ( ! function_exists( 'roxtar_ajax_update_quantity_in_mini_cart' ) ) {
 	/**
 	 * Update product quantity in minicart
