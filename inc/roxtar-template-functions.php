@@ -430,8 +430,8 @@ if ( ! function_exists( 'roxtar_replace_logo_attr' ) ) {
 			$file_extension = $file_type['ext'];
 
 			if ( 'svg' === $file_extension ) {
-				$attr['width']  = '100%';
-				$attr['height'] = '100%';
+				//$attr['width']  = '100%';
+				//$attr['height'] = '100%';
 				$attr['class']  = 'roxtar-logo-svg';
 			}
 
