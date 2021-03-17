@@ -311,8 +311,6 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				)
 			);
 
-			// Boostify Header Footer plugin support.
-			add_theme_support( 'boostify-header-footer' );
 		}
 
 		/**
