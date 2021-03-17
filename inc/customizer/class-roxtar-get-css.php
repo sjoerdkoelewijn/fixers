@@ -706,42 +706,7 @@ class Roxtar_Get_CSS {
 				}
 			}
 
-			.button,
-			.woocommerce-widget-layered-nav-dropdown__submit,
-			.form-submit .submit,
-			.elementor-button-wrapper .elementor-button,
-			.has-roxtar-contact-form input[type="submit"],
-			#secondary .widget a.button,
-			.product-loop-meta.no-transform .button,
-			.product-loop-meta.no-transform .added_to_cart{
-				background-color: ' . esc_attr( $options['button_background_color'] ) . ';
-				color: ' . esc_attr( $options['button_text_color'] ) . ';
-				border-radius: ' . esc_attr( $options['buttons_border_radius'] ) . 'px;
-			}
-
-			.cart:not(.elementor-menu-cart__products) .quantity,
-			.loop-add-to-cart-on-image+.added_to_cart{
-				border-radius: ' . esc_attr( $options['buttons_border_radius'] ) . 'px;
-			}
-
-			.button:hover,
-			.single_add_to_cart_button.button:not(.roxtar-buy-now):hover,
-			.woocommerce-widget-layered-nav-dropdown__submit:hover,
-			#commentform input[type="submit"]:hover,
-			.form-submit .submit:hover,
-			#secondary .widget a.button:hover,
-			.roxtar-contact-form input[type="submit"]:hover,
-			.loop-add-to-cart-on-image+.added_to_cart:hover,
-			.product-loop-meta.no-transform .button:hover,
-			.product-loop-meta.no-transform .added_to_cart:hover{
-				background-color: ' . esc_attr( $options['button_hover_background_color'] ) . ';
-				color: ' . esc_attr( $options['button_hover_text_color'] ) . ';
-			}
-
-			.select2-container--default .select2-results__option--highlighted[aria-selected],
-			.select2-container--default .select2-results__option--highlighted[data-selected]{
-				background-color: ' . esc_attr( $options['button_background_color'] ) . ' !important;
-			}
+			
 
 			@media ( max-width: 600px ) {
 				.woocommerce-cart-form__contents [name="update_cart"],
