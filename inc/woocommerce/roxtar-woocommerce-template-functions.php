@@ -50,7 +50,7 @@ if ( ! function_exists( 'roxtar_woocommerce_no_js' ) ) {
 
 	function roxtar_woocommerce_no_js() { ?>	
 
-		<script async defer>
+		<script>
 			(function () {
 				var c = document.body.className;
 				c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
