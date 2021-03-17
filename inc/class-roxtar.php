@@ -182,8 +182,8 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				apply_filters(
 					'roxtar_custom_logo_args',
 					array(
-						'height'      => 110,
-						'width'       => 470,
+						//'height'      => 110,
+						//'width'       => 470,
 						'flex-width'  => true,
 						'flex-height' => true,
 					)
@@ -205,23 +205,25 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			);
 
 			/*
-			 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
-			 * to output valid HTML5.
-			 */	
-
-			add_theme_support( 
-				'html5', 
-				array( 
-					'comment-list', 
-					'comment-form', 
-					'search-form', 
-					'gallery', 
-					'caption', 
-					'widgets',
-					'style', 
-					'script' 
-				) 
+			 * Switch default core markup to output valid HTML5.
+			 */
+			add_theme_support(
+				'html5',
+				apply_filters(
+					'roxtar_html5_args',
+					array(
+						'search-form',
+						'comment-form',
+						'comment-list',
+						'gallery',
+						'caption',
+						'widgets',
+						'script',
+						'style',
+					)
+				)
 			);
+
 
 			/**
 			 * Declare support for title theme feature.
