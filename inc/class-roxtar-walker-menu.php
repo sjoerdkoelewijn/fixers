@@ -30,7 +30,7 @@ if ( ! class_exists( 'Roxtar_Walker_Menu' ) ) {
 
 			// Classes name.
 			$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[] = 'menu-item-' . $item->ID;
+			//$classes[] = 'menu-item-' . $item->ID;
 			if ( 'mega_menu' === $item->object ) {
 				$this->megamenu_width = get_post_meta( $item->ID, 'roxtar_mega_menu_item_width', true );
 				$this->megamenu_width = '' !== $this->megamenu_width ? $this->megamenu_width : 'content';
