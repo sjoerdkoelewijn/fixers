@@ -438,7 +438,7 @@ if ( ! function_exists( 'roxtar_replace_logo_attr' ) ) {
 			// Retina logo.
 			$retina_logo = $options['retina_logo'];
 
-			$attr['srcset'] = '';
+			//$attr['srcset'] = '';
 
 			if ( $retina_logo ) {
 				$cutom_logo     = wp_get_attachment_image_src( $custom_logo_id, 'full' );
@@ -450,7 +450,7 @@ if ( ! function_exists( 'roxtar_replace_logo_attr' ) ) {
 					$attr['src'] = $retina_logo;
 				}
 
-				$attr['srcset'] = $cutom_logo_url . ' 1x, ' . $retina_logo . ' 2x';
+				//$attr['srcset'] = $cutom_logo_url . ' 1x, ' . $retina_logo . ' 2x';
 
 			}
 		}
