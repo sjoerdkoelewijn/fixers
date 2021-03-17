@@ -71,9 +71,9 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'border_radius'							  => '0',
 				// LOGO.
 				'logo_mobile'                             => '',
-				'logo_width'                              => '150',
-				'tablet_logo_width'                       => '140',
-				'mobile_logo_width'                       => '130',
+				'logo_width'                              => '',
+				'tablet_logo_width'                       => '',
+				'mobile_logo_width'                       => '',
 				// COLOR.
 				'theme_color'                             => '#1346af',
 				'primary_menu_color'                      => '#2b2b2b',
