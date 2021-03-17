@@ -207,11 +207,11 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				// Add to cart button.
 				'shop_page_add_to_cart_button_position'   => 'bottom',
 				'shop_product_add_to_cart_icon'           => true,
-				'shop_page_button_cart_background'        => '',
-				'shop_page_button_cart_color'             => '',
-				'shop_page_button_background_hover'       => '',
-				'shop_page_button_color_hover'            => '',
-				'shop_page_button_border_radius'          => '',
+				'shop_page_button_cart_background'        => '#333333',
+				'shop_page_button_cart_color'             => '#ffffff',
+				'shop_page_button_background_hover'       => '#000000',
+				'shop_page_button_color_hover'            => '#ffffff',
+				'shop_page_button_border_radius'          => '10',
 				// Wishlist.
 				'shop_page_wishlist_support_plugin'       => 'ti',
 				'shop_page_wishlist_position'             => 'top-right',
