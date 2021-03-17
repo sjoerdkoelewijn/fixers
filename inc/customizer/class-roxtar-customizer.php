@@ -262,11 +262,11 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'shop_single_recently_viewed_title'       => __( 'Recently Viewed Products', 'roxtar' ),
 				'shop_single_recently_viewed_count'       => 4,
 				// Single Product Add To Cart.
-				'shop_single_button_cart_background'      => '',
-				'shop_single_button_cart_color'           => '',
-				'shop_single_button_background_hover'     => '',
-				'shop_single_button_color_hover'          => '',
-				'shop_single_button_border_radius'        => '',
+				'shop_single_button_cart_background'      => '#000000',
+				'shop_single_button_cart_color'           => '#ffffff',
+				'shop_single_button_background_hover'     => '#000000',
+				'shop_single_button_color_hover'          => '#ffffff',
+				'shop_single_button_border_radius'        => '50',
 				// CART PAGE.
 				'cart_page_layout'                        => 'layout-2',
 				'cart_page_sticky_proceed_button'         => true,
