@@ -122,7 +122,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'header_transparent_shadow_blur'          => 0,
 				'header_transparent_shadow_spread'        => 0,
 				'header_transparent_shadow_color'         => '#000000',
-				'header_transparent_logo'                 => '#ffffff',
+				'header_transparent_logo'                 => '',
 				'header_transparent_menu_color'           => '#ffffff',
 				'header_transparent_icon_color'           => '#ffffff',
 				'header_transparent_count_background'     => '#000000',
