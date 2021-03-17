@@ -46,9 +46,9 @@ if ( ! function_exists( 'roxtar_get_last_product_id' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_woocommerce_no_js' ) ) {
+if ( ! function_exists( 'roxtar_woocommerce_remove_no_js_check' ) ) {
 
-	function roxtar_woocommerce_no_js() { ?>
+	function roxtar_woocommerce_remove_no_js_check() { ?>	
 
 		<script>
 			(function () {

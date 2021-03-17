@@ -69,9 +69,12 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'roxtar_update_quantity_mini_cart', 10, 3 );
 
-			// Remove the default js check
-			remove_action( 'wp_footer', 'wc_no_js' );	
-			add_filter( 'body_class', 'roxtar_woocommerce_no_js' ); 
+			// replace the default woocommerce js check so it passes validation
+			add_filter( 'body_class', function(){
+				remove_action( 'wp_footer', 'wc_no_js' );
+			});
+
+			add_filter( 'wp_footer', 'roxtar_woocommerce_no_js' ); 
 
 			// MY ACCOUNT PAGE.
 			add_filter( 'woocommerce_my_account_edit_address_title', '__return_empty_string' );
