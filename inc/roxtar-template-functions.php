@@ -372,10 +372,11 @@ if ( ! function_exists( 'roxtar_site_branding' ) ) {
 			}
 		} else {
 			if ( ! empty( $transparent_logo_src ) ) {
+
 				?>
 					<a class="custom-transparent-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img width="100%" height="100%" class="custom-transparent-logo" src="<?php echo esc_url( $transparent_logo_src ); ?>" alt="<?php echo esc_attr( 'Logo transparent' ); ?>" itemprop="logo">
-						<img width="100%" height="100%" class="normal-logo-active" src="<?php echo $normal_logo[0]; ?>" alt="<?php echo esc_attr( 'Logo' ); ?>" itemprop="logo">
+						<img class="custom-transparent-logo" src="<?php echo esc_url( $transparent_logo_src ); ?>" alt="<?php echo esc_attr( 'Logo transparent' ); ?>" itemprop="logo">
+						<img class="normal-logo-active" src="<?php echo $normal_logo[0]; ?>" alt="<?php echo esc_attr( 'Logo' ); ?>" itemprop="logo">
 					</a>
 				<?php
 			} else {
