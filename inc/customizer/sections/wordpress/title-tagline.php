@@ -8,27 +8,6 @@
 // Default values.
 $defaults = roxtar_options();
 
-// Retina logo.
-$wp_customize->add_setting(
-	'roxtar_setting[retina_logo]',
-	array(
-		'type'              => 'option',
-		'default'           => $defaults['retina_logo'],
-		'sanitize_callback' => 'esc_url_raw',
-	)
-);
-$wp_customize->add_control(
-	new WP_Customize_Image_Control(
-		$wp_customize,
-		'roxtar_setting[retina_logo]',
-		array(
-			'label'    => __( 'Retina Logo (Optional)', 'roxtar' ),
-			'section'  => 'title_tagline',
-			'settings' => 'roxtar_setting[retina_logo]',
-			'priority' => 8,
-		)
-	)
-);
 
 // Logo mobile.
 $wp_customize->add_setting(

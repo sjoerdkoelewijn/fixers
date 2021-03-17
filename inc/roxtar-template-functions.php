@@ -435,24 +435,6 @@ if ( ! function_exists( 'roxtar_replace_logo_attr' ) ) {
 				$attr['class']  = 'roxtar-logo-svg';
 			}
 
-			// Retina logo.
-			$retina_logo = $options['retina_logo'];
-
-			//$attr['srcset'] = '';
-
-			if ( $retina_logo ) {
-				$cutom_logo     = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-				$cutom_logo_url = $cutom_logo[0];
-				$attr['alt']    = roxtar_image_alt( $custom_logo_id, __( 'Roxtar retina logo', 'roxtar' ) );
-
-				// Replace logo src on IE.
-				if ( 'ie' === roxtar_browser_detection() ) {
-					$attr['src'] = $retina_logo;
-				}
-
-				//$attr['srcset'] = $cutom_logo_url . ' 1x, ' . $retina_logo . ' 2x';
-
-			}
 		}
 
 		return apply_filters( 'roxtar_replace_logo_attr', $attr );
@@ -470,9 +452,7 @@ if ( ! function_exists( 'roxtar_get_logo_image_url' ) ) {
 		$options   = roxtar_options( false );
 		$image_src = '';
 
-		if ( $options['retina_logo'] ) {
-			$image_src = $options['retina_logo'];
-		} elseif ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$image_id  = get_theme_mod( 'custom_logo' );
 			$image     = wp_get_attachment_image_src( $image_id, $size );
 			$image_src = $image[0];
