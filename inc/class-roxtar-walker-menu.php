@@ -56,11 +56,11 @@ if ( ! class_exists( 'Roxtar_Walker_Menu' ) ) {
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
 			// Ids.
-			$id = apply_filters( 'roxtar_mega_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
-			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+			//$id = apply_filters( 'roxtar_mega_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
+			//$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
 			// Start output.
-			$output .= $indent . '<li' . $id . $value . $class_names . '>';
+			$output .= $indent . '<li' . $value . $class_names . '>';
 
 			// Attributes.
 			$atts           = array();
