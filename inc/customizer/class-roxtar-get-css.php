@@ -62,6 +62,14 @@ class Roxtar_Get_CSS {
 				--line-color:' . esc_attr( $options['line_color'] ) . ';
 				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
 
+				--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
+				--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';
+				--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
+				--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
+				--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
+
+				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
+
 				--footer-text-color:' . esc_attr( $options['footer_text_color'] ) . ';
 				--footer-link-color:' . esc_attr( $options['footer_link_color'] ) . ';
 				--footer-heading-color:' . esc_attr( $options['footer_heading_color'] ) . ';
@@ -74,8 +82,6 @@ class Roxtar_Get_CSS {
 
 				--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
 				
-				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
-
 				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
 
 				--page-header-padding-top:'. esc_attr( $options['page_header_padding_top']) . 'px' .';
