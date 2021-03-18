@@ -687,3 +687,12 @@ add_filter('request', function( $vars ) {
 	}
 	return $vars;
 });
+
+
+// Remove style tags in body from complianz GDPR plugin.
+
+add_action( 'init', 'remove_style_tags_cmplz' );
+
+function remove_style_tags_cmplz () {
+    remove_action('wp_footer', 'cmplz_forminator_css');
+}

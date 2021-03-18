@@ -64,11 +64,10 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			add_action( 'wp_ajax_nopriv_update_quantity_in_mini_cart', 'roxtar_ajax_update_quantity_in_mini_cart' );
 			// Update checkout.
 			add_action( 'wp_ajax_update_checkout', 'roxtar_ajax_update_checkout' );
-			add_action( 'wp_ajax_nopriv_update_checkout', 'roxtar_ajax_update_checkout' );
-			
+			add_action( 'wp_ajax_nopriv_update_checkout', 'roxtar_ajax_update_checkout' );			
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'roxtar_update_quantity_mini_cart', 10, 3 );
-		
+
 			// Remove type from script tags so it always passes validation.
 			add_action( 'template_redirect', 'roxtar_force_html5_no_type');
 
