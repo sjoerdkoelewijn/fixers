@@ -271,7 +271,7 @@ if ( ! function_exists( 'roxtar_footer_custom_text' ) ) {
 	 * @return string $content Footer custom text
 	 */
 	function roxtar_footer_custom_text() {
-		$content = __( 'Copyright &copy; [current_year] [site_title] | Powered by [theme_author]', 'roxtar' );
+		$content = __( 'Copyright &copy; [current_year] [site_title] | Made by [theme_author] |', 'roxtar' );
 
 		if ( apply_filters( 'roxtar_credit_info', true ) ) {
 
