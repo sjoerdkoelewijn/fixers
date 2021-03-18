@@ -46,19 +46,17 @@ if ( ! function_exists( 'roxtar_get_last_product_id' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_woocommerce_no_js' ) ) {
+if ( ! function_exists( 'roxtar_force_html5_no_type' ) ) {
 
-	function roxtar_woocommerce_no_js() { ?>	
+	function roxtar_force_html5_no_type() { 
+		
+		ob_start( function( $buffer ){
+			$buffer = str_replace( array( 'type="text/javascript"', "type='text/javascript'", 'type="text/css"', "type='text/css'" ), '', $buffer );
+	
+			return $buffer;
+		});
 
-		<script>
-			(function () {
-				var c = document.body.className;
-				c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-				document.body.className = c;
-			})();
-		</script>
-			
-	<?php }
+	 }
 }
 
 if ( ! function_exists( 'roxtar_ajax_update_quantity_in_mini_cart' ) ) {

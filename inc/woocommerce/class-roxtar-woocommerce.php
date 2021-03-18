@@ -68,18 +68,9 @@ if ( ! class_exists( 'Roxtar_WooCommerce' ) ) {
 			
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'roxtar_update_quantity_mini_cart', 10, 3 );
-
-			// replace the default woocommerce js check so it passes validation
-			add_filter( 'body_class', function($classes){
-				if(in_array("woocommerce-no-js", $classes)) {
-					remove_action( 'wp_footer', 'wc_no_js' );
-					$classes = array_diff($classes, array('woocommerce-no-js'));
-					$classes[] = 'woocommerce-js';
-				}
-				return array_values($classes);
-			},10, 1);
-			
-			add_filter( 'wp_footer', 'roxtar_woocommerce_no_js' ); 
+		
+			// Remove type from script tags so it always passes validation.
+			add_action( 'template_redirect', 'roxtar_force_html5_no_type');
 
 			// MY ACCOUNT PAGE.
 			add_filter( 'woocommerce_my_account_edit_address_title', '__return_empty_string' );
