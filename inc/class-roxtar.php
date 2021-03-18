@@ -27,7 +27,6 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			add_action( 'after_setup_theme', array( $this, 'roxtar_setup' ) );
 			add_action( 'widgets_init', array( $this, 'roxtar_widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'roxtar_scripts' ), 10 );
-			add_filter( 'wpcf7_load_css', '__return_false' );
 			add_filter( 'excerpt_length', array( $this, 'roxtar_limit_excerpt_character' ), 99 );
 
 			// Add Image column on blog list in admin screen.
@@ -394,6 +393,15 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				wp_enqueue_style(
 					'roxtar-parent-style',
 					get_template_directory_uri() . '/style.css',
+					array(),
+					roxtar_version()
+				);
+			}
+			// Import woocommerce css if applicable
+			if ( class_exists( 'woocommerce' ) ) {
+				wp_enqueue_style(
+					'roxtar-woocommerce-style',
+					get_template_directory_uri() . '/woocommerce.css',
 					array(),
 					roxtar_version()
 				);

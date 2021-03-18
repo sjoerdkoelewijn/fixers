@@ -5,7 +5,7 @@
   --scrollbar-width:17px;
 }
 
-/*************************** Global Styles **********************************/
+/*************************** Global Styles ****************************************************************************/
 
 html {    
     scroll-behavior: smooth;
@@ -254,7 +254,7 @@ h6, .has-roxtar-heading-6-font-size{
   border-left: .25em solid var(--text-color);
 }
 
-/*************************** Forms  **********************************/
+/*************************** Forms  ****************************************************************************/
 
 form {
 
@@ -413,7 +413,7 @@ form {
   min-width: 130px;
 }
 
-/*************************** Content Styles **********************************/
+/*************************** Content Styles ****************************************************************************/
 
 .site_content {
   max-width:var(--content-width);
@@ -437,7 +437,7 @@ form {
   padding:0;
 }
 
-/*************************** Block editor - block styles **********************************/
+/*************************** Block editor - block styles ****************************************************************************/
 
 .wp-block-media-text {
   figure {
@@ -559,7 +559,7 @@ form {
 
 
 
-/*************************** Header Styles **********************************/
+/*************************** Header Styles ****************************************************************************/
 
 .topbar {
   display: -webkit-box;
@@ -854,7 +854,7 @@ form {
 }
 
 
-/*************************** Custom Colors  **********************************/
+/*************************** Custom Colors  ****************************************************************************/
 
 .roxtar-theme-color,
 .primary-navigation li.current-menu-item > a,
@@ -979,7 +979,7 @@ a:hover{
 }
 
 
-/*************************** Account - Login **********************************/
+/*************************** Account - Login ****************************************************************************/
 
 .woocommerce-form.woocommerce-form-login {
   clear: both;
@@ -1032,7 +1032,7 @@ a:hover{
   content: "\e63d";
 }
 
-/*************************** Account - Address **********************************/
+/*************************** Account - Address ****************************************************************************/
 
 .woocommerce-Address {
   background:white;
@@ -1078,7 +1078,7 @@ address {
 
 
 
-/*************************** Checkout - Mini Cart **********************************/
+/*************************** Checkout - Mini Cart ****************************************************************************/
 
 
 .mini-cart-updating .mini-cart-quantity,
@@ -1139,7 +1139,7 @@ address {
 }
 
 
-/*************************** Checkout **********************************/
+/*************************** Checkout ****************************************************************************/
 
 .cart_item {
   img {
@@ -1234,7 +1234,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Breadcrumb **********************************/
+/*************************** Breadcrumb ****************************************************************************/
 
 
 .roxtar-breadcrumb, .rank-math-breadcrumb {
@@ -1292,7 +1292,7 @@ form.woocommerce-checkout {
     }
   }
 
-/*************************** Site Header **********************************/
+/*************************** Site Header ****************************************************************************/
 
   
   
@@ -1514,18 +1514,10 @@ form.woocommerce-checkout {
     width: 100%;
     height: 2px;
     display: block;
-    //-webkit-transition-delay: 0.5s;
-    //transition-delay: 0.5s;
-    //-webkit-transition-duration: 0.5s;
-    //transition-duration: 0.5s;
+
   }
   
-  .roxtar-icon-bar span:before, .roxtar-icon-bar span:after {
-    //-webkit-transition-delay: 0.5s;
-    //transition-delay: 0.5s;
-    //-webkit-transition-duration: 0.5s;
-    //transition-duration: 0.5s;
-  }
+
   
   .roxtar-icon-bar span:before, .roxtar-icon-bar span:after {
     content: '';
@@ -1581,7 +1573,7 @@ form.woocommerce-checkout {
   }
 
 
-/*************************** Reusable Block - Product Categories **********************************/
+/*************************** Reusable Block - Product Categories ****************************************************************************/
 
 .product_category_row {
   width:100%;
@@ -1698,7 +1690,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Product category pages **********************************/
+/*************************** Product category pages ****************************************************************************/
 
 .shop-widget {
 
@@ -1783,7 +1775,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Archive Page Header **********************************/
+/*************************** Archive Page Header ****************************************************************************/
 
 
 .page-header  {
@@ -1872,7 +1864,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Product Page - Images **********************************/
+/*************************** Product Page - Images ****************************************************************************/
 
 
 .product img, .product-loop-image, .product-loop-hover-image {
@@ -2121,7 +2113,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Product Page - Product Title **********************************/
+/*************************** Product Page - Product Title ****************************************************************************/
 
 
 .product_title {
@@ -2135,14 +2127,14 @@ form.woocommerce-checkout {
   font-size: 1em;
 }
 
-/*************************** Product Page - Price **********************************/
+/*************************** Product Page - Price ****************************************************************************/
 
 
 .price_per_weight {
   font-size:75%;
 }
 
-/*************************** Product Page - Description **********************************/
+/*************************** Product Page - Description ****************************************************************************/
 
 
 .woocommerce-product-details__short-description {
@@ -2159,7 +2151,7 @@ form.woocommerce-checkout {
   margin-top: 20px;
 }
 
-/*************************** Product Page - File Downloads **********************************/
+/*************************** Product Page - File Downloads ****************************************************************************/
 
 .roxtar-files-list {
 
@@ -2183,7 +2175,7 @@ form.woocommerce-checkout {
 }
 
 
-/*************************** Product Page - add to cart **********************************/
+/*************************** Product Page - add to cart ****************************************************************************/
 
 .not_logged_in_btn {
   margin-top:var(--vertical-spacing);
@@ -2300,7 +2292,7 @@ form.woocommerce-checkout {
 }
 
 
-/*************************** Product Page - Tags **********************************/
+/*************************** Product Page - Tags ****************************************************************************/
 
 .product-summary {
 
@@ -2336,7 +2328,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Product Page - Tabs **********************************/
+/*************************** Product Page - Tabs ****************************************************************************/
 
 
 .woocommerce-tabs {
@@ -2551,7 +2543,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Product Page - Related & upsells **********************************/
+/*************************** Product Page - Related & upsells ****************************************************************************/
 
 
 .related, .up-sells  {
@@ -2579,7 +2571,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Blog **********************************/
+/*************************** Blog ****************************************************************************/
 
 
 
@@ -2618,7 +2610,7 @@ form.woocommerce-checkout {
   }
 }
 
-/*************************** Testimonials **********************************/
+/*************************** Testimonials ****************************************************************************/
 
 
 .wp-block-kioken-testimonials-carousel {
@@ -2634,7 +2626,7 @@ form.woocommerce-checkout {
 
 
 
-/*************************** Footer **********************************/
+/*************************** Footer ****************************************************************************/
 
 .site-footer{
   margin-top:var(--footer-space);
@@ -2790,4 +2782,22 @@ form.woocommerce-checkout {
   .site-info .site-infor-col {
     text-align: center;
   }
+}
+
+
+/*************************** Complianz plugin ****************************************************************************/
+
+.cmplz-blocked-content-container.forminator-g-recaptcha {
+  max-width: initial !important;
+  height: 70px !important
+}
+
+@media only screen and (max-width: 400px) {
+  .cmplz-blocked-content-container.forminator-g-recaptcha {
+    height: 100px !important
+  }
+}
+
+.cmplz-blocked-content-container.forminator-g-recaptcha .cmplz-blocked-content-notice {
+  top: 2px
 }

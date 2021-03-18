@@ -36,20 +36,8 @@ class Roxtar_Get_CSS {
 			}
 		';
 
-		// For mega menu.
-		$styles = '
-			.main-navigation .mega-menu-inner-wrapper {
-				width: 100%;
-				max-width: ' . esc_attr( $options['container_width'] ) . ';
-				margin: 0 auto;
-				padding-left: 15px;
-				padding-right: 15px;
-			}
-		';
-
 		// Container.
 		$styles .= '
-
 
 			:root {
 				--scrollbar-width:17px;
