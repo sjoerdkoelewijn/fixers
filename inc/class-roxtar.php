@@ -428,7 +428,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 
 			wp_enqueue_style(
 				'roxtar-small-screen-styles',
-				ROXTAR_THEME_URI . 'small-screens.css',
+				ROXTAR_THEME_URI . 'assets/css/small-screens.css',
 				array(),
 				roxtar_version(),
 				'all and ( max-width: ' . esc_attr( $options['header_menu_breakpoint'] ) . 'px )'
@@ -436,7 +436,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			
 			wp_enqueue_style(
 				'roxtar-large-screen-styles',
-				ROXTAR_THEME_URI . 'large-screens.css',
+				ROXTAR_THEME_URI . 'assets/css/large-screens.css',
 				array(),
 				roxtar_version(),
 				'all and ( min-width: ' . esc_attr( $options['header_menu_breakpoint'] + 1 ) . 'px )'
