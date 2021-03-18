@@ -52,7 +52,7 @@ class Roxtar_Get_CSS {
 				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
 				--heading-line-height:'. esc_attr( ($options['heading_line_height']) / 10 ) . 'rem' .';				
 				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
-				--heading-text-color:' . esc_attr( $options['heading_color'] ) . ';				
+				--heading-color:' . esc_attr( $options['heading_color'] ) . ';				
 
 				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
 				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
@@ -174,37 +174,6 @@ class Roxtar_Get_CSS {
 			';
 		}
 
-		// Body css.
-		$styles .= '
-			.pagination a,
-			.pagination a,
-			.woocommerce-pagination a,
-			.woocommerce-loop-product__category a,
-			.woocommerce-loop-product__title,
-			.price del,
-			.stars a,
-			.woocommerce-review-link,
-			.woocommerce-tabs .tabs li:not(.active) a,
-			.woocommerce-cart-form__contents .product-remove a,
-			.comment-body .comment-meta .comment-date,
-			.roxtar-breadcrumb a,
-			.rank-math-breadcrumb a,
-			.breadcrumb-separator,
-			.has-roxtar-text-color,
-			.button.loop-add-to-cart-icon-btn,
-			.loop-wrapper-wishlist a,
-			#order_review .shop_table .product-name {
-				color: ' . esc_attr( $options['text_color'] ) . ';
-			}
-
-			.loop-wrapper-wishlist a:hover,
-			.price_slider_wrapper .price_slider,
-			.has-roxtar-text-background-color{
-				background-color: ' . esc_attr( $options['text_color'] ) . ';
-			}
-
-		';
-
 		// Primary menu css.
 		$styles .= '
 			.primary-navigation a{
@@ -231,56 +200,6 @@ class Roxtar_Get_CSS {
 
 			.site-tools .tools-icon {
 				color: ' . esc_attr( $options['primary_menu_color'] ) . ';
-			}
-		';
-
-		// Heading css.
-		$styles .= '
-			
-			
-
-			.product-loop-meta .price,
-			.variations label,
-			.woocommerce-review__author,
-			.button[name="apply_coupon"],
-			.quantity .qty,
-			.form-row label,
-			.select2-container--default .select2-selection--single .select2-selection__rendered,
-			.form-row .input-text:focus,
-			.wc_payment_method label,
-			.shipping-methods-modified-label,
-			.woocommerce-checkout-review-order-table thead th,
-			.woocommerce-checkout-review-order-table .product-name,
-			.woocommerce-thankyou-order-details strong,
-			.woocommerce-table--order-details th,
-			.woocommerce-table--order-details .amount,
-			.wc-breadcrumb .roxtar-breadcrumb,
-			.sidebar-menu .primary-navigation .arrow-icon,
-			
-			.roxtar-subscribe-form input,			
-			.shop_table_responsive td:before,
-			.dialog-search-title,
-			.cart-collaterals th,
-			.woocommerce-mini-cart__total strong,
-			.woocommerce-form-login-toggle .woocommerce-info a,
-			.woocommerce-form-coupon-toggle .woocommerce-info a,
-			.has-roxtar-heading-color,
-			.woocommerce-table--order-details td,
-			.woocommerce-table--order-details td.product-name a,
-			.has-distraction-free-checkout .site_header .site-branding:after,
-			.woocommerce-cart-form__contents thead th,
-			#order_review .shop_table th,
-			#order_review .shop_table th.product-name,
-			#order_review .shop_table .product-quantity {
-				color: ' . esc_attr( $options['heading_color'] ) . ';
-			}
-
-			.has-roxtar-heading-background-color{
-				background-color: ' . esc_attr( $options['heading_color'] ) . ';
-			}
-
-			.variations label{
-				font-weight: ' . esc_attr( $options['heading_font_weight'] ) . ';
 			}
 		';
 

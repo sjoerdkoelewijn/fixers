@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6{
   font-weight: var(--heading-font-weight);
   text-transform: var(--heading-text-transform);
   line-height: var(--heading-line-height);
-  color: var(--heading-text-color);
+  color: var(--heading-color);
 }
 
 h1, .has-roxtar-heading-1-font-size{
@@ -1007,6 +1007,33 @@ a:hover{
   background-color: var(--button-background-color) !important;
 }
 
+.pagination a,
+.pagination a,
+.woocommerce-pagination a,
+.woocommerce-loop-product__category a,
+.woocommerce-loop-product__title,
+.price del,
+.stars a,
+.woocommerce-review-link,
+.woocommerce-tabs .tabs li:not(.active) a,
+.woocommerce-cart-form__contents .product-remove a,
+.comment-body .comment-meta .comment-date,
+.roxtar-breadcrumb a,
+.rank-math-breadcrumb a,
+.breadcrumb-separator,
+.has-roxtar-text-color,
+.button.loop-add-to-cart-icon-btn,
+.loop-wrapper-wishlist a,
+#order_review .shop_table .product-name {
+  color: var(--text-color);
+}
+
+.loop-wrapper-wishlist a:hover,
+.price_slider_wrapper .price_slider,
+.has-roxtar-text-background-color{
+  background-color: var(--text-color);
+}
+
 
 /*************************** Account - Login ****************************************************************************/
 
@@ -1554,6 +1581,51 @@ form.woocommerce-checkout {
       }
     }
 
+  }
+
+
+  .product-loop-meta .price,
+  .variations label,
+  .woocommerce-review__author,
+  .button[name="apply_coupon"],
+  .quantity .qty,
+  .form-row label,
+  .select2-container--default .select2-selection--single .select2-selection__rendered,
+  .form-row .input-text:focus,
+  .wc_payment_method label,
+  .shipping-methods-modified-label,
+  .woocommerce-checkout-review-order-table thead th,
+  .woocommerce-checkout-review-order-table .product-name,
+  .woocommerce-thankyou-order-details strong,
+  .woocommerce-table--order-details th,
+  .woocommerce-table--order-details .amount,
+  .wc-breadcrumb .roxtar-breadcrumb,
+  .sidebar-menu .primary-navigation .arrow-icon,
+  
+  .roxtar-subscribe-form input,			
+  .shop_table_responsive td:before,
+  .dialog-search-title,
+  .cart-collaterals th,
+  .woocommerce-mini-cart__total strong,
+  .woocommerce-form-login-toggle .woocommerce-info a,
+  .woocommerce-form-coupon-toggle .woocommerce-info a,
+  .has-roxtar-heading-color,
+  .woocommerce-table--order-details td,
+  .woocommerce-table--order-details td.product-name a,
+  .has-distraction-free-checkout .site_header .site-branding:after,
+  .woocommerce-cart-form__contents thead th,
+  #order_review .shop_table th,
+  #order_review .shop_table th.product-name,
+  #order_review .shop_table .product-quantity {
+    color: var(--heading-color);
+  }
+
+  .has-roxtar-heading-background-color{
+    background-color: var(--heading-color);
+  }
+
+  .variations label{
+    font-weight: var(--heading-font-weight);
   }
 
 
