@@ -63,6 +63,9 @@ class Roxtar_Get_CSS {
 
 				--scrollbar-width:17px;
 
+				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
+				--header-width:'. esc_attr( $options['header_width'] ) .';
+
 				--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
 				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
@@ -93,11 +96,6 @@ class Roxtar_Get_CSS {
 				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
 			
 			} 			
-
-			header {
-				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
-				--header-width:'. esc_attr( $options['header_width'] ) .';
-			}
 
 			footer {
 				--footer-text-color:' . esc_attr( $options['footer_text_color'] ) . ';
