@@ -201,8 +201,22 @@ a {
     }
 }
 
+body, select, button, input, textarea{
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  text-transform: var(--body-text-transform);
+  font-size: var(--body-font-size);
+  color: var(--body-text-color);
+}
 
-
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  text-transform: var(--heading-text-transform);
+  line-height: var(--heading-line-height);
+  color: var(--heading-text-color);
+}
 
 h1, .has-roxtar-heading-1-font-size{
   font-size:var(--header-size-1);
@@ -570,9 +584,24 @@ form {
   -webkit-box-align: center;
   align-items: center;
   overflow:hidden;
+  height:var(--topbar-space);
+  background-color: var(--topbar-background-color);
 
   @include phone {
     display:none;
+  }
+
+  .topbar *{
+    color: var(--topbar-text-color);
+  }
+  .has-header-transparent.header-transparent-for-all-devices .site_header {
+    margin-top:var(--topbar-space); 
+    border-top:1px solid rgba(255, 255, 255, 0.08);  
+  }
+
+  .has-header-transparent.header-transparent-for-all-devices .site_header {
+    margin-top:var(--topbar-space); 
+    border-top:1px solid rgba(255, 255, 255, 0.08);  
   }
 
   .topbar_inner {

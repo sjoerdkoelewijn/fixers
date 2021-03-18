@@ -1,0 +1,104 @@
+.primary-navigation.primary-mobile-navigation + .primary-navigation{
+    display: none;
+}
+
+.site_header .site_header_inner .header_widget_area {
+    display:none;
+}
+
+.has-header-layout-1 .wrap-toggle-sidebar-menu {
+    display: block;
+}
+.site_header_inner .site-navigation, .site_header_inner .site-search {
+    display: none;
+}
+.has-header-layout-1 .sidebar-menu {
+    display: block;
+}
+.has-header-layout-1 .site-navigation {
+    text-align: left;
+}			
+.site-branding {
+    text-align: center;
+}	
+.header-layout-1 .site-branding {
+    flex: 0 1 auto;
+}
+.header-layout-1 .wrap-toggle-sidebar-menu, .header-layout-1 .site-tools {
+    flex: 1 1 0px;
+}
+.site_header_inner .site-navigation, .site_header_inner .site-search {
+    display: none;
+}
+.header-layout-1 .wrap-toggle-sidebar-menu,
+    .header-layout-1 .site-tools {
+    flex: 1 1 0px;
+}
+
+.header-layout-1 .site-branding {
+    flex: 0 1 auto;
+}
+
+.site_header_inner {
+    justify-content: center;
+}
+
+.site_header_inner .logo {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.site-tools .header-search-icon,
+    .site-tools .my-account {
+    display: none;
+}
+
+.site_header .shopping-bag-button {
+    margin-right: 15px;
+}
+
+.has-custom-mobile-logo a:not(.custom-mobile-logo-url) {
+    display: none;
+}
+
+.has-header-transparent.header-transparent-for-mobile .site_header {
+    position: absolute;
+}
+
+.header-layout-1 .wrap-toggle-sidebar-menu,
+.header-layout-1 .site-tools {
+    flex: 1 1 0px;
+}
+
+.header-layout-1 .site-branding {
+    flex: 0 1 auto;
+}
+
+.site_header_inner {
+    justify-content: center;
+}
+
+.site_header_inner .logo {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.site-tools .header-search-icon,
+.site-tools .my-account {
+    display: none;
+}
+
+.has-header-transparent.header-transparent-for-mobile .site_header {
+    position: absolute;
+}
+.sub-mega-menu {
+    display: none;
+}
+.site-branding .custom-mobile-logo-url {
+    display: block;
+}
+
+.has-custom-mobile-logo.logo-transparent .custom-transparent-logo-url {
+    display: block;
+}
+			

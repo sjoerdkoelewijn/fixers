@@ -40,6 +40,27 @@ class Roxtar_Get_CSS {
 		$styles .= '
 
 			:root {
+				--body-font-size:'. esc_attr( ($options['body_font_size']) / 10 ) . 'rem' .';
+								
+				--body-font-family:' . esc_attr( $options['body_font_family'] ) . ';
+				--body-font-weight:' . esc_attr( $options['body_font_weight'] ) . ';
+				--body-line-height:' . esc_attr( $options['body_line_height'] ) . ';
+				--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';
+				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
+
+				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
+				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
+				--heading-line-height:' . esc_attr( $options['heading_line_height'] ) . ';
+				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
+				--heading-text-color:' . esc_attr( $options['heading_color'] ) . ';				
+
+				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
+				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
+				--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
+				--header-size-4: '. esc_attr( ($options['heading_h4_font_size']) / 10) . 'rem' .';
+				--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
+				--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
+
 				--scrollbar-width:17px;
 
 				--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
@@ -57,35 +78,33 @@ class Roxtar_Get_CSS {
 				--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
 
 				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
-
-				--footer-text-color:' . esc_attr( $options['footer_text_color'] ) . ';
-				--footer-link-color:' . esc_attr( $options['footer_link_color'] ) . ';
-				--footer-heading-color:' . esc_attr( $options['footer_heading_color'] ) . ';
-				--footer-background-color:' . esc_attr( $options['footer_background_color'] ) . ';
-				
-				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
-				--header-width:'. esc_attr( $options['header_width'] ) .';
+			
 				--content-width:'. esc_attr( $options['container_width'] ) .';
 				--content-spacing:'. esc_attr( $options['content_spacing'] ) .'px;
 
 				--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
 				
-				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
-
 				--page-header-padding-top:'. esc_attr( $options['page_header_padding_top']) . 'px' .';
 				--page-header-padding-bottom:'. esc_attr( $options['page_header_padding_bottom']) . 'px' .';
 				--page-header-margin-bottom:'. esc_attr( $options['page_header_margin_bottom']) . 'px' .';
-
-				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
-				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
-				--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
-				--header-size-4: '. esc_attr( ($options['heading_h4_font_size']) / 10) . 'rem' .';
-				--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
-				--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
-
+				
 				--product-image-height:'. esc_attr( $options['shop_single_product_image_height']) . 'px' .';
+				
+				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
+			
+			} 			
 
-			} 
+			header {
+				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
+				--header-width:'. esc_attr( $options['header_width'] ) .';
+			}
+
+			footer {
+				--footer-text-color:' . esc_attr( $options['footer_text_color'] ) . ';
+				--footer-link-color:' . esc_attr( $options['footer_link_color'] ) . ';
+				--footer-heading-color:' . esc_attr( $options['footer_heading_color'] ) . ';
+				--footer-background-color:' . esc_attr( $options['footer_background_color'] ) . ';				
+			}
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
 				.alignfull {
@@ -96,7 +115,6 @@ class Roxtar_Get_CSS {
 					margin:0 var(--content-spacing);
 				}
 			}
-
 			
 			@media (min-width: 992px) {
 				.site-boxed-container #view,
@@ -105,6 +123,20 @@ class Roxtar_Get_CSS {
 				}
 			}
 		';
+
+		$topbar_display = $options['topbar_display'];
+		
+		if ( $topbar_display ) {
+			$styles .= '
+			
+			.topbar {
+				--topbar-background-color:' . esc_attr( $options['topbar_background_color'] ) . ';
+				--topbar-text-color:' . esc_attr( $options['topbar_text_color'] ) . ';
+				--topbar-space:'. esc_attr( $options['topbar_space']) . 'px' .';
+			}
+			
+			';			
+		}
 
 		// Logo width.
 		$logo_width        = $options['logo_width'];
@@ -143,392 +175,9 @@ class Roxtar_Get_CSS {
 				}
 			';
 		}
-		// Topbar.
-		$topbar_display = $options['topbar_display'];
-		
-		if ( $topbar_display ) {
-			$styles .= '
-			.topbar{
-				background-color: ' . esc_attr( $options['topbar_background_color'] ) . ';
-				height:' . esc_attr( $options['topbar_space'] ) . 'px ;
-			}
-			.topbar *{
-				color: ' . esc_attr( $options['topbar_text_color'] ) . ';
-			}
-			.has-header-transparent.header-transparent-for-all-devices .site_header {
-				margin-top:calc(' . esc_attr( $options['topbar_space'] ) . 'px * 2); 
-				border-top:1px solid rgba(255, 255, 255, 0.08);  
-			}
-			.has-header-transparent.header-transparent-for-all-devices .site_header {
-				margin-top:' . esc_attr( $options['topbar_space'] ) . 'px; 
-				border-top:1px solid rgba(255, 255, 255, 0.08);  
-			}
-			';			
-		}
-		
-		
-
-		// Menu Breakpoint.
-		$styles .= '
-			@media ( max-width: ' . esc_attr( $options['header_menu_breakpoint'] ) . 'px ) {
-
-				.primary-navigation.primary-mobile-navigation + .primary-navigation{
-					display: none;
-				}
-
-				.site_header .site_header_inner .header_widget_area {
-					display:none;
-				}
-
-				.has-header-layout-1 .wrap-toggle-sidebar-menu {
-					display: block;
-				}
-				.site_header_inner .site-navigation, .site_header_inner .site-search {
-					display: none;
-				}
-				.has-header-layout-1 .sidebar-menu {
-					display: block;
-				}
-				.has-header-layout-1 .site-navigation {
-					text-align: left;
-				}
-				.has-header-layout-3 .header-layout-3 .wrap-toggle-sidebar-menu {
-					display: block !important;
-				}
-				.has-header-layout-3 .header-layout-3 .navigation-box, .has-header-layout-3 .header-layout-3 .left-content {
-					display: none;
-				}
-				.has-header-layout-4 .header-layout-4 .wrap-toggle-sidebar-menu {
-					display: block !important;
-				}
-				.has-header-layout-5 .header-layout-5 .wrap-toggle-sidebar-menu {
-					display: block !important;
-				}
-				.has-header-layout-5 .header-layout-5 .navigation-box, .has-header-layout-5 .header-layout-5 .center-content {
-					display: none;
-				}
-				.site-branding {
-					text-align: center;
-				}
-				.header-layout-6 .wrap-toggle-sidebar-menu, .header-layout-6 .header-content-top .shopping-bag-button {
-					display: block !important;
-				}
-				.header-layout-6 .content-top-right, .header-layout-6 .header-content-bottom {
-					display: none;
-				}
-				.header-layout-8 .content-top-right, .header-layout-8 .header-content-bottom {
-					display: none !important;
-				}
-				.header-layout-8 .wrap-toggle-sidebar-menu, .header-layout-8 .header-search-icon {
-					display: block !important;
-				}
-				.header-layout-8 .header-content-top .site-tools {
-					display: flex !important;
-				}
-				.header-layout-1 .site-branding {
-				    flex: 0 1 auto;
-				}
-				.header-layout-1 .wrap-toggle-sidebar-menu, .header-layout-1 .site-tools {
-				    flex: 1 1 0px;
-				}
-				.site_header_inner .site-navigation, .site_header_inner .site-search {
-					display: none;
-				}
-				.header-layout-1 .wrap-toggle-sidebar-menu,
-				  .header-layout-1 .site-tools {
-				    flex: 1 1 0px;
-				}
-
-				.header-layout-1 .site-branding {
-				    flex: 0 1 auto;
-				}
-
-				.site_header_inner {
-				    justify-content: center;
-				}
-
-				.site_header_inner .logo {
-				    max-width: 70%;
-				    margin: 0 auto;
-				}
-
-				.site-tools .header-search-icon,
-				  .site-tools .my-account {
-				    display: none;
-				}
-
-				.site_header .shopping-bag-button {
-				    margin-right: 15px;
-				}
-
-				.has-custom-mobile-logo a:not(.custom-mobile-logo-url) {
-				    display: none;
-				}
-
-				.has-header-transparent.header-transparent-for-mobile .site_header {
-				    position: absolute;
-				}
-
-				.header-layout-1 .wrap-toggle-sidebar-menu,
-				.header-layout-1 .site-tools {
-					flex: 1 1 0px;
-				}
-
-				.header-layout-1 .site-branding {
-				    flex: 0 1 auto;
-				}
-
-				.site_header_inner {
-				    justify-content: center;
-				}
-
-				.site_header_inner .logo {
-				    max-width: 70%;
-				    margin: 0 auto;
-				}
-
-				.site-tools .header-search-icon,
-				.site-tools .my-account {
-				    display: none;
-				}
-
-				.has-header-transparent.header-transparent-for-mobile .site_header {
-				    position: absolute;
-				}
-				.sub-mega-menu {
-    				display: none;
-  				}
-  				.site-branding .custom-mobile-logo-url {
-					display: block;
-				}
-
-				.has-custom-mobile-logo.logo-transparent .custom-transparent-logo-url {
-					display: block;
-				}
-			}
-		';
-
-		$styles .= '
-			@media ( min-width: ' . esc_attr( $options['header_menu_breakpoint'] + 1 ) . 'px ) {
-				.primary-navigation.primary-mobile-navigation {
-					display: none;
-				}
-
-				.has-header-layout-1 .wrap-toggle-sidebar-menu {
-					display: none;
-				}
-
-				.site-branding .custom-mobile-logo-url {
-					display: none;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation > .menu-item {
-				    display: block;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation > .menu-item > a {
-					padding: 0;
-				}
-
-				.main-navigation .primary-navigation > .menu-item > a {
-				    padding: 20px 0;
-				    margin: 0 20px;
-				    display: flex;
-				    justify-content: space-between;
-				    align-items: center;
-				}
-
-				.main-navigation .primary-navigation > .menu-item {
-				    display: inline-flex;
-				    line-height: 1;
-				    align-items: center;
-				    flex-direction: column;
-				}
-
-				.has-header-layout-1 .sidebar-menu {
-				    display: none;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation .menu-item-has-mega-menu .mega-menu-wrapper {
-				    min-width: auto;
-				    max-width: 100%;
-				    transform: none;
-				    position: static;
-				    box-shadow: none;
-				    opacity: 1;
-				    visibility: visible;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation .sub-menu {
-				    margin-left: 20px !important;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation .sub-menu:not(.sub-mega-menu) {
-				    transition-duration: 0s;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation > .menu-item ul:not(.sub-mega-menu) {
-				    opacity: 1;
-				    visibility: visible;
-				    transform: none;
-				    position: static;
-				    box-shadow: none;
-				    transition-duration: 0s;
-				    min-width: auto;
-				}
-
-				.sidebar-menu .main-navigation .primary-navigation > .menu-item ul:not(.sub-mega-menu) a {
-				    padding-right: 0;
-				    padding-left: 0;
-				}
-
-				.sidebar-menu-open .sidebar-menu .site-navigation {
-    				left: 60px;
-   					right: 60px;
-  				}
-
-				.has-header-transparent.header-transparent-for-desktop .site_header {
-  					position: absolute;
-				}
-
-				.roxtar-nav-menu-widget .roxtar-toggle-nav-menu-button, .roxtar-nav-menu-widget .site-search, .roxtar-nav-menu-widget .roxtar-nav-menu-account-action {
-				    display: none;
-				}
-
-				.sidebar-menu-open .sidebar-menu .site-navigation {
-				    left: 60px;
-				    right: 60px;
-				}
-
-				.has-header-transparent.header-transparent-for-desktop .site_header {
-				    position: absolute;
-				}
-
-				.has-custom-mobile-logo .custom-mobile-logo-url {
-				    display: none;
-				}
-
-				.main-navigation li {
-					list-style: none;
-				}
-
-				.site_header_inner .site-navigation:last-child .main-navigation {
-				    padding-right: 0;
-			  	}
-
-			  	.main-navigation ul {
-				    padding-left: 0;
-				    margin: 0;
-				}
-
-				.main-navigation .primary-navigation {
-				    font-size: 0;
-				}
-
-				.main-navigation .primary-navigation > .menu-item .sub-menu {
-				    opacity: 0;
-				    visibility: hidden;
-				    position: absolute;
-				    top: 110%;
-				    left: 0;
-				    margin-left: 0;
-				    min-width: 300px;
-				    text-align: left;
-				    z-index: -1;
-					border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
-					padding:20px;
-				}
-
-				.main-navigation .primary-navigation > .menu-item .sub-menu .menu-item-has-children .menu-item-arrow {
-				    transform: rotate(-90deg);
-				}
-
-				.main-navigation .primary-navigation > .menu-item .sub-menu a {
-				    padding: 10px 0 10px 20px;
-				    display: flex;
-				    justify-content: space-between;
-				    align-items: center;
-				}
-				.main-navigation .primary-navigation > .menu-item .sub-menu a.tinvwl_add_to_wishlist_button, .main-navigation .primary-navigation > .menu-item .sub-menu a.woocommerce-loop-product__link, .main-navigation .primary-navigation > .menu-item .sub-menu a.loop-add-to-cart-btn {
-				    padding: 0;
-				    justify-content: center;
-				    border-radius: 0;
-				}
-
-				.main-navigation .primary-navigation > .menu-item .sub-menu a.tinvwl_add_to_wishlist_button:hover, .main-navigation .primary-navigation > .menu-item .sub-menu a.woocommerce-loop-product__link:hover, .main-navigation .primary-navigation > .menu-item .sub-menu a.loop-add-to-cart-btn:hover {
-				    background-color: transparent;
-				}
-
-				.main-navigation .primary-navigation > .menu-item .sub-menu a:hover {
-				    background: rgba(239, 239, 239, 0.28);
-				}
-
-				.main-navigation .primary-navigation .menu-item {
-				    position: relative;
-				}
-
-				.main-navigation .primary-navigation .menu-item:hover > .sub-menu {
-				    pointer-events: auto;
-				    opacity: 1;
-				    visibility: visible;
-				    top: 100%;
-				    z-index: 5;
-				    -webkit-transform: translateY(0px);
-				    transform: translateY(0px);
-				}
-
-				.main-navigation .primary-navigation .sub-menu {
-				    pointer-events: none;
-				    background-color: #fff;
-				    -webkit-box-shadow: 0 2px 8px 0 rgba(125, 122, 122, 0.2);
-				    box-shadow: 0 2px 8px 0 rgba(125, 122, 122, 0.2);
-				    border-radius: 4px;
-				    -webkit-transition-duration: 0.2s;
-				    transition-duration: 0.2s;
-				    -webkit-transform: translateY(10px);
-				    transform: translateY(10px);
-				}
-
-				.main-navigation .primary-navigation .sub-menu > .menu-item > .sub-menu {
-				    -webkit-transform: translateY(0px);
-				    transform: translateY(0px);
-				    top: 0;
-				    left: 110%;
-				}
-
-				.main-navigation .primary-navigation .sub-menu > .menu-item:hover > .sub-menu {
-				    left: 100%;
-				}
-
-				.has-header-layout-1 .wrap-toggle-sidebar-menu {
-				    display: none;
-				}
-
-				.has-header-layout-1 .site-navigation {
-				    flex-grow: 1;
-					text-align: left;
-					margin-left:var(--content-spacing);
-					margin-right:var(--content-spacing);
-				}
-
-				.has-header-layout-1 .site-navigation .site-search:not(.roxtar-search-form-widget),
-				  .has-header-layout-1 .site-navigation .mobile-my-account {
-				    display: none;
-				}
-			}
-		';
 
 		// Body css.
 		$styles .= '
-			body, select, button, input, textarea{
-				font-family: ' . esc_attr( $options['body_font_family'] ) . ';
-				font-weight: ' . esc_attr( $options['body_font_weight'] ) . ';
-				line-height: ' . esc_attr( $options['body_line_height'] ) . 'px;
-				text-transform: ' . esc_attr( $options['body_font_transform'] ) . ';
-				font-size: ' . esc_attr( $options['body_font_size'] ) . 'px;
-				color: ' . esc_attr( $options['text_color'] ) . ';
-			}
-
 			.pagination a,
 			.pagination a,
 			.woocommerce-pagination a,
@@ -556,10 +205,6 @@ class Roxtar_Get_CSS {
 				background-color: ' . esc_attr( $options['text_color'] ) . ';
 			}
 
-		
-			.product .woocommerce-loop-product__title{
-				font-size: ' . esc_attr( $options['body_font_size'] ) . 'px;
-			}
 		';
 
 		// Primary menu css.
@@ -593,13 +238,7 @@ class Roxtar_Get_CSS {
 
 		// Heading css.
 		$styles .= '
-			h1, h2, h3, h4, h5, h6{
-				font-family: ' . esc_attr( $options['heading_font_family'] ) . ';
-				font-weight: ' . esc_attr( $options['heading_font_weight'] ) . ';
-				text-transform: ' . esc_attr( $options['heading_font_transform'] ) . ';
-				line-height: ' . esc_attr( $options['heading_line_height'] ) . ';
-				color: ' . esc_attr( $options['heading_color'] ) . ';
-			}
+			
 			
 
 			.product-loop-meta .price,

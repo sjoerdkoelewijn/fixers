@@ -1,17 +1,22 @@
 
-  @font-face {
+@font-face {
     font-family: 'star';
     src: url(../../assets/fonts/star.eot);
     src: url(../../assets/fonts/star.eot?#iefix) format("embedded-opentype"), url(../../assets/fonts/star.woff) format("woff"), url(../../assets/fonts/star.ttf) format("truetype"), url(../../assets/fonts/star.svg#star) format("svg");
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+ 		
+.product .woocommerce-loop-product__title{
+    font-size:var(--body-font-size);
+}
   
   .roxtar-out-of-stock-label {
     position: absolute;
     top: 10px;
     z-index: 2;
-    background-color: #818486;
+    background-color: var(--theme-color);
     color: #fff;
     padding: 5px;
     line-height: 1;
