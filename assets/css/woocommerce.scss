@@ -7,6 +7,52 @@
     font-style: normal;
 }
 
+
+/*************************** Account - Address ****************************************************************************/
+
+.woocommerce-Address {
+    background:white;
+    border-radius:var(--border-radius);
+  }
+  
+  
+  .woocommerce-Address .woocommerce-Address-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  
+  .woocommerce-Address .woocommerce-Address-title h3 {
+    font-size: 18px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .woocommerce-Address .woocommerce-Address-title .edit {
+    margin-right: 15px;
+    font-size:80%;
+    font-weight:700;
+  }
+  
+  address {
+    font-style:initial;
+    margin: 0 0 1.6em;
+    line-height: 180%;
+    font-size:90%;
+  }
+  
+  .woocommerce-Address address {
+    margin-bottom: 0;
+    padding: 15px;
+  }
+
+  
  		
 .product .woocommerce-loop-product__title{
     font-size:var(--body-font-size);

@@ -201,7 +201,7 @@ a {
     }
 }
 
-body, select, button, input, textarea{
+body, select, button, input, textarea, p{
   font-family: var(--body-font-family);
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
@@ -1061,51 +1061,6 @@ a:hover{
   content: "\e63d";
 }
 
-/*************************** Account - Address ****************************************************************************/
-
-.woocommerce-Address {
-  background:white;
-  border-radius:var(--border-radius);
-}
-
-
-.woocommerce-Address .woocommerce-Address-title {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
-.woocommerce-Address .woocommerce-Address-title h3 {
-  font-size: 18px;
-  font-weight: normal;
-  display: inline-block;
-  margin: 0;
-  padding: 15px;
-}
-
-.woocommerce-Address .woocommerce-Address-title .edit {
-  margin-right: 15px;
-  font-size:80%;
-  font-weight:700;
-}
-
-address {
-  font-style:initial;
-  margin: 0 0 1.6em;
-  line-height: 180%;
-  font-size:90%;
-}
-
-.woocommerce-Address address {
-  margin-bottom: 0;
-  padding: 15px;
-}
-
-
 
 /*************************** Checkout - Mini Cart ****************************************************************************/
 
@@ -1682,7 +1637,6 @@ form.woocommerce-checkout {
       font-size:100%;
       color:var(--background-color);
       padding:0 18px;
-      line-height: 22px;
     }
 
     figure {
@@ -1694,9 +1648,7 @@ form.woocommerce-checkout {
     }
 
     p {
-      font-size:15px;
       padding:0 20px;
-      line-height: 22px;
     }
 
     p a {
@@ -2146,7 +2098,7 @@ form.woocommerce-checkout {
 
 
 .product_title {
-  font-size: 30px;
+  //font-size: 30px;
   margin-top: 0;
   font-weight: 500;
   margin-bottom: 10px;
