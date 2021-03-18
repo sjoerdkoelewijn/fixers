@@ -44,13 +44,13 @@ class Roxtar_Get_CSS {
 
 				--body-font-family:' . esc_attr( $options['body_font_family'] ) . ';
 				--body-font-weight:' . esc_attr( $options['body_font_weight'] ) . ';
-				--body-line-height:' . esc_attr( $options['body_line_height'] ) . 'px;
+				--body-line-height:'. esc_attr( ($options['body_line_height']) / 10 ) . 'rem' .';
 				--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';
 				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
 
 				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
 				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
-				--heading-line-height:' . esc_attr( $options['heading_line_height'] ) . 'px;
+				--heading-line-height:'. esc_attr( ($options['heading_line_height']) / 10 ) . 'rem' .';				
 				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
 				--heading-text-color:' . esc_attr( $options['heading_color'] ) . ';				
 
