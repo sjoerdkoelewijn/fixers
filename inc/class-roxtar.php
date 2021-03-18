@@ -401,7 +401,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			if ( class_exists( 'woocommerce' ) ) {
 				wp_enqueue_style(
 					'roxtar-woocommerce-style',
-					get_template_directory_uri() . 'assets/css/woocommerce.css',
+					ROXTAR_THEME_URI . 'assets/css/woocommerce.css',
 					array(),
 					roxtar_version()
 				);
