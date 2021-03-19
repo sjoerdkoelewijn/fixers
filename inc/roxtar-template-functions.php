@@ -2125,47 +2125,6 @@ if ( ! function_exists( 'roxtar_content_close' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_get_site_container_class' ) ) {
-	/**
-	 * Get site container class
-	 */
-	function roxtar_get_site_container_class() {
-		$options   = roxtar_options( false );
-		$metabox   = roxtar_get_metabox( false, 'site-container' ); // Metabox container.
-		$container = 'default';
-
-		if ( roxtar_is_woocommerce_activated() && is_shop() ) {
-			$container = $options['shop_container'];
-		} elseif ( roxtar_is_woocommerce_activated() && is_singular( 'product' ) ) {
-			$container = $options['shop_single_container'];
-		} elseif ( is_page() ) {
-			$container = $options['page_container'];
-		} elseif ( is_singular( 'post' ) ) {
-			$container = $options['blog_single_container'];
-		} elseif ( is_archive() || is_search() || is_author() || is_category() || is_home() || is_tag() ) {
-			$container = $options['archive_container'];
-		}
-
-		// Customizer container.
-		if ( 'default' === $container ) {
-			$container = $options['default_container'];
-		}
-
-		// Metabox in post and page.
-		if ( 'default' !== $metabox ) {
-			$container = $metabox;
-		}
-
-		// Fallback.
-		if ( ! in_array( $container, array( 'normal', 'boxed', 'content-boxed', 'full-width', 'full-width-stretched' ), true ) ) {
-			$container = $options['default_container'];
-		}
-
-		return 'site-' . $container . '-container';
-	}
-}
-
-
 
 if ( ! function_exists( 'roxtar_site_header' ) ) {
 	/**

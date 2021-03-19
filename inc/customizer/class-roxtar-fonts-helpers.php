@@ -157,7 +157,7 @@ if ( ! class_exists( 'Roxtar_Fonts_Helpers' ) ) :
 				'heading_font_category'        => '',
 				'heading_font_weight'          => 700,
 				'heading_font_transform'       => 'none',
-				'heading_line_height'          => '1.5',
+				'heading_line_height'          => '25',
 				'heading_h1_font_size'         => 48,
 				'heading_h2_font_size'         => 36,
 				'heading_h3_font_size'         => 30,

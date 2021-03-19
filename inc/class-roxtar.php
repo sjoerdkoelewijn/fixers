@@ -557,7 +557,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 			);
 
 			// Only load on woocommerce single product page
-			if ( is_product() ){
+			if ( roxtar_is_woocommerce_activated() && is_product() ){
 
 				if ( $options['shop_single_image_zoom'] ) {
 					// Product gallery zoom.
@@ -684,8 +684,6 @@ if ( ! class_exists( 'Roxtar' ) ) {
 				$classes[] = 'child-theme-detected';
 			}
 
-			// Site container layout.
-			$classes[] = roxtar_get_site_container_class();
 
 			// Header layout.
 			$classes[] = apply_filters( 'roxtar_has_header_layout_classes', 'has-header-' . $options['header_layout'] );
