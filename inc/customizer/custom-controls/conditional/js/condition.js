@@ -193,7 +193,7 @@
 			[
 				'roxtar_setting[topbar_text_color]',
 				'roxtar_setting[topbar_background_color]',
-				'roxtar_setting[topbar_space]',
+				'roxtar_setting[topbar_height]',
 				'topbar_content_divider',
 				'roxtar_setting[topbar_left]',
 				'roxtar_setting[topbar_center]',

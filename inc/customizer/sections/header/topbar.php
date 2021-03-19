@@ -75,9 +75,9 @@ $wp_customize->add_control(
 
 // Space.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_space]',
+	'roxtar_setting[topbar_height]',
 	array(
-		'default'           => $defaults['topbar_space'],
+		'default'           => $defaults['topbar_height'],
 		'sanitize_callback' => 'absint',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
@@ -86,12 +86,12 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new Roxtar_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_space]',
+		'roxtar_setting[topbar_height]',
 		array(
 			'label'    => __( 'Space', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
+			'section'  => 'topbar_height',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[topbar_space]',
+				'desktop' => 'roxtar_setting[topbar_height]',
 			),
 			'choices' => array(
 				'desktop' => array(

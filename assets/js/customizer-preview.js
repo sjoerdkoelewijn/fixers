@@ -352,7 +352,7 @@ document.addEventListener(
 		// Topbar.
 		roxtar_colors_live_update( 'topbar_text_color', '.topbar *', 'color' );
 		roxtar_colors_live_update( 'topbar_background_color', '.topbar', 'background-color' );
-		roxtar_range_slider_update( ['topbar_space'], '.topbar', 'padding', 'px 0' );
+		roxtar_range_slider_update( ['topbar_height'], '.topbar', 'padding', 'px 0' );
 		roxtar_html_live_update( 'topbar_left', '.topbar .topbar-left' );
 		roxtar_html_live_update( 'topbar_center', '.topbar .topbar-center' );
 		roxtar_html_live_update( 'topbar_right', '.topbar .topbar-right' );

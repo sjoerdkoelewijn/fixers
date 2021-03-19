@@ -130,7 +130,12 @@ class Roxtar_Get_CSS {
 			.topbar {
 				--topbar-background-color:' . esc_attr( $options['topbar_background_color'] ) . ';
 				--topbar-text-color:' . esc_attr( $options['topbar_text_color'] ) . ';
-				--topbar-space:'. esc_attr( $options['topbar_space']) . 'px' .';
+				--topbar-height:'. esc_attr( $options['topbar_height']) . 'px' .';
+			}
+
+			.has-header-transparent.header-transparent-for-all-devices .site_header {
+				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .' 
+				border-top:1px solid rgba(255, 255, 255, 0.08);  
 			}
 			
 			';			

@@ -88,7 +88,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'topbar_display'                          => false,
 				'topbar_text_color'                       => '#ffffff',
 				'topbar_background_color'                 => '#292f34',
-				'topbar_space'                            => 0,
+				'topbar_height'                            => 0,
 				'topbar_left'                             => '',
 				'topbar_center'                           => '',
 				'topbar_right'                            => '',
