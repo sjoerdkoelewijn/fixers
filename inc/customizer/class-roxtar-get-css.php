@@ -134,7 +134,7 @@ class Roxtar_Get_CSS {
 			}
 
 			.has-header-transparent.header-transparent-for-all-devices .site_header {
-				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .' 
+				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .';
 				border-top:1px solid rgba(255, 255, 255, 0.08);  
 			}
 			
