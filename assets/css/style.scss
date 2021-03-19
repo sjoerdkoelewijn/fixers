@@ -576,7 +576,6 @@ form {
 /*************************** Header Styles ****************************************************************************/
 
 .topbar {
-  display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
@@ -584,7 +583,7 @@ form {
   -webkit-box-align: center;
   align-items: center;
   overflow:hidden;
-  height:var(--topbar-space);
+  height:var(--topbar-height);
   background-color: var(--topbar-background-color);
 
   @include phone {
@@ -594,15 +593,9 @@ form {
   .topbar *{
     color: var(--topbar-text-color);
   }
-  .has-header-transparent.header-transparent-for-all-devices .site_header {
-    margin-top:var(--topbar-space); 
-    border-top:1px solid rgba(255, 255, 255, 0.08);  
-  }
 
-  .has-header-transparent.header-transparent-for-all-devices .site_header {
-    margin-top:var(--topbar-space); 
-    border-top:1px solid rgba(255, 255, 255, 0.08);  
-  }
+  
+
 
   .topbar_inner {
     width:var(--header-width);
