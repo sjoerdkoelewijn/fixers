@@ -584,7 +584,7 @@ form {
   align-items: center;
   overflow:hidden;
   height:var(--topbar-height);
-  background-color: var(--topbar-background-color);
+  background-color: var(--topbar-background-color);  
 
   @include phone {
     display:none;
