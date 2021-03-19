@@ -89,7 +89,7 @@ $wp_customize->add_control(
 		'roxtar_setting[topbar_height]',
 		array(
 			'label'    => __( 'Space', 'roxtar' ),
-			'section'  => 'topbar_height',
+			'section'  => 'roxtar_topbar',
 			'settings' => array(
 				'desktop' => 'roxtar_setting[topbar_height]',
 			),
