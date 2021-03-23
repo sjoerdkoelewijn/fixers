@@ -192,12 +192,23 @@
 			'roxtar_setting[topbar_display]',
 			[
 				'roxtar_setting[topbar_text_color]',
-				'roxtar_setting[topbar_background_color]',
+				'roxtar_setting[topbar_background_color]',				
+				'roxtar_setting[topbar_transparent]',
 				'roxtar_setting[topbar_height]',
+				'roxtar_setting[topbar_opacity]',
 				'topbar_content_divider',
 				'roxtar_setting[topbar_left]',
 				'roxtar_setting[topbar_center]',
 				'roxtar_setting[topbar_right]',
+			],
+			false
+		);
+
+		// Topbar transparency
+		condition(
+			'roxtar_setting[header_transparent]',
+			[
+				'roxtar_setting[topbar_opacity]',
 			],
 			false
 		);

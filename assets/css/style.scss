@@ -461,7 +461,7 @@ form {
 
 .alignfull {
     width:100vw;
-    margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+    //margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
     // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
     
     @include uhd {
@@ -473,7 +473,8 @@ form {
     }
 
     video.wp-block-cover__video-background, img.wp-block-cover__image-background {
-      width:100vw;
+      width:100%;
+      max-width:100vw;
     }
 
 }
@@ -612,7 +613,7 @@ form {
 
     .topbar-item {
       flex-grow: 1;
-      
+      text-shadow:0 0 2px rgba(0, 0, 0, .15);
 
       p:empty {
         display: none;
@@ -791,8 +792,6 @@ form {
 .has-header-transparent.header-transparent-for-all-devices {
 
   .topbar {
-    background-color:rgba(0, 0, 0, 0.14);
-    border-bottom:1px solid rgba(0, 0, 0, 0.08);
     position:absolute;
     z-index:100;
   }
@@ -808,7 +807,7 @@ form {
       margin-top:0;
       border-top:0;
     }
-  }
+  }  
 
   .site_header_inner {
     background-color: transparent;

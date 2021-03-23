@@ -73,7 +73,40 @@ $wp_customize->add_control(
 	)
 );
 
-// Space.
+// Opacity.
+$wp_customize->add_setting(
+	'roxtar_setting[topbar_opacity]',
+	array(
+		'default'           => $defaults['topbar_opacity'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+$wp_customize->add_control(
+	new Roxtar_Range_Slider_Control(
+		$wp_customize,
+		'roxtar_setting[topbar_opacity]',
+		array(
+			'label'    => __( 'Topbar Opacity', 'roxtar' ),
+			'section'  => 'roxtar_topbar',
+			'settings' => array(
+				'desktop' => 'roxtar_setting[topbar_opacity]',
+			),
+			'choices' => array(
+				'desktop' => array(
+					'min'  => apply_filters( 'roxtar_topbar_opacity_min_step', 1 ),
+					'max'  => apply_filters( 'roxtar_topbar_opacity_max_step', 100 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => '%',
+				),
+			),
+		)
+	)
+);
+
+// Height.
 $wp_customize->add_setting(
 	'roxtar_setting[topbar_height]',
 	array(
@@ -88,7 +121,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'roxtar_setting[topbar_height]',
 		array(
-			'label'    => __( 'Space', 'roxtar' ),
+			'label'    => __( 'Topbar Height', 'roxtar' ),
 			'section'  => 'roxtar_topbar',
 			'settings' => array(
 				'desktop' => 'roxtar_setting[topbar_height]',
@@ -105,6 +138,7 @@ $wp_customize->add_control(
 		)
 	)
 );
+
 
 // Content divider.
 $wp_customize->add_setting(

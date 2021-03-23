@@ -107,9 +107,9 @@ $wp_customize->add_control(
 			),
 			'choices'     => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_heading_line_height_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_heading_line_height_max_step', 20 ),
-					'step' => 1,
+					'min'  => apply_filters( 'roxtar_heading_line_height_min_step', 100 ),
+					'max'  => apply_filters( 'roxtar_heading_line_height_max_step', 200 ),
+					'step' => 10,
 					'edit' => true,
 					'unit' => '',
 				),

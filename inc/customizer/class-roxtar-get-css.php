@@ -50,7 +50,7 @@ class Roxtar_Get_CSS {
 
 				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
 				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
-				--heading-line-height:'. esc_attr( ($options['heading_line_height']) / 10 ) . 'rem' .';				
+				--heading-line-height:'. esc_attr($options['heading_line_height']) . '%' .';				
 				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
 				--heading-color:' . esc_attr( $options['heading_color'] ) . ';				
 
@@ -135,8 +135,7 @@ class Roxtar_Get_CSS {
 
 			.has-header-transparent.header-transparent-for-all-devices .site_header {
 				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .';
-				border-top:1px solid rgba(255, 255, 255, 0.08);  
-			}			
+			}
 			
 			';			
 		}
@@ -272,6 +271,10 @@ class Roxtar_Get_CSS {
 
 		// Header transparent.
 		if ( roxtar_header_transparent() ) {
+
+			$topbar_background_color = esc_attr( $options['topbar_background_color'] );
+			$topbar_opacity = esc_attr( $options['topbar_opacity'] );
+			
 			$styles .= '
 				.has-header-transparent .site_header_inner{
 					border-bottom-width: ' . esc_attr( $options['header_transparent_border_width'] ) . 'px;
@@ -301,6 +304,18 @@ class Roxtar_Get_CSS {
 				.has-header-transparent .active .site-tools .tools-icon {
 					color: ' . esc_attr( $options['text_color'] ) . ';
 				}
+
+				.has-header-transparent.header-transparent-for-all-devices .topbar {
+					background-color:' . roxtar_hex_to_rgb( $topbar_background_color, $topbar_opacity ) . ';
+					//border-bottom:1px solid rgba(0, 0, 0, 0.08);
+				}
+
+				.has-header-transparent.header-transparent-for-all-devices .site_header.active { 
+					position: fixed;
+					top: 0;
+					margin-top:0;
+				}
+
 			';
 		}
 
