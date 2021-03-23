@@ -47,13 +47,14 @@ class Roxtar_Get_CSS {
 				--body-line-height:'. esc_attr( ($options['body_line_height']) / 10 ) . 'rem' .';
 				--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';
 				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
+				--accent-color:' . esc_attr( $options['accent_color'] ) . ';
 
 				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
 				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
 				--heading-line-height:'. esc_attr($options['heading_line_height']) . '%' .';				
 				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
-				--heading-color:' . esc_attr( $options['heading_color'] ) . ';				
-
+				--heading-color:' . esc_attr( $options['heading_color'] ) . ';
+				
 				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
 				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
 				--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
@@ -102,6 +103,25 @@ class Roxtar_Get_CSS {
 				--footer-link-color:' . esc_attr( $options['footer_link_color'] ) . ';
 				--footer-heading-color:' . esc_attr( $options['footer_heading_color'] ) . ';
 				--footer-background-color:' . esc_attr( $options['footer_background_color'] ) . ';				
+			}
+
+			.site_header_inner {
+				--menu-font-family:' . esc_attr( $options['menu_font_family'] ) . ';
+				--menu-font-size:'. esc_attr($options['parent_menu_font_size']) . 'px' .';	
+				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';
+				--menu-line-height:'. esc_attr($options['parent_menu_line_height']) . 'px' .';				
+				--menu-text-transform:' . esc_attr( $options['menu_font_transform'] ) . ';
+				--menu-color:' . esc_attr( $options['primary_menu_color'] ) . ';
+				--submenu-line-height:'. esc_attr($options['sub_menu_line_height']) . 'px' .';
+				--submenu-font-size:'. esc_attr($options['sub_menu_font_size']) . 'px' .';
+				--submenu-color:' . esc_attr( $options['primary_sub_menu_color'] ) . ';	
+			}
+
+			#scroll-to-top {
+				--scroll-top-icon-size:'. esc_attr( $options['scroll_to_top_icon_size']) . 'px' .';
+				--scroll-top-offset-bottom:'. esc_attr( $options['scroll_to_top_offset_bottom']) . 'px' .';
+				--scroll-top-background-color:' . esc_attr( $options['scroll_to_top_background'] ) . ';				
+				--scroll-top-color:' . esc_attr( $options['scroll_to_top_color'] ) . ';				
 			}
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
@@ -177,97 +197,6 @@ class Roxtar_Get_CSS {
 				}
 			';
 		}
-
-		// Primary menu css.
-		$styles .= '
-			.primary-navigation a{
-				font-family: ' . esc_attr( $options['menu_font_family'] ) . ';
-				text-transform: ' . esc_attr( $options['menu_font_transform'] ) . ';
-			}
-
-			.primary-navigation > li > a,
-			.primary-navigation .sub-menu a {
-				font-weight: ' . esc_attr( $options['menu_font_weight'] ) . ';
-			}
-
-			.primary-navigation > li > a{
-				font-size: ' . esc_attr( $options['parent_menu_font_size'] ) . 'px;
-				line-height: ' . esc_attr( $options['parent_menu_line_height'] ) . 'px;
-				color: ' . esc_attr( $options['primary_menu_color'] ) . ';
-			}
-
-			.primary-navigation .sub-menu a{
-				line-height: ' . esc_attr( $options['sub_menu_line_height'] ) . 'px;
-				font-size: ' . esc_attr( $options['sub_menu_font_size'] ) . 'px;
-				color: ' . esc_attr( $options['primary_sub_menu_color'] ) . ';
-			}
-
-			.site-tools .tools-icon {
-				color: ' . esc_attr( $options['primary_menu_color'] ) . ';
-			}
-		';
-
-		// Link color.
-		$styles .= '
-			.cart-sidebar-content .woocommerce-mini-cart__buttons a:not(.checkout),
-			.product-loop-meta .button,
-			.multi-step-checkout-button[data-action="back"],
-			.review-information-link,
-			a{
-				color: ' . esc_attr( $options['accent_color'] ) . ';
-			}
-
-		';
-
-		// Buttons.
-		$styles .= '
-			.roxtar-button-color,
-			.loop-add-to-cart-on-image+.added_to_cart {
-				color: ' . esc_attr( $options['button_text_color'] ) . ';
-			}
-
-			.roxtar-button-bg-color,
-			.woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
-			.loop-add-to-cart-on-image+.added_to_cart {
-				background-color: ' . esc_attr( $options['button_background_color'] ) . ';
-			}
-
-			.roxtar-button-hover-color,
-			.button[name="apply_coupon"]:hover{
-				color: ' . esc_attr( $options['button_hover_text_color'] ) . ';
-			}
-
-			.roxtar-button-hover-bg-color,
-			.loop-add-to-cart-on-image+.added_to_cart:hover,
-			.button.loop-add-to-cart-icon-btn:hover,
-			.product-loop-action .yith-wcwl-add-to-wishlist:hover,
-			.product-loop-action .yith-wcwl-wishlistaddedbrowse.show,
-			.product-loop-action .yith-wcwl-wishlistexistsbrowse.show,
-			.product-loop-action .added_to_cart,
-			.product-loop-image-wrapper .tinv-wraper .tinvwl_add_to_wishlist_button:hover {
-				background-color: ' . esc_attr( $options['button_hover_background_color'] ) . ';
-			}
-
-			@media (min-width: 992px) {
-				.main-navigation .primary-navigation > .menu-item ul:not(.sub-mega-menu) a.tinvwl_add_to_wishlist_button:hover {
-					background-color: ' . esc_attr( $options['button_hover_background_color'] ) . ';
-				}
-			}
-
-			
-
-			@media ( max-width: 600px ) {
-				.woocommerce-cart-form__contents [name="update_cart"],
-				.woocommerce-cart-form__contents .coupon button {
-					background-color: ' . esc_attr( $options['button_background_color'] ) . ';
-					filter: grayscale(100%);
-				}
-				.woocommerce-cart-form__contents [name="update_cart"],
-				.woocommerce-cart-form__contents .coupon button {
-					color: ' . esc_attr( $options['button_text_color'] ) . ';
-				}
-			}
-		';
 
 		// Header transparent.
 		if ( roxtar_header_transparent() ) {
@@ -408,29 +337,7 @@ class Roxtar_Get_CSS {
 			}
 		';
 
-		// Scroll to top.
-		$styles .= '
-			#scroll-to-top:before {
-				font-size: ' . esc_attr( $options['scroll_to_top_icon_size'] ) . 'px;
-			}
-
-			#scroll-to-top {
-				bottom: ' . esc_attr( $options['scroll_to_top_offset_bottom'] ) . 'px;
-				background-color: ' . esc_attr( $options['scroll_to_top_background'] ) . ';
-				color: ' . esc_attr( $options['scroll_to_top_color'] ) . ';
-			}
-
-			@media (min-width: 992px) {
-				#scroll-to-top.scroll-to-top-show-mobile {
-					display: none;
-				}
-			}
-			@media (max-width: 992px) {
-				#scroll-to-top.scroll-to-top-show-desktop {
-					display: none;
-				}
-			}
-		';
+		
 
 		// Spinner color.
 		$styles .= '

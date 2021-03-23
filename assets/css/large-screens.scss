@@ -109,9 +109,7 @@
     margin: 0;
 }
 
-.main-navigation .primary-navigation {
-    font-size: 0;
-}
+
 
 .main-navigation .primary-navigation > .menu-item .sub-menu {
     opacity: 0;
@@ -123,7 +121,7 @@
     min-width: 300px;
     text-align: left;
     z-index: -1;
-    border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
+    border-radius:var(--border-radius);
     padding:20px;
 }
 

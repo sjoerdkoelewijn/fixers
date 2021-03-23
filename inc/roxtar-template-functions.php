@@ -479,7 +479,7 @@ if ( ! function_exists( 'roxtar_site_title_or_logo' ) ) {
 			$tag = is_home() ? 'h1' : 'div';
 
 			$html  = '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) . '>';
-			$html .= '<span class="site-description">' . esc_html( get_bloginfo( 'description' ) ) . '</span>';
+			//$html .= '<span class="site-description">' . esc_html( get_bloginfo( 'description' ) ) . '</span>';
 		}
 
 		if ( ! $echo ) {
