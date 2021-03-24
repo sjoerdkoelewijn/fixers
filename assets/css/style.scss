@@ -511,8 +511,7 @@ form {
 
 .alignfull {
     width:100vw;
-    //margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
-    // De media query in customizer.php verwijderd de margin voor alle screensizes onder de huidige --content-width
+    margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
     
     @include uhd {
       margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
