@@ -1291,10 +1291,14 @@ form.woocommerce-checkout {
 
 
 .roxtar-breadcrumb, .rank-math-breadcrumb {
-  font-size:80%;
   
   a, .delimiter, .separator {
     font-weight:700;
+    font-size:80%;    
+  }
+
+  .last {
+    font-size:80%;
   }
 
   .delimiter, .separator {
@@ -1625,8 +1629,8 @@ form.woocommerce-checkout {
     width:32px;
     height:28px;
     margin-top:-4px;
-    background-image:url(../images/svg/shopping-basket-icon.svg);
-    filter:invert(42%) sepia(25%) saturate(501%) hue-rotate(78deg) brightness(92%) contrast(88%);
+    mask:url(../images/svg/shopping-basket-icon.svg);
+    background-color:var(--text-color);
   }
 
   .has-header-transparent.header-transparent-for-all-devices {
@@ -1635,8 +1639,8 @@ form.woocommerce-checkout {
       background-color:var(--second-background-color); 
     }
 
-    .custom-shopping-cart:before {   
-      filter:invert(100%) sepia(99%) saturate(0%) hue-rotate(345deg) brightness(111%) contrast(100%);
+    .custom-shopping-cart:before {         
+      background-color:var(--header-transparent-icon-color);
     }
 
     .site_header.active {
@@ -1646,7 +1650,7 @@ form.woocommerce-checkout {
       }
 
       .custom-shopping-cart:before {   
-        filter:invert(42%) sepia(25%) saturate(501%) hue-rotate(78deg) brightness(92%) contrast(88%);
+        background-color:var(--text-color);
       }
     }
 
@@ -2239,10 +2243,12 @@ form.woocommerce-checkout {
 
 
 .product_title {
-  //font-size: 30px;
+  font-size: calc(var(--header-size-1) * .7);
+  line-height:130%;
   margin-top: 0;
   font-weight: 500;
   margin-bottom: 10px;
+  
 }
 
 .product_title.bundled_product_title {
@@ -2286,10 +2292,50 @@ form.woocommerce-checkout {
       a {
         padding:10px 15px;
         color:var(--background-color);
-        background:var(--theme-color);
+        background:var(--text-color);
         border-radius:3px;
         font-size:90%;
-        font-weight: 700;
+        font-weight: 700;        
+      }
+
+      [download-attribute]{
+
+        &:before {
+          content: attr(download-attribute) " ";
+          background:var(--theme-color);
+          position:absolute;          
+          padding:4px 15px;
+          border-radius:3px;
+          margin-top:-50px;
+          margin-left:-60px;
+          opacity:0;
+          transition:opacity 0.3s;
+          font-size:90%;
+          font-weight:400;
+        }
+
+        &:after {
+          content:'';
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid var(--theme-color);
+          position:absolute;
+          margin-left:-48px;
+          margin-top:-12px;
+          opacity:0;
+          transition:opacity 0.3s;
+        }
+
+        &:hover {
+
+          &:before, &:after {            
+            opacity:1;
+            transition:opacity 1s;
+          }
+
+        }
         
       }
     }

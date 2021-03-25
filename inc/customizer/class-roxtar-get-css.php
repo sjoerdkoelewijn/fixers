@@ -71,7 +71,8 @@ class Roxtar_Get_CSS {
 				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
-
+				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
+				
 				--line-color:' . esc_attr( $options['line_color'] ) . ';
 				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
 
