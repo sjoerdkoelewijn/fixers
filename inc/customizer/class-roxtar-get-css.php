@@ -237,7 +237,6 @@ class Roxtar_Get_CSS {
 
 				.has-header-transparent.header-transparent-for-all-devices .topbar {
 					background-color:' . roxtar_hex_to_rgb( $topbar_background_color, $topbar_opacity ) . ';
-					//border-bottom:1px solid rgba(0, 0, 0, 0.08);
 				}
 
 				.has-header-transparent.header-transparent-for-all-devices .site_header.active { 
