@@ -224,6 +224,7 @@ class Roxtar_Get_CSS {
 				}
 				.has-header-transparent .wishlist-item-count, .has-header-transparent .shop-cart-count {
 					background-color: ' . esc_attr( $options['header_transparent_count_background'] ) . ';
+					color: ' . esc_attr( $options['header_transparent_menu_color'] ) . ';
 				}
 
 				.has-header-transparent .active .primary-navigation > li > a {

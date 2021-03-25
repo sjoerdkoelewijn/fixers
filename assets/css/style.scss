@@ -2288,6 +2288,17 @@ form.woocommerce-checkout {
     padding: 10px 0;
     border-bottom: 1px solid var(--line-color);
 
+    .roxtar-file-item-name {
+      font-weight:700;
+      font-size:90%;
+
+      &:before {
+        content: "\e6a4";
+        font-family: "themify";
+        margin-right:10px;
+      }
+    }
+
     .roxtar-file-item-download {
       a {
         padding:10px 15px;
@@ -2303,6 +2314,7 @@ form.woocommerce-checkout {
         &:before {
           content: attr(download-attribute) " ";
           background:var(--theme-color);
+          color:var(--background-color);
           position:absolute;          
           padding:4px 15px;
           border-radius:3px;
@@ -2312,6 +2324,7 @@ form.woocommerce-checkout {
           transition:opacity 0.3s;
           font-size:90%;
           font-weight:400;
+
         }
 
         &:after {

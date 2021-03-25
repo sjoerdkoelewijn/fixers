@@ -654,7 +654,7 @@ if ( ! function_exists( 'roxtar_wishlist_page_url' ) ) {
 
 if ( is_admin() ) {
 
-	add_filter( 'post_type_link', 'custom_frontend_url', 10, 2 );
+	//add_filter( 'post_type_link', 'custom_frontend_url', 10, 2 );
 
 }     
 
