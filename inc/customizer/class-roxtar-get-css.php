@@ -318,7 +318,7 @@ class Roxtar_Get_CSS {
 					'. $page_header_color .'
 				}
 
-				.term-description {
+				.term-description p {
 					'. $page_header_color .'
 				}
 			';
