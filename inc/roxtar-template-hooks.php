@@ -38,6 +38,7 @@ add_action( 'roxtar_site_header', 'roxtar_skip_links', 5 );
 add_action( 'roxtar_site_header', 'roxtar_menu_toggle_btn', 10 );
 add_action( 'roxtar_site_header', 'roxtar_site_branding', 20 );
 add_action( 'roxtar_site_header', 'roxtar_primary_navigation', 30 );
+
 add_action( 'roxtar_site_header', 'roxtar_header_action', 50 );
 
 // Inside @roxtar_after_header hook.

@@ -519,8 +519,7 @@ form {
     animation: blob-animate calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
     transform-origin: center;
 
-    width:85%;
-    height:85%;
+    
 
     img {
       animation: blob-animate-invert calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
@@ -1600,6 +1599,9 @@ form.woocommerce-checkout {
     color: var(--menu-color);
   }
  
+  .site-tools:empty {
+    display:none;
+  }
 
   .menu-item .menu-item-icon {
     margin-right: 10px;

@@ -1929,6 +1929,8 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 	 * @return void
 	 */
 	function roxtar_header_action() {
+		ob_start();
+
 		$options = roxtar_options( false );
 		$count   = 0;
 
@@ -1953,9 +1955,9 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 		<div class="site-tools">
 
 			<?php do_action( 'roxtar_site_tool_before_first_item' ); ?>
-
-			<?php // Search icon. 
-
+			
+			<?php
+			
 			if ( $options['header_search_icon'] ) { ?>
 				<span class="tools-icon header-search-icon <?php echo esc_attr( $search_icon ); ?>"></span>
 				<?php
@@ -2057,6 +2059,9 @@ if ( ! function_exists( 'roxtar_header_action' ) ) {
 			?>
 		</div>
 		<?php
+
+		$output = ob_get_clean();
+		echo trim(preg_replace('/[\n\r\t]/', '', $output));
 	}
 }
 

@@ -30,6 +30,8 @@ $wp_customize->add_control(
 				array(
 					'layout-1' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-1.jpg',
 					'layout-2' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-2.jpg',
+					'layout-3' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-3.jpg',
+					'layout-4' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-4.jpg',
 				)
 			),
 		)

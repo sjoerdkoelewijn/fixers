@@ -27,7 +27,8 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 				default:
                 case 'layout-1':                    
 
-                    break;  				
+                    break;  
+									
                 case 'layout-2':
                     remove_action( 'roxtar_site_header', 'roxtar_site_branding', 20 );
 					remove_action( 'roxtar_site_header', 'roxtar_primary_navigation', 30 );
@@ -36,6 +37,14 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 					add_action( 'roxtar_site_header', 'roxtar_primary_navigation', 20 );
 
                     break;  
+
+				case 'layout-3':					
+
+					break; 
+
+				case 'layout-4':					
+
+					break;  		
             }      
 		}
 
