@@ -501,6 +501,158 @@ form {
   padding:0;
 }
 
+/*************************** Custom Animations ****************************************************************************/
+
+.blob--animated {
+  object-fit: cover;
+
+  @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
+    -webkit-mask-image: url(../images/svg/blob.svg#mask);
+    mask-image: url(../images/svg/blob.svg#mask);
+    
+    -webkit-mask-repeat: no-repeat;  
+    mask-repeat: no-repeat; 
+
+    --time:10s;
+    --amount:4;
+      
+    animation: blob-animate calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
+    transform-origin: center;
+
+    width:85%;
+    height:85%;
+
+    img {
+      animation: blob-animate-invert calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
+
+      width:115%;
+      height:110%;
+
+      margin-top:-5%;
+      margin-left:-5%;
+    }
+    
+  } 
+  
+}
+
+@keyframes blob-animate {
+  0% {
+    transform: skewY(0deg);    
+  }
+  13% {
+    transform: skewY( calc( (1.8deg) * var(--amount, 2)) );
+  }
+  18% {
+    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
+  }
+  24% {
+    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
+  }
+  25% {
+    transform: skewY( calc( (2.5deg) * var(--amount, 2)) );
+  }
+  26% {
+    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
+  }
+  32% {
+    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
+  }
+  37% {
+    transform: skewY( calc( (1.8deg) * var(--amount, 2)) );
+  }
+  50% {
+    transform: skewY(0deg);
+  }
+  63% {
+    transform: skewY( calc( (-2deg) * var(--amount, 2)) );
+  }
+  68% {
+    transform: skewY( calc( (-2.4deg) * var(--amount, 2)) );
+  }
+  74% {
+    transform: skewY( calc( (-2.68deg) * var(--amount, 2)) );
+  }
+  75% {
+    transform: skewY( calc( (-2.7deg) * var(--amount, 2)) );
+  }
+  76% {
+    transform: skewY( calc( (-2.68deg) * var(--amount, 2)) );
+  }
+  82% {
+    transform: skewY( calc( (-2.4deg) * var(--amount, 2)) );
+  }
+  87% {
+    transform: skewY( calc( (-2deg) * var(--amount, 2)) );
+  }
+  93% {
+    transform: skewY( calc( (-2deg) * var(--amount, 2)) );
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+@keyframes blob-animate-invert {
+  0% {
+    transform: skewY(0deg);    
+  }
+  13% {
+    transform: skewY( calc( (-1.8deg) * var(--amount, 2)) );
+  }
+  18% {
+    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
+  }
+  24% {
+    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
+  }
+  25% {
+    transform: skewY( calc( (-2.5deg) * var(--amount, 2)) );
+  }
+  26% {
+    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
+  }
+  32% {
+    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
+  }
+  37% {
+    transform: skewY( calc( (-1.8deg) * var(--amount, 2)) );
+  }
+  50% {
+    transform: skewY(0deg);
+  }
+  63% {
+    transform: skewY( calc( (2deg) * var(--amount, 2)) );
+  }
+  68% {
+    transform: skewY( calc( (2.4deg) * var(--amount, 2)) );
+  }
+  74% {
+    transform: skewY( calc( (2.68deg) * var(--amount, 2)) );
+  }
+  75% {
+    transform: skewY( calc( (2.7deg) * var(--amount, 2)) );
+  }
+  76% {
+    transform: skewY( calc( (2.68deg) * var(--amount, 2)) );
+  }
+  82% {
+    transform: skewY( calc( (2.4deg) * var(--amount, 2)) );
+  }
+  87% {
+    transform: skewY( calc( (2deg) * var(--amount, 2)) );
+  }
+  93% {
+    transform: skewY( calc( (2deg) * var(--amount, 2)) );
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+
+
+
 /*************************** Block editor - block styles ****************************************************************************/
 
 .wp-block-media-text {
@@ -2119,7 +2271,7 @@ form.woocommerce-checkout {
 .tns-horizontal.tns-subpixel > .tns-item {
   display: inline-block;
   vertical-align: top;
-  white-space: normal;
+  white-space: normal; 
 }
 
 .tns-horizontal.tns-no-subpixel:after {
