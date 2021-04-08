@@ -857,8 +857,7 @@ form {
     }
 
     .site_header_inner {
-        display:flex;
-        justify-content: space-between;
+        display:flex;        
         align-items:center;
         width:var(--header-width);
         max-width:100%; 

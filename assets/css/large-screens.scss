@@ -10,6 +10,26 @@
 
 }
 
+.has-header-layout-1, .has-header-layout-2 {
+
+    .site_header_inner{
+        justify-content: space-between;
+    }
+
+}
+
+.has-header-layout-3 {
+
+    .site_header_inner{
+        justify-content: flex-end;
+
+        .site-branding {
+            margin-right:auto;
+        }
+    }
+
+}
+
 
 .site-branding .custom-mobile-logo-url {
     display: none;
