@@ -2307,50 +2307,12 @@ form.woocommerce-checkout {
         border-radius:3px;
         font-size:90%;
         font-weight: 700;        
-      }
+      }  
+    }
 
-      [download-attribute]{
-
-        &:before {
-          content: attr(download-attribute) " ";
-          background:var(--theme-color);
-          color:var(--background-color);
-          position:absolute;          
-          padding:4px 15px;
-          border-radius:3px;
-          margin-top:-50px;
-          margin-left:-60px;
-          opacity:0;
-          transition:opacity 0.3s;
-          font-size:90%;
-          font-weight:400;
-
-        }
-
-        &:after {
-          content:'';
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-top: 10px solid var(--theme-color);
-          position:absolute;
-          margin-left:-48px;
-          margin-top:-12px;
-          opacity:0;
-          transition:opacity 0.3s;
-        }
-
-        &:hover {
-
-          &:before, &:after {            
-            opacity:1;
-            transition:opacity 1s;
-          }
-
-        }
-        
-      }
+    .file-download-btn.disabled {
+      background-color:var(--text-color);
+      opacity:.6;
     }
   }  
 }
