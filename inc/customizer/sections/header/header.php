@@ -29,7 +29,7 @@ $wp_customize->add_control(
 				'roxtar_setting_header_layout_choices',
 				array(
 					'layout-1' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-1.jpg',
-					'layout-2' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-1.jpg',
+					'layout-2' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-2.jpg',
 				)
 			),
 		)

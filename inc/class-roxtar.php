@@ -53,7 +53,7 @@ if ( ! class_exists( 'Roxtar' ) ) {
 		 */
 		public function roxtar_includes() {
 			// Nav menu walker.
-			require_once ROXTAR_THEME_DIR . 'inc/class-roxtar-walker-menu.php';
+			require_once ROXTAR_THEME_DIR . 'inc/class-roxtar-walker-menu.php';			
 		}
 
 		/**

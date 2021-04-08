@@ -16,6 +16,7 @@ require_once ROXTAR_THEME_DIR . 'inc/roxtar-functions.php';
 require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-hooks.php';
 require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-builder.php';
 require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-functions.php';
+require_once ROXTAR_THEME_DIR . 'inc/class-roxtar-custom-header.php';
 
 // Roxtar generate css.
 require_once ROXTAR_THEME_DIR . 'inc/customizer/class-roxtar-fonts-helpers.php';
