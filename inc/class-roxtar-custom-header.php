@@ -42,7 +42,9 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 
 					break; 
 
-				case 'layout-4':					
+				case 'layout-4':
+					remove_action( 'roxtar_site_header', 'roxtar_menu_toggle_btn', 10 );
+					add_action( 'roxtar_site_header', 'roxtar_menu_toggle_btn', 60 );					
 
 					break;  		
             }      
