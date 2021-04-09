@@ -111,7 +111,7 @@ $wp_customize->add_control(
 					'max'  => apply_filters( 'roxtar_heading_line_height_max_step', 200 ),
 					'step' => 10,
 					'edit' => true,
-					'unit' => '',
+					'unit' => '%',
 				),
 			),
 		)
