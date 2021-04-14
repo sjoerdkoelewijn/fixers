@@ -3,7 +3,7 @@
  *
  * @source https://polyfill.io/v3/polyfill.js?flags=always&features=default,fetch
  *
- * @package roxtar
+ * @package SKDD
  */
 
  // @codingStandardsIgnoreStart

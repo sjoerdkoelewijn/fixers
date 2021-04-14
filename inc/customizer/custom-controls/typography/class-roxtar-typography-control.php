@@ -9,18 +9,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typography_Control' ) ) {
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_Control' ) ) {
 	/**
 	 * Create the typography elements control.
 	 */
-	class Roxtar_Typography_Control extends WP_Customize_Control {
+	class SKDD_Typography_Control extends WP_Customize_Control {
 
 		/**
 		 * Create the typography elements control.
 		 *
 		 * @var $type
 		 */
-		public $type = 'roxtar-customizer-typography';
+		public $type = 'SKDD-customizer-typography';
 
 
 		/**
@@ -28,33 +28,33 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 		 */
 		public function enqueue() {
 			wp_enqueue_script(
-				'roxtar-typography-selectWoo',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/typography/js/selectWoo.js',
+				'SKDD-typography-selectWoo',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/js/selectWoo.js',
 				array( 'customize-controls', 'jquery' ),
-				roxtar_version(),
+				SKDD_version(),
 				true
 			);
 
 			wp_enqueue_style(
-				'roxtar-typography-selectWoo',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/typography/css/selectWoo.css',
+				'SKDD-typography-selectWoo',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/css/selectWoo.css',
 				array(),
-				roxtar_version()
+				SKDD_version()
 			);
 
 			wp_enqueue_script(
-				'roxtar-typography-customizer',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/typography/js/typography-customizer.js',
-				array( 'customize-controls', 'roxtar-typography-selectWoo' ),
-				roxtar_version(),
+				'SKDD-typography-customizer',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/js/typography-customizer.js',
+				array( 'customize-controls', 'SKDD-typography-selectWoo' ),
+				SKDD_version(),
 				true
 			);
 
 			wp_enqueue_style(
-				'roxtar-typography-customizer',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/typography/css/typography-customizer.css',
+				'SKDD-typography-customizer',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/css/typography-customizer.css',
 				array(),
-				roxtar_version()
+				SKDD_version()
 			);
 		}
 
@@ -65,17 +65,17 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 		public function to_json() {
 			parent::to_json();
 
-			$number_of_fonts                   = apply_filters( 'roxtar_number_of_fonts', 200 );
+			$number_of_fonts                   = apply_filters( 'SKDD_number_of_fonts', 200 );
 			$this->to_json['label']            = $this->label;
-			$this->json['default_fonts_title'] = __( 'System fonts', 'roxtar' );
-			$this->json['google_fonts_title']  = __( 'Google fonts', 'roxtar' );
-			$this->json['google_fonts']        = apply_filters( 'roxtar_typography_customize_list', Roxtar_Fonts_Helpers::roxtar_get_all_google_fonts( $number_of_fonts ) );
-			$this->json['default_fonts']       = Roxtar_Fonts_Helpers::roxtar_typography_default_fonts();
-			$this->json['family_title']        = esc_html__( 'Font family', 'roxtar' );
-			$this->json['weight_title']        = esc_html__( 'Font weight', 'roxtar' );
-			$this->json['transform_title']     = esc_html__( 'Text transform', 'roxtar' );
+			$this->json['default_fonts_title'] = __( 'System fonts', 'SKDD' );
+			$this->json['google_fonts_title']  = __( 'Google fonts', 'SKDD' );
+			$this->json['google_fonts']        = apply_filters( 'SKDD_typography_customize_list', SKDD_Fonts_Helpers::SKDD_get_all_google_fonts( $number_of_fonts ) );
+			$this->json['default_fonts']       = SKDD_Fonts_Helpers::SKDD_typography_default_fonts();
+			$this->json['family_title']        = esc_html__( 'Font family', 'SKDD' );
+			$this->json['weight_title']        = esc_html__( 'Font weight', 'SKDD' );
+			$this->json['transform_title']     = esc_html__( 'Text transform', 'SKDD' );
 			$this->json['category_title']      = '';
-			$this->json['variant_title']       = esc_html__( 'Variants', 'roxtar' );
+			$this->json['variant_title']       = esc_html__( 'Variants', 'SKDD' );
 
 			foreach ( $this->settings as $setting_key => $setting_id ) {
 				$this->json[ $setting_key ] = array(
@@ -105,7 +105,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
 			<# if ( 'undefined' !== typeof( data.family ) ) { #>
-				<div class="roxtar-font-family">
+				<div class="SKDD-font-family">
 					<label>
 						<select {{{ data.family.link }}} data-category="{{{ data.category.id }}}" data-variants="{{{ data.variant.id }}}" style="width:100%;">
 							<optgroup label="{{ data.default_fonts_title }}">
@@ -140,7 +140,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 					data.variant.value = data.variant.default;
 				}
 				#>
-				<div id={{{ data.variant.id }}}" class="roxtar-font-variant" data-saved-value="{{ data.variant.value }}">
+				<div id={{{ data.variant.id }}}" class="SKDD-font-variant" data-saved-value="{{ data.variant.value }}">
 					<label>
 						<select name="{{{ data.variant.id }}}" multiple class="typography-multi-select" style="width:100%;" {{{ data.variant.link }}}>
 							<# _.each( variants, function( label, choice ) { #>
@@ -156,9 +156,9 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.category ) ) { #>
-				<div class="roxtar-font-category">
+				<div class="SKDD-font-category">
 					<label>
-							<input name="{{{ data.category.id }}}" type="hidden" {{{ data.category.link }}} value="{{{ data.category.value }}}" class="roxtar-hidden-input" />
+							<input name="{{{ data.category.id }}}" type="hidden" {{{ data.category.link }}} value="{{{ data.category.value }}}" class="SKDD-hidden-input" />
 						<# if ( '' !== data.category_title ) { #>
 							<p class="description">{{ data.category_title }}</p>
 						<# } #>
@@ -167,7 +167,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.weight ) ) { #>
-				<div class="roxtar-font-weight">
+				<div class="SKDD-font-weight">
 					<label>
 						<select {{{ data.weight.link }}}>
 
@@ -186,7 +186,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Roxtar_Typograph
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.transform ) ) { #>
-				<div class="roxtar-font-transform">
+				<div class="SKDD-font-transform">
 					<label>
 						<select {{{ data.transform.link }}}>
 

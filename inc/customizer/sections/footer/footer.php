@@ -2,36 +2,36 @@
 /**
  * Footer widgets column
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Footer display.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_display]',
+	'SKDD_setting[footer_display]',
 	array(
 		'default'           => $defaults['footer_display'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[footer_display]',
+		'SKDD_setting[footer_display]',
 		array(
-			'label'    => __( 'Footer Display', 'roxtar' ),
-			'settings' => 'roxtar_setting[footer_display]',
-			'section'  => 'roxtar_footer',
+			'label'    => __( 'Footer Display', 'SKDD' ),
+			'settings' => 'SKDD_setting[footer_display]',
+			'section'  => 'SKDD_footer',
 		)
 	)
 );
 
 // Space.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_space]',
+	'SKDD_setting[footer_space]',
 	array(
 		'default'           => $defaults['footer_space'],
 		'sanitize_callback' => 'absint',
@@ -40,19 +40,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[footer_space]',
+		'SKDD_setting[footer_space]',
 		array(
-			'label'    => __( 'Space', 'roxtar' ),
-			'section'  => 'roxtar_footer',
+			'label'    => __( 'Space', 'SKDD' ),
+			'section'  => 'SKDD_footer',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[footer_space]',
+				'desktop' => 'SKDD_setting[footer_space]',
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_footer_space_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_footer_space_max_step', 200 ),
+					'min'  => apply_filters( 'SKDD_footer_space_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_footer_space_max_step', 200 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -64,24 +64,24 @@ $wp_customize->add_control(
 
 // Footer widget columns.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_column]',
+	'SKDD_setting[footer_column]',
 	array(
 		'default'           => $defaults['footer_column'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[footer_column]',
+		'SKDD_setting[footer_column]',
 		array(
-			'label'    => __( 'Widget Columns', 'roxtar' ),
-			'settings' => 'roxtar_setting[footer_column]',
-			'section'  => 'roxtar_footer',
+			'label'    => __( 'Widget Columns', 'SKDD' ),
+			'settings' => 'SKDD_setting[footer_column]',
+			'section'  => 'SKDD_footer',
 			'type'     => 'select',
 			'choices'  => apply_filters(
-				'roxtar_setting_footer_column_choices',
+				'SKDD_setting_footer_column_choices',
 				array(
 					0 => 0,
 					1 => 1,
@@ -103,11 +103,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'footer_background_color_divider',
 		array(
-			'section'  => 'roxtar_footer',
+			'section'  => 'SKDD_footer',
 			'settings' => 'footer_background_color_divider',
 			'type'     => 'divider',
 		)
@@ -116,28 +116,28 @@ $wp_customize->add_control(
 
 // Footer Background.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_background_color]',
+	'SKDD_setting[footer_background_color]',
 	array(
 		'default'           => $defaults['footer_background_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[footer_background_color]',
+		'SKDD_setting[footer_background_color]',
 		array(
-			'label'    => __( 'Background Color', 'roxtar' ),
-			'section'  => 'roxtar_footer',
-			'settings' => 'roxtar_setting[footer_background_color]',
+			'label'    => __( 'Background Color', 'SKDD' ),
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_background_color]',
 		)
 	)
 );
 
 // Footer heading color.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_heading_color]',
+	'SKDD_setting[footer_heading_color]',
 	array(
 		'default'           => $defaults['footer_heading_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -147,18 +147,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[footer_heading_color]',
+		'SKDD_setting[footer_heading_color]',
 		array(
-			'label'    => __( 'Heading Color', 'roxtar' ),
-			'section'  => 'roxtar_footer',
-			'settings' => 'roxtar_setting[footer_heading_color]',
+			'label'    => __( 'Heading Color', 'SKDD' ),
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_heading_color]',
 		)
 	)
 );
 
 // Footer link color.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_link_color]',
+	'SKDD_setting[footer_link_color]',
 	array(
 		'default'           => $defaults['footer_link_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -168,18 +168,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[footer_link_color]',
+		'SKDD_setting[footer_link_color]',
 		array(
-			'label'    => __( 'Link Color', 'roxtar' ),
-			'section'  => 'roxtar_footer',
-			'settings' => 'roxtar_setting[footer_link_color]',
+			'label'    => __( 'Link Color', 'SKDD' ),
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_link_color]',
 		)
 	)
 );
 
 // Footer text color.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_text_color]',
+	'SKDD_setting[footer_text_color]',
 	array(
 		'default'           => $defaults['footer_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -189,11 +189,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[footer_text_color]',
+		'SKDD_setting[footer_text_color]',
 		array(
-			'label'    => __( 'Text Color', 'roxtar' ),
-			'section'  => 'roxtar_footer',
-			'settings' => 'roxtar_setting[footer_text_color]',
+			'label'    => __( 'Text Color', 'SKDD' ),
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_text_color]',
 		)
 	)
 );
@@ -206,11 +206,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'footer_text_divider',
 		array(
-			'section'  => 'roxtar_footer',
+			'section'  => 'SKDD_footer',
 			'settings' => 'footer_text_divider',
 			'type'     => 'divider',
 		)
@@ -219,22 +219,22 @@ $wp_customize->add_control(
 
 // Custom text.
 $wp_customize->add_setting(
-	'roxtar_setting[footer_custom_text]',
+	'SKDD_setting[footer_custom_text]',
 	array(
 		'default'           => $defaults['footer_custom_text'],
-		'sanitize_callback' => 'roxtar_sanitize_raw_html',
+		'sanitize_callback' => 'SKDD_sanitize_raw_html',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[footer_custom_text]',
+		'SKDD_setting[footer_custom_text]',
 		array(
-			'label'    => __( 'Custom Text', 'roxtar' ),
+			'label'    => __( 'Custom Text', 'SKDD' ),
 			'type'     => 'textarea',
-			'section'  => 'roxtar_footer',
-			'settings' => 'roxtar_setting[footer_custom_text]',
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_custom_text]',
 		)
 	)
 );

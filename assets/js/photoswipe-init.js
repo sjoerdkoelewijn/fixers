@@ -1,7 +1,7 @@
 /**
  * Photo Swipe on Product Images
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';

@@ -1,14 +1,14 @@
 <?php
 /**
- * Roxtar_Color_Control
+ * SKDD_Color_Control
  *
- * @package roxtar
+ * @package SKDD
  */
 
 /**
  * Customize Alpha Color Control class.
  */
-class Roxtar_Color_Control extends WP_Customize_Control {
+class SKDD_Color_Control extends WP_Customize_Control {
 
 	/**
 	 * The control type.
@@ -16,7 +16,7 @@ class Roxtar_Color_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'roxtar-color';
+	public $type = 'SKDD-color';
 
 	/**
 	 * The control type.
@@ -54,41 +54,41 @@ class Roxtar_Color_Control extends WP_Customize_Control {
 	 * Enqueue control related scripts/styles.
 	 */
 	public function enqueue() {
-		$uri = ROXTAR_THEME_URI . 'inc/customizer/custom-controls/alpha-color-picker/';
+		$uri = SKDD_THEME_URI . 'inc/customizer/custom-controls/alpha-color-picker/';
 
 		wp_enqueue_style(
-			'roxtar-alpha-color',
+			'SKDD-alpha-color',
 			$uri . 'css/alpha-color-picker.css',
 			array(),
-			roxtar_version()
+			SKDD_version()
 		);
 
 		wp_enqueue_script(
-			'roxtar-alpha-color',
+			'SKDD-alpha-color',
 			$uri . 'js/alpha-color-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
-			roxtar_version(),
+			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_script(
-			'roxtar-customizer-color-control',
-			$uri . 'js/roxtar-color-control.js',
-			array( 'roxtar-alpha-color' ),
-			roxtar_version(),
+			'SKDD-customizer-color-control',
+			$uri . 'js/SKDD-color-control.js',
+			array( 'SKDD-alpha-color' ),
+			SKDD_version(),
 			true
 		);
 
 		wp_localize_script(
-			'roxtar-alpha-color',
-			'roxtar_customizer_color_control',
+			'SKDD-alpha-color',
+			'SKDD_customizer_color_control',
 			array(
-				'clear'            => esc_html__( 'Clear', 'roxtar' ),
-				'clearAriaLabel'   => esc_html__( 'Clear color', 'roxtar' ),
-				'defaultAriaLabel' => esc_html__( 'Select default color', 'roxtar' ),
-				'defaultLabel'     => esc_html__( 'Color value', 'roxtar' ),
-				'defaultString'    => esc_html__( 'Default', 'roxtar' ),
-				'pick'             => esc_html__( 'Select Color', 'roxtar' ),
+				'clear'            => esc_html__( 'Clear', 'SKDD' ),
+				'clearAriaLabel'   => esc_html__( 'Clear color', 'SKDD' ),
+				'defaultAriaLabel' => esc_html__( 'Select default color', 'SKDD' ),
+				'defaultLabel'     => esc_html__( 'Color value', 'SKDD' ),
+				'defaultString'    => esc_html__( 'Default', 'SKDD' ),
+				'pick'             => esc_html__( 'Select Color', 'SKDD' ),
 			)
 		);
 	}
@@ -116,7 +116,7 @@ class Roxtar_Color_Control extends WP_Customize_Control {
 			<span class="description customize-control-description">{{{ data.description }}}</span>
 		<# } #>
 		<div class="customize-control-content">
-			<input class="roxtar-color-picker-alpha color-picker-hex" type="text" maxlength="7" data-alpha="true" placeholder="{{ defaultValue }}" {{ defaultValueAttr }} value="{{data.value}}" />
+			<input class="SKDD-color-picker-alpha color-picker-hex" type="text" maxlength="7" data-alpha="true" placeholder="{{ defaultValue }}" {{ defaultValueAttr }} value="{{data.value}}" />
 		</div>
 
 		<?php

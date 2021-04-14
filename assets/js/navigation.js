@@ -1,7 +1,7 @@
 /**
  * Navigation.js
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';

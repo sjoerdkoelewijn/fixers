@@ -2,50 +2,50 @@
 /**
  * Header Transparent
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Enable/disable Header transparent.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent]',
+	'SKDD_setting[header_transparent]',
 	array(
 		'default'           => $defaults['header_transparent'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent]',
+		'SKDD_setting[header_transparent]',
 		array(
-			'label'    => __( 'Enable Transparent Header', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Enable Transparent Header', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent]',
+			'section'  => 'SKDD_header_transparent',
 		)
 	)
 );
 
 // Disable on 404, Search and Archive.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_archive]',
+	'SKDD_setting[header_transparent_disable_archive]',
 	array(
 		'default'           => $defaults['header_transparent_disable_archive'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_archive]',
+		'SKDD_setting[header_transparent_disable_archive]',
 		array(
-			'label'    => __( 'Disable on 404, Search & Archives', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_archive]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on 404, Search & Archives', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_archive]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -53,21 +53,21 @@ $wp_customize->add_control(
 
 // Disable on Index.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_index]',
+	'SKDD_setting[header_transparent_disable_index]',
 	array(
 		'default'           => $defaults['header_transparent_disable_index'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_index]',
+		'SKDD_setting[header_transparent_disable_index]',
 		array(
-			'label'    => __( 'Disable on Blog page', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_index]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on Blog page', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_index]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -75,21 +75,21 @@ $wp_customize->add_control(
 
 // Disable on Pages.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_page]',
+	'SKDD_setting[header_transparent_disable_page]',
 	array(
 		'default'           => $defaults['header_transparent_disable_page'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_page]',
+		'SKDD_setting[header_transparent_disable_page]',
 		array(
-			'label'    => __( 'Disable on Pages', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_page]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on Pages', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_page]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -97,21 +97,21 @@ $wp_customize->add_control(
 
 // Disable on Posts.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_post]',
+	'SKDD_setting[header_transparent_disable_post]',
 	array(
 		'default'           => $defaults['header_transparent_disable_post'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_post]',
+		'SKDD_setting[header_transparent_disable_post]',
 		array(
-			'label'    => __( 'Disable on Posts', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_post]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on Posts', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_post]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -119,21 +119,21 @@ $wp_customize->add_control(
 
 // Disable on Shop page.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_shop]',
+	'SKDD_setting[header_transparent_disable_shop]',
 	array(
 		'default'           => $defaults['header_transparent_disable_shop'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_shop]',
+		'SKDD_setting[header_transparent_disable_shop]',
 		array(
-			'label'    => __( 'Disable on Shop page', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_shop]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on Shop page', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_shop]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -141,21 +141,21 @@ $wp_customize->add_control(
 
 // Disable on Product page.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_disable_product]',
+	'SKDD_setting[header_transparent_disable_product]',
 	array(
 		'default'           => $defaults['header_transparent_disable_product'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_disable_product]',
+		'SKDD_setting[header_transparent_disable_product]',
 		array(
-			'label'    => __( 'Disable on Product page', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_disable_product]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Disable on Product page', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_disable_product]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'checkbox',
 		)
 	)
@@ -163,27 +163,27 @@ $wp_customize->add_control(
 
 // Enable on devices.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_enable_on]',
+	'SKDD_setting[header_transparent_enable_on]',
 	array(
 		'default'           => $defaults['header_transparent_enable_on'],
 		'type'              => 'option',
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_enable_on]',
+		'SKDD_setting[header_transparent_enable_on]',
 		array(
-			'label'    => __( 'Enable On', 'roxtar' ),
-			'settings' => 'roxtar_setting[header_transparent_enable_on]',
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Enable On', 'SKDD' ),
+			'settings' => 'SKDD_setting[header_transparent_enable_on]',
+			'section'  => 'SKDD_header_transparent',
 			'type'     => 'select',
 			'choices'  => array(
-				'desktop'     => __( 'Desktop', 'roxtar' ),
-				'mobile'      => __( 'Mobile', 'roxtar' ),
-				'all-devices' => __( 'Desktop + Mobile', 'roxtar' ),
+				'desktop'     => __( 'Desktop', 'SKDD' ),
+				'mobile'      => __( 'Mobile', 'SKDD' ),
+				'all-devices' => __( 'Desktop + Mobile', 'SKDD' ),
 			),
 		)
 	)
@@ -191,7 +191,7 @@ $wp_customize->add_control(
 
 // Logo Transparent.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_logo]',
+	'SKDD_setting[header_transparent_logo]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['header_transparent_logo'],
@@ -201,77 +201,77 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Image_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_logo]',
+		'SKDD_setting[header_transparent_logo]',
 		array(
-			'label'    => __( 'Header Transparent Logo', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
-			'settings' => 'roxtar_setting[header_transparent_logo]',
+			'label'    => __( 'Header Transparent Logo', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
+			'settings' => 'SKDD_setting[header_transparent_logo]',
 		)
 	)
 );
 
 // Menu Transparent color.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_menu_color]',
+	'SKDD_setting[header_transparent_menu_color]',
 	array(
 		'default'           => $defaults['header_transparent_menu_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_menu_color]',
+		'SKDD_setting[header_transparent_menu_color]',
 		array(
-			'label'    => __( 'Menu Transparent Color', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
-			'settings' => 'roxtar_setting[header_transparent_menu_color]',
+			'label'    => __( 'Menu Transparent Color', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
+			'settings' => 'SKDD_setting[header_transparent_menu_color]',
 		)
 	)
 );
 
 // Icon Transparent color.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_icon_color]',
+	'SKDD_setting[header_transparent_icon_color]',
 	array(
 		'default'           => $defaults['header_transparent_icon_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_icon_color]',
+		'SKDD_setting[header_transparent_icon_color]',
 		array(
-			'label'    => __( 'Icon Transparent Color', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
-			'settings' => 'roxtar_setting[header_transparent_icon_color]',
+			'label'    => __( 'Icon Transparent Color', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
+			'settings' => 'SKDD_setting[header_transparent_icon_color]',
 		)
 	)
 );
 
 // Count Transparent background.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_count_background]',
+	'SKDD_setting[header_transparent_count_background]',
 	array(
 		'default'           => $defaults['header_transparent_count_background'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_count_background]',
+		'SKDD_setting[header_transparent_count_background]',
 		array(
-			'label'    => __( 'Count Transparent Background', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
-			'settings' => 'roxtar_setting[header_transparent_count_background]',
+			'label'    => __( 'Count Transparent Background', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
+			'settings' => 'SKDD_setting[header_transparent_count_background]',
 		)
 	)
 );
@@ -285,11 +285,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'header_transparent_border_divider',
 		array(
-			'section'  => 'roxtar_header_transparent',
+			'section'  => 'SKDD_header_transparent',
 			'settings' => 'header_transparent_border_divider',
 			'type'     => 'divider',
 		)
@@ -298,7 +298,7 @@ $wp_customize->add_control(
 
 // Border width.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_border_width]',
+	'SKDD_setting[header_transparent_border_width]',
 	array(
 		'default'           => $defaults['header_transparent_border_width'],
 		'sanitize_callback' => 'absint',
@@ -307,19 +307,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_border_width]',
+		'SKDD_setting[header_transparent_border_width]',
 		array(
-			'label'    => __( 'Bottom Border Width', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
+			'label'    => __( 'Bottom Border Width', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[header_transparent_border_width]',
+				'desktop' => 'SKDD_setting[header_transparent_border_width]',
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_header_transparent_border_width_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_header_transparent_border_width_max_step', 20 ),
+					'min'  => apply_filters( 'SKDD_header_transparent_border_width_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_header_transparent_border_width_max_step', 20 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -331,22 +331,22 @@ $wp_customize->add_control(
 
 // Border color.
 $wp_customize->add_setting(
-	'roxtar_setting[header_transparent_border_color]',
+	'SKDD_setting[header_transparent_border_color]',
 	array(
 		'default'           => $defaults['header_transparent_border_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[header_transparent_border_color]',
+		'SKDD_setting[header_transparent_border_color]',
 		array(
-			'label'    => __( 'Border Color', 'roxtar' ),
-			'section'  => 'roxtar_header_transparent',
-			'settings' => 'roxtar_setting[header_transparent_border_color]',
+			'label'    => __( 'Border Color', 'SKDD' ),
+			'section'  => 'SKDD_header_transparent',
+			'settings' => 'SKDD_setting[header_transparent_border_color]',
 		)
 	)
 );

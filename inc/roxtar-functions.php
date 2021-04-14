@@ -1,8 +1,8 @@
 <?php
 /**
- * Roxtar functions.
+ * SKDD functions.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,37 +16,37 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_version' ) ) {
+if ( ! function_exists( 'SKDD_version' ) ) {
 	/**
-	 * Roxtar Version
+	 * SKDD Version
 	 *
-	 * @return string Roxtar Version.
+	 * @return string SKDD Version.
 	 */
-	function roxtar_version() {
-		return esc_attr( ROXTAR_VERSION );
+	function SKDD_version() {
+		return esc_attr( SKDD_VERSION );
 	}
 }
 
-if ( ! function_exists( 'roxtar_info' ) ) {
+if ( ! function_exists( 'SKDD_info' ) ) {
 	/**
-	 * Roxtar Information.
+	 * SKDD Information.
 	 *
 	 * @param      string $output  The output.
 	 */
-	function roxtar_info( $output ) {
-		$output .= ' data-roxtar-version="' . roxtar_version() . '"';
+	function SKDD_info( $output ) {
+		$output .= ' data-SKDD-version="' . SKDD_version() . '"';
 
 		return $output;
 	}
 }
 
-if ( ! function_exists( 'roxtar_suffix' ) ) {
+if ( ! function_exists( 'SKDD_suffix' ) ) {
 	/**
 	 * Define Script debug.
 	 *
 	 * @return     string $suffix
 	 */
-	function roxtar_suffix() {
+	function SKDD_suffix() {
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		return $suffix;
@@ -55,45 +55,45 @@ if ( ! function_exists( 'roxtar_suffix' ) ) {
 
 
 
-if ( ! function_exists( 'roxtar_is_woocommerce_activated' ) ) {
+if ( ! function_exists( 'SKDD_is_woocommerce_activated' ) ) {
 	/**
 	 * Query WooCommerce activation
 	 */
-	function roxtar_is_woocommerce_activated() {
+	function SKDD_is_woocommerce_activated() {
 		return class_exists( 'woocommerce' ) ? true : false;
 	}
 }
 
-if ( ! function_exists( 'roxtar_get_product_id' ) ) {
+if ( ! function_exists( 'SKDD_get_product_id' ) ) {
 	/**
 	 * Get product id
 	 */
-	function roxtar_get_product_id() {
-		$last_product_id = roxtar_get_last_product_id();
+	function SKDD_get_product_id() {
+		$last_product_id = SKDD_get_last_product_id();
 		$post            = isset( $_REQUEST['post'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['post'] ) ) : false; // phpcs:ignore
 		$editor_post_id  = isset( $_REQUEST['editor_post_id'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['editor_post_id'] ) ) : false; // phpcs:ignore
 		$post_id         = $post ? $post : $editor_post_id;
 		if ( $post_id ) {
-			$selected_id = get_post_meta( $post_id, 'roxtar_woo_builder_select_product_preview', true );
+			$selected_id = get_post_meta( $post_id, 'SKDD_woo_builder_select_product_preview', true );
 
 			if ( $selected_id ) {
 				$last_product_id = $selected_id;
 			}
 		}
 
-		$product_id = roxtar_get_page_id();
+		$product_id = SKDD_get_page_id();
 
-		return apply_filters( 'roxtar_get_product_id', $product_id );
+		return apply_filters( 'SKDD_get_product_id', $product_id );
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_array' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_array' ) ) {
 	/**
 	 * Sanitize integer value
 	 *
 	 * @param      array $value  The array.
 	 */
-	function roxtar_sanitize_array( $value ) {
+	function SKDD_sanitize_array( $value ) {
 		$data = array();
 		foreach ( $value as $key ) {
 			$data[] = sanitize_text_field( $key );
@@ -103,7 +103,7 @@ if ( ! function_exists( 'roxtar_sanitize_array' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_choices' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_choices' ) ) {
 	/**
 	 * Sanitizes choices (selects / radios)
 	 * Checks that the input matches one of the available choices
@@ -111,7 +111,7 @@ if ( ! function_exists( 'roxtar_sanitize_choices' ) ) {
 	 * @param array $input the available choices.
 	 * @param array $setting the setting object.
 	 */
-	function roxtar_sanitize_choices( $input, $setting ) {
+	function SKDD_sanitize_choices( $input, $setting ) {
 		// Ensure input is a slug.
 		$input = sanitize_key( $input );
 
@@ -123,7 +123,7 @@ if ( ! function_exists( 'roxtar_sanitize_choices' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_checkbox' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_checkbox' ) ) {
 	/**
 	 * Checkbox sanitization callback.
 	 *
@@ -133,19 +133,19 @@ if ( ! function_exists( 'roxtar_sanitize_checkbox' ) ) {
 	 * @param bool $checked Whether the checkbox is checked.
 	 * @return bool Whether the checkbox is checked.
 	 */
-	function roxtar_sanitize_checkbox( $checked ) {
+	function SKDD_sanitize_checkbox( $checked ) {
 		return ( ( isset( $checked ) && true === $checked ) ? true : false );
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_variants' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_variants' ) ) {
 	/**
 	 * Sanitize our Google Font variants
 	 *
 	 * @param      string $input sanitize variants.
 	 * @return     sanitize_text_field( $input )
 	 */
-	function roxtar_sanitize_variants( $input ) {
+	function SKDD_sanitize_variants( $input ) {
 		if ( is_array( $input ) ) {
 			$input = implode( ',', $input );
 		}
@@ -153,13 +153,13 @@ if ( ! function_exists( 'roxtar_sanitize_variants' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_rgba_color' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_rgba_color' ) ) {
 	/**
 	 * Sanitize color || rgba color
 	 *
 	 * @param      string $color  The color.
 	 */
-	function roxtar_sanitize_rgba_color( $color ) {
+	function SKDD_sanitize_rgba_color( $color ) {
 		if ( empty( $color ) || is_array( $color ) ) {
 			return '';
 		}
@@ -177,24 +177,24 @@ if ( ! function_exists( 'roxtar_sanitize_rgba_color' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_int' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_int' ) ) {
 	/**
 	 * Sanitize integer value
 	 *
 	 * @param      integer $value  The integer number.
 	 */
-	function roxtar_sanitize_int( $value ) {
+	function SKDD_sanitize_int( $value ) {
 		return intval( $value );
 	}
 }
 
-if ( ! function_exists( 'roxtar_sanitize_raw_html' ) ) {
+if ( ! function_exists( 'SKDD_sanitize_raw_html' ) ) {
 	/**
 	 * Sanitize raw html value
 	 *
 	 * @param      string $value  The raw html value.
 	 */
-	function roxtar_sanitize_raw_html( $value ) {
+	function SKDD_sanitize_raw_html( $value ) {
 		$content = wp_kses(
 			$value,
 			array(
@@ -258,24 +258,24 @@ if ( ! function_exists( 'roxtar_sanitize_raw_html' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_is_blog' ) ) {
+if ( ! function_exists( 'SKDD_is_blog' ) ) {
 	/**
-	 * Roxtar detect blog page
+	 * SKDD detect blog page
 	 *
 	 * @return boolean $is_blog
 	 */
-	function roxtar_is_blog() {
+	function SKDD_is_blog() {
 		global $post;
 
 		$post_type = get_post_type( $post );
 
 		$is_blog = ( 'post' === $post_type && ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() ) ) ? true : false;
 
-		return apply_filters( 'roxtar_is_blog', $is_blog );
+		return apply_filters( 'SKDD_is_blog', $is_blog );
 	}
 }
 
-if ( ! function_exists( 'roxtar_options' ) ) {
+if ( ! function_exists( 'SKDD_options' ) ) {
 	/**
 	 * Theme option
 	 * If ( $defaults = true ) return Default value
@@ -284,9 +284,9 @@ if ( ! function_exists( 'roxtar_options' ) ) {
 	 * @param      bool $defaults  Condition check output.
 	 * @return     array $options         All theme options
 	 */
-	function roxtar_options( $defaults = true ) {
-		$default_settings = Roxtar_Customizer::roxtar_get_roxtar_default_setting_values();
-		$default_fonts    = Roxtar_Fonts_Helpers::roxtar_get_default_fonts();
+	function SKDD_options( $defaults = true ) {
+		$default_settings = SKDD_Customizer::SKDD_get_SKDD_default_setting_values();
+		$default_fonts    = SKDD_Fonts_Helpers::SKDD_get_default_fonts();
 		$default_options  = array_merge( $default_settings, $default_fonts );
 
 		if ( $defaults ) {
@@ -294,7 +294,7 @@ if ( ! function_exists( 'roxtar_options' ) ) {
 		}
 
 		$options = wp_parse_args(
-			get_option( 'roxtar_setting', array() ),
+			get_option( 'SKDD_setting', array() ),
 			$default_options
 		);
 
@@ -302,7 +302,7 @@ if ( ! function_exists( 'roxtar_options' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_image_alt' ) ) {
+if ( ! function_exists( 'SKDD_image_alt' ) ) {
 
 	/**
 	 * Get image alt
@@ -313,12 +313,12 @@ if ( ! function_exists( 'roxtar_image_alt' ) ) {
 	 *
 	 * @return     string  The image alt
 	 */
-	function roxtar_image_alt( $id = null, $alt = '', $placeholder = false ) {
+	function SKDD_image_alt( $id = null, $alt = '', $placeholder = false ) {
 		if ( ! $id ) {
 			if ( $placeholder ) {
-				return esc_attr__( 'Placeholder image', 'roxtar' );
+				return esc_attr__( 'Placeholder image', 'SKDD' );
 			}
-			return esc_attr__( 'Error image', 'roxtar' );
+			return esc_attr__( 'Error image', 'SKDD' );
 		}
 
 		$data    = get_post_meta( $id, '_wp_attachment_image_alt', true );
@@ -328,7 +328,7 @@ if ( ! function_exists( 'roxtar_image_alt' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_hex_to_rgba' ) ) {
+if ( ! function_exists( 'SKDD_hex_to_rgba' ) ) {
 	/**
 	 * Convert HEX to RGBA color
 	 *
@@ -336,7 +336,7 @@ if ( ! function_exists( 'roxtar_hex_to_rgba' ) ) {
 	 * @param      integer $alpha  The alpha.
 	 * @return     string  The rgba color.
 	 */
-	function roxtar_hex_to_rgba( $hex, $alpha = 1 ) {
+	function SKDD_hex_to_rgba( $hex, $alpha = 1 ) {
 		$hex = str_replace( '#', '', $hex );
 
 		if ( 3 === strlen( $hex ) ) {
@@ -355,11 +355,11 @@ if ( ! function_exists( 'roxtar_hex_to_rgba' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_browser_detection' ) ) {
+if ( ! function_exists( 'SKDD_browser_detection' ) ) {
 	/**
-	 * Roxtar broswer detection
+	 * SKDD broswer detection
 	 */
-	function roxtar_browser_detection() {
+	function SKDD_browser_detection() {
 		global $is_IE, $is_edge, $is_safari, $is_iphone;
 
 		$class = '';
@@ -378,11 +378,11 @@ if ( ! function_exists( 'roxtar_browser_detection' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_dequeue_scripts_and_styles' ) ) {
+if ( ! function_exists( 'SKDD_dequeue_scripts_and_styles' ) ) {
 	/**
 	 * Dequeue scripts and style no need
 	 */
-	function roxtar_dequeue_scripts_and_styles() {
+	function SKDD_dequeue_scripts_and_styles() {
 		// What is 'sb-font-awesome'?
 		wp_deregister_style( 'sb-font-awesome' );
 		wp_dequeue_style( 'sb-font-awesome' );
@@ -394,7 +394,7 @@ if ( ! function_exists( 'roxtar_dequeue_scripts_and_styles' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_narrow_data' ) ) {
+if ( ! function_exists( 'SKDD_narrow_data' ) ) {
 	/**
 	 * Get dropdown data
 	 *
@@ -404,7 +404,7 @@ if ( ! function_exists( 'roxtar_narrow_data' ) ) {
 	 *
 	 * @return     array
 	 */
-	function roxtar_narrow_data( $type = 'post', $terms = 'category', $total = -1 ) {
+	function SKDD_narrow_data( $type = 'post', $terms = 'category', $total = -1 ) {
 		$output = array();
 		switch ( $type ) {
 			case 'post':
@@ -433,15 +433,15 @@ if ( ! function_exists( 'roxtar_narrow_data' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_get_metabox' ) ) {
+if ( ! function_exists( 'SKDD_get_metabox' ) ) {
 	/**
 	 * Get metabox option
 	 *
 	 * @param int    $page_id      The page ID.
 	 * @param string $metabox_name Metabox option name.
 	 */
-	function roxtar_get_metabox( $page_id = false, $metabox_name ) {
-		$page_id             = $page_id ? intval( $page_id ) : roxtar_get_page_id();
+	function SKDD_get_metabox( $page_id = false, $metabox_name ) {
+		$page_id             = $page_id ? intval( $page_id ) : SKDD_get_page_id();
 		$metabox             = get_post_meta( $page_id, $metabox_name, true );
 		$is_product_category = class_exists( 'woocommerce' ) && is_product_category();
 
@@ -453,12 +453,12 @@ if ( ! function_exists( 'roxtar_get_metabox' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_header_transparent' ) ) {
+if ( ! function_exists( 'SKDD_header_transparent' ) ) {
 	/**
 	 * Detect header transparent on current page
 	 */
-	function roxtar_header_transparent() {
-		$options             = roxtar_options( false );
+	function SKDD_header_transparent() {
+		$options             = SKDD_options( false );
 		$transparent         = $options['header_transparent'];
 		$archive_transparent = $options['header_transparent_disable_archive'];
 		$index_transparent   = $options['header_transparent_disable_index'];
@@ -466,7 +466,7 @@ if ( ! function_exists( 'roxtar_header_transparent' ) ) {
 		$post_transparent    = $options['header_transparent_disable_post'];
 		$shop_transparent    = $options['header_transparent_disable_shop'];
 		$product_transparent = $options['header_transparent_disable_product'];
-		$metabox_transparent = roxtar_get_metabox( false, 'site_header-transparent' );
+		$metabox_transparent = SKDD_get_metabox( false, 'site_header-transparent' );
 
 		// Disable header transparent on Shop page.
 		if ( class_exists( 'woocommerce' ) && is_shop() && $shop_transparent ) {
@@ -501,44 +501,44 @@ if ( ! function_exists( 'roxtar_header_transparent' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_meta_charset' ) ) {
+if ( ! function_exists( 'SKDD_meta_charset' ) ) {
 	/**
 	 * Meta charset
 	 */
-	function roxtar_meta_charset() {
+	function SKDD_meta_charset() {
 		?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_meta_viewport' ) ) {
+if ( ! function_exists( 'SKDD_meta_viewport' ) ) {
 	/**
 	 * Meta viewport
 	 */
-	function roxtar_meta_viewport() {
+	function SKDD_meta_viewport() {
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1.0, maximum-scale=2.0">
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_rel_profile' ) ) {
+if ( ! function_exists( 'SKDD_rel_profile' ) ) {
 	/**
 	 * Rel profile
 	 */
-	function roxtar_rel_profile() {
+	function SKDD_rel_profile() {
 		?>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_pingback' ) ) {
+if ( ! function_exists( 'SKDD_pingback' ) ) {
 	/**
 	 * Pingback
 	 */
-	function roxtar_pingback() {
+	function SKDD_pingback() {
 		if ( ! is_singular() || ! pings_open( get_queried_object() ) ) {
 			return;
 		}
@@ -548,16 +548,16 @@ if ( ! function_exists( 'roxtar_pingback' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_facebook_social' ) ) {
+if ( ! function_exists( 'SKDD_facebook_social' ) ) {
 	/**
 	 * Get Title and Image for Facebook share
 	 */
-	function roxtar_facebook_social() {
+	function SKDD_facebook_social() {
 		if ( ! is_singular( 'product' ) ) {
 			return;
 		}
 
-		$id        = roxtar_get_page_id();
+		$id        = SKDD_get_page_id();
 		$title     = get_the_title( $id );
 		$image     = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
 		$image_src = $image ? $image[0] : wc_placeholder_img_src();
@@ -569,7 +569,7 @@ if ( ! function_exists( 'roxtar_facebook_social' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_array_insert' ) ) {
+if ( ! function_exists( 'SKDD_array_insert' ) ) {
 	/**
 	 * Insert an array into another array before/after a certain key
 	 *
@@ -579,7 +579,7 @@ if ( ! function_exists( 'roxtar_array_insert' ) ) {
 	 * @param string $position Wether to insert the array before or after the key.
 	 * @return array
 	 */
-	function roxtar_array_insert( $array, $pairs, $key, $position = 'after' ) {
+	function SKDD_array_insert( $array, $pairs, $key, $position = 'after' ) {
 		$key_pos = array_search( $key, array_keys( $array ), true );
 		if ( 'after' === $position ) {
 			$key_pos++;
@@ -596,16 +596,16 @@ if ( ! function_exists( 'roxtar_array_insert' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_support_wishlist_plugin' ) ) {
+if ( ! function_exists( 'SKDD_support_wishlist_plugin' ) ) {
 	/**
 	 * Detect wishlist plugin
 	 */
-	function roxtar_support_wishlist_plugin() {
-		if ( ! roxtar_is_woocommerce_activated() ) {
+	function SKDD_support_wishlist_plugin() {
+		if ( ! SKDD_is_woocommerce_activated() ) {
 			return false;
 		}
 
-		$options = roxtar_options( false );
+		$options = SKDD_options( false );
 		$plugin  = $options['shop_page_wishlist_support_plugin'];
 
 		// Ti plugin or YITH plugin.
@@ -617,16 +617,16 @@ if ( ! function_exists( 'roxtar_support_wishlist_plugin' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_wishlist_page_url' ) ) {
+if ( ! function_exists( 'SKDD_wishlist_page_url' ) ) {
 	/**
 	 * Get wishlist page url
 	 */
-	function roxtar_wishlist_page_url() {
-		if ( ! roxtar_support_wishlist_plugin() ) {
+	function SKDD_wishlist_page_url() {
+		if ( ! SKDD_support_wishlist_plugin() ) {
 			return '#';
 		}
 
-		$options   = roxtar_options( false );
+		$options   = SKDD_options( false );
 		$shortcode = '[yith_wcwl_wishlist]';
 
 		if ( 'ti' === $options['shop_page_wishlist_support_plugin'] ) {
@@ -691,9 +691,9 @@ function remove_style_tags_cmplz () {
 
 // Convert HEX to RGB and optionally to RGBA if alpha is provided
 
-if ( ! function_exists( 'roxtar_hex_to_rgb' ) ) {
+if ( ! function_exists( 'SKDD_hex_to_rgb' ) ) {
 
-	function roxtar_hex_to_rgb($color, $opacity = false) {
+	function SKDD_hex_to_rgb($color, $opacity = false) {
 		
 		$default = 'rgb(0,0,0)';
 

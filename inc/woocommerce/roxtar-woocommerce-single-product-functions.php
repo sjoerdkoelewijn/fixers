@@ -2,12 +2,12 @@
 /**
  * Single Product template functions
  *
- * @package roxtar
+ * @package SKDD
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'roxtar_get_prev_product' ) ) {
+if ( ! function_exists( 'SKDD_get_prev_product' ) ) {
 	/**
 	 * Retrieves the previous product.
 	 *
@@ -16,13 +16,13 @@ if ( ! function_exists( 'roxtar_get_prev_product' ) ) {
 	 * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'product_cat'.
 	 * @return WC_Product|false Product object if successful. False if no valid product is found.
 	 */
-	function roxtar_get_prev_product( $in_same_term = true, $excluded_terms = '', $taxonomy = 'product_cat' ) {
-		$product = new Roxtar_Adjacent_Products( $in_same_term, $excluded_terms, $taxonomy, true );
+	function SKDD_get_prev_product( $in_same_term = true, $excluded_terms = '', $taxonomy = 'product_cat' ) {
+		$product = new SKDD_Adjacent_Products( $in_same_term, $excluded_terms, $taxonomy, true );
 		return $product->get_product();
 	}
 }
 
-if ( ! function_exists( 'roxtar_get_next_product' ) ) {
+if ( ! function_exists( 'SKDD_get_next_product' ) ) {
 	/**
 	 * Retrieves the next product.
 	 *
@@ -31,20 +31,20 @@ if ( ! function_exists( 'roxtar_get_next_product' ) ) {
 	 * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'product_cat'.
 	 * @return WC_Product|false Product object if successful. False if no valid product is found.
 	 */
-	function roxtar_get_next_product( $in_same_term = true, $excluded_terms = '', $taxonomy = 'product_cat' ) {
-		$product = new Roxtar_Adjacent_Products( $in_same_term, $excluded_terms, $taxonomy );
+	function SKDD_get_next_product( $in_same_term = true, $excluded_terms = '', $taxonomy = 'product_cat' ) {
+		$product = new SKDD_Adjacent_Products( $in_same_term, $excluded_terms, $taxonomy );
 		return $product->get_product();
 	}
 }
 
-if ( ! function_exists( 'roxtar_product_navigation' ) ) {
+if ( ! function_exists( 'SKDD_product_navigation' ) ) {
 	/**
 	 * Product navigation
 	 */
-	function roxtar_product_navigation() {
-		$prev_product = roxtar_get_prev_product();
+	function SKDD_product_navigation() {
+		$prev_product = SKDD_get_prev_product();
 		$prev_id      = $prev_product ? $prev_product->get_id() : false;
-		$next_product = roxtar_get_next_product();
+		$next_product = SKDD_get_next_product();
 		$next_id      = $next_product ? $next_product->get_id() : false;
 
 		if ( ! $prev_id && ! $next_id ) {
@@ -56,15 +56,15 @@ if ( ! function_exists( 'roxtar_product_navigation' ) ) {
 
 		if ( $prev_id ) {
 			$classes        = ! $next_id ? 'product-nav-last' : '';
-			$prev_icon      = apply_filters( 'roxtar_product_navigation_prev_icon', 'ti-arrow-circle-left' );
+			$prev_icon      = apply_filters( 'SKDD_product_navigation_prev_icon', 'ti-arrow-circle-left' );
 			$prev_image_id  = $prev_product->get_image_id();
 			$prev_image_src = wp_get_attachment_image_src( $prev_image_id );
-			$prev_image_alt = roxtar_image_alt( $prev_image_id, __( 'Previous Product Image', 'roxtar' ) );
+			$prev_image_alt = SKDD_image_alt( $prev_image_id, __( 'Previous Product Image', 'SKDD' ) );
 
 			ob_start();
 			?>
 				<div class="prev-product-navigation product-nav-item">
-					<a class="product-nav-item-text" href="<?php echo esc_url( get_permalink( $prev_id ) ); ?>"><span class="product-nav-icon <?php echo esc_attr( $prev_icon ); ?>"></span><?php esc_html_e( 'Previous', 'roxtar' ); ?></a>
+					<a class="product-nav-item-text" href="<?php echo esc_url( get_permalink( $prev_id ) ); ?>"><span class="product-nav-icon <?php echo esc_attr( $prev_icon ); ?>"></span><?php esc_html_e( 'Previous', 'SKDD' ); ?></a>
 					<div class="product-nav-item-content">
 						<a class="product-nav-item-link" href="<?php echo esc_url( get_permalink( $prev_id ) ); ?>"></a>
 						<?php if ( $prev_image_src ) { ?>
@@ -83,15 +83,15 @@ if ( ! function_exists( 'roxtar_product_navigation' ) ) {
 
 		if ( $next_id ) {
 			$classes        = ! $prev_id ? 'product-nav-first' : '';
-			$next_icon      = apply_filters( 'roxtar_product_navigation_next_icon', 'ti-arrow-circle-right' );
+			$next_icon      = apply_filters( 'SKDD_product_navigation_next_icon', 'ti-arrow-circle-right' );
 			$next_image_id  = $next_product->get_image_id();
 			$next_image_src = wp_get_attachment_image_src( $next_image_id );
-			$next_image_alt = roxtar_image_alt( $next_image_id, __( 'Next Product Image', 'roxtar' ) );
+			$next_image_alt = SKDD_image_alt( $next_image_id, __( 'Next Product Image', 'SKDD' ) );
 
 			ob_start();
 			?>
 				<div class="next-product-navigation product-nav-item">
-					<a class="product-nav-item-text" href="<?php echo esc_url( get_permalink( $next_id ) ); ?>"><?php esc_html_e( 'Next', 'roxtar' ); ?><span class="product-nav-icon <?php echo esc_attr( $next_icon ); ?>"></span></a>
+					<a class="product-nav-item-text" href="<?php echo esc_url( get_permalink( $next_id ) ); ?>"><?php esc_html_e( 'Next', 'SKDD' ); ?><span class="product-nav-icon <?php echo esc_attr( $next_icon ); ?>"></span></a>
 					<div class="product-nav-item-content">
 						<a class="product-nav-item-link" href="<?php echo esc_url( get_permalink( $next_id ) ); ?>"></a>
 						<div class="product-nav-item-inner">
@@ -108,40 +108,40 @@ if ( ! function_exists( 'roxtar_product_navigation' ) ) {
 		}
 		?>
 
-		<div class="roxtar-product-navigation <?php echo esc_attr( $classes ); ?>">
+		<div class="SKDD-product-navigation <?php echo esc_attr( $classes ); ?>">
 			<?php echo $content; // phpcs:ignore ?>
 		</div>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_remove_additional_information_tabs' ) ) {
+if ( ! function_exists( 'SKDD_remove_additional_information_tabs' ) ) {
 	/**
 	 * Remove additional informaltion
 	 *
 	 * @param      array $tabs The tabs.
 	 */
-	function roxtar_remove_additional_information_tabs( $tabs ) {
+	function SKDD_remove_additional_information_tabs( $tabs ) {
 		unset( $tabs['additional_information'] );
 		return $tabs;
 	}
 }
 
 
-if ( ! function_exists( 'roxtar_single_product_gallery_open' ) ) {
+if ( ! function_exists( 'SKDD_single_product_gallery_open' ) ) {
 	/**
 	 * Single gallery product open
 	 */
-	function roxtar_single_product_gallery_open() {
-		$product_id = roxtar_get_product_id();
+	function SKDD_single_product_gallery_open() {
+		$product_id = SKDD_get_product_id();
 		$product    = wc_get_product( $product_id );
-		$options    = roxtar_options( false );
+		$options    = SKDD_options( false );
 		$gallery_id = ! empty( $product ) ? $product->get_gallery_image_ids() : array();
 		$classes[]  = $options['shop_single_gallery_layout'] . '-style';
 		$classes[]  = ! empty( $gallery_id ) ? 'has-product-thumbnails' : '';
 
 		// Global variation gallery.
-		roxtar_global_for_vartiation_gallery( $product );
+		SKDD_global_for_vartiation_gallery( $product );
 		?>
 		<div class="product-gallery <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 		<?php
@@ -150,15 +150,15 @@ if ( ! function_exists( 'roxtar_single_product_gallery_open' ) ) {
 
 
 
-if ( ! function_exists( 'roxtar_file_downloads_tabs' ) ) {
+if ( ! function_exists( 'SKDD_file_downloads_tabs' ) ) {
 
-	function roxtar_file_downloads_tabs( $tabs ){
+	function SKDD_file_downloads_tabs( $tabs ){
 	
 		//unset( $tabs['inventory'] );
 	
-		$tabs['roxtar'] = array(
+		$tabs['SKDD'] = array(
 			'label'    => 'Downloads',
-			'target'   => 'roxtar_product_data',
+			'target'   => 'SKDD_product_data',
 			'priority' => 21,
 		);
 		return $tabs;
@@ -168,13 +168,13 @@ if ( ! function_exists( 'roxtar_file_downloads_tabs' ) ) {
 }
 
 
-if ( ! function_exists( 'roxtar_get_default_gallery' ) ) {
+if ( ! function_exists( 'SKDD_get_default_gallery' ) ) {
 	/**
 	 * Get variation gallery
 	 *
 	 * @param object $product The product.
 	 */
-	function roxtar_get_default_gallery( $product ) {
+	function SKDD_get_default_gallery( $product ) {
 		$images = array();
 		if ( empty( $product ) ) {
 			return $images;
@@ -204,7 +204,7 @@ if ( ! function_exists( 'roxtar_get_default_gallery' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_available_variation_gallery' ) ) {
+if ( ! function_exists( 'SKDD_available_variation_gallery' ) ) {
 	/**
 	 * Available Gallery
 	 *
@@ -212,7 +212,7 @@ if ( ! function_exists( 'roxtar_available_variation_gallery' ) ) {
 	 * @param object $variation_product_object Product object.
 	 * @param array  $variation Variations.
 	 */
-	function roxtar_available_variation_gallery( $available_variation, $variation_product_object, $variation ) {
+	function SKDD_available_variation_gallery( $available_variation, $variation_product_object, $variation ) {
 		$product_id         = absint( $variation->get_parent_id() );
 		$variation_id       = absint( $variation->get_id() );
 		$variation_image_id = absint( $variation->get_image_id() );
@@ -236,22 +236,22 @@ if ( ! function_exists( 'roxtar_available_variation_gallery' ) ) {
 			array_unshift( $gallery_images, get_post_thumbnail_id( $product_id ) );
 		}
 
-		$available_variation['roxtar_variation_gallery_images'] = array();
+		$available_variation['SKDD_variation_gallery_images'] = array();
 		foreach ( $gallery_images as $k => $v ) {
-			$available_variation['roxtar_variation_gallery_images'][ $k ] = wc_get_product_attachment_props( $v );
+			$available_variation['SKDD_variation_gallery_images'][ $k ] = wc_get_product_attachment_props( $v );
 		}
 
 		return $available_variation;
 	}
 }
 
-if ( ! function_exists( 'roxtar_get_variation_gallery' ) ) {
+if ( ! function_exists( 'SKDD_get_variation_gallery' ) ) {
 	/**
 	 * Get variation gallery
 	 *
 	 * @param object $product The product.
 	 */
-	function roxtar_get_variation_gallery( $product ) {
+	function SKDD_get_variation_gallery( $product ) {
 		$images = array();
 
 		if ( ! is_object( $product ) || ! $product->is_type( 'variable' ) ) {
@@ -259,7 +259,7 @@ if ( ! function_exists( 'roxtar_get_variation_gallery' ) ) {
 		}
 
 		$variations = array_values( $product->get_available_variations() );
-		$key        = class_exists( 'WC_Additional_Variation_Images' ) ? 'roxtar_variation_gallery_images' : 'variation_gallery_images';
+		$key        = class_exists( 'WC_Additional_Variation_Images' ) ? 'SKDD_variation_gallery_images' : 'variation_gallery_images';
 
 		$images = array();
 		foreach ( $variations as $k ) {
@@ -275,36 +275,36 @@ if ( ! function_exists( 'roxtar_get_variation_gallery' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_global_for_vartiation_gallery' ) ) {
+if ( ! function_exists( 'SKDD_global_for_vartiation_gallery' ) ) {
 	/**
 	 * Add global variation
 	 *
 	 * @param object $product The Product.
 	 */
-	function roxtar_global_for_vartiation_gallery( $product ) {
+	function SKDD_global_for_vartiation_gallery( $product ) {
 
-		// Roxtar Variation gallery.
+		// SKDD Variation gallery.
 		wp_localize_script(
-			'roxtar-product-variation',
-			'roxtar_variation_gallery',
-			roxtar_get_variation_gallery( $product )
+			'SKDD-product-variation',
+			'SKDD_variation_gallery',
+			SKDD_get_variation_gallery( $product )
 		);
 
-		// Roxtar default gallery.
+		// SKDD default gallery.
 		wp_localize_script(
-			'roxtar-product-variation',
-			'roxtar_default_gallery',
-			roxtar_get_default_gallery( $product )
+			'SKDD-product-variation',
+			'SKDD_default_gallery',
+			SKDD_get_default_gallery( $product )
 		);
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
+if ( ! function_exists( 'SKDD_single_product_gallery_image_slide' ) ) {
 	/**
 	 * Product gallery product image slider
 	 */
-	function roxtar_single_product_gallery_image_slide() {
-		$product_id = roxtar_get_product_id();
+	function SKDD_single_product_gallery_image_slide() {
+		$product_id = SKDD_get_product_id();
 		$product    = wc_get_product( $product_id );
 
 		if ( empty( $product ) ) {
@@ -312,7 +312,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
 		}
 
 		$image_id            = $product->get_image_id();
-		$image_alt           = roxtar_image_alt( $image_id, esc_attr__( 'Product image', 'roxtar' ) );
+		$image_alt           = SKDD_image_alt( $image_id, esc_attr__( 'Product image', 'SKDD' ) );
 		$get_size            = wc_get_image_size( 'shop_catalog' );
 		$image_size          = $get_size['width'] . 'x' . ( ! empty( $get_size['height'] ) ? $get_size['height'] : $get_size['width'] );
 		$image_medium_src[0] = wc_placeholder_img_src();
@@ -349,7 +349,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
 						$g_full_img_src   = wp_get_attachment_image_src( $key, 'full' );
 						$g_medium_img_src = wp_get_attachment_image_src( $key, 'woocommerce_single' );
 						$g_image_size     = $g_full_img_src[1] . 'x' . $g_full_img_src[2];
-						$g_img_alt        = roxtar_image_alt( $key, esc_attr__( 'Product image', 'roxtar' ) );
+						$g_img_alt        = SKDD_image_alt( $key, esc_attr__( 'Product image', 'SKDD' ) );
 						$g_img_srcset     = function_exists( 'wp_get_attachment_image_srcset' ) ? wp_get_attachment_image_srcset( $key, 'woocommerce_single' ) : '';
 						?>
 						<figure class="image-item ez-zoom">
@@ -363,23 +363,23 @@ if ( ! function_exists( 'roxtar_single_product_gallery_image_slide' ) ) {
 				?>
 			</div>
 
-			<?php do_action( 'roxtar_product_images_box_end' ); ?>
+			<?php do_action( 'SKDD_product_images_box_end' ); ?>
 		</div>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_gallery_thumb_slide' ) ) {
+if ( ! function_exists( 'SKDD_single_product_gallery_thumb_slide' ) ) {
 	/**
 	 * Product gallery product thumbnail slider
 	 */
-	function roxtar_single_product_gallery_thumb_slide() {
-		$options = roxtar_options( false );
+	function SKDD_single_product_gallery_thumb_slide() {
+		$options = SKDD_options( false );
 		if ( ! in_array( $options['shop_single_gallery_layout'], array( 'vertical', 'horizontal' ), true ) ) {
 			return;
 		}
 
-		$product_id = roxtar_get_product_id();
+		$product_id = SKDD_get_product_id();
 		$product    = wc_get_product( $product_id );
 
 		if ( empty( $product ) ) {
@@ -387,7 +387,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_thumb_slide' ) ) {
 		}
 
 		$image_id        = $product->get_image_id();
-		$image_alt       = roxtar_image_alt( $image_id, esc_attr__( 'Product image', 'roxtar' ) );
+		$image_alt       = SKDD_image_alt( $image_id, esc_attr__( 'Product image', 'SKDD' ) );
 		$image_small_src = $image_id ? wp_get_attachment_image_src( $image_id, 'woocommerce_gallery_thumbnail' ) : wc_placeholder_img_src();
 		$gallery_id      = $product->get_gallery_image_ids();
 		?>
@@ -402,7 +402,7 @@ if ( ! function_exists( 'roxtar_single_product_gallery_thumb_slide' ) ) {
 				<?php
 				foreach ( $gallery_id as $key ) :
 					$g_thumb_src = wp_get_attachment_image_src( $key, 'woocommerce_gallery_thumbnail' );
-					$g_thumb_alt = roxtar_image_alt( $key, esc_attr__( 'Product image', 'roxtar' ) );
+					$g_thumb_alt = SKDD_image_alt( $key, esc_attr__( 'Product image', 'SKDD' ) );
 					?>
 					<div class="thumbnail-item">
 						<img src="<?php echo esc_url( $g_thumb_src[0] ); ?>" alt="<?php echo esc_attr( $g_thumb_alt ); ?>">
@@ -415,13 +415,13 @@ if ( ! function_exists( 'roxtar_single_product_gallery_thumb_slide' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_gallery_dependency' ) ) {
+if ( ! function_exists( 'SKDD_single_product_gallery_dependency' ) ) {
 	/**
 	 * Html markup for photo swipe lightbox
 	 */
-	function roxtar_single_product_gallery_dependency() {
+	function SKDD_single_product_gallery_dependency() {
 		// Theme options.
-		$options = roxtar_options( false );
+		$options = SKDD_options( false );
 
 		// Photoswipe markup html.
 		if ( ! $options['shop_single_image_lightbox'] ) {
@@ -432,20 +432,20 @@ if ( ! function_exists( 'roxtar_single_product_gallery_dependency' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_gallery_close' ) ) {
+if ( ! function_exists( 'SKDD_single_product_gallery_close' ) ) {
 	/**
 	 * Single product gallery close
 	 */
-	function roxtar_single_product_gallery_close() {
+	function SKDD_single_product_gallery_close() {
 		echo '</div>';
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_container_close' ) ) {
+if ( ! function_exists( 'SKDD_single_product_container_close' ) ) {
 	/**
 	 * Product container close.
 	 */
-	function roxtar_single_product_container_close() {
+	function SKDD_single_product_container_close() {
 		?>
 			</div>
 		</div>
@@ -454,37 +454,37 @@ if ( ! function_exists( 'roxtar_single_product_container_close' ) ) {
 }
 
 
-if ( ! function_exists( 'roxtar_single_product_wrapper_summary_open' ) ) {
+if ( ! function_exists( 'SKDD_single_product_wrapper_summary_open' ) ) {
 	/**
 	 * Wrapper product summary open
 	 */
-	function roxtar_single_product_wrapper_summary_open() {
+	function SKDD_single_product_wrapper_summary_open() {
 		?>
 		<div class="product-summary">
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_single_product_wrapper_summary_close' ) ) {
+if ( ! function_exists( 'SKDD_single_product_wrapper_summary_close' ) ) {
 	/**
 	 * Wrapper product summary close
 	 */
-	function roxtar_single_product_wrapper_summary_close() {
+	function SKDD_single_product_wrapper_summary_close() {
 		?>
 		</div>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_modified_quantity_stock' ) ) {
+if ( ! function_exists( 'SKDD_modified_quantity_stock' ) ) {
 	/**
 	 * Modify stock label
 	 *
 	 * @param string $html    Default html markup.
 	 * @param object $product The product.
 	 */
-	function roxtar_modified_quantity_stock( $html, $product ) {
-		$options = roxtar_options( false );
+	function SKDD_modified_quantity_stock( $html, $product ) {
+		$options = SKDD_options( false );
 		// Remove quantity stock label if this option disabled.
 		$limit = $options['shop_single_stock_product_limit'];
 
@@ -499,21 +499,21 @@ if ( ! function_exists( 'roxtar_modified_quantity_stock' ) ) {
 		ob_start();
 		if ( $limit >= $number || ! $limit ) {
 			?>
-				<div class="roxtar-single-product-stock stock">
+				<div class="SKDD-single-product-stock stock">
 
 					<?php
 					if ( $options['shop_single_stock_label'] ) {
 						?>
-							<span class="roxtar-single-product-stock-label">
-								<?php echo esc_html( sprintf( /* translators: %s stock quantity */ __( 'Hurry! only %s left in stock.', 'roxtar' ), $stock_quantity ) ); ?>
+							<span class="SKDD-single-product-stock-label">
+								<?php echo esc_html( sprintf( /* translators: %s stock quantity */ __( 'Hurry! only %s left in stock.', 'SKDD' ), $stock_quantity ) ); ?>
 							</span>
 						<?php
 					}
 
 					if ( $options['shop_single_loading_bar'] ) {
 						?>
-							<div class="roxtar-product-stock-progress">
-								<span class="roxtar-single-product-stock-progress-bar" data-number="<?php echo esc_attr( $number ); ?>"></span>
+							<div class="SKDD-product-stock-progress">
+								<span class="SKDD-single-product-stock-progress-bar" data-number="<?php echo esc_attr( $number ); ?>"></span>
 							</div>
 						<?php
 					}
@@ -526,40 +526,40 @@ if ( ! function_exists( 'roxtar_modified_quantity_stock' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_trust_badge_image' ) ) {
+if ( ! function_exists( 'SKDD_trust_badge_image' ) ) {
 	/**
 	 * Trust badge image
 	 */
-	function roxtar_trust_badge_image() {
-		$options   = roxtar_options( false );
+	function SKDD_trust_badge_image() {
+		$options   = SKDD_options( false );
 		$image_url = $options['shop_single_trust_badge_image'];
 
 		if ( ! $image_url ) {
 			return;
 		}
 		?>
-		<div class="roxtar-trust-badge-box">
-			<img src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Trust Badge Image', 'roxtar' ); ?>">
+		<div class="SKDD-trust-badge-box">
+			<img src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Trust Badge Image', 'SKDD' ); ?>">
 		</div>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'roxtar_product_recently_viewed' ) ) {
+if ( ! function_exists( 'SKDD_product_recently_viewed' ) ) {
 	/**
 	 * Product recently viewed
 	 */
-	function roxtar_product_recently_viewed() {
+	function SKDD_product_recently_viewed() {
 		if ( ! is_singular( 'product' ) ) {
 			return;
 		}
 
 		global $post;
-		$options         = roxtar_options( false );
+		$options         = SKDD_options( false );
 		$viewed_products = array();
 
-		if ( ! empty( $_COOKIE['roxtar_product_recently_viewed'] ) ) {
-			$viewed_products = (array) explode( '|', sanitize_text_field( wp_unslash( $_COOKIE['roxtar_product_recently_viewed'] ) ) );
+		if ( ! empty( $_COOKIE['SKDD_product_recently_viewed'] ) ) {
+			$viewed_products = (array) explode( '|', sanitize_text_field( wp_unslash( $_COOKIE['SKDD_product_recently_viewed'] ) ) );
 		}
 
 		if ( ! in_array( $post->ID, $viewed_products, true ) ) {
@@ -571,17 +571,17 @@ if ( ! function_exists( 'roxtar_product_recently_viewed' ) ) {
 		}
 
 		// Store for session only.
-		wc_setcookie( 'roxtar_product_recently_viewed', implode( '|', array_filter( $viewed_products ) ) );
+		wc_setcookie( 'SKDD_product_recently_viewed', implode( '|', array_filter( $viewed_products ) ) );
 	}
 }
 
-if ( ! function_exists( 'roxtar_product_recently_viewed_template' ) ) {
+if ( ! function_exists( 'SKDD_product_recently_viewed_template' ) ) {
 	/**
 	 * Display product recently viewed
 	 */
-	function roxtar_product_recently_viewed_template() {
-		$options = roxtar_options( false );
-		$cookies = isset( $_COOKIE['roxtar_product_recently_viewed'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['roxtar_product_recently_viewed'] ) ) : false;
+	function SKDD_product_recently_viewed_template() {
+		$options = SKDD_options( false );
+		$cookies = isset( $_COOKIE['SKDD_product_recently_viewed'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['SKDD_product_recently_viewed'] ) ) : false;
 		if ( ! $cookies || ! $options['shop_single_product_recently_viewed'] || ! is_singular( 'product' ) ) {
 			return;
 		}
@@ -600,10 +600,10 @@ if ( ! function_exists( 'roxtar_product_recently_viewed_template' ) ) {
 		}
 		?>
 
-		<div class="roxtar-product-recently-viewed-section recently_viewed">
+		<div class="SKDD-product-recently-viewed-section recently_viewed">
 			<div class="recently_viewed_inner">
-				<div class="roxtar-product-recently-viewed-inner">
-					<h2 class="roxtar-product-recently-viewed-title"><?php echo esc_html( $options['shop_single_recently_viewed_title'] ); ?></h2>
+				<div class="SKDD-product-recently-viewed-inner">
+					<h2 class="SKDD-product-recently-viewed-title"><?php echo esc_html( $options['shop_single_recently_viewed_title'] ); ?></h2>
 					<?php
 					woocommerce_product_loop_start();
 
@@ -624,12 +624,12 @@ if ( ! function_exists( 'roxtar_product_recently_viewed_template' ) ) {
 	}
 }
 
-if ( ! function_exists( 'roxtar_ajax_single_add_to_cart' ) ) {
+if ( ! function_exists( 'SKDD_ajax_single_add_to_cart' ) ) {
 	/**
 	 * Ajax single add to cart
 	 */
-	function roxtar_ajax_single_add_to_cart() {
-		check_ajax_referer( 'roxtar_ajax_single_add_to_cart', 'ajax_nonce', false );
+	function SKDD_ajax_single_add_to_cart() {
+		check_ajax_referer( 'SKDD_ajax_single_add_to_cart', 'ajax_nonce', false );
 
 		if ( ! isset( $_POST['product_id'] ) || ! isset( $_POST['product_qty'] ) ) {
 			wp_send_json_error();
@@ -652,7 +652,7 @@ if ( ! function_exists( 'roxtar_ajax_single_add_to_cart' ) ) {
 				$stock_count &&
 				( ( $product_qty + $in_cart_qty ) > $stock_count )
 			) {
-				$response['mess'] = sprintf( /* translators: stock quantity number */__( 'You cannot add that amount of this product to the cart. We have %1$s in stock and you already have %2$s in your cart', 'roxtar' ), $stock_count, $in_cart_qty );
+				$response['mess'] = sprintf( /* translators: stock quantity number */__( 'You cannot add that amount of this product to the cart. We have %1$s in stock and you already have %2$s in your cart', 'SKDD' ), $stock_count, $in_cart_qty );
 
 				wp_send_json_success( $response );
 			}
@@ -686,7 +686,7 @@ if ( ! function_exists( 'roxtar_ajax_single_add_to_cart' ) ) {
 		}
 
 		ob_start();
-		roxtar_mini_cart();
+		SKDD_mini_cart();
 		$response['item']    = WC()->cart->get_cart_contents_count();
 		$response['total']   = WC()->cart->get_cart_total();
 		$response['content'] = ob_get_clean();
@@ -698,11 +698,11 @@ if ( ! function_exists( 'roxtar_ajax_single_add_to_cart' ) ) {
 
 
 
-if ( ! function_exists( 'roxtar_single_product_categories' ) ) {
+if ( ! function_exists( 'SKDD_single_product_categories' ) ) {
 	/**
 	 * Display categories
 	 */
-	function roxtar_single_product_categories() {
+	function SKDD_single_product_categories() {
 		global $product;
 
 		?>
@@ -711,7 +711,7 @@ if ( ! function_exists( 'roxtar_single_product_categories' ) ) {
 			<tbody>
 				<tr class="woocommerce-product-attributes-item">
 					<th class="woocommerce-product-attributes-item__label">
-						<?php esc_attr_e( 'Category', 'roxtar' ); ?>
+						<?php esc_attr_e( 'Category', 'SKDD' ); ?>
 					</th>
 					<td class="woocommerce-product-attributes-item__value">
 						<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
@@ -726,11 +726,11 @@ if ( ! function_exists( 'roxtar_single_product_categories' ) ) {
 }
 
 
-if ( ! function_exists( 'roxtar_single_product_tags' ) ) {
+if ( ! function_exists( 'SKDD_single_product_tags' ) ) {
 	/**
 	 * Display tags
 	 */
-	function roxtar_single_product_tags() {
+	function SKDD_single_product_tags() {
 		global $product;
 
 		if (!empty(wc_get_product_tag_list($product->get_id()))) { ?>
@@ -739,7 +739,7 @@ if ( ! function_exists( 'roxtar_single_product_tags' ) ) {
 					
 				<p class="header">
 
-					<?php esc_attr_e( 'This product can be used to', 'roxtar' ); ?>
+					<?php esc_attr_e( 'This product can be used to', 'SKDD' ); ?>
 					
 				</p>
 

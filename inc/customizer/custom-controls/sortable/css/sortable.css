@@ -1,8 +1,8 @@
-.roxtar-sortable-control-list {
+.SKDD-sortable-control-list {
 	position: relative !important;
 }
 
-.roxtar-sortable-list-item {
+.SKDD-sortable-list-item {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -12,21 +12,21 @@
 	background-color: #fafafa;
 }
 
-.roxtar-sortable-list-item {
+.SKDD-sortable-list-item {
 	border: 1px dashed #ccc;
 }
 
-.roxtar-sortable-list-item * {
+.SKDD-sortable-list-item * {
 	color: #aaa
 }
 
-.roxtar-sortable-list-item.checked {
+.SKDD-sortable-list-item.checked {
 	border-style: solid;
 	border-color: #333;
 	background-color: #fff;
 }
 
-.roxtar-sortable-list-item.checked * {
+.SKDD-sortable-list-item.checked * {
 	color: #686868;
 }
 
@@ -41,17 +41,17 @@
 	pointer-events: none;
 }
 
-.roxtar-sortable-list-item.active{
+.SKDD-sortable-list-item.active{
 	visibility: hidden;
 }
 
-.roxtar-sortable-control-list .dragging{
+.SKDD-sortable-control-list .dragging{
 	margin-top: 0;
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 999;
 }
 
-.roxtar-sortable-control-list .sortable-item-input {
+.SKDD-sortable-control-list .sortable-item-input {
 	display: none;
 }

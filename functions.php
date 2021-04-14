@@ -1,48 +1,48 @@
 <?php
 /**
- * Roxtar
+ * SKDD
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Define constants.
-define( 'ROXTAR_VERSION', '1.8.0' );
-define( 'ROXTAR_PRO_MIN_VERSION', '1.4.6' );
-define( 'ROXTAR_THEME_DIR', get_template_directory() . '/' );
-define( 'ROXTAR_THEME_URI', get_template_directory_uri() . '/' );
+define( 'SKDD_VERSION', '1.8.0' );
+define( 'SKDD_PRO_MIN_VERSION', '1.4.6' );
+define( 'SKDD_THEME_DIR', get_template_directory() . '/' );
+define( 'SKDD_THEME_URI', get_template_directory_uri() . '/' );
 
-// Roxtar functions, hooks.
-require_once ROXTAR_THEME_DIR . 'inc/roxtar-functions.php';
-require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-hooks.php';
-require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-builder.php';
-require_once ROXTAR_THEME_DIR . 'inc/roxtar-template-functions.php';
-require_once ROXTAR_THEME_DIR . 'inc/class-roxtar-custom-header.php';
+// SKDD functions, hooks.
+require_once SKDD_THEME_DIR . 'inc/SKDD-functions.php';
+require_once SKDD_THEME_DIR . 'inc/SKDD-template-hooks.php';
+require_once SKDD_THEME_DIR . 'inc/SKDD-template-builder.php';
+require_once SKDD_THEME_DIR . 'inc/SKDD-template-functions.php';
+require_once SKDD_THEME_DIR . 'inc/class-SKDD-custom-header.php';
 
-// Roxtar generate css.
-require_once ROXTAR_THEME_DIR . 'inc/customizer/class-roxtar-fonts-helpers.php';
-require_once ROXTAR_THEME_DIR . 'inc/customizer/class-roxtar-get-css.php';
+// SKDD generate css.
+require_once SKDD_THEME_DIR . 'inc/customizer/class-SKDD-fonts-helpers.php';
+require_once SKDD_THEME_DIR . 'inc/customizer/class-SKDD-get-css.php';
 
-// Roxtar customizer.
-require_once ROXTAR_THEME_DIR . 'inc/class-roxtar.php';
-require_once ROXTAR_THEME_DIR . 'inc/customizer/class-roxtar-customizer.php';
+// SKDD customizer.
+require_once SKDD_THEME_DIR . 'inc/class-SKDD.php';
+require_once SKDD_THEME_DIR . 'inc/customizer/class-SKDD-customizer.php';
 
-// Roxtar woocommerce.
-if ( roxtar_is_woocommerce_activated() ) {
-	require_once ROXTAR_THEME_DIR . 'inc/woocommerce/class-roxtar-woocommerce.php';
-	require_once ROXTAR_THEME_DIR . 'inc/woocommerce/class-roxtar-adjacent-products.php';
-	require_once ROXTAR_THEME_DIR . 'inc/woocommerce/roxtar-woocommerce-template-functions.php';
-	require_once ROXTAR_THEME_DIR . 'inc/woocommerce/roxtar-woocommerce-archive-product-functions.php';
-	require_once ROXTAR_THEME_DIR . 'inc/woocommerce/roxtar-woocommerce-single-product-functions.php';
+// SKDD woocommerce.
+if ( SKDD_is_woocommerce_activated() ) {
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/class-SKDD-woocommerce.php';
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/class-SKDD-adjacent-products.php';
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-template-functions.php';
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-archive-product-functions.php';
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-single-product-functions.php';
 	
 }
 
-// Roxtar admin.
+// SKDD admin.
 if ( is_admin() ) {
-	require_once ROXTAR_THEME_DIR . 'inc/admin/class-roxtar-admin.php';
-	require_once ROXTAR_THEME_DIR . 'inc/admin/class-roxtar-meta-boxes.php';
+	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-admin.php';
+	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-meta-boxes.php';
 }
 
-require_once ROXTAR_THEME_DIR . 'inc/roxtar-howtos.php';
+require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
 
 
 /**

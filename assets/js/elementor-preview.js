@@ -1,7 +1,7 @@
 /**
  * Elementor preview
  *
- * @package Roxtar Pro
+ * @package SKDD Pro
  */
 
 'use strict';

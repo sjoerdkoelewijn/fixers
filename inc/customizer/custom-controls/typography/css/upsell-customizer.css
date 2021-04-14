@@ -15,7 +15,7 @@ li#accordion-section-generatepress_upsell_section {
 	border-top: 1px solid #D54E21;
 	border-bottom: 1px solid #D54E21;
 }
-.roxtar-get-pro-version-accordion-section a {
+.SKDD-get-pro-version-accordion-section a {
 	background: #FFF;
 	display: block;
 	padding: 10px 10px 11px 14px;
@@ -24,16 +24,16 @@ li#accordion-section-generatepress_upsell_section {
 	text-decoration: none;
 }
 
-.roxtar-get-pro-version-accordion-section a:hover {
+.SKDD-get-pro-version-accordion-section a:hover {
 	background:#FAFAFA;
 }
 
-.roxtar-get-pro-version-accordion-section h3 {
+.SKDD-get-pro-version-accordion-section h3 {
 	margin: 0;
 	position: relative;
 }
 
-.roxtar-get-pro-version-accordion-section h3 a:after {
+.SKDD-get-pro-version-accordion-section h3 a:after {
 	content: "\f345";
 	color: #D54E21;
 	position: absolute;

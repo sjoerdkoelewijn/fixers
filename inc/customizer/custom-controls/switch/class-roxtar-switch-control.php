@@ -2,7 +2,7 @@
 /**
  * Switch for Customizer.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Create a range slider control.
  * This control allows you to add responsive settings.
  */
-class Roxtar_Switch_Control extends WP_Customize_Control {
+class SKDD_Switch_Control extends WP_Customize_Control {
 
 	/**
 	 * Declare the control type.
@@ -27,10 +27,10 @@ class Roxtar_Switch_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_style(
-			'roxtar-switch-control',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/switch/css/switch.css',
+			'SKDD-switch-control',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/switch/css/switch.css',
 			array(),
-			roxtar_version()
+			SKDD_version()
 		);
 	}
 
@@ -45,19 +45,19 @@ class Roxtar_Switch_Control extends WP_Customize_Control {
 		$desc    = $this->description;
 		?>
 
-		<div class="roxtar-switch-customize-control">
+		<div class="SKDD-switch-customize-control">
 			<?php if ( ! empty( $label ) ) { ?>
 				<span class="customize-control-title">
 					<?php echo esc_html( $label ); ?>
 				</span>
 			<?php } ?>
 
-			<div class="roxtar-switch-toggle">
+			<div class="SKDD-switch-toggle">
 				<input
 					id="<?php echo esc_attr( $id ); ?>"
 					type="checkbox"
 					name="<?php echo esc_attr( $name ); ?>"
-					class="roxtar-switch-control switch-control"
+					class="SKDD-switch-control switch-control"
 					value="<?php echo esc_attr( $value ); ?>"
 					<?php
 						$this->link();

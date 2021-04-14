@@ -2,7 +2,7 @@
 /**
  * Photoswipe markup html
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -56,10 +56,10 @@
 				<div class="pswp__share-tooltip"></div> 
 			</div>
 
-			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous (arrow left)', 'roxtar' ); ?>">
+			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous (arrow left)', 'SKDD' ); ?>">
 			</button>
 
-			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next (arrow right)', 'roxtar' ); ?>">
+			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next (arrow right)', 'SKDD' ); ?>">
 			</button>
 
 			<div class="pswp__caption">

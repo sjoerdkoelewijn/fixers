@@ -1,7 +1,7 @@
 /**
  * Sortable
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';
@@ -200,7 +200,7 @@
 
 		// Get value to array.
 		_getValue: function() {
-			var _item      = this._container.querySelectorAll( '.roxtar-sortable-list-item' ),
+			var _item      = this._container.querySelectorAll( '.SKDD-sortable-list-item' ),
 				_dataArray = [];
 
 			if ( _item.length ) {
@@ -219,7 +219,7 @@
 
 		// on item release/drop.
 		_onRelease: function( e ) {
-			if ( -1 === e.target.className.indexOf( 'roxtar-sortable-list-item' ) ) {
+			if ( -1 === e.target.className.indexOf( 'SKDD-sortable-list-item' ) ) {
 				return;
 			}
 

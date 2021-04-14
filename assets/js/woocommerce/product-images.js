@@ -1,10 +1,10 @@
 /**
  * Product images
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/* global roxtar_variation_gallery, roxtar_default_gallery */
+/* global SKDD_variation_gallery, SKDD_default_gallery */
 
 'use strict';
 
@@ -45,7 +45,7 @@ function createThumbnails( src ) {
 }
 
 // For Grid layout on mobile.
-function roxtarGalleryCarouselMobile() {
+function SKDDGalleryCarouselMobile() {
 	var gallery = document.querySelector( '.has-gallery-list-layout .product-gallery.has-product-thumbnails' );
 	if ( ! gallery || window.innerWidth > 991 ) {
 		return;
@@ -62,7 +62,7 @@ function roxtarGalleryCarouselMobile() {
 }
 
 // Sticky summary for list layout.
-function roxtarStickySummary() {
+function SKDDStickySummary() {
 	var gallery = document.querySelector( '.has-gallery-list-layout .product-gallery.has-product-thumbnails' ),
 		summary = document.querySelector( '.has-gallery-list-layout .product-summary' );
 	if ( ! gallery || ! summary || window.innerWidth < 992 ) {
@@ -77,8 +77,8 @@ function roxtarStickySummary() {
 		'.summary.entry-summary',
 		{
 			stickyContainer: '.product-page-container',
-			marginTop: parseInt( roxtar_woocommerce_general.sticky_top_space ),
-			marginBottom: parseInt( roxtar_woocommerce_general.sticky_bottom_space )
+			marginTop: parseInt( SKDD_woocommerce_general.sticky_top_space ),
+			marginBottom: parseInt( SKDD_woocommerce_general.sticky_bottom_space )
 		}
 	);
 
@@ -293,8 +293,8 @@ document.addEventListener(
 						200
 					);
 
-					if ( 'undefined' !== typeof( roxtar_variation_gallery ) && roxtar_variation_gallery.length ) {
-						updateGallery( roxtar_variation_gallery, false, variation.variation_id );
+					if ( 'undefined' !== typeof( SKDD_variation_gallery ) && SKDD_variation_gallery.length ) {
+						updateGallery( SKDD_variation_gallery, false, variation.variation_id );
 					}
 				}
 			);
@@ -320,8 +320,8 @@ document.addEventListener(
 
 					resetCarousel();
 
-					if ( 'undefined' !== typeof( roxtar_variation_gallery ) && roxtar_variation_gallery.length ) {
-						updateGallery( roxtar_default_gallery, true );
+					if ( 'undefined' !== typeof( SKDD_variation_gallery ) && SKDD_variation_gallery.length ) {
+						updateGallery( SKDD_default_gallery, true );
 					}
 
 					if ( document.body.classList.contains( 'elementor-editor-active' ) || document.body.classList.contains( 'elementor-editor-preview' ) ) {
@@ -337,13 +337,13 @@ document.addEventListener(
 		carouselAction();
 
 		// Grid and One column to caousel layout on mobile.
-		roxtarGalleryCarouselMobile();
+		SKDDGalleryCarouselMobile();
 
 		// Load event.
 		window.addEventListener(
 			'load',
 			function() {
-				roxtarStickySummary();
+				SKDDStickySummary();
 				arrowsEvent();
 			}
 		);

@@ -1,16 +1,16 @@
 /**
  * Dismiss admin notice
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/*global ajaxurl, roxtar_dismiss_admin_notice*/
+/*global ajaxurl, SKDD_dismiss_admin_notice*/
 
 'use strict';
 
 // Dismiss admin notice.
 var dismiss = function() {
-	var notice = document.querySelectorAll( '.roxtar-admin-notice' );
+	var notice = document.querySelectorAll( '.SKDD-admin-notice' );
 	if ( ! notice.length ) {
 		return;
 	}
@@ -34,7 +34,7 @@ var dismiss = function() {
 						ajaxurl,
 						{
 							method: 'POST',
-							body: 'action=dismiss_admin_notice&nonce=' + roxtar_dismiss_admin_notice.nonce + '&notice=' + slug,
+							body: 'action=dismiss_admin_notice&nonce=' + SKDD_dismiss_admin_notice.nonce + '&notice=' + slug,
 							credentials: 'same-origin',
 							headers: new Headers(
 								{

@@ -2,37 +2,37 @@
 /**
  * Woocommerce shop single customizer
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Custom text.
 $wp_customize->add_setting(
-	'roxtar_setting[error_404_text]',
+	'SKDD_setting[error_404_text]',
 	array(
 		'default'           => $defaults['error_404_text'],
-		'sanitize_callback' => 'roxtar_sanitize_raw_html',
+		'sanitize_callback' => 'SKDD_sanitize_raw_html',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[error_404_text]',
+		'SKDD_setting[error_404_text]',
 		array(
-			'label'    => __( 'Custom Text', 'roxtar' ),
+			'label'    => __( 'Custom Text', 'SKDD' ),
 			'type'     => 'textarea',
-			'section'  => 'roxtar_error',
-			'settings' => 'roxtar_setting[error_404_text]',
+			'section'  => 'SKDD_error',
+			'settings' => 'SKDD_setting[error_404_text]',
 		)
 	)
 );
 
 // Background.
 $wp_customize->add_setting(
-	'roxtar_setting[error_404_image]',
+	'SKDD_setting[error_404_image]',
 	array(
 		'default'           => $defaults['error_404_image'],
 		'type'              => 'option',
@@ -42,11 +42,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Image_Control(
 		$wp_customize,
-		'roxtar_setting[error_404_image]',
+		'SKDD_setting[error_404_image]',
 		array(
-			'label'    => __( 'Background', 'roxtar' ),
-			'section'  => 'roxtar_error',
-			'settings' => 'roxtar_setting[error_404_image]',
+			'label'    => __( 'Background', 'SKDD' ),
+			'section'  => 'SKDD_error',
+			'settings' => 'SKDD_setting[error_404_image]',
 		)
 	)
 );

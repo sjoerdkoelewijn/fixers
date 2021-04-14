@@ -1,14 +1,14 @@
 /**
  * Ajax single add to cart
  *
- * @package Roxtar Pro
+ * @package SKDD Pro
  */
 
-/* global roxtar_ajax_single_add_to_cart_data */
+/* global SKDD_ajax_single_add_to_cart_data */
 
 'use strict';
 
-var roxtarFormData = function( form ) {
+var SKDDFormData = function( form ) {
 	var output = [];
 
 	for ( var i = 0, j = form.elements.length; i < j; i++ ) {
@@ -22,7 +22,7 @@ var roxtarFormData = function( form ) {
 	return output;
 }
 
-function roxtarAjaxSingleAddToCartButton() {
+function SKDDAjaxSingleAddToCartButton() {
 	var buttons = document.querySelectorAll( '.single_add_to_cart_button' );
 	if ( ! buttons.length ) {
 		return;
@@ -123,7 +123,7 @@ function roxtarAjaxSingleAddToCartButton() {
 				// Data.
 				var data = {
 					action: 'single_add_to_cart',
-					ajax_nonce: roxtar_ajax_single_add_to_cart_data.ajax_nonce,
+					ajax_nonce: SKDD_ajax_single_add_to_cart_data.ajax_nonce,
 					product_id: productId,
 					product_qty: quantity,
 					variation_id: variationId,
@@ -135,7 +135,7 @@ function roxtarAjaxSingleAddToCartButton() {
 
 				// Request.
 				var request = new Request(
-					roxtar_ajax_single_add_to_cart_data.ajax_url,
+					SKDD_ajax_single_add_to_cart_data.ajax_url,
 					{
 						method: 'POST',
 						body: data,
@@ -153,7 +153,7 @@ function roxtarAjaxSingleAddToCartButton() {
 					.then(
 						function( res ) {
 							if ( 200 !== res.status ) {
-								alert( roxtar_ajax_single_add_to_cart_data.ajax_error );
+								alert( SKDD_ajax_single_add_to_cart_data.ajax_error );
 								console.log( 'Status Code: ' + res.status );
 								throw res;
 							}
@@ -187,13 +187,13 @@ function roxtarAjaxSingleAddToCartButton() {
 							}
 
 							// Redirect to checkout page.
-							if ( button.classList.contains( 'roxtar-buy-now' ) ) {
+							if ( button.classList.contains( 'SKDD-buy-now' ) ) {
 								var checkoutUrl = button.getAttribute( 'data-checkout_url' );
 								window.location = checkoutUrl;
 							}
 
 							// Update total price, for header-layout-6.
-							var totalPrice = document.querySelector( '.roxtar-total-price' );
+							var totalPrice = document.querySelector( '.SKDD-total-price' );
 							if ( totalPrice ) {
 								totalPrice.innerHTML = data.total;
 							}
@@ -226,6 +226,6 @@ function roxtarAjaxSingleAddToCartButton() {
 document.addEventListener(
 	'DOMContentLoaded',
 	function() {
-		roxtarAjaxSingleAddToCartButton();
+		SKDDAjaxSingleAddToCartButton();
 	}
 );

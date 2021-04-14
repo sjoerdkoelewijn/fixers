@@ -1,10 +1,10 @@
 /**
  * Woocommerce js
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/*global roxtar_woocommerce_general*/
+/*global SKDD_woocommerce_general*/
 
 'use strict';
 
@@ -44,7 +44,7 @@ function shoppingBag() {
 }
 
 // Condition for Add 'scrolling-up' and 'scrolling-down' class to body.
-var roxtarConditionScrolling = function() {
+var SKDDConditionScrolling = function() {
 	if (
 		// When Demo store enable.
 		( document.body.classList.contains( 'woocommerce-demo-store' ) && -1 === document.cookie.indexOf( 'store_notice' ) ) ||
@@ -58,8 +58,8 @@ var roxtarConditionScrolling = function() {
 }
 
 // Stock progress bar.
-var roxtarStockQuantityProgressBar = function() {
-	var selector = document.querySelectorAll( '.roxtar-single-product-stock-progress-bar' );
+var SKDDStockQuantityProgressBar = function() {
+	var selector = document.querySelectorAll( '.SKDD-single-product-stock-progress-bar' );
 	if ( ! selector.length ) {
 		return;
 	}
@@ -74,7 +74,7 @@ var roxtarStockQuantityProgressBar = function() {
 }
 
 // Product quantity on mini cart.
-var roxtarQuantityMiniCart = function() {
+var SKDDQuantityMiniCart = function() {
 	var infor = document.querySelectorAll( '.mini-cart-product-infor' );
 	if ( ! infor.length ) {
 		return;
@@ -102,7 +102,7 @@ var roxtarQuantityMiniCart = function() {
 						dataType = t.getAttribute( 'data-qty' );
 
 					if ( current < 1 || isNaN( current ) ) {
-						alert( roxtar_woocommerce_general.qty_warning );
+						alert( SKDD_woocommerce_general.qty_warning );
 						return;
 					}
 
@@ -133,16 +133,16 @@ var roxtarQuantityMiniCart = function() {
 
 					// Valid quantity.
 					if ( inputVal < 1 || isNaN( inputVal ) ) {
-						alert( roxtar_woocommerce_general.qty_warning );
+						alert( SKDD_woocommerce_general.qty_warning );
 						return;
 					}
 
 					// Request.
 					var request = new Request(
-						roxtar_woocommerce_general.ajax_url,
+						SKDD_woocommerce_general.ajax_url,
 						{
 							method: 'POST',
-							body: 'action=update_quantity_in_mini_cart&ajax_nonce=' + roxtar_woocommerce_general.ajax_nonce + '&key=' + cartItemKey + '&qty=' + inputVal,
+							body: 'action=update_quantity_in_mini_cart&ajax_nonce=' + SKDD_woocommerce_general.ajax_nonce + '&key=' + cartItemKey + '&qty=' + inputVal,
 							credentials: 'same-origin',
 							headers: new Headers(
 								{
@@ -160,7 +160,7 @@ var roxtarQuantityMiniCart = function() {
 						.then(
 							function( res ) {
 								if ( 200 !== res.status ) {
-									alert( roxtar_woocommerce_general.ajax_error );
+									alert( SKDD_woocommerce_general.ajax_error );
 									console.log( 'Status Code: ' + res.status );
 									throw res;
 								}
@@ -209,12 +209,12 @@ document.addEventListener(
 	'DOMContentLoaded',
 	function() {
 		shoppingBag();
-		roxtarQuantityMiniCart();
+		SKDDQuantityMiniCart();
 
 		window.addEventListener(
 			'load',
 			function() {
-				roxtarStockQuantityProgressBar();
+				SKDDStockQuantityProgressBar();
 			}
 		);
 
@@ -223,21 +223,21 @@ document.addEventListener(
 			function() {
 				eventCartSidebarOpen();
 
-				if ( 'function' === typeof( roxtarAjaxSingleAddToCartButton ) ) {
+				if ( 'function' === typeof( SKDDAjaxSingleAddToCartButton ) ) {
 					cartSidebarOpen();
 				}
 			}
 		).on(
 			'added_to_cart',
 			function() {
-				roxtarQuantityMiniCart();
+				SKDDQuantityMiniCart();
 				eventCartSidebarClose();
 				closeAll();
 			}
 		).on(
 			'removed_from_cart', /* For mini cart */
 			function() {
-				roxtarQuantityMiniCart();
+				SKDDQuantityMiniCart();
 			}
 		).on(
 			'updated_cart_totals',
@@ -245,12 +245,12 @@ document.addEventListener(
 				if ( 'function' === typeof( customQuantity ) ) {
 					customQuantity();
 				}
-				roxtarQuantityMiniCart();
+				SKDDQuantityMiniCart();
 			}
 		).on(
 			'wc_fragments_loaded wc_fragments_refreshed',
 			function() {
-				roxtarQuantityMiniCart();
+				SKDDQuantityMiniCart();
 			}
 		).on(
 			'wc_cart_emptied', /* Reload Cart page if it's empty */

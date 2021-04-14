@@ -2,7 +2,7 @@
 /**
  * Header template
  *
- * @package roxtar
+ * @package SKDD
  */
 
-do_action( 'roxtar_template_part_header' );
+do_action( 'SKDD_template_part_header' );

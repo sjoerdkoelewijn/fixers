@@ -2,15 +2,15 @@
 /**
  * Color customizer
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Theme color.
 $wp_customize->add_setting(
-	'roxtar_setting[theme_color]',
+	'SKDD_setting[theme_color]',
 	array(
 		'default'           => $defaults['theme_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -20,18 +20,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[theme_color]',
+		'SKDD_setting[theme_color]',
 		array(
-			'label'    => __( 'Theme Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[theme_color]',
+			'label'    => __( 'Theme Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[theme_color]',
 		)
 	)
 );
 
 // Background color.
 $wp_customize->add_setting(
-	'roxtar_setting[background_color]',
+	'SKDD_setting[background_color]',
 	array(
 		'default'           => $defaults['background_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -41,11 +41,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[background_color]',
+		'SKDD_setting[background_color]',
 		array(
-			'label'    => __( 'Background Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[background_color]',
+			'label'    => __( 'Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[background_color]',
 		)
 	)
 );
@@ -53,7 +53,7 @@ $wp_customize->add_control(
 
 // Second background color.
 $wp_customize->add_setting(
-	'roxtar_setting[second_background_color]',
+	'SKDD_setting[second_background_color]',
 	array(
 		'default'           => $defaults['second_background_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -63,11 +63,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[second_background_color]',
+		'SKDD_setting[second_background_color]',
 		array(
-			'label'    => __( 'Second Background Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[second_background_color]',
+			'label'    => __( 'Second Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[second_background_color]',
 		)
 	)
 );
@@ -75,7 +75,7 @@ $wp_customize->add_control(
 
 // Line color.
 $wp_customize->add_setting(
-	'roxtar_setting[line_color]',
+	'SKDD_setting[line_color]',
 	array(
 		'default'           => $defaults['line_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -85,11 +85,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[line_color]',
+		'SKDD_setting[line_color]',
 		array(
-			'label'    => __( 'Line Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[line_color]',
+			'label'    => __( 'Line Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[line_color]',
 		)
 	)
 );
@@ -98,7 +98,7 @@ $wp_customize->add_control(
 
 // Heading color.
 $wp_customize->add_setting(
-	'roxtar_setting[heading_color]',
+	'SKDD_setting[heading_color]',
 	array(
 		'default'           => $defaults['heading_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -108,18 +108,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[heading_color]',
+		'SKDD_setting[heading_color]',
 		array(
-			'label'    => __( 'Heading Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[heading_color]',
+			'label'    => __( 'Heading Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[heading_color]',
 		)
 	)
 );
 
 // Text Color.
 $wp_customize->add_setting(
-	'roxtar_setting[text_color]',
+	'SKDD_setting[text_color]',
 	array(
 		'default'           => $defaults['text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -129,18 +129,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[text_color]',
+		'SKDD_setting[text_color]',
 		array(
-			'label'    => __( 'Text Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[text_color]',
+			'label'    => __( 'Text Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[text_color]',
 		)
 	)
 );
 
 // Accent Color.
 $wp_customize->add_setting(
-	'roxtar_setting[accent_color]',
+	'SKDD_setting[accent_color]',
 	array(
 		'default'           => $defaults['accent_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -150,11 +150,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[accent_color]',
+		'SKDD_setting[accent_color]',
 		array(
-			'label'    => __( 'Link / Accent Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[accent_color]',
+			'label'    => __( 'Link / Accent Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[accent_color]',
 		)
 	)
 );
@@ -162,7 +162,7 @@ $wp_customize->add_control(
 
 // Primary parent menu color.
 $wp_customize->add_setting(
-	'roxtar_setting[primary_menu_color]',
+	'SKDD_setting[primary_menu_color]',
 	array(
 		'default'           => $defaults['primary_menu_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -172,18 +172,18 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[primary_menu_color]',
+		'SKDD_setting[primary_menu_color]',
 		array(
-			'label'    => __( 'Parent Menu Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[primary_menu_color]',
+			'label'    => __( 'Parent Menu Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[primary_menu_color]',
 		)
 	)
 );
 
 // Primary sub menu color.
 $wp_customize->add_setting(
-	'roxtar_setting[primary_sub_menu_color]',
+	'SKDD_setting[primary_sub_menu_color]',
 	array(
 		'default'           => $defaults['primary_sub_menu_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -193,11 +193,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[primary_sub_menu_color]',
+		'SKDD_setting[primary_sub_menu_color]',
 		array(
-			'label'    => __( 'Sub-menu Color', 'roxtar' ),
-			'section'  => 'roxtar_color',
-			'settings' => 'roxtar_setting[primary_sub_menu_color]',
+			'label'    => __( 'Sub-menu Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[primary_sub_menu_color]',
 		)
 	)
 );

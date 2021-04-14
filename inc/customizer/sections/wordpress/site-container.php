@@ -2,11 +2,11 @@
 /**
  * Site Title & Tagline
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Divider.
 $wp_customize->add_setting(
@@ -16,11 +16,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'site_container_other_element_divider',
 		array(
-			'section'  => 'roxtar_container',
+			'section'  => 'SKDD_container',
 			'settings' => 'site_container_other_element_divider',
 			'type'     => 'divider',
 		)
@@ -29,9 +29,9 @@ $wp_customize->add_control(
 
 // Header width.
 $wp_customize->add_setting(
-	'roxtar_setting[header_width]',
+	'SKDD_setting[header_width]',
 	array(
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'default'           => $defaults['header_width'],
 		'type'              => 'option',
 	)
@@ -39,12 +39,12 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[header_width]',
+		'SKDD_setting[header_width]',
 		array(
-			'section'  => 'roxtar_container',
-			'settings' => 'roxtar_setting[header_width]',
+			'section'  => 'SKDD_container',
+			'settings' => 'SKDD_setting[header_width]',
 			'type'     => 'select',
-			'label'    => __( 'Header width', 'roxtar' ),
+			'label'    => __( 'Header width', 'SKDD' ),
 			'choices' => array(
                 '100vw' => 'Fullwidth',
                 '1920px' => 'Large',
@@ -58,9 +58,9 @@ $wp_customize->add_control(
 
 // Container width.
 $wp_customize->add_setting(
-	'roxtar_setting[container_width]',
+	'SKDD_setting[container_width]',
 	array(
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'default'           => $defaults['container_width'],
 		'type'              => 'option',
 	)
@@ -68,12 +68,12 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[container_width]',
+		'SKDD_setting[container_width]',
 		array(
-			'section'  => 'roxtar_container',
-			'settings' => 'roxtar_setting[container_width]',
+			'section'  => 'SKDD_container',
+			'settings' => 'SKDD_setting[container_width]',
 			'type'     => 'select',
-			'label'    => __( 'Container width', 'roxtar' ),
+			'label'    => __( 'Container width', 'SKDD' ),
 			'choices' => array(
                 '100vw' => 'Fullwidth',
                 '1920px' => 'Large',
@@ -88,7 +88,7 @@ $wp_customize->add_control(
 
 // Content Spacing
 $wp_customize->add_setting(
-	'roxtar_setting[content_spacing]',
+	'SKDD_setting[content_spacing]',
 	array(
 		'default'           => $defaults['content_spacing'],
 		'sanitize_callback' => 'absint',
@@ -97,19 +97,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[content_spacing]',
+		'SKDD_setting[content_spacing]',
 		array(
-			'label'    => __( 'Horizontal spacing', 'roxtar' ),
-			'section'  => 'roxtar_container',
+			'label'    => __( 'Horizontal spacing', 'SKDD' ),
+			'section'  => 'SKDD_container',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[content_spacing]',
+				'desktop' => 'SKDD_setting[content_spacing]',
 			),
 			'choices' => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_content_spacing_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_content_spacing_max_step', 50 ),
+					'min'  => apply_filters( 'SKDD_content_spacing_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_content_spacing_max_step', 50 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -123,7 +123,7 @@ $wp_customize->add_control(
 
 // Vertical Spacing
 $wp_customize->add_setting(
-	'roxtar_setting[vertical_spacing]',
+	'SKDD_setting[vertical_spacing]',
 	array(
 		'default'           => $defaults['vertical_spacing'],
 		'sanitize_callback' => 'absint',
@@ -132,19 +132,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[vertical_spacing]',
+		'SKDD_setting[vertical_spacing]',
 		array(
-			'label'    => __( 'Vertical spacing', 'roxtar' ),
-			'section'  => 'roxtar_container',
+			'label'    => __( 'Vertical spacing', 'SKDD' ),
+			'section'  => 'SKDD_container',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[vertical_spacing]',
+				'desktop' => 'SKDD_setting[vertical_spacing]',
 			),
 			'choices' => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_vertical_spacing_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_vertical_spacing_max_step', 50 ),
+					'min'  => apply_filters( 'SKDD_vertical_spacing_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_vertical_spacing_max_step', 50 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'vh',
@@ -158,7 +158,7 @@ $wp_customize->add_control(
 
 // Border Radius
 $wp_customize->add_setting(
-	'roxtar_setting[border_radius]',
+	'SKDD_setting[border_radius]',
 	array(
 		'default'           => $defaults['border_radius'],
 		'sanitize_callback' => 'absint',
@@ -167,19 +167,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[border_radius]',
+		'SKDD_setting[border_radius]',
 		array(
-			'label'    => __( 'Border Radius', 'roxtar' ),
-			'section'  => 'roxtar_container',
+			'label'    => __( 'Border Radius', 'SKDD' ),
+			'section'  => 'SKDD_container',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[border_radius]',
+				'desktop' => 'SKDD_setting[border_radius]',
 			),
 			'choices' => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_border_radius_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_border_radius_max_step', 50 ),
+					'min'  => apply_filters( 'SKDD_border_radius_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_border_radius_max_step', 50 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',

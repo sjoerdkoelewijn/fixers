@@ -1,7 +1,7 @@
 /**
  * Foreach polyfill for IE
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! Object.getOwnPropertyDescriptor( NodeList.prototype, 'forEach' ) ) {

@@ -2,36 +2,36 @@
 /**
  * Sidebar customizer
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Default sidebar.
 $wp_customize->add_setting(
-	'roxtar_setting[sidebar_default]',
+	'SKDD_setting[sidebar_default]',
 	array(
 		'default'           => $defaults['sidebar_default'],
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[sidebar_default]',
+		'SKDD_setting[sidebar_default]',
 		array(
-			'label'    => __( 'Default', 'roxtar' ),
-			'section'  => 'roxtar_sidebar',
-			'settings' => 'roxtar_setting[sidebar_default]',
+			'label'    => __( 'Default', 'SKDD' ),
+			'section'  => 'SKDD_sidebar',
+			'settings' => 'SKDD_setting[sidebar_default]',
 			'type'     => 'select',
 			'choices'  => apply_filters(
-				'roxtar_setting_sidebar_default_choices',
+				'SKDD_setting_sidebar_default_choices',
 				array(
-					'full'  => __( 'No sidebar', 'roxtar' ),
-					'left'  => __( 'Left sidebar', 'roxtar' ),
-					'right' => __( 'Right sidebar', 'roxtar' ),
+					'full'  => __( 'No sidebar', 'SKDD' ),
+					'left'  => __( 'Left sidebar', 'SKDD' ),
+					'right' => __( 'Right sidebar', 'SKDD' ),
 				)
 			),
 		)
@@ -40,29 +40,29 @@ $wp_customize->add_control(
 
 // Page sidebar.
 $wp_customize->add_setting(
-	'roxtar_setting[sidebar_page]',
+	'SKDD_setting[sidebar_page]',
 	array(
 		'default'           => $defaults['sidebar_page'],
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[sidebar_page]',
+		'SKDD_setting[sidebar_page]',
 		array(
-			'label'    => __( 'Page', 'roxtar' ),
-			'section'  => 'roxtar_sidebar',
-			'settings' => 'roxtar_setting[sidebar_page]',
+			'label'    => __( 'Page', 'SKDD' ),
+			'section'  => 'SKDD_sidebar',
+			'settings' => 'SKDD_setting[sidebar_page]',
 			'type'     => 'select',
 			'choices'  => apply_filters(
-				'roxtar_setting_sidebar_page_choices',
+				'SKDD_setting_sidebar_page_choices',
 				array(
-					'default' => __( 'Default', 'roxtar' ),
-					'full'    => __( 'No sidebar', 'roxtar' ),
-					'left'    => __( 'Left sidebar', 'roxtar' ),
-					'right'   => __( 'Right sidebar', 'roxtar' ),
+					'default' => __( 'Default', 'SKDD' ),
+					'full'    => __( 'No sidebar', 'SKDD' ),
+					'left'    => __( 'Left sidebar', 'SKDD' ),
+					'right'   => __( 'Right sidebar', 'SKDD' ),
 				)
 			),
 		)
@@ -77,11 +77,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'blog_sidebar_divider',
 		array(
-			'section'  => 'roxtar_sidebar',
+			'section'  => 'SKDD_sidebar',
 			'settings' => 'blog_sidebar_divider',
 			'type'     => 'divider',
 		)
@@ -90,29 +90,29 @@ $wp_customize->add_control(
 
 // Blog archive sidebar.
 $wp_customize->add_setting(
-	'roxtar_setting[sidebar_blog]',
+	'SKDD_setting[sidebar_blog]',
 	array(
 		'default'           => $defaults['sidebar_blog'],
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[sidebar_blog]',
+		'SKDD_setting[sidebar_blog]',
 		array(
-			'label'    => __( 'Blog List', 'roxtar' ),
-			'section'  => 'roxtar_sidebar',
-			'settings' => 'roxtar_setting[sidebar_blog]',
+			'label'    => __( 'Blog List', 'SKDD' ),
+			'section'  => 'SKDD_sidebar',
+			'settings' => 'SKDD_setting[sidebar_blog]',
 			'type'     => 'select',
 			'choices'  => apply_filters(
-				'roxtar_setting_sidebar_blog_choices',
+				'SKDD_setting_sidebar_blog_choices',
 				array(
-					'default' => __( 'Default', 'roxtar' ),
-					'full'    => __( 'No sidebar', 'roxtar' ),
-					'left'    => __( 'Left sidebar', 'roxtar' ),
-					'right'   => __( 'Right sidebar', 'roxtar' ),
+					'default' => __( 'Default', 'SKDD' ),
+					'full'    => __( 'No sidebar', 'SKDD' ),
+					'left'    => __( 'Left sidebar', 'SKDD' ),
+					'right'   => __( 'Right sidebar', 'SKDD' ),
 				)
 			),
 		)
@@ -121,29 +121,29 @@ $wp_customize->add_control(
 
 // Blog single sidebar.
 $wp_customize->add_setting(
-	'roxtar_setting[sidebar_blog_single]',
+	'SKDD_setting[sidebar_blog_single]',
 	array(
 		'default'           => $defaults['sidebar_blog_single'],
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[sidebar_blog_single]',
+		'SKDD_setting[sidebar_blog_single]',
 		array(
-			'label'    => __( 'Blog Single', 'roxtar' ),
-			'section'  => 'roxtar_sidebar',
-			'settings' => 'roxtar_setting[sidebar_blog_single]',
+			'label'    => __( 'Blog Single', 'SKDD' ),
+			'section'  => 'SKDD_sidebar',
+			'settings' => 'SKDD_setting[sidebar_blog_single]',
 			'type'     => 'select',
 			'choices'  => apply_filters(
-				'roxtar_setting_sidebar_blog_single_choices',
+				'SKDD_setting_sidebar_blog_single_choices',
 				array(
-					'default' => __( 'Default', 'roxtar' ),
-					'full'    => __( 'No sidebar', 'roxtar' ),
-					'left'    => __( 'Left sidebar', 'roxtar' ),
-					'right'   => __( 'Right sidebar', 'roxtar' ),
+					'default' => __( 'Default', 'SKDD' ),
+					'full'    => __( 'No sidebar', 'SKDD' ),
+					'left'    => __( 'Left sidebar', 'SKDD' ),
+					'right'   => __( 'Right sidebar', 'SKDD' ),
 				)
 			),
 		)
@@ -159,11 +159,11 @@ if ( class_exists( 'woocommerce' ) ) {
 		)
 	);
 	$wp_customize->add_control(
-		new Roxtar_Divider_Control(
+		new SKDD_Divider_Control(
 			$wp_customize,
 			'woocommerce_sidebar_divider',
 			array(
-				'section'  => 'roxtar_sidebar',
+				'section'  => 'SKDD_sidebar',
 				'settings' => 'woocommerce_sidebar_divider',
 				'type'     => 'divider',
 			)
@@ -172,10 +172,10 @@ if ( class_exists( 'woocommerce' ) ) {
 
 	// Shop page sidebar.
 	$wp_customize->add_setting(
-		'roxtar_setting[sidebar_shop]',
+		'SKDD_setting[sidebar_shop]',
 		array(
 			'default'           => $defaults['sidebar_shop'],
-			'sanitize_callback' => 'roxtar_sanitize_choices',
+			'sanitize_callback' => 'SKDD_sanitize_choices',
 			'type'              => 'option',
 		)
 	);
@@ -183,19 +183,19 @@ if ( class_exists( 'woocommerce' ) ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'roxtar_setting[sidebar_shop]',
+			'SKDD_setting[sidebar_shop]',
 			array(
-				'label'    => __( 'Shop/Product Archive', 'roxtar' ),
-				'section'  => 'roxtar_sidebar',
-				'settings' => 'roxtar_setting[sidebar_shop]',
+				'label'    => __( 'Shop/Product Archive', 'SKDD' ),
+				'section'  => 'SKDD_sidebar',
+				'settings' => 'SKDD_setting[sidebar_shop]',
 				'type'     => 'select',
 				'choices'  => apply_filters(
-					'roxtar_setting_sidebar_shop_choices',
+					'SKDD_setting_sidebar_shop_choices',
 					array(
-						'default' => __( 'Default', 'roxtar' ),
-						'full'    => __( 'No sidebar', 'roxtar' ),
-						'left'    => __( 'Left sidebar', 'roxtar' ),
-						'right'   => __( 'Right sidebar', 'roxtar' ),
+						'default' => __( 'Default', 'SKDD' ),
+						'full'    => __( 'No sidebar', 'SKDD' ),
+						'left'    => __( 'Left sidebar', 'SKDD' ),
+						'right'   => __( 'Right sidebar', 'SKDD' ),
 					)
 				),
 			)
@@ -204,10 +204,10 @@ if ( class_exists( 'woocommerce' ) ) {
 
 	// Product page sidebar.
 	$wp_customize->add_setting(
-		'roxtar_setting[sidebar_shop_single]',
+		'SKDD_setting[sidebar_shop_single]',
 		array(
 			'default'           => $defaults['sidebar_shop_single'],
-			'sanitize_callback' => 'roxtar_sanitize_choices',
+			'sanitize_callback' => 'SKDD_sanitize_choices',
 			'type'              => 'option',
 		)
 	);
@@ -215,19 +215,19 @@ if ( class_exists( 'woocommerce' ) ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'roxtar_setting[sidebar_shop_single]',
+			'SKDD_setting[sidebar_shop_single]',
 			array(
-				'label'    => __( 'Shop Single', 'roxtar' ),
-				'section'  => 'roxtar_sidebar',
-				'settings' => 'roxtar_setting[sidebar_shop_single]',
+				'label'    => __( 'Shop Single', 'SKDD' ),
+				'section'  => 'SKDD_sidebar',
+				'settings' => 'SKDD_setting[sidebar_shop_single]',
 				'type'     => 'select',
 				'choices'  => apply_filters(
-					'roxtar_setting_sidebar_shop_single_choices',
+					'SKDD_setting_sidebar_shop_single_choices',
 					array(
-						'default' => __( 'Default', 'roxtar' ),
-						'full'    => __( 'No sidebar', 'roxtar' ),
-						'left'    => __( 'Left sidebar', 'roxtar' ),
-						'right'   => __( 'Right sidebar', 'roxtar' ),
+						'default' => __( 'Default', 'SKDD' ),
+						'full'    => __( 'No sidebar', 'SKDD' ),
+						'left'    => __( 'Left sidebar', 'SKDD' ),
+						'right'   => __( 'Right sidebar', 'SKDD' ),
 					)
 				),
 			)
@@ -243,11 +243,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'width_sidebar_divider',
 		array(
-			'section'  => 'roxtar_sidebar',
+			'section'  => 'SKDD_sidebar',
 			'settings' => 'width_sidebar_divider',
 			'type'     => 'divider',
 		)
@@ -256,7 +256,7 @@ $wp_customize->add_control(
 
 // Width.
 $wp_customize->add_setting(
-	'roxtar_setting[sidebar_width]',
+	'SKDD_setting[sidebar_width]',
 	array(
 		'default'           => $defaults['sidebar_width'],
 		'sanitize_callback' => 'absint',
@@ -265,19 +265,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[sidebar_width]',
+		'SKDD_setting[sidebar_width]',
 		array(
-			'label'    => __( 'Sidebar Width', 'roxtar' ),
-			'section'  => 'roxtar_sidebar',
+			'label'    => __( 'Sidebar Width', 'SKDD' ),
+			'section'  => 'SKDD_sidebar',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[sidebar_width]',
+				'desktop' => 'SKDD_setting[sidebar_width]',
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_sidebar_width_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_sidebar_width_max_step', 50 ),
+					'min'  => apply_filters( 'SKDD_sidebar_width_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_sidebar_width_max_step', 50 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => '%',

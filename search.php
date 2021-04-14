@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				<h1 class="page-title entry-title">
 					<?php
 						/* translators: %s: search term */
-						printf( esc_html__( 'Search Results for: %s', 'roxtar' ), '<span>' . get_search_query() . '</span>' );
+						printf( esc_html__( 'Search Results for: %s', 'SKDD' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
@@ -35,5 +35,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'roxtar_sidebar' );
+do_action( 'SKDD_sidebar' );
 get_footer();

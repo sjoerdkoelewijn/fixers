@@ -1,4 +1,4 @@
-.roxtar-install-now.updating-message::before {
+.SKDD-install-now.updating-message::before {
   display: inline-block;
   content: '\f463';
   font: normal 19px/1 'dashicons';

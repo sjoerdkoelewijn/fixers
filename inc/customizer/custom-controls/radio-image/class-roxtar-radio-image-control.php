@@ -10,7 +10,7 @@
  *
  * @link https://github.com/reduxframework/kirki/
  * @link http://ottopress.com/2012/making-a-custom-control-for-the-theme-customizer/
- * @package  roxtar
+ * @package  SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The radio image class.
  */
-class Roxtar_Radio_Image_Control extends WP_Customize_Control {
+class SKDD_Radio_Image_Control extends WP_Customize_Control {
 
 	/**
 	 * Declare the control type.
@@ -39,17 +39,17 @@ class Roxtar_Radio_Image_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_style(
-			'roxtar-radio-image-control',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/radio-image/css/radio-image.css',
+			'SKDD-radio-image-control',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/radio-image/css/radio-image.css',
 			[],
-			roxtar_version()
+			SKDD_version()
 		);
 
 		wp_enqueue_script(
-			'roxtar-radio-image',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/radio-image/js/radio-image.js',
+			'SKDD-radio-image',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/radio-image/js/radio-image.js',
 			[],
-			roxtar_version(),
+			SKDD_version(),
 			true
 		);
 	}

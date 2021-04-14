@@ -1,8 +1,8 @@
-# Copyright (C) 2020 Roxtar
-# This file is distributed under the same license as the Roxtar package.
+# Copyright (C) 2020 SKDD
+# This file is distributed under the same license as the SKDD package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Roxtar\n"
+"Project-Id-Version: SKDD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,342 +88,342 @@ msgstr ""
 msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area."
 msgstr ""
 
-#: inc/class-roxtar.php:91, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:86
+#: inc/class-SKDD.php:91, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:86
 msgid "Clear"
 msgstr ""
 
-#: inc/class-roxtar.php:92, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:87
+#: inc/class-SKDD.php:92, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:87
 msgid "Clear color"
 msgstr ""
 
-#: inc/class-roxtar.php:93, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:90, inc/customizer/sections/page-header/page-header.php:249, inc/customizer/sections/page-header/page-header.php:277, inc/customizer/sections/page-header/page-header.php:342, inc/customizer/sections/sidebar/sidebar.php:25, inc/customizer/sections/sidebar/sidebar.php:62, inc/customizer/sections/sidebar/sidebar.php:112, inc/customizer/sections/sidebar/sidebar.php:143, inc/customizer/sections/sidebar/sidebar.php:195, inc/customizer/sections/sidebar/sidebar.php:227, inc/customizer/sections/wordpress/background-image.php:22
+#: inc/class-SKDD.php:93, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:90, inc/customizer/sections/page-header/page-header.php:249, inc/customizer/sections/page-header/page-header.php:277, inc/customizer/sections/page-header/page-header.php:342, inc/customizer/sections/sidebar/sidebar.php:25, inc/customizer/sections/sidebar/sidebar.php:62, inc/customizer/sections/sidebar/sidebar.php:112, inc/customizer/sections/sidebar/sidebar.php:143, inc/customizer/sections/sidebar/sidebar.php:195, inc/customizer/sections/sidebar/sidebar.php:227, inc/customizer/sections/wordpress/background-image.php:22
 msgid "Default"
 msgstr ""
 
-#: inc/class-roxtar.php:94, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:88
+#: inc/class-SKDD.php:94, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:88
 msgid "Select default color"
 msgstr ""
 
-#: inc/class-roxtar.php:95, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:91
+#: inc/class-SKDD.php:95, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:91
 msgid "Select Color"
 msgstr ""
 
-#: inc/class-roxtar.php:96, inc/customizer/custom-controls/alpha-color-picker/class-roxtar-color-control.php:89
+#: inc/class-SKDD.php:96, inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:89
 msgid "Color value"
 msgstr ""
 
-#: inc/class-roxtar.php:151
+#: inc/class-SKDD.php:151
 msgid "Image"
 msgstr ""
 
-#: inc/class-roxtar.php:248
+#: inc/class-SKDD.php:248
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-roxtar.php:249
+#: inc/class-SKDD.php:249
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/class-roxtar.php:250
+#: inc/class-SKDD.php:250
 msgid "Mobile Menu"
 msgstr ""
 
-#: inc/class-roxtar.php:320
+#: inc/class-SKDD.php:320
 msgid "Primary Color"
 msgstr ""
 
-#: inc/class-roxtar.php:325, inc/customizer/sections/color/color.php:88, inc/customizer/sections/footer/footer.php:152
+#: inc/class-SKDD.php:325, inc/customizer/sections/color/color.php:88, inc/customizer/sections/footer/footer.php:152
 msgid "Heading Color"
 msgstr ""
 
-#: inc/class-roxtar.php:330, inc/customizer/sections/buttons/button.php:25, inc/customizer/sections/color/color.php:109, inc/customizer/sections/footer/footer.php:194, inc/customizer/sections/header/topbar.php:47, inc/customizer/sections/shop/shop-page.php:737, inc/customizer/sections/shop/shop-page.php:973
+#: inc/class-SKDD.php:330, inc/customizer/sections/buttons/button.php:25, inc/customizer/sections/color/color.php:109, inc/customizer/sections/footer/footer.php:194, inc/customizer/sections/header/topbar.php:47, inc/customizer/sections/shop/shop-page.php:737, inc/customizer/sections/shop/shop-page.php:973
 msgid "Text Color"
 msgstr ""
 
-#: inc/class-roxtar.php:342, inc/customizer/sections/typography/heading.php:352
+#: inc/class-SKDD.php:342, inc/customizer/sections/typography/heading.php:352
 msgid "H6"
 msgstr ""
 
-#: inc/class-roxtar.php:347, inc/customizer/sections/typography/heading.php:317
+#: inc/class-SKDD.php:347, inc/customizer/sections/typography/heading.php:317
 msgid "H5"
 msgstr ""
 
-#: inc/class-roxtar.php:352, inc/customizer/sections/typography/heading.php:282
+#: inc/class-SKDD.php:352, inc/customizer/sections/typography/heading.php:282
 msgid "H4"
 msgstr ""
 
-#: inc/class-roxtar.php:357, inc/customizer/sections/typography/heading.php:247
+#: inc/class-SKDD.php:357, inc/customizer/sections/typography/heading.php:247
 msgid "H3"
 msgstr ""
 
-#: inc/class-roxtar.php:362, inc/customizer/sections/typography/heading.php:212
+#: inc/class-SKDD.php:362, inc/customizer/sections/typography/heading.php:212
 msgid "H2"
 msgstr ""
 
-#: inc/class-roxtar.php:367, inc/customizer/sections/typography/heading.php:177
+#: inc/class-SKDD.php:367, inc/customizer/sections/typography/heading.php:177
 msgid "H1"
 msgstr ""
 
-#: inc/class-roxtar.php:408
+#: inc/class-SKDD.php:408
 msgid "Main Sidebar"
 msgstr ""
 
-#: inc/class-roxtar.php:410
+#: inc/class-SKDD.php:410
 msgid "Appears in the sidebar of the site."
 msgstr ""
 
-#: inc/class-roxtar.php:417
+#: inc/class-SKDD.php:417
 msgid "Woocommerce Sidebar"
 msgstr ""
 
-#: inc/class-roxtar.php:419
+#: inc/class-SKDD.php:419
 msgid " Appears in the sidebar of shop/product page."
 msgstr ""
 
-#: inc/class-roxtar.php:426, inc/roxtar-template-functions.php:218, inc/roxtar-template-functions.php:233, inc/roxtar-template-functions.php:248
+#: inc/class-SKDD.php:426, inc/SKDD-template-functions.php:218, inc/SKDD-template-functions.php:233, inc/SKDD-template-functions.php:248
 msgid "Footer Widget"
 msgstr ""
 
-#: inc/class-roxtar.php:428
+#: inc/class-SKDD.php:428
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: inc/class-roxtar.php:713
-msgid "Roxtar 404"
+#: inc/class-SKDD.php:713
+msgid "SKDD 404"
 msgstr ""
 
-#: inc/class-roxtar.php:810
+#: inc/class-SKDD.php:810
 msgid "Post Pagination"
 msgstr ""
 
-#: inc/roxtar-functions.php:457
+#: inc/SKDD-functions.php:457
 msgid "Placeholder image"
 msgstr ""
 
-#: inc/roxtar-functions.php:459
+#: inc/SKDD-functions.php:459
 msgid "Error image"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:23, inc/admin/class-roxtar-admin.php:248
-msgid "Roxtar"
+#: inc/SKDD-template-functions.php:23, inc/admin/class-SKDD-admin.php:248
+msgid "SKDD"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:61
+#: inc/SKDD-template-functions.php:61
 msgid "Related Posts"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:77, inc/admin/class-roxtar-admin.php:307
+#: inc/SKDD-template-functions.php:77, inc/admin/class-SKDD-admin.php:307
 msgid "Read more"
 msgstr ""
 
 #. translators: Date time
-#: inc/roxtar-template-functions.php:115
+#: inc/SKDD-template-functions.php:115
 msgid "%s ago"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:157
+#: inc/SKDD-template-functions.php:157
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/roxtar-template-functions.php:183
+#: inc/SKDD-template-functions.php:183
 msgid "Edit"
 msgstr ""
 
 #. translators: 1: admin URL
 #. translators: 1: admin URL
 #. translators: 1: admin URL
-#: inc/roxtar-template-functions.php:224, inc/roxtar-template-functions.php:239, inc/roxtar-template-functions.php:254
+#: inc/SKDD-template-functions.php:224, inc/SKDD-template-functions.php:239, inc/SKDD-template-functions.php:254
 msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging widgets into this widget area."
 msgstr ""
 
-#: inc/roxtar-template-functions.php:274
+#: inc/SKDD-template-functions.php:274
 msgid "Copyright &copy; [current_year] [site_title] | Powered by [theme_author]"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:362, inc/roxtar-template-functions.php:381
-msgid "Roxtar mobile logo"
+#: inc/SKDD-template-functions.php:362, inc/SKDD-template-functions.php:381
+msgid "SKDD mobile logo"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:413
-msgid "Roxtar logo"
+#: inc/SKDD-template-functions.php:413
+msgid "SKDD logo"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:441
-msgid "Roxtar retina logo"
+#: inc/SKDD-template-functions.php:441
+msgid "SKDD retina logo"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:524
+#: inc/SKDD-template-functions.php:524
 msgid "Primary navigation"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:548
+#: inc/SKDD-template-functions.php:548
 msgid "Add a Primary Menu"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:564
+#: inc/SKDD-template-functions.php:564
 msgid "Skip to navigation"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:565
+#: inc/SKDD-template-functions.php:565
 msgid "Skip to content"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:619, inc/roxtar-template-functions.php:669, inc/roxtar-template-functions.php:736, inc/admin/class-roxtar-admin.php:226, inc/woocommerce/roxtar-woocommerce-template-functions.php:472
+#: inc/SKDD-template-functions.php:619, inc/SKDD-template-functions.php:669, inc/SKDD-template-functions.php:736, inc/admin/class-SKDD-admin.php:226, inc/woocommerce/SKDD-woocommerce-template-functions.php:472
 msgid "Shop"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:644, inc/roxtar-template-functions.php:691, inc/roxtar-template-functions.php:815, inc/customizer/register-sections.php:16, inc/woocommerce/roxtar-woocommerce-template-functions.php:467
+#: inc/SKDD-template-functions.php:644, inc/SKDD-template-functions.php:691, inc/SKDD-template-functions.php:815, inc/customizer/register-sections.php:16, inc/woocommerce/SKDD-woocommerce-template-functions.php:467
 msgid "Blog"
 msgstr ""
 
 #. translators: post date
-#: inc/roxtar-template-functions.php:718
+#: inc/SKDD-template-functions.php:718
 msgid "Daily Archives: %s"
 msgstr ""
 
 #. translators: post date
-#: inc/roxtar-template-functions.php:721
+#: inc/SKDD-template-functions.php:721
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:721
+#: inc/SKDD-template-functions.php:721
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
 #. translators: post date
-#: inc/roxtar-template-functions.php:731
+#: inc/SKDD-template-functions.php:731
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:731
+#: inc/SKDD-template-functions.php:731
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:733
+#: inc/SKDD-template-functions.php:733
 msgid "Search results: "
 msgstr ""
 
-#: inc/roxtar-template-functions.php:738
+#: inc/SKDD-template-functions.php:738
 msgid "Tags: "
 msgstr ""
 
-#: inc/roxtar-template-functions.php:754
+#: inc/SKDD-template-functions.php:754
 msgid "Archives"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:801
+#: inc/SKDD-template-functions.php:801
 msgid "Orders"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:803
+#: inc/SKDD-template-functions.php:803
 msgid "Downloads"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:805
+#: inc/SKDD-template-functions.php:805
 msgid "Account details"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:807
+#: inc/SKDD-template-functions.php:807
 msgid "Addresses"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:809, inc/roxtar-template-functions.php:1923, inc/roxtar-template-functions.php:2046
+#: inc/SKDD-template-functions.php:809, inc/SKDD-template-functions.php:1923, inc/SKDD-template-functions.php:2046
 msgid "Logout"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:811
+#: inc/SKDD-template-functions.php:811
 msgid "Lost password"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:817
+#: inc/SKDD-template-functions.php:817
 msgid "Search"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:877, inc/roxtar-template-functions.php:1212
+#: inc/SKDD-template-functions.php:877, inc/SKDD-template-functions.php:1212
 msgid "Pages:"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1192, inc/roxtar-template-functions.php:1238
+#: inc/SKDD-template-functions.php:1192, inc/SKDD-template-functions.php:1238
 msgid "Read More"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1256, inc/customizer/sections/shop/shop-single.php:460
+#: inc/SKDD-template-functions.php:1256, inc/customizer/sections/shop/shop-single.php:460
 msgid "Tags"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1256, inc/roxtar-template-functions.php:1428
+#: inc/SKDD-template-functions.php:1256, inc/SKDD-template-functions.php:1428
 msgid ", "
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1278
+#: inc/SKDD-template-functions.php:1278
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1279
+#: inc/SKDD-template-functions.php:1279
 msgctxt "Previous post"
 msgid "Prev"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1296
+#: inc/SKDD-template-functions.php:1296
 msgid "Next post:"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1297
+#: inc/SKDD-template-functions.php:1297
 msgid "Previous post:"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1323
+#: inc/SKDD-template-functions.php:1323
 msgid "Author Avatar"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1328
+#: inc/SKDD-template-functions.php:1328
 msgid "Written by"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1360
+#: inc/SKDD-template-functions.php:1360
 msgid "Posted on"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1402
+#: inc/SKDD-template-functions.php:1402
 msgid "by Unknown author"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1404
+#: inc/SKDD-template-functions.php:1404
 msgid "by"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1434
+#: inc/SKDD-template-functions.php:1434
 msgid "Posted in"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1464
+#: inc/SKDD-template-functions.php:1464
 msgid "No comments yet"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1465
+#: inc/SKDD-template-functions.php:1465
 msgid "1 Comment"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1466
+#: inc/SKDD-template-functions.php:1466
 msgid "% Comments"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1664
+#: inc/SKDD-template-functions.php:1664
 msgid "Type to search"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1918, inc/roxtar-template-functions.php:2035
+#: inc/SKDD-template-functions.php:1918, inc/SKDD-template-functions.php:2035
 msgid "Login / Register"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:1921, inc/roxtar-template-functions.php:2040
+#: inc/SKDD-template-functions.php:1921, inc/SKDD-template-functions.php:2040
 msgid "Dashboard"
 msgstr ""
 
-#: inc/roxtar-template-functions.php:2330, inc/customizer/register-sections.php:21, inc/customizer/sections/scroll-to-top/scroll-to-top.php:25
+#: inc/SKDD-template-functions.php:2330, inc/customizer/register-sections.php:21, inc/customizer/sections/scroll-to-top/scroll-to-top.php:25
 msgid "Scroll To Top"
 msgstr ""
 
@@ -452,285 +452,285 @@ msgstr ""
 msgid "Next (arrow right)"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:73
+#: inc/admin/class-SKDD-admin.php:73
 msgid "logo"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:76
-msgid "Thanks for installing Roxtar!"
+#: inc/admin/class-SKDD-admin.php:76
+msgid "Thanks for installing SKDD!"
 msgstr ""
 
 #. translators: Theme options
-#: inc/admin/class-roxtar-admin.php:81
-msgid "To fully take advantage of the best our theme can offer please make sure you visit our <a href=\"%1$s\">Roxtar Options</a>."
+#: inc/admin/class-SKDD-admin.php:81
+msgid "To fully take advantage of the best our theme can offer please make sure you visit our <a href=\"%1$s\">SKDD Options</a>."
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:191
+#: inc/admin/class-SKDD-admin.php:191
 msgid "Upload Logo"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:198
+#: inc/admin/class-SKDD-admin.php:198
 msgid "Set Colors"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:205, inc/customizer/register-sections.php:28
+#: inc/admin/class-SKDD-admin.php:205, inc/customizer/register-sections.php:28
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:212, inc/customizer/register-sections.php:56
+#: inc/admin/class-SKDD-admin.php:212, inc/customizer/register-sections.php:56
 msgid "Buttons"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:219, inc/customizer/register-sections.php:65
+#: inc/admin/class-SKDD-admin.php:219, inc/customizer/register-sections.php:65
 msgid "Typography"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:247
-msgid "Roxtar Logo"
+#: inc/admin/class-SKDD-admin.php:247
+msgid "SKDD Logo"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:253
+#: inc/admin/class-SKDD-admin.php:253
 msgid "Changelog"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:254
+#: inc/admin/class-SKDD-admin.php:254
 msgid "Join FB Group"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:276
+#: inc/admin/class-SKDD-admin.php:276
 msgid "Link to Customizer Settings"
 msgstr ""
 
 #. translators: 1: Class name
-#: inc/admin/class-roxtar-admin.php:289
+#: inc/admin/class-SKDD-admin.php:289
 msgid "%s not activated."
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:316, inc/customizer/class-roxtar-customizer.php:350
-msgid "Get Roxtar  Pro Extensions!"
+#: inc/admin/class-SKDD-admin.php:316, inc/customizer/class-SKDD-customizer.php:350
+msgid "Get SKDD  Pro Extensions!"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:322
+#: inc/admin/class-SKDD-admin.php:322
 msgid "Multiple Headers"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:324, inc/admin/class-roxtar-admin.php:330, inc/admin/class-roxtar-admin.php:336, inc/admin/class-roxtar-admin.php:342, inc/admin/class-roxtar-admin.php:348, inc/admin/class-roxtar-admin.php:354, inc/admin/class-roxtar-admin.php:360, inc/admin/class-roxtar-admin.php:366, inc/admin/class-roxtar-admin.php:372, inc/admin/class-roxtar-admin.php:378, inc/admin/class-roxtar-admin.php:384, inc/admin/class-roxtar-admin.php:390, inc/admin/class-roxtar-admin.php:396, inc/admin/class-roxtar-admin.php:403
+#: inc/admin/class-SKDD-admin.php:324, inc/admin/class-SKDD-admin.php:330, inc/admin/class-SKDD-admin.php:336, inc/admin/class-SKDD-admin.php:342, inc/admin/class-SKDD-admin.php:348, inc/admin/class-SKDD-admin.php:354, inc/admin/class-SKDD-admin.php:360, inc/admin/class-SKDD-admin.php:366, inc/admin/class-SKDD-admin.php:372, inc/admin/class-SKDD-admin.php:378, inc/admin/class-SKDD-admin.php:384, inc/admin/class-SKDD-admin.php:390, inc/admin/class-SKDD-admin.php:396, inc/admin/class-SKDD-admin.php:403
 msgid "Learn more"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:328
+#: inc/admin/class-SKDD-admin.php:328
 msgid "Mega Menu"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:334
+#: inc/admin/class-SKDD-admin.php:334
 msgid "Elementor Bundle"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:340
+#: inc/admin/class-SKDD-admin.php:340
 msgid "Header & Footer Builder"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:346
+#: inc/admin/class-SKDD-admin.php:346
 msgid "Ajax WooCommerce Search"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:352
+#: inc/admin/class-SKDD-admin.php:352
 msgid "Size Guide"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:358
+#: inc/admin/class-SKDD-admin.php:358
 msgid "Advanced Shop Widgets"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:364
+#: inc/admin/class-SKDD-admin.php:364
 msgid "Buy Now Button"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:370
+#: inc/admin/class-SKDD-admin.php:370
 msgid "Sticky Header"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:376
+#: inc/admin/class-SKDD-admin.php:376
 msgid "Sticky Button"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:382
+#: inc/admin/class-SKDD-admin.php:382
 msgid "Quick View"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:388
+#: inc/admin/class-SKDD-admin.php:388
 msgid "Countdown Urgency"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:394
+#: inc/admin/class-SKDD-admin.php:394
 msgid "Sale Notification"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:401
+#: inc/admin/class-SKDD-admin.php:401
 msgid "WooBuilder"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:416, inc/admin/class-roxtar-admin.php:452
+#: inc/admin/class-SKDD-admin.php:416, inc/admin/class-SKDD-admin.php:452
 msgid "Import Demo"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:422
-msgid "Quickly and easily transform your shops appearance with Roxtar Demo Sites."
+#: inc/admin/class-SKDD-admin.php:422
+msgid "Quickly and easily transform your shops appearance with SKDD Demo Sites."
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:426
+#: inc/admin/class-SKDD-admin.php:426
 msgid "It will require other 3rd party plugins such as Elementor, Woocommerce, Contact form 7, etc."
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:457
+#: inc/admin/class-SKDD-admin.php:457
 msgid "Activate"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:459
-msgid "Install Roxtar Library"
+#: inc/admin/class-SKDD-admin.php:459
+msgid "Install SKDD Library"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:468
+#: inc/admin/class-SKDD-admin.php:468
 msgid "Activating"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:469
+#: inc/admin/class-SKDD-admin.php:469
 msgid "Installing"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:481, inc/customizer/class-roxtar-customizer.php:367, inc/customizer/class-roxtar-customizer.php:383, inc/customizer/class-roxtar-customizer.php:399, inc/customizer/class-roxtar-customizer.php:415, inc/customizer/class-roxtar-customizer.php:431
+#: inc/admin/class-SKDD-admin.php:481, inc/customizer/class-SKDD-customizer.php:367, inc/customizer/class-SKDD-customizer.php:383, inc/customizer/class-SKDD-customizer.php:399, inc/customizer/class-SKDD-customizer.php:415, inc/customizer/class-SKDD-customizer.php:431
 msgid "Learn More"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:485
-msgid "How it works. Learn Roxtar."
+#: inc/admin/class-SKDD-admin.php:485
+msgid "How it works. Learn SKDD."
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:489
+#: inc/admin/class-SKDD-admin.php:489
 msgid "Visit Documentation"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:495
-msgid "Roxtar Community"
+#: inc/admin/class-SKDD-admin.php:495
+msgid "SKDD Community"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:499
+#: inc/admin/class-SKDD-admin.php:499
 msgid "Join Our Facebook Group"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:505
+#: inc/admin/class-SKDD-admin.php:505
 msgid "Customer Support"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:509
+#: inc/admin/class-SKDD-admin.php:509
 msgid "Submit a Ticket"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:515
-msgid "Love Roxtar?"
+#: inc/admin/class-SKDD-admin.php:515
+msgid "Love SKDD?"
 msgstr ""
 
-#: inc/admin/class-roxtar-admin.php:519
+#: inc/admin/class-SKDD-admin.php:519
 msgid "Give us 5 stars!"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:122
+#: inc/admin/class-SKDD-meta-boxes.php:122
 msgid " Settings"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:177
+#: inc/admin/class-SKDD-meta-boxes.php:177
 msgid "Container"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:183, inc/admin/class-roxtar-meta-boxes.php:218, inc/admin/class-roxtar-meta-boxes.php:245, inc/admin/class-roxtar-meta-boxes.php:268
+#: inc/admin/class-SKDD-meta-boxes.php:183, inc/admin/class-SKDD-meta-boxes.php:218, inc/admin/class-SKDD-meta-boxes.php:245, inc/admin/class-SKDD-meta-boxes.php:268
 msgid "Customizer Setting"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:187, inc/customizer/sections/wordpress/background-image.php:13, inc/customizer/sections/wordpress/background-image.php:23
+#: inc/admin/class-SKDD-meta-boxes.php:187, inc/customizer/sections/wordpress/background-image.php:13, inc/customizer/sections/wordpress/background-image.php:23
 msgid "Normal"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:191, inc/customizer/sections/wordpress/background-image.php:14, inc/customizer/sections/wordpress/background-image.php:24
+#: inc/admin/class-SKDD-meta-boxes.php:191, inc/customizer/sections/wordpress/background-image.php:14, inc/customizer/sections/wordpress/background-image.php:24
 msgid "Boxed"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:195, inc/customizer/sections/wordpress/background-image.php:15, inc/customizer/sections/wordpress/background-image.php:25
+#: inc/admin/class-SKDD-meta-boxes.php:195, inc/customizer/sections/wordpress/background-image.php:15, inc/customizer/sections/wordpress/background-image.php:25
 msgid "Content Boxed"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:199, inc/customizer/sections/wordpress/background-image.php:16, inc/customizer/sections/wordpress/background-image.php:26
+#: inc/admin/class-SKDD-meta-boxes.php:199, inc/customizer/sections/wordpress/background-image.php:16, inc/customizer/sections/wordpress/background-image.php:26
 msgid "Full Width / Contained"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:203, inc/customizer/sections/wordpress/background-image.php:17, inc/customizer/sections/wordpress/background-image.php:27
+#: inc/admin/class-SKDD-meta-boxes.php:203, inc/customizer/sections/wordpress/background-image.php:17, inc/customizer/sections/wordpress/background-image.php:27
 msgid "Full Width / Stretched"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:212, inc/customizer/register-sections.php:18
+#: inc/admin/class-SKDD-meta-boxes.php:212, inc/customizer/register-sections.php:18
 msgid "Sidebar"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:222
+#: inc/admin/class-SKDD-meta-boxes.php:222
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:226
+#: inc/admin/class-SKDD-meta-boxes.php:226
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:230
+#: inc/admin/class-SKDD-meta-boxes.php:230
 msgid "No Sidebar"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:239
+#: inc/admin/class-SKDD-meta-boxes.php:239
 msgid "Transparent Header"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:249, inc/admin/class-roxtar-meta-boxes.php:272
+#: inc/admin/class-SKDD-meta-boxes.php:249, inc/admin/class-SKDD-meta-boxes.php:272
 msgid "Enabled"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:253, inc/admin/class-roxtar-meta-boxes.php:276
+#: inc/admin/class-SKDD-meta-boxes.php:253, inc/admin/class-SKDD-meta-boxes.php:276
 msgid "Disabled"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:262, inc/customizer/register-sections.php:15
+#: inc/admin/class-SKDD-meta-boxes.php:262, inc/customizer/register-sections.php:15
 msgid "Page Header"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:285
+#: inc/admin/class-SKDD-meta-boxes.php:285
 msgid "Disable Sections"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:293
+#: inc/admin/class-SKDD-meta-boxes.php:293
 msgid "Disable Topbar"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:300
+#: inc/admin/class-SKDD-meta-boxes.php:300
 msgid "Disable Header"
 msgstr ""
 
-#: inc/admin/class-roxtar-meta-boxes.php:307
+#: inc/admin/class-SKDD-meta-boxes.php:307
 msgid "Disable Footer"
 msgstr ""
 
-#: inc/customizer/class-roxtar-customizer.php:214
+#: inc/customizer/class-SKDD-customizer.php:214
 msgid "Sale!"
 msgstr ""
 
-#: inc/customizer/class-roxtar-customizer.php:222
+#: inc/customizer/class-SKDD-customizer.php:222
 msgid "Out Of Stock"
 msgstr ""
 
-#: inc/customizer/class-roxtar-customizer.php:253, inc/customizer/sections/shop/shop-single.php:578
+#: inc/customizer/class-SKDD-customizer.php:253, inc/customizer/sections/shop/shop-single.php:578
 msgid "Recently Viewed Products"
 msgstr ""
 
-#: inc/customizer/class-roxtar-customizer.php:278
+#: inc/customizer/class-SKDD-customizer.php:278
 msgid "Opps! The page you are looking for is missing for some reasons. Please come back to homepage"
 msgstr ""
 
-#: inc/customizer/class-roxtar-customizer.php:368, inc/customizer/class-roxtar-customizer.php:384, inc/customizer/class-roxtar-customizer.php:400, inc/customizer/class-roxtar-customizer.php:416, inc/customizer/class-roxtar-customizer.php:432
+#: inc/customizer/class-SKDD-customizer.php:368, inc/customizer/class-SKDD-customizer.php:384, inc/customizer/class-SKDD-customizer.php:400, inc/customizer/class-SKDD-customizer.php:416, inc/customizer/class-SKDD-customizer.php:432
 msgid "More options are coming for this section in our Pro Extensions."
 msgstr ""
 
@@ -790,213 +790,213 @@ msgstr ""
 msgid "Cart Page"
 msgstr ""
 
-#: inc/widget/class-roxtar-recent-post-thumbnail.php:23
-msgid "Roxtar Recent Post With Thumbnail"
+#: inc/widget/class-SKDD-recent-post-thumbnail.php:23
+msgid "SKDD Recent Post With Thumbnail"
 msgstr ""
 
-#: inc/widget/class-roxtar-recent-post-thumbnail.php:26
+#: inc/widget/class-SKDD-recent-post-thumbnail.php:26
 msgid "List the most recent posts with post titles, thumbnail"
 msgstr ""
 
-#: inc/widget/class-roxtar-recent-post-thumbnail.php:38
+#: inc/widget/class-SKDD-recent-post-thumbnail.php:38
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/widget/class-roxtar-recent-post-thumbnail.php:49
+#: inc/widget/class-SKDD-recent-post-thumbnail.php:49
 msgid "Title:"
 msgstr ""
 
-#: inc/widget/class-roxtar-recent-post-thumbnail.php:58
+#: inc/widget/class-SKDD-recent-post-thumbnail.php:58
 msgid "Number:"
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:183, inc/woocommerce/class-roxtar-woocommerce.php:236
+#: inc/woocommerce/class-SKDD-woocommerce.php:183, inc/woocommerce/class-SKDD-woocommerce.php:236
 msgid "Sorry, something went wrong. Please try again!"
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:184
+#: inc/woocommerce/class-SKDD-woocommerce.php:184
 msgid "Please enter a valid quantity for this product"
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:185, inc/woocommerce/roxtar-woocommerce-template-functions.php:1039
+#: inc/woocommerce/class-SKDD-woocommerce.php:185, inc/woocommerce/SKDD-woocommerce-template-functions.php:1039
 msgid "Shipping"
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:186
+#: inc/woocommerce/class-SKDD-woocommerce.php:186
 msgid "Calculated at next step"
 msgstr ""
 
 #. translators: %s number of product
 #. translators: %s stock quantity
-#: inc/woocommerce/class-roxtar-woocommerce.php:256, inc/woocommerce/roxtar-woocommerce-single-product-functions.php:518
+#: inc/woocommerce/class-SKDD-woocommerce.php:256, inc/woocommerce/SKDD-woocommerce-single-product-functions.php:518
 msgid "Hurry! only %s left in stock."
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:469
+#: inc/woocommerce/class-SKDD-woocommerce.php:469
 msgid "Product video url"
 msgstr ""
 
-#: inc/woocommerce/class-roxtar-woocommerce.php:490
+#: inc/woocommerce/class-SKDD-woocommerce.php:490
 msgid "Enter Youtube or Vimeo video url"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-archive-product-functions.php:96, inc/woocommerce/roxtar-woocommerce-single-product-functions.php:307, inc/woocommerce/roxtar-woocommerce-single-product-functions.php:344, inc/woocommerce/roxtar-woocommerce-single-product-functions.php:382, inc/woocommerce/roxtar-woocommerce-single-product-functions.php:397
+#: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:96, inc/woocommerce/SKDD-woocommerce-single-product-functions.php:307, inc/woocommerce/SKDD-woocommerce-single-product-functions.php:344, inc/woocommerce/SKDD-woocommerce-single-product-functions.php:382, inc/woocommerce/SKDD-woocommerce-single-product-functions.php:397
 msgid "Product image"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-archive-product-functions.php:339
+#: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:339
 msgid "Filter"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:62
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:62
 msgid "Previous Product Image"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:67
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:67
 msgid "Previous"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:89
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:89
 msgid "Next Product Image"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:94, inc/woocommerce/roxtar-woocommerce-template-functions.php:539
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:94, inc/woocommerce/SKDD-woocommerce-template-functions.php:539
 msgid "Next"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:552, inc/customizer/sections/shop/shop-single.php:229
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:552, inc/customizer/sections/shop/shop-single.php:229
 msgid "Trust Badge Image"
 msgstr ""
 
 #. translators: stock quantity number
-#: inc/woocommerce/roxtar-woocommerce-single-product-functions.php:666
+#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:666
 msgid "You cannot add that amount of this product to the cart. We have %1$s in stock and you already have %2$s in your cart"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:279
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:279
 msgid "Remove this item"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:324
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:324
 msgid "No products in the cart."
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:341
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:341
 msgid "Shopping cart"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:462
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:462
 msgid "Home"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:538
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:538
 msgid "Prev"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:845, inc/customizer/sections/shop/shop-page.php:457
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:845, inc/customizer/sections/shop/shop-page.php:457
 msgid "Product Image"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:904
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:904
 msgid "Billing Details"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:908
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:908
 msgid "Delivery"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:912
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:912
 msgid "Payment"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:991, inc/woocommerce/roxtar-woocommerce-template-functions.php:1023
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:991, inc/woocommerce/SKDD-woocommerce-template-functions.php:1023
 msgid "Contact"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:994, inc/woocommerce/roxtar-woocommerce-template-functions.php:1002, inc/woocommerce/roxtar-woocommerce-template-functions.php:1026, inc/woocommerce/roxtar-woocommerce-template-functions.php:1034, inc/woocommerce/roxtar-woocommerce-template-functions.php:1042
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:994, inc/woocommerce/SKDD-woocommerce-template-functions.php:1002, inc/woocommerce/SKDD-woocommerce-template-functions.php:1026, inc/woocommerce/SKDD-woocommerce-template-functions.php:1034, inc/woocommerce/SKDD-woocommerce-template-functions.php:1042
 msgid "Change"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:999, inc/woocommerce/roxtar-woocommerce-template-functions.php:1031
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:999, inc/woocommerce/SKDD-woocommerce-template-functions.php:1031
 msgid "Address"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1060
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1060
 msgid "Back"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1061
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1061
 msgid "Continue to"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1061
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1061
 msgid "Continue to Delivery"
 msgstr ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1062
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1062
 msgid "Place Order"
 msgstr ""
 
 #. translators: 1: single item, 2: plural items
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1078
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1078
 msgid "%s item"
 msgid_plural "%s items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/woocommerce/roxtar-woocommerce-template-functions.php:1083
+#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1083
 msgid "Order Summary"
 msgstr ""
 
-#: inc/compatibility/elementor/class-roxtar-elementor-single-product-images.php:40
-msgid "Roxtar - Default Product Images"
+#: inc/compatibility/elementor/class-SKDD-elementor-single-product-images.php:40
+msgid "SKDD - Default Product Images"
 msgstr ""
 
-#: inc/compatibility/elementor/class-roxtar-elementor-single-product-images.php:71, inc/customizer/sections/shop/shop-single.php:27
+#: inc/compatibility/elementor/class-SKDD-elementor-single-product-images.php:71, inc/customizer/sections/shop/shop-single.php:27
 msgid "General"
 msgstr ""
 
-#: inc/compatibility/elementor/class-roxtar-elementor-single-product-images.php:79
+#: inc/compatibility/elementor/class-SKDD-elementor-single-product-images.php:79
 msgid "Default single product image"
 msgstr ""
 
-#: inc/customizer/custom-controls/range/class-roxtar-range-slider-control.php:57, inc/customizer/sections/header/header-transparent.php:184, inc/customizer/sections/scroll-to-top/scroll-to-top.php:57
+#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:57, inc/customizer/sections/header/header-transparent.php:184, inc/customizer/sections/scroll-to-top/scroll-to-top.php:57
 msgid "Desktop"
 msgstr ""
 
-#: inc/customizer/custom-controls/range/class-roxtar-range-slider-control.php:58
+#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:58
 msgid "Tablet"
 msgstr ""
 
-#: inc/customizer/custom-controls/range/class-roxtar-range-slider-control.php:59, inc/customizer/sections/header/header-transparent.php:185, inc/customizer/sections/scroll-to-top/scroll-to-top.php:56
+#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:59, inc/customizer/sections/header/header-transparent.php:185, inc/customizer/sections/scroll-to-top/scroll-to-top.php:56
 msgid "Mobile"
 msgstr ""
 
-#: inc/customizer/custom-controls/range/class-roxtar-range-slider-control.php:60
+#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:60
 msgid "Reset"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:70
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:70
 msgid "System fonts"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:71
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:71
 msgid "Google fonts"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:74
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:74
 msgid "Font family"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:75
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:75
 msgid "Font weight"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:76
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:76
 msgid "Text transform"
 msgstr ""
 
-#: inc/customizer/custom-controls/typography/class-roxtar-typography-control.php:78
+#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:78
 msgid "Variants"
 msgstr ""
 

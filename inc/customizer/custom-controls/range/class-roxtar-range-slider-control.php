@@ -2,7 +2,7 @@
 /**
  * Range Slider for Customizer.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Create a range slider control.
  * This control allows you to add responsive settings.
  */
-class Roxtar_Range_Slider_Control extends WP_Customize_Control {
+class SKDD_Range_Slider_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'roxtar-range-slider';
+	public $type = 'SKDD-range-slider';
 
 	/**
 	 * Description
@@ -54,10 +54,10 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 			);
 		}
 
-		$this->json['desktop_label'] = __( 'Desktop', 'roxtar' );
-		$this->json['tablet_label']  = __( 'Tablet', 'roxtar' );
-		$this->json['mobile_label']  = __( 'Mobile', 'roxtar' );
-		$this->json['reset_label']   = __( 'Reset', 'roxtar' );
+		$this->json['desktop_label'] = __( 'Desktop', 'SKDD' );
+		$this->json['tablet_label']  = __( 'Tablet', 'SKDD' );
+		$this->json['mobile_label']  = __( 'Mobile', 'SKDD' );
+		$this->json['reset_label']   = __( 'Reset', 'SKDD' );
 		$this->json['description']   = $this->description;
 	}
 
@@ -68,18 +68,18 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'roxtar-range-slider',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/range/js/slider-control.js',
+			'SKDD-range-slider',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/range/js/slider-control.js',
 			array( 'jquery', 'customize-base', 'jquery-ui-slider' ),
-			roxtar_version(),
+			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_style(
-			'roxtar-range-slider',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/range/css/slider-customizer.css',
+			'SKDD-range-slider',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/range/css/slider-customizer.css',
 			array(),
-			roxtar_version()
+			SKDD_version()
 		);
 	}
 
@@ -95,10 +95,10 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 	 */
 	protected function content_template() {
 		?>
-		<div class="roxtar-range-slider-control">
-			<div class="roxtar-range-title-area">
+		<div class="SKDD-range-slider-control">
+			<div class="SKDD-range-title-area">
 				<# if ( data.label || data.description ) { #>
-				<div class="roxtar-range-title-info">
+				<div class="SKDD-range-title-info">
 					<# if ( data.label ) { #>
 					<span class="customize-control-title">{{{ data.label }}}</span>
 					<# } #>
@@ -109,33 +109,33 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 				</div>
 				<# } #>
 
-				<div class="roxtar-range-slider-controls">
-					<span class="roxtar-device-controls">
+				<div class="SKDD-range-slider-controls">
+					<span class="SKDD-device-controls">
 						<# if ( 'undefined' !== typeof( data.desktop ) ) { #>
-							<span class="roxtar-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
+							<span class="SKDD-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof( data.tablet ) ) { #>
-							<span class="roxtar-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
+							<span class="SKDD-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof( data.mobile ) ) { #>
-							<span class="roxtar-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
+							<span class="SKDD-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
 						<# } #>
 					</span>
 
-					<span title="{{ data.reset_label }}" class="roxtar-reset dashicons dashicons-image-rotate"></span>
+					<span title="{{ data.reset_label }}" class="SKDD-reset dashicons dashicons-image-rotate"></span>
 				</div>
 			</div>
 
-			<div class="roxtar-range-slider-areas">
+			<div class="SKDD-range-slider-areas">
 				<# if
 					( 'undefined' !== typeof( data.desktop ) ) {
 					var attrDesktop = ! data.choices['desktop']['edit'] ? 'disabled' : '';
 				#>
 				<label class="range-option-area" data-option="desktop" style="display: none;">
 					<div class="wrapper <# if ( '' !== data.choices['desktop']['unit'] ) { #>has-unit<# } #>">
-						<div class="roxtar_range_value">
+						<div class="SKDD_range_value">
 							<input {{{ attrDesktop }}} type="number" step="{{ data.choices['desktop']['step'] }}" class="desktop-range value" value="{{ data.desktop.value }}" min="{{ data.choices['desktop']['min'] }}" max="{{ data.choices['desktop']['max'] }}" {{{ data.desktop.link }}} data-reset_value="{{ data.desktop.default }}" />
 
 							<# if ( data.choices['desktop']['unit'] ) { #>
@@ -143,7 +143,7 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="roxtar-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
+						<div class="SKDD-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>
@@ -154,7 +154,7 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 				#>
 				<label class="range-option-area" data-option="tablet" style="display:none">
 					<div class="wrapper <# if ( '' !== data.choices['tablet']['unit'] ) { #>has-unit<# } #>">
-						<div class="roxtar_range_value">
+						<div class="SKDD_range_value">
 							<input {{{ attrTablet }}} type="number" step="{{ data.choices['tablet']['step'] }}" class="tablet-range value" value="{{ data.tablet.value }}" min="{{ data.choices['tablet']['min'] }}" max="{{ data.choices['tablet']['max'] }}" {{{ data.tablet.link }}} data-reset_value="{{ data.tablet.default }}" />
 
 							<# if ( data.choices['tablet']['unit'] ) { #>
@@ -162,7 +162,7 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="roxtar-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
+						<div class="SKDD-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>
@@ -173,7 +173,7 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 				#>
 				<label class="range-option-area" data-option="mobile" style="display:none;">
 					<div class="wrapper <# if ( '' !== data.choices['mobile']['unit'] ) { #>has-unit<# } #>">
-						<div class="roxtar_range_value">
+						<div class="SKDD_range_value">
 							<input {{{ attrMobile }}} type="number" step="{{ data.choices['mobile']['step'] }}" class="mobile-range value" value="{{ data.mobile.value }}" min="{{ data.choices['mobile']['min'] }}" max="{{ data.choices['mobile']['max'] }}" {{{ data.mobile.link }}} data-reset_value="{{ data.mobile.default }}" />
 
 							<# if ( data.choices['mobile']['unit'] ) { #>
@@ -181,7 +181,7 @@ class Roxtar_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="roxtar-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
+						<div class="SKDD-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>

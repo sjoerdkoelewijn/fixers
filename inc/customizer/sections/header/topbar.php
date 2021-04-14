@@ -2,36 +2,36 @@
 /**
  * Topbar
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Display topbar.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_display]',
+	'SKDD_setting[topbar_display]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['topbar_display'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_display]',
+		'SKDD_setting[topbar_display]',
 		array(
-			'label'    => __( 'Topbar Display', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_display]',
+			'label'    => __( 'Topbar Display', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_display]',
 		)
 	)
 );
 
 // Topbar color.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_text_color]',
+	'SKDD_setting[topbar_text_color]',
 	array(
 		'default'           => $defaults['topbar_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -42,40 +42,40 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_text_color]',
+		'SKDD_setting[topbar_text_color]',
 		array(
-			'label'    => __( 'Text Color', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_text_color]',
+			'label'    => __( 'Text Color', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_text_color]',
 		)
 	)
 );
 
 // Background color.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_background_color]',
+	'SKDD_setting[topbar_background_color]',
 	array(
 		'default'           => $defaults['topbar_background_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_background_color]',
+		'SKDD_setting[topbar_background_color]',
 		array(
-			'label'    => __( 'Background Color', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_background_color]',
+			'label'    => __( 'Background Color', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_background_color]',
 		)
 	)
 );
 
 // Opacity.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_opacity]',
+	'SKDD_setting[topbar_opacity]',
 	array(
 		'default'           => $defaults['topbar_opacity'],
 		'sanitize_callback' => 'absint',
@@ -84,19 +84,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_opacity]',
+		'SKDD_setting[topbar_opacity]',
 		array(
-			'label'    => __( 'Topbar Opacity', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
+			'label'    => __( 'Topbar Opacity', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[topbar_opacity]',
+				'desktop' => 'SKDD_setting[topbar_opacity]',
 			),
 			'choices' => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_topbar_opacity_min_step', 1 ),
-					'max'  => apply_filters( 'roxtar_topbar_opacity_max_step', 100 ),
+					'min'  => apply_filters( 'SKDD_topbar_opacity_min_step', 1 ),
+					'max'  => apply_filters( 'SKDD_topbar_opacity_max_step', 100 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => '%',
@@ -108,7 +108,7 @@ $wp_customize->add_control(
 
 // Height.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_height]',
+	'SKDD_setting[topbar_height]',
 	array(
 		'default'           => $defaults['topbar_height'],
 		'sanitize_callback' => 'absint',
@@ -117,19 +117,19 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_height]',
+		'SKDD_setting[topbar_height]',
 		array(
-			'label'    => __( 'Topbar Height', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
+			'label'    => __( 'Topbar Height', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[topbar_height]',
+				'desktop' => 'SKDD_setting[topbar_height]',
 			),
 			'choices' => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_topbar_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_topbar_max_step', 50 ),
+					'min'  => apply_filters( 'SKDD_topbar_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_topbar_max_step', 50 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -148,11 +148,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'topbar_content_divider',
 		array(
-			'section'  => 'roxtar_topbar',
+			'section'  => 'SKDD_topbar',
 			'settings' => 'topbar_content_divider',
 			'type'     => 'divider',
 		)
@@ -161,10 +161,10 @@ $wp_customize->add_control(
 
 // Topbar left.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_left]',
+	'SKDD_setting[topbar_left]',
 	array(
 		'default'           => $defaults['topbar_left'],
-		'sanitize_callback' => 'roxtar_sanitize_raw_html',
+		'sanitize_callback' => 'SKDD_sanitize_raw_html',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
@@ -172,11 +172,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_left]',
+		'SKDD_setting[topbar_left]',
 		array(
-			'label'    => __( 'Content Left', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_left]',
+			'label'    => __( 'Content Left', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_left]',
 			'type'     => 'textarea',
 		)
 	)
@@ -184,10 +184,10 @@ $wp_customize->add_control(
 
 // Topbar center.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_center]',
+	'SKDD_setting[topbar_center]',
 	array(
 		'default'           => $defaults['topbar_center'],
-		'sanitize_callback' => 'roxtar_sanitize_raw_html',
+		'sanitize_callback' => 'SKDD_sanitize_raw_html',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
@@ -195,11 +195,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_center]',
+		'SKDD_setting[topbar_center]',
 		array(
-			'label'    => __( 'Content Center', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_center]',
+			'label'    => __( 'Content Center', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_center]',
 			'type'     => 'textarea',
 		)
 	)
@@ -207,10 +207,10 @@ $wp_customize->add_control(
 
 // Topbar right.
 $wp_customize->add_setting(
-	'roxtar_setting[topbar_right]',
+	'SKDD_setting[topbar_right]',
 	array(
 		'default'           => $defaults['topbar_right'],
-		'sanitize_callback' => 'roxtar_sanitize_raw_html',
+		'sanitize_callback' => 'SKDD_sanitize_raw_html',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
@@ -218,11 +218,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'roxtar_setting[topbar_right]',
+		'SKDD_setting[topbar_right]',
 		array(
-			'label'    => __( 'Content Right', 'roxtar' ),
-			'section'  => 'roxtar_topbar',
-			'settings' => 'roxtar_setting[topbar_right]',
+			'label'    => __( 'Content Right', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_right]',
 			'type'     => 'textarea',
 		)
 	)

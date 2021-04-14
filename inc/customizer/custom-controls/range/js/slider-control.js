@@ -1,10 +1,10 @@
 /**
  * Slider control
  *
- * @package roxtar
+ * @package SKDD
  */
 
-wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.extend({
 
 	ready: function() {
 
@@ -15,11 +15,11 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 			thisInput,
 			inputDefault,
 			changeAction,
-			controlClass = '.customize-control-roxtar-range-slider',
+			controlClass = '.customize-control-SKDD-range-slider',
 			footerActions = jQuery( '#customize-footer-actions' );
 
 		// Set up the sliders.
-		jQuery( '.roxtar-slider' ).each( function() {
+		jQuery( '.SKDD-slider' ).each( function() {
 			var _this  = jQuery( this ),
 				_input = _this.closest( 'label' ).find( 'input[type="number"]' );
 
@@ -35,23 +35,23 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 		});
 
 		// Update the range value based on the input value.
-		jQuery( controlClass + ' .roxtar_range_value input[type=number]' ).on( 'input', function() {
+		jQuery( controlClass + ' .SKDD_range_value input[type=number]' ).on( 'input', function() {
 			value = jQuery( this ).attr( 'value' );
 
 			if ( '' == value ) {
 				value = -1;
 			}
 
-			jQuery( this ).closest( 'label' ).find( '.roxtar-slider' ).slider( 'value', parseFloat( value ) ).change();
+			jQuery( this ).closest( 'label' ).find( '.SKDD-slider' ).slider( 'value', parseFloat( value ) ).change();
 		});
 
 		// Handle the reset button.
-		jQuery( controlClass + ' .roxtar-reset' ).on( 'click', function() {
+		jQuery( controlClass + ' .SKDD-reset' ).on( 'click', function() {
 			var icon         = jQuery( this ),
-				visible_area = icon.closest( '.roxtar-range-title-area' ).next( '.roxtar-range-slider-areas' ).children( 'label:visible' ),
+				visible_area = icon.closest( '.SKDD-range-title-area' ).next( '.SKDD-range-slider-areas' ).children( 'label:visible' ),
 				input        = visible_area.find( 'input[type=number]' ),
-				slider_value = visible_area.find( '.roxtar-slider' ),
-				visual_value = visible_area.find( '.roxtar_range_value' ),
+				slider_value = visible_area.find( '.SKDD-slider' ),
+				visual_value = visible_area.find( '.SKDD_range_value' ),
 				reset_value  = input.attr( 'data-reset_value' );
 
 			input.val( reset_value ).change();
@@ -65,17 +65,17 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 		});
 
 		// Figure out which device icon to make active on load.
-		jQuery( controlClass + ' .roxtar-range-slider-control' ).each( function() {
+		jQuery( controlClass + ' .SKDD-range-slider-control' ).each( function() {
 			var _this = jQuery( this );
-			_this.find( '.roxtar-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
+			_this.find( '.SKDD-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
 			_this.find( '.range-option-area:first-child' ).show();
 		});
 
 		// Do stuff when device icons are clicked.
-		jQuery( controlClass + ' .roxtar-device-controls > span' ).on( 'click', function( event ) {
+		jQuery( controlClass + ' .SKDD-device-controls > span' ).on( 'click', function( event ) {
 			var device = jQuery( this ).data( 'option' );
 
-			jQuery( controlClass + ' .roxtar-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .SKDD-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -83,7 +83,7 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 				}
 			});
 
-			jQuery( controlClass + ' .roxtar-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .SKDD-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();
@@ -99,7 +99,7 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 		footerActions.find( '.devices button' ).on( 'click', function() {
 			var device = jQuery( this ).data( 'device' );
 
-			jQuery( controlClass + ' .roxtar-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .SKDD-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -107,7 +107,7 @@ wp.customize.controlConstructor['roxtar-range-slider'] = wp.customize.Control.ex
 				}
 			});
 
-			jQuery( controlClass + ' .roxtar-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .SKDD-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();

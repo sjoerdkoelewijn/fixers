@@ -1,12 +1,12 @@
 /**
  * Section
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';
 
-wp.customize.controlConstructor['roxtar-section'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['SKDD-section'] = wp.customize.Control.extend({
 	/**
 	 * Ready
 	 */
@@ -58,9 +58,9 @@ wp.customize.controlConstructor['roxtar-section'] = wp.customize.Control.extend(
 			}
 
 			if ( 1 === state ) {
-				depenSelector.classList.add( 'roxtar-section-hide' );
+				depenSelector.classList.add( 'SKDD-section-hide' );
 			} else {
-				depenSelector.classList.remove( 'roxtar-section-hide' );
+				depenSelector.classList.remove( 'SKDD-section-hide' );
 			}
 		}
 	}

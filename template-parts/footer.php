@@ -2,7 +2,7 @@
 /**
  * Footer template
  *
- * @package roxtar
+ * @package SKDD
  */
 
-do_action( 'roxtar_template_part_footer' );
+do_action( 'SKDD_template_part_footer' );

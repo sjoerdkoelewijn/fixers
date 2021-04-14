@@ -1,14 +1,14 @@
-.roxtar-font-weight,
-.roxtar-font-transform{
+.SKDD-font-weight,
+.SKDD-font-transform{
     float: left;
     width: 50%;
     clear: none;
 }
-#customize-control-roxtar_settings-body_line_height input{
+#customize-control-SKDD_settings-body_line_height input{
     line-height: 20px;
 }
 
-.roxtar-font-weight select {
+.SKDD-font-weight select {
     border-right: 0;
 }
 

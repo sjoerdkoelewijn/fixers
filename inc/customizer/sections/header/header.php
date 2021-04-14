@@ -2,36 +2,36 @@
 /**
  * Header
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Header layout.
 $wp_customize->add_setting(
-	'roxtar_setting[header_layout]',
+	'SKDD_setting[header_layout]',
 	array(
 		'default'           => $defaults['header_layout'],
-		'sanitize_callback' => 'roxtar_sanitize_choices',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Radio_Image_Control(
+	new SKDD_Radio_Image_Control(
 		$wp_customize,
-		'roxtar_setting[header_layout]',
+		'SKDD_setting[header_layout]',
 		array(
-			'label'    => __( 'Header Layout', 'roxtar' ),
-			'section'  => 'roxtar_header',
-			'settings' => 'roxtar_setting[header_layout]',
+			'label'    => __( 'Header Layout', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_layout]',
 			'choices'  => apply_filters(
-				'roxtar_setting_header_layout_choices',
+				'SKDD_setting_header_layout_choices',
 				array(
-					'layout-1' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-1.jpg',
-					'layout-2' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-2.jpg',
-					'layout-3' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-3.jpg',
-					'layout-4' => ROXTAR_THEME_URI . 'assets/images/customizer/header/roxtar-header-4.jpg',
+					'layout-1' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-1.jpg',
+					'layout-2' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-2.jpg',
+					'layout-3' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-3.jpg',
+					'layout-4' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-4.jpg',
 				)
 			),
 		)
@@ -41,7 +41,7 @@ $wp_customize->add_control(
 
 // Menu Breakpoint.
 $wp_customize->add_setting(
-	'roxtar_setting[header_max_height]',
+	'SKDD_setting[header_max_height]',
 	array(
 		'default'           => $defaults['header_max_height'],
 		'sanitize_callback' => 'absint',
@@ -49,20 +49,20 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[header_max_height]',
+		'SKDD_setting[header_max_height]',
 		array(
 			'priority' => 46,
-			'label'    => __( 'Max Height', 'roxtar' ),
-			'section'  => 'roxtar_header',
+			'label'    => __( 'Max Height', 'SKDD' ),
+			'section'  => 'SKDD_header',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[header_max_height]',
+				'desktop' => 'SKDD_setting[header_max_height]',
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_header_max_height_min_step', 50 ),
-					'max'  => apply_filters( 'roxtar_header_max_height_max_step', 400 ),
+					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 50 ),
+					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 400 ),
 					'step' => 10,
 					'edit' => true,
 					'unit' => 'px',
@@ -76,23 +76,23 @@ $wp_customize->add_control(
 
 // Background color.
 $wp_customize->add_setting(
-	'roxtar_setting[header_background_color]',
+	'SKDD_setting[header_background_color]',
 	array(
 		'default'           => $defaults['header_background_color'],
-		'sanitize_callback' => 'roxtar_sanitize_rgba_color',
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
-		'roxtar_setting[header_background_color]',
+		'SKDD_setting[header_background_color]',
 		array(
 			'priority' => 30,
-			'label'    => __( 'Header Background', 'roxtar' ),
-			'section'  => 'roxtar_header',
-			'settings' => 'roxtar_setting[header_background_color]',
+			'label'    => __( 'Header Background', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_background_color]',
 		)
 	)
 );
@@ -105,12 +105,12 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'header_after_background_color_divider',
 		array(
 			'priority' => 40,
-			'section'  => 'roxtar_header',
+			'section'  => 'SKDD_header',
 			'settings' => 'header_after_background_color_divider',
 			'type'     => 'divider',
 		)
@@ -125,15 +125,15 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'header_element_title',
 		array(
 			'priority' => 50,
-			'section'  => 'roxtar_header',
+			'section'  => 'SKDD_header',
 			'settings' => 'header_element_title',
 			'type'     => 'heading',
-			'label'    => __( 'Elements', 'roxtar' ),
+			'label'    => __( 'Elements', 'SKDD' ),
 		)
 	)
 );
@@ -141,29 +141,29 @@ $wp_customize->add_control(
 // HEADER ELEMENT.
 // Header menu.
 $wp_customize->add_setting(
-	'roxtar_setting[header_primary_menu]',
+	'SKDD_setting[header_primary_menu]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['header_primary_menu'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[header_primary_menu]',
+		'SKDD_setting[header_primary_menu]',
 		array(
 			'priority' => 70,
-			'label'    => __( 'Header Menu', 'roxtar' ),
-			'section'  => 'roxtar_header',
-			'settings' => 'roxtar_setting[header_primary_menu]',
+			'label'    => __( 'Header Menu', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_primary_menu]',
 		)
 	)
 );
 
 // Menu Breakpoint.
 $wp_customize->add_setting(
-	'roxtar_setting[header_menu_breakpoint]',
+	'SKDD_setting[header_menu_breakpoint]',
 	array(
 		'default'           => $defaults['header_menu_breakpoint'],
 		'sanitize_callback' => 'absint',
@@ -171,20 +171,20 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[header_menu_breakpoint]',
+		'SKDD_setting[header_menu_breakpoint]',
 		array(
 			'priority' => 46,
-			'label'    => __( 'Menu Breakpoint', 'roxtar' ),
-			'section'  => 'roxtar_header',
+			'label'    => __( 'Menu Breakpoint', 'SKDD' ),
+			'section'  => 'SKDD_header',
 			'settings' => array(
-				'desktop' => 'roxtar_setting[header_menu_breakpoint]',
+				'desktop' => 'SKDD_setting[header_menu_breakpoint]',
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_header_menu_breakpoint_min_step', 0 ),
-					'max'  => apply_filters( 'roxtar_header_menu_breakpoint_max_step', 6000 ),
+					'min'  => apply_filters( 'SKDD_header_menu_breakpoint_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_header_menu_breakpoint_max_step', 6000 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -196,44 +196,44 @@ $wp_customize->add_control(
 
 // Header widget area.
 $wp_customize->add_setting(
-	'roxtar_setting[header_widget_area]',
+	'SKDD_setting[header_widget_area]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['header_widget_area'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[header_widget_area]',
+		'SKDD_setting[header_widget_area]',
 		array(
 			'priority' => 90,
-			'label'    => __( 'Widget area', 'roxtar' ),
-			'section'  => 'roxtar_header',
-			'settings' => 'roxtar_setting[header_widget_area]',
+			'label'    => __( 'Widget area', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_widget_area]',
 		)
 	)
 );
 
 // Search icon.
 $wp_customize->add_setting(
-	'roxtar_setting[header_search_icon]',
+	'SKDD_setting[header_search_icon]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['header_search_icon'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[header_search_icon]',
+		'SKDD_setting[header_search_icon]',
 		array(
 			'priority' => 90,
-			'label'    => __( 'Search Icon', 'roxtar' ),
-			'section'  => 'roxtar_header',
-			'settings' => 'roxtar_setting[header_search_icon]',
+			'label'    => __( 'Search Icon', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_search_icon]',
 		)
 	)
 );
@@ -242,45 +242,45 @@ $wp_customize->add_control(
 if ( class_exists( 'woocommerce' ) ) {
 	// Search product only.
 	$wp_customize->add_setting(
-		'roxtar_setting[header_search_only_product]',
+		'SKDD_setting[header_search_only_product]',
 		array(
 			'type'              => 'option',
 			'default'           => $defaults['header_search_only_product'],
-			'sanitize_callback' => 'roxtar_sanitize_checkbox',
+			'sanitize_callback' => 'SKDD_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		new Roxtar_Switch_Control(
+		new SKDD_Switch_Control(
 			$wp_customize,
-			'roxtar_setting[header_search_only_product]',
+			'SKDD_setting[header_search_only_product]',
 			array(
 				'priority' => 110,
-				'label'    => __( 'Search Only Product', 'roxtar' ),
-				'section'  => 'roxtar_header',
-				'settings' => 'roxtar_setting[header_search_only_product]',
+				'label'    => __( 'Search Only Product', 'SKDD' ),
+				'section'  => 'SKDD_header',
+				'settings' => 'SKDD_setting[header_search_only_product]',
 			)
 		)
 	);
 
 	// Wishlist icon.
-	if ( roxtar_support_wishlist_plugin() ) {
+	if ( SKDD_support_wishlist_plugin() ) {
 		$wp_customize->add_setting(
-			'roxtar_setting[header_wishlist_icon]',
+			'SKDD_setting[header_wishlist_icon]',
 			array(
 				'type'              => 'option',
 				'default'           => $defaults['header_wishlist_icon'],
-				'sanitize_callback' => 'roxtar_sanitize_checkbox',
+				'sanitize_callback' => 'SKDD_sanitize_checkbox',
 			)
 		);
 		$wp_customize->add_control(
-			new Roxtar_Switch_Control(
+			new SKDD_Switch_Control(
 				$wp_customize,
-				'roxtar_setting[header_wishlist_icon]',
+				'SKDD_setting[header_wishlist_icon]',
 				array(
 					'priority' => 130,
-					'label'    => __( 'Wishlist Icon', 'roxtar' ),
-					'section'  => 'roxtar_header',
-					'settings' => 'roxtar_setting[header_wishlist_icon]',
+					'label'    => __( 'Wishlist Icon', 'SKDD' ),
+					'section'  => 'SKDD_header',
+					'settings' => 'SKDD_setting[header_wishlist_icon]',
 				)
 			)
 		);
@@ -288,44 +288,44 @@ if ( class_exists( 'woocommerce' ) ) {
 
 	// Account icon.
 	$wp_customize->add_setting(
-		'roxtar_setting[header_account_icon]',
+		'SKDD_setting[header_account_icon]',
 		array(
 			'type'              => 'option',
 			'default'           => $defaults['header_account_icon'],
-			'sanitize_callback' => 'roxtar_sanitize_checkbox',
+			'sanitize_callback' => 'SKDD_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		new Roxtar_Switch_Control(
+		new SKDD_Switch_Control(
 			$wp_customize,
-			'roxtar_setting[header_account_icon]',
+			'SKDD_setting[header_account_icon]',
 			array(
 				'priority' => 150,
-				'label'    => __( 'Account Icon', 'roxtar' ),
-				'section'  => 'roxtar_header',
-				'settings' => 'roxtar_setting[header_account_icon]',
+				'label'    => __( 'Account Icon', 'SKDD' ),
+				'section'  => 'SKDD_header',
+				'settings' => 'SKDD_setting[header_account_icon]',
 			)
 		)
 	);
 
 	// Shopping bag icon.
 	$wp_customize->add_setting(
-		'roxtar_setting[header_shop_cart_icon]',
+		'SKDD_setting[header_shop_cart_icon]',
 		array(
 			'type'              => 'option',
 			'default'           => $defaults['header_shop_cart_icon'],
-			'sanitize_callback' => 'roxtar_sanitize_checkbox',
+			'sanitize_callback' => 'SKDD_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		new Roxtar_Switch_Control(
+		new SKDD_Switch_Control(
 			$wp_customize,
-			'roxtar_setting[header_shop_cart_icon]',
+			'SKDD_setting[header_shop_cart_icon]',
 			array(
 				'priority' => 170,
-				'label'    => __( 'Shopping Cart Icon', 'roxtar' ),
-				'section'  => 'roxtar_header',
-				'settings' => 'roxtar_setting[header_shop_cart_icon]',
+				'label'    => __( 'Shopping Cart Icon', 'SKDD' ),
+				'section'  => 'SKDD_header',
+				'settings' => 'SKDD_setting[header_shop_cart_icon]',
 			)
 		)
 	);

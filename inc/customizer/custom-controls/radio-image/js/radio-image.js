@@ -1,7 +1,7 @@
 /**
  * Sortable handle
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';

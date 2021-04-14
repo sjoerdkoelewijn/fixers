@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -14,13 +14,13 @@
 	} elseif ( is_user_logged_in() ) {
 		?>
 		<div class="widget widget_text default-widget">
-			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'roxtar' ); ?></h6>
+			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'SKDD' ); ?></h6>
 			<div class="textwidget">
 				<p>
 					<?php
 					printf(
 						/* translators: 1: admin URL */
-						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'roxtar' ),
+						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'SKDD' ),
 						esc_url( admin_url( 'widgets.php' ) )
 					);  // WPCS: XSS ok.
 					?>
@@ -29,13 +29,13 @@
 		</div>
 
 		<div class="widget widget_text default-widget">
-			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'roxtar' ); ?></h6>
+			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'SKDD' ); ?></h6>
 			<div class="textwidget">
 				<p>
 					<?php
 					printf(
 						/* translators: 1: admin URL */
-						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'roxtar' ),
+						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'SKDD' ),
 						esc_url( admin_url( 'widgets.php' ) )
 					);  // WPCS: XSS ok.
 					?>
@@ -44,13 +44,13 @@
 		</div>
 
 		<div class="widget widget_text default-widget">
-			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'roxtar' ); ?></h6>
+			<h6 class="widgettitle"><?php esc_html_e( 'Sidebar Widget', 'SKDD' ); ?></h6>
 			<div class="textwidget">
 				<p>
 					<?php
 					printf(
 						/* translators: 1: admin URL */
-						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'roxtar' ),
+						__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area.', 'SKDD' ),
 						esc_url( admin_url( 'widgets.php' ) )
 					);  // WPCS: XSS ok.
 					?>

@@ -1,17 +1,17 @@
-.customize-control-roxtar-section {
+.customize-control-SKDD-section {
 	transition-duration: 0.3s;
 }
 
-.customize-control-roxtar-section.active,
-.customize-control-roxtar-section:hover {
+.customize-control-SKDD-section.active,
+.customize-control-SKDD-section:hover {
 	box-shadow: 0 3px 8px -7px #777;
 }
 
-.customize-control-roxtar-section.active .roxtar-section-control-arrow:before {
+.customize-control-SKDD-section.active .SKDD-section-control-arrow:before {
 	transform: rotate( 90deg );
 }
 
-.roxtar-section-control {
+.SKDD-section-control {
 	user-select: none;
 	background-color: #fff;
 	margin: 0 -12px;
@@ -23,11 +23,11 @@
 	cursor: pointer;
 }
 
-.roxtar-section-control .roxtar-section-control-label {
+.SKDD-section-control .SKDD-section-control-label {
 	text-transform: uppercase;
 }
 
-.roxtar-section-control .roxtar-section-control-arrow {
+.SKDD-section-control .SKDD-section-control-arrow {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -40,7 +40,7 @@
 	height: auto;
 }
 
-.roxtar-section-control .roxtar-section-control-arrow:before {
+.SKDD-section-control .SKDD-section-control-arrow:before {
 	transition-duration: 0.1s;
 }
 

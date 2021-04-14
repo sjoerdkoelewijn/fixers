@@ -2,7 +2,7 @@
 /**
  * Template used to display post content.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -11,14 +11,14 @@
 
 	<?php
 		/**
-		 * Functions hooked in to roxtar_loop_post action.
+		 * Functions hooked in to SKDD_loop_post action.
 		 *
-		 * @hooked roxtar_post_header_open    - 10
-		 * @hooked roxtar_post_structure      - 20
-		 * @hooked roxtar_post_header_close   - 30
-		 * @hooked roxtar_post_content        - 40
+		 * @hooked SKDD_post_header_open    - 10
+		 * @hooked SKDD_post_structure      - 20
+		 * @hooked SKDD_post_header_close   - 30
+		 * @hooked SKDD_post_content        - 40
 		 */
-		do_action( 'roxtar_loop_post' );
+		do_action( 'SKDD_loop_post' );
 	?>
 
 </article>

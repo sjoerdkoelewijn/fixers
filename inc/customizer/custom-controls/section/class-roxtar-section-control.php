@@ -2,7 +2,7 @@
 /**
  * Section control class
  *
- * @package  roxtar
+ * @package  SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The section control class
  */
-class Roxtar_Section_Control extends WP_Customize_Control {
+class SKDD_Section_Control extends WP_Customize_Control {
 
 	/**
 	 * The control type.
@@ -20,7 +20,7 @@ class Roxtar_Section_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'roxtar-section';
+	public $type = 'SKDD-section';
 
 	/**
 	 * The description var
@@ -43,18 +43,18 @@ class Roxtar_Section_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'roxtar-section',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/section/js/section.js',
+			'SKDD-section',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/section/js/section.js',
 			[],
-			roxtar_version(),
+			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_style(
-			'roxtar-section',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/section/css/section.css',
+			'SKDD-section',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/section/css/section.css',
 			[],
-			roxtar_version()
+			SKDD_version()
 		);
 	}
 
@@ -71,11 +71,11 @@ class Roxtar_Section_Control extends WP_Customize_Control {
 	 */
 	public function content_template() {
 		?>
-		<div class="roxtar-section-control">
+		<div class="SKDD-section-control">
 			<# if ( data.label ) { #>
-			<span class="roxtar-section-control-label">{{ data.label }}</span>
+			<span class="SKDD-section-control-label">{{ data.label }}</span>
 			<# } #>
-			<span class="roxtar-section-control-arrow dashicons dashicons-arrow-right-alt2"></span>
+			<span class="SKDD-section-control-arrow dashicons dashicons-arrow-right-alt2"></span>
 		</div>
 		<?php
 	}

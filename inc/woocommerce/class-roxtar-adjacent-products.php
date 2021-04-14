@@ -2,18 +2,18 @@
 /**
  * Adjacent Products
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Roxtar_Adjacent_Products' ) ) {
+if ( ! class_exists( 'SKDD_Adjacent_Products' ) ) {
 	/**
 	 * Main class
 	 */
-	class Roxtar_Adjacent_Products {
+	class SKDD_Adjacent_Products {
 
 		/**
 		 * The current product ID.
@@ -166,7 +166,7 @@ if ( ! class_exists( 'Roxtar_Adjacent_Products' ) ) {
 				}
 			}
 
-			$products = wc_get_products( apply_filters( 'roxtar_woocommerce_adjacent_query_args', $args ) );
+			$products = wc_get_products( apply_filters( 'SKDD_woocommerce_adjacent_query_args', $args ) );
 
 			// At least 2 results are required, otherwise previous/next will be the same.
 			if ( ! empty( $products ) && count( $products ) >= 2 ) {

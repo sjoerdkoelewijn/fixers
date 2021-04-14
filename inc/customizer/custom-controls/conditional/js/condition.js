@@ -1,7 +1,7 @@
 /**
- * Roxtar condition control
+ * SKDD condition control
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';
@@ -175,128 +175,128 @@
 		// POST.
 		// Post structure.
 		arrayCondition(
-			'roxtar_setting[blog_list_structure]',
-			[ 'roxtar_setting[blog_list_post_meta]' ],
+			'SKDD_setting[blog_list_structure]',
+			[ 'SKDD_setting[blog_list_post_meta]' ],
 			'post-meta'
 		);
 
 		// Post single structure.
 		arrayCondition(
-			'roxtar_setting[blog_single_structure]',
-			[ 'roxtar_setting[blog_single_post_meta]' ],
+			'SKDD_setting[blog_single_structure]',
+			[ 'SKDD_setting[blog_single_post_meta]' ],
 			'post-meta'
 		);
 
 		// Topbar.
 		condition(
-			'roxtar_setting[topbar_display]',
+			'SKDD_setting[topbar_display]',
 			[
-				'roxtar_setting[topbar_text_color]',
-				'roxtar_setting[topbar_background_color]',				
-				'roxtar_setting[topbar_transparent]',
-				'roxtar_setting[topbar_height]',
-				'roxtar_setting[topbar_opacity]',
+				'SKDD_setting[topbar_text_color]',
+				'SKDD_setting[topbar_background_color]',				
+				'SKDD_setting[topbar_transparent]',
+				'SKDD_setting[topbar_height]',
+				'SKDD_setting[topbar_opacity]',
 				'topbar_content_divider',
-				'roxtar_setting[topbar_left]',
-				'roxtar_setting[topbar_center]',
-				'roxtar_setting[topbar_right]',
+				'SKDD_setting[topbar_left]',
+				'SKDD_setting[topbar_center]',
+				'SKDD_setting[topbar_right]',
 			],
 			false
 		);
 
 		// Topbar transparency
 		condition(
-			'roxtar_setting[header_transparent]',
+			'SKDD_setting[header_transparent]',
 			[
-				'roxtar_setting[topbar_opacity]',
+				'SKDD_setting[topbar_opacity]',
 			],
 			false
 		);
 
 		// Search product only.
 		condition(
-			'roxtar_setting[header_search_icon]',
-			['roxtar_setting[header_search_only_product]']
+			'SKDD_setting[header_search_icon]',
+			['SKDD_setting[header_search_only_product]']
 		);
 
 		// HEADER TRANSPARENT SECTION.
 		// Enable transparent header.
 		condition(
-			'roxtar_setting[header_transparent]',
+			'SKDD_setting[header_transparent]',
 			[
-				'roxtar_setting[header_transparent_disable_archive]',
-				'roxtar_setting[header_transparent_disable_index]',
-				'roxtar_setting[header_transparent_disable_page]',
-				'roxtar_setting[header_transparent_disable_post]',
-				'roxtar_setting[header_transparent_disable_shop]',
-				'roxtar_setting[header_transparent_disable_product]',
-				'roxtar_setting[header_transparent_enable_on]',
+				'SKDD_setting[header_transparent_disable_archive]',
+				'SKDD_setting[header_transparent_disable_index]',
+				'SKDD_setting[header_transparent_disable_page]',
+				'SKDD_setting[header_transparent_disable_post]',
+				'SKDD_setting[header_transparent_disable_shop]',
+				'SKDD_setting[header_transparent_disable_product]',
+				'SKDD_setting[header_transparent_enable_on]',
 				'header_transparent_border_divider',
-				'roxtar_setting[header_transparent_border_width]',
-				'roxtar_setting[header_transparent_border_color]',
-				'roxtar_setting[header_transparent_logo]',
-				'roxtar_setting[header_transparent_menu_color]',
-				'roxtar_setting[header_transparent_icon_color]',
-				'roxtar_setting[header_transparent_count_background]'
+				'SKDD_setting[header_transparent_border_width]',
+				'SKDD_setting[header_transparent_border_color]',
+				'SKDD_setting[header_transparent_logo]',
+				'SKDD_setting[header_transparent_menu_color]',
+				'SKDD_setting[header_transparent_icon_color]',
+				'SKDD_setting[header_transparent_count_background]'
 			]
 		);
 
 		// PAGE HEADER
 		// Enable page header.
 		condition(
-			'roxtar_setting[page_header_display]',
+			'SKDD_setting[page_header_display]',
 			[
-				'roxtar_setting[page_header_title]',
-				'roxtar_setting[page_header_breadcrumb]',
-				'roxtar_setting[page_header_text_align]',
-				'roxtar_setting[page_header_title_color]',
-				'roxtar_setting[page_header_background_image]',
-				'roxtar_setting[page_header_background_image_size]',
-				'roxtar_setting[page_header_background_image_position]',
-				'roxtar_setting[page_header_background_image_repeat]',
-				'roxtar_setting[page_header_background_image_attachment]',
+				'SKDD_setting[page_header_title]',
+				'SKDD_setting[page_header_breadcrumb]',
+				'SKDD_setting[page_header_text_align]',
+				'SKDD_setting[page_header_title_color]',
+				'SKDD_setting[page_header_background_image]',
+				'SKDD_setting[page_header_background_image_size]',
+				'SKDD_setting[page_header_background_image_position]',
+				'SKDD_setting[page_header_background_image_repeat]',
+				'SKDD_setting[page_header_background_image_attachment]',
 				'page_header_breadcrumb_divider',
 				'page_header_title_color_divider',
 				'page_header_spacing_divider',
-				'roxtar_setting[page_header_breadcrumb_text_color]',
-				'roxtar_setting[page_header_padding_top]',
-				'roxtar_setting[page_header_padding_bottom]',
-				'roxtar_setting[page_header_margin_bottom]'
+				'SKDD_setting[page_header_breadcrumb_text_color]',
+				'SKDD_setting[page_header_padding_top]',
+				'SKDD_setting[page_header_padding_bottom]',
+				'SKDD_setting[page_header_margin_bottom]'
 			]
 		);
 
 		// Background image.
 		subCondition(
-			'roxtar_setting[page_header_background_image]',
+			'SKDD_setting[page_header_background_image]',
 			[
-				'roxtar_setting[page_header_background_image_size]',
-				'roxtar_setting[page_header_background_image_position]',
-				'roxtar_setting[page_header_background_image_repeat]',
-				'roxtar_setting[page_header_background_image_attachment]'
+				'SKDD_setting[page_header_background_image_size]',
+				'SKDD_setting[page_header_background_image_position]',
+				'SKDD_setting[page_header_background_image_repeat]',
+				'SKDD_setting[page_header_background_image_attachment]'
 			],
 			'',
 			false,
 			[
-				'roxtar_setting[page_header_display]',
+				'SKDD_setting[page_header_display]',
 				true
 			]
 		);
 		// And trigger if parent control update.
-		wp.customize( 'roxtar_setting[page_header_display]', function( value ) {
+		wp.customize( 'SKDD_setting[page_header_display]', function( value ) {
 			value.bind( function( newval ) {
 				if ( newval ) {
 					subCondition(
-						'roxtar_setting[page_header_background_image]',
+						'SKDD_setting[page_header_background_image]',
 						[
-							'roxtar_setting[page_header_background_image_size]',
-							'roxtar_setting[page_header_background_image_position]',
-							'roxtar_setting[page_header_background_image_repeat]',
-							'roxtar_setting[page_header_background_image_attachment]'
+							'SKDD_setting[page_header_background_image_size]',
+							'SKDD_setting[page_header_background_image_position]',
+							'SKDD_setting[page_header_background_image_repeat]',
+							'SKDD_setting[page_header_background_image_attachment]'
 						],
 						'',
 						false,
 						[
-							'roxtar_setting[page_header_display]',
+							'SKDD_setting[page_header_display]',
 							true
 						]
 					);
@@ -307,9 +307,9 @@
 		// SHOP.
 		// Position Add to cart.
 		condition(
-			'roxtar_setting[shop_page_add_to_cart_button_position]',
+			'SKDD_setting[shop_page_add_to_cart_button_position]',
 			[
-				'roxtar_setting[shop_product_add_to_cart_icon]',
+				'SKDD_setting[shop_product_add_to_cart_icon]',
 			],
 			[ 'icon', 'none' ],
 			false
@@ -317,56 +317,56 @@
 
 		// Equal product content.
 		condition(
-			'roxtar_setting[shop_page_product_content_equal]',
+			'SKDD_setting[shop_page_product_content_equal]',
 			[
-				'roxtar_setting[shop_page_product_content_min_height]',
+				'SKDD_setting[shop_page_product_content_min_height]',
 			],
 			false
 		);
 
 		// Equal image height.
 		condition(
-			'roxtar_setting[shop_page_product_image_equal_height]',
+			'SKDD_setting[shop_page_product_image_equal_height]',
 			[
-				'roxtar_setting[shop_page_product_image_height]',
+				'SKDD_setting[shop_page_product_image_height]',
 			],
 			false
 		);
 
 		// Sale square.
 		condition(
-			'roxtar_setting[shop_page_sale_square]',
+			'SKDD_setting[shop_page_sale_square]',
 			[
-				'roxtar_setting[shop_page_sale_size]',
+				'SKDD_setting[shop_page_sale_size]',
 			],
 			false
 		);
 
 		// Out of stock square.
 		condition(
-			'roxtar_setting[shop_page_out_of_stock_square]',
+			'SKDD_setting[shop_page_out_of_stock_square]',
 			[
-				'roxtar_setting[shop_page_out_of_stock_size]',
+				'SKDD_setting[shop_page_out_of_stock_size]',
 			],
 			false
 		);
 
 		// Product card border.
 		condition(
-			'roxtar_setting[shop_page_product_card_border_style]',
+			'SKDD_setting[shop_page_product_card_border_style]',
 			[
-				'roxtar_setting[shop_page_product_card_border_width]',
-				'roxtar_setting[shop_page_product_card_border_color]',
+				'SKDD_setting[shop_page_product_card_border_width]',
+				'SKDD_setting[shop_page_product_card_border_color]',
 			],
 			'none'
 		);
 
 		// Product image border.
 		condition(
-			'roxtar_setting[shop_page_product_image_border_style]',
+			'SKDD_setting[shop_page_product_image_border_style]',
 			[
-				'roxtar_setting[shop_page_product_image_border_width]',
-				'roxtar_setting[shop_page_product_image_border_color]',
+				'SKDD_setting[shop_page_product_image_border_width]',
+				'SKDD_setting[shop_page_product_image_border_color]',
 			],
 			'none'
 		);
@@ -374,20 +374,20 @@
 		// SHOP SINGLE.
 		// Product related.
 		condition(
-			'roxtar_setting[shop_single_related_product]',
+			'SKDD_setting[shop_single_related_product]',
 			[
-				'roxtar_setting[shop_single_product_related_total]',
-				'roxtar_setting[shop_single_product_related_columns]',
+				'SKDD_setting[shop_single_product_related_total]',
+				'SKDD_setting[shop_single_product_related_columns]',
 			],
 			false
 		);
 
 		// Gallery layout.
 		condition(
-			'roxtar_setting[shop_single_gallery_layout]',
+			'SKDD_setting[shop_single_gallery_layout]',
 			[
-				'roxtar_setting[shop_single_product_sticky_top_space]',
-				'roxtar_setting[shop_single_product_sticky_bottom_space]',
+				'SKDD_setting[shop_single_product_sticky_top_space]',
+				'SKDD_setting[shop_single_product_sticky_bottom_space]',
 			],
 			'column',
 			true
@@ -395,12 +395,12 @@
 
 		// Product Single Button Add To Cart.
 		condition(
-			'roxtar_setting[shop_single_product_button_cart]',
+			'SKDD_setting[shop_single_product_button_cart]',
 			[
-				'roxtar_setting[shop_single_button_cart_background]',
-				'roxtar_setting[shop_single_button_cart_color]',
-				'roxtar_setting[shop_single_button_background_hover]',
-				'roxtar_setting[shop_single_button_color_hover]',
+				'SKDD_setting[shop_single_button_cart_background]',
+				'SKDD_setting[shop_single_button_cart_color]',
+				'SKDD_setting[shop_single_button_background_hover]',
+				'SKDD_setting[shop_single_button_color_hover]',
 			],
 			false
 		);
@@ -408,39 +408,39 @@
 
 		// Product recently viewed.
 		condition(
-			'roxtar_setting[shop_single_product_recently_viewed]',
+			'SKDD_setting[shop_single_product_recently_viewed]',
 			[
-				'roxtar_setting[shop_single_recently_viewed_title]',
-				'roxtar_setting[shop_single_recently_viewed_count]',
+				'SKDD_setting[shop_single_recently_viewed_title]',
+				'SKDD_setting[shop_single_recently_viewed_count]',
 			],
 			false
 		);
 
 		// FOOTER SECTION.
 		condition(
-			'roxtar_setting[scroll_to_top]',
+			'SKDD_setting[scroll_to_top]',
 			[
-				'roxtar_setting[scroll_to_top_background]',
-				'roxtar_setting[scroll_to_top_color]',
-				'roxtar_setting[scroll_to_top_position]',
-				'roxtar_setting[scroll_to_top_border_radius]',
-				'roxtar_setting[scroll_to_top_offset_bottom]',
-				'roxtar_setting[scroll_to_top_on]',
-				'roxtar_setting[scroll_to_top_icon_size]',
+				'SKDD_setting[scroll_to_top_background]',
+				'SKDD_setting[scroll_to_top_color]',
+				'SKDD_setting[scroll_to_top_position]',
+				'SKDD_setting[scroll_to_top_border_radius]',
+				'SKDD_setting[scroll_to_top_offset_bottom]',
+				'SKDD_setting[scroll_to_top_on]',
+				'SKDD_setting[scroll_to_top_icon_size]',
 			],
 			false
 		);
 		// Disable footer.
 		condition(
-			'roxtar_setting[footer_display]',
+			'SKDD_setting[footer_display]',
 			[
-				'roxtar_setting[footer_space]',
-				'roxtar_setting[footer_column]',
-				'roxtar_setting[footer_background_color]',
-				'roxtar_setting[footer_heading_color]',
-				'roxtar_setting[footer_link_color]',
-				'roxtar_setting[footer_text_color]',
-				'roxtar_setting[footer_custom_text]',
+				'SKDD_setting[footer_space]',
+				'SKDD_setting[footer_column]',
+				'SKDD_setting[footer_background_color]',
+				'SKDD_setting[footer_heading_color]',
+				'SKDD_setting[footer_link_color]',
+				'SKDD_setting[footer_text_color]',
+				'SKDD_setting[footer_custom_text]',
 				'footer_text_divider',
 				'footer_background_color_divider'
 			]

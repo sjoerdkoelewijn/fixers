@@ -4,11 +4,11 @@
  *
  * Learn more: https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package roxtar
+ * @package SKDD
  */
 
 get_header();
 
-do_action( 'roxtar_theme_archive' );
+do_action( 'SKDD_theme_archive' );
 
 get_footer();

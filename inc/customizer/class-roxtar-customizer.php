@@ -1,39 +1,39 @@
 <?php
 /**
- * Roxtar Customizer Class
+ * SKDD Customizer Class
  *
- * @package  roxtar
+ * @package  SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Roxtar_Customizer' ) ) :
+if ( ! class_exists( 'SKDD_Customizer' ) ) :
 
 	/**
-	 * The Roxtar Customizer class
+	 * The SKDD Customizer class
 	 */
-	class Roxtar_Customizer {
+	class SKDD_Customizer {
 
 		/**
 		 * Setup class.
 		 */
 		public function __construct() {
-			add_action( 'customize_register', array( $this, 'roxtar_customize_register' ) );
-			add_action( 'customize_controls_enqueue_scripts', array( $this, 'roxtar_customize_controls_scripts' ) );
-			add_action( 'customize_controls_print_styles', array( $this, 'roxtar_customize_controls_styles' ) );
+			add_action( 'customize_register', array( $this, 'SKDD_customize_register' ) );
+			add_action( 'customize_controls_enqueue_scripts', array( $this, 'SKDD_customize_controls_scripts' ) );
+			add_action( 'customize_controls_print_styles', array( $this, 'SKDD_customize_controls_styles' ) );
 		}
 
 		/**
 		 * Add script for customize controls
 		 */
-		public function roxtar_customize_controls_scripts() {
+		public function SKDD_customize_controls_scripts() {
 			wp_enqueue_script(
-				'roxtar-condition-control',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/conditional/js/condition.js',
+				'SKDD-condition-control',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/conditional/js/condition.js',
 				array(),
-				roxtar_version(),
+				SKDD_version(),
 				true
 			);
 		}
@@ -41,21 +41,21 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 		/**
 		 * Add style for customize controls
 		 */
-		public function roxtar_customize_controls_styles() {
+		public function SKDD_customize_controls_styles() {
 			wp_enqueue_style(
-				'roxtar-condition-control',
-				ROXTAR_THEME_URI . 'inc/customizer/custom-controls/conditional/css/condition.css',
+				'SKDD-condition-control',
+				SKDD_THEME_URI . 'inc/customizer/custom-controls/conditional/css/condition.css',
 				array(),
-				roxtar_version()
+				SKDD_version()
 			);
 		}
 
 		/**
-		 * Returns an array of the desired default Roxtar Options
+		 * Returns an array of the desired default SKDD Options
 		 *
 		 * @return array
 		 */
-		public static function roxtar_get_roxtar_default_setting_values() {
+		public static function SKDD_get_SKDD_default_setting_values() {
 			$args = array(
 				// CONTAINER.
 				'header_width'                         	  => 'Large',
@@ -144,7 +144,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'footer_heading_color'                    => '#2b2b2b',
 				'footer_link_color'                       => '#8f8f8f',
 				'footer_text_color'                       => '#8f8f8f',
-				'footer_custom_text'                      => roxtar_footer_custom_text(),
+				'footer_custom_text'                      => SKDD_footer_custom_text(),
 				// Scroll To Top.
 				'scroll_to_top'                           => true,
 				'scroll_to_top_background'                => '#000000',
@@ -213,7 +213,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				// Sale tag.
 				'shop_page_sale_tag_position'             => 'left',
 				'shop_page_sale_percent'                  => true,
-				'shop_page_sale_text'                     => __( 'Sale!', 'roxtar' ),
+				'shop_page_sale_text'                     => __( 'Sale!', 'SKDD' ),
 				'shop_page_sale_border_radius'            => 0,
 				'shop_page_sale_square'                   => false,
 				'shop_page_sale_size'                     => 40,
@@ -221,7 +221,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'shop_page_sale_bg_color'                 => '#1346af',
 				// Out of stock label.
 				'shop_page_out_of_stock_position'         => 'left',
-				'shop_page_out_of_stock_text'             => __( 'Out Of Stock', 'roxtar' ),
+				'shop_page_out_of_stock_text'             => __( 'Out Of Stock', 'SKDD' ),
 				'shop_page_out_of_stock_border_radius'    => 0,
 				'shop_page_out_of_stock_square'           => false,
 				'shop_page_out_of_stock_size'             => 40,
@@ -253,7 +253,7 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'shop_single_product_related_columns'     => 4,
 				// Recently view.
 				'shop_single_product_recently_viewed'     => false,
-				'shop_single_recently_viewed_title'       => __( 'Recently Viewed Products', 'roxtar' ),
+				'shop_single_recently_viewed_title'       => __( 'Recently Viewed Products', 'SKDD' ),
 				'shop_single_recently_viewed_count'       => 4,
 				// Single Product Add To Cart.
 				'shop_single_button_cart_background'      => '#000000',
@@ -281,24 +281,24 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 				'sidebar_width'                           => 20,
 				// 404.
 				'error_404_image'                         => '',
-				'error_404_text'                          => __( 'Oops! The page you are looking for cannot be found.', 'roxtar' ),
+				'error_404_text'                          => __( 'Oops! The page you are looking for cannot be found.', 'SKDD' ),
 			);
 
-			return apply_filters( 'roxtar_setting_default_values', $args );
+			return apply_filters( 'SKDD_setting_default_values', $args );
 		}
 
 		/**
-		 * Get all of the Roxtar theme option.
+		 * Get all of the SKDD theme option.
 		 *
-		 * @return array $roxtar_options The Roxtar Theme Options.
+		 * @return array $SKDD_options The SKDD Theme Options.
 		 */
-		public function roxtar_get_roxtar_options() {
-			$roxtar_options = wp_parse_args(
-				get_option( 'roxtar_setting', array() ),
-				self::roxtar_get_roxtar_default_setting_values()
+		public function SKDD_get_SKDD_options() {
+			$SKDD_options = wp_parse_args(
+				get_option( 'SKDD_setting', array() ),
+				self::SKDD_get_SKDD_default_setting_values()
 			);
 
-			return apply_filters( 'roxtar_options', $roxtar_options );
+			return apply_filters( 'SKDD_options', $SKDD_options );
 		}
 
 		/**
@@ -306,13 +306,13 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 */
-		public function roxtar_customize_register( $wp_customize ) {
+		public function SKDD_customize_register( $wp_customize ) {
 
 			// Custom default section, panel.
-			require_once ROXTAR_THEME_DIR . 'inc/customizer/override-defaults.php';
+			require_once SKDD_THEME_DIR . 'inc/customizer/override-defaults.php';
 
 			// Add customizer custom controls.
-			$customizer_controls = glob( ROXTAR_THEME_DIR . 'inc/customizer/custom-controls/**/*.php' );
+			$customizer_controls = glob( SKDD_THEME_DIR . 'inc/customizer/custom-controls/**/*.php' );
 			foreach ( $customizer_controls as $file ) {
 				if ( file_exists( $file ) ) {
 					require_once $file;
@@ -320,10 +320,10 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 			}
 
 			// Register section & panel.
-			require_once ROXTAR_THEME_DIR . 'inc/customizer/register-sections.php';
+			require_once SKDD_THEME_DIR . 'inc/customizer/register-sections.php';
 
 			// Add customizer sections.
-			$customizer_sections = glob( ROXTAR_THEME_DIR . 'inc/customizer/sections/**/*.php' );
+			$customizer_sections = glob( SKDD_THEME_DIR . 'inc/customizer/sections/**/*.php' );
 			foreach ( $customizer_sections as $file ) {
 				if ( file_exists( $file ) ) {
 					require_once $file;
@@ -332,11 +332,11 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 
 			// Register Control Type - Register for controls has content_template function.
 			if ( method_exists( $wp_customize, 'register_control_type' ) ) {
-				$wp_customize->register_control_type( 'Roxtar_Section_Control' );
-				$wp_customize->register_control_type( 'Roxtar_Color_Control' );
-				$wp_customize->register_control_type( 'Roxtar_Typography_Control' );
-				$wp_customize->register_control_type( 'Roxtar_Range_Slider_Control' );
-				$wp_customize->register_control_type( 'Roxtar_Sortable_Control' );
+				$wp_customize->register_control_type( 'SKDD_Section_Control' );
+				$wp_customize->register_control_type( 'SKDD_Color_Control' );
+				$wp_customize->register_control_type( 'SKDD_Typography_Control' );
+				$wp_customize->register_control_type( 'SKDD_Range_Slider_Control' );
+				$wp_customize->register_control_type( 'SKDD_Sortable_Control' );
 			}
 
 
@@ -345,4 +345,4 @@ if ( ! class_exists( 'Roxtar_Customizer' ) ) :
 
 endif;
 
-return new Roxtar_Customizer();
+return new SKDD_Customizer();

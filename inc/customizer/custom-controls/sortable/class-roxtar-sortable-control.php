@@ -2,7 +2,7 @@
 /**
  * Sortable for Customizer.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,14 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Create a Sortable control.
  */
-class Roxtar_Sortable_Control extends WP_Customize_Control {
+class SKDD_Sortable_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'roxtar-sortable';
+	public $type = 'SKDD-sortable';
 
 	/**
 	 * Description
@@ -35,26 +35,26 @@ class Roxtar_Sortable_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'roxtar-sortable',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable.js',
+			'SKDD-sortable',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable.js',
 			[],
-			roxtar_version(),
+			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_script(
-			'roxtar-sortable-handle',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable-handle.js',
-			[ 'roxtar-sortable' ],
-			roxtar_version(),
+			'SKDD-sortable-handle',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable-handle.js',
+			[ 'SKDD-sortable' ],
+			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_style(
-			'roxtar-sortable',
-			ROXTAR_THEME_URI . 'inc/customizer/custom-controls/sortable/css/sortable.css',
+			'SKDD-sortable',
+			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/css/sortable.css',
 			[],
-			roxtar_version()
+			SKDD_version()
 		);
 	}
 
@@ -89,7 +89,7 @@ class Roxtar_Sortable_Control extends WP_Customize_Control {
 				return;
 			}
 		#>
-		<div class="roxtar-sortable-control">
+		<div class="SKDD-sortable-control">
 			<# if ( data.label ) { #>
 				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
@@ -98,12 +98,12 @@ class Roxtar_Sortable_Control extends WP_Customize_Control {
 				<span class="description customize-control-description">{{ data.description }}</span>
 			<# } #>
 
-			<div class="roxtar-sortable-control-list">
+			<div class="SKDD-sortable-control-list">
 				<#
 					_.each( data.value, function( choiceID ) {
 						var _choiceId = data.id + '_' + choiceID;
 					#>
-					<div class="roxtar-sortable-list-item checked" data-value="{{{ choiceID }}}">
+					<div class="SKDD-sortable-list-item checked" data-value="{{{ choiceID }}}">
 						<label class="sortable-item-icon-visibility dashicons dashicons-visibility" for="{{{ _choiceId }}}">
 							<input class="sortable-item-input" type="checkbox" name="{{{ _choiceId }}}" id="{{{ _choiceId }}}" checked="checked">
 						</label>
@@ -120,7 +120,7 @@ class Roxtar_Sortable_Control extends WP_Customize_Control {
 							return;
 						}
 					#>
-					<div class="roxtar-sortable-list-item" data-value="{{{ value }}}">
+					<div class="SKDD-sortable-list-item" data-value="{{{ value }}}">
 						<label class="sortable-item-icon-visibility dashicons dashicons-hidden" for="{{{ _id }}}">
 							<input class="sortable-item-input" type="checkbox" name="{{{ _id }}}" id="{{{ _id }}}">
 						</label>
@@ -132,7 +132,7 @@ class Roxtar_Sortable_Control extends WP_Customize_Control {
 			<#
 				var _value = ( Array.isArray( data.value ) && data.value.length ) ? data.value.join( ':' ) : '';
 			#>
-			<input type="hidden" value="{{{ _value }}}" class="roxtar-sortable-control-value">
+			<input type="hidden" value="{{{ _value }}}" class="SKDD-sortable-control-value">
 		</div>
 		<?php
 	}

@@ -2,7 +2,7 @@
 /**
  * Primary menu typography
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // menu font family.
 $wp_customize->add_setting(
-	'roxtar_setting[menu_font_family]',
+	'SKDD_setting[menu_font_family]',
 	array(
 		'default'           => $defaults['menu_font_family'],
 		'type'              => 'option',
@@ -36,13 +36,13 @@ $wp_customize->add_setting(
 	'menu_font_family_variants',
 	array(
 		'default'           => $defaults['menu_font_family_variants'],
-		'sanitize_callback' => 'roxtar_sanitize_variants',
+		'sanitize_callback' => 'SKDD_sanitize_variants',
 	)
 );
 
 // menu font weight.
 $wp_customize->add_setting(
-	'roxtar_setting[menu_font_weight]',
+	'SKDD_setting[menu_font_weight]',
 	array(
 		'default'           => $defaults['menu_font_weight'],
 		'type'              => 'option',
@@ -53,7 +53,7 @@ $wp_customize->add_setting(
 
 // menu text transform.
 $wp_customize->add_setting(
-	'roxtar_setting[menu_font_transform]',
+	'SKDD_setting[menu_font_transform]',
 	array(
 		'default'           => $defaults['menu_font_transform'],
 		'type'              => 'option',
@@ -64,18 +64,18 @@ $wp_customize->add_setting(
 
 // add control for menu typography.
 $wp_customize->add_control(
-	new Roxtar_Typography_Control(
+	new SKDD_Typography_Control(
 		$wp_customize,
 		'menu_typography',
 		array(
 			'section'  => 'menu_font_section',
-			'label'    => __( 'Menu Font', 'roxtar' ),
+			'label'    => __( 'Menu Font', 'SKDD' ),
 			'settings' => array(
-				'family'    => 'roxtar_setting[menu_font_family]',
+				'family'    => 'SKDD_setting[menu_font_family]',
 				'variant'   => 'menu_font_family_variants',
 				'category'  => 'menu_font_category',
-				'weight'    => 'roxtar_setting[menu_font_weight]',
-				'transform' => 'roxtar_setting[menu_font_transform]',
+				'weight'    => 'SKDD_setting[menu_font_weight]',
+				'transform' => 'SKDD_setting[menu_font_transform]',
 			),
 		)
 	)
@@ -89,7 +89,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'parent_menu_divider',
 		array(
@@ -112,7 +112,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'parent_menu_title',
 		array(
-			'label'    => __( 'Parent Menu', 'roxtar' ),
+			'label'    => __( 'Parent Menu', 'SKDD' ),
 			'section'  => 'menu_font_section',
 			'settings' => 'parent_menu_title',
 			'type'     => 'hidden',
@@ -122,7 +122,7 @@ $wp_customize->add_control(
 
 // parent menu font size.
 $wp_customize->add_setting(
-	'roxtar_setting[parent_menu_font_size]',
+	'SKDD_setting[parent_menu_font_size]',
 	array(
 		'default'           => $defaults['parent_menu_font_size'],
 		'sanitize_callback' => 'absint',
@@ -132,20 +132,20 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[parent_menu_font_size]',
+		'SKDD_setting[parent_menu_font_size]',
 		array(
-			'type'           => 'roxtar-range-slider',
-			'description'    => __( 'Font Size', 'roxtar' ),
+			'type'           => 'SKDD-range-slider',
+			'description'    => __( 'Font Size', 'SKDD' ),
 			'section'        => 'menu_font_section',
 			'settings'       => array(
-				'desktop' => 'roxtar_setting[parent_menu_font_size]',
+				'desktop' => 'SKDD_setting[parent_menu_font_size]',
 			),
 			'choices'        => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_parent_menu_font_size_min_step', 10 ),
-					'max'  => apply_filters( 'roxtar_parent_menu_font_size_max_step', 60 ),
+					'min'  => apply_filters( 'SKDD_parent_menu_font_size_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_parent_menu_font_size_max_step', 60 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -157,7 +157,7 @@ $wp_customize->add_control(
 
 // parent menu line height.
 $wp_customize->add_setting(
-	'roxtar_setting[parent_menu_line_height]',
+	'SKDD_setting[parent_menu_line_height]',
 	array(
 		'default'           => $defaults['parent_menu_line_height'],
 		'sanitize_callback' => 'absint',
@@ -167,20 +167,20 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[parent_menu_line_height]',
+		'SKDD_setting[parent_menu_line_height]',
 		array(
-			'type'           => 'roxtar-range-slider',
-			'description'    => __( 'Line Height', 'roxtar' ),
+			'type'           => 'SKDD-range-slider',
+			'description'    => __( 'Line Height', 'SKDD' ),
 			'section'        => 'menu_font_section',
 			'settings'       => array(
-				'desktop' => 'roxtar_setting[parent_menu_line_height]',
+				'desktop' => 'SKDD_setting[parent_menu_line_height]',
 			),
 			'choices'        => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_parent_menu_line_height_min_step', 10 ),
-					'max'  => apply_filters( 'roxtar_parent_menu_line_height_max_step', 100 ),
+					'min'  => apply_filters( 'SKDD_parent_menu_line_height_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_parent_menu_line_height_max_step', 100 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -198,7 +198,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'sub_menu_divider',
 		array(
@@ -221,7 +221,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'sub_menu_title',
 		array(
-			'label'    => __( 'Sub Menu', 'roxtar' ),
+			'label'    => __( 'Sub Menu', 'SKDD' ),
 			'section'  => 'menu_font_section',
 			'settings' => 'sub_menu_title',
 			'type'     => 'hidden',
@@ -231,7 +231,7 @@ $wp_customize->add_control(
 
 // sub menu font size.
 $wp_customize->add_setting(
-	'roxtar_setting[sub_menu_font_size]',
+	'SKDD_setting[sub_menu_font_size]',
 	array(
 		'default'           => $defaults['sub_menu_font_size'],
 		'sanitize_callback' => 'absint',
@@ -241,20 +241,20 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[sub_menu_font_size]',
+		'SKDD_setting[sub_menu_font_size]',
 		array(
-			'type'        => 'roxtar-range-slider',
-			'description' => __( 'Font Size', 'roxtar' ),
+			'type'        => 'SKDD-range-slider',
+			'description' => __( 'Font Size', 'SKDD' ),
 			'section'     => 'menu_font_section',
 			'settings'    => array(
-				'desktop' => 'roxtar_setting[sub_menu_font_size]',
+				'desktop' => 'SKDD_setting[sub_menu_font_size]',
 			),
 			'choices'     => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_sub_menu_font_size_min_step', 10 ),
-					'max'  => apply_filters( 'roxtar_sub_menu_font_size_max_step', 100 ),
+					'min'  => apply_filters( 'SKDD_sub_menu_font_size_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_sub_menu_font_size_max_step', 100 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -266,7 +266,7 @@ $wp_customize->add_control(
 
 // sub menu line height.
 $wp_customize->add_setting(
-	'roxtar_setting[sub_menu_line_height]',
+	'SKDD_setting[sub_menu_line_height]',
 	array(
 		'default'           => $defaults['sub_menu_line_height'],
 		'sanitize_callback' => 'absint',
@@ -276,20 +276,20 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Roxtar_Range_Slider_Control(
+	new SKDD_Range_Slider_Control(
 		$wp_customize,
-		'roxtar_setting[sub_menu_line_height]',
+		'SKDD_setting[sub_menu_line_height]',
 		array(
-			'type'        => 'roxtar-range-slider',
-			'description' => __( 'Line Height', 'roxtar' ),
+			'type'        => 'SKDD-range-slider',
+			'description' => __( 'Line Height', 'SKDD' ),
 			'section'     => 'menu_font_section',
 			'settings'    => array(
-				'desktop' => 'roxtar_setting[sub_menu_line_height]',
+				'desktop' => 'SKDD_setting[sub_menu_line_height]',
 			),
 			'choices'     => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'roxtar_sub_menu_line_height_min_step', 10 ),
-					'max'  => apply_filters( 'roxtar_sub_menu_line_height_max_step', 100 ),
+					'min'  => apply_filters( 'SKDD_sub_menu_line_height_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_sub_menu_line_height_max_step', 100 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',

@@ -1,10 +1,10 @@
 ( function( api ) {
 
-	api.controlConstructor['roxtar-customizer-typography'] = api.Control.extend( {
+	api.controlConstructor['SKDD-customizer-typography'] = api.Control.extend( {
 		ready: function() {
 			var control = this;
 
-			control.container.on( 'change', '.roxtar-font-family select',
+			control.container.on( 'change', '.SKDD-font-family select',
 				function() {
 					var _this = jQuery( this ),
 						_value = _this.val(),
@@ -20,13 +20,13 @@
 					}
 
 					setTimeout( function() {
-						// Send our request to the roxtar_get_all_google_fonts_ajax function
+						// Send our request to the SKDD_get_all_google_fonts_ajax function
 						var response = jQuery.getJSON({
 							type: 'POST',
 							url: ajaxurl,
 							data: {
-								action: 'roxtar_get_all_google_fonts_ajax',
-								roxtar_customize_nonce: roxtar_customize.nonce
+								action: 'SKDD_get_all_google_fonts_ajax',
+								SKDD_customize_nonce: SKDD_customize.nonce
 							},
 							async: false,
 							dataType: 'json',
@@ -43,19 +43,19 @@
 
 							// Get existing variants if this font is already selected
 							var got_variants = false;
-							jQuery( '.roxtar-font-family select' ).not( _this ).each( function( key, select ) {
-								var parent = jQuery( this ).closest( '.roxtar-font-family' );
+							jQuery( '.SKDD-font-family select' ).not( _this ).each( function( key, select ) {
+								var parent = jQuery( this ).closest( '.SKDD-font-family' );
 
 								if ( _value == jQuery( select ).val() && _this.data( 'category' ) !== jQuery( select ).data( 'category' ) ) {
 									if ( ! got_variants ) {
-										updated_variants = jQuery( parent.next( '.roxtar-font-variant' ).find( 'select' ) ).val();
+										updated_variants = jQuery( parent.next( '.SKDD-font-variant' ).find( 'select' ) ).val();
 										got_variants = true;
 									}
 								}
 							} );
 
 							// We're using a Google font, so show the variants field
-							_this.closest( '.roxtar-font-family' ).next( 'div' ).show();
+							_this.closest( '.SKDD-font-family' ).next( 'div' ).show();
 
 							// Remove existing variants
 							jQuery( 'select[name="' + _variantsID + '"]' ).find( 'option' ).remove();
@@ -76,7 +76,7 @@
 							control.settings[ 'category' ].set( fonts[ id ].category );
 							jQuery( 'input[name="' + _categoryID + '"' ).val( fonts[ id ].category );
 						} else {
-							_this.closest( '.roxtar-font-family' ).next( 'div' ).hide();
+							_this.closest( '.SKDD-font-family' ).next( 'div' ).hide();
 							control.settings[ 'category' ].set( '' )
 							control.settings[ 'variant' ].set( '' )
 							jQuery( 'input[name="' + _categoryID + '"' ).val( '' );
@@ -86,16 +86,16 @@
 				}
 			);
 
-			control.container.on( 'change', '.roxtar-font-variant select',
+			control.container.on( 'change', '.SKDD-font-variant select',
 				function() {
 					var _this = jQuery( this );
 					var variants = _this.val();
 
 					control.settings['variant'].set( variants );
 
-					jQuery( '.roxtar-font-variant select' ).each( function( key, value ) {
+					jQuery( '.SKDD-font-variant select' ).each( function( key, value ) {
 						var this_control = jQuery( this ).closest( 'li' ).attr( 'id' ).replace( 'customize-control-', '' );
-						var parent = jQuery( this ).closest( '.roxtar-font-variant' );
+						var parent = jQuery( this ).closest( '.SKDD-font-variant' );
 						var font_val = api.control( this_control ).settings['family'].get();
 
 						if ( font_val == control.settings['family'].get() && _this.attr( 'name' ) !== jQuery( value ).attr( 'name' ) ) {
@@ -106,19 +106,19 @@
 				}
 			);
 
-			control.container.on( 'change', '.roxtar-font-category input',
+			control.container.on( 'change', '.SKDD-font-category input',
 				function() {
 					control.settings['category'].set( jQuery( this ).val() );
 				}
 			);
 
-			control.container.on( 'change', '.roxtar-font-weight select',
+			control.container.on( 'change', '.SKDD-font-weight select',
 				function() {
 					control.settings['weight'].set( jQuery( this ).val() );
 				}
 			);
 
-			control.container.on( 'change', '.roxtar-font-transform select',
+			control.container.on( 'change', '.SKDD-font-transform select',
 				function() {
 					control.settings['transform'].set( jQuery( this ).val() );
 				}
@@ -131,8 +131,8 @@
 
 jQuery( document ).ready( function($) {
 
-	jQuery( '.roxtar-font-family select' ).selectWoo();
-	jQuery( '.roxtar-font-variant' ).each( function( key, value ) {
+	jQuery( '.SKDD-font-family select' ).selectWoo();
+	jQuery( '.SKDD-font-variant' ).each( function( key, value ) {
 		var _this = $( this );
 		var value = _this.data( 'saved-value' );
 		if ( value ) {
@@ -141,10 +141,10 @@ jQuery( document ).ready( function($) {
 		_this.find( 'select' ).selectWoo().val( value ).trigger( 'change.select2' );
 	} );
 
-	$( ".roxtar-font-family" ).each( function( key, value ) {
+	$( ".SKDD-font-family" ).each( function( key, value ) {
 		var _this = $( this );
 		if ( $.inArray( _this.find( 'select' ).val(), typography_defaults ) !== -1 ) {
-			_this.next( '.roxtar-font-variant' ).hide();
+			_this.next( '.SKDD-font-variant' ).hide();
 		}
 	});
 

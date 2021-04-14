@@ -2,28 +2,28 @@
 /**
  * Widget Recent Post with Thumbnail
  *
- * @package roxtar
+ * @package SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
+if ( ! class_exists( 'SKDD_Recent_Post_Thumbnail' ) ) {
 	/**
 	 * Widget Recent Post with Thumbnail class
 	 */
-	class Roxtar_Recent_Post_Thumbnail extends WP_Widget {
+	class SKDD_Recent_Post_Thumbnail extends WP_Widget {
 		/**
 		 * Setup
 		 */
 		public function __construct() {
 			parent::__construct(
-				'roxtar_recent_post_with_thumbnail',
-				__( 'Roxtar Recent Post With Thumbnail', 'roxtar' ),
+				'SKDD_recent_post_with_thumbnail',
+				__( 'SKDD Recent Post With Thumbnail', 'SKDD' ),
 				array(
-					'classname'   => 'roxtar_recent_post_with_thumbnail',
-					'description' => __( 'List the most recent posts with post titles, thumbnail', 'roxtar' ),
+					'classname'   => 'SKDD_recent_post_with_thumbnail',
+					'description' => __( 'List the most recent posts with post titles, thumbnail', 'SKDD' ),
 				)
 			);
 		}
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
 		 */
 		public function form( $instance ) {
 			$default = array(
-				'title'  => __( 'Recent Posts', 'roxtar' ),
+				'title'  => __( 'Recent Posts', 'SKDD' ),
 				'number' => 3,
 			);
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
 			?>
 
 			<p>
-				<label for='<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>'><?php esc_html_e( 'Title:', 'roxtar' ); ?></label>
+				<label for='<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>'><?php esc_html_e( 'Title:', 'SKDD' ); ?></label>
 				<input
 					class="widefat"
 					type='text'
@@ -55,7 +55,7 @@ if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
 					id='<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>' />
 			</p>
 			<p>
-				<label for='<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>'><?php esc_html_e( 'Number:', 'roxtar' ); ?></label>
+				<label for='<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>'><?php esc_html_e( 'Number:', 'SKDD' ); ?></label>
 				<input
 					class="widefat"
 					type="text"
@@ -112,7 +112,7 @@ if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
 								array( 'alt' => get_the_title() )
 							);
 						} else {
-							echo '<img class="widget-post-thumbnail-default-img" alt="' . esc_attr( get_the_title() ) . '" src="' . esc_url( ROXTAR_THEME_URI . 'assets/images/thumbnail-default.jpg' ) . '">';
+							echo '<img class="widget-post-thumbnail-default-img" alt="' . esc_attr( get_the_title() ) . '" src="' . esc_url( SKDD_THEME_URI . 'assets/images/thumbnail-default.jpg' ) . '">';
 						}
 						?>
 				   </a>
@@ -154,4 +154,4 @@ if ( ! class_exists( 'Roxtar_Recent_Post_Thumbnail' ) ) {
 	}
 }
 
-return new Roxtar_Recent_Post_Thumbnail();
+return new SKDD_Recent_Post_Thumbnail();

@@ -2,7 +2,7 @@
 /**
  * Single template
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -14,11 +14,11 @@
 		while ( have_posts() ) :
 			the_post();
 
-			do_action( 'roxtar_single_post_before' );
+			do_action( 'SKDD_single_post_before' );
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			do_action( 'roxtar_single_post_after' );
+			do_action( 'SKDD_single_post_after' );
 
 		endwhile;
 		?>
@@ -27,4 +27,4 @@
 	</div>
 
 <?php
-do_action( 'roxtar_sidebar' );
+do_action( 'SKDD_sidebar' );

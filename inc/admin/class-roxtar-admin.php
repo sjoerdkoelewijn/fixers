@@ -1,19 +1,19 @@
 <?php
 /**
- * Roxtar Admin Class
+ * SKDD Admin Class
  *
- * @package  roxtar
+ * @package  SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Roxtar_Admin' ) ) :
+if ( ! class_exists( 'SKDD_Admin' ) ) :
 	/**
-	 * The Roxtar admin class
+	 * The SKDD admin class
 	 */
-	class Roxtar_Admin {
+	class SKDD_Admin {
 
 		/**
 		 * Instance
@@ -36,15 +36,15 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		 * Setup class.
 		 */
 		public function __construct() {
-			add_action( 'admin_notices', array( $this, 'roxtar_admin_notice' ) );
-			add_action( 'wp_ajax_dismiss_admin_notice', array( $this, 'roxtar_dismiss_admin_notice' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'roxtar_welcome_static' ) );
-			add_action( 'admin_body_class', array( $this, 'roxtar_admin_classes' ) );
-			add_filter('upload_mimes', array( $this, 'roxtar_mime_types' ) );
+			add_action( 'admin_notices', array( $this, 'SKDD_admin_notice' ) );
+			add_action( 'wp_ajax_dismiss_admin_notice', array( $this, 'SKDD_dismiss_admin_notice' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'SKDD_welcome_static' ) );
+			add_action( 'admin_body_class', array( $this, 'SKDD_admin_classes' ) );
+			add_filter('upload_mimes', array( $this, 'SKDD_mime_types' ) );
 		}
 
 		// Allow SVG uploads
-		public function roxtar_mime_types( $mimes ) {
+		public function SKDD_mime_types( $mimes ) {
 			$mimes['svg'] = 'image/svg+xml';
 			return $mimes;
 		}
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		 * @param array $classes Classes for the body element.
 		 * @return array
 		 */
-		public function roxtar_admin_classes( $classes ) {
+		public function SKDD_admin_classes( $classes ) {
 			$wp_version = version_compare( get_bloginfo( 'version' ), '5.0', '>=' ) ? 'gutenberg-version' : 'old-version';
 			$classes   .= " $wp_version";
 
@@ -66,7 +66,7 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		/**
 		 * Add admin notice
 		 */
-		public function roxtar_admin_notice() {
+		public function SKDD_admin_notice() {
 			if ( ! current_user_can( 'edit_theme_options' ) ) {
 				return;
 			}
@@ -74,21 +74,21 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 			// For theme options box.
 			if ( is_admin() && ! get_user_meta( get_current_user_id(), 'welcome_box' ) ) {
 				?>
-				<div class="roxtar-admin-notice roxtar-options-notice notice is-dismissible" data-notice="welcome_box">
-					<div class="roxtar-notice-content">
-						<div class="roxtar-notice-img">
-							<img src="<?php echo esc_url( ROXTAR_THEME_URI . 'assets/images/logo.svg' ); ?>" alt="<?php esc_attr_e( 'logo', 'roxtar' ); ?>">
+				<div class="SKDD-admin-notice SKDD-options-notice notice is-dismissible" data-notice="welcome_box">
+					<div class="SKDD-notice-content">
+						<div class="SKDD-notice-img">
+							<img src="<?php echo esc_url( SKDD_THEME_URI . 'assets/images/logo.svg' ); ?>" alt="<?php esc_attr_e( 'logo', 'SKDD' ); ?>">
 						</div>
 
-						<div class="roxtar-notice-text">
-							<div class="roxtar-notice-heading"><?php esc_html_e( 'Deze website is gemaakt door ROXTAR Online Marketing', 'roxtar' ); ?></div>
+						<div class="SKDD-notice-text">
+							<div class="SKDD-notice-heading"><?php esc_html_e( 'Deze website is gemaakt door SKDD Online Marketing', 'SKDD' ); ?></div>
 							<p>
 								<?php
 								echo wp_kses_post(
 									sprintf(
 										/* translators: Theme options */
-										__( 'Voor meer informatie kijk op onze website of neem contact op. <a href="%1$s">ROXTAR website</a>.', 'roxtar' ),
-										esc_url( admin_url( 'https://roxtar.nl/webdevelopment/' ) )
+										__( 'Voor meer informatie kijk op onze website of neem contact op. <a href="%1$s">SKDD website</a>.', 'SKDD' ),
+										esc_url( admin_url( 'https://SKDD.nl/webdevelopment/' ) )
 									)
 								);
 								?>
@@ -98,7 +98,7 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 
 					<button type="button" class="notice-dismiss">
 						<span class="spinner"></span>
-						<span class="screen-reader-text"><?php esc_html_e( 'Dismiss this notice.', 'roxtar' ); ?></span>
+						<span class="screen-reader-text"><?php esc_html_e( 'Dismiss this notice.', 'SKDD' ); ?></span>
 					</button>
 				</div>
 				<?php
@@ -108,10 +108,10 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		/**
 		 * Dismiss admin notice
 		 */
-		public function roxtar_dismiss_admin_notice() {
+		public function SKDD_dismiss_admin_notice() {
 
 			// Nonce check.
-			check_ajax_referer( 'roxtar_dismiss_admin_notice', 'nonce' );
+			check_ajax_referer( 'SKDD_dismiss_admin_notice', 'nonce' );
 
 			// Bail if user can't edit theme options.
 			if ( ! current_user_can( 'edit_theme_options' ) ) {
@@ -133,50 +133,50 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		 *
 		 * @param  obj $hook Hooks.
 		 */
-		public function roxtar_welcome_static( $hook ) {
-			$is_welcome = false !== strpos( $hook, 'roxtar-welcome' );
+		public function SKDD_welcome_static( $hook ) {
+			$is_welcome = false !== strpos( $hook, 'SKDD-welcome' );
 
 			// Dismiss admin notice.
 			wp_enqueue_style(
-				'roxtar-admin-general',
-				ROXTAR_THEME_URI . 'assets/css/admin/general.css',
+				'SKDD-admin-general',
+				SKDD_THEME_URI . 'assets/css/admin/general.css',
 				array(),
-				roxtar_version()
+				SKDD_version()
 			);
 
 			// Dismiss admin notice.
 			wp_enqueue_script(
-				'roxtar-dismiss-admin-notice',
-				ROXTAR_THEME_URI . 'assets/js/admin/dismiss-admin-notice' . roxtar_suffix() . '.js',
+				'SKDD-dismiss-admin-notice',
+				SKDD_THEME_URI . 'assets/js/admin/dismiss-admin-notice' . SKDD_suffix() . '.js',
 				array(),
-				roxtar_version(),
+				SKDD_version(),
 				true
 			);
 
 			wp_localize_script(
-				'roxtar-dismiss-admin-notice',
-				'roxtar_dismiss_admin_notice',
+				'SKDD-dismiss-admin-notice',
+				'SKDD_dismiss_admin_notice',
 				array(
-					'nonce' => wp_create_nonce( 'roxtar_dismiss_admin_notice' ),
+					'nonce' => wp_create_nonce( 'SKDD_dismiss_admin_notice' ),
 				)
 			);
 
 			// Welcome screen style.
 			if ( $is_welcome ) {
 				wp_enqueue_style(
-					'roxtar-welcome-screen',
-					ROXTAR_THEME_URI . 'assets/css/admin/welcome.css',
+					'SKDD-welcome-screen',
+					SKDD_THEME_URI . 'assets/css/admin/welcome.css',
 					array(),
-					roxtar_version()
+					SKDD_version()
 				);
 			}
 
 			// Install plugin import demo.
 			wp_enqueue_script(
-				'roxtar-install-demo',
-				ROXTAR_THEME_URI . 'assets/js/admin/install-demo' . roxtar_suffix() . '.js',
+				'SKDD-install-demo',
+				SKDD_THEME_URI . 'assets/js/admin/install-demo' . SKDD_suffix() . '.js',
 				array( 'updates' ),
-				roxtar_version(),
+				SKDD_version(),
 				true
 			);
 		}
@@ -186,50 +186,50 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 		/**
 		 * Customizer settings link
 		 */
-		public function roxtar_welcome_customizer_settings() {
+		public function SKDD_welcome_customizer_settings() {
 			$customizer_settings = apply_filters(
-				'roxtar_panel_customizer_settings',
+				'SKDD_panel_customizer_settings',
 				array(
 					'upload_logo' => array(
 						'icon'     => 'dashicons dashicons-format-image',
-						'name'     => __( 'Upload Logo', 'roxtar' ),
+						'name'     => __( 'Upload Logo', 'SKDD' ),
 						'type'     => 'control',
 						'setting'  => 'custom_logo',
 						'required' => '',
 					),
 					'set_color'   => array(
 						'icon'     => 'dashicons dashicons-admin-appearance',
-						'name'     => __( 'Set Colors', 'roxtar' ),
+						'name'     => __( 'Set Colors', 'SKDD' ),
 						'type'     => 'section',
-						'setting'  => 'roxtar_color',
+						'setting'  => 'SKDD_color',
 						'required' => '',
 					),
 					'layout'      => array(
 						'icon'     => 'dashicons dashicons-layout',
-						'name'     => __( 'Layout', 'roxtar' ),
+						'name'     => __( 'Layout', 'SKDD' ),
 						'type'     => 'panel',
-						'setting'  => 'roxtar_layout',
+						'setting'  => 'SKDD_layout',
 						'required' => '',
 					),
 					'button'      => array(
 						'icon'     => 'dashicons dashicons-admin-customizer',
-						'name'     => __( 'Buttons', 'roxtar' ),
+						'name'     => __( 'Buttons', 'SKDD' ),
 						'type'     => 'section',
-						'setting'  => 'roxtar_buttons',
+						'setting'  => 'SKDD_buttons',
 						'required' => '',
 					),
 					'typo'        => array(
 						'icon'     => 'dashicons dashicons-editor-paragraph',
-						'name'     => __( 'Typography', 'roxtar' ),
+						'name'     => __( 'Typography', 'SKDD' ),
 						'type'     => 'panel',
-						'setting'  => 'roxtar_typography',
+						'setting'  => 'SKDD_typography',
 						'required' => '',
 					),
 					'shop'        => array(
 						'icon'     => 'dashicons dashicons-cart',
-						'name'     => __( 'Shop', 'roxtar' ),
+						'name'     => __( 'Shop', 'SKDD' ),
 						'type'     => 'panel',
-						'setting'  => 'roxtar_shop',
+						'setting'  => 'SKDD_shop',
 						'required' => 'woocommerce',
 					),
 				)
@@ -240,6 +240,6 @@ if ( ! class_exists( 'Roxtar_Admin' ) ) :
 
 	}
 
-	Roxtar_Admin::get_instance();
+	SKDD_Admin::get_instance();
 
 endif;

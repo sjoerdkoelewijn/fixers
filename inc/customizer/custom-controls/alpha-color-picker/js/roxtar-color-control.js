@@ -1,14 +1,14 @@
 /**
- * Roxtar alpha color picker
+ * SKDD alpha color picker
  *
- * @package roxtar
+ * @package SKDD
  */
 
 jQuery( window ).on( 'load', function() {
 	jQuery( 'html' ).addClass( 'colorpicker-ready' );
 } );
 
-wp.customize.controlConstructor[ 'roxtar-color' ] = wp.customize.Control.extend( {
+wp.customize.controlConstructor[ 'SKDD-color' ] = wp.customize.Control.extend( {
 
 	ready: function() {
 
@@ -20,7 +20,7 @@ wp.customize.controlConstructor[ 'roxtar-color' ] = wp.customize.Control.extend(
 			inputDefault,
 			changeAction;
 
-		control.container.find( '.roxtar-color-picker-alpha' ).wpColorPicker( {
+		control.container.find( '.SKDD-color-picker-alpha' ).wpColorPicker( {
 			/**
 			 * Jquery event
 			 *

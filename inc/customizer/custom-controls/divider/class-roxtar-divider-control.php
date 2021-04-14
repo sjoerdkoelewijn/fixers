@@ -2,7 +2,7 @@
 /**
  * Class to create a custom arbitrary html control for dividers etc
  *
- * @package  roxtar
+ * @package  SKDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The arbitrary control class
  */
-class Roxtar_Divider_Control extends WP_Customize_Control {
+class SKDD_Divider_Control extends WP_Customize_Control {
 
 	/**
 	 * The settings var
@@ -35,7 +35,7 @@ class Roxtar_Divider_Control extends WP_Customize_Control {
 	 */
 	public function render_content() {
 		?>
-		<div class="roxtar-divider-customize-control">
+		<div class="SKDD-divider-customize-control">
 			<?php
 			switch ( $this->type ) {
 				case 'text':

@@ -2,9 +2,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! class_exists( 'roxtar_custom_header' ) ) {
+if ( ! class_exists( 'SKDD_custom_header' ) ) {
 
-	class roxtar_custom_header {
+	class SKDD_custom_header {
 
 		private static $instance;
 
@@ -20,7 +20,7 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 		}
 
         public function wp_action() {
-			$options = roxtar_options( false );
+			$options = SKDD_options( false );
 			$header_layout   = $options['header_layout'];
 
 		    switch ( $header_layout ) {
@@ -30,11 +30,11 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
                     break;  
 									
                 case 'layout-2':
-                    remove_action( 'roxtar_site_header', 'roxtar_site_branding', 20 );
-					remove_action( 'roxtar_site_header', 'roxtar_primary_navigation', 30 );
+                    remove_action( 'SKDD_site_header', 'SKDD_site_branding', 20 );
+					remove_action( 'SKDD_site_header', 'SKDD_primary_navigation', 30 );
 
-					add_action( 'roxtar_site_header', 'roxtar_site_branding', 30 );
-					add_action( 'roxtar_site_header', 'roxtar_primary_navigation', 20 );
+					add_action( 'SKDD_site_header', 'SKDD_site_branding', 30 );
+					add_action( 'SKDD_site_header', 'SKDD_primary_navigation', 20 );
 
                     break;  
 
@@ -43,8 +43,8 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 					break; 
 
 				case 'layout-4':
-					remove_action( 'roxtar_site_header', 'roxtar_menu_toggle_btn', 10 );
-					add_action( 'roxtar_site_header', 'roxtar_menu_toggle_btn', 60 );					
+					remove_action( 'SKDD_site_header', 'SKDD_menu_toggle_btn', 10 );
+					add_action( 'SKDD_site_header', 'SKDD_menu_toggle_btn', 60 );					
 
 					break;  		
             }      
@@ -52,5 +52,5 @@ if ( ! class_exists( 'roxtar_custom_header' ) ) {
 
     }
 
-    roxtar_custom_header::get_instance();
+    SKDD_custom_header::get_instance();
 }

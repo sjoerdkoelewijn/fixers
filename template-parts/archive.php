@@ -2,7 +2,7 @@
 /**
  * Archive template
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -22,4 +22,4 @@
 	</div>
 
 <?php
-do_action( 'roxtar_sidebar' );
+do_action( 'SKDD_sidebar' );

@@ -1,7 +1,7 @@
 /**
  * Easyzoom hanle
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';

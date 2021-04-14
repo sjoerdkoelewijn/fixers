@@ -2,35 +2,35 @@
 /**
  * Blog single customizer
  *
- * @package roxtar
+ * @package SKDD
  */
 
 // Default values.
-$defaults = roxtar_options();
+$defaults = SKDD_options();
 
 // Blog single structure.
 $wp_customize->add_setting(
-	'roxtar_setting[blog_single_structure]',
+	'SKDD_setting[blog_single_structure]',
 	array(
 		'default'           => $defaults['blog_single_structure'],
-		'sanitize_callback' => 'roxtar_sanitize_array',
+		'sanitize_callback' => 'SKDD_sanitize_array',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Sortable_Control(
+	new SKDD_Sortable_Control(
 		$wp_customize,
-		'roxtar_setting[blog_single_structure]',
+		'SKDD_setting[blog_single_structure]',
 		array(
-			'label'    => __( 'Blog Single Structure', 'roxtar' ),
-			'section'  => 'roxtar_blog_single',
-			'settings' => 'roxtar_setting[blog_single_structure]',
+			'label'    => __( 'Blog Single Structure', 'SKDD' ),
+			'section'  => 'SKDD_blog_single',
+			'settings' => 'SKDD_setting[blog_single_structure]',
 			'choices'  => apply_filters(
-				'roxtar_setting_blog_single_structure_choices',
+				'SKDD_setting_blog_single_structure_choices',
 				array(
-					'image'      => __( 'Featured Image', 'roxtar' ),
-					'title-meta' => __( 'Title', 'roxtar' ),
-					'post-meta'  => __( 'Post Meta', 'roxtar' ),
+					'image'      => __( 'Featured Image', 'SKDD' ),
+					'title-meta' => __( 'Title', 'SKDD' ),
+					'post-meta'  => __( 'Post Meta', 'SKDD' ),
 				)
 			),
 		)
@@ -39,28 +39,28 @@ $wp_customize->add_control(
 
 // Blog single post meta.
 $wp_customize->add_setting(
-	'roxtar_setting[blog_single_post_meta]',
+	'SKDD_setting[blog_single_post_meta]',
 	array(
 		'default'           => $defaults['blog_single_post_meta'],
-		'sanitize_callback' => 'roxtar_sanitize_array',
+		'sanitize_callback' => 'SKDD_sanitize_array',
 		'type'              => 'option',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Sortable_Control(
+	new SKDD_Sortable_Control(
 		$wp_customize,
-		'roxtar_setting[blog_single_post_meta]',
+		'SKDD_setting[blog_single_post_meta]',
 		array(
-			'label'    => __( 'Blog Single Post Meta', 'roxtar' ),
-			'section'  => 'roxtar_blog_single',
-			'settings' => 'roxtar_setting[blog_single_post_meta]',
+			'label'    => __( 'Blog Single Post Meta', 'SKDD' ),
+			'section'  => 'SKDD_blog_single',
+			'settings' => 'SKDD_setting[blog_single_post_meta]',
 			'choices'  => apply_filters(
-				'roxtar_setting_blog_single_post_meta_choices',
+				'SKDD_setting_blog_single_post_meta_choices',
 				array(
-					'date'     => __( 'Publish Date', 'roxtar' ),
-					'author'   => __( 'Author', 'roxtar' ),
-					'category' => __( 'Category', 'roxtar' ),
-					'comments' => __( 'Comments', 'roxtar' ),
+					'date'     => __( 'Publish Date', 'SKDD' ),
+					'author'   => __( 'Author', 'SKDD' ),
+					'category' => __( 'Category', 'SKDD' ),
+					'comments' => __( 'Comments', 'SKDD' ),
 				)
 			),
 		)
@@ -75,11 +75,11 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Divider_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
 		'blog_single_author_box_start',
 		array(
-			'section'  => 'roxtar_blog_single',
+			'section'  => 'SKDD_blog_single',
 			'settings' => 'blog_single_author_box_start',
 			'type'     => 'divider',
 		)
@@ -88,42 +88,42 @@ $wp_customize->add_control(
 
 // Author box.
 $wp_customize->add_setting(
-	'roxtar_setting[blog_single_author_box]',
+	'SKDD_setting[blog_single_author_box]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['blog_single_author_box'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[blog_single_author_box]',
+		'SKDD_setting[blog_single_author_box]',
 		array(
-			'label'    => __( 'Author Box', 'roxtar' ),
-			'section'  => 'roxtar_blog_single',
-			'settings' => 'roxtar_setting[blog_single_author_box]',
+			'label'    => __( 'Author Box', 'SKDD' ),
+			'section'  => 'SKDD_blog_single',
+			'settings' => 'SKDD_setting[blog_single_author_box]',
 		)
 	)
 );
 
 // Related post.
 $wp_customize->add_setting(
-	'roxtar_setting[blog_single_related_post]',
+	'SKDD_setting[blog_single_related_post]',
 	array(
 		'type'              => 'option',
 		'default'           => $defaults['blog_single_related_post'],
-		'sanitize_callback' => 'roxtar_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
 	)
 );
 $wp_customize->add_control(
-	new Roxtar_Switch_Control(
+	new SKDD_Switch_Control(
 		$wp_customize,
-		'roxtar_setting[blog_single_related_post]',
+		'SKDD_setting[blog_single_related_post]',
 		array(
-			'label'    => __( 'Related Post', 'roxtar' ),
-			'section'  => 'roxtar_blog_single',
-			'settings' => 'roxtar_setting[blog_single_related_post]',
+			'label'    => __( 'Related Post', 'SKDD' ),
+			'section'  => 'SKDD_blog_single',
+			'settings' => 'SKDD_setting[blog_single_related_post]',
 		)
 	)
 );

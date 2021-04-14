@@ -1,32 +1,32 @@
 <?php
 /**
- * Roxtar Get CSS
+ * SKDD Get CSS
  *
- * @package  roxtar
+ * @package  SKDD
  */
 
 /**
- * The Roxtar Get CSS class
+ * The SKDD Get CSS class
  */
-class Roxtar_Get_CSS {
+class SKDD_Get_CSS {
 	/**
 	 * Wp enqueue scripts
 	 */
 	public function __construct() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'roxtar_add_customizer_css' ), 130 );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'roxtar_guten_block_editor_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'SKDD_add_customizer_css' ), 130 );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'SKDD_guten_block_editor_assets' ) );
 	}
 
 	/**
 	 * Get Customizer css.
 	 *
-	 * @see get_roxtar_theme_mods()
+	 * @see get_SKDD_theme_mods()
 	 * @return array $styles the css
 	 */
-	public function roxtar_get_css() {
+	public function SKDD_get_css() {
 
 		// Get all theme option value.
-		$options = roxtar_options( false );
+		$options = SKDD_options( false );
 
 		// GENERATE CSS.
 		// Remove outline select on Firefox.
@@ -200,7 +200,7 @@ class Roxtar_Get_CSS {
 		}
 
 		// Header transparent.
-		if ( roxtar_header_transparent() ) {
+		if ( SKDD_header_transparent() ) {
 
 			$topbar_background_color = esc_attr( $options['topbar_background_color'] );
 			$topbar_opacity = esc_attr( $options['topbar_opacity'] );
@@ -237,7 +237,7 @@ class Roxtar_Get_CSS {
 				}
 
 				.has-header-transparent.header-transparent-for-all-devices .topbar {
-					background-color:' . roxtar_hex_to_rgb( $topbar_background_color, $topbar_opacity ) . ';
+					background-color:' . SKDD_hex_to_rgb( $topbar_background_color, $topbar_opacity ) . ';
 				}
 
 				.has-header-transparent.header-transparent-for-all-devices .site_header.active { 
@@ -304,16 +304,16 @@ class Roxtar_Get_CSS {
 					'. $page_header_color .'					
 				}
 
-				.roxtar-breadcrumb,
-				.roxtar-breadcrumb a,
+				.SKDD-breadcrumb,
+				.SKDD-breadcrumb a,
 				.rank-math-breadcrumb,
 				.rank-math-breadcrumb a{
 					color: ' . esc_attr( $options['page_header_breadcrumb_text_color'] ) . ';
 					
 				}
 
-				.page-header .roxtar-breadcrumb, 
-				.page-header .roxtar-breadcrumb a {
+				.page-header .SKDD-breadcrumb, 
+				.page-header .SKDD-breadcrumb a {
 					color: ' . esc_attr( $options['page_header_title_color'] ) . ';
 					'. $page_header_color .'
 				}
@@ -411,7 +411,7 @@ class Roxtar_Get_CSS {
 		// Sale tag.
 		if ( $options['shop_page_sale_square'] ) {
 			$styles .= '
-				.roxtar-tag-on-sale.is-square {
+				.SKDD-tag-on-sale.is-square {
 					width: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
 					height: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
 				}
@@ -428,14 +428,14 @@ class Roxtar_Get_CSS {
 		// Out of stock label.
 		if ( $options['shop_page_out_of_stock_square'] ) {
 			$styles .= '
-				.roxtar-out-of-stock-label.is-square {
+				.SKDD-out-of-stock-label.is-square {
 					width: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
 					height: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
 				}
 			';
 		}
 		$styles .= '
-			.roxtar-out-of-stock-label {
+			.SKDD-out-of-stock-label {
 				color: ' . esc_attr( $options['shop_page_out_of_stock_color'] ) . ';
 				background-color: ' . esc_attr( $options['shop_page_out_of_stock_bg_color'] ) . ';
 				border-radius: ' . esc_attr( $options['shop_page_out_of_stock_border_radius'] ) . 'px;
@@ -444,12 +444,12 @@ class Roxtar_Get_CSS {
 
 		// Single Product Add to cart.
 		$styles .= '
-			.single_add_to_cart_button.button:not(.roxtar-buy-now){
+			.single_add_to_cart_button.button:not(.SKDD-buy-now){
 				border-radius: ' . esc_attr( $options['shop_single_button_border_radius'] ) . 'px;
 				background-color:  ' . esc_attr( $options['shop_single_button_cart_background'] ) . ';
 				color:  ' . esc_attr( $options['shop_single_button_cart_color'] ) . ';
 			}
-			.single_add_to_cart_button.button:not(.roxtar-buy-now):hover{
+			.single_add_to_cart_button.button:not(.SKDD-buy-now):hover{
 				color:  ' . esc_attr( $options['shop_single_button_color_hover'] ) . ';
 				background-color:  ' . esc_attr( $options['shop_single_button_background_hover'] ) . ';
 			}
@@ -465,15 +465,15 @@ class Roxtar_Get_CSS {
 			';
 		}
 
-		return apply_filters( 'roxtar_customizer_css', $styles );
+		return apply_filters( 'SKDD_customizer_css', $styles );
 	}
 
 	/**
 	 * Add Gutenberg css.
 	 */
-	public function roxtar_guten_block_editor_assets() {
+	public function SKDD_guten_block_editor_assets() {
 		// Get all theme option value.
-		$options = roxtar_options( false );
+		$options = SKDD_options( false );
 
 		$block_styles = '
 			.edit-post-visual-editor, .edit-post-visual-editor p{
@@ -486,9 +486,9 @@ class Roxtar_Get_CSS {
 			}
 		';
 
-		wp_register_style( 'roxtar-block-editor', false ); // @codingStandardsIgnoreLine
-		wp_enqueue_style( 'roxtar-block-editor' );
-		wp_add_inline_style( 'roxtar-block-editor', $block_styles );
+		wp_register_style( 'SKDD-block-editor', false ); // @codingStandardsIgnoreLine
+		wp_enqueue_style( 'SKDD-block-editor' );
+		wp_add_inline_style( 'SKDD-block-editor', $block_styles );
 	}
 
 	/**
@@ -496,9 +496,9 @@ class Roxtar_Get_CSS {
 	 *
 	 * @return void
 	 */
-	public function roxtar_add_customizer_css() {
-		wp_add_inline_style( 'roxtar-style', $this->roxtar_get_css() );
+	public function SKDD_add_customizer_css() {
+		wp_add_inline_style( 'SKDD-style', $this->SKDD_get_css() );
 	}
 }
 
-return new Roxtar_Get_CSS();
+return new SKDD_Get_CSS();

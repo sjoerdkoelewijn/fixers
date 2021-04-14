@@ -1,24 +1,24 @@
 /**
  * Multi step checkout
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/* global roxtar_woocommerce_general, roxtar_multi_step_checkout */
+/* global SKDD_woocommerce_general, SKDD_multi_step_checkout */
 
 'use strict';
 
 // Email input validate.
-var roxtarValidateEmail = function( email ) {
+var SKDDValidateEmail = function( email ) {
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test( String( email ).toLowerCase() );
 }
 
 // Expand order review on mobile.
-var roxtarExpandOrderReview = function() {
+var SKDDExpandOrderReview = function() {
 	var multiStep = document.querySelector( '.has-multi-step-checkout' ),
 		checkout  = document.querySelector( 'form.woocommerce-checkout' ),
-		expand    = checkout ? checkout.querySelector( '.roxtar-before-order-review' ) : false,
+		expand    = checkout ? checkout.querySelector( '.SKDD-before-order-review' ) : false,
 		state     = 1;
 
 	if ( ! multiStep || ! expand ) {
@@ -37,7 +37,7 @@ var roxtarExpandOrderReview = function() {
 }
 
 // Multi step checkout.
-var roxtarMultiStepCheckout = function() {
+var SKDDMultiStepCheckout = function() {
 	var multiStep = document.querySelector( '.has-multi-step-checkout' ),
 		box       = document.querySelector( '.multi-step-checkout' );
 
@@ -232,7 +232,7 @@ var roxtarMultiStepCheckout = function() {
 
 			if ( ipv ) {
 				if ( 'email' == input.type ) {
-					if ( roxtarValidateEmail( ipv ) ) {
+					if ( SKDDValidateEmail( ipv ) ) {
 						field.classList.remove( 'field-required' );
 					} else {
 						field.classList.add( 'field-required' );
@@ -328,7 +328,7 @@ var roxtarMultiStepCheckout = function() {
 
 							if ( inputValue ) {
 								if ( 'email' == input.type ) {
-									if ( roxtarValidateEmail( inputValue ) ) {
+									if ( SKDDValidateEmail( inputValue ) ) {
 										field.classList.remove( 'field-required' );
 									} else {
 										validate = true;
@@ -511,9 +511,9 @@ var roxtarMultiStepCheckout = function() {
 					wrapperContent.classList.add( 'first' );
 
 					// Update price first step on mobile.
-					var priceMobileFirstStep = document.querySelector( '.roxtar-before-order-review .roxtar-before-order-review-total-price strong' );
+					var priceMobileFirstStep = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' );
 					if ( priceMobileFirstStep ) {
-						priceMobileFirstStep.innerText = roxtar_multi_step_checkout.content_total;
+						priceMobileFirstStep.innerText = SKDD_multi_step_checkout.content_total;
 					}
 				} else if ( lastStep ) {
 					wrapperContent.classList.add( 'last' );
@@ -551,8 +551,8 @@ var roxtarMultiStepCheckout = function() {
 			orderTotalPrice = checkout.querySelector( '.order-total .amount' ),
 			afterSubtotal   = '<tr class="shipping-placeholder">';
 
-		afterSubtotal += '<th>' + roxtar_woocommerce_general.shipping_text + '</th>';
-		afterSubtotal += '<td>' + roxtar_woocommerce_general.shipping_next + '</td>';
+		afterSubtotal += '<th>' + SKDD_woocommerce_general.shipping_text + '</th>';
+		afterSubtotal += '<td>' + SKDD_woocommerce_general.shipping_next + '</td>';
 		afterSubtotal += '</tr>';
 
 		// Add text.
@@ -561,8 +561,8 @@ var roxtarMultiStepCheckout = function() {
 		}
 
 		// Update total price on step 1.
-		if ( totalPriceValue && roxtar_multi_step_checkout.price ) {
-			totalPriceValue.innerHTML = roxtar_multi_step_checkout.price;
+		if ( totalPriceValue && SKDD_multi_step_checkout.price ) {
+			totalPriceValue.innerHTML = SKDD_multi_step_checkout.price;
 		} else if ( orderTotalPrice ) {
 			orderTotalPrice.innerHTML = subTotalPrice;
 		}
@@ -607,18 +607,18 @@ var roxtarMultiStepCheckout = function() {
 	resetCartTotal();
 }
 
-var roxtarUpdateCheckout = function() {
+var SKDDUpdateCheckout = function() {
 	// Data.
 	var data = {
 		action: 'update_checkout',
-		ajax_nonce: roxtar_multi_step_checkout.ajax_nonce
+		ajax_nonce: SKDD_multi_step_checkout.ajax_nonce
 	};
 
 	data = new URLSearchParams( data ).toString();
 
 	// Request.
 	var request = new Request(
-		roxtar_woocommerce_general.ajax_url,
+		SKDD_woocommerce_general.ajax_url,
 		{
 			method: 'POST',
 			body: data,
@@ -636,7 +636,7 @@ var roxtarUpdateCheckout = function() {
 		.then(
 			function( res ) {
 				if ( 200 !== res.status ) {
-					alert( roxtar_woocommerce_general.ajax_error );
+					alert( SKDD_woocommerce_general.ajax_error );
 					console.log( 'Status Code: ' + res.status );
 					throw res;
 				}
@@ -651,7 +651,7 @@ var roxtarUpdateCheckout = function() {
 
 				var orderTotalTd     = document.querySelector( '.order-total td' ),
 					orderTotalTdText = orderTotalTd ? orderTotalTd.innerText : '',
-					priceOnMobile    = document.querySelector( '.roxtar-before-order-review .roxtar-before-order-review-total-price strong' ),
+					priceOnMobile    = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' ),
 					isFirstStep      = document.querySelector( '.multi-step-checkout-wrapper.first' ),
 					getTotalPrice    = orderTotalTd ? orderTotalTd.querySelector( 'strong' ) : false;
 
@@ -679,38 +679,38 @@ var roxtarUpdateCheckout = function() {
 }
 
 // Update total price on mobile.
-var roxtarTotalPriceMobile = function( e, data ) {
+var SKDDTotalPriceMobile = function( e, data ) {
 	var totalPrice      = document.querySelector( '.order-total td' ),
 		totalPriceInner = totalPrice ? totalPrice.innerText : '',
-		mobilePrice     = document.querySelector( '.roxtar-before-order-review .roxtar-before-order-review-total-price strong' ),
+		mobilePrice     = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' ),
 		isFirstStep     = document.querySelector( '.multi-step-checkout-wrapper.first' ),
 		totalPriceValue = totalPrice ? totalPrice.querySelector( 'strong' ) : false;
 
 	// Update total price on step 1 after apply coupon.
-	if ( isFirstStep && totalPriceValue && roxtar_multi_step_checkout.price ) {
-		totalPriceValue.innerHTML = roxtar_multi_step_checkout.price;
+	if ( isFirstStep && totalPriceValue && SKDD_multi_step_checkout.price ) {
+		totalPriceValue.innerHTML = SKDD_multi_step_checkout.price;
 	}
 
 	// Update checkout.
-	roxtarUpdateCheckout();
+	SKDDUpdateCheckout();
 
 	if ( ! mobilePrice ) {
 		return;
 	}
 
 	if ( isFirstStep ) {
-		mobilePrice.innerText = roxtar_multi_step_checkout.content_total;
+		mobilePrice.innerText = SKDD_multi_step_checkout.content_total;
 	} else {
-		mobilePrice.innerText = roxtar_multi_step_checkout.cart_total;
+		mobilePrice.innerText = SKDD_multi_step_checkout.cart_total;
 	}
 }
 
 document.addEventListener(
 	'DOMContentLoaded',
 	function() {
-		roxtarMultiStepCheckout();
-		roxtarExpandOrderReview();
+		SKDDMultiStepCheckout();
+		SKDDExpandOrderReview();
 
-		jQuery( document.body ).on( 'updated_checkout', roxtarTotalPriceMobile );
+		jQuery( document.body ).on( 'updated_checkout', SKDDTotalPriceMobile );
 	}
 );

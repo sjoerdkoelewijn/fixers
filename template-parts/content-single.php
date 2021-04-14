@@ -2,7 +2,7 @@
 /**
  * Template used to display post content on single pages.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -11,13 +11,13 @@
 
 	<?php
 	/**
-	 * Functions hooked into roxtar_single_post add_action
+	 * Functions hooked into SKDD_single_post add_action
 	 *
-	 * @hooked roxtar_post_single_structure   - 10
-	 * @hooked roxtar_post_content            - 20
-	 * @hooked roxtar_post_tags               - 30
+	 * @hooked SKDD_post_single_structure   - 10
+	 * @hooked SKDD_post_content            - 20
+	 * @hooked SKDD_post_tags               - 30
 	 */
-	do_action( 'roxtar_single_post' );
+	do_action( 'SKDD_single_post' );
 	?>
 
 </article><!-- #post-## -->

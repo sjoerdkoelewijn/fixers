@@ -121,7 +121,7 @@
       position: absolute;
 }
 
-.roxtar-nav-menu-widget .roxtar-toggle-nav-menu-button, .roxtar-nav-menu-widget .site-search, .roxtar-nav-menu-widget .roxtar-nav-menu-account-action {
+.SKDD-nav-menu-widget .SKDD-toggle-nav-menu-button, .SKDD-nav-menu-widget .site-search, .SKDD-nav-menu-widget .SKDD-nav-menu-account-action {
     display: none;
 }
 
@@ -246,8 +246,8 @@
 }
 
 
-.has-header-layout-1 .site-navigation .site-search:not(.roxtar-search-form-widget),
-.has-header-layout-1 .site-navigation .mobile-my-account, .has-header-layout-2 .site-navigation .site-search:not(.roxtar-search-form-widget),
+.has-header-layout-1 .site-navigation .site-search:not(.SKDD-search-form-widget),
+.has-header-layout-1 .site-navigation .mobile-my-account, .has-header-layout-2 .site-navigation .site-search:not(.SKDD-search-form-widget),
 .has-header-layout-2 .site-navigation .mobile-my-account {
     display: none;
 }

@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 ?>
@@ -14,4 +14,4 @@
 	<body <?php body_class(); ?>>
 		<?php
 			wp_body_open();
-			do_action( 'roxtar_theme_header' );
+			do_action( 'SKDD_theme_header' );

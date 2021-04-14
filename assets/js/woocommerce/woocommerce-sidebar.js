@@ -1,16 +1,16 @@
 /**
  * Woocommerce sidebar
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';
 
 // Woocommerce sidebar on mobile.
-function roxtarSidebarMobile() {
+function SKDDSidebarMobile() {
 	var sidebar = document.querySelector( '#secondary.shop-widget' ),
 		button  = document.querySelector( '#toggle-sidebar-mobile-button' ),
-		overlay = document.getElementById( 'roxtar-overlay' ),
+		overlay = document.getElementById( 'SKDD-overlay' ),
 		html    = document.documentElement;
 
 	if ( ! sidebar || ! button ) {
@@ -41,6 +41,6 @@ function roxtarSidebarMobile() {
 document.addEventListener(
 	'DOMContentLoaded',
 	function() {
-		roxtarSidebarMobile();
+		SKDDSidebarMobile();
 	}
 );

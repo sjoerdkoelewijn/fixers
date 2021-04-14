@@ -2,10 +2,10 @@
 /**
  * The template for displaying the footer.
  *
- * @package roxtar
+ * @package SKDD
  */
 
-do_action( 'roxtar_theme_footer' );
+do_action( 'SKDD_theme_footer' );
 wp_footer();
 ?>
 

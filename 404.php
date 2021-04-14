@@ -2,11 +2,11 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package roxtar
+ * @package SKDD
  */
 
 get_header();
 
-do_action( 'roxtar_theme_404' );
+do_action( 'SKDD_theme_404' );
 
 get_footer();

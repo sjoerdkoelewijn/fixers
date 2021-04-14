@@ -1,7 +1,7 @@
 /**
  * General js
  *
- * @package roxtar
+ * @package SKDD
  */
 
 'use strict';
@@ -32,7 +32,7 @@ function closeAll() {
 	}
 
 	// Use overlay.
-	var overlay = document.getElementById( 'roxtar-overlay' );
+	var overlay = document.getElementById( 'SKDD-overlay' );
 
 	if ( overlay ) {
 		overlay.addEventListener(
@@ -215,7 +215,7 @@ function siblings( target ) {
 }
 
 // Remove class with prefix.
-function roxtarRemoveClassPrefix() {
+function SKDDRemoveClassPrefix() {
 	var selector = ( arguments.length > 0 && undefined !== arguments[0] ) ? arguments[0] : false,
 		prefix   = ( arguments.length > 0 && undefined !== arguments[1] ) ? arguments[1] : false;
 

@@ -1,10 +1,10 @@
 /**
  * Install Demo
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/* global roxtar_install_demo */
+/* global SKDD_install_demo */
 
 'use strict';
 
@@ -41,7 +41,7 @@ var activatePlugin = function( url, redirect ) {
 
 // Download and Install plugin.
 var installPlugin = function() {
-	var installBtn = document.querySelector( '.roxtar-install-demo' );
+	var installBtn = document.querySelector( '.SKDD-install-demo' );
 	if ( ! installBtn ) {
 		return;
 	}
@@ -54,14 +54,14 @@ var installPlugin = function() {
 			slug     = t.getAttribute( 'data-slug' ),
 			redirect = t.getAttribute( 'data-redirect' );
 
-		t.innerHTML = roxtar_install_demo.installing;
+		t.innerHTML = SKDD_install_demo.installing;
 
 		t.classList.add( 'updating-message' );
 		wp.updates.installPlugin(
 			{
 				slug: slug,
 				success: function () {
-					t.innerHTML = roxtar_install_demo.activating + '...';
+					t.innerHTML = SKDD_install_demo.activating + '...';
 					activatePlugin( url, redirect );
 				}
 			}
@@ -71,7 +71,7 @@ var installPlugin = function() {
 
 // Activate plugin manual.
 var handleActivate = function() {
-	var activeButton = document.querySelector( '.roxtar-active-now' );
+	var activeButton = document.querySelector( '.SKDD-active-now' );
 	if ( ! activeButton ) {
 		return;
 	}
@@ -84,7 +84,7 @@ var handleActivate = function() {
 			redirect = t.getAttribute( 'data-redirect' );
 
 		t.classList.add( 'updating-message' );
-		t.innerHTML = roxtar_install_demo.activating + '...';
+		t.innerHTML = SKDD_install_demo.activating + '...';
 
 		activatePlugin( url, redirect );
 	}

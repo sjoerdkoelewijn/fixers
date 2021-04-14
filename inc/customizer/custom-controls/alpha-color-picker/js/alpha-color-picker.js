@@ -11,7 +11,7 @@
  */
 ( function( $ ) {
 	// Prevent double-init.
-	var wpColorPickerL10n = wpColorPickerL10n || roxtar_customizer_color_control;
+	var wpColorPickerL10n = wpColorPickerL10n || SKDD_customizer_color_control;
 	if ( $.wp.wpColorPicker.prototype._hasAlpha ) {
 		return;
 	}

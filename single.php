@@ -2,11 +2,11 @@
 /**
  * The template for displaying all single posts.
  *
- * @package roxtar
+ * @package SKDD
  */
 
 get_header();
 
-do_action( 'roxtar_theme_single' );
+do_action( 'SKDD_theme_single' );
 
 get_footer();

@@ -1,10 +1,10 @@
 /**
  * Product variation
  *
- * @package roxtar
+ * @package SKDD
  */
 
-/* global roxtar_woocommerce_variable_product_data */
+/* global SKDD_woocommerce_variable_product_data */
 
 'use strict';
 
@@ -33,7 +33,7 @@ function productVariation( selector, form ) {
 	}
 
 	// Support Product meta widget.
-	var productMetaSku        = document.querySelector( '.elementor-widget-roxtar-product-meta .sku' ),
+	var productMetaSku        = document.querySelector( '.elementor-widget-SKDD-product-meta .sku' ),
 		productMetaSkuDefault = productMetaSku ? productMetaSku.innerHTML : '',
 		wpmGtinCodeWrapper    = document.querySelector( '.wpm_gtin_code_wrapper .wpm_pgw_code' );
 
@@ -88,16 +88,16 @@ function productVariation( selector, form ) {
 
 			var jsSelector    = document.querySelector( selector ),
 				productImages = jsSelector ? jsSelector.querySelector( '.product-images' ) : false,
-				outStockLabel = productImages ? productImages.querySelector( '.roxtar-out-of-stock-label' ) : false,
-				onSaleLabel   = productImages ? productImages.querySelector( '.roxtar-tag-on-sale' ) : false;
+				outStockLabel = productImages ? productImages.querySelector( '.SKDD-out-of-stock-label' ) : false,
+				onSaleLabel   = productImages ? productImages.querySelector( '.SKDD-tag-on-sale' ) : false;
 
 			// In stock.
 			if ( inStock ) {
 				// Re-init stock progress bar.
-				if ( variation.max_qty && 'function' === typeof( roxtarStockQuantityProgressBar ) ) {
+				if ( variation.max_qty && 'function' === typeof( SKDDStockQuantityProgressBar ) ) {
 					setTimeout(
 						function() {
-							roxtarStockQuantityProgressBar();
+							SKDDStockQuantityProgressBar();
 						},
 						200
 					);
@@ -109,11 +109,11 @@ function productVariation( selector, form ) {
 				}
 
 				// Update sale tag.
-				if ( onSaleLabel && roxtar_woocommerce_variable_product_data.sale_tag_percent && variation.display_price != variation.display_regular_price ) {
+				if ( onSaleLabel && SKDD_woocommerce_variable_product_data.sale_tag_percent && variation.display_price != variation.display_regular_price ) {
 					onSaleLabel.innerHTML = '-' + Math.round( ( ( variation.display_regular_price - variation.display_price ) / variation.display_regular_price ) * 100 ) + '%';
 				}
-			} else if ( roxtar_woocommerce_variable_product_data ) {
-				var outStockLabelHtml = '<span class="roxtar-out-of-stock-label position-' + roxtar_woocommerce_variable_product_data.out_of_stock_display + ' ' + roxtar_woocommerce_variable_product_data.out_of_stock_square + '">' + roxtar_woocommerce_variable_product_data.out_of_stock_text + '</span>';
+			} else if ( SKDD_woocommerce_variable_product_data ) {
+				var outStockLabelHtml = '<span class="SKDD-out-of-stock-label position-' + SKDD_woocommerce_variable_product_data.out_of_stock_display + ' ' + SKDD_woocommerce_variable_product_data.out_of_stock_square + '">' + SKDD_woocommerce_variable_product_data.out_of_stock_text + '</span>';
 
 				if ( ! outStockLabel ) {
 					productImages.insertAdjacentHTML( 'beforeend', outStockLabelHtml );
