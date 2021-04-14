@@ -146,7 +146,7 @@ video {
   clear: both;
 }
 
-.clearfix:after, .wpcf7 .row:after, .post-password-form p:after, .SKDD-container:after, .site_content:after, .widget_products li:after,
+.clearfix:after, .wpcf7 .row:after, .post-password-form p:after, .skdd-container:after, .site_content:after, .widget_products li:after,
 .widget_recent_reviews li:after,
 .widget_top_rated_products li:after,
 .widget_recently_viewed_products li:after, .price_slider_wrapper .price_slider:after, .related-box:after, .container:after, .products:after, .cart-sidebar-content .variation:after, .cart-collaterals:after, .checkout_coupon.woocommerce-form-coupon:after,
@@ -225,7 +225,7 @@ h1 {
   line-height: calc(var(--heading-line-height) * 0.8);
 }
 
-h1, .has-SKDD-heading-1-font-size{
+h1, .has-skdd-heading-1-font-size{
   font-size:var(--header-size-1);
 
   @include phone {
@@ -233,7 +233,7 @@ h1, .has-SKDD-heading-1-font-size{
   }
 }
 
-h2, .has-SKDD-heading-2-font-size{
+h2, .has-skdd-heading-2-font-size{
   font-size:var(--header-size-2);
   
   @include phone {
@@ -241,7 +241,7 @@ h2, .has-SKDD-heading-2-font-size{
   }
 }
 
-h3, .has-SKDD-heading-3-font-size{
+h3, .has-skdd-heading-3-font-size{
   font-size:var(--header-size-3);
   
   @include phone {
@@ -249,7 +249,7 @@ h3, .has-SKDD-heading-3-font-size{
   }
 }
 
-h4, .has-SKDD-heading-4-font-size{
+h4, .has-skdd-heading-4-font-size{
   font-size:var(--header-size-4);
 
   @include phone {
@@ -257,12 +257,12 @@ h4, .has-SKDD-heading-4-font-size{
   }
 }
 
-h5, .has-SKDD-heading-5-font-size{
+h5, .has-skdd-heading-5-font-size{
   font-size:var(--header-size-5);
 
 }
 
-h6, .has-SKDD-heading-6-font-size{
+h6, .has-skdd-heading-6-font-size{
   font-size:var(--header-size-6);
 }
 
@@ -277,23 +277,23 @@ h6, .has-SKDD-heading-6-font-size{
 
 /*************************** Buttons  ****************************************************************************/
 
-.SKDD-button-color,
+.skdd-button-color,
   .loop-add-to-cart-on-image+.added_to_cart {
     color: var(--button-text-color);
   }
 
-  .SKDD-button-bg-color,
+  .skdd-button-bg-color,
   .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
   .loop-add-to-cart-on-image+.added_to_cart {
     background-color: var(--button-background-color);
   }
 
-  .SKDD-button-hover-color,
+  .skdd-button-hover-color,
   .button[name="apply_coupon"]:hover{
     color: var(--button-hover-text-color);
   }
 
-  .SKDD-button-hover-bg-color,
+  .skdd-button-hover-bg-color,
   .loop-add-to-cart-on-image+.added_to_cart:hover,
   .button.loop-add-to-cart-icon-btn:hover,
   .product-loop-action .yith-wcwl-add-to-wishlist:hover,
@@ -1070,7 +1070,7 @@ form {
 
 /*************************** Custom Colors  ****************************************************************************/
 
-.SKDD-theme-color,
+.skdd-theme-color,
 .primary-navigation li.current-menu-item > a,
 .primary-navigation > li.current-menu-ancestor > a,
 .primary-navigation > li.current-menu-parent > a,
@@ -1085,9 +1085,9 @@ form {
 .woocommerce-mini-cart__total .amount,
 .woocommerce-form-login-toggle .woocommerce-info a:hover,
 .woocommerce-form-coupon-toggle .woocommerce-info a:hover,
-.has-SKDD-primary-color,
+.has-skdd-primary-color,
 .blog-layout-grid .site-main .post-read-more a,
-.SKDD-simple-subsbrice-form input[type="submit"],
+.skdd-simple-subsbrice-form input[type="submit"],
 .woocommerce-tabs li.active a,
 #secondary .widget .current-cat > span,
 .site-tools .header-search-icon:hover,
@@ -1123,29 +1123,29 @@ a:hover{
 .woocommerce-info,
 #scroll-to-top,
 .woocommerce-store-notice,
-.has-SKDD-primary-background-color,
-.SKDD-simple-subsbrice-form input[type="submit"]:hover,
+.has-skdd-primary-background-color,
+.skdd-simple-subsbrice-form input[type="submit"]:hover,
 .has-multi-step-checkout .multi-step-item .item-text:before,
 .has-multi-step-checkout .multi-step-item:before,
 .has-multi-step-checkout .multi-step-item:after,
 .has-multi-step-checkout .multi-step-item.active:before,
-.SKDD-single-product-stock .SKDD-single-product-stock-progress-bar {
+.skdd-single-product-stock .skdd-single-product-stock-progress-bar {
   background-color: var(--theme-color);  
 }
 
-.has-SKDD-primary-background-color {
+.has-skdd-primary-background-color {
   &:hover {
     background-color: var(--text-color);
   }
 }
 
 .woocommerce-thankyou-order-received,
-.SKDD-lightbox-button:hover {
+.skdd-lightbox-button:hover {
   border-color: var(--theme-color);
 }
 
 /* Fix issue not showing on IE - Must use single line css */
-.SKDD-simple-subsbrice-form:focus-within input[type="submit"]{
+.skdd-simple-subsbrice-form:focus-within input[type="submit"]{
   background-color: var(--theme-color);
 }
 
@@ -1158,7 +1158,7 @@ a{
 }
 
 
-.has-SKDD-background-color {
+.has-skdd-background-color {
   color:var(--background-color);
 }
 
@@ -1167,7 +1167,7 @@ a{
 .woocommerce-widget-layered-nav-dropdown__submit,
 .form-submit .submit,
 .elementor-button-wrapper .elementor-button,
-.has-SKDD-contact-form input[type="submit"],
+.has-skdd-contact-form input[type="submit"],
 #secondary .widget a.button,
 .product-loop-meta.no-transform .button,
 .product-loop-meta.no-transform .added_to_cart{
@@ -1182,12 +1182,12 @@ a{
 }
 
 .button:hover,
-.single_add_to_cart_button.button:not(.SKDD-buy-now):hover,
+.single_add_to_cart_button.button:not(.skdd-buy-now):hover,
 .woocommerce-widget-layered-nav-dropdown__submit:hover,
 #commentform input[type="submit"]:hover,
 .form-submit .submit:hover,
 #secondary .widget a.button:hover,
-.SKDD-contact-form input[type="submit"]:hover,
+.skdd-contact-form input[type="submit"]:hover,
 .loop-add-to-cart-on-image+.added_to_cart:hover,
 .product-loop-meta.no-transform .button:hover,
 .product-loop-meta.no-transform .added_to_cart:hover{
@@ -1211,10 +1211,10 @@ a{
 .woocommerce-tabs .tabs li:not(.active) a,
 .woocommerce-cart-form__contents .product-remove a,
 .comment-body .comment-meta .comment-date,
-.SKDD-breadcrumb a,
+.skdd-breadcrumb a,
 .rank-math-breadcrumb a,
 .breadcrumb-separator,
-.has-SKDD-text-color,
+.has-skdd-text-color,
 .button.loop-add-to-cart-icon-btn,
 .loop-wrapper-wishlist a,
 #order_review .shop_table .product-name {
@@ -1223,7 +1223,7 @@ a{
 
 .loop-wrapper-wishlist a:hover,
 .price_slider_wrapper .price_slider,
-.has-SKDD-text-background-color{
+.has-skdd-text-background-color{
   background-color: var(--text-color);
 }
 
@@ -1442,7 +1442,7 @@ form.woocommerce-checkout {
 /*************************** Breadcrumb ****************************************************************************/
 
 
-.SKDD-breadcrumb, .rank-math-breadcrumb {
+.skdd-breadcrumb, .rank-math-breadcrumb {
   
   a, .delimiter, .separator {
     font-weight:700;
@@ -1460,27 +1460,27 @@ form.woocommerce-checkout {
 }
 
   /* Breadcrumb */
-  .single-product .SKDD-breadcrumb {
+  .single-product .skdd-breadcrumb {
     padding-bottom: 20px;
   }
   
-  .SKDD-breadcrumb .item-bread {
+  .skdd-breadcrumb .item-bread {
     display: inline-block;
   }
 
   @include phone {
-    .SKDD-breadcrumb .item-bread:last-of-type { 
+    .skdd-breadcrumb .item-bread:last-of-type { 
       display: none;
     }
   }
   
-  .SKDD-breadcrumb.SKDD-theme-breadcrumb .item-bread:after {
+  .skdd-breadcrumb.skdd-theme-breadcrumb .item-bread:after {
     content: "/";
     font-size: 0.9em;
     margin: 0 5px;
   }
   
-  .SKDD-breadcrumb.SKDD-theme-breadcrumb .item-bread:last-of-type:after {
+  .skdd-breadcrumb.skdd-theme-breadcrumb .item-bread:last-of-type:after {
     content: none;
   }
   
@@ -1489,7 +1489,7 @@ form.woocommerce-checkout {
       margin-top: 50px;
       width: 100%;
     }
-    .single-product .SKDD-breadcrumb, .single-product .rank-math-breadcrumb {
+    .single-product .skdd-breadcrumb, .single-product .rank-math-breadcrumb {
       display: none;
     }
   }
@@ -1742,12 +1742,12 @@ form.woocommerce-checkout {
   
 
   
-  .SKDD-icon-bar {
+  .skdd-icon-bar {
     width: 26px;
     height: 26px;
   }
   
-  .SKDD-icon-bar span {
+  .skdd-icon-bar span {
     position: relative;
     background-color: #000;
     width: 100%;
@@ -1758,7 +1758,7 @@ form.woocommerce-checkout {
   
 
   
-  .SKDD-icon-bar span:before, .SKDD-icon-bar span:after {
+  .skdd-icon-bar span:before, .skdd-icon-bar span:after {
     content: '';
     position: absolute;
     left: 0;
@@ -1767,15 +1767,15 @@ form.woocommerce-checkout {
     background-color: inherit;
   }
   
-  .SKDD-icon-bar span:before {
+  .skdd-icon-bar span:before {
     top: -6px;
   }
   
-  .SKDD-icon-bar span:after {
+  .skdd-icon-bar span:after {
     bottom: -6px;
   }
   
-  .SKDD-icon-bar span {
+  .skdd-icon-bar span {
     background-color:var(--theme-color);
   }
 
@@ -1790,7 +1790,7 @@ form.woocommerce-checkout {
 
   .has-header-transparent.header-transparent-for-all-devices {
     
-    .SKDD-icon-bar span {
+    .skdd-icon-bar span {
       background-color:var(--second-background-color); 
     }
 
@@ -1800,7 +1800,7 @@ form.woocommerce-checkout {
 
     .site_header.active {
       
-      .SKDD-icon-bar span {
+      .skdd-icon-bar span {
         background-color:var(--theme-color);           
       }
 
@@ -1827,17 +1827,17 @@ form.woocommerce-checkout {
   .woocommerce-thankyou-order-details strong,
   .woocommerce-table--order-details th,
   .woocommerce-table--order-details .amount,
-  .wc-breadcrumb .SKDD-breadcrumb,
+  .wc-breadcrumb .skdd-breadcrumb,
   .sidebar-menu .primary-navigation .arrow-icon,
   
-  .SKDD-subscribe-form input,			
+  .skdd-subscribe-form input,			
   .shop_table_responsive td:before,
   .dialog-search-title,
   .cart-collaterals th,
   .woocommerce-mini-cart__total strong,
   .woocommerce-form-login-toggle .woocommerce-info a,
   .woocommerce-form-coupon-toggle .woocommerce-info a,
-  .has-SKDD-heading-color,
+  .has-skdd-heading-color,
   .woocommerce-table--order-details td,
   .woocommerce-table--order-details td.product-name a,
   .has-distraction-free-checkout .site_header .site-branding:after,
@@ -1848,7 +1848,7 @@ form.woocommerce-checkout {
     color: var(--heading-color);
   }
 
-  .has-SKDD-heading-background-color{
+  .has-skdd-heading-background-color{
     background-color: var(--heading-color);
   }
 
@@ -1865,24 +1865,24 @@ form.woocommerce-checkout {
   overflow: hidden;
 }
 
-.sidebar-menu-open .SKDD-icon-bar span {
+.sidebar-menu-open .skdd-icon-bar span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.sidebar-menu-open .SKDD-icon-bar span:before {
+.sidebar-menu-open .skdd-icon-bar span:before {
   width: 50%;
   -webkit-transform: rotate(45deg) translate(14px, -11px);
   transform: rotate(45deg) translate(14px, -11px);
 }
 
-.sidebar-menu-open .SKDD-icon-bar span:after {
+.sidebar-menu-open .skdd-icon-bar span:after {
   width: 50%;
   -webkit-transform: rotate(-45deg) translate(14px, 11px);
   transform: rotate(-45deg) translate(14px, 11px);
 }
 
-.sidebar-menu-open #SKDD-overlay {
+.sidebar-menu-open #skdd-overlay {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -2441,7 +2441,7 @@ form.woocommerce-checkout {
   border:1px solid #fff;
 }
 
-.SKDD-lightbox-button {
+.skdd-lightbox-button {
   position: absolute;
   z-index: 100;
   right: 15px;
@@ -2709,14 +2709,14 @@ form.woocommerce-checkout {
 
 /*************************** Product Page - File Downloads ****************************************************************************/
 
-.SKDD-files-list {
+.skdd-files-list {
 
-  .SKDD-file-item {
+  .skdd-file-item {
     font-size:90%;
     padding: 10px 0;
     border-bottom: 1px solid var(--line-color);
 
-    .SKDD-file-item-name {
+    .skdd-file-item-name {
       font-weight:700;
       font-size:90%;
 
@@ -2727,7 +2727,7 @@ form.woocommerce-checkout {
       }
     }
 
-    .SKDD-file-item-download {
+    .skdd-file-item-download {
       a {
         padding:10px 15px;
         color:var(--background-color);
@@ -3283,15 +3283,15 @@ form.woocommerce-checkout {
 }
 
 .site-footer .widget-title,
-.SKDD-footer-social-icon a{
+.skdd-footer-social-icon a{
   color: var(--footer-heading-color);
 }
 
-.SKDD-footer-social-icon a:hover{
+.skdd-footer-social-icon a:hover{
   background-color: var(--footer-heading-color);
 }
 
-.SKDD-footer-social-icon a {
+.skdd-footer-social-icon a {
   border-color: var(--footer-heading-color);
 }
 
