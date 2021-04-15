@@ -93,29 +93,25 @@ $wp_customize->add_control(
 	)
 );
 
+// ----------------------------------------------------------------------------------------------------------
 
-// offset color.
 $wp_customize->add_setting(
-	'SKDD_setting[offset_color]',
+	'color_divider_section_1',
 	array(
-		'default'           => $defaults['offset_color'],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Divider_Control(
 		$wp_customize,
-		'SKDD_setting[offset_color]',
+		'color_divider_section_1',
 		array(
-			'label'    => __( 'Offset Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
-			'settings' => 'SKDD_setting[offset_color]',
+			'settings' => 'color_divider_section_1',
+			'type'     => 'divider',
 		)
 	)
 );
-
-
 
 // Heading color.
 $wp_customize->add_setting(
@@ -180,6 +176,68 @@ $wp_customize->add_control(
 	)
 );
 
+// offset color.
+$wp_customize->add_setting(
+	'SKDD_setting[offset_color]',
+	array(
+		'default'           => $defaults['offset_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[offset_color]',
+		array(
+			'label'    => __( 'Offset Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[offset_color]',
+		)
+	)
+);
+
+
+// ----------------------------------------------------------------------------------------------------------
+
+$wp_customize->add_setting(
+	'color_divider_section_2',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Divider_Control(
+		$wp_customize,
+		'color_divider_section_2',
+		array(
+			'section'  => 'SKDD_color',
+			'settings' => 'color_divider_section_2',
+			'type'     => 'divider',
+		)
+	)
+);
+
+// Background color.
+$wp_customize->add_setting(
+	'SKDD_setting[header_background_color]',
+	array(
+		'default'           => $defaults['header_background_color'],
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[header_background_color]',
+		array(
+			'label'    => __( 'Header Background', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[header_background_color]',
+		)
+	)
+);
 
 // Primary parent menu color.
 $wp_customize->add_setting(

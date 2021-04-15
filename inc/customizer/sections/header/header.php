@@ -72,31 +72,6 @@ $wp_customize->add_control(
 	)
 );
 
-
-
-// Background color.
-$wp_customize->add_setting(
-	'SKDD_setting[header_background_color]',
-	array(
-		'default'           => $defaults['header_background_color'],
-		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-	)
-);
-$wp_customize->add_control(
-	new SKDD_Color_Control(
-		$wp_customize,
-		'SKDD_setting[header_background_color]',
-		array(
-			'priority' => 30,
-			'label'    => __( 'Header Background', 'SKDD' ),
-			'section'  => 'SKDD_header',
-			'settings' => 'SKDD_setting[header_background_color]',
-		)
-	)
-);
-
 // After background color divider.
 $wp_customize->add_setting(
 	'header_after_background_color_divider',
