@@ -1087,7 +1087,7 @@ form {
 .woocommerce-form-coupon-toggle .woocommerce-info a:hover,
 .has-skdd-primary-color,
 .blog-layout-grid .site-main .post-read-more a,
-.skdd-simple-subsbrice-form input[type="submit"],
+.skdd-simple-subscribe-form input[type="submit"],
 .woocommerce-tabs li.active a,
 #secondary .widget .current-cat > span,
 .site-tools .header-search-icon:hover,
@@ -1124,7 +1124,7 @@ a:hover{
 #scroll-to-top,
 .woocommerce-store-notice,
 .has-skdd-primary-background-color,
-.skdd-simple-subsbrice-form input[type="submit"]:hover,
+.skdd-simple-subscribe-form input[type="submit"]:hover,
 .has-multi-step-checkout .multi-step-item .item-text:before,
 .has-multi-step-checkout .multi-step-item:before,
 .has-multi-step-checkout .multi-step-item:after,
@@ -1145,7 +1145,7 @@ a:hover{
 }
 
 /* Fix issue not showing on IE - Must use single line css */
-.skdd-simple-subsbrice-form:focus-within input[type="submit"]{
+.skdd-simple-subscribe-form:focus-within input[type="submit"]{
   background-color: var(--theme-color);
 }
 
