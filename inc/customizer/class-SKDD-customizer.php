@@ -70,6 +70,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'mobile_logo_width'                       => '',
 				// COLOR.
 				'theme_color'                             => '#1346af',
+				'secondary_theme_color'                   => '#FFE45E',
 				'primary_menu_color'                      => '#2b2b2b',
 				'primary_sub_menu_color'                  => '#2b2b2b',
 				'heading_color'                           => '#2b2b2b',
@@ -77,7 +78,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'accent_color'                            => '#2b2b2b',
 				'background_color'						  => '#FAF8F2',
 				'second_background_color'				  => '#ffffff',
-				'line_color'						  	  => '#DDDDDD',
+				'offset_color'						  	  => '#efefef',
 				// TOPBAR.
 				'topbar_display'                          => false,
 				'topbar_text_color'                       => '#ffffff',

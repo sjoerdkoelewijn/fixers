@@ -261,15 +261,35 @@ if ( ! class_exists( 'SKDD' ) ) {
 						'color' => $options['theme_color'],
 					),
 					array(
+						'name'  => __( 'Secondary Color', 'SKDD' ),
+						'slug'  => 'SKDD-secondary',
+						'color' => $options['secondary_theme_color'],
+					),
+					array(
 						'name'  => __( 'Background Color', 'SKDD' ),
 						'slug'  => 'SKDD-background',
 						'color' => $options['background_color'],
-					),		
+					),
+					array(
+						'name'  => __( 'Secondary Background Color', 'SKDD' ),
+						'slug'  => 'SKDD-secondary-background',
+						'color' => $options['secondary_background_color'],
+					),
 					array(
 						'name'  => __( 'Text Color', 'SKDD' ),
 						'slug'  => 'SKDD-text',
 						'color' => $options['text_color'],
-					),					
+					),		
+					array(
+						'name'  => __( 'Offset Color', 'SKDD' ),
+						'slug'  => 'SKDD-offset',
+						'color' => $options['offset_color'],
+					),	
+					array(
+						'name'  => __( 'Accent Color', 'SKDD' ),
+						'slug'  => 'SKDD-accent',
+						'color' => $options['accent_color'],
+					),				
 				)
 			);
 

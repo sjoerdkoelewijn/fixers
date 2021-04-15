@@ -46,15 +46,13 @@ class SKDD_Get_CSS {
 				--body-font-weight:' . esc_attr( $options['body_font_weight'] ) . ';
 				--body-line-height:'. esc_attr( ($options['body_line_height']) / 10 ) . 'rem' .';
 				--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';
-				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
-				--accent-color:' . esc_attr( $options['accent_color'] ) . ';
+				
 
 				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
 				--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
 				--heading-line-height:'. esc_attr($options['heading_line_height']) . '%' .';				
 				--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
-				--heading-color:' . esc_attr( $options['heading_color'] ) . ';
-				
+								
 				--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
 				--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
 				--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
@@ -67,13 +65,17 @@ class SKDD_Get_CSS {
 				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
 				--header-width:'. esc_attr( $options['header_width'] ) .';
 
+				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
+				--accent-color:' . esc_attr( $options['accent_color'] ) . ';
+				--heading-color:' . esc_attr( $options['heading_color'] ) . ';
 				--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
 				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
+				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				
-				--line-color:' . esc_attr( $options['line_color'] ) . ';
+				--offset-color:' . esc_attr( $options['offset_color'] ) . ';
 				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
 
 				--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';

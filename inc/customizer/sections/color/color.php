@@ -29,6 +29,27 @@ $wp_customize->add_control(
 	)
 );
 
+// Secondary Theme color.
+$wp_customize->add_setting(
+	'SKDD_setting[secondary_theme_color]',
+	array(
+		'default'           => $defaults['secondary_theme_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[secondary_theme_color]',
+		array(
+			'label'    => __( 'Secondary Theme Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[secondary_theme_color]',
+		)
+	)
+);
+
 // Background color.
 $wp_customize->add_setting(
 	'SKDD_setting[background_color]',
@@ -73,11 +94,11 @@ $wp_customize->add_control(
 );
 
 
-// Line color.
+// offset color.
 $wp_customize->add_setting(
-	'SKDD_setting[line_color]',
+	'SKDD_setting[offset_color]',
 	array(
-		'default'           => $defaults['line_color'],
+		'default'           => $defaults['offset_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 	)
@@ -85,11 +106,11 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'SKDD_setting[line_color]',
+		'SKDD_setting[offset_color]',
 		array(
-			'label'    => __( 'Line Color', 'SKDD' ),
+			'label'    => __( 'Offset Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
-			'settings' => 'SKDD_setting[line_color]',
+			'settings' => 'SKDD_setting[offset_color]',
 		)
 	)
 );

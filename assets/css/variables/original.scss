@@ -71,7 +71,7 @@
     content: "";
     z-index: 2;
     position: absolute;
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
     border-top-color: #222;
     border-radius: 50%;
     height: 20px;
@@ -1438,7 +1438,7 @@
   ------------------------------------------------->*/
   .comment-post-pingback {
     line-height: 24px;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--offset-color);
     padding-bottom: 12px;
   }
   
@@ -1484,14 +1484,14 @@
   }
   
   .page-links .post-page-numbers.current {
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
     color: #ddd;
     cursor: default;
     pointer-events: none;
   }
   
   select {
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -1504,7 +1504,7 @@
   }
   
   input {
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
   }
   
   input[type="search"], input[type="email"], input[type="number"], input[type="url"], input[type="text"], input[type="tel"], input[type="password"] {
@@ -1528,7 +1528,7 @@
     -webkit-appearance: none;
     cursor: pointer;
     padding: 0;
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
   }
   
   input[type="button"].disabled, input[type="button"]:disabled,
@@ -1690,7 +1690,7 @@
   table,
   th,
   td {
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
   }
   
   table {
@@ -2580,7 +2580,7 @@
     content: "";
     z-index: 2;
     position: absolute;
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--offset-color);
     border-top-color: #222;
     border-radius: 50%;
     height: 20px;
@@ -2988,7 +2988,7 @@
   }
   
   .site-main .post {
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--offset-color);
     padding-bottom: 74px;
   }
   
@@ -3137,7 +3137,7 @@
   
   /* related post */
   .related-box {
-    border-top: 1px solid var(--line-color);
+    border-top: 1px solid var(--offset-color);
     padding-top: 61px;
     margin-top: 73px;
   }
@@ -3182,7 +3182,7 @@
   
   /* comment */
   #comments {
-    border-top: 1px solid var(--line-color);
+    border-top: 1px solid var(--offset-color);
     padding-top: 70px;
     margin-top: 70px;
   }
@@ -3229,7 +3229,7 @@
     margin-top: 33px;
     margin-left: 100px;
     padding-bottom: 45px;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--offset-color);
   }
   
   .comment-body .comment-author {
@@ -3247,7 +3247,7 @@
   
   .comment-body .comment-content {
     flex-grow: 1;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--offset-color);
     padding-bottom: 33px;
     max-width: -webkit-calc( 100% - 100px);
     max-width: calc( 100% - 100px);

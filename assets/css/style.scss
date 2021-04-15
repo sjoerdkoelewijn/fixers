@@ -434,7 +434,7 @@ form {
 
 #commentform #comment {
   flex-basis: 100%;
-  border: 1px solid var(--line-color);
+  border: 1px solid var(--offset-color);
   padding: 15px;
   height: 200px;
   font-size: 12px;
@@ -453,7 +453,7 @@ form {
 #commentform #author {
   flex: 5;
   height: 50px;
-  border: 1px solid var(--line-color);
+  border: 1px solid var(--offset-color);
   padding: 0 15px;
   font-size: 12px;
   margin-bottom: 20px;
@@ -1325,7 +1325,7 @@ a{
 
 .mini-cart-product-infor .mini-cart-product-qty {
   cursor: pointer;
-  border: 1px solid var(--line-color);
+  border: 1px solid var(--offset-color);
   width: 30px;
   font-size: 10px;
   user-select: none;
@@ -2714,7 +2714,7 @@ form.woocommerce-checkout {
   .skdd-file-item {
     font-size:90%;
     padding: 10px 0;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--offset-color);
 
     .skdd-file-item-name {
       font-weight:700;
