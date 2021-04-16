@@ -92,51 +92,6 @@ $wp_customize->add_control(
 	)
 );
 
-// Scroll To Top Background.
-$wp_customize->add_setting(
-	'SKDD_setting[scroll_to_top_background]',
-	array(
-		'default'           => $defaults['scroll_to_top_background'],
-		'type'              => 'option',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	)
-);
-
-$wp_customize->add_control(
-	new SKDD_Color_Control(
-		$wp_customize,
-		'SKDD_setting[scroll_to_top_background]',
-		array(
-			'label'    => __( 'Background', 'SKDD' ),
-			'section'  => 'SKDD_scroll_to_top',
-			'settings' => 'SKDD_setting[scroll_to_top_background]',
-		)
-	)
-);
-
-// Scroll To Top Color.
-$wp_customize->add_setting(
-	'SKDD_setting[scroll_to_top_color]',
-	array(
-		'default'           => $defaults['scroll_to_top_color'],
-		'type'              => 'option',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	)
-);
-
-$wp_customize->add_control(
-	new SKDD_Color_Control(
-		$wp_customize,
-		'SKDD_setting[scroll_to_top_color]',
-		array(
-			'label'    => __( 'Color', 'SKDD' ),
-			'section'  => 'SKDD_scroll_to_top',
-			'settings' => 'SKDD_setting[scroll_to_top_color]',
-		)
-	)
-);
 
 // Icons Size.
 $wp_customize->add_setting(

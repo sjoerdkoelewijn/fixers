@@ -280,3 +280,176 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+// ----------------------------------------------------------------------------------------------------------
+
+// Footer background color divider.
+$wp_customize->add_setting(
+	'footer_background_color_divider',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Divider_Control(
+		$wp_customize,
+		'footer_background_color_divider',
+		array(
+			'section'  => 'SKDD_color',
+			'settings' => 'footer_background_color_divider',
+			'type'     => 'divider',
+		)
+	)
+);
+
+// Footer Background.
+$wp_customize->add_setting(
+	'SKDD_setting[footer_background_color]',
+	array(
+		'default'           => $defaults['footer_background_color'],
+		'sanitize_callback' => 'SKDD_sanitize_rgba_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[footer_background_color]',
+		array(
+			'label'    => __( 'Footer Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[footer_background_color]',
+		)
+	)
+);
+
+// Footer heading color.
+$wp_customize->add_setting(
+	'SKDD_setting[footer_heading_color]',
+	array(
+		'default'           => $defaults['footer_heading_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[footer_heading_color]',
+		array(
+			'label'    => __( 'Footer Heading Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[footer_heading_color]',
+		)
+	)
+);
+
+// Footer link color.
+$wp_customize->add_setting(
+	'SKDD_setting[footer_link_color]',
+	array(
+		'default'           => $defaults['footer_link_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[footer_link_color]',
+		array(
+			'label'    => __( 'Footer Link Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[footer_link_color]',
+		)
+	)
+);
+
+// Footer text color.
+$wp_customize->add_setting(
+	'SKDD_setting[footer_text_color]',
+	array(
+		'default'           => $defaults['footer_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[footer_text_color]',
+		array(
+			'label'    => __( 'Footer Text Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[footer_text_color]',
+		)
+	)
+);
+
+// ----------------------------------------------------------------------------------------------------------
+
+// Scroll To Top divider.
+$wp_customize->add_setting(
+	'scroll_to_top_divider',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Divider_Control(
+		$wp_customize,
+		'scroll_to_top_divider',
+		array(
+			'section'  => 'SKDD_color',
+			'settings' => 'scroll_to_top_divider',
+			'type'     => 'divider',
+		)
+	)
+);
+
+// Scroll To Top Background.
+$wp_customize->add_setting(
+	'SKDD_setting[scroll_to_top_background]',
+	array(
+		'default'           => $defaults['scroll_to_top_background'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[scroll_to_top_background]',
+		array(
+			'label'    => __( 'Scroll to top background', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[scroll_to_top_background]',
+		)
+	)
+);
+
+// Scroll To Top Color.
+$wp_customize->add_setting(
+	'SKDD_setting[scroll_to_top_color]',
+	array(
+		'default'           => $defaults['scroll_to_top_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[scroll_to_top_color]',
+		array(
+			'label'    => __( 'Scroll to top color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[scroll_to_top_color]',
+		)
+	)
+);
+
