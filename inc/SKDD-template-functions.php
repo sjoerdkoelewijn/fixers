@@ -17,15 +17,26 @@ if ( ! function_exists( 'SKDD_replace_text' ) ) {
 		$output = str_replace( '[current_year]', date_i18n( 'Y' ), $output );
 		$output = str_replace( '[site_title]', '<span class="SKDD-site-title">' . get_bloginfo( 'name' ) . '</span>', $output );
 
-		$theme_author = apply_filters(
-			'SKDD_theme_author',
+		$sjoerd_link = apply_filters(
+			'SKDD_sjoerd_link',
 			array(
-				'theme_name'       => __( 'SKDD Online Marketing', 'SKDD' ),
-				'theme_author_url' => 'https://SKDD.nl/',
+				'sjoerd_name'       => __( 'Sjoerd Koelewijn', 'SKDD' ),
+				'sjoerd_url' => 'https://sjoerdkoelewijn.com/',
 			)
 		);
 
-		$output = str_replace( '[theme_author]', '<a href="' . esc_url( $theme_author['theme_author_url'] ) . '">' . $theme_author['theme_name'] . '</a>', $output );
+		$output = str_replace( '[sjoerd_link]', '<a href="' . esc_url( $sjoerd_link['sjoerd_url'] ) . '">' . $sjoerd_link['sjoerd_name'] . '</a>', $output );
+
+		$roxtar_link = apply_filters(
+			'SKDD_roxtar_link',
+			array(
+				'roxtar_name'       => __( 'ROXTAR Online Marketing', 'SKDD' ),
+				'roxtar_url' => 'https://roxtar.nl/',
+			)
+		);
+
+		$output = str_replace( '[roxtar_link]', '<a href="' . esc_url( $roxtar_link['roxtar_url'] ) . '">' . $roxtar_link['roxtar_name'] . '</a>', $output );
+
 
 		return wp_specialchars_decode( $output );
 	}

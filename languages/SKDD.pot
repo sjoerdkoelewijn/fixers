@@ -237,7 +237,7 @@ msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearan
 msgstr ""
 
 #: inc/SKDD-template-functions.php:274
-msgid "Copyright &copy; [current_year] [site_title] | Powered by [theme_author]"
+msgid "Copyright &copy; [current_year] [site_title] | Website made by [sjoerd_link]"
 msgstr ""
 
 #: inc/SKDD-template-functions.php:362, inc/SKDD-template-functions.php:381
