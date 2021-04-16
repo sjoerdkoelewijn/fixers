@@ -50,6 +50,27 @@ $wp_customize->add_control(
 	)
 );
 
+// Tertiary Theme color.
+$wp_customize->add_setting(
+	'SKDD_setting[tertiary_theme_color]',
+	array(
+		'default'           => $defaults['tertiary_theme_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[tertiary_theme_color]',
+		array(
+			'label'    => __( 'Tertiary Theme Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[tertiary_theme_color]',
+		)
+	)
+);
+
 // Background color.
 $wp_customize->add_setting(
 	'SKDD_setting[background_color]',
@@ -155,11 +176,11 @@ $wp_customize->add_control(
 	)
 );
 
-// Accent Color.
+// Link Color.
 $wp_customize->add_setting(
-	'SKDD_setting[accent_color]',
+	'SKDD_setting[link_color]',
 	array(
-		'default'           => $defaults['accent_color'],
+		'default'           => $defaults['link_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 	)
@@ -167,11 +188,32 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'SKDD_setting[accent_color]',
+		'SKDD_setting[link_color]',
 		array(
-			'label'    => __( 'Link / Accent Color', 'SKDD' ),
+			'label'    => __( 'Link Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
-			'settings' => 'SKDD_setting[accent_color]',
+			'settings' => 'SKDD_setting[link_color]',
+		)
+	)
+);
+
+// Link Color.
+$wp_customize->add_setting(
+	'SKDD_setting[hover_color]',
+	array(
+		'default'           => $defaults['hover_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'SKDD_setting[hover_color]',
+		array(
+			'label'    => __( 'Link Hover Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[hover_color]',
 		)
 	)
 );

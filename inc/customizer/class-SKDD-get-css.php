@@ -66,11 +66,13 @@ class SKDD_Get_CSS {
 				--header-width:'. esc_attr( $options['header_width'] ) .';
 
 				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
-				--accent-color:' . esc_attr( $options['accent_color'] ) . ';
+				--link-color:' . esc_attr( $options['link_color'] ) . ';
+				--link-hover-color:' . esc_attr( $options['hover_color'] ) . ';
 				--heading-color:' . esc_attr( $options['heading_color'] ) . ';
 				--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
 				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
 				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
+				--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';				
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
@@ -84,11 +86,10 @@ class SKDD_Get_CSS {
 				--gkt-color-light-gray-darken:' . esc_attr( $options['second_background_color'] ) . ';
 				--gkt-color-primary:' . esc_attr( $options['theme_color'] ) . ';
 				--gkt-color-success: ' . esc_attr( $options['secondary_theme_color'] ) . ';
-				--gkt-color-danger:' . esc_attr( $options['accent_color'] ) . ';
-				--gkt-color-warning:' . esc_attr( $options['accent_color'] ) . ';
+				--gkt-color-danger:' . esc_attr( $options['link_color'] ) . ';
+				--gkt-color-warning:' . esc_attr( $options['link_color'] ) . ';
 				--gkt-color-info:' . esc_attr( $options['secondary_theme_color'] ) . ';
-				--gkt-border-radius: '. esc_attr( $options['buttons_border_radius'] ) .'px;
-
+				--gkt-border-radius: '. esc_attr( $options['border_radius'] ) .'px;
 
 				--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
 				--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';

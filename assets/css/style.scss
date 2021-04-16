@@ -219,6 +219,15 @@ h1, h2, h3, h4, h5, h6{
   text-transform: var(--heading-text-transform);
   line-height: var(--heading-line-height);
   color: var(--heading-color);
+
+  a {
+    color: var(--link-color);
+
+    &:hover, &:active {
+      color: var(--link-hover-color);
+    }
+  }
+  
 }
 
 h1 {
@@ -523,9 +532,7 @@ form {
     --amount:4;
       
     animation: blob-animate calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
-    transform-origin: center;
-
-    
+    transform-origin: center;   
 
     img {
       animation: blob-animate-invert calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
@@ -1154,7 +1161,11 @@ a:hover{
 .multi-step-checkout-button[data-action="back"],
 .review-information-link,
 a{
-  color: var(--accent-color);
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
 }
 
 

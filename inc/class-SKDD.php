@@ -266,6 +266,11 @@ if ( ! class_exists( 'SKDD' ) ) {
 						'color' => $options['secondary_theme_color'],
 					),
 					array(
+						'name'  => __( 'Tertiary Color', 'SKDD' ),
+						'slug'  => 'SKDD-tertiary',
+						'color' => $options['tertiary_theme_color'],
+					),
+					array(
 						'name'  => __( 'Background Color', 'SKDD' ),
 						'slug'  => 'SKDD-background',
 						'color' => $options['background_color'],
@@ -284,11 +289,6 @@ if ( ! class_exists( 'SKDD' ) ) {
 						'name'  => __( 'Offset Color', 'SKDD' ),
 						'slug'  => 'SKDD-offset',
 						'color' => $options['offset_color'],
-					),	
-					array(
-						'name'  => __( 'Accent Color', 'SKDD' ),
-						'slug'  => 'SKDD-accent',
-						'color' => $options['accent_color'],
 					),				
 				)
 			);
