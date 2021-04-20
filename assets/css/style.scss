@@ -1130,7 +1130,6 @@ a:hover{
 .woocommerce-info,
 #scroll-to-top,
 .woocommerce-store-notice,
-.has-skdd-primary-background-color,
 .skdd-simple-subscribe-form input[type="submit"]:hover,
 .has-multi-step-checkout .multi-step-item .item-text:before,
 .has-multi-step-checkout .multi-step-item:before,
@@ -1138,6 +1137,11 @@ a:hover{
 .has-multi-step-checkout .multi-step-item.active:before,
 .skdd-single-product-stock .skdd-single-product-stock-progress-bar {
   background-color: var(--theme-color);  
+}
+
+// Custom color picker
+.has-skdd-primary-background-color {
+  background-color: var(--theme-color); 
 }
 
 .has-skdd-primary-background-color {
@@ -1152,6 +1156,10 @@ a:hover{
 
 .has-skdd-tertiary-background-color {
   background-color: var(--tertiary-theme-color);  
+}
+
+.has-skdd-secondary-background-background-color {
+  background-color: var(--second-background-color);  
 }
 
 

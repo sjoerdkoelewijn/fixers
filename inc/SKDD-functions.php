@@ -749,4 +749,3 @@ if ( ! function_exists( 'SKDD_disable_emojis' ) ) {
 	add_action( 'init', 'SKDD_disable_emojis' );
 
 }
-
