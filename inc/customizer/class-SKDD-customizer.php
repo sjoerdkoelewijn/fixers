@@ -58,8 +58,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 		public static function SKDD_get_SKDD_default_setting_values() {
 			$args = array(
 				// CONTAINER.
-				'header_width'                         	  => 'Large',
-				'container_width'                         => 'Large',
+				'header_width'                         	  => '1920px',
+				'container_width'                         => '1920px',
 				'content_spacing'                         => '20',
 				'vertical_spacing'                        => '10',				
 				'border_radius'							  => '0',

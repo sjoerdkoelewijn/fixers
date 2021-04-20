@@ -278,7 +278,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 					array(
 						'name'  => __( 'Secondary Background Color', 'SKDD' ),
 						'slug'  => 'SKDD-secondary-background',
-						'color' => $options['secondary_background_color'],
+						'color' => $options['second_background_color'],
 					),
 					array(
 						'name'  => __( 'Text Color', 'SKDD' ),

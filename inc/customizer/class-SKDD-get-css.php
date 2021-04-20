@@ -487,23 +487,147 @@ class SKDD_Get_CSS {
 	 * Add Gutenberg css.
 	 */
 	public function SKDD_guten_block_editor_assets() {
-		// Get all theme option value.
+		
 		$options = SKDD_options( false );
+		
+		if (is_user_logged_in() && current_user_can( 'edit_posts' )) {			
 
-		$block_styles = '
-			.edit-post-visual-editor, .edit-post-visual-editor p{
-				font-family: ' . esc_attr( $options['body_font_family'] ) . ';
-			}
+			$block_styles = '
 
-			.editor-post-title__block .editor-post-title__input,
-			.wp-block-heading, .editor-rich-text__tinymce{
-				font-family: ' . esc_attr( $options['heading_font_family'] ) . ';
-			}
-		';
+					:root {
+						--body-font-size:'. esc_attr( ($options['body_font_size']) / 10 ) . 'rem' .';
 
-		wp_register_style( 'SKDD-block-editor', false ); // @codingStandardsIgnoreLine
-		wp_enqueue_style( 'SKDD-block-editor' );
-		wp_add_inline_style( 'SKDD-block-editor', $block_styles );
+						--body-font-family:' . esc_attr( $options['body_font_family'] ) . ';
+						--body-font-weight:' . esc_attr( $options['body_font_weight'] ) . ';
+						--body-line-height:'. esc_attr( ($options['body_line_height']) / 10 ) . 'rem' .';
+						--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';				
+
+						--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
+						--heading-font-weight:' . esc_attr( $options['heading_font_weight'] ) . ';
+						--heading-line-height:'. esc_attr($options['heading_line_height']) . '%' .';				
+						--heading-font-transform:' . esc_attr( $options['heading_font_transform'] ) . ';
+										
+						--header-size-1: '. esc_attr( ($options['heading_h1_font_size']) / 10 ) . 'rem' .';
+						--header-size-2: '. esc_attr( ($options['heading_h2_font_size']) / 10) . 'rem' .';
+						--header-size-3: '. esc_attr( ($options['heading_h3_font_size']) / 10) . 'rem' .';
+						--header-size-4: '. esc_attr( ($options['heading_h4_font_size']) / 10) . 'rem' .';
+						--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
+						--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
+
+						--scrollbar-width:17px;
+
+						--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
+						--header-width:'. esc_attr( $options['header_width'] ) .';
+
+						--body-text-color:' . esc_attr( $options['text_color'] ) . ';
+						--link-color:' . esc_attr( $options['link_color'] ) . ';
+						--link-hover-color:' . esc_attr( $options['hover_color'] ) . ';
+						--heading-color:' . esc_attr( $options['heading_color'] ) . ';
+						--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
+						--theme-color:' . esc_attr( $options['theme_color'] ) . ';
+						--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
+						--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';				
+						--background-color:' . esc_attr( $options['background_color'] ) . ';
+						--text-color:' . esc_attr( $options['text_color'] ) . ';
+						--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
+						
+						--offset-color:' . esc_attr( $options['offset_color'] ) . ';
+						--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
+
+						--gkt-color-brand:' . esc_attr( $options['theme_color'] ) . ';
+						--gkt-color-dark-gray:' . esc_attr( $options['background_color'] ) . ';
+						--gkt-color-light-gray:' . esc_attr( $options['second_background_color'] ) . ';
+						--gkt-color-light-gray-darken:' . esc_attr( $options['second_background_color'] ) . ';
+						--gkt-color-primary:' . esc_attr( $options['theme_color'] ) . ';
+						--gkt-color-success: ' . esc_attr( $options['secondary_theme_color'] ) . ';
+						--gkt-color-danger:' . esc_attr( $options['link_color'] ) . ';
+						--gkt-color-warning:' . esc_attr( $options['link_color'] ) . ';
+						--gkt-color-info:' . esc_attr( $options['secondary_theme_color'] ) . ';
+						--gkt-border-radius: '. esc_attr( $options['border_radius'] ) .'px;
+
+						--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
+						--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';
+						--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
+						--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
+						--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
+
+						--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
+					
+						--content-width:'. esc_attr( $options['container_width'] ) .';
+						--content-spacing:'. esc_attr( $options['content_spacing'] ) .'px;
+
+						--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
+						
+						--page-header-padding-top:'. esc_attr( $options['page_header_padding_top']) . 'px' .';
+						--page-header-padding-bottom:'. esc_attr( $options['page_header_padding_bottom']) . 'px' .';
+						--page-header-margin-bottom:'. esc_attr( $options['page_header_margin_bottom']) . 'px' .';
+						
+				
+					
+					} 			
+			
+
+				};
+
+				.block-editor-writing-flow p{
+					font-size: calc(var(--body-font-size) * .625) !important;
+					font-family: var(--body-font-family);
+					font-weight:var(--body-font-weight);
+				}
+
+				.block-editor-writing-flow a {
+					color: var(--link-color) !important;
+					transition:color 0.2s linear;
+				}
+
+				.block-editor-writing-flow a:hover {
+					color: var(--link-hover-color) !important;
+					transition:color 0.2s linear;
+				}
+
+				.editor-post-title__block .editor-post-title__input,
+				.wp-block-heading, .editor-rich-text__tinymce{
+					font-family: var(--heading-font-family);
+					font-weight:var(--heading-font-weight);
+				}			
+				
+				.block-editor-writing-flow h1 {
+					font-size:calc(var(--header-size-1) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+				
+				.block-editor-writing-flow h2{
+					font-size:calc(var(--header-size-2) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+				
+				.block-editor-writing-flow h3 {
+					font-size:calc(var(--header-size-3) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+				
+				.block-editor-writing-flow h4 {
+					font-size:calc(var(--header-size-4) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+				
+				.block-editor-writing-flow h5 {
+					font-size:calc(var(--header-size-5) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+				
+				.block-editor-writing-flow h6 {
+					font-size:calc(var(--header-size-6) * .75) !important;
+					font-weight:var(--heading-font-weight);
+				}
+			';
+
+			wp_register_style( 'SKDD-block-editor', false ); // @codingStandardsIgnoreLine
+			wp_enqueue_style( 'SKDD-block-editor' );
+			wp_add_inline_style( 'SKDD-block-editor', $block_styles );
+
+		}
+		
 	}
 
 	/**
