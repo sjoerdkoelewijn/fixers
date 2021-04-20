@@ -1164,10 +1164,20 @@ a:hover{
 
 
 
-.woocommerce-thankyou-order-received,
-.skdd-lightbox-button:hover {
-  border-color: var(--theme-color);
+// Spinner color.
+
+.circle-loading:before,
+.product_list_widget .remove_from_cart_button:focus:before,
+.updating-cart.ajax-single-add-to-cart .single_add_to_cart_button:before,
+.product-loop-meta .loading:before,
+.updating-cart #shop-cart-sidebar:before,
+#product-images:not(.tns-slider) .image-item:first-of-type:before,
+#product-thumbnail-images:not(.tns-slider) .thumbnail-item:first-of-type:before{
+  border-top-color:var(--theme-color);
 }
+
+
+
 
 /* Fix issue not showing on IE - Must use single line css */
 .skdd-simple-subscribe-form:focus-within input[type="submit"]{

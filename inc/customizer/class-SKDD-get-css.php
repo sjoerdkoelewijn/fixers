@@ -353,122 +353,111 @@ class SKDD_Get_CSS {
 			}
 		';
 
-		
-
-		// Spinner color.
-		$styles .= '
-			.circle-loading:before,
-			.product_list_widget .remove_from_cart_button:focus:before,
-			.updating-cart.ajax-single-add-to-cart .single_add_to_cart_button:before,
-			.product-loop-meta .loading:before,
-			.updating-cart #shop-cart-sidebar:before,
-			#product-images:not(.tns-slider) .image-item:first-of-type:before,
-			#product-thumbnail-images:not(.tns-slider) .thumbnail-item:first-of-type:before{
-				border-top-color: ' . esc_attr( $options['theme_color'] ) . ';
-			}
-		';
-
-		// SHOP PAGE.
-
-		$styles .= '
-			.product-loop-wrapper .button,.product-loop-meta.no-transform .button {
-				background-color: ' . esc_attr( $options['shop_page_button_cart_background'] ) . ';
-				color: ' . esc_attr( $options['shop_page_button_cart_color'] ) . ';
-				border-radius: ' . esc_attr( $options['shop_page_button_border_radius'] ) . 'px;
-			}
-
-			.product-loop-wrapper .button:hover, .product-loop-meta.no-transform .button:hover {
-				background-color: ' . esc_attr( $options['shop_page_button_background_hover'] ) . ';
-				color: ' . esc_attr( $options['shop_page_button_color_hover'] ) . ';
-			}
-		';
-
-		// Product card.
-		if ( 'none' !== $options['shop_page_product_card_border_style'] ) {
+			
+		if ( SKDD_is_woocommerce_activated() ) {
+			
 			$styles .= '
-				.products .product:not(.product-category) .product-loop-wrapper {
-					border-style: ' . esc_attr( $options['shop_page_product_card_border_style'] ) . ';
-					border-width: ' . esc_attr( $options['shop_page_product_card_border_width'] ) . 'px;
-					border-color: ' . esc_attr( $options['shop_page_product_card_border_color'] ) . ';
+				.product-loop-wrapper .button,.product-loop-meta.no-transform .button {
+					background-color: ' . esc_attr( $options['shop_page_button_cart_background'] ) . ';
+					color: ' . esc_attr( $options['shop_page_button_cart_color'] ) . ';
+					border-radius: ' . esc_attr( $options['shop_page_button_border_radius'] ) . 'px;
+				}
+				
+				.product-loop-wrapper .button:hover, .product-loop-meta.no-transform .button:hover {
+					background-color: ' . esc_attr( $options['shop_page_button_background_hover'] ) . ';
+					color: ' . esc_attr( $options['shop_page_button_color_hover'] ) . ';
+				}
+
+			';
+
+			// Product card.
+			if ( 'none' !== $options['shop_page_product_card_border_style'] ) {
+				$styles .= '
+					.products .product:not(.product-category) .product-loop-wrapper {
+						border-style: ' . esc_attr( $options['shop_page_product_card_border_style'] ) . ';
+						border-width: ' . esc_attr( $options['shop_page_product_card_border_width'] ) . 'px;
+						border-color: ' . esc_attr( $options['shop_page_product_card_border_color'] ) . ';
+					}
+				';
+			}
+
+			// Product content.
+			if ( $options['shop_page_product_content_equal'] ) {
+				$styles .= '
+					.product-loop-content {
+						min-height: ' . esc_attr( $options['shop_page_product_content_min_height'] ) . 'px;
+					}
+				';
+			}
+
+			// Product image.
+			if ( 'none' !== $options['shop_page_product_image_border_style'] ) {
+				$styles .= '
+					.product-loop-image-wrapper {
+						border-style: ' . esc_attr( $options['shop_page_product_image_border_style'] ) . ';
+						border-width: ' . esc_attr( $options['shop_page_product_image_border_width'] ) . 'px;
+						border-color: ' . esc_attr( $options['shop_page_product_image_border_color'] ) . ';
+					}
+				';
+			}
+
+			// Equal image height.
+			if ( $options['shop_page_product_image_equal_height'] ) {
+				$styles .= '
+					.has-equal-image-height {
+						height: ' . $options['shop_page_product_image_height'] . 'px;
+					}
+				';
+			}
+
+			// Sale tag.
+			if ( $options['shop_page_sale_square'] ) {
+				$styles .= '
+					.SKDD-tag-on-sale.is-square {
+						width: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
+						height: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
+					}
+				';
+			}
+			$styles .= '
+				.onsale {
+					color: ' . esc_attr( $options['shop_page_sale_color'] ) . ';
+					background-color: ' . esc_attr( $options['shop_page_sale_bg_color'] ) . ';
+					border-radius: ' . esc_attr( $options['shop_page_sale_border_radius'] ) . 'px;
 				}
 			';
-		}
 
-		// Product content.
-		if ( $options['shop_page_product_content_equal'] ) {
-			$styles .= '
-				.product-loop-content {
-					min-height: ' . esc_attr( $options['shop_page_product_content_min_height'] ) . 'px;
-				}
-			';
-		}
-
-		// Product image.
-		if ( 'none' !== $options['shop_page_product_image_border_style'] ) {
-			$styles .= '
-				.product-loop-image-wrapper {
-					border-style: ' . esc_attr( $options['shop_page_product_image_border_style'] ) . ';
-					border-width: ' . esc_attr( $options['shop_page_product_image_border_width'] ) . 'px;
-					border-color: ' . esc_attr( $options['shop_page_product_image_border_color'] ) . ';
-				}
-			';
-		}
-
-		// Equal image height.
-		if ( $options['shop_page_product_image_equal_height'] ) {
-			$styles .= '
-				.has-equal-image-height {
-					height: ' . $options['shop_page_product_image_height'] . 'px;
-				}
-			';
-		}
-
-		// Sale tag.
-		if ( $options['shop_page_sale_square'] ) {
-			$styles .= '
-				.SKDD-tag-on-sale.is-square {
-					width: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
-					height: ' . esc_attr( $options['shop_page_sale_size'] ) . 'px;
-				}
-			';
-		}
-		$styles .= '
-			.onsale {
-				color: ' . esc_attr( $options['shop_page_sale_color'] ) . ';
-				background-color: ' . esc_attr( $options['shop_page_sale_bg_color'] ) . ';
-				border-radius: ' . esc_attr( $options['shop_page_sale_border_radius'] ) . 'px;
+			// Out of stock label.
+			if ( $options['shop_page_out_of_stock_square'] ) {
+				$styles .= '
+					.SKDD-out-of-stock-label.is-square {
+						width: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
+						height: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
+					}
+				';
 			}
-		';
-
-		// Out of stock label.
-		if ( $options['shop_page_out_of_stock_square'] ) {
 			$styles .= '
-				.SKDD-out-of-stock-label.is-square {
-					width: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
-					height: ' . esc_attr( $options['shop_page_out_of_stock_size'] ) . 'px;
+				.SKDD-out-of-stock-label {
+					color: ' . esc_attr( $options['shop_page_out_of_stock_color'] ) . ';
+					background-color: ' . esc_attr( $options['shop_page_out_of_stock_bg_color'] ) . ';
+					border-radius: ' . esc_attr( $options['shop_page_out_of_stock_border_radius'] ) . 'px;
 				}
 			';
-		}
-		$styles .= '
-			.SKDD-out-of-stock-label {
-				color: ' . esc_attr( $options['shop_page_out_of_stock_color'] ) . ';
-				background-color: ' . esc_attr( $options['shop_page_out_of_stock_bg_color'] ) . ';
-				border-radius: ' . esc_attr( $options['shop_page_out_of_stock_border_radius'] ) . 'px;
-			}
-		';
 
-		// Single Product Add to cart.
-		$styles .= '
-			.single_add_to_cart_button.button:not(.SKDD-buy-now){
-				border-radius: ' . esc_attr( $options['shop_single_button_border_radius'] ) . 'px;
-				background-color:  ' . esc_attr( $options['shop_single_button_cart_background'] ) . ';
-				color:  ' . esc_attr( $options['shop_single_button_cart_color'] ) . ';
-			}
-			.single_add_to_cart_button.button:not(.SKDD-buy-now):hover{
-				color:  ' . esc_attr( $options['shop_single_button_color_hover'] ) . ';
-				background-color:  ' . esc_attr( $options['shop_single_button_background_hover'] ) . ';
-			}
-		';
+			// Single Product Add to cart.
+			$styles .= '
+				.single_add_to_cart_button.button:not(.SKDD-buy-now){
+					border-radius: ' . esc_attr( $options['shop_single_button_border_radius'] ) . 'px;
+					background-color:  ' . esc_attr( $options['shop_single_button_cart_background'] ) . ';
+					color:  ' . esc_attr( $options['shop_single_button_cart_color'] ) . ';
+				}
+				.single_add_to_cart_button.button:not(.SKDD-buy-now):hover{
+					color:  ' . esc_attr( $options['shop_single_button_color_hover'] ) . ';
+					background-color:  ' . esc_attr( $options['shop_single_button_background_hover'] ) . ';
+				}
+			';
+
+		}
 
 		// 404.
 		$error_404_bg = $options['error_404_image'];
@@ -480,7 +469,13 @@ class SKDD_Get_CSS {
 			';
 		}
 
-		return apply_filters( 'SKDD_customizer_css', $styles );
+		$styles = apply_filters( 'SKDD_customizer_css', $styles );
+		$styles = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $styles);
+		$styles = str_replace(': ', ':', $styles);
+		$styles = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $styles);
+
+
+		return $styles;
 	}
 
 	/**
