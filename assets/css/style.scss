@@ -1146,6 +1146,16 @@ a:hover{
   }
 }
 
+.has-skdd-secondary-background-color { 
+  background-color: var(--secondary-theme-color);  
+}
+
+.has-skdd-tertiary-background-color {
+  background-color: var(--tertiary-theme-color);  
+}
+
+
+
 .woocommerce-thankyou-order-received,
 .skdd-lightbox-button:hover {
   border-color: var(--theme-color);
