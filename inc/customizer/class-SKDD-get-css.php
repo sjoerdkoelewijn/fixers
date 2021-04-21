@@ -96,6 +96,7 @@ class SKDD_Get_CSS {
 				--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
 				--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
 				--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
+				--button-font-size:'. esc_attr( ($options['body_font_size']) / 11 ) . 'rem' .';
 
 				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
 			
@@ -156,6 +157,29 @@ class SKDD_Get_CSS {
 					max-width: ' . esc_attr( $options['container_width'] ) . ';
 				}
 			}
+
+			.ghostkit-button {
+				font-weight:bold;
+
+				--gkt-button__color: #fff;
+				--gkt-button__background-color: var(--gkt-color-primary);
+
+				--gkt-button__border-color: var(--gkt-color-primary);
+				--gkt-button__border-radius: var(--gkt-border-radius);
+
+				--gkt-button-hover__color: #fff;
+				--gkt-button-hover__background-color: var(--gkt-color-dark-gray);
+
+				--gkt-button-focus__color: var(--gkt-button-hover__color);
+				--gkt-button-focus__background-color: var(--gkt-button-hover__background-color);
+
+				--gkt-button-xs__font-size: '. esc_attr( ($options['body_font_size']) / 16 ) . 'rem' .';
+				--gkt-button-sm__font-size: '. esc_attr( ($options['body_font_size']) / 15 ) . 'rem' .';
+				--gkt-button__font-size: '. esc_attr( ($options['body_font_size']) / 14 ) . 'rem' .';
+				--gkt-button-lg__font-size: '. esc_attr( ($options['body_font_size']) / 12 ) . 'rem' .';
+				--gkt-button-xl__font-size: '. esc_attr( ($options['body_font_size']) / 11 ) . 'rem' .';
+			}
+
 		';
 
 		$topbar_display = $options['topbar_display'];
@@ -473,8 +497,6 @@ class SKDD_Get_CSS {
 		$styles = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $styles);
 		$styles = str_replace(': ', ':', $styles);
 		$styles = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $styles);
-
-
 		return $styles;
 	}
 

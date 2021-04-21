@@ -164,19 +164,30 @@ function toTopButton() {
 
 // Scrolling detect direction.
 function scrollingDetect() {
-	var body = document.body;
 
-	if ( window.oldScroll > window.scrollY ) {
-		body.classList.add( 'scrolling-up' );
-		body.classList.remove( 'scrolling-down' );		
-	} else {
-		body.classList.remove( 'scrolling-up' );
-		body.classList.add( 'scrolling-down' );
-	}
+	let scrollPos = 0;
 
-	// Reset state.
-	window.oldScroll = window.scrollY;
+	// Add scroll event
+	window.addEventListener("scroll", function() {
+	
+		const body = document.body;
+
+	  	if ((body.getBoundingClientRect()).top < scrollPos) {
+			body.classList.add( 'scrolling-down' );
+			body.classList.remove( 'scrolling-up' );
+	  	}	else {
+			body.classList.remove( 'scrolling-down' );
+			body.classList.add( 'scrolling-up' );
+	  	}
+			
+		//saves the new state	
+		scrollPos = (document.body.getBoundingClientRect()).top;
+
+	});
+
 }
+
+
 
 // Get all Prev element siblings.
 function prevSiblings( target ) {
@@ -245,5 +256,6 @@ document.addEventListener(
 		scrollAction( '#scroll-to-top', 200 );
 		scrollAction( '#masthead', 30 );
 		toTopButton();
+		scrollingDetect();
 	}
 );

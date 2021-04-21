@@ -2450,60 +2450,10 @@
     transform: rotate(90deg);
   }
   
-  .search-form:after,
-  .woocommerce-product-search:after {
-    content: "\e610";
-    font-family: "themify";
-    font-size: 20px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-  }
+ 
   
-  .media-toolbar .search-form:after, .media-toolbar
-  .woocommerce-product-search:after {
-    content: none;
-  }
-  
-  .search-form .search-field,
-  .woocommerce-product-search .search-field {
-    border-color: rgba(0, 0, 0, 0);
-    height: 100%;
-    width: 100%;
-    background-color: #eeeeec;
-    padding-left: 20px;
-    padding-right: 50px;
-    border-radius: 50px;
-  }
-  
-  .search-form .search-field::-webkit-search-cancel-button,
-  .woocommerce-product-search .search-field::-webkit-search-cancel-button {
-    display: none;
-  }
-  
-  .search-form .search-field:focus,
-  .woocommerce-product-search .search-field:focus {
-    border-color: #dedbdb;
-  }
-  
-  .search-form .search-submit,
-  .search-form button[type="submit"],
-  .woocommerce-product-search .search-submit,
-  .woocommerce-product-search button[type="submit"] {
-    overflow: hidden;
-    color: rgba(0, 0, 0, 0) !important;
-    background: rgba(0, 0, 0, 0) !important;
-    border-radius: 50%;
-    width: 50px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    border: 0;
-  }
+
+
   
   /* mini cart */
   .woocommerce-mini-cart {

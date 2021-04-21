@@ -1599,11 +1599,15 @@ if ( ! function_exists( 'SKDD_search' ) ) {
 			<?php
 			do_action( 'SKDD_site_search_start' );
 
-			if ( ! $options['header_search_only_product'] ) {
+			if (SKDD_is_woocommerce_activated()) {
+				if ( ! $options['header_search_only_product'] ) {
+					get_search_form();
+				} elseif ( SKDD_is_woocommerce_activated() ) {
+					the_widget( 'WC_Widget_Product_Search', 'title=' );
+				}
+			} else {
 				get_search_form();
-			} elseif ( SKDD_is_woocommerce_activated() ) {
-				the_widget( 'WC_Widget_Product_Search', 'title=' );
-			}
+			}		
 
 			do_action( 'SKDD_site_search_end' );
 			?>
@@ -1756,12 +1760,6 @@ if ( ! function_exists( 'SKDD_sidebar_class' ) ) {
 		$sidebar_shop        = 'default' !== $metabox_sidebar ? $metabox_sidebar : $options['sidebar_shop'];
 		$sidebar_shop_single = 'default' !== $metabox_sidebar ? $metabox_sidebar : $options['sidebar_shop_single'];
 
-		// Dokan support.
-		$dokan_store_sidebar = false;
-		$is_dokan_store      = class_exists( 'WeDevs_Dokan' ) && SKDD_is_woocommerce_activated() && dokan_is_store_page();
-		if ( $is_dokan_store && 'off' === dokan_get_option( 'enable_theme_store_sidebar', 'dokan_appearance', 'off' ) ) {
-			$dokan_store_sidebar = true;
-		}
 
 		if (is_404() || ( class_exists( 'woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) ) {
 			return $sidebar;
@@ -1836,7 +1834,7 @@ if ( ! function_exists( 'SKDD_overlay' ) ) {
 	 * SKDD overlay
 	 */
 	function SKDD_overlay() {
-		echo '<div id="SKDD-overlay"></div>';
+		echo '<div id="SKDD-overlay"><span class="close-btn"></span></div>';
 	}
 }
 
