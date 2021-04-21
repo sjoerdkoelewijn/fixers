@@ -556,7 +556,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sidebar_background_color]',
 		array(
-			'label'    => __( 'Sidebar Background Color', 'SKDD' ),
+			'label'    => __( 'Sidebar & Submenu Background Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_background_color]',
 		)
@@ -579,7 +579,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sidebar_text_color]',
 		array(
-			'label'    => __( 'Sidebar Text Color', 'SKDD' ),
+			'label'    => __( 'Sidebar & Submenu Text Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_text_color]',
 		)

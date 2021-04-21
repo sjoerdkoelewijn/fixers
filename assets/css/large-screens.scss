@@ -207,9 +207,10 @@
 
 .main-navigation .primary-navigation .sub-menu {
     pointer-events: none;
-    background-color: #fff;
-    -webkit-box-shadow: 0 2px 8px 0 rgba(125, 122, 122, 0.2);
-    box-shadow: 0 2px 8px 0 rgba(125, 122, 122, 0.2);
+    background-color: var(--sidebar-background-color);
+    color:var(--sidebar-text-color);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
