@@ -87,7 +87,8 @@ add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_open', 10 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_search', 20 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_primary_navigation', 30 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_action', 40 );
-add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_close', 50 );
+add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_widget_area', 50 );
+add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_close', 60 );
 
 /**
  * Posts

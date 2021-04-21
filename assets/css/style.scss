@@ -191,6 +191,15 @@ button, .button, .wp-block-button__link {
 
 }
 
+.header_widget_area.sidebar {
+          
+  .button {
+    width:100%;
+    text-align:center;
+  }
+
+}
+
 a {
     color:var(--text-color);
 
@@ -896,7 +905,7 @@ form {
           .widget {
             margin-left:10px;
           }
-        }
+        }        
 
     }
 
@@ -1986,20 +1995,20 @@ form.woocommerce-checkout {
   position: fixed;  
   bottom: 0;
   top: 0;
-  background:var(--theme-color);
+  background:var(--sidebar-background-color);
   z-index: 200;
   padding: 30px;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   //overflow-y: scroll;
-  color:var(--background-color);
+  color:var(--sidebar-text-color);
 
   a {
-    color:var(--background-color);
+    color:var(--sidebar-text-color);
 
     &:hover {
       font-weight:bold;
-      color:var(--background-color);
+      color:var(--sidebar-text-color);
     }
   }
 
@@ -2064,7 +2073,7 @@ form.woocommerce-checkout {
   border-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(0,0,0,0.1);
   padding-left: 20px;
   padding-right: 40px;
   color:var(--menu-color);
@@ -2078,7 +2087,7 @@ form.woocommerce-checkout {
 
 .search-form .search-field:focus,
 .woocommerce-product-search .search-field:focus {
-  border-color:  rgba(0,0,0,0.05);
+  border-color:  rgba(0,0,0,0.15);
 }
 
 .search-form .search-submit,

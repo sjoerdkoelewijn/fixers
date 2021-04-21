@@ -113,6 +113,10 @@ class SKDD_Get_CSS {
 				
 				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
 			
+				--sidebar-background-color:' . esc_attr( $options['sidebar_background_color'] ) . ';
+				--sidebar-text-color:' . esc_attr( $options['sidebar_text_color'] ) . ';
+				
+
 			} 			
 
 			footer {

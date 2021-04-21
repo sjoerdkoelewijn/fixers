@@ -495,3 +495,93 @@ $wp_customize->add_control(
 	)
 );
 
+// ----------------------------------------------------------------------------------------------------------
+
+// Footer background color divider.
+$wp_customize->add_setting(
+	'sidebar_background_color_divider',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Divider_Control(
+		$wp_customize,
+		'sidebar_background_color_divider',
+		array(
+			'section'  => 'SKDD_color',
+			'settings' => 'sidebar_background_color_divider',
+			'type'     => 'divider',
+		)
+	)
+);
+
+
+// Sidebar background color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_background_color]',
+	array(
+		'default'           => $defaults['sidebar_background_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_background_color]',
+		array(
+			'label'    => __( 'Sidebar Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_background_color]',
+		)
+	)
+);
+
+// Sidebar background color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_background_color]',
+	array(
+		'default'           => $defaults['sidebar_background_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_background_color]',
+		array(
+			'label'    => __( 'Sidebar Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_background_color]',
+		)
+	)
+);
+
+// Sidebar Text color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_text_color]',
+	array(
+		'default'           => $defaults['sidebar_text_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_text_color]',
+		array(
+			'label'    => __( 'Sidebar Text Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_text_color]',
+		)
+	)
+);

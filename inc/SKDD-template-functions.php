@@ -1901,6 +1901,27 @@ if ( ! function_exists( 'SKDD_sidebar_menu_action' ) ) {
 	}
 }
 
+if ( ! function_exists( 'SKDD_sidebar_menu_widget_area' ) ) {
+
+	function SKDD_sidebar_menu_widget_area() {
+		$options = SKDD_options( false );
+
+		if ( $options['header_widget_area'] ) { 
+					
+			if ( is_active_sidebar( 'header_menu' ) ) {
+				?>
+				<div class="header_widget_area sidebar">
+					<?php dynamic_sidebar( 'header_menu' ); ?>
+				</div>
+				<?php
+			}  
+		
+		}
+
+	}
+	
+}
+
 if ( ! function_exists( 'SKDD_sidebar_menu_close' ) ) {
 	/**
 	 * Sidebar menu close

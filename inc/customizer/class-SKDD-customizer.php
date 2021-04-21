@@ -281,6 +281,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_shop'                            => 'default',
 				'sidebar_shop_single'                     => 'full',
 				'sidebar_width'                           => 20,
+				'sidebar_background_color'				  => '#000000',
+				'sidebar_text_color'				  => '#ffffff',		
 				// 404.
 				'error_404_image'                         => '',
 				'error_404_text'                          => __( 'Oops! The page you are looking for cannot be found.', 'SKDD' ),
