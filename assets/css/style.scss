@@ -3101,21 +3101,19 @@ form.woocommerce-checkout {
 /***************************  ****************************************************************************/
 
 .ghostkit-carousel {
-  --gkt-carousel--arrows__offset: 2em;
+  --gkt-carousel--arrows__offset: 60px;
   --gkt-carousel--arrows__width: 60px;
   --gkt-carousel--arrows__height: 60px;
   --gkt-carousel--arrows__background-color: var(--button-background-color);
   --gkt-carousel--bullets__margin-top: 50px;
   --gkt-carousel--bullets__background-color: var(--theme-color);
-    
-  width:104vw;
+  
   margin-top:var(--content-spacing);
 
   @include phone{
     --gkt-carousel--arrows__width: 50px;
     --gkt-carousel--arrows__height: 50px;
 
-    width:100%;
   }
 
   .ghostkit-carousel-arrow {
@@ -3127,23 +3125,26 @@ form.woocommerce-checkout {
 
   }
 
-  .ghostkit-carousel-arrow-next {
-    right:clamp(110px, 8vw, 600px );
-    z-index:20;
-
-    @include phone{
-      right:.5em;
-    }
-
-  }  
-
   .ghostkit-carousel-arrow-prev {
     
     @include phone{
       display:none;
     }
 
-  }  
+  } 
+  
+  .textblock {
+    border-radius:var(--border-radius);  
+
+    h2, h3 {
+      margin:0;
+      font-size:var(--header-size-4);
+    }
+    p {
+      margin-top:0;
+    }
+
+  }
   
 }
 
@@ -3154,7 +3155,7 @@ form.woocommerce-checkout {
     height:100%;
     background:linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--background-color-rgba) 100%);
     position:absolute;
-    right:5.9vw;
+    right:4vw;
     z-index:10;
 
     @include phone{
@@ -3164,11 +3165,26 @@ form.woocommerce-checkout {
   }
 }
 
+.ghostkit-carousel.cutoff {
+  width:104vw;
 
-/*************************** Custom Templates - Portfolio slider ****************************************************************************/
+  @include phone{
+    width:100%;
+  }
+  
+  .ghostkit-carousel-arrow-next {
+    right:clamp(150px, 7vw, 600px );
+    z-index:20;
 
-.portfolio-slider {
-  position:relative;  
+    @include phone{
+      right:.5em;
+    }
+
+  }
+
+}
+
+.ghostkit-carousel.portfolio {
 
   .wp-block-image {
     margin:0;
@@ -3178,10 +3194,10 @@ form.woocommerce-checkout {
     }
   }
   
-  .portfolio-slider--textblock {
+  .textblock {
     border-radius:0 0 var(--border-radius) var(--border-radius);  
 
-    h2 {
+    h2, h3 {
       margin:0;
       font-size:var(--header-size-4);
     }
