@@ -275,3 +275,29 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
     rgba(0,0,0,0.07) 40px
   );
 }
+
+.portfolio-slider  {
+    margin-top:var(--content-spacing);
+
+}
+
+.portfolio-slider .wp-block-image {
+  margin:0;
+}
+  
+.portfolio-slider .wp-block-image img {
+  border-radius:var(--border-radius) var(--border-radius) 0 0;  
+}
+  
+.portfolio-slider .portfolio-slider--textblock {
+  border-radius:0 0 var(--border-radius) var(--border-radius);
+}  
+
+.portfolio-slider .portfolio-slider--textblock h2{
+  margin:0;
+  font-size:var(--header-size-4);
+}
+
+.portfolio-slider .portfolio-slider--textblock p {
+  margin-top:0;
+}

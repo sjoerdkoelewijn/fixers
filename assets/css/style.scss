@@ -3097,3 +3097,98 @@ form.woocommerce-checkout {
 .cmplz-blocked-content-container.forminator-g-recaptcha .cmplz-blocked-content-notice {
   top: 2px
 }
+
+/***************************  ****************************************************************************/
+
+.ghostkit-carousel {
+  --gkt-carousel--arrows__offset: 2em;
+  --gkt-carousel--arrows__width: 60px;
+  --gkt-carousel--arrows__height: 60px;
+  --gkt-carousel--arrows__background-color: var(--button-background-color);
+  --gkt-carousel--bullets__margin-top: 50px;
+  --gkt-carousel--bullets__background-color: var(--theme-color);
+    
+  width:104vw;
+  margin-top:var(--content-spacing);
+
+  @include phone{
+    --gkt-carousel--arrows__width: 50px;
+    --gkt-carousel--arrows__height: 50px;
+
+    width:100%;
+  }
+
+  .ghostkit-carousel-arrow {
+    top:45%;
+
+    @include phone{
+      top:48%;
+    }
+
+  }
+
+  .ghostkit-carousel-arrow-next {
+    right:clamp(110px, 8vw, 600px );
+    z-index:20;
+
+    @include phone{
+      right:.5em;
+    }
+
+  }  
+
+  .ghostkit-carousel-arrow-prev {
+    
+    @include phone{
+      display:none;
+    }
+
+  }  
+  
+}
+
+.ghostkit-carousel.fade {
+  &:before {
+    content:'';
+    width:100px;
+    height:100%;
+    background:linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--background-color-rgba) 100%);
+    position:absolute;
+    right:5.9vw;
+    z-index:10;
+
+    @include phone{
+      display:none;
+    }
+
+  }
+}
+
+
+/*************************** Custom Templates - Portfolio slider ****************************************************************************/
+
+.portfolio-slider {
+  position:relative;  
+
+  .wp-block-image {
+    margin:0;
+
+    img {
+      border-radius:var(--border-radius) var(--border-radius) 0 0;  
+    }
+  }
+  
+  .portfolio-slider--textblock {
+    border-radius:0 0 var(--border-radius) var(--border-radius);  
+
+    h2 {
+      margin:0;
+      font-size:var(--header-size-4);
+    }
+    p {
+      margin-top:0;
+    }
+
+  }
+
+}

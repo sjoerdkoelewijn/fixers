@@ -74,6 +74,7 @@ class SKDD_Get_CSS {
 				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
 				--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';				
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
+				--background-color-rgba:' . esc_attr( $options['background_color'] ) . ';			
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				
@@ -114,8 +115,7 @@ class SKDD_Get_CSS {
 				--footer-space:'. esc_attr( $options['footer_space'] ) . 'px' .';
 			
 				--sidebar-background-color:' . esc_attr( $options['sidebar_background_color'] ) . ';
-				--sidebar-text-color:' . esc_attr( $options['sidebar_text_color'] ) . ';
-				
+				--sidebar-text-color:' . esc_attr( $options['sidebar_text_color'] ) . ';				
 
 			} 			
 
