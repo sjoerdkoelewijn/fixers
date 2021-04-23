@@ -1,9 +1,5 @@
 <?php
-/**
- * Button customizer
- *
- * @package SKDD
- */
+/* Button customizer */
 
 // Default values.
 $defaults = SKDD_options();

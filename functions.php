@@ -6,8 +6,7 @@
  */
 
 // Define constants.
-define( 'SKDD_VERSION', '1.8.0' );
-define( 'SKDD_PRO_MIN_VERSION', '1.4.6' );
+define( 'SKDD_VERSION', '1.0.0' );
 define( 'SKDD_THEME_DIR', get_template_directory() . '/' );
 define( 'SKDD_THEME_URI', get_template_directory_uri() . '/' );
 
@@ -32,19 +31,35 @@ if ( SKDD_is_woocommerce_activated() ) {
 	require_once SKDD_THEME_DIR . 'inc/woocommerce/class-SKDD-adjacent-products.php';
 	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-template-functions.php';
 	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-archive-product-functions.php';
-	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-single-product-functions.php';
-	
+	require_once SKDD_THEME_DIR . 'inc/woocommerce/SKDD-woocommerce-single-product-functions.php';	
 }
 
 // SKDD admin.
 if ( is_admin() ) {
 	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-admin.php';
 	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-meta-boxes.php';
+	require_once SKDD_THEME_DIR . 'inc/admin/SKDD-admin-menu-order.php';
 }
 
-require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
+// require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
 
+// Add Premade Custom Post Types
 
-/**
- * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
- */
+$options = SKDD_options( false );
+
+if ( $options['cpt_portfolio_display'] ) {
+	require_once SKDD_THEME_DIR . 'inc/cpt/portfolio.php';		
+}
+
+if ( $options['cpt_services_display'] ) {
+	require_once SKDD_THEME_DIR . 'inc/cpt/services.php';		
+}
+
+if ( $options['cpt_knowledge_display'] ) {
+	require_once SKDD_THEME_DIR . 'inc/cpt/knowledge.php';		
+}
+
+if ( $options['cpt_services_display'] || $options['cpt_services_display'] || $options['cpt_knowledge_display']) {
+	require_once SKDD_THEME_DIR . 'inc/cpt/custom-url.php';	
+}
+

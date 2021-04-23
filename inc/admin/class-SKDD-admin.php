@@ -36,7 +36,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 		 * Setup class.
 		 */
 		public function __construct() {
-			add_action( 'admin_notices', array( $this, 'SKDD_admin_notice' ) );
+			//add_action( 'admin_notices', array( $this, 'SKDD_admin_notice' ) );
 			add_action( 'wp_ajax_dismiss_admin_notice', array( $this, 'SKDD_dismiss_admin_notice' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'SKDD_welcome_static' ) );
 			add_action( 'admin_body_class', array( $this, 'SKDD_admin_classes' ) );
@@ -49,7 +49,6 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 			return $mimes;
 		}
 		  
-
 		/**
 		 * Admin body classes.
 		 *
@@ -65,7 +64,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 
 		/**
 		 * Add admin notice
-		 */
+		 
 		public function SKDD_admin_notice() {
 			if ( ! current_user_can( 'edit_theme_options' ) ) {
 				return;
@@ -86,7 +85,6 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 								<?php
 								echo wp_kses_post(
 									sprintf(
-										/* translators: Theme options */
 										__( 'Voor meer informatie kijk op onze website of neem contact op. <a href="%1$s">SKDD website</a>.', 'SKDD' ),
 										esc_url( admin_url( 'https://SKDD.nl/webdevelopment/' ) )
 									)
@@ -104,6 +102,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 				<?php
 			}
 		}
+		*/
 
 		/**
 		 * Dismiss admin notice
@@ -171,17 +170,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 				);
 			}
 
-			// Install plugin import demo.
-			wp_enqueue_script(
-				'SKDD-install-demo',
-				SKDD_THEME_URI . 'assets/js/admin/install-demo' . SKDD_suffix() . '.js',
-				array( 'updates' ),
-				SKDD_version(),
-				true
-			);
 		}
-
-
 
 		/**
 		 * Customizer settings link
@@ -216,6 +205,13 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 						'name'     => __( 'Buttons', 'SKDD' ),
 						'type'     => 'section',
 						'setting'  => 'SKDD_buttons',
+						'required' => '',
+					),
+					'cpt'      => array(
+						'icon'     => 'dashicons dashicons-admin-customizer',
+						'name'     => __( 'Custom Post Types', 'SKDD' ),
+						'type'     => 'section',
+						'setting'  => 'SKDD_custom_post_types',
 						'required' => '',
 					),
 					'typo'        => array(

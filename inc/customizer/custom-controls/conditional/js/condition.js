@@ -204,6 +204,31 @@
 			false
 		);
 
+		// CPT.
+		condition(
+			'SKDD_setting[cpt_portfolio_display]',
+			[
+				'SKDD_setting[cpt_portfolio_name]',
+			],
+			false
+		);
+
+		condition(
+			'SKDD_setting[cpt_services_display]',
+			[
+				'SKDD_setting[cpt_services_name]',
+			],
+			false
+		);
+
+		condition(
+			'SKDD_setting[cpt_knowledge_display]',
+			[
+				'SKDD_setting[cpt_knowledge_name]',
+			],
+			false
+		);
+
 		// Topbar transparency
 		condition(
 			'SKDD_setting[header_transparent]',

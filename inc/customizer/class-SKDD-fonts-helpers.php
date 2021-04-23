@@ -134,7 +134,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 				// Body font.
 				'body_font_family'             => 'Poppins',
 				'body_font_family_variants'    => '',
-				'body_font_size'               => 14,
+				'body_font_size'               => 16,
 				'body_font_weight'             => 400,
 				'body_line_height'             => 28,
 				'body_font_category'           => '',

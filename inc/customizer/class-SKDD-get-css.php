@@ -28,16 +28,8 @@ class SKDD_Get_CSS {
 		// Get all theme option value.
 		$options = SKDD_options( false );
 
-		// GENERATE CSS.
-		// Remove outline select on Firefox.
-		$styles = '
-			select:-moz-focusring{
-				text-shadow: 0 0 0 ' . esc_attr( $options['text_color'] ) . ';
-			}
-		';
-
 		// Container.
-		$styles .= '
+		$styles = '
 
 			:root {
 				--body-font-size:'. esc_attr( ($options['body_font_size']) / 10 ) . 'rem' .';
@@ -643,7 +635,7 @@ class SKDD_Get_CSS {
 				}
 			';
 
-			wp_register_style( 'SKDD-block-editor', false ); // @codingStandardsIgnoreLine
+			wp_register_style( 'SKDD-block-editor', false ); 
 			wp_enqueue_style( 'SKDD-block-editor' );
 			wp_add_inline_style( 'SKDD-block-editor', $block_styles );
 

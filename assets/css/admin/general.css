@@ -332,3 +332,7 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 .ghostkit-carousel.portfolio .textblock p {
   margin-top:0;
 }
+
+/* Hide upgrade messages from admin menu */
+.toplevel_page_ghostkit li:last-of-type {display:none;}
+.toplevel_page_complianz li:last-of-type {display:none;}

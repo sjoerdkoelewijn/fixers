@@ -156,7 +156,10 @@ video {
   clear: both;
 }
 
-
+// Remove outline select on Firefox.
+select:-moz-focusring{
+  text-shadow: 0 0 0 var(--body-text-color);
+}
 
 input {
     font-family: sans-serif;

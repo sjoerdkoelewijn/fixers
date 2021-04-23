@@ -19,7 +19,7 @@ $layout_sections = apply_filters(
 		'SKDD_sidebar'            => __( 'Sidebar', 'SKDD' ),
 		'SKDD_footer'             => __( 'Footer', 'SKDD' ),
 		'SKDD_error'              => __( '404', 'SKDD' ),
-		'SKDD_scroll_to_top'      => __( 'Scroll To Top', 'SKDD' ),
+		'SKDD_scroll_to_top'      => __( 'Scroll To Top', 'SKDD' ),		
 	)
 );
 
@@ -45,7 +45,7 @@ foreach ( $layout_sections as $section_id => $name ) {
 $wp_customize->add_section(
 	'SKDD_color',
 	array(
-		'title'    => __( 'Color', 'SKDD' ),
+		'title'    => __( 'Colors', 'SKDD' ),
 		'priority' => 30,
 	)
 );
@@ -55,6 +55,15 @@ $wp_customize->add_section(
 	'SKDD_buttons',
 	array(
 		'title'    => __( 'Buttons', 'SKDD' ),
+		'priority' => 35,
+	)
+);
+
+// CUSTOM POST TYPES.
+$wp_customize->add_section(
+	'SKDD_custom_post_types',
+	array(
+		'title'    => __( 'Custom Post Types', 'SKDD' ),
 		'priority' => 30,
 	)
 );
