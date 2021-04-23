@@ -5,6 +5,11 @@ function SKDD_custom_menu_order( $menu_order ) {
 
     return array(
         'index.php', // Dashboard
+        'woocommerce', 
+        'edit.php?post_type=product',
+        'wc-admin&path=/analytics/overview', 
+        'woocommerce-marketing',
+
         'separator1', // First separator 
         'edit.php?post_type=page', // Pages        
         'edit.php?post_type=portfolio', // Pages
@@ -12,7 +17,8 @@ function SKDD_custom_menu_order( $menu_order ) {
         'edit.php?post_type=knowledge', // Pages
         'edit.php', // Posts
         'edit-comments.php', // Comments
-        'separator2', // Second separator               
+        'separator2', // Second separator 
+        
         'edit.php?post_type=ghostkit_template', // Block Templates
         'edit.php?post_type=wp_block', // Re-usable Blocks
         'upload.php', // Media

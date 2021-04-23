@@ -336,3 +336,4 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 /* Hide upgrade messages from admin menu */
 .toplevel_page_ghostkit li:last-of-type {display:none;}
 .toplevel_page_complianz li:last-of-type {display:none;}
+.toplevel_page_forminator li:last-of-type {display:none;}

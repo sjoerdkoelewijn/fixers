@@ -55,7 +55,8 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			add_filter( 'woocommerce_product_loop_start', 'SKDD_woocommerce_loop_start' );
 			add_action( 'SKDD_product_loop_item_action_item', 'SKDD_product_loop_item_add_to_cart_icon', 10 );
 			add_action( 'SKDD_product_loop_item_action_item', 'SKDD_product_loop_item_wishlist_icon', 30 );
-			add_action(	'admin_menu', 'SKDD_customer_service_submenu', 10);
+			//add_action(	'admin_menu', 'SKDD_customer_service_submenu', 10);
+			
 			// Ajax single add to cart.
 			add_action( 'wp_ajax_single_add_to_cart', 'SKDD_ajax_single_add_to_cart' );
 			add_action( 'wp_ajax_nopriv_single_add_to_cart', 'SKDD_ajax_single_add_to_cart' );
