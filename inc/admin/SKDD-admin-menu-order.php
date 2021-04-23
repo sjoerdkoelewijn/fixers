@@ -89,6 +89,14 @@ function SKDD_move_admin_menu_items()
         'edit_posts', //$capability
         'widgets.php' //$menu_slug
     );
+    
+    add_submenu_page(
+        'options-general.php', //$parent_slug
+        __( 'Plugins', 'SKDD' ), //$page_title
+        __( 'Plugins', 'SKDD' ), //$menu_title
+        'edit_posts', //$capability
+        'plugins.php' //$menu_slug
+    );
 
 
 }
