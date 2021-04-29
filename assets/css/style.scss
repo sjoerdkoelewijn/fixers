@@ -1174,7 +1174,7 @@ a:hover{
 }
 
 // Custom color picker
-.has-skdd-primary-background-color {
+.has-skdd-primary-background-color.has-background {
   background-color: var(--theme-color); 
 }
 
@@ -1184,16 +1184,24 @@ a:hover{
   }
 }
 
-.has-skdd-secondary-background-color { 
+.has-skdd-secondary-theme-color.has-background { 
   background-color: var(--secondary-theme-color);  
 }
 
-.has-skdd-tertiary-background-color {
+.has-skdd-secondary-background-color.has-text-color { 
+  color: var(--secondary-background-color);  
+}
+
+.has-skdd-tertiary-theme-color.has-background {
   background-color: var(--tertiary-theme-color);  
 }
 
 .has-skdd-secondary-background-background-color {
   background-color: var(--second-background-color);  
+}
+
+.has-skdd-offset-background-color {
+  background-color: var(--offset-color); 
 }
 
 
