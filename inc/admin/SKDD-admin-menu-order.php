@@ -11,10 +11,11 @@ function SKDD_custom_menu_order( $menu_order ) {
         'woocommerce-marketing',
 
         'separator1', // First separator 
-        'edit.php?post_type=page', // Pages        
-        'edit.php?post_type=portfolio', // Pages
-        'edit.php?post_type=services', // Pages
-        'edit.php?post_type=knowledge', // Pages
+        'edit.php?post_type=page',         
+        'edit.php?post_type=portfolio', 
+        'edit.php?post_type=services', 
+        'edit.php?post_type=knowledge', 
+        'edit.php?post_type=team', 
         'edit.php', // Posts
         'edit-comments.php', // Comments
         'separator2', // Second separator 
