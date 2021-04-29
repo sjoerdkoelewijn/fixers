@@ -282,7 +282,7 @@ if ( ! function_exists( 'SKDD_footer_custom_text' ) ) {
 	 * @return string $content Footer custom text
 	 */
 	function SKDD_footer_custom_text() {
-		$content = __( 'Copyright &copy; [current_year] [site_title] | Made by [theme_author] |', 'SKDD' );
+		$content = __( 'Copyright &copy; [current_year] [site_title] | Made by [sjoerd_link] |', 'SKDD' );
 
 		if ( apply_filters( 'SKDD_credit_info', true ) ) {
 
