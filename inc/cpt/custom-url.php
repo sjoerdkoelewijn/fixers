@@ -8,7 +8,7 @@ function sk_update_permalink_structure( $post_link, $post )
 {
     if ( false !== strpos( $post_link, '%portfolio%' ) ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, 'portfolio' );
+		$taxonomy_terms = get_the_terms( $post->ID, __( 'portfolio', 'SKDD' ) );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {
@@ -19,7 +19,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
 	if ( false !== strpos( $post_link, '%services%' ) ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, 'services' );
+		$taxonomy_terms = get_the_terms( $post->ID, __( 'services', 'SKDD' ) );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {
@@ -30,7 +30,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
 	if ( false !== strpos( $post_link, '%knowledge%' ) ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, 'knowledge-base' );
+		$taxonomy_terms = get_the_terms( $post->ID, __( 'knowledge-base', 'SKDD' ) );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {

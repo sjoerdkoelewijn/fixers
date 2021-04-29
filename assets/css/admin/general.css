@@ -337,3 +337,18 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 .toplevel_page_ghostkit li:last-of-type {display:none;}
 .toplevel_page_complianz li:last-of-type {display:none;}
 .toplevel_page_forminator li:last-of-type {display:none;}
+
+
+/* Custom Dashboard Widgets */
+
+.skdd_dashboard_widget, .skdd_dashboard_widget p {
+  font-size:105%;
+}
+
+.skdd_dashboard_widget a{
+  
+  display:block;
+  margin-bottom:10px;
+  font-weight:bold;
+    
+}

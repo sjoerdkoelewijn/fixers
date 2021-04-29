@@ -39,7 +39,10 @@ if ( is_admin() ) {
 	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-admin.php';
 	require_once SKDD_THEME_DIR . 'inc/admin/class-SKDD-meta-boxes.php';
 	require_once SKDD_THEME_DIR . 'inc/admin/SKDD-admin-menu-order.php';
+	require_once SKDD_THEME_DIR . 'inc/admin/SKDD-dashboard-widgets.php';
 }
+
+require_once SKDD_THEME_DIR . 'inc/admin/SKDD-custom-login.php';
 
 // require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
 

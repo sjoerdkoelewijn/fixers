@@ -66,7 +66,6 @@ class SKDD_Get_CSS {
 				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
 				--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';				
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
-				--background-color-rgba:' . esc_attr( $options['background_color'] ) . ';			
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				
