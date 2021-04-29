@@ -108,3 +108,45 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+
+// ----------------------------------------------------------------------------------------------------------
+
+$wp_customize->add_setting(
+	'team_divider',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Divider_Control(
+		$wp_customize,
+		'team_divider',
+		array(
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'team_divider',
+			'type'     => 'divider',
+		)
+	)
+);
+
+// Show diensten cpt
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_team_display]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_team_display'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_team_display]',
+		array(
+			'label'    => __( 'Team Post Type', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_team_display]',
+		)
+	)
+);

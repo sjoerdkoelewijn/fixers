@@ -62,7 +62,11 @@ if ( $options['cpt_knowledge_display'] ) {
 	require_once SKDD_THEME_DIR . 'inc/cpt/knowledge.php';		
 }
 
-if ( $options['cpt_services_display'] || $options['cpt_services_display'] || $options['cpt_knowledge_display']) {
+if ( $options['cpt_team_display'] ) {
+	require_once SKDD_THEME_DIR . 'inc/cpt/team.php';		
+}
+
+if ( $options['cpt_services_display'] || $options['cpt_services_display'] || $options['cpt_knowledge_display'] || $options['cpt_team_display']) {
 	require_once SKDD_THEME_DIR . 'inc/cpt/custom-url.php';	
 }
 
