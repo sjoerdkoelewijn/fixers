@@ -1214,34 +1214,100 @@ a:hover{
 
 // Custom color picker
 .has-skdd-primary-background-color.has-background {
-  background-color: var(--theme-color); 
+  //background-color: var(--theme-color); 
 }
 
 .has-skdd-primary-background-color {
   &:hover {
-    background-color: var(--text-color);
+    //background-color: var(--text-color);
   }
 }
 
-.has-skdd-secondary-theme-color.has-background { 
-  background-color: var(--secondary-theme-color);  
+
+
+
+//  theme color
+
+.has-skdd-theme-color.has-background{
+  background:var(--theme-color);
 }
 
-.has-skdd-secondary-background-color.has-text-color { 
-  color: var(--secondary-background-color);  
+.has-skdd-theme-color.has-text-color {
+  color:var(--theme-color);
 }
 
-.has-skdd-tertiary-theme-color.has-background {
-  background-color: var(--tertiary-theme-color);  
+
+
+// secondary theme color
+
+.has-skdd-secondary-theme-color.has-background{
+  background:var(--secondary-theme-color);
 }
 
-.has-skdd-secondary-background-background-color {
-  background-color: var(--second-background-color);  
+.has-skdd-secondary-theme-color.has-text-color {
+  color:var(--secondary-theme-color);
 }
 
-.has-skdd-offset-background-color {
-  background-color: var(--offset-color); 
+
+// tertiary theme color
+
+.has-skdd-tertiary-theme-color.has-background{
+  background:var(--tertiary-theme-color);
 }
+
+.has-skdd-tertiary-theme-color.has-text-color {
+  color:var(--tertiary-theme-color);
+}
+
+
+
+// tertiary theme color
+
+.has-skdd-tertiary-theme-color.has-background{
+  background:var(--tertiary-theme-color);
+}
+
+.has-skdd-tertiary-theme-color.has-text-color {
+  color:var(--tertiary-theme-color);
+}
+
+
+// primary background color
+
+.has-skdd-background-color.has-background{
+  background:var(--background-color);
+}
+
+.has-skdd-background-color.has-text-color {
+  color:var(--background-color);
+}
+
+
+// Secondary background color
+
+.has-skdd-secondary-background-color.has-background{
+  background:var(--second-background-color);
+}
+
+.has-skdd-secondary-background-color.has-text-color {
+  color:var(--second-background-color);
+}
+
+
+// Offset color
+
+.has-skdd-offset-background-color.has-background{
+  background:var(--offset-color);
+}
+
+.has-skdd-offset-background-color.has-text-color {
+  color:var(--offset-color);
+}
+
+
+
+
+
 
 
 
@@ -1276,9 +1342,14 @@ a{
 }
 
 
-.has-skdd-background-color, .has-skdd-background-background-color {
+.has-skdd-background-color.has-background{
   background:var(--background-color);
 }
+
+.has-skdd-background-color.has-text-color {
+  color:var(--background-color);
+}
+
 
 
 .button,
