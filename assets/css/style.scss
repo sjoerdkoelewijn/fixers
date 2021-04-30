@@ -908,8 +908,8 @@ form {
           .widget {
             margin-left:10px;
           }
-        }        
-
+        }
+        
     }
 
     button {
@@ -998,6 +998,35 @@ form {
         }
         
     }
+}
+
+.main-navigation {
+
+  .primary-navigation {
+
+    .menu-item.button {
+      background-color:transparent;
+      margin:0;
+      padding:0;
+  
+      a {
+        background-color: var(--button-background-color);
+        color: var(--button-text-color);
+        border-radius: var(--button-border-radius);
+        padding: 15px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 0;
+        line-height: 30px;
+
+        &:hover {
+          background-color: var(--button-hover-background-color);
+          color: var(--button-hover-text-color);
+        }
+      }
+    }
+  }
+  
 }
 
 .has-distraction-free-checkout {
