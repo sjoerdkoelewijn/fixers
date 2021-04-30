@@ -1013,17 +1013,29 @@ form {
         background-color: var(--button-background-color);
         color: var(--button-text-color);
         border-radius: var(--button-border-radius);
-        padding: calc(var(--header-max-height) / 8) 30px;
+        padding: calc(var(--header-max-height) / 7) 30px;
         text-decoration: none;
         cursor: pointer;
         border: 0;
-        line-height: calc(var(--header-max-height) / 4);
+        line-height: calc(var(--header-max-height) / 3.5);
 
         &:hover {
           background-color: var(--button-hover-background-color);
           color: var(--button-hover-text-color);
         }
       }
+    }
+  }
+  
+}
+
+.sidebar-menu {  
+
+  .primary-navigation {
+
+    .menu-item.button{
+      margin-top:20px;    
+      text-align:center;
     }
   }
   
