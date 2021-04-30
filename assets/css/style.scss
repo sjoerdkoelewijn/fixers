@@ -1150,8 +1150,6 @@ form {
 .woocommerce-cart-form__contents tbody .product-subtotal,
 .woocommerce-checkout-review-order-table .order-total,
 .woocommerce-table--order-details .product-name a,
-
-
 .woocommerce-mini-cart__total .amount,
 .woocommerce-form-login-toggle .woocommerce-info a:hover,
 .woocommerce-form-coupon-toggle .woocommerce-info a:hover,
@@ -1696,6 +1694,10 @@ form.woocommerce-checkout {
     font-size: var(--menu-font-size);
     line-height: var(--menu-line-height);
     color: var(--menu-color);
+
+    &:hover {
+      color: var(--theme-color);
+    }
   }
 
   .primary-navigation .sub-menu a{
