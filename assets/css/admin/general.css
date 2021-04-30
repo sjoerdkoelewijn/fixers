@@ -352,3 +352,18 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
   font-weight:bold;
     
 }
+
+.edit-post-visual-editor__post-title-wrapper {
+  border-bottom:1px solid #efefef;
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.editor-post-title__block .editor-post-title__input, .wp-block-heading, .editor-rich-text__tinymce {
+  font-weight: 400;
+  font-size:1.2em;
+}
+
