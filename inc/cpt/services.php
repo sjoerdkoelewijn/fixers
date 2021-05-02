@@ -59,7 +59,7 @@ function cpt_services() {
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
-			'capability_type'       => 'post',
+			'capability_type'       => 'page',
 			'show_in_rest'          => true,
 			//'query_var'           	=> true,
 	);
@@ -67,34 +67,3 @@ function cpt_services() {
 
 }
 add_action( 'init', 'cpt_services', 10 );
-
-
-function cpt_services_taxonomy() { 
- 
-	  $labels = array(
-		'name' => _x( 'Services categories', 'taxonomy general name', 'SKDD' ),
-		'singular_name' => _x( 'Services Category', 'taxonomy singular name', 'SKDD' ),
-		'search_items' =>  __( 'Search Categories', 'SKDD' ),
-		'all_items' => __( 'All Categories', 'SKDD' ),
-		'parent_item' => __( 'Parent Category', 'SKDD' ),
-		'parent_item_colon' => __( 'Parent Category:', 'SKDD' ),
-		'edit_item' => __( 'Edit Category', 'SKDD' ), 
-		'update_item' => __( 'Update Category', 'SKDD' ),
-		'add_new_item' => __( 'Add New Category', 'SKDD' ),
-		'new_item_name' => __( 'New Category Name', 'SKDD' ),
-		'menu_name' => __( 'Categories', 'SKDD' ),
-	  );    
-	  
-	  register_taxonomy('tax_services', array('services'), array(
-		'hierarchical' 		=> true,
-		'public'        	=> true,
-		'labels' 			=> $labels,
-		'show_ui' 			=> true,
-		'show_admin_column' => true,
-		'query_var' 		=> true,
-		'show_in_rest'      => true,
-		'rewrite' 			=> array( 'slug' => __( 'services', 'SKDD' ) ),
-	  ));
-	 
-}
-add_action( 'init', 'cpt_services_taxonomy', 0 );

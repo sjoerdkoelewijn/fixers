@@ -275,6 +275,29 @@ if ( ! function_exists( 'SKDD_is_blog' ) ) {
 	}
 }
 
+if ( ! function_exists( 'SKDD_is_cpt' ) ) {
+	/**
+	 * SKDD detect blog page
+	 *
+	 * @return boolean $is_blog
+	 */
+	function SKDD_is_cpt() {
+		global $post;
+
+		$post_type = get_post_type( $post );
+
+		// 'portfolio|services|team|knowledge';
+
+		$custom_post_type = $post_type && ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() );
+
+		if ( 'portfolio' === $post_type && $custom_post_type || 'services' === $post_type && $custom_post_type || 'team' === $post_type && $custom_post_type || 'knowledge' === $post_type && $custom_post_type )  {
+			$is_cpt = true;
+			return apply_filters( 'SKDD_is_cpt', $is_cpt );
+		} 		
+		
+	}
+}
+
 if ( ! function_exists( 'SKDD_options' ) ) {
 	/**
 	 * Theme option

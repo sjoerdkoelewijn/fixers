@@ -1031,7 +1031,7 @@ if ( ! function_exists( 'SKDD_get_post_structure' ) ) {
 	 * @param boolean $echo        Echo.
 	 */
 	function SKDD_get_post_structure( $option_name, $echo = true ) {
-		if ( ! is_search() && ! SKDD_is_blog() ) {
+		if ( ! is_search() && ! SKDD_is_blog() && ! SKDD_is_cpt() ) {
 			return;
 		}
 
@@ -1064,7 +1064,7 @@ if ( ! function_exists( 'SKDD_get_post_structure' ) ) {
 		}
 
 		if ( $echo ) {
-			echo $output; // phpcs:ignore
+			echo $output; 
 		} else {
 			return $output;
 		}
@@ -1079,7 +1079,7 @@ if ( ! function_exists( 'SKDD_get_post_meta' ) ) {
 	 * @param boolean $echo        Echo.
 	 */
 	function SKDD_get_post_meta( $option_name, $echo = true ) {
-		if ( ! is_search() && ! SKDD_is_blog() ) {
+		if ( ! is_search() && ! SKDD_is_blog() && ! SKDD_is_cpt() ) {
 			return;
 		}
 

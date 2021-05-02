@@ -35,7 +35,7 @@ function cpt_portfolio() {
 	);
 
 	$rewrite = array(
-			'slug'                  => __( 'portfolio', 'SKDD' ),
+			'slug'                  => __( 'portfolio', 'SKDD' ) . '/' . '%tax_portfolio%',
 			'with_front'            => true,
 			'pages'                 => true,
 			'feeds'                 => true,
@@ -97,4 +97,5 @@ function cpt_portfolio_taxonomy() {
 	  ));
 	 
 }
+
 add_action( 'init', 'cpt_portfolio_taxonomy', 0 );
