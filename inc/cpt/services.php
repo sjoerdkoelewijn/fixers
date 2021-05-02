@@ -4,6 +4,20 @@
 
 function cpt_services() {
 
+	$options = SKDD_options( false );
+
+	if ( $options['cpt_services_has_archive'] ) {
+		$has_archive =	__( 'services', 'SKDD' );
+	} else {
+		$has_archive =	false;
+	}
+
+	if ( $options['cpt_services_has_tax'] ) {
+		$slug = __( 'services', 'SKDD' ) . '/' . '%tax_services%';
+	} else {
+		$slug =	__( 'services', 'SKDD' );
+	}
+
 	$labels = array(
 			'name'                  => __( 'Services', 'Post Type General Name', 'SKDD' ),
 			'singular_name'         => _x( 'Services', 'Post Type Singular Name', 'SKDD' ),
@@ -35,11 +49,11 @@ function cpt_services() {
 	);
 
 	$rewrite = array(
-			'slug'                  => __( 'services', 'SKDD' ),
+			'slug'                  => $slug,
 			'with_front'            => true,
 			'pages'                 => true,
 			'feeds'                 => true,
-	);
+	);	
 
 	$args = array(
 			'label'                 => __( 'Services', 'SKDD' ),
@@ -55,7 +69,7 @@ function cpt_services() {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
-			'has_archive'           => __( 'services', 'SKDD' ),
+			'has_archive'           => $has_archive,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
@@ -67,3 +81,37 @@ function cpt_services() {
 
 }
 add_action( 'init', 'cpt_services', 10 );
+
+	
+function cpt_services_taxonomy() { 
+ 
+	  $labels = array(
+		'name' => _x( 'Services categories', 'taxonomy general name', 'SKDD' ),
+		'singular_name' => _x( 'Services Category', 'taxonomy singular name', 'SKDD' ),
+		'search_items' =>  __( 'Search Categories', 'SKDD' ),
+		'all_items' => __( 'All Categories', 'SKDD' ),
+		'parent_item' => __( 'Parent Category', 'SKDD' ),
+		'parent_item_colon' => __( 'Parent Category:', 'SKDD' ),
+		'edit_item' => __( 'Edit Category', 'SKDD' ), 
+		'update_item' => __( 'Update Category', 'SKDD' ),
+		'add_new_item' => __( 'Add New Category', 'SKDD' ),
+		'new_item_name' => __( 'New Category Name', 'SKDD' ),
+		'menu_name' => __( 'Categories', 'SKDD' ),
+	  );    
+	  
+	  register_taxonomy('tax_services', array('services'), array(
+		'hierarchical' 		=> true,
+		'public'        	=> true,
+		'labels' 			=> $labels,
+		'show_ui' 			=> true,
+		'show_admin_column' => true,
+		'query_var' 		=> true,
+		'show_in_rest'      => true,
+		'rewrite' 			=> array( 'slug' => __( 'services', 'SKDD' ) ),
+	  ));
+	 
+}
+
+if ( $options['cpt_services_has_tax'] ) {
+	add_action( 'init', 'cpt_services_taxonomy', 0 );
+}

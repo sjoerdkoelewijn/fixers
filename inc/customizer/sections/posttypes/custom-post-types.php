@@ -26,6 +26,49 @@ $wp_customize->add_control(
 );
 
 
+// Has archive page 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_portfolio_has_archive]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_portfolio_has_archive'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_portfolio_has_archive]',
+		array(
+			'label'    => __( 'Has archive page', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_portfolio_has_archive]',
+		)
+	)
+);
+
+// Has categories 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_portfolio_has_tax]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_portfolio_has_tax'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_portfolio_has_tax]',
+		array(
+			'label'    => __( 'Add categories', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_portfolio_has_tax]',
+		)
+	)
+);
+
+
 // ----------------------------------------------------------------------------------------------------------
 
 $wp_customize->add_setting(
@@ -63,6 +106,48 @@ $wp_customize->add_control(
 			'label'    => __( 'Services Post Type', 'SKDD' ),
 			'section'  => 'SKDD_custom_post_types',
 			'settings' => 'SKDD_setting[cpt_services_display]',
+		)
+	)
+);
+
+// Has archive page 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_services_has_archive]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_services_has_archive'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_services_has_archive]',
+		array(
+			'label'    => __( 'Has archive page', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_services_has_archive]',
+		)
+	)
+);
+
+// Has categories 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_services_has_tax]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_services_has_tax'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_services_has_tax]',
+		array(
+			'label'    => __( 'Add categories', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_services_has_tax]',
 		)
 	)
 );
@@ -109,6 +194,47 @@ $wp_customize->add_control(
 	)
 );
 
+// Has archive page 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_knowledge_has_archive]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_knowledge_has_archive'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_knowledge_has_archive]',
+		array(
+			'label'    => __( 'Has archive page', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_knowledge_has_archive]',
+		)
+	)
+);
+
+// Has categories 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_knowledge_has_tax]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_knowledge_has_tax'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_knowledge_has_tax]',
+		array(
+			'label'    => __( 'Add categories', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_knowledge_has_tax]',
+		)
+	)
+);
 
 // ----------------------------------------------------------------------------------------------------------
 
@@ -147,6 +273,48 @@ $wp_customize->add_control(
 			'label'    => __( 'Team Post Type', 'SKDD' ),
 			'section'  => 'SKDD_custom_post_types',
 			'settings' => 'SKDD_setting[cpt_team_display]',
+		)
+	)
+);
+
+// Has archive page 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_team_has_archive]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_team_has_archive'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_team_has_archive]',
+		array(
+			'label'    => __( 'Has archive page', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_team_has_archive]',
+		)
+	)
+);
+
+// Has categories 
+$wp_customize->add_setting(
+	'SKDD_setting[cpt_team_has_tax]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['cpt_team_has_tax'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[cpt_team_has_tax]',
+		array(
+			'label'    => __( 'Add categories', 'SKDD' ),
+			'section'  => 'SKDD_custom_post_types',
+			'settings' => 'SKDD_setting[cpt_team_has_tax]',
 		)
 	)
 );

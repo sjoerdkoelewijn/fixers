@@ -3,6 +3,20 @@
 /* ----------  Knowledge Base ------------------- */
 
 function cpt_knowledge() {
+	
+	$options = SKDD_options( false );
+
+	if ( $options['cpt_knowledge_has_archive'] ) {
+		$has_archive =	__( 'knowledge-base', 'SKDD' );
+	} else {
+		$has_archive =	false;
+	}
+
+	if ( $options['cpt_knowledge_has_tax'] ) {
+		$slug = __( 'knowledge-base', 'SKDD' ) . '/' . '%tax_knowledge%';
+	} else {
+		$slug =	__( 'knowledge-base', 'SKDD' );
+	}
 
 	$labels = array(
 			'name'                  => __( 'Knowledge Base', 'Post Type General Name', 'SKDD' ),
@@ -35,7 +49,7 @@ function cpt_knowledge() {
 	);
 
 	$rewrite = array(
-			'slug'                  => __( 'knowledge-base', 'SKDD' ),
+			'slug'                  => $slug,
 			'with_front'            => true,
 			'pages'                 => true,
 			'feeds'                 => true,
@@ -55,7 +69,7 @@ function cpt_knowledge() {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
-			'has_archive'           => __( 'knowledge-base', 'SKDD' ),
+			'has_archive'           => $has_archive,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
@@ -97,4 +111,7 @@ function cpt_knowledge_taxonomy() {
 	  ));
 	 
 }
-add_action( 'init', 'cpt_knowledge_taxonomy', 0 );
+
+if ( $options['cpt_knowledge_has_tax'] ) {
+	add_action( 'init', 'cpt_knowledge_taxonomy', 0 );
+}

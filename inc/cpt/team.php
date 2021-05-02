@@ -4,6 +4,20 @@
 
 function cpt_team() {
 
+	$options = SKDD_options( false );
+
+	if ( $options['cpt_team_has_archive'] ) {
+		$has_archive =	__( 'team', 'SKDD' );
+	} else {
+		$has_archive =	false;
+	}
+
+	if ( $options['cpt_team_has_tax'] ) {
+		$slug = __( 'team', 'SKDD' ) . '/' . '%tax_team%';
+	} else {
+		$slug =	__( 'team', 'SKDD' );
+	}
+
 	$labels = array(
 			'name'                  => __( 'Team', 'Post Type General Name', 'SKDD' ),
 			'singular_name'         => _x( 'Team', 'Post Type Singular Name', 'SKDD' ),
@@ -35,7 +49,7 @@ function cpt_team() {
 	);
 
 	$rewrite = array(
-			'slug'                  => __( 'team', 'SKDD' ),
+			'slug'                  => $slug,
 			'with_front'            => true,
 			'pages'                 => true,
 			'feeds'                 => true,
@@ -55,7 +69,7 @@ function cpt_team() {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
-			'has_archive'           => __( 'team', 'SKDD' ),
+			'has_archive'           => $has_archive,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
@@ -67,3 +81,36 @@ function cpt_team() {
 
 }
 add_action( 'init', 'cpt_team', 10 );
+
+function cpt_team_taxonomy() { 
+ 
+	$labels = array(
+	  'name' => _x( 'Team categories', 'taxonomy general name', 'SKDD' ),
+	  'singular_name' => _x( 'Team Category', 'taxonomy singular name', 'SKDD' ),
+	  'search_items' =>  __( 'Search Categories', 'SKDD' ),
+	  'all_items' => __( 'All Categories', 'SKDD' ),
+	  'parent_item' => __( 'Parent Category', 'SKDD' ),
+	  'parent_item_colon' => __( 'Parent Category:', 'SKDD' ),
+	  'edit_item' => __( 'Edit Category', 'SKDD' ), 
+	  'update_item' => __( 'Update Category', 'SKDD' ),
+	  'add_new_item' => __( 'Add New Category', 'SKDD' ),
+	  'new_item_name' => __( 'New Category Name', 'SKDD' ),
+	  'menu_name' => __( 'Categories', 'SKDD' ),
+	);    
+	
+	register_taxonomy('tax_team', array('team'), array(
+	  'hierarchical' 		=> true,
+	  'public'        		=> true,
+	  'labels' 				=> $labels,
+	  'show_ui' 			=> true,
+	  'show_admin_column' 	=> true,
+	  'query_var' 			=> true,
+	  'show_in_rest'      	=> true,
+	  'rewrite' 			=> array( 'slug' => __( 'team', 'SKDD' ) ),
+	));
+   
+}
+
+if ( $options['cpt_team_has_tax'] ) {
+  add_action( 'init', 'cpt_team_taxonomy', 0 );
+}

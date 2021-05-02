@@ -290,6 +290,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'cpt_portfolio_display'					  => false,
 				'cpt_services_display'					  => false,
 				'cpt_knowledge_display'					  => false,
+				'cpt_team_display'					  	  => false,
 			);
 
 			return apply_filters( 'SKDD_setting_default_values', $args );

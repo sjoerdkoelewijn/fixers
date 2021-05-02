@@ -208,7 +208,8 @@
 		condition(
 			'SKDD_setting[cpt_portfolio_display]',
 			[
-				'SKDD_setting[cpt_portfolio_name]',
+				'SKDD_setting[cpt_portfolio_has_archive]',
+				'SKDD_setting[cpt_portfolio_has_tax]',
 			],
 			false
 		);
@@ -216,7 +217,17 @@
 		condition(
 			'SKDD_setting[cpt_services_display]',
 			[
-				'SKDD_setting[cpt_services_name]',
+				'SKDD_setting[cpt_services_has_archive]',
+				'SKDD_setting[cpt_services_has_tax]',
+			],
+			false
+		);
+
+		condition(
+			'SKDD_setting[cpt_team_display]',
+			[
+				'SKDD_setting[cpt_team_has_archive]',
+				'SKDD_setting[cpt_team_has_tax]',
 			],
 			false
 		);
@@ -224,7 +235,8 @@
 		condition(
 			'SKDD_setting[cpt_knowledge_display]',
 			[
-				'SKDD_setting[cpt_knowledge_name]',
+				'SKDD_setting[cpt_knowledge_has_archive]',
+				'SKDD_setting[cpt_knowledge_has_tax]',
 			],
 			false
 		);

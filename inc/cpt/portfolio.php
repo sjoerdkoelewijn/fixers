@@ -4,6 +4,20 @@
 
 function cpt_portfolio() {
 
+	$options = SKDD_options( false );
+
+	if ( $options['cpt_portfolio_has_archive'] ) {
+		$has_archive =	__( 'portfolio', 'SKDD' );
+	} else {
+		$has_archive =	false;
+	}
+
+	if ( $options['cpt_portfolio_has_tax'] ) {
+		$slug = __( 'portfolio', 'SKDD' ) . '/' . '%tax_portfolio%';
+	} else {
+		$slug =	__( 'portfolio', 'SKDD' );
+	}
+
 	$labels = array(
 			'name'                  => __( 'Portfolio', 'Post Type General Name', 'SKDD' ),
 			'singular_name'         => _x( 'Portfolio', 'Post Type Singular Name', 'SKDD' ),
@@ -35,7 +49,7 @@ function cpt_portfolio() {
 	);
 
 	$rewrite = array(
-			'slug'                  => __( 'portfolio', 'SKDD' ) . '/' . '%tax_portfolio%',
+			'slug'                  => $slug,
 			'with_front'            => true,
 			'pages'                 => true,
 			'feeds'                 => true,
@@ -55,7 +69,7 @@ function cpt_portfolio() {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
-			'has_archive'           => __( 'portfolio', 'SKDD' ),
+			'has_archive'           => $has_archive,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
@@ -98,4 +112,6 @@ function cpt_portfolio_taxonomy() {
 	 
 }
 
-add_action( 'init', 'cpt_portfolio_taxonomy', 0 );
+if ( $options['cpt_portfolio_has_tax'] ) {
+	add_action( 'init', 'cpt_portfolio_taxonomy', 0 );
+}
