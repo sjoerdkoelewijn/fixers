@@ -637,6 +637,18 @@ form {
   padding:0;
 }
 
+
+/*************************** Testimonial ****************************************************************************/
+
+
+.ghostkit-testimonial {
+ 
+  --gkt-testimonial--content__background-color: var(--background-color);
+  --gkt-testimonial--content__border-radius: var(--border-radius);
+
+}
+
+
 /*************************** Custom Animations ****************************************************************************/
 
 .blob--animated {

@@ -422,3 +422,13 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
   padding:0 50px;
 }
 
+
+/*************************** Testimonial ****************************************************************************/
+
+
+.ghostkit-testimonial {
+ 
+  --gkt-testimonial--content__background-color: var(--background-color);
+  --gkt-testimonial--content__border-radius: var(--border-radius);
+
+}
