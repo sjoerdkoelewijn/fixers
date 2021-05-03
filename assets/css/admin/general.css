@@ -428,7 +428,7 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 
 .ghostkit-testimonial {
  
-  --gkt-testimonial--content__background-color: var(--background-color);
+  --gkt-testimonial--content__background-color: var(--offset-color);
   --gkt-testimonial--content__border-radius: var(--border-radius);
 
 }
