@@ -22,7 +22,7 @@ function SKDD_login_logo() {
         }
 
         body.login {
-            background-color:<?php echo esc_attr( $options['second_background_color'] ) ?>; 
+            background-color:<?php echo esc_attr( $options['background_color'] ) ?>; 
         }
 
         .login #backtoblog a, .login #nav a {
@@ -30,15 +30,16 @@ function SKDD_login_logo() {
         }
 
         .login form {
-            background:<?php echo esc_attr( $options['background_color'] ) ?> !important;
+            background:<?php echo esc_attr( $options['second_background_color'] ) ?> !important;
             color:<?php echo esc_attr( $options['text_color'] ) ?> !important; 
             border-radius: <?php echo esc_attr( $options['border_radius'] ) . 'px' ?> !important;
             border:0px !important;
         }
 
         .login form .input, .login form input[type=checkbox], .login input[type=text] {
-            background: <?php echo esc_attr( $options['second_background_color'] ) ?> !important;
+            background: <?php echo esc_attr( $options['background_color'] ) ?> !important;
             border:0px !important;
+            color:<?php echo esc_attr( $options['offset_color'] ) ?>;
         }
 
         .dashicons-visibility, .dashicons-hidden {
