@@ -407,7 +407,7 @@ button, .button, .wp-block-button__link {
           text-decoration: none;
           cursor: pointer;
           border: 0;
-          line-height: calc(var(--header-max-height) / 3.5);
+          line-height: calc(var(--header-max-height) / 1.8);
   
           &:hover {
             background-color: var(--button-hover-background-color);
