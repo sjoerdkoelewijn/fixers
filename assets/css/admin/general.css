@@ -369,3 +369,56 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
   font-size:1.2em;
 }
 
+
+
+
+.ghostkit-button {	
+  font-family:var(--button-font-family);
+  font-weight:var(--button-font-weight);
+  text-transform: var(--button-font-transform);  
+  border-radius:var(--button-border-radius);
+
+  --gkt-button__color: #fff;
+  --gkt-button__background-color: var(--gkt-color-primary);
+
+  --gkt-button__border-color: var(--gkt-color-primary);
+  --gkt-button__border-radius: var(--gkt-border-radius);
+
+  --gkt-button-hover__color: #fff;
+  --gkt-button-hover__background-color: var(--gkt-color-dark-gray);
+
+  --gkt-button-focus__color: var(--gkt-button-hover__color);
+  --gkt-button-focus__background-color: var(--gkt-button-hover__background-color);
+
+  &:hover {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+  }
+
+}
+
+.ghostkit-button.ghostkit-button-xs {
+  line-height:calc(var(--button-line-height) / 2);
+  padding:0 10px;
+}
+
+.ghostkit-button.ghostkit-button-sm {
+  line-height:calc(var(--button-line-height) / 1.5);
+  padding:0 15px;
+}
+
+.ghostkit-button.ghostkit-button-md {
+  line-height:calc(var(--button-line-height) / 1.2);
+  padding:0 25px;
+}
+
+.ghostkit-button.ghostkit-button-lg {
+  line-height:var(--button-line-height);
+  padding:0 40px;
+}
+
+.ghostkit-button.ghostkit-button-xl {
+  line-height:calc(var(--button-line-height) * 1.25);
+  padding:0 50px;
+}
+
