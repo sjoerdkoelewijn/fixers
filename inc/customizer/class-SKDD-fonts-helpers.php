@@ -140,6 +140,15 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 				'body_font_category'           => '',
 				'body_font_transform'          => 'none',
 
+				// Button font.
+				'button_font_family'             => 'Poppins',
+				'button_font_family_variants'    => '',
+				'button_font_size'               => 16,
+				'button_font_weight'             => 400,
+				'button_line_height'             => 28,
+				'button_font_category'           => '',
+				'button_font_transform'          => 'none',
+
 				// Menu font.
 				'menu_font_family'             => 'Poppins',
 				'menu_font_family_variants'    => '',
@@ -189,6 +198,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 			// Grab our font family settings.
 			$font_settings = array(
 				'body_font_family',
+				'button_font_family',
 				'menu_font_family',
 				'heading_font_family',
 			);
@@ -440,6 +450,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 
 			$font_settings = array(
 				'body_font_family',
+				'button_font_family',
 				'menu_font_family',
 				'heading_font_family',
 			);

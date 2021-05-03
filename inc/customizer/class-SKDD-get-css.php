@@ -28,7 +28,7 @@ class SKDD_Get_CSS {
 		// Get all theme option value.
 		$options = SKDD_options( false );
 
-		// Container.
+		// used on the frontend
 		$styles = '
 
 			:root {
@@ -88,7 +88,11 @@ class SKDD_Get_CSS {
 				--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
 				--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
 				--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
-				--button-font-size:'. esc_attr( ($options['body_font_size']) / 11 ) . 'rem' .';
+
+				--button-font-family:' . esc_attr( $options['button_font_family'] ) . ';
+				--button-font-weight:' . esc_attr( $options['button_font_weight'] ) . ';
+				--button-line-height:'. esc_attr( ($options['button_line_height']) ) . 'px' .';
+				--button-font-transform:' . esc_attr( $options['button_font_transform'] ) . ';
 
 				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
 			
@@ -153,26 +157,13 @@ class SKDD_Get_CSS {
 				}
 			}
 
-			.ghostkit-button {
-				font-weight:bold;
+			.ghostkit-button {				
 
-				--gkt-button__color: #fff;
-				--gkt-button__background-color: var(--gkt-color-primary);
-
-				--gkt-button__border-color: var(--gkt-color-primary);
-				--gkt-button__border-radius: var(--gkt-border-radius);
-
-				--gkt-button-hover__color: #fff;
-				--gkt-button-hover__background-color: var(--gkt-color-dark-gray);
-
-				--gkt-button-focus__color: var(--gkt-button-hover__color);
-				--gkt-button-focus__background-color: var(--gkt-button-hover__background-color);
-
-				--gkt-button-xs__font-size: '. esc_attr( ($options['body_font_size']) / 16 ) . 'rem' .';
-				--gkt-button-sm__font-size: '. esc_attr( ($options['body_font_size']) / 15 ) . 'rem' .';
-				--gkt-button__font-size: '. esc_attr( ($options['body_font_size']) / 14 ) . 'rem' .';
-				--gkt-button-lg__font-size: '. esc_attr( ($options['body_font_size']) / 12 ) . 'rem' .';
-				--gkt-button-xl__font-size: '. esc_attr( ($options['body_font_size']) / 11 ) . 'rem' .';
+				--gkt-button-xs__font-size: '. esc_attr( ($options['button_font_size']) / 16 ) . 'rem' .';
+				--gkt-button-sm__font-size: '. esc_attr( ($options['button_font_size']) / 15 ) . 'rem' .';
+				--gkt-button__font-size: '. esc_attr( ($options['button_font_size']) / 14 ) . 'rem' .';
+				--gkt-button-lg__font-size: '. esc_attr( ($options['button_font_size']) / 12 ) . 'rem' .';
+				--gkt-button-xl__font-size: '. esc_attr( ($options['button_font_size']) / 11 ) . 'rem' .';
 			}
 
 		';
@@ -496,7 +487,7 @@ class SKDD_Get_CSS {
 	}
 
 	/**
-	 * Add Gutenberg css.
+	 * Add Gutenberg css. used in the wordpress backend
 	 */
 	public function SKDD_guten_block_editor_assets() {
 		
@@ -562,6 +553,11 @@ class SKDD_Get_CSS {
 						--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
 						--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
 						--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
+
+						--button-font-family:' . esc_attr( $options['button_font_family'] ) . ';
+						--button-font-weight:' . esc_attr( $options['button_font_weight'] ) . ';
+						--button-line-height:'. esc_attr( ($options['button_line_height']) ) . 'px' .';
+						--button-font-transform:' . esc_attr( $options['button_font_transform'] ) . ';
 
 						--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
 					

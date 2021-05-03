@@ -168,31 +168,7 @@ input {
     background:var(--background-color);
 }
 
-button, .button, .wp-block-button__link {
-    border-radius:50px;
-    padding:10px 30px;
-    text-decoration:none;
-    cursor: pointer;
-    border:0;
-    font-weight:bold;
-    font-size:var(--button-font-size);
-    line-height:2em;
-    
-    svg {
-        path {
-            fill:var(--text-color);
-        }     
-    }
 
-    &:hover {
-        svg {
-            path {
-                fill:var(--theme-color);
-            }     
-        }
-    }
-
-}
 
 .header_widget_area.sidebar {
           
@@ -299,6 +275,65 @@ h6, .has-skdd-heading-6-font-size{
 
 /*************************** Buttons  ****************************************************************************/
 
+button, .button, .wp-block-button__link {
+  font-family:var(--button-font-family);
+  border-radius:var(--button-border-radius);
+  padding:0 30px;
+  text-decoration:none;
+  cursor: pointer;
+  border:0;
+  font-weight:var(--button-font-weight);
+  font-size:var(--button-font-size);
+  line-height:var(--button-line-height);
+  text-transform: var(--button-font-transform);
+  
+  svg {
+      path {
+          fill:var(--text-color);
+      }     
+  }
+
+  &:hover {
+      background-color: var(--button-hover-background-color);
+      color: var(--button-hover-text-color);    
+
+      svg {
+          path {
+              fill:var(--theme-color);
+          }     
+      }
+  }
+
+}
+
+.ghostkit-button {	
+  font-family:var(--button-font-family);
+  font-weight:var(--button-font-weight);
+  line-height:var(--button-line-height);
+  text-transform: var(--button-font-transform);
+
+  padding:0 30px;
+
+
+  --gkt-button__color: #fff;
+  --gkt-button__background-color: var(--gkt-color-primary);
+
+  --gkt-button__border-color: var(--gkt-color-primary);
+  --gkt-button__border-radius: var(--gkt-border-radius);
+
+  --gkt-button-hover__color: #fff;
+  --gkt-button-hover__background-color: var(--gkt-color-dark-gray);
+
+  --gkt-button-focus__color: var(--gkt-button-hover__color);
+  --gkt-button-focus__background-color: var(--gkt-button-hover__background-color);
+
+  &:hover {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+  }
+
+}
+
 .SKDD-button-color,
   .loop-add-to-cart-on-image+.added_to_cart {
     color: var(--button-text-color);
@@ -345,6 +380,57 @@ h6, .has-skdd-heading-6-font-size{
       color: var(--button-text-color);
     }
   }
+
+
+  .main-navigation {
+
+    .primary-navigation {
+  
+      .menu-item.button {
+        background-color:transparent;
+        margin:0;
+        padding:0;
+    
+        a {
+          font-size:var(--button-font-size);
+          font-family:var(--button-font-family);
+          font-weight:var(--button-font-weight);
+          line-height:var(--button-line-height);
+          text-transform: var(--button-font-transform);
+
+          padding:0 30px;
+
+          background-color: var(--button-background-color);
+          color: var(--button-text-color);
+          border-radius: var(--button-border-radius);
+          //padding: calc(var(--header-max-height) / 7) 30px;
+          text-decoration: none;
+          cursor: pointer;
+          border: 0;
+          //line-height: calc(var(--header-max-height) / 3.5);
+  
+          &:hover {
+            background-color: var(--button-hover-background-color);
+            color: var(--button-hover-text-color);
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .sidebar-menu {  
+  
+    .primary-navigation {
+  
+      .menu-item.button{
+        margin-top:20px;    
+        text-align:center;
+      }
+    }
+    
+  }
+
 
 /*************************** Forms  ****************************************************************************/
 
@@ -1007,46 +1093,7 @@ form {
     }
 }
 
-.main-navigation {
 
-  .primary-navigation {
-
-    .menu-item.button {
-      background-color:transparent;
-      margin:0;
-      padding:0;
-  
-      a {
-        background-color: var(--button-background-color);
-        color: var(--button-text-color);
-        border-radius: var(--button-border-radius);
-        padding: calc(var(--header-max-height) / 7) 30px;
-        text-decoration: none;
-        cursor: pointer;
-        border: 0;
-        line-height: calc(var(--header-max-height) / 3.5);
-
-        &:hover {
-          background-color: var(--button-hover-background-color);
-          color: var(--button-hover-text-color);
-        }
-      }
-    }
-  }
-  
-}
-
-.sidebar-menu {  
-
-  .primary-navigation {
-
-    .menu-item.button{
-      margin-top:20px;    
-      text-align:center;
-    }
-  }
-  
-}
 
 .has-distraction-free-checkout {
   
