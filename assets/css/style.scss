@@ -641,8 +641,7 @@ form {
 /*************************** Testimonial ****************************************************************************/
 
 
-.ghostkit-testimonial {
- 
+.ghostkit-testimonial { 
   --gkt-testimonial--content__background-color: var(--offset-color);
   --gkt-testimonial--content__border-radius: var(--border-radius);
 
@@ -650,6 +649,8 @@ form {
 
 .ghostkit-testimonial-icon {
   opacity: 1;
+  left:.5em;
+  top:1.4em;
 
   svg {
     path{
