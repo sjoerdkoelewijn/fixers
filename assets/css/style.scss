@@ -400,8 +400,8 @@ button, .button, .wp-block-button__link {
 
           padding:0 40px;
 
-          background-color: var(--button-background-color);
-          color: var(--button-text-color);
+          background-color: var(--button-hover-background-color);
+          color: var(--button-hover-text-color);
           border-radius: var(--button-border-radius);
           //padding: calc(var(--header-max-height) / 7) 30px;
           text-decoration: none;
@@ -410,8 +410,8 @@ button, .button, .wp-block-button__link {
           line-height: calc(var(--header-max-height) / 1.8);
   
           &:hover {
-            background-color: var(--button-hover-background-color);
-            color: var(--button-hover-text-color);
+            background-color: var(--button-background-color);
+            color: var(--button-text-color);
           }
         }
       }
