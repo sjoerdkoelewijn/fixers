@@ -3178,6 +3178,38 @@ form.woocommerce-checkout {
   }
 }
 
+/* footer action */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 40px;
+  min-height: 40px;
+  color: #fff;
+  font-size: 1.2em;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+#scroll-to-top.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+#scroll-to-top.scroll-to-top-position-left {
+  left: 20px;
+  right: auto;
+}
+
 
 /*************************** Footer ****************************************************************************/
 
@@ -3292,38 +3324,7 @@ form.woocommerce-checkout {
   }
 }
 
-/* footer action */
-#scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  min-width: 40px;
-  min-height: 40px;
-  color: #fff;
-  font-size: 1.2em;
-  z-index: 200;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  visibility: hidden;
-  opacity: 0;
-  padding: 10px;
-  pointer-events: none;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-}
 
-#scroll-to-top.active {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  cursor: pointer;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-
-#scroll-to-top.scroll-to-top-position-left {
-  left: 20px;
-  right: auto;
-}
 
 /* responsive */
 @media (max-width: 768px) {
