@@ -26,7 +26,7 @@ function SKDD_login_logo() {
         }
 
         .login #backtoblog a, .login #nav a {
-            color:<?php echo esc_attr( $options['offset_color'] ) ?> !important;
+            color:<?php echo esc_attr( $options['theme_color'] ) ?> !important;
         }
 
         .login form {
@@ -39,7 +39,7 @@ function SKDD_login_logo() {
         .login form .input, .login form input[type=checkbox], .login input[type=text] {
             background: <?php echo esc_attr( $options['background_color'] ) ?> !important;
             border:0px !important;
-            color:<?php echo esc_attr( $options['offset_color'] ) ?>;
+            color:<?php echo esc_attr( $options['theme_color'] ) ?>;
         }
 
         .dashicons-visibility, .dashicons-hidden {
