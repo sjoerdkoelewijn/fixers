@@ -647,9 +647,13 @@ form {
 
 }
 
+.ghostkit-testimonial-icon+.ghostkit-testimonial-content {
+  padding-left:4em;
+}
+
 .ghostkit-testimonial-icon {
   opacity: 1;
-  left:.5em;
+  left:1em;
   top:1.4em;
 
   svg {
