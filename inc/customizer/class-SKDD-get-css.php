@@ -163,7 +163,7 @@ class SKDD_Get_CSS {
 				--gkt-button-sm__font-size: '. esc_attr( ($options['button_font_size']) / 15 ) . 'rem' .';
 				--gkt-button__font-size: '. esc_attr( ($options['button_font_size']) / 14 ) . 'rem' .';
 				--gkt-button-lg__font-size: '. esc_attr( ($options['button_font_size']) / 12 ) . 'rem' .';
-				--gkt-button-xl__font-size: '. esc_attr( ($options['button_font_size']) / 11 ) . 'rem' .';
+				--gkt-button-xl__font-size: '. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
 			}
 
 		';
