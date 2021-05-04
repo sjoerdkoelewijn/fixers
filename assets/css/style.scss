@@ -791,18 +791,21 @@ form {
 .page-content {
 
   .search-form {
-    // background-color:var(--second-background-color);
-    // border-radius:var(--border-radius);
-    // padding:var(--vertical-spacing) var(--content-spacing);
+    background-color:var(--sidebar-background-color);
+    border-radius:var(--border-radius);
+    padding:var(--content-spacing);
     margin-top:5vh;
+    min-height: 90px;
     display:flex;
     justify-content:center;
 
     .search-field {
       margin:0;
-      background:var(--second-background-color);
+      background:var(--sidebar-offset-color);
+      color:var(--sidebar-text-color);
       height:50px;
       min-width:50vw;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
     }
     
     &:after {
@@ -818,6 +821,7 @@ form {
     height:50px;
     min-width:120px;
     padding:0 30px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
   }
 
 }
