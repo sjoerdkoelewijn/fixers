@@ -3245,7 +3245,11 @@ form.woocommerce-checkout {
 
 /*************************** Blog ****************************************************************************/
 
-
+.category {
+  .site_content {
+    margin:var(--vertical-spacing) auto;
+  }
+}
 
 .blog-layout-grid .site-main 
 
@@ -3863,8 +3867,6 @@ form.woocommerce-checkout {
 #reply-title {
   font-size: 18px;
 }
-
-
 
 #respond .logged-in-as a:hover {
   text-decoration: underline;
