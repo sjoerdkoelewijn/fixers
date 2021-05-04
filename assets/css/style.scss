@@ -1604,18 +1604,15 @@ a:hover{
   background-color: var(--theme-color);  
 }
 
-// Custom color picker
+
+
 .has-skdd-primary-background-color.has-background {
-  //background-color: var(--theme-color); 
+  background: var(--theme-color); 
 }
 
-.has-skdd-primary-background-color {
-  &:hover {
-    //background-color: var(--text-color);
-  }
+.has-skdd-primary-background-color.has-text-color {
+  color:var(--theme-color);
 }
-
-
 
 
 //  theme color
@@ -1627,7 +1624,6 @@ a:hover{
 .has-skdd-theme-color.has-text-color {
   color:var(--theme-color);
 }
-
 
 
 // secondary theme color
