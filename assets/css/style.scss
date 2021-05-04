@@ -312,22 +312,18 @@ button, .button, .wp-block-button__link {
   text-transform: var(--button-font-transform);  
   border-radius:var(--button-border-radius);
 
-  --gkt-button__color: #fff;
-  --gkt-button__background-color: var(--gkt-color-primary);
+  --gkt-button__color: var(--button-text-color);
+  --gkt-button__background-color: var(--button-background-color);
 
-  --gkt-button__border-color: var(--gkt-color-primary);
-  --gkt-button__border-radius: var(--gkt-border-radius);
+  --gkt-button__border-color: var(--button-background-color);
+  --gkt-button__border-radius: var(--button-border-radius);
 
-  --gkt-button-hover__color: #fff;
-  --gkt-button-hover__background-color: var(--gkt-color-dark-gray);
+  --gkt-button-hover__color: var(--button-hover-text-color);
+  --gkt-button-hover__background-color: var(--button-hover-background-color);
 
-  --gkt-button-focus__color: var(--gkt-button-hover__color);
-  --gkt-button-focus__background-color: var(--gkt-button-hover__background-color);
+  --gkt-button-focus__color: var(--button-hover-text-color);
+  --gkt-button-focus__background-color: var(--button-hover-background-color);
 
-  &:hover {
-    background-color: var(--button-hover-background-color);
-    color: var(--button-hover-text-color);
-  }
 
 }
 
