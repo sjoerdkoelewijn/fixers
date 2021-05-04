@@ -159,10 +159,10 @@ class SKDD_Get_CSS {
 
 			.ghostkit-button {				
 
-				--gkt-button-xs__font-size: '. esc_attr( ($options['button_font_size']) / 16 ) . 'rem' .';
-				--gkt-button-sm__font-size: '. esc_attr( ($options['button_font_size']) / 15 ) . 'rem' .';
-				--gkt-button__font-size: '. esc_attr( ($options['button_font_size']) / 14 ) . 'rem' .';
-				--gkt-button-lg__font-size: '. esc_attr( ($options['button_font_size']) / 12 ) . 'rem' .';
+				--gkt-button-xs__font-size: '. esc_attr( ($options['button_font_size']) / 15 ) . 'rem' .';
+				--gkt-button-sm__font-size: '. esc_attr( ($options['button_font_size']) / 14 ) . 'rem' .';
+				--gkt-button__font-size: '. esc_attr( ($options['button_font_size']) / 13 ) . 'rem' .';
+				--gkt-button-lg__font-size: '. esc_attr( ($options['button_font_size']) / 11 ) . 'rem' .';
 				--gkt-button-xl__font-size: '. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
 			}
 
