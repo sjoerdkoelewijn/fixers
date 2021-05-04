@@ -585,3 +585,26 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+// Sidebar offset color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_offset_color]',
+	array(
+		'default'           => $defaults['sidebar_offset_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_offset_color]',
+		array(
+			'label'    => __( 'Sidebar & Submenu Offset Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_offset_color]',
+		)
+	)
+);
