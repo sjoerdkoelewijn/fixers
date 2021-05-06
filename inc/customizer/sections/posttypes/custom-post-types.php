@@ -256,6 +256,7 @@ $wp_customize->add_control(
 	)
 );
 
+
 // Show diensten cpt
 $wp_customize->add_setting(
 	'SKDD_setting[cpt_team_display]',

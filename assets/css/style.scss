@@ -688,7 +688,6 @@ form {
 
 .dialog-search-content .search-form .search-field,
 .dialog-search-content .woocommerce-product-search .search-field {
-  border-radius: var(--border-radius);
   visibility: visible;
   font-size: 1em;
   font-style: italic;
@@ -1680,6 +1679,18 @@ a:hover{
 .has-skdd-secondary-background-background-color.has-text-color {
   color:var(--second-background-color);
 }
+
+
+// tertiary background color
+
+.has-skdd-tertiary-background-color.has-background{
+  background:var(--tertiary-theme-color);
+}
+
+.has-skdd-tertiary-background-color.has-text-color {
+  color:var(--tertiary-theme-color);
+}
+
 
 
 

@@ -263,6 +263,8 @@ document.addEventListener(
 
 function loadScript(url, callback){
 
+	// Add this js to page:  loadScript("URL", function() {});
+
     var script = document.createElement("script")
     script.type = "text/javascript";
 
@@ -283,3 +285,4 @@ function loadScript(url, callback){
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 }
+
