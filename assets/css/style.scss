@@ -640,6 +640,7 @@ form {
   z-index: 5;
   border-radius: 4px;
   overflow: hidden;
+  min-height:115px;
 }
 
 @media (max-width: 768px) {
@@ -691,6 +692,7 @@ form {
   visibility: visible;
   font-size: 1em;
   font-style: italic;
+  min-height:45px;
 }
 
 .dialog-search-content .search-form .search-field:focus,
@@ -727,7 +729,7 @@ form {
     border-color: rgba(0, 0, 0, 0);
     height: 100%;
     width: 96%;
-    background-color:var(--second-background-color);
+    background-color:var(--offset-color);
     padding-left: 20px;
     padding-right: 40px;
     color:var(--text-color);
