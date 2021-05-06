@@ -376,8 +376,8 @@ if ( ! function_exists( 'SKDD_site_branding' ) ) {
 				$mobile_logo_id  = attachment_url_to_postid( $mobile_logo_src );
 				$mobile_logo_alt = SKDD_image_alt( $mobile_logo_id, __( 'SKDD mobile logo', 'SKDD' ) );
 				?>
-					<a width="50" height="50" class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" >
-						<img class="custom-mobile-logo" src="<?php echo esc_url( $mobile_logo_src ); ?>" alt="<?php echo esc_attr( $mobile_logo_alt ); ?>">
+					<a class="custom-mobile-logo-url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" >
+						<img width="50" height="50" class="custom-mobile-logo" src="<?php echo esc_url( $mobile_logo_src ); ?>" alt="<?php echo esc_attr( $mobile_logo_alt ); ?>">
 					</a>
 				<?php
 			}
