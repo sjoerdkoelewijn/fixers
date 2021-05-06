@@ -958,7 +958,17 @@ form {
 
 .ghostkit-icon-box {
   --gkt-icon-box__border-width: 0;
+
+  .ghostkit-icon-box-icon-align-left {
+    padding-top:.6em;
+  }
+
+  .ghostkit-icon-box-content {
+    padding-bottom:1em;
+  }
+
 }
+
 
 /*************************** Custom Animations ****************************************************************************/
 
