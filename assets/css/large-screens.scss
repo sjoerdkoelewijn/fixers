@@ -1,3 +1,5 @@
+@import "variables/breakpoints";
+
 .primary-navigation.primary-mobile-navigation {
     display: none;
 }
@@ -63,6 +65,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include small-desktop {
+        margin: 0 10px;
+    }
 }
 
 .main-navigation .primary-navigation > .menu-item {
