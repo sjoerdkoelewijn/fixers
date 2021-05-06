@@ -30,7 +30,7 @@ function SKDD_login_logo() {
         }
 
         .login form {
-            background:<?php echo esc_attr( $options['second_background_color'] ) ?> !important;
+            background:<?php echo esc_attr( $options['offset_color'] ) ?> !important;
             color:<?php echo esc_attr( $options['text_color'] ) ?> !important; 
             border-radius: <?php echo esc_attr( $options['border_radius'] ) . 'px' ?> !important;
             border:0px !important;
