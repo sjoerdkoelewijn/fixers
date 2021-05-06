@@ -438,5 +438,5 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 /*************************** Ghostkit Grid ****************************************************************************/
 
 .ghostkit-col-content {
-  padding:10px;
+  padding:20px !important;
 }
