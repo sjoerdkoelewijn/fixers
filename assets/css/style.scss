@@ -227,7 +227,7 @@ h1, .has-skdd-heading-1-font-size{
   font-size:var(--header-size-1);
 
   @include phone {
-    font-size:calc(var(--header-size-1) * .8);
+    font-size:calc(var(--header-size-1) * .7);
   }
 }
 
@@ -966,6 +966,10 @@ form {
   .ghostkit-icon-box-content {
     padding-bottom:1em;
   }
+
+  @include phone {
+    padding: var(--gkt-icon-box__padding-v) 0;
+  }  
 
 }
 
