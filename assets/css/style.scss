@@ -3671,14 +3671,12 @@ form.woocommerce-checkout {
     --gkt-carousel--arrows__width: 50px;
     --gkt-carousel--arrows__height: 50px;
 
+    --gkt-carousel--arrows__offset: 15px;
+
   }
 
   .ghostkit-carousel-arrow {
     top:45%;
-
-    @include phone{
-      top:48%;
-    }
 
   }
 
