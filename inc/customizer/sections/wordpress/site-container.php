@@ -76,7 +76,7 @@ $wp_customize->add_control(
 			'label'    => __( 'Container width', 'SKDD' ),
 			'choices' => array(
                 '100vw' => 'Fullwidth',
-                '1920px' => 'Large',
+                '1800px' => 'Large',
                 '1400px' => 'Medium',
                 '1200px' => 'Small',
                 '1000px' => 'Narrow',
@@ -96,6 +96,28 @@ $wp_customize->add_setting(
 		'transport'         => 'postMessage',
 	)
 );
+
+$wp_customize->add_setting(
+	'SKDD_setting[tablet_content_spacing]',
+	array(
+		'default'           => $defaults['tablet_content_spacing'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[mobile_content_spacing]',
+	array(
+		'default'           => $defaults['mobile_content_spacing'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+
 $wp_customize->add_control(
 	new SKDD_Range_Slider_Control(
 		$wp_customize,
@@ -105,12 +127,28 @@ $wp_customize->add_control(
 			'section'  => 'SKDD_container',
 			'settings' => array(
 				'desktop' => 'SKDD_setting[content_spacing]',
+				'tablet'  => 'SKDD_setting[tablet_content_spacing]',
+				'mobile'  => 'SKDD_setting[mobile_content_spacing]',
 			),
 			'choices' => array(
 				'desktop' => array(
 					'min'  => apply_filters( 'SKDD_content_spacing_min_step', 0 ),
-					'max'  => apply_filters( 'SKDD_content_spacing_max_step', 50 ),
-					'step' => 1,
+					'max'  => apply_filters( 'SKDD_content_spacing_max_step', 200 ),
+					'step' => 10,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'tablet' => array(
+					'min'  => apply_filters( 'SKDD_content_spacing_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_content_spacing_max_step', 150 ),
+					'step' => 10,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'mobile' => array(
+					'min'  => apply_filters( 'SKDD_content_spacing_min_step', 0 ),
+					'max'  => apply_filters( 'SKDD_content_spacing_max_step', 100 ),
+					'step' => 10,
 					'edit' => true,
 					'unit' => 'px',
 				),

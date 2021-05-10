@@ -207,6 +207,17 @@ body, select, button, input, textarea, p{
   text-transform: var(--body-text-transform);
   font-size: var(--body-font-size);
   color: var(--body-text-color);
+
+  @include tablet {
+    font-size: var(--body-font-size-tablet);
+    line-height: var(--body-line-height-tablet);
+  }
+
+  @include phone {
+    font-size: var(--body-font-size-mobile);
+    line-height: var(--body-line-height-mobile);
+  }
+
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -331,6 +342,27 @@ button, .button, .wp-block-button__link {
   --gkt-button-focus__color: var(--button-hover-text-color);
   --gkt-button-focus__background-color: var(--button-hover-background-color);
 
+  --gkt-button-xs__font-size:calc(var(--button-font-size) *.8);
+	--gkt-button-sm__font-size:calc(var(--button-font-size) *.85);
+	--gkt-button__font-size: calc(var(--button-font-size) *.9);
+	--gkt-button-lg__font-size:calc(var(--button-font-size) *.95);
+	--gkt-button-xl__font-size:var(--button-font-size);
+
+  @include tablet {
+  --gkt-button-xs__font-size:calc(var(--button-font-size-tablet) *.8);
+	--gkt-button-sm__font-size:calc(var(--button-font-size-tablet) *.85);
+	--gkt-button__font-size: calc(var(--button-font-size-tablet) *.9);
+	--gkt-button-lg__font-size:calc(var(--button-font-size-tablet) *.95);
+	--gkt-button-xl__font-size:var(--button-font-size-tablet);
+  }
+
+  @include phone {
+    --gkt-button-xs__font-size:calc(var(--button-font-size-mobile) *.8)
+    --gkt-button-sm__font-size:calc(var(--button-font-size-mobile) *.85);
+    --gkt-button__font-size: calc(var(--button-font-size-mobile) *.9)
+    --gkt-button-lg__font-size:calc(var(--button-font-size-mobile) *.95);
+    --gkt-button-xl__font-size:var(--button-font-size-mobile);
+    }
 
 }
 
@@ -352,11 +384,21 @@ button, .button, .wp-block-button__link {
 .ghostkit-button.ghostkit-button-lg {
   line-height:var(--button-line-height);
   padding:0 40px;
+
+  @include phone {
+    line-height:calc(var(--button-line-height) * .9);
+    padding:0 30px;
+  }
 }
 
 .ghostkit-button.ghostkit-button-xl {
   line-height:calc(var(--button-line-height) * 1.25);
   padding:0 50px;
+
+  @include phone {
+    line-height:calc(var(--button-line-height) * 1.2);
+    padding:0 40px;
+  }
 }
 
 .SKDD-button-color,
@@ -966,19 +1008,17 @@ form {
 .ghostkit-icon-box {
   --gkt-icon-box__border-width: 0;
   --gkt-blocks-margin-bottom: 0;
-  --gkt-icon-box__padding-h:var(--content-spacing);
-  --gkt-icon-box__padding-v:var(--content-spacing);
+  --gkt-icon-box__padding-h:calc(var(--content-spacing) / 10 );
+  --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
 
   .ghostkit-icon-box-icon-align-left {
     padding-top:.6em;
   }
 
-  .ghostkit-icon-box-content {
-    //padding-bottom:1em;
-  }
-
   @include phone {
-    padding: var(--gkt-icon-box__padding-v) 0;
+    padding: var(--gkt-icon-box__padding-v) 0;     
+    
+    
   }  
 
 }
@@ -1173,7 +1213,7 @@ form {
 }
 
 .wp-block-group.has-background {
-  padding:30px;
+  padding:var(--vertical-spacing) var(--content-spacing);
   border-radius:var(--border-radius);
 }
 
@@ -1222,8 +1262,8 @@ form {
 
 @include phone {
   .site_content .page > p {    
-    padding-left:var(--content-spacing);
-    padding-right:var(--content-spacing);   
+    padding-left:var(--content-spacing-mobile);
+    padding-right:var(--content-spacing-mobile);   
   }
 
   .site_content > .has-background, .site_content > .wp-block-media-text {    
@@ -1243,14 +1283,30 @@ form {
 
   .wp-block-media-text {
       .wp-block-media-text__content {
-          padding-left:var(--content-spacing);
-          padding-right:var(--content-spacing);
+          padding:calc(var(--content-spacing-mobile) / 2) 0 0 0;
+          
       }
   }
 
   .wp-block-group__inner-container > p {
       //padding-left:var(--content-spacing);
       //padding-right:var(--content-spacing); 
+  }
+
+  .wp-block-spacer {
+    height:var(--content-spacing-mobile) !important;
+  }
+  
+  .wp-block-media-text.is-stacked-on-mobile {
+    margin-top:var(--content-spacing-mobile);
+  }
+
+  .wp-block-group.has-background {
+    padding:var(--vertical-spacing) var(--content-spacing-mobile);
+    margin-left:-5vw;
+    width:100vw;
+    border-radius:0;
+    margin-bottom:var(--vertical-spacing);
   }
 
 }
@@ -3806,9 +3862,58 @@ form.woocommerce-checkout {
 /*************************** Ghostkit Grid ****************************************************************************/
 
 .ghostkit-col-with-bg {
-  padding:var(--content-spacing) calc(var(--content-spacing) * 2);
+  padding:var(--content-spacing) calc(var(--content-spacing) / 2);
+
+  .nk-awb-overlay {
+    border-radius: var(--border-radius);
+
+    @include phone {
+      border-radius: 0;
+    }
+
+  }
+  
+
+  @include tablet {
+    padding:var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
+  }
+
+  @include phone {
+    padding:var(--content-spacing-mobile);
+  }
+
 }
 
+@include phone {
+
+  .ghostkit-col {
+    --gkt-grid__gap:0px;
+    padding-top:var(--vertical-spacing);   
+
+  } 
+
+  .ghostkit-grid-inner {
+    width:100%;
+    margin-left:0;
+    display:block;
+  } 
+  
+  .ghostkit-col-with-bg {
+    margin-left:-5vw;
+    width:100vw;
+    max-width:100vw;
+    padding-top:var(--vertical-spacing);
+
+    .ghostkit-col-content {
+      width:100%;
+    }
+
+    &:last-of-type {
+      padding-bottom:var(--vertical-spacing);
+    }
+  }
+  
+}
 
 .ghostkit-grid-gap-sm {
   --gkt-grid__gap: 20px;

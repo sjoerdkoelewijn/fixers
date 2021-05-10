@@ -113,6 +113,26 @@ $wp_customize->add_setting(
 	)
 );
 
+$wp_customize->add_setting(
+	'SKDD_setting[button_font_size_tablet]',
+	array(
+		'default'           => $defaults['button_font_size_tablet'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[button_font_size_mobile]',
+	array(
+		'default'           => $defaults['button_font_size_mobile'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
 $wp_customize->add_control(
 	new SKDD_Range_Slider_Control(
 		$wp_customize,
@@ -123,9 +143,25 @@ $wp_customize->add_control(
 			'section'  => 'SKDD_buttons',
 			'settings' => array(
 				'desktop' => 'SKDD_setting[button_font_size]',
+				'tablet' => 'SKDD_setting[button_font_size_tablet]',
+				'mobile' => 'SKDD_setting[button_font_size_mobile]',
 			),
 			'choices' => array(
 				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_button_font_size_min_step', 5 ),
+					'max'  => apply_filters( 'SKDD_button_font_size_max_step', 60 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'tablet' => array(
+					'min'  => apply_filters( 'SKDD_button_font_size_min_step', 5 ),
+					'max'  => apply_filters( 'SKDD_button_font_size_max_step', 60 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'mobile' => array(
 					'min'  => apply_filters( 'SKDD_button_font_size_min_step', 5 ),
 					'max'  => apply_filters( 'SKDD_button_font_size_max_step', 60 ),
 					'step' => 1,

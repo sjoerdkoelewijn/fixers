@@ -33,10 +33,14 @@ class SKDD_Get_CSS {
 
 			:root {
 				--body-font-size:'. esc_attr( ($options['body_font_size']) / 10 ) . 'rem' .';
+				--body-font-size-tablet:'. esc_attr( ($options['body_font_size_tablet']) / 10 ) . 'rem' .';
+				--body-font-size-mobile:'. esc_attr( ($options['body_font_size_mobile']) / 10 ) . 'rem' .';
 
 				--body-font-family:' . esc_attr( $options['body_font_family'] ) . ';
 				--body-font-weight:' . esc_attr( $options['body_font_weight'] ) . ';
 				--body-line-height:'. esc_attr( ($options['body_line_height']) / 10 ) . 'rem' .';
+				--body-line-height-tablet:'. esc_attr( ($options['body_line_height_tablet']) / 10 ) . 'rem' .';
+				--body-line-height-mobile:'. esc_attr( ($options['body_line_height_mobile']) / 10 ) . 'rem' .';
 				--body-font-transform:' . esc_attr( $options['body_font_transform'] ) . ';				
 
 				--heading-font-family:' . esc_attr( $options['heading_font_family'] ) . ';
@@ -96,7 +100,10 @@ class SKDD_Get_CSS {
 				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
 			
 				--content-width:'. esc_attr( $options['container_width'] ) .';
+
 				--content-spacing:'. esc_attr( $options['content_spacing'] ) .'px;
+				--content-spacing-tablet:'. esc_attr( $options['tablet_content_spacing'] ) .'px;
+				--content-spacing-mobile:'. esc_attr( $options['mobile_content_spacing'] ) .'px;
 
 				--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
 				
@@ -159,11 +166,9 @@ class SKDD_Get_CSS {
 
 			.ghostkit-button {				
 
-				--gkt-button-xs__font-size: '. esc_attr( ($options['button_font_size']) / 15 ) . 'rem' .';
-				--gkt-button-sm__font-size: '. esc_attr( ($options['button_font_size']) / 14 ) . 'rem' .';
-				--gkt-button__font-size: '. esc_attr( ($options['button_font_size']) / 13 ) . 'rem' .';
-				--gkt-button-lg__font-size: '. esc_attr( ($options['button_font_size']) / 11 ) . 'rem' .';
-				--gkt-button-xl__font-size: '. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
+				--button-font-size:'. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
+				--button-font-size-tablet:'. esc_attr( ($options['button_font_size_tablet']) / 10 ) . 'rem' .';
+				--button-font-size-mobile:'. esc_attr( ($options['button_font_size_mobile']) / 10 ) . 'rem' .';
 			}
 
 		';

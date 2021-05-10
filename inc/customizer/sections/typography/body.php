@@ -94,6 +94,26 @@ $wp_customize->add_setting(
 	)
 );
 
+$wp_customize->add_setting(
+	'SKDD_setting[body_font_size_tablet]',
+	array(
+		'default'           => $defaults['body_font_size_tablet'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[body_font_size_mobile]',
+	array(
+		'default'           => $defaults['body_font_size_mobile'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
 $wp_customize->add_control(
 	new SKDD_Range_Slider_Control(
 		$wp_customize,
@@ -104,9 +124,25 @@ $wp_customize->add_control(
 			'section'  => 'body_font_section',
 			'settings' => array(
 				'desktop' => 'SKDD_setting[body_font_size]',
+				'tablet' => 'SKDD_setting[body_font_size_tablet]',
+				'mobile' => 'SKDD_setting[body_font_size_mobile]',
 			),
 			'choices' => array(
 				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_body_font_size_min_step', 5 ),
+					'max'  => apply_filters( 'SKDD_body_font_size_max_step', 60 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'tablet' => array(
+					'min'  => apply_filters( 'SKDD_body_font_size_min_step', 5 ),
+					'max'  => apply_filters( 'SKDD_body_font_size_max_step', 60 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'mobile' => array(
 					'min'  => apply_filters( 'SKDD_body_font_size_min_step', 5 ),
 					'max'  => apply_filters( 'SKDD_body_font_size_max_step', 60 ),
 					'step' => 1,
@@ -129,6 +165,26 @@ $wp_customize->add_setting(
 	)
 );
 
+$wp_customize->add_setting(
+	'SKDD_setting[body_line_height_tablet]',
+	array(
+		'default'           => $defaults['body_line_height_tablet'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[body_line_height_mobile]',
+	array(
+		'default'           => $defaults['body_line_height_mobile'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
 $wp_customize->add_control(
 	new SKDD_Range_Slider_Control(
 		$wp_customize,
@@ -139,9 +195,25 @@ $wp_customize->add_control(
 			'section'        => 'body_font_section',
 			'settings'       => array(
 				'desktop' => 'SKDD_setting[body_line_height]',
+				'tablet' => 'SKDD_setting[body_line_height_tablet]',
+				'mobile' => 'SKDD_setting[body_line_height_mobile]',
 			),
 			'choices'        => array(
 				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_body_line_height_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_body_line_height_max_step', 100 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'tablet' => array(
+					'min'  => apply_filters( 'SKDD_body_line_height_min_step', 10 ),
+					'max'  => apply_filters( 'SKDD_body_line_height_max_step', 100 ),
+					'step' => 1,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'mobile' => array(
 					'min'  => apply_filters( 'SKDD_body_line_height_min_step', 10 ),
 					'max'  => apply_filters( 'SKDD_body_line_height_max_step', 100 ),
 					'step' => 1,

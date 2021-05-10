@@ -440,3 +440,21 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 .ghostkit-col-content {
   padding:20px !important;
 }
+
+/*************************** Ghostkit Buttons ****************************************************************************/
+
+.ghostkit-button {
+  --gkt-button__color: var(--button-text-color);
+}
+
+.ghostkit-button:hover {
+  color:var(--button-hover-text-color);
+  background:var(--button-hover-background-color);
+}
+
+/*************************** Editor Styles ****************************************************************************/
+
+.editor-styles-wrapper {
+  background:var(--background-color);
+  color:var(--text-color) !important;
+}

@@ -60,7 +60,10 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				// CONTAINER.
 				'header_width'                         	  => '1920px',
 				'container_width'                         => '1920px',
-				'content_spacing'                         => '20',
+				// Content Spacing
+				'content_spacing'                         => '60',
+				'tablet_content_spacing'                  => '30',
+				'mobile_content_spacing'                  => '20',
 				'vertical_spacing'                        => '10',				
 				'border_radius'							  => '0',
 				// LOGO.
