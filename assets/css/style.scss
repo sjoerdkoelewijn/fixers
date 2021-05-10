@@ -3809,6 +3809,20 @@ form.woocommerce-checkout {
   padding:var(--content-spacing) calc(var(--content-spacing) * 2);
 }
 
+
+.ghostkit-grid-gap-sm {
+  --gkt-grid__gap: 20px;
+}
+
+.ghostkit-grid-gap-md {
+  --gkt-grid__gap: 50px;
+}
+
+.ghostkit-grid-gap-lg {
+  --gkt-grid__gap: 100px;
+}
+
+
 /*************************** Comment Section ****************************************************************************/
 
  
