@@ -1134,8 +1134,8 @@ form {
 /*************************** Block editor - block styles ****************************************************************************/
 
 .wp-block-media-text {
-  figure {
-    border-radius:(--var-border-radius);
+  figure, img {
+    border-radius:var(--border-radius);
   }
 }
 
