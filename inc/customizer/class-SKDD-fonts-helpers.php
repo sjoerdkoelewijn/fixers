@@ -181,12 +181,30 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 				'heading_font_weight'          => 700,
 				'heading_font_transform'       => 'none',
 				'heading_line_height'          => '150',
+
 				'heading_h1_font_size'         => 48,
+				'heading_h1_font_size_tablet'  => 48,
+				'heading_h1_font_size_mobile'  => 48,
+
 				'heading_h2_font_size'         => 36,
+				'heading_h2_font_size_tablet'  => 36,
+				'heading_h2_font_size_mobile'  => 36,
+
 				'heading_h3_font_size'         => 30,
+				'heading_h3_font_size_tablet'  => 30,
+				'heading_h3_font_size_mobile'  => 30,
+
 				'heading_h4_font_size'         => 28,
+				'heading_h4_font_size_tablet'  => 28,
+				'heading_h4_font_size_mobile'  => 28,
+
 				'heading_h5_font_size'         => 26,
+				'heading_h5_font_size_tablet'  => 26,
+				'heading_h5_font_size_mobile'  => 26,
+
 				'heading_h6_font_size'         => 18,
+				'heading_h6_font_size_tablet'  => 18,
+				'heading_h6_font_size_mobile'  => 18,
 			);
 
 			if ( $filter ) {

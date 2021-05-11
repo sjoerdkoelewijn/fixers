@@ -458,3 +458,14 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
   background:var(--background-color);
   color:var(--text-color) !important;
 }
+
+/*************************** Editor Styles ****************************************************************************/
+
+ul.is-style-styled li {   
+    list-style-type: square;
+    padding-left:10px; 
+}
+
+ul.is-style-styled li:before {
+  --gkt-styled-lists-dotted--decoration__background-color:var(--tertiary-theme-color);
+}

@@ -92,8 +92,31 @@ ol {
   list-style: decimal;
 }
 
-ul {
-  list-style: disc;
+ol.is-style-styled li+li, ul.is-style-styled li+li {
+  --gkt-styled-lists--items__gap:0;
+}
+
+ul.has-skdd-primary-background-color.has-background, ul.has-skdd-secondary-background-color.has-background{
+  li {
+    &::marker {
+      color:var(--second-background-color);
+    }
+  }
+}
+
+ul.is-style-styled {
+  li {
+    list-style-type: square;
+    padding-left:10px;
+
+    &::marker {
+      color:var(--tertiary-theme-color);
+    }
+
+    &:before {
+      display:none;
+    }
+  }
 }
 
 ul,
@@ -238,48 +261,80 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-  line-height: calc(var(--heading-line-height) * 0.8);
+  //line-height: calc(var(--heading-line-height) * 0.8);
 }
 
 h1, .has-skdd-heading-1-font-size{
   font-size:var(--header-size-1);
 
+  @include tablet {
+    font-size:var(--header-size-1-tablet);
+  }
+
   @include phone {
-    font-size:calc(var(--header-size-1) * .7);
+    font-size:var(--header-size-1-mobile);
   }
 }
 
 h2, .has-skdd-heading-2-font-size{
   font-size:var(--header-size-2);
   
+  @include tablet {
+    font-size:var(--header-size-2-tablet);
+  }
+
   @include phone {
-    font-size:calc(var(--header-size-2) * .9);
+    font-size:var(--header-size-2-mobile);
   }
 }
 
 h3, .has-skdd-heading-3-font-size{
   font-size:var(--header-size-3);
   
+  @include tablet {
+    font-size:var(--header-size-3-tablet);
+  }
+
   @include phone {
-    font-size:calc(var(--header-size-3) * .9);
+    font-size:var(--header-size-3-mobile);
   }
 }
 
 h4, .has-skdd-heading-4-font-size{
   font-size:var(--header-size-4);
 
+  @include tablet {
+    font-size:var(--header-size-4-tablet);
+  }
+
   @include phone {
-    font-size:calc(var(--header-size-4) * .9);
+    font-size:var(--header-size-4-mobile);
   }
 }
 
 h5, .has-skdd-heading-5-font-size{
   font-size:var(--header-size-5);
 
+  @include tablet {
+    font-size:var(--header-size-5-tablet);
+  }
+
+  @include phone {
+    font-size:var(--header-size-5-mobile);
+  }
+
 }
 
 h6, .has-skdd-heading-6-font-size{
   font-size:var(--header-size-6);
+
+  @include tablet {
+    font-size:var(--header-size-6-tablet);
+  }
+
+  @include phone {
+    font-size:var(--header-size-6-mobile);
+  }
 }
 
 
@@ -2397,8 +2452,16 @@ a:hover{
   color:var(--background-color);
 }
 
-
 // Secondary background color
+
+.has-skdd-secondary-background-color.has-background{
+  background:var(--secondary-theme-color);
+}
+
+.has-skdd-secondary-background-color.has-text-color {
+  color:var(--secondary-theme-color);
+}
+
 
 .has-skdd-secondary-background-background-color.has-background{
   background:var(--second-background-color);

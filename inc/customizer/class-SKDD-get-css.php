@@ -55,6 +55,20 @@ class SKDD_Get_CSS {
 				--header-size-5: '. esc_attr( ($options['heading_h5_font_size']) / 10) . 'rem' .';
 				--header-size-6: '. esc_attr( ($options['heading_h6_font_size']) / 10) . 'rem' .';
 
+				--header-size-1-tablet: '. esc_attr( ($options['heading_h1_font_size_tablet']) / 10 ) . 'rem' .';
+				--header-size-2-tablet: '. esc_attr( ($options['heading_h2_font_size_tablet']) / 10) . 'rem' .';
+				--header-size-3-tablet: '. esc_attr( ($options['heading_h3_font_size_tablet']) / 10) . 'rem' .';
+				--header-size-4-tablet: '. esc_attr( ($options['heading_h4_font_size_tablet']) / 10) . 'rem' .';
+				--header-size-5-tablet: '. esc_attr( ($options['heading_h5_font_size_tablet']) / 10) . 'rem' .';
+				--header-size-6-tablet: '. esc_attr( ($options['heading_h6_font_size_tablet']) / 10) . 'rem' .';
+
+				--header-size-1-mobile: '. esc_attr( ($options['heading_h1_font_size_mobile']) / 10 ) . 'rem' .';
+				--header-size-2-mobile: '. esc_attr( ($options['heading_h2_font_size_mobile']) / 10) . 'rem' .';
+				--header-size-3-mobile: '. esc_attr( ($options['heading_h3_font_size_mobile']) / 10) . 'rem' .';
+				--header-size-4-mobile: '. esc_attr( ($options['heading_h4_font_size_mobile']) / 10) . 'rem' .';
+				--header-size-5-mobile: '. esc_attr( ($options['heading_h5_font_size_mobile']) / 10) . 'rem' .';
+				--header-size-6-mobile: '. esc_attr( ($options['heading_h6_font_size_mobile']) / 10) . 'rem' .';
+
 				--scrollbar-width:17px;
 
 				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
