@@ -381,6 +381,14 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'after_widget'  => '</div>',
 			);
 
+			$sidebar_args['mobile_header_menu'] = array(
+				'name'          => __( 'Mobile Header Widget', 'SKDD' ),
+				'id'            => 'mobile_header_menu',
+				'description'   => __( 'Appears in the mobile header in layout 3', 'SKDD' ),
+				'before_widget' => '<div id="%1$s" class="mobile_header_widget_area %2$s">',
+				'after_widget'  => '</div>',
+			);
+
 			foreach ( $sidebar_args as $sidebar => $args ) {
 				$widget_tags = array(
 					'before_title' => '<h6 class="widget-title">',

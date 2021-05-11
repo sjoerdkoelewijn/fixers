@@ -38,7 +38,11 @@ if ( ! class_exists( 'SKDD_custom_header' ) ) {
 
                     break;  
 
-				case 'layout-3':					
+				case 'layout-3':
+					
+					remove_action( 'SKDD_site_header', 'SKDD_menu_toggle_btn', 10 );
+					add_action( 'SKDD_site_header', 'SKDD_mobile_menu_widget', 50 );
+					add_action( 'SKDD_site_header', 'SKDD_menu_toggle_btn', 60 );
 
 					break; 
 

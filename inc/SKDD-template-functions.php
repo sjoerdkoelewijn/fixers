@@ -1829,6 +1829,23 @@ if ( ! function_exists( 'SKDD_menu_toggle_btn' ) ) {
 	}
 }
 
+if ( ! function_exists( 'SKDD_mobile_menu_widget' ) ) {
+	/**
+	 * Menu toggle button
+	 */
+	function SKDD_mobile_menu_widget() {
+				
+		if ( is_active_sidebar( 'mobile_header_menu' ) ) {
+			?>
+				
+				<?php dynamic_sidebar( 'mobile_header_menu' ); ?>
+				
+			<?php
+		} 
+		
+	}
+}
+
 if ( ! function_exists( 'SKDD_overlay' ) ) {
 	/**
 	 * SKDD overlay
