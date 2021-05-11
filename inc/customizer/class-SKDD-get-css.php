@@ -58,6 +58,9 @@ class SKDD_Get_CSS {
 				--scrollbar-width:17px;
 
 				--header-max-height:'. esc_attr( $options['header_max_height'] ) . 'px' .';
+				--header-max-height-tablet:'. esc_attr( $options['header_max_height_tablet'] ) . 'px' .';
+				--header-max-height-mobile:'. esc_attr( $options['header_max_height_mobile'] ) . 'px' .';
+
 				--header-width:'. esc_attr( $options['header_width'] ) .';
 
 				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
@@ -129,15 +132,28 @@ class SKDD_Get_CSS {
 			}
 
 			.site_header_inner {
-				--menu-font-family:' . esc_attr( $options['menu_font_family'] ) . ';
-				--menu-font-size:'. esc_attr($options['parent_menu_font_size']) . 'px' .';	
-				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';
-				--menu-line-height:'. esc_attr($options['parent_menu_line_height']) . 'px' .';				
+				--menu-font-family:' . esc_attr( $options['menu_font_family'] ) . ';					
+				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';								
 				--menu-text-transform:' . esc_attr( $options['menu_font_transform'] ) . ';
-				--menu-color:' . esc_attr( $options['primary_menu_color'] ) . ';
-				--submenu-line-height:'. esc_attr($options['sub_menu_line_height']) . 'px' .';
-				--submenu-font-size:'. esc_attr($options['sub_menu_font_size']) . 'px' .';
+				--menu-color:' . esc_attr( $options['primary_menu_color'] ) . ';				
 				--submenu-color:' . esc_attr( $options['primary_sub_menu_color'] ) . ';	
+
+				--menu-font-size:'. esc_attr($options['parent_menu_font_size']) . 'px' .';
+				--menu-font-size-tablet:'. esc_attr($options['parent_menu_font_size_tablet']) . 'px' .';
+				--menu-font-size-mobile:'. esc_attr($options['parent_menu_font_size_mobile']) . 'px' .';
+
+				--menu-line-height:'. esc_attr($options['parent_menu_line_height']) . 'px' .';
+				--menu-line-height-tablet:'. esc_attr($options['parent_menu_line_height_tablet']) . 'px' .';
+				--menu-line-height-mobile:'. esc_attr($options['parent_menu_line_height_mobile']) . 'px' .';
+
+				--submenu-font-size:'. esc_attr($options['sub_menu_font_size']) . 'px' .';
+				--submenu-font-size-tablet:'. esc_attr($options['sub_menu_font_size_tablet']) . 'px' .';
+				--submenu-font-size-mobile:'. esc_attr($options['sub_menu_font_size_mobile']) . 'px' .';
+
+				--submenu-line-height:'. esc_attr($options['sub_menu_line_height']) . 'px' .';
+				--submenu-line-height-tablet:'. esc_attr($options['sub_menu_line_height_tablet']) . 'px' .';
+				--submenu-line-height-mobile:'. esc_attr($options['sub_menu_line_height_mobile']) . 'px' .';
+
 			}
 
 			#scroll-to-top {

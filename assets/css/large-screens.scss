@@ -67,6 +67,7 @@
     @include small-desktop {
         margin: 0 10px;
     }
+
 }
 
 .site-navigation, .main-navigation, .primary-navigation {
@@ -79,6 +80,7 @@
     line-height:var(--header-max-height);
     align-items: center;
     flex-direction: column;
+
 }
 
 .has-header-layout-1, .has-header-layout-2, .has-header-layout-3 {

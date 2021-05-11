@@ -39,11 +39,29 @@ $wp_customize->add_control(
 );
 
 
-// Menu Breakpoint.
+// Menu Height.
 $wp_customize->add_setting(
 	'SKDD_setting[header_max_height]',
 	array(
 		'default'           => $defaults['header_max_height'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[header_max_height_tablet]',
+	array(
+		'default'           => $defaults['header_max_height_tablet'],
+		'sanitize_callback' => 'absint',
+		'type'              => 'option',
+	)
+);
+
+$wp_customize->add_setting(
+	'SKDD_setting[header_max_height_mobile]',
+	array(
+		'default'           => $defaults['header_max_height_mobile'],
 		'sanitize_callback' => 'absint',
 		'type'              => 'option',
 	)
@@ -58,9 +76,25 @@ $wp_customize->add_control(
 			'section'  => 'SKDD_header',
 			'settings' => array(
 				'desktop' => 'SKDD_setting[header_max_height]',
+				'tablet' => 'SKDD_setting[header_max_height_tablet]',
+				'mobile' => 'SKDD_setting[header_max_height_mobile]',
 			),
 			'choices'  => array(
 				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 30 ),
+					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 200 ),
+					'step' => 10,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'tablet' => array(
+					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 30 ),
+					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 200 ),
+					'step' => 10,
+					'edit' => true,
+					'unit' => 'px',
+				),
+				'mobile' => array(
 					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 30 ),
 					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 200 ),
 					'step' => 10,

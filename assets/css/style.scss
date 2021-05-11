@@ -459,22 +459,27 @@ button, .button, .wp-block-button__link {
         padding:0;
     
         a {
-          font-size:var(--menu-font-size);
+          font-size:var(--button-font-size);
           font-family:var(--button-font-family);
           font-weight:var(--button-font-weight);
           //line-height:var(--button-line-height);
           text-transform: var(--button-font-transform);
-
           padding:0 40px;
-
           background-color: var(--button-hover-background-color);
           color: var(--button-hover-text-color);
           border-radius: var(--button-border-radius);
-          //padding: calc(var(--header-max-height) / 7) 30px;
           text-decoration: none;
           cursor: pointer;
           border: 0;
           line-height: calc(var(--header-max-height) / 1.8);
+
+          @include tablet {
+            line-height: calc(var(--menu-line-height-tablet) / 1.8);
+          }
+        
+          @include phone {
+            line-height: calc(var(--menu-line-height-tablet) / 1.8);
+          }
   
           &:hover {
             background-color: var(--button-background-color);
@@ -1410,16 +1415,27 @@ form {
         box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.03);
         height: var(--header-max-height);    
         
-        @include phone {
-          max-width:100vw;
+        @include tablet-down {
+          height: var(--header-max-height-tablet); 
+          //padding:var(--content-spacing);
         }
 
-        @include tablet-down {
-          padding:var(--content-spacing);
+        @include phone {
+          max-width:100vw;
+          height: var(--header-max-height-mobile);
+          padding:0 5vw; 
         }
         
         .logo {
-            height:60px;
+          height: var(--header-max-height);  
+
+          @include tablet {
+            height: var(--header-max-height-tablet); 
+          }
+        
+          @include phone {
+            height: var(--header-max-height-mobile); 
+          }
         }
 
         .header_widget_area {
@@ -1602,8 +1618,9 @@ form {
   .scrolling-down {
 
     .site_header.active {
-      transform: translateY(calc(var(--header-max-height) * -1));
-      transition:.3s ease-out;     
+      transform: translateY(calc(var(--header-max-height-mobile) * -1));
+      transition:.3s ease-out;  
+     
     } 
 
   }
@@ -1648,7 +1665,6 @@ form {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-height: 70px;
 }
 
 
@@ -1695,8 +1711,18 @@ form {
 
 .primary-navigation > li > a{
   font-size: var(--menu-font-size);
-  line-height: var(--menu-line-height);
+  line-height: var(--header-max-height);
   color: var(--menu-color);
+
+  @include tablet {
+    font-size: var(--menu-font-size-tablet);
+    line-height: var(--menu-line-height-tablet);
+  }
+
+  @include phone {
+    font-size: var(--menu-font-size-mobile);
+    line-height: var(--menu-line-height-mobile);
+  }
 
   &:hover {
     color: var(--theme-color);
@@ -1707,6 +1733,17 @@ form {
   line-height: var(--submenu-line-height);
   font-size: var(--submenu-font-size);
   color: var(--submenu-color);
+
+  @include tablet {
+    font-size: var(--submenu-font-size-tablet);
+    line-height: var(--submenu-line-height-tablet);
+  }
+
+  @include phone {
+    font-size: var(--submenu-font-size-mobile);
+    line-height: var(--submenu-line-height-mobile);
+  }
+
 }
 
 .site-tools .tools-icon {
