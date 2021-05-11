@@ -1217,6 +1217,12 @@ form {
 
 }
 
+@include phone {
+  .wp-block-cover {
+    min-height:auto !important;
+  }
+}
+
 .wp-block-group.has-background {
   padding:var(--vertical-spacing) var(--content-spacing);
   border-radius:var(--border-radius);
