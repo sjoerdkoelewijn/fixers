@@ -10,8 +10,6 @@
         display: none;
     }
 
-
-
 }
 
 .has-header-layout-1, .has-header-layout-2 {
@@ -60,8 +58,8 @@
 }
 
 .main-navigation .primary-navigation > .menu-item > a {
-    padding: 20px 0;
     margin: 0 20px;
+    line-height:var(--header-max-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,9 +69,14 @@
     }
 }
 
+.site-navigation, .main-navigation, .primary-navigation {
+    height:var(--header-max-height);
+}
+
 .main-navigation .primary-navigation > .menu-item {
     display: inline-flex;
-    line-height: 1;
+    height:var(--header-max-height);
+    line-height:var(--header-max-height);
     align-items: center;
     flex-direction: column;
 }
@@ -94,6 +97,8 @@
     opacity: 1;
     visibility: visible;
 }
+
+
 
 .sidebar-menu .main-navigation .primary-navigation .sub-menu {
     margin-left: 20px !important;
@@ -148,8 +153,9 @@
     list-style: none;
 }
 
+
 .site_header_inner .site-navigation:last-child .main-navigation {
-    padding-right: 0;
+    padding-right: 0;    
   }
 
   .main-navigation ul {
@@ -163,8 +169,8 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 110%;
-    left: 0;
+    top:calc(var(--header-max-height) + 25px);
+    left: -20px;
     margin-left: 0;
     min-width: 300px;
     text-align: left;
@@ -205,7 +211,7 @@
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
-    top: 100%;
+    top: calc(var(--header-max-height) - 13px);
     z-index: 5;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
@@ -215,9 +221,9 @@
     pointer-events: none;
     background-color: var(--sidebar-background-color);
     color:var(--sidebar-text-color);
-    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 4px;
+    //-webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    //box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius);
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
     -webkit-transform: translateY(10px);

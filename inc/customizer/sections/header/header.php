@@ -61,8 +61,8 @@ $wp_customize->add_control(
 			),
 			'choices'  => array(
 				'desktop' => array(
-					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 50 ),
-					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 400 ),
+					'min'  => apply_filters( 'SKDD_header_max_height_min_step', 30 ),
+					'max'  => apply_filters( 'SKDD_header_max_height_max_step', 200 ),
 					'step' => 10,
 					'edit' => true,
 					'unit' => 'px',
