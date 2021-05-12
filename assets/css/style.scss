@@ -216,7 +216,7 @@ a {
     }
 }
 
-.content-area {
+.content-area p {
   a {
     font-weight:bold;
     text-decoration: underline;
@@ -1228,9 +1228,6 @@ form {
   }
 }
 
-
-
-
 /*************************** Block editor - block styles ****************************************************************************/
 
 .wp-block-media-text {
@@ -1359,8 +1356,16 @@ form {
       //padding-right:var(--content-spacing); 
   }
 
-  .wp-block-spacer {
-    height:var(--content-spacing-mobile) !important;
+  .wp-block-spacer.is-style-responsive-large {
+    height:calc(var(--vertical-spacing) * 3) !important;
+  }
+
+  .wp-block-spacer.is-style-responsive-medium {
+    height:calc(var(--vertical-spacing) * 2) !important;
+  }
+
+  .wp-block-spacer.is-style-responsive-small {
+    height:calc(var(--vertical-spacing) * .5) !important;
   }
   
   .wp-block-media-text.is-stacked-on-mobile {
@@ -1377,7 +1382,19 @@ form {
 
 }
 
+@include tablet {
+  .wp-block-spacer.is-style-responsive-large {
+    height:calc(var(--vertical-spacing) * 3) !important;
+  }
 
+  .wp-block-spacer.is-style-responsive-medium {
+    height:calc(var(--vertical-spacing) * 2) !important;
+  }
+
+  .wp-block-spacer.is-style-responsive-small {
+    height:calc(var(--vertical-spacing) * .5) !important;
+  }
+}
 
 
 
@@ -3751,8 +3768,7 @@ form.woocommerce-checkout {
 
   a:hover {
     color:var(--background-color);
-    text-decoration: underline;
-    
+    text-decoration: underline;    
   }
 
   img {
@@ -4077,6 +4093,16 @@ form.woocommerce-checkout {
   --gkt-grid__gap: 100px;
 }
 
+/*************************** Ghostkit Counter ****************************************************************************/
+
+.ghostkit-counter-box-number {
+  font-weight:bold;
+}
+
+.ghostkit-progress-wrap {
+  width:88%;
+  margin:0 auto;
+}
 
 /*************************** Comment Section ****************************************************************************/
 

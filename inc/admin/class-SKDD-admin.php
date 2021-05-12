@@ -152,6 +152,16 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 				true
 			);
 
+			// Add custom block styles
+			wp_enqueue_script(
+				'SKDD-custom-block-styles',
+				SKDD_THEME_URI . 'assets/js/admin/custom-block-styles.js',
+				array(),
+				SKDD_version(),
+				true
+			);
+			
+
 			wp_localize_script(
 				'SKDD-dismiss-admin-notice',
 				'SKDD_dismiss_admin_notice',

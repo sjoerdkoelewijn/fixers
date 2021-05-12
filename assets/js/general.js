@@ -187,8 +187,6 @@ function scrollingDetect() {
 
 }
 
-
-
 // Get all Prev element siblings.
 function prevSiblings( target ) {
 	var siblings = [],
@@ -256,7 +254,7 @@ document.addEventListener(
 		scrollAction( '#scroll-to-top', 200 );
 		scrollAction( '#masthead', 30 );
 		toTopButton();
-		scrollingDetect();
+		scrollingDetect();		
 	}
 );
 
