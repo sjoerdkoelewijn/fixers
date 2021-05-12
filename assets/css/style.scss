@@ -1388,11 +1388,11 @@ form {
   }
 
   .wp-block-spacer.is-style-responsive-large {
-    height:calc(var(--vertical-spacing) * 3) !important;
+    height:calc(var(--vertical-spacing) * 2) !important;
   }
 
   .wp-block-spacer.is-style-responsive-medium {
-    height:calc(var(--vertical-spacing) * 2) !important;
+    height:var(--vertical-spacing) !important;
   }
 
   .wp-block-spacer.is-style-responsive-small {
