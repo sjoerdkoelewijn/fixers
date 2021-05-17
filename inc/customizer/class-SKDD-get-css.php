@@ -150,7 +150,9 @@ class SKDD_Get_CSS {
 				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';								
 				--menu-text-transform:' . esc_attr( $options['menu_font_transform'] ) . ';
 				--menu-color:' . esc_attr( $options['primary_menu_color'] ) . ';				
-				--submenu-color:' . esc_attr( $options['primary_sub_menu_color'] ) . ';	
+				--submenu-color:' . esc_attr( $options['primary_sub_menu_color'] ) . ';
+				--submenu-background-color:' . esc_attr( $options['submenu_background_color'] ) . ';	
+				--submenu-offset-color:' . esc_attr( $options['submenu_offset_color'] ) . ';		
 
 				--menu-font-size:'. esc_attr($options['parent_menu_font_size']) . 'px' .';
 				--menu-font-size-tablet:'. esc_attr($options['parent_menu_font_size_tablet']) . 'px' .';
@@ -212,6 +214,7 @@ class SKDD_Get_CSS {
 				--topbar-background-color:' . esc_attr( $options['topbar_background_color'] ) . ';
 				--topbar-text-color:' . esc_attr( $options['topbar_text_color'] ) . ';
 				--topbar-height:'. esc_attr( $options['topbar_height']) . 'px' .';
+				--topbar-align:' . esc_attr( $options['topbar_layout'] ) . '; 
 			}
 
 			.has-header-transparent.header-transparent-for-all-devices .site_header {

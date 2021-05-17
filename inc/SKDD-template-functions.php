@@ -1555,28 +1555,19 @@ if ( ! function_exists( 'SKDD_topbar' ) ) {
 	function SKDD_topbar() {
 		$options = SKDD_options( false );
 		$display = $options['topbar_display'];
-		$topbar  = SKDD_get_metabox( false, 'site-topbar' );
-
-		if ( 'disabled' === $topbar ) {
-			$display = false;
-		}
 
 		if ( ! $display ) {
 			return;
 		}
-
-		$topbar_left   = SKDD_replace_text( $options['topbar_left'] );
-		$topbar_center = SKDD_replace_text( $options['topbar_center'] );
-		$topbar_right  = SKDD_replace_text( $options['topbar_right'] );
+	
 		?>
 
 		<div class="topbar">
-			<div class=topbar_inner>
-				<div class="topbar-item topbar-left"><?php echo do_shortcode( $topbar_left ); ?></div>
-				<div class="topbar-item topbar-center"><?php echo do_shortcode( $topbar_center ); ?></div>
-				<div class="topbar-item topbar-right"><?php echo do_shortcode( $topbar_right ); ?></div>
+			<div class="topbar_inner">
+				<?php dynamic_sidebar( 'topbar_widget' ); ?>
 			</div>	
 		</div>
+
 		<?php
 	}
 }

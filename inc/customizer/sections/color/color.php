@@ -323,6 +323,52 @@ $wp_customize->add_control(
 	)
 );
 
+// submenu background color
+$wp_customize->add_setting(
+	'SKDD_setting[submenu_background_color]',
+	array(
+		'default'           => $defaults['submenu_background_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[submenu_background_color]',
+		array(
+			'label'    => __( 'Submenu Background Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[submenu_background_color]',
+		)
+	)
+);
+
+// submenu offset color
+$wp_customize->add_setting(
+	'SKDD_setting[submenu_offset_color]',
+	array(
+		'default'           => $defaults['submenu_offset_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[submenu_offset_color]',
+		array(
+			'label'    => __( 'Submenu Offset Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[submenu_offset_color]',
+		)
+	)
+);
+
 // ----------------------------------------------------------------------------------------------------------
 
 // Footer background color divider.
@@ -556,7 +602,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sidebar_background_color]',
 		array(
-			'label'    => __( 'Sidebar & Submenu Background Color', 'SKDD' ),
+			'label'    => __( 'Sidebar Background Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_background_color]',
 		)
@@ -579,7 +625,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sidebar_text_color]',
 		array(
-			'label'    => __( 'Sidebar & Submenu Text Color', 'SKDD' ),
+			'label'    => __( 'Sidebar Text Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_text_color]',
 		)
@@ -602,7 +648,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sidebar_offset_color]',
 		array(
-			'label'    => __( 'Sidebar & Submenu Offset Color', 'SKDD' ),
+			'label'    => __( 'Sidebar Offset Color', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_offset_color]',
 		)

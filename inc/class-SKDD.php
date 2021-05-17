@@ -389,6 +389,14 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'after_widget'  => '</div>',
 			);
 
+			$sidebar_args['topbar_widget'] = array(
+				'name'          => __( 'Top Bar Widget', 'SKDD' ),
+				'id'            => 'topbar_widget',
+				'description'   => __( 'Appears in the top bar above the header', 'SKDD' ),
+				'before_widget' => '<div id="%1$s" class="topbar-item %2$s">',
+				'after_widget'  => '</div>',
+			);
+
 			foreach ( $sidebar_args as $sidebar => $args ) {
 				$widget_tags = array(
 					'before_title' => '<h6 class="widget-title">',

@@ -1433,11 +1433,8 @@ form {
 /*************************** Header Styles ****************************************************************************/
 
 .topbar {
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
+  justify-content:center;
   align-items: center;
   overflow:hidden;
   height:var(--topbar-height);
@@ -1447,17 +1444,16 @@ form {
   @include phone {
     display:none;
   }
-
   
-
-
   .topbar_inner {
     width:var(--header-width);
     //max-width:calc(100vw - var(--scrollbar-width));
     max-width:100%;
     margin:0 auto;
     display:flex;
-    justify-content:space-between;
+    justify-content:var(--topbar-align);
+     -webkit-box-align: center;
+    align-items: center;
     padding-left:var(--content-spacing);
     padding-right:calc(var(--content-spacing) + var(--scrollbar-width));
 
@@ -1465,24 +1461,39 @@ form {
       padding-right:var(--content-spacing);
     }
 
-    font-size:80%;
-
     .topbar-item {
-      flex-grow: 1;
-      text-shadow:0 0 2px rgba(0, 0, 0, .15);
+      color:var(--topbar-text-color);
+      
+      
+      a {
+        color:var(--topbar-text-color);
+        font-size:80%;
+        margin:0 10px;
+
+      }
+
+      p {
+        margin:0;
+        color:var(--topbar-text-color);
+        font-size:80%;
+      }
+
+      .menu {
+        display:flex;
+
+        li {
+          list-style-type: none;
+        }
+      }
 
       p:empty {
         display: none;
+      }     
+
+      &:empty {
+        display: none;
       }
 
-    }
-
-    .topbar-center {
-      text-align: center;
-    }
-
-    .topbar-right {
-      text-align: right;
     }
 
   }
@@ -3987,26 +3998,32 @@ form.woocommerce-checkout {
   }
 }
 
-.ghostkit-carousel.cutoff {
-  width:104vw;
+.ghostkit-carousel.alignfull {
+  width:104vw !important;
+  margin-left:calc( ((96vw - var(--content-width)) / 2) * -1 );
+
+    @include uhd {
+      margin-left:calc( ((96vw - (var(--content-width) * 1.2)) / 2) * -1 );
+    }
 
   @include phone{
-    width:100%;
+    width:100% !important;
+    margin-left:0 !important;
   }
   
   .ghostkit-carousel-arrow-next {
-    right:clamp(150px, 7vw, 600px );
+    right:clamp(var(--content-spacing), 10vw, 200px );
     z-index:20;
 
     @include phone{
-      right:.5em;
+      right:var(--content-spacing-mobile);
     }
 
   }
 
 }
 
-.ghostkit-carousel.portfolio {
+.ghostkit-carousel.image-with-text {
 
   .wp-block-image {
     margin:0;

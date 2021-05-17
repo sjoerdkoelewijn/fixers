@@ -129,7 +129,7 @@ $wp_customize->add_control(
 			'choices' => array(
 				'desktop' => array(
 					'min'  => apply_filters( 'SKDD_topbar_min_step', 0 ),
-					'max'  => apply_filters( 'SKDD_topbar_max_step', 50 ),
+					'max'  => apply_filters( 'SKDD_topbar_max_step', 100 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
@@ -159,71 +159,33 @@ $wp_customize->add_control(
 	)
 );
 
-// Topbar left.
-$wp_customize->add_setting(
-	'SKDD_setting[topbar_left]',
-	array(
-		'default'           => $defaults['topbar_left'],
-		'sanitize_callback' => 'SKDD_sanitize_raw_html',
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-	)
-);
-$wp_customize->add_control(
-	new WP_Customize_Control(
-		$wp_customize,
-		'SKDD_setting[topbar_left]',
-		array(
-			'label'    => __( 'Content Left', 'SKDD' ),
-			'section'  => 'SKDD_topbar',
-			'settings' => 'SKDD_setting[topbar_left]',
-			'type'     => 'textarea',
-		)
-	)
-);
 
-// Topbar center.
+// Topbar layout.
 $wp_customize->add_setting(
-	'SKDD_setting[topbar_center]',
+	'SKDD_setting[topbar_layout]',
 	array(
-		'default'           => $defaults['topbar_center'],
-		'sanitize_callback' => 'SKDD_sanitize_raw_html',
+		'default'           => $defaults['topbar_layout'],
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 		'type'              => 'option',
-		'transport'         => 'postMessage',
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Control(
+	new SKDD_Radio_Image_Control(
 		$wp_customize,
-		'SKDD_setting[topbar_center]',
+		'SKDD_setting[topbar_layout]',
 		array(
-			'label'    => __( 'Content Center', 'SKDD' ),
+			'label'    => __( 'Topbar Layout', 'SKDD' ),
 			'section'  => 'SKDD_topbar',
-			'settings' => 'SKDD_setting[topbar_center]',
-			'type'     => 'textarea',
-		)
-	)
-);
-
-// Topbar right.
-$wp_customize->add_setting(
-	'SKDD_setting[topbar_right]',
-	array(
-		'default'           => $defaults['topbar_right'],
-		'sanitize_callback' => 'SKDD_sanitize_raw_html',
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-	)
-);
-$wp_customize->add_control(
-	new WP_Customize_Control(
-		$wp_customize,
-		'SKDD_setting[topbar_right]',
-		array(
-			'label'    => __( 'Content Right', 'SKDD' ),
-			'section'  => 'SKDD_topbar',
-			'settings' => 'SKDD_setting[topbar_right]',
-			'type'     => 'textarea',
+			'settings' => 'SKDD_setting[topbar_layout]',
+			'choices'  => apply_filters(
+				'SKDD_setting_topbar_layout_choices',
+				array(
+					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexstart.jpg',
+					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexend.jpg',
+					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexcenter.jpg',
+					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexspacebetween.jpg',
+				)
+			),
 		)
 	)
 );
