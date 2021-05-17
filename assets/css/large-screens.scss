@@ -177,7 +177,7 @@
     min-width: 300px;
     text-align: left;
     z-index: -1;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius:var(--border-radius);
     padding:20px;
 }
 
