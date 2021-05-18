@@ -11,6 +11,7 @@ function SKDD_custom_menu_order( $menu_order ) {
         'woocommerce-marketing',
 
         'separator1', // First separator 
+        
         'edit.php?post_type=page',         
         'edit.php?post_type=portfolio', 
         'edit.php?post_type=services', 
@@ -18,13 +19,17 @@ function SKDD_custom_menu_order( $menu_order ) {
         'edit.php?post_type=team', 
         'edit.php', // Posts
         'edit-comments.php', // Comments
-        'separator2', // Second separator 
-        
+        'upload.php', // Media
         'edit.php?post_type=ghostkit_template', // Block Templates
         'edit.php?post_type=wp_block', // Re-usable Blocks
-        'upload.php', // Media
-        'separator-last', // Last separator
+        
+        'separator2', // Second separator
+        
+        'nav-menus.php', // Menus
+        'customize.php', // Customizer
         'options-general.php', // Settings
+        
+        'separator-last', // Last separator
     );
 }
 add_filter( 'custom_menu_order', 'SKDD_custom_menu_order', 10, 1 );
@@ -38,6 +43,26 @@ function SKDD_move_admin_menu_items()
     remove_menu_page( 'tools.php' );
     remove_menu_page( 'themes.php' );
     remove_menu_page( 'plugins.php' );
+
+    add_menu_page(
+        __( 'Customizer', 'SKDD' ), //$page_title
+        __( 'Customizer', 'SKDD' ), //$menu_title
+        'manage_options',
+        'customize.php',
+        '',
+        'dashicons-admin-appearance',
+        2
+    );
+
+    add_menu_page(
+        __( 'Menus', 'SKDD' ), //$page_title
+        __( 'Menus', 'SKDD' ), //$menu_title
+        'manage_options',
+        'nav-menus.php',
+        '',
+        'dashicons-menu',
+        2
+    );
 
     add_submenu_page(
         'options-general.php', //$parent_slug
@@ -61,25 +86,7 @@ function SKDD_move_admin_menu_items()
         __( 'Themes', 'SKDD' ), //$menu_title
         'edit_posts', //$capability
         'themes.php' //$menu_slug
-    );
-
-    add_menu_page(
-        'options-general.php', //$parent_slug
-        __( 'Customizer', 'SKDD' ), //$page_title
-        __( 'Customizer', 'SKDD' ), //$menu_title
-        'edit_posts', //$capability
-        'customize.php' //$menu_slug
-    );
-
-    add_menu_page(
-        __( 'Customizer', 'SKDD' ), //$page_title
-        __( 'Customizer', 'SKDD' ), //$menu_title
-        'manage_options',
-        'customize.php',
-        '',
-        'dashicons-admin-appearance',
-        20
-    );
+    );  
 
     add_submenu_page(
         'options-general.php', //$parent_slug
