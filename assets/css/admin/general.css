@@ -469,3 +469,8 @@ ul.is-style-styled li {
 ul.is-style-styled li:before {
   --gkt-styled-lists-dotted--decoration__background-color:var(--tertiary-theme-color);
 }
+
+.block-editor-writing-flow a {
+  text-decoration:underline;
+  font-weight:bold;
+}

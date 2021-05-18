@@ -12,6 +12,8 @@ function SKDD_custom_menu_order( $menu_order ) {
 
         'separator1', // First separator 
         
+        'edit.php?post_type=ghostkit_template', // Block Templates
+        'edit.php?post_type=wp_block', // Re-usable Blocks
         'edit.php?post_type=page',         
         'edit.php?post_type=portfolio', 
         'edit.php?post_type=services', 
@@ -20,9 +22,7 @@ function SKDD_custom_menu_order( $menu_order ) {
         'edit.php', // Posts
         'edit-comments.php', // Comments
         'upload.php', // Media
-        'edit.php?post_type=ghostkit_template', // Block Templates
-        'edit.php?post_type=wp_block', // Re-usable Blocks
-        
+                
         'separator2', // Second separator
         
         'nav-menus.php', // Menus

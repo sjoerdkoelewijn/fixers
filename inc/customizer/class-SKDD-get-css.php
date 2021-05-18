@@ -621,16 +621,6 @@ class SKDD_Get_CSS {
 					font-weight:var(--body-font-weight);
 				}
 
-				.block-editor-writing-flow a {
-					color: var(--link-color) !important;
-					transition:color 0.2s linear;
-				}
-
-				.block-editor-writing-flow a:hover {
-					color: var(--link-hover-color) !important;
-					transition:color 0.2s linear;
-				}
-
 				.editor-post-title__block .editor-post-title__input,
 				.wp-block-heading, .editor-rich-text__tinymce{
 					font-family: var(--heading-font-family);
