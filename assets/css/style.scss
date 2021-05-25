@@ -2082,14 +2082,24 @@ form {
   background-color:var(--theme-color);
 }
 
-.custom-shopping-cart:before {
-  content:'';
-  width:28px;
-  height:24px;
-  margin-top:-4px;
-  mask:url(../images/svg/shopping-basket-icon.svg);
-  -webkit-mask:url(../images/svg/shopping-basket-icon.svg);
-  background:var(--text-color);
+.custom-shopping-cart {
+
+  &:before {
+    content:'';
+    width:28px;
+    height:24px;
+    margin-top:-4px;
+    mask:url(../images/svg/shopping-basket-icon.svg);
+    -webkit-mask:url(../images/svg/shopping-basket-icon.svg);
+    background-color:var(--text-color);
+    transition: background-color .5s ease;
+  }  
+
+  &:hover:before {
+    transition: background-color .5s ease;
+    background:var(--theme-color);
+  }
+  
 }
 
 .has-header-transparent.header-transparent-for-all-devices {
