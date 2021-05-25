@@ -23,7 +23,7 @@ $large-uhd-width: 3840px;
 }
 
 @mixin tablet {
-    @media (min-width: #{$x-large-phone-width}) and (max-width: #{$small-desktop-width - 1}) {
+    @media (min-width: #{$x-large-phone-width}) and (max-width: #{$small-desktop-width}) {
         @content;
     }
 }
