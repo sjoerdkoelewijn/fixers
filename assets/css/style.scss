@@ -2088,7 +2088,8 @@ form {
   height:24px;
   margin-top:-4px;
   mask:url(../images/svg/shopping-basket-icon.svg);
-  background-color:var(--text-color);
+  -webkit-mask:url(../images/svg/shopping-basket-icon.svg);
+  background:var(--text-color);
 }
 
 .has-header-transparent.header-transparent-for-all-devices {
