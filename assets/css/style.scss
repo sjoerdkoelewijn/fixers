@@ -1566,38 +1566,7 @@ form {
           .widget {
             margin-left:10px;
           }
-        }
-
-        .mobile_header_widget_area {
-          display:none;
-
-          @include phone {
-            display:inline-block;          
-          
-              a.button {
-                font-size:var(--button-font-size);
-                font-family:var(--button-font-family);
-                font-weight:var(--button-font-weight);
-                line-height:var(--button-line-height);
-                text-transform: var(--button-font-transform);
-                padding:8px 25px;
-                background-color: var(--button-hover-background-color);
-                color: var(--button-hover-text-color);
-                border-radius: var(--button-border-radius);
-                text-decoration: none;
-                cursor: pointer;
-                border: 0;
-                //line-height: calc(var(--button-line-height) * .9);
-        
-                &:hover {
-                  background-color: var(--button-background-color);
-                  color: var(--button-text-color);
-                }
-              }           
-
-
-          }
-        }
+        }       
         
     }
 
