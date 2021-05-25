@@ -1529,7 +1529,7 @@ form {
         justify-content:space-between;
         width:var(--header-width);
         max-width:100%; 
-        padding:0 calc(var(--scrollbar-width) + var(--content-spacing)) 0 var(--content-spacing);
+        padding:0 var(--content-spacing);
         margin:0 auto;  
         background:var(--header-background-color);
         box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.03);
@@ -4118,13 +4118,12 @@ form.woocommerce-checkout {
 
   }
   
-
   @include tablet {
     padding:var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
   }
 
   @include phone {
-    padding:var(--content-spacing-mobile);
+    padding:var(--content-spacing-mobile) calc(var(--content-spacing-mobile) / 2);
   }
 
 }

@@ -187,7 +187,11 @@ class SKDD_Get_CSS {
 					max-width:var(--content-width);
 					margin:0 calc(var(--content-spacing) / 2);
 				}
-				
+
+				.site_header .site_header_inner {
+					padding:0 calc(var(--content-spacing) / 2);
+				}
+
 			}
 			
 			@media (min-width: '. esc_attr( $options['container_width'] ) .') {
@@ -197,7 +201,8 @@ class SKDD_Get_CSS {
 				}
 				.alignfull {
 					margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
-				}				
+				}	
+			
 			}
 
 			.ghostkit-button {				
