@@ -2359,7 +2359,7 @@ transform: none;
 display: block;
 }
 
-.sidebar-menu .primary-navigation > .menu-item.current-menu-ancestor > a:before, .sidebar-menu .primary-navigation > .menu-item.current-menu-parent > a:before, .sidebar-menu .primary-navigation > .menu-item.current_page_parent > a:before, .sidebar-menu .primary-navigation > .menu-item.current_page_ancestor > a:before {
+.sidebar-menu .primary-navigation > .menu-item.current-menu-ancestor > a:before, .sidebar-menu .primary-navigation > .menu-item.current-menu-parent > a:before, .sidebar-menu .primary-navigation > .menu-item.current_page_parent > a:before {
 content: '';
 width: 40px;
 }
@@ -2433,11 +2433,6 @@ transform: translateX(0px);
 /*************************** Custom Colors  ****************************************************************************/
 
 .SKDD-theme-color,
-.primary-navigation li.current-menu-item > a,
-.primary-navigation > li.current-menu-ancestor > a,
-.primary-navigation > li.current-menu-parent > a,
-.primary-navigation > li.current_page_parent > a,
-.primary-navigation > li.current_page_ancestor > a,
 .woocommerce-cart-form__contents tbody .product-subtotal,
 .woocommerce-checkout-review-order-table .order-total,
 .woocommerce-table--order-details .product-name a,
@@ -3873,7 +3868,7 @@ form.woocommerce-checkout {
   clear: both;
   padding: var(--content-spacing);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   width:var(--header-width);
@@ -3883,6 +3878,7 @@ form.woocommerce-checkout {
 
   a {
     font-size:100%;
+    color:var(--footer-text-color);
   }
 }
 
@@ -3901,6 +3897,10 @@ form.woocommerce-checkout {
   &:before {
     content:'|';
     margin:0 4px;
+  }
+
+  &:first-of-type:before {
+    content:'';
   }
 }
 
@@ -3933,6 +3933,55 @@ form.woocommerce-checkout {
 
 .cmplz-blocked-content-container.forminator-g-recaptcha .cmplz-blocked-content-notice {
   top: 2px
+}
+
+/*************************** Forminator styling ****************************************************************************/
+
+  .forminator-ui {
+
+    .forminator-label {
+      color:var(--body-text-color);
+      font-size:85%;
+      font-weight:400;
+    }
+
+    .forminator-error-message {
+      font-size:70%;
+      font-weight:400;
+    }
+
+    .forminator-row {
+      margin-bottom:10px;
+    }
+
+    .forminator-input {
+      border:0;
+      border-radius:3px;
+      background:var(--second-background-color); 
+    }
+
+    .forminator-button-submit {
+      border-radius: var(--button-border-radius);
+    }
+
+  }
+
+
+
+.ghostkit-col-with-bg {
+  
+  .forminator-input {
+    opacity:.8;
+
+    &:focus {
+      opacity:1;
+    }
+  }
+
+  .forminator-button-submit {
+    background:var(--tertiary-theme-color);
+  }
+
 }
 
 /*************************** ghostkit carousel slider ****************************************************************************/
