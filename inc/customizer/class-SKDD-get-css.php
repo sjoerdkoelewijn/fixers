@@ -181,19 +181,23 @@ class SKDD_Get_CSS {
 
 			@media screen and (max-width: '. esc_attr( $options['container_width'] ) .') {
 				.alignfull {
-					margin:0 0 0 calc(var(--content-spacing) * -1);
+					margin-left:calc(var(--content-spacing) * -0.5);
 				}
 				.site_content {
 					max-width:var(--content-width);
-					margin:0 var(--content-spacing);
+					margin:0 calc(var(--content-spacing) / 2);
 				}
+				
 			}
 			
-			@media (min-width: 992px) {
-				.site-boxed-container #view,
-				.site_content-boxed-container .site_content {
+			@media (min-width: '. esc_attr( $options['container_width'] ) .') {
+				.site_content {
 					max-width: ' . esc_attr( $options['container_width'] ) . ';
+					margin:0 auto;
 				}
+				.alignfull {
+					margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+				}				
 			}
 
 			.ghostkit-button {				

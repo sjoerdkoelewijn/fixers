@@ -1269,7 +1269,7 @@ form {
 
 .alignfull {
     width:100vw !important;
-    margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+    
     
     @include uhd {
       margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
