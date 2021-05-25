@@ -39,7 +39,7 @@ function SKDD_login_logo() {
         .login form .input, .login form input[type=checkbox], .login input[type=text] {
             background: <?php echo esc_attr( $options['background_color'] ) ?> !important;
             border:0px !important;
-            color:<?php echo esc_attr( $options['theme_color'] ) ?>;
+            color:<?php echo esc_attr( $options['text_color'] ) ?>;
         }
 
         .dashicons-visibility, .dashicons-hidden {
