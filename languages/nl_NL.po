@@ -1,6 +1,5 @@
 # Copyright (C) 2020 SKDD
 # This file is distributed under the same license as the SKDD package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: SKDD\n"
@@ -8,496 +7,506 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.4.3\n"
+"Last-Translator: \n"
+"Language: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: comments.php:14
 msgid "Post Comments"
-msgstr ""
+msgstr "Plaats reacties"
 
 #: comments.php:21
 #, php-format
 msgctxt "comments title"
 msgid "%1$s comment"
 msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s reactie"
+msgstr[1] "%1$s reacties"
 
 #: comments.php:29
 msgid "Comment Navigation Above"
-msgstr ""
+msgstr "Boven Reacties navigatie"
 
 #: comments.php:30
 msgid "Comment navigation"
-msgstr ""
+msgstr "Reactie navigatie"
 
 #: comments.php:31
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Oudere reacties"
 
 #: comments.php:32
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Nieuwere reacties &rarr;"
 
 #: comments.php:51
 msgid "Comments are closed."
-msgstr ""
+msgstr "De reacties zijn gesloten"
 
 #: comments.php:56
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: comments.php:57
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: comments.php:66
 msgid "Message"
-msgstr ""
+msgstr "Boodschap"
 
 #: comments.php:68
 msgid "Submit"
-msgstr ""
+msgstr "Verzenden"
 
 #: inc/SKDD-functions.php:342
 msgid "Placeholder image"
-msgstr ""
+msgstr "Placeholder image"
 
 #: inc/SKDD-functions.php:344
 msgid "Error image"
-msgstr ""
+msgstr "Error image"
 
 #: inc/SKDD-template-functions.php:23
 msgid "Sjoerd Koelewijn"
-msgstr ""
+msgstr "Sjoerd Koelewijn"
 
 #: inc/SKDD-template-functions.php:33
 msgid "ROXTAR Online Marketing"
-msgstr ""
+msgstr "ROXTAR Online Marketing"
 
 #: inc/SKDD-template-functions.php:72
 msgid "Related Posts"
-msgstr ""
+msgstr "Gerelateerde Posts"
 
 #: inc/SKDD-template-functions.php:88
 msgid "Read more"
-msgstr ""
+msgstr "Lees meer"
 
 #: inc/SKDD-template-functions.php:126
 #, php-format
 msgid "%s ago"
-msgstr ""
+msgstr "%s geleden"
 
 #: inc/SKDD-template-functions.php:168
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Je reactie wacht op moderatie."
 
 #: inc/SKDD-template-functions.php:194
 msgid "Edit"
-msgstr ""
+msgstr "Bewerken"
 
 #: inc/SKDD-template-functions.php:229 inc/SKDD-template-functions.php:244
 #: inc/SKDD-template-functions.php:259 inc/class-SKDD.php:369
 msgid "Footer Widget"
-msgstr ""
+msgstr "Footer Widget"
 
 #: inc/SKDD-template-functions.php:235 inc/SKDD-template-functions.php:250
 #: inc/SKDD-template-functions.php:265
 #, php-format
-msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging widgets into this widget area."
+msgid ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging "
+"widgets into this widget area."
 msgstr ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging "
+"widgets into this widget area."
 
 #: inc/SKDD-template-functions.php:285
 msgid "Copyright &copy; [current_year] [site_title] | Made by [sjoerd_link] |"
 msgstr ""
+"Copyright &copy; [current_year] [site_title] | Gemaakt door [sjoerd_link] |"
 
 #: inc/SKDD-template-functions.php:377 inc/SKDD-template-functions.php:398
 msgid "SKDD mobile logo"
-msgstr ""
+msgstr "SKDD mobile logo"
 
 #: inc/SKDD-template-functions.php:430
 msgid "SKDD logo"
-msgstr ""
+msgstr "SKDD logo"
 
 #: inc/SKDD-template-functions.php:521
 msgid "Primary navigation"
-msgstr ""
+msgstr "Primary navigation"
 
 #: inc/SKDD-template-functions.php:545
 msgid "Add a Primary Menu"
-msgstr ""
+msgstr "Add a Primary Menu"
 
 #: inc/SKDD-template-functions.php:561
 msgid "Skip to navigation"
-msgstr ""
+msgstr "Ga door naar navigatie"
 
 #: inc/SKDD-template-functions.php:562
 msgid "Skip to content"
-msgstr ""
+msgstr "Ga door naar de content"
 
 #: inc/SKDD-template-functions.php:616 inc/SKDD-template-functions.php:666
 #: inc/SKDD-template-functions.php:733 inc/admin/class-SKDD-admin.php:236
 msgid "Shop"
-msgstr ""
+msgstr "Shop"
 
 #: inc/SKDD-template-functions.php:641 inc/SKDD-template-functions.php:688
 #: inc/SKDD-template-functions.php:819 inc/customizer/register-sections.php:17
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: inc/SKDD-template-functions.php:715
 #, php-format
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "Daily Archives: %s"
 
 #: inc/SKDD-template-functions.php:718
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Monthly Archives: %s"
 
 #: inc/SKDD-template-functions.php:718
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: inc/SKDD-template-functions.php:728
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr ""
+msgstr "Yearly Archives: %s"
 
 #: inc/SKDD-template-functions.php:728
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: inc/SKDD-template-functions.php:730
 msgid "Search results: "
-msgstr ""
+msgstr "Zoekresulaten:"
 
 #: inc/SKDD-template-functions.php:735
 msgid "Tags: "
-msgstr ""
+msgstr "Tags: "
 
 #: inc/SKDD-template-functions.php:751
 msgid "Archives"
-msgstr ""
+msgstr "Archives"
 
 #: inc/SKDD-template-functions.php:797
 msgid "Orders"
-msgstr ""
+msgstr "Orders"
 
 #: inc/SKDD-template-functions.php:799
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: inc/SKDD-template-functions.php:801
 msgid "Account details"
-msgstr ""
+msgstr "Account details"
 
 #: inc/SKDD-template-functions.php:803
 msgid "Addresses"
-msgstr ""
+msgstr "Addresses"
 
 #: inc/SKDD-template-functions.php:805 inc/SKDD-template-functions.php:1899
 #: inc/SKDD-template-functions.php:2058
 msgid "Logout"
-msgstr ""
+msgstr "Logout"
 
 #: inc/SKDD-template-functions.php:807
 msgid "Lost password"
-msgstr ""
+msgstr "Wachtwoord vergeten"
 
 #: inc/SKDD-template-functions.php:821
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: inc/SKDD-template-functions.php:881 inc/SKDD-template-functions.php:1216
 msgid "Pages:"
-msgstr ""
+msgstr "Pages:"
 
 #: inc/SKDD-template-functions.php:1196 inc/SKDD-template-functions.php:1242
 msgid "Read More"
-msgstr ""
+msgstr "Lees meer"
 
 #: inc/SKDD-template-functions.php:1260
 #: inc/customizer/sections/shop/shop-single.php:500
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: inc/SKDD-template-functions.php:1260 inc/SKDD-template-functions.php:1432
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: inc/SKDD-template-functions.php:1282
 msgctxt "Next post"
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 #: inc/SKDD-template-functions.php:1283
 msgctxt "Previous post"
 msgid "Prev"
-msgstr ""
+msgstr "Vorige"
 
 #: inc/SKDD-template-functions.php:1300
 msgid "Next post:"
-msgstr ""
+msgstr "Volgende post:"
 
 #: inc/SKDD-template-functions.php:1301
 msgid "Previous post:"
-msgstr ""
+msgstr "Vorige post:"
 
 #: inc/SKDD-template-functions.php:1327
 msgid "Author Avatar"
-msgstr ""
+msgstr "Author Avatar"
 
 #: inc/SKDD-template-functions.php:1332
 msgid "Written by"
-msgstr ""
+msgstr "Geschreven door"
 
 #: inc/SKDD-template-functions.php:1364
 msgid "Posted on"
-msgstr ""
+msgstr "Geplaatst op"
 
 #: inc/SKDD-template-functions.php:1406
 msgid "by Unknown author"
-msgstr ""
+msgstr "by Unknown author"
 
 #: inc/SKDD-template-functions.php:1408
 msgid "by"
-msgstr ""
+msgstr "by"
 
 #: inc/SKDD-template-functions.php:1438
 msgid "Posted in"
-msgstr ""
+msgstr "Posted in"
 
 #: inc/SKDD-template-functions.php:1468
 msgid "No comments yet"
-msgstr ""
+msgstr "Nog geen reacties"
 
 #: inc/SKDD-template-functions.php:1469
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Reactie"
 
 #: inc/SKDD-template-functions.php:1470
 msgid "% Comments"
-msgstr ""
+msgstr "% Reacties"
 
 #: inc/SKDD-template-functions.php:1628
 msgid "Type to search"
-msgstr ""
+msgstr "Typ om te zoeken"
 
 #: inc/SKDD-template-functions.php:1893 inc/SKDD-template-functions.php:2045
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: inc/SKDD-template-functions.php:1894 inc/SKDD-template-functions.php:2048
 msgid "Register"
-msgstr ""
+msgstr "Registreren"
 
 #: inc/SKDD-template-functions.php:1897 inc/SKDD-template-functions.php:2052
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: inc/SKDD-template-functions.php:2048
 msgid "/register/"
-msgstr ""
+msgstr "/register/"
 
 #: inc/SKDD-template-functions.php:2294 inc/customizer/register-sections.php:22
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:25
 msgid "Scroll To Top"
-msgstr ""
+msgstr "Naar boven scrollen"
 
 #: inc/admin/SKDD-admin-menu-order.php:48
 #: inc/admin/SKDD-admin-menu-order.php:49
 msgid "Customizer"
-msgstr ""
+msgstr "Customizer"
 
 #: inc/admin/SKDD-admin-menu-order.php:58
 #: inc/admin/SKDD-admin-menu-order.php:59
 #: inc/admin/SKDD-admin-menu-order.php:93
 #: inc/admin/SKDD-admin-menu-order.php:94
 msgid "Menus"
-msgstr ""
+msgstr "Menus"
 
 #: inc/admin/SKDD-admin-menu-order.php:69
 #: inc/admin/SKDD-admin-menu-order.php:70
 msgid "Users"
-msgstr ""
+msgstr "Users"
 
 #: inc/admin/SKDD-admin-menu-order.php:77
 #: inc/admin/SKDD-admin-menu-order.php:78
 msgid "Tools"
-msgstr ""
+msgstr "Tools"
 
 #: inc/admin/SKDD-admin-menu-order.php:85
 #: inc/admin/SKDD-admin-menu-order.php:86
 msgid "Themes"
-msgstr ""
+msgstr "Themes"
 
 #: inc/admin/SKDD-admin-menu-order.php:101
 #: inc/admin/SKDD-admin-menu-order.php:102
 msgid "Widgets"
-msgstr ""
+msgstr "Widgets"
 
 #: inc/admin/SKDD-admin-menu-order.php:109
 #: inc/admin/SKDD-admin-menu-order.php:110
 msgid "Plugins"
-msgstr ""
+msgstr "Plugins"
 
 #: inc/admin/SKDD-dashboard-widgets.php:44
 msgid "Hulp nodig?"
-msgstr ""
+msgstr "Hulp nodig?"
 
 #: inc/admin/SKDD-dashboard-widgets.php:50
 msgid "Meest voorkomende taken"
-msgstr ""
+msgstr "Meest voorkomende taken"
 
 #: inc/admin/class-SKDD-admin.php:194
 msgid "Upload Logo"
-msgstr ""
+msgstr "Upload Logo"
 
 #: inc/admin/class-SKDD-admin.php:201
 msgid "Set Colors"
-msgstr ""
+msgstr "Set Colors"
 
 #: inc/admin/class-SKDD-admin.php:208 inc/customizer/register-sections.php:29
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: inc/admin/class-SKDD-admin.php:215 inc/customizer/register-sections.php:57
 msgid "Buttons"
-msgstr ""
+msgstr "Buttons"
 
 #: inc/admin/class-SKDD-admin.php:222 inc/customizer/register-sections.php:66
 msgid "Custom Post Types"
-msgstr ""
+msgstr "Custom Post Types"
 
 #: inc/admin/class-SKDD-admin.php:229 inc/customizer/register-sections.php:75
 msgid "Typography"
-msgstr ""
+msgstr "Typography"
 
 #: inc/admin/class-SKDD-meta-boxes.php:122
 msgid " Settings"
-msgstr ""
+msgstr " Settings"
 
 #: inc/admin/class-SKDD-meta-boxes.php:177
 msgid "Container"
-msgstr ""
+msgstr "Container"
 
 #: inc/admin/class-SKDD-meta-boxes.php:183
 #: inc/admin/class-SKDD-meta-boxes.php:218
 #: inc/admin/class-SKDD-meta-boxes.php:245
 #: inc/admin/class-SKDD-meta-boxes.php:268
 msgid "Customizer Setting"
-msgstr ""
+msgstr "Customizer Setting"
 
 #: inc/admin/class-SKDD-meta-boxes.php:187
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: inc/admin/class-SKDD-meta-boxes.php:191
 msgid "Boxed"
-msgstr ""
+msgstr "Boxed"
 
 #: inc/admin/class-SKDD-meta-boxes.php:195
 msgid "Content Boxed"
-msgstr ""
+msgstr "Content Boxed"
 
 #: inc/admin/class-SKDD-meta-boxes.php:199
 msgid "Full Width / Contained"
-msgstr ""
+msgstr "Full Width / Contained"
 
 #: inc/admin/class-SKDD-meta-boxes.php:203
 msgid "Full Width / Stretched"
-msgstr ""
+msgstr "Full Width / Stretched"
 
 #: inc/admin/class-SKDD-meta-boxes.php:212
 #: inc/customizer/register-sections.php:19
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidebar"
 
 #: inc/admin/class-SKDD-meta-boxes.php:222
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Left Sidebar"
 
 #: inc/admin/class-SKDD-meta-boxes.php:226
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Right Sidebar"
 
 #: inc/admin/class-SKDD-meta-boxes.php:230
 msgid "No Sidebar"
-msgstr ""
+msgstr "No Sidebar"
 
 #: inc/admin/class-SKDD-meta-boxes.php:239
 msgid "Transparent Header"
-msgstr ""
+msgstr "Transparent Header"
 
 #: inc/admin/class-SKDD-meta-boxes.php:249
 #: inc/admin/class-SKDD-meta-boxes.php:272
 msgid "Enabled"
-msgstr ""
+msgstr "Enabled"
 
 #: inc/admin/class-SKDD-meta-boxes.php:253
 #: inc/admin/class-SKDD-meta-boxes.php:276
 msgid "Disabled"
-msgstr ""
+msgstr "Disabled"
 
 #: inc/admin/class-SKDD-meta-boxes.php:262
 #: inc/customizer/register-sections.php:16
 msgid "Page Header"
-msgstr ""
+msgstr "Page Header"
 
 #: inc/admin/class-SKDD-meta-boxes.php:285
 msgid "Disable Sections"
-msgstr ""
+msgstr "Disable Sections"
 
 #: inc/admin/class-SKDD-meta-boxes.php:293
 msgid "Disable Topbar"
-msgstr ""
+msgstr "Disable Topbar"
 
 #: inc/admin/class-SKDD-meta-boxes.php:300
 msgid "Disable Header"
-msgstr ""
+msgstr "Disable Header"
 
 #: inc/admin/class-SKDD-meta-boxes.php:307
 msgid "Disable Footer"
-msgstr ""
+msgstr "Disable Footer"
 
 #: inc/class-SKDD.php:101
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: inc/class-SKDD.php:199
 msgid "Primary Menu"
-msgstr ""
+msgstr "Primary Menu"
 
 #: inc/class-SKDD.php:200
 msgid "Footer Menu"
-msgstr ""
+msgstr "Footer Menu"
 
 #: inc/class-SKDD.php:201
 msgid "Mobile Menu"
-msgstr ""
+msgstr "Mobile Menu"
 
 #: inc/class-SKDD.php:259
 msgid "Primary Color"
-msgstr ""
+msgstr "Primary Color"
 
 #: inc/class-SKDD.php:264
 msgid "Secondary Color"
-msgstr ""
+msgstr "Secondary Color"
 
 #: inc/class-SKDD.php:269
 msgid "Tertiary Color"
-msgstr ""
+msgstr "Tertiary Color"
 
 #: inc/class-SKDD.php:274 inc/customizer/sections/buttons/button.php:42
 #: inc/customizer/sections/color/color.php:88
@@ -505,11 +514,11 @@ msgstr ""
 #: inc/customizer/sections/shop/shop-page.php:760
 #: inc/customizer/sections/shop/shop-page.php:996
 msgid "Background Color"
-msgstr ""
+msgstr "Background Color"
 
 #: inc/class-SKDD.php:279
 msgid "Secondary Background Color"
-msgstr ""
+msgstr "Secondary Background Color"
 
 #: inc/class-SKDD.php:284 inc/customizer/sections/buttons/button.php:21
 #: inc/customizer/sections/color/color.php:172
@@ -517,440 +526,440 @@ msgstr ""
 #: inc/customizer/sections/shop/shop-page.php:737
 #: inc/customizer/sections/shop/shop-page.php:973
 msgid "Text Color"
-msgstr ""
+msgstr "Text Color"
 
 #: inc/class-SKDD.php:289 inc/customizer/sections/color/color.php:235
 msgid "Offset Color"
-msgstr ""
+msgstr "Offset Color"
 
 #: inc/class-SKDD.php:301 inc/customizer/sections/typography/heading.php:550
 msgid "H6"
-msgstr ""
+msgstr "H6"
 
 #: inc/class-SKDD.php:306 inc/customizer/sections/typography/heading.php:481
 msgid "H5"
-msgstr ""
+msgstr "H5"
 
 #: inc/class-SKDD.php:311 inc/customizer/sections/typography/heading.php:410
 msgid "H4"
-msgstr ""
+msgstr "H4"
 
 #: inc/class-SKDD.php:316 inc/customizer/sections/typography/heading.php:339
 msgid "H3"
-msgstr ""
+msgstr "H3"
 
 #: inc/class-SKDD.php:321 inc/customizer/sections/typography/heading.php:268
 msgid "H2"
-msgstr ""
+msgstr "H2"
 
 #: inc/class-SKDD.php:326 inc/customizer/sections/typography/heading.php:197
 msgid "H1"
-msgstr ""
+msgstr "H1"
 
 #: inc/class-SKDD.php:351
 msgid "Main Sidebar"
-msgstr ""
+msgstr "Main Sidebar"
 
 #: inc/class-SKDD.php:353
 msgid "Appears in the sidebar of the site."
-msgstr ""
+msgstr "Appears in the sidebar of the site."
 
 #: inc/class-SKDD.php:360
 msgid "Woocommerce Sidebar"
-msgstr ""
+msgstr "Woocommerce Sidebar"
 
 #: inc/class-SKDD.php:362
 msgid " Appears in the sidebar of shop/product page."
-msgstr ""
+msgstr " Appears in the sidebar of shop/product page."
 
 #: inc/class-SKDD.php:371
 msgid "Appears in the footer section of the site."
-msgstr ""
+msgstr "Appears in the footer section of the site."
 
 #: inc/class-SKDD.php:377
 msgid "Main Menu Widget"
-msgstr ""
+msgstr "Main Menu Widget"
 
 #: inc/class-SKDD.php:379
 msgid "Appears in the header section of the site next to the main menu."
-msgstr ""
+msgstr "Appears in the header section of the site next to the main menu."
 
 #: inc/class-SKDD.php:385
 msgid "Mobile Header Widget"
-msgstr ""
+msgstr "Mobile Header Widget"
 
 #: inc/class-SKDD.php:387
 msgid "Appears in the mobile header in layout 3"
-msgstr ""
+msgstr "Appears in the mobile header in layout 3"
 
 #: inc/class-SKDD.php:393
 msgid "Top Bar Widget"
-msgstr ""
+msgstr "Top Bar Widget"
 
 #: inc/class-SKDD.php:395
 msgid "Appears in the top bar above the header"
-msgstr ""
+msgstr "Appears in the top bar above the header"
 
 #: inc/class-SKDD.php:748
 msgid "Post Pagination"
-msgstr ""
+msgstr "Post Pagination"
 
 #: inc/cpt/custom-url.php:13
 msgid "tax_portfolio"
-msgstr ""
+msgstr "tax_portfolio"
 
 #: inc/cpt/custom-url.php:24 inc/cpt/services.php:10 inc/cpt/services.php:16
 #: inc/cpt/services.php:18 inc/cpt/services.php:110
 msgid "services"
-msgstr ""
+msgstr "diensten"
 
 #: inc/cpt/custom-url.php:35 inc/cpt/knowledge.php:10 inc/cpt/knowledge.php:16
 #: inc/cpt/knowledge.php:18 inc/cpt/knowledge.php:110
 msgid "knowledge-base"
-msgstr ""
+msgstr "kennisbank"
 
 #: inc/cpt/custom-url.php:46 inc/cpt/team.php:10 inc/cpt/team.php:16
 #: inc/cpt/team.php:18 inc/cpt/team.php:109
 msgid "team"
-msgstr ""
+msgstr "team"
 
 #: inc/cpt/knowledge.php:22 inc/cpt/knowledge.php:24 inc/cpt/knowledge.php:59
 #: inc/cpt/knowledge.php:60
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Kennisbank"
 
 #: inc/cpt/knowledge.php:23
 msgctxt "Post Type Singular Name"
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Kennisbank"
 
 #: inc/cpt/knowledge.php:25
 msgid "Knowledge Base Item"
-msgstr ""
+msgstr "Kennisbank item"
 
 #: inc/cpt/knowledge.php:26 inc/cpt/portfolio.php:26 inc/cpt/services.php:26
 msgid "Item Archives"
-msgstr ""
+msgstr "Item Archives"
 
 #: inc/cpt/knowledge.php:27 inc/cpt/portfolio.php:27 inc/cpt/services.php:27
 msgid "Item Attributes"
-msgstr ""
+msgstr "Item Attributes"
 
 #: inc/cpt/knowledge.php:28 inc/cpt/portfolio.php:28 inc/cpt/services.php:28
 msgid "Parent Item:"
-msgstr ""
+msgstr "Parent Item:"
 
 #: inc/cpt/knowledge.php:29
 msgid "Knowledge Base Items"
-msgstr ""
+msgstr "Kennisbank items"
 
 #: inc/cpt/knowledge.php:30 inc/cpt/portfolio.php:30 inc/cpt/services.php:30
 msgid "Add New Info Item"
-msgstr ""
+msgstr "Add New Info Item"
 
 #: inc/cpt/knowledge.php:31 inc/cpt/portfolio.php:31 inc/cpt/services.php:31
 #: inc/cpt/team.php:31
 msgid "Add New"
-msgstr ""
+msgstr "Add New"
 
 #: inc/cpt/knowledge.php:32 inc/cpt/portfolio.php:32 inc/cpt/services.php:32
 msgid "New Item"
-msgstr ""
+msgstr "New Item"
 
 #: inc/cpt/knowledge.php:33 inc/cpt/portfolio.php:33 inc/cpt/services.php:33
 msgid "Edit Item"
-msgstr ""
+msgstr "Edit Item"
 
 #: inc/cpt/knowledge.php:34 inc/cpt/portfolio.php:34 inc/cpt/services.php:34
 msgid "Update Item"
-msgstr ""
+msgstr "Update Item"
 
 #: inc/cpt/knowledge.php:35 inc/cpt/portfolio.php:35 inc/cpt/services.php:35
 msgid "View Item"
-msgstr ""
+msgstr "View Item"
 
 #: inc/cpt/knowledge.php:36 inc/cpt/portfolio.php:36 inc/cpt/services.php:36
 msgid "View Items"
-msgstr ""
+msgstr "View Items"
 
 #: inc/cpt/knowledge.php:37 inc/cpt/portfolio.php:37 inc/cpt/services.php:37
 msgid "Search Item"
-msgstr ""
+msgstr "Search Item"
 
 #: inc/cpt/knowledge.php:38 inc/cpt/portfolio.php:38 inc/cpt/services.php:38
 #: inc/cpt/team.php:38
 msgid "Not found"
-msgstr ""
+msgstr "Not found"
 
 #: inc/cpt/knowledge.php:39 inc/cpt/portfolio.php:39 inc/cpt/services.php:39
 #: inc/cpt/team.php:39
 msgid "Not found in Trash"
-msgstr ""
+msgstr "Not found in Trash"
 
 #: inc/cpt/knowledge.php:40 inc/cpt/portfolio.php:40 inc/cpt/services.php:40
 #: inc/cpt/team.php:40 inc/customizer/sections/blog/blog-single.php:31
 #: inc/customizer/sections/blog/blog.php:102
 msgid "Featured Image"
-msgstr ""
+msgstr "Featured Image"
 
 #: inc/cpt/knowledge.php:41 inc/cpt/portfolio.php:41 inc/cpt/services.php:41
 #: inc/cpt/team.php:41
 msgid "Set featured image"
-msgstr ""
+msgstr "Set featured image"
 
 #: inc/cpt/knowledge.php:42 inc/cpt/portfolio.php:42 inc/cpt/services.php:42
 #: inc/cpt/team.php:42
 msgid "Remove featured image"
-msgstr ""
+msgstr "Remove featured image"
 
 #: inc/cpt/knowledge.php:43 inc/cpt/portfolio.php:43 inc/cpt/services.php:43
 #: inc/cpt/team.php:43
 msgid "Use as featured image"
-msgstr ""
+msgstr "Use as featured image"
 
 #: inc/cpt/knowledge.php:44 inc/cpt/portfolio.php:44 inc/cpt/services.php:44
 #: inc/cpt/team.php:44
 msgid "Insert into item"
-msgstr ""
+msgstr "Insert into item"
 
 #: inc/cpt/knowledge.php:45 inc/cpt/portfolio.php:45 inc/cpt/services.php:45
 #: inc/cpt/team.php:45
 msgid "Uploaded to this item"
-msgstr ""
+msgstr "Uploaded to this item"
 
 #: inc/cpt/knowledge.php:46 inc/cpt/portfolio.php:46 inc/cpt/services.php:46
 msgid "Items list"
-msgstr ""
+msgstr "Items list"
 
 #: inc/cpt/knowledge.php:47 inc/cpt/portfolio.php:47 inc/cpt/services.php:47
 msgid "Items list navigation"
-msgstr ""
+msgstr "Items list navigation"
 
 #: inc/cpt/knowledge.php:48 inc/cpt/portfolio.php:48 inc/cpt/services.php:48
 #: inc/cpt/team.php:48
 msgid "Filter items list"
-msgstr ""
+msgstr "Filter items list"
 
 #: inc/cpt/knowledge.php:89
 msgctxt "taxonomy general name"
 msgid "Knowledge Base categories"
-msgstr ""
+msgstr "Kennisbank categorieen"
 
 #: inc/cpt/knowledge.php:90
 msgctxt "taxonomy singular name"
 msgid "Knowledge Base Category"
-msgstr ""
+msgstr "Kennisbank categorie"
 
 #: inc/cpt/knowledge.php:91 inc/cpt/portfolio.php:91 inc/cpt/services.php:91
 #: inc/cpt/team.php:90
 msgid "Search Categories"
-msgstr ""
+msgstr "Zoek in categorieen"
 
 #: inc/cpt/knowledge.php:92 inc/cpt/portfolio.php:92 inc/cpt/services.php:92
 #: inc/cpt/team.php:91
 msgid "All Categories"
-msgstr ""
+msgstr "Alle categorieen"
 
 #: inc/cpt/knowledge.php:93 inc/cpt/portfolio.php:93 inc/cpt/services.php:93
 #: inc/cpt/team.php:92
 msgid "Parent Category"
-msgstr ""
+msgstr "Parent Category"
 
 #: inc/cpt/knowledge.php:94 inc/cpt/portfolio.php:94 inc/cpt/services.php:94
 #: inc/cpt/team.php:93
 msgid "Parent Category:"
-msgstr ""
+msgstr "Parent Category:"
 
 #: inc/cpt/knowledge.php:95 inc/cpt/portfolio.php:95 inc/cpt/services.php:95
 #: inc/cpt/team.php:94
 msgid "Edit Category"
-msgstr ""
+msgstr "Edit Category"
 
 #: inc/cpt/knowledge.php:96 inc/cpt/portfolio.php:96 inc/cpt/services.php:96
 #: inc/cpt/team.php:95
 msgid "Update Category"
-msgstr ""
+msgstr "Update Category"
 
 #: inc/cpt/knowledge.php:97 inc/cpt/portfolio.php:97 inc/cpt/services.php:97
 #: inc/cpt/team.php:96
 msgid "Add New Category"
-msgstr ""
+msgstr "Add New Category"
 
 #: inc/cpt/knowledge.php:98 inc/cpt/portfolio.php:98 inc/cpt/services.php:98
 #: inc/cpt/team.php:97
 msgid "New Category Name"
-msgstr ""
+msgstr "New Category Name"
 
 #: inc/cpt/knowledge.php:99 inc/cpt/portfolio.php:99 inc/cpt/services.php:99
 #: inc/cpt/team.php:98 inc/customizer/sections/shop/shop-single.php:478
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: inc/cpt/portfolio.php:10 inc/cpt/portfolio.php:16 inc/cpt/portfolio.php:18
 #: inc/cpt/portfolio.php:110
 msgid "portfolio"
-msgstr ""
+msgstr "portfolio"
 
 #: inc/cpt/portfolio.php:22 inc/cpt/portfolio.php:24 inc/cpt/portfolio.php:59
 #: inc/cpt/portfolio.php:60
 msgid "Portfolio"
-msgstr ""
+msgstr "Portfolio"
 
 #: inc/cpt/portfolio.php:23
 msgctxt "Post Type Singular Name"
 msgid "Portfolio"
-msgstr ""
+msgstr "Portfolio"
 
 #: inc/cpt/portfolio.php:25
 msgid "Portfolio Item"
-msgstr ""
+msgstr "Portfolio Item"
 
 #: inc/cpt/portfolio.php:29
 msgid "Portfolio Items"
-msgstr ""
+msgstr "Portfolio Items"
 
 #: inc/cpt/portfolio.php:89
 msgctxt "taxonomy general name"
 msgid "Portfolio categories"
-msgstr ""
+msgstr "Portfolio categories"
 
 #: inc/cpt/portfolio.php:90
 msgctxt "taxonomy singular name"
 msgid "Portfolio Category"
-msgstr ""
+msgstr "Portfolio Category"
 
 #: inc/cpt/services.php:22 inc/cpt/services.php:24 inc/cpt/services.php:59
 #: inc/cpt/services.php:60
 msgid "Services"
-msgstr ""
+msgstr "Diensten"
 
 #: inc/cpt/services.php:23
 msgctxt "Post Type Singular Name"
 msgid "Services"
-msgstr ""
+msgstr "Diensten"
 
 #: inc/cpt/services.php:25
 msgid "Services Item"
-msgstr ""
+msgstr "Diensten Item"
 
 #: inc/cpt/services.php:29
 msgid "Services Items"
-msgstr ""
+msgstr "Diensten Items"
 
 #: inc/cpt/services.php:89
 msgctxt "taxonomy general name"
 msgid "Services categories"
-msgstr ""
+msgstr "Diensten categorieen"
 
 #: inc/cpt/services.php:90
 msgctxt "taxonomy singular name"
 msgid "Services Category"
-msgstr ""
+msgstr "Diensten categorie"
 
 #: inc/cpt/team.php:22 inc/cpt/team.php:24 inc/cpt/team.php:59
 #: inc/cpt/team.php:60
 msgid "Team"
-msgstr ""
+msgstr "Team"
 
 #: inc/cpt/team.php:23
 msgctxt "Post Type Singular Name"
 msgid "Team"
-msgstr ""
+msgstr "Team"
 
 #: inc/cpt/team.php:25 inc/cpt/team.php:29
 msgid "Team Members"
-msgstr ""
+msgstr "Team Members"
 
 #: inc/cpt/team.php:26
 msgid "Member Archives"
-msgstr ""
+msgstr "Member Archives"
 
 #: inc/cpt/team.php:27
 msgid "Member Attributes"
-msgstr ""
+msgstr "Member Attributes"
 
 #: inc/cpt/team.php:28
 msgid "Parent Member:"
-msgstr ""
+msgstr "Parent Member:"
 
 #: inc/cpt/team.php:30
 msgid "Add New Member"
-msgstr ""
+msgstr "Add New Member"
 
 #: inc/cpt/team.php:32
 msgid "New Member"
-msgstr ""
+msgstr "New Member"
 
 #: inc/cpt/team.php:33
 msgid "Edit Member"
-msgstr ""
+msgstr "Edit Member"
 
 #: inc/cpt/team.php:34
 msgid "Update Member"
-msgstr ""
+msgstr "Update Member"
 
 #: inc/cpt/team.php:35
 msgid "View Member"
-msgstr ""
+msgstr "View Member"
 
 #: inc/cpt/team.php:36
 msgid "View Members"
-msgstr ""
+msgstr "View Members"
 
 #: inc/cpt/team.php:37
 msgid "Search Member"
-msgstr ""
+msgstr "Search Member"
 
 #: inc/cpt/team.php:46
 msgid "Member list"
-msgstr ""
+msgstr "Member list"
 
 #: inc/cpt/team.php:47
 msgid "Members list navigation"
-msgstr ""
+msgstr "Members list navigation"
 
 #: inc/cpt/team.php:88
 msgctxt "taxonomy general name"
 msgid "Team categories"
-msgstr ""
+msgstr "Team categories"
 
 #: inc/cpt/team.php:89
 msgctxt "taxonomy singular name"
 msgid "Team Category"
-msgstr ""
+msgstr "Team Category"
 
 #: inc/customizer/class-SKDD-customizer.php:223
 msgid "Sale!"
-msgstr ""
+msgstr "Sale!"
 
 #: inc/customizer/class-SKDD-customizer.php:231
 msgid "Out Of Stock"
-msgstr ""
+msgstr "Uitverkocht"
 
 #: inc/customizer/class-SKDD-customizer.php:263
 #: inc/customizer/sections/shop/shop-single.php:618
 msgid "Recently Viewed Products"
-msgstr ""
+msgstr "Recentelijk bekeken producten"
 
 #: inc/customizer/class-SKDD-customizer.php:294
 msgid "Oops! The page you are looking for cannot be found."
-msgstr ""
+msgstr "Helaas! We kunnen deze pagina niet vinden."
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:86
 msgid "Clear"
-msgstr ""
+msgstr "Clear"
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:87
 msgid "Clear color"
-msgstr ""
+msgstr "Clear color"
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:88
 msgid "Select default color"
-msgstr ""
+msgstr "Select default color"
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:89
 msgid "Color value"
-msgstr ""
+msgstr "Color value"
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:90
 #: inc/customizer/sections/page-header/page-header.php:227
@@ -963,199 +972,199 @@ msgstr ""
 #: inc/customizer/sections/sidebar/sidebar.php:195
 #: inc/customizer/sections/sidebar/sidebar.php:227
 msgid "Default"
-msgstr ""
+msgstr "Default"
 
 #: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:91
 msgid "Select Color"
-msgstr ""
+msgstr "Select Color"
 
 #: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:57
 #: inc/customizer/sections/header/header-transparent.php:184
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:57
 msgid "Desktop"
-msgstr ""
+msgstr "Desktop"
 
 #: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:58
 msgid "Tablet"
-msgstr ""
+msgstr "Tablet"
 
 #: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:59
 #: inc/customizer/sections/header/header-transparent.php:185
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:56
 msgid "Mobile"
-msgstr ""
+msgstr "Mobile"
 
 #: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:60
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:70
 msgid "System fonts"
-msgstr ""
+msgstr "System fonts"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:71
 msgid "Google fonts"
-msgstr ""
+msgstr "Google fonts"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:74
 msgid "Font family"
-msgstr ""
+msgstr "Font family"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:75
 msgid "Font weight"
-msgstr ""
+msgstr "Font weight"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:76
 msgid "Text transform"
-msgstr ""
+msgstr "Text transform"
 
 #: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:78
 msgid "Variants"
-msgstr ""
+msgstr "Variants"
 
 #: inc/customizer/register-sections.php:12
 msgid "Site Container"
-msgstr ""
+msgstr "Site Container"
 
 #: inc/customizer/register-sections.php:13
 msgid "Topbar"
-msgstr ""
+msgstr "Topbar"
 
 #: inc/customizer/register-sections.php:14
 msgid "Normal Header"
-msgstr ""
+msgstr "Normal Header"
 
 #: inc/customizer/register-sections.php:15
 msgid "Header Transparent"
-msgstr ""
+msgstr "Header Transparent"
 
 #: inc/customizer/register-sections.php:18
 #: inc/customizer/sections/sidebar/sidebar.php:136
 msgid "Blog Single"
-msgstr ""
+msgstr "Blog Single"
 
 #: inc/customizer/register-sections.php:20
 msgid "Footer"
-msgstr ""
+msgstr "Footer"
 
 #: inc/customizer/register-sections.php:21
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: inc/customizer/register-sections.php:48
 msgid "Colors"
-msgstr ""
+msgstr "Colors"
 
 #: inc/customizer/register-sections.php:84
 msgid "Body"
-msgstr ""
+msgstr "Body"
 
 #: inc/customizer/register-sections.php:93
 msgid "Primary menu"
-msgstr ""
+msgstr "Primary menu"
 
 #: inc/customizer/register-sections.php:102
 msgid "Heading"
-msgstr ""
+msgstr "Heading"
 
 #: inc/customizer/register-sections.php:112
 msgid "Shop Archive"
-msgstr ""
+msgstr "Shop Archive"
 
 #: inc/customizer/register-sections.php:121
 msgid "Product Single"
-msgstr ""
+msgstr "Product Single"
 
 #: inc/customizer/register-sections.php:130
 msgid "Cart Page"
-msgstr ""
+msgstr "Cart Page"
 
 #: inc/customizer/register-sections.php:139
 msgid "Wholesale"
-msgstr ""
+msgstr "Wholesale"
 
 #: inc/customizer/sections/404/error-404.php:25
 #: inc/customizer/sections/footer/footer.php:131
 msgid "Custom Text"
-msgstr ""
+msgstr "Custom Text"
 
 #: inc/customizer/sections/404/error-404.php:47
 #: inc/customizer/sections/shop/shop-page.php:1265
 #: inc/customizer/sections/shop/shop-single.php:735
 msgid "Background"
-msgstr ""
+msgstr "Background"
 
 #: inc/customizer/sections/blog/blog-single.php:25
 msgid "Blog Single Structure"
-msgstr ""
+msgstr "Blog Single Structure"
 
 #: inc/customizer/sections/blog/blog-single.php:32
 #: inc/customizer/sections/blog/blog.php:103
 #: inc/customizer/sections/page-header/page-header.php:65
 msgid "Title"
-msgstr ""
+msgstr "Title"
 
 #: inc/customizer/sections/blog/blog-single.php:33
 #: inc/customizer/sections/blog/blog.php:104
 msgid "Post Meta"
-msgstr ""
+msgstr "Post Meta"
 
 #: inc/customizer/sections/blog/blog-single.php:54
 msgid "Blog Single Post Meta"
-msgstr ""
+msgstr "Blog Single Post Meta"
 
 #: inc/customizer/sections/blog/blog-single.php:60
 #: inc/customizer/sections/blog/blog.php:131
 msgid "Publish Date"
-msgstr ""
+msgstr "Publish Date"
 
 #: inc/customizer/sections/blog/blog-single.php:61
 #: inc/customizer/sections/blog/blog.php:132
 msgid "Author"
-msgstr ""
+msgstr "Author"
 
 #: inc/customizer/sections/blog/blog-single.php:62
 #: inc/customizer/sections/blog/blog.php:133
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:714
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 #: inc/customizer/sections/blog/blog-single.php:63
 #: inc/customizer/sections/blog/blog.php:134
 msgid "Comments"
-msgstr ""
+msgstr "Comments"
 
 #: inc/customizer/sections/blog/blog-single.php:103
 msgid "Author Box"
-msgstr ""
+msgstr "Author Box"
 
 #: inc/customizer/sections/blog/blog-single.php:124
 msgid "Related Post"
-msgstr ""
+msgstr "Related Post"
 
 #: inc/customizer/sections/blog/blog.php:27
 msgid "Blog Layout"
-msgstr ""
+msgstr "Blog Layout"
 
 #: inc/customizer/sections/blog/blog.php:58
 msgid "Limit Excerpt"
-msgstr ""
+msgstr "Limit Excerpt"
 
 #: inc/customizer/sections/blog/blog.php:96
 msgid "Blog List Structure"
-msgstr ""
+msgstr "Blog List Structure"
 
 #: inc/customizer/sections/blog/blog.php:125
 msgid "Blog Post Meta"
-msgstr ""
+msgstr "Blog Post Meta"
 
 #: inc/customizer/sections/buttons/button.php:82
 msgid "Hover Text Color"
-msgstr ""
+msgstr "Hover Text Color"
 
 #: inc/customizer/sections/buttons/button.php:103
 msgid "Hover Background Color"
-msgstr ""
+msgstr "Hover Background Color"
 
 #: inc/customizer/sections/buttons/button.php:144
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:147
@@ -1165,241 +1174,241 @@ msgstr ""
 #: inc/customizer/sections/shop/shop-single.php:827
 #: inc/customizer/sections/wordpress/site-container.php:212
 msgid "Border Radius"
-msgstr ""
+msgstr "Border Radius"
 
 #: inc/customizer/sections/color/color.php:25
 msgid "Theme Color"
-msgstr ""
+msgstr "Theme Color"
 
 #: inc/customizer/sections/color/color.php:46
 msgid "Secondary Theme Color"
-msgstr ""
+msgstr "Secondary Theme Color"
 
 #: inc/customizer/sections/color/color.php:67
 msgid "Tertiary Theme Color"
-msgstr ""
+msgstr "Tertiary Theme Color"
 
 #: inc/customizer/sections/color/color.php:110
 msgid "Second Background Color"
-msgstr ""
+msgstr "Second Background Color"
 
 #: inc/customizer/sections/color/color.php:151
 msgid "Heading Color"
-msgstr ""
+msgstr "Heading Color"
 
 #: inc/customizer/sections/color/color.php:193
 msgid "Link Color"
-msgstr ""
+msgstr "Link Color"
 
 #: inc/customizer/sections/color/color.php:214
 msgid "Link Hover Color"
-msgstr ""
+msgstr "Link Hover Color"
 
 #: inc/customizer/sections/color/color.php:277
 msgid "Header Background"
-msgstr ""
+msgstr "Header Background"
 
 #: inc/customizer/sections/color/color.php:298
 msgid "Parent Menu Color"
-msgstr ""
+msgstr "Parent Menu Color"
 
 #: inc/customizer/sections/color/color.php:319
 msgid "Sub-menu Color"
-msgstr ""
+msgstr "Sub-menu Color"
 
 #: inc/customizer/sections/color/color.php:342
 msgid "Submenu Background Color"
-msgstr ""
+msgstr "Submenu Background Color"
 
 #: inc/customizer/sections/color/color.php:365
 msgid "Submenu Offset Color"
-msgstr ""
+msgstr "Submenu Offset Color"
 
 #: inc/customizer/sections/color/color.php:407
 msgid "Footer Background Color"
-msgstr ""
+msgstr "Footer Background Color"
 
 #: inc/customizer/sections/color/color.php:428
 msgid "Footer Heading Color"
-msgstr ""
+msgstr "Footer Heading Color"
 
 #: inc/customizer/sections/color/color.php:449
 msgid "Footer Link Color"
-msgstr ""
+msgstr "Footer Link Color"
 
 #: inc/customizer/sections/color/color.php:470
 msgid "Footer Text Color"
-msgstr ""
+msgstr "Footer Text Color"
 
 #: inc/customizer/sections/color/color.php:514
 msgid "Scroll to top background"
-msgstr ""
+msgstr "Scroll to top background"
 
 #: inc/customizer/sections/color/color.php:537
 msgid "Scroll to top color"
-msgstr ""
+msgstr "Scroll to top color"
 
 #: inc/customizer/sections/color/color.php:582
 #: inc/customizer/sections/color/color.php:605
 msgid "Sidebar Background Color"
-msgstr ""
+msgstr "Sidebar Background Color"
 
 #: inc/customizer/sections/color/color.php:628
 msgid "Sidebar Text Color"
-msgstr ""
+msgstr "Sidebar Text Color"
 
 #: inc/customizer/sections/color/color.php:651
 msgid "Sidebar Offset Color"
-msgstr ""
+msgstr "Sidebar Offset Color"
 
 #: inc/customizer/sections/footer/footer.php:25
 msgid "Footer Display"
-msgstr ""
+msgstr "Footer Display"
 
 #: inc/customizer/sections/footer/footer.php:47
 #: inc/customizer/sections/page-header/page-header.php:259
 msgid "Space"
-msgstr ""
+msgstr "Space"
 
 #: inc/customizer/sections/footer/footer.php:79
 msgid "Widget Columns"
-msgstr ""
+msgstr "Widget Columns"
 
 #: inc/customizer/sections/header/header-transparent.php:25
 msgid "Enable Transparent Header"
-msgstr ""
+msgstr "Enable Transparent Header"
 
 #: inc/customizer/sections/header/header-transparent.php:46
 msgid "Disable on 404, Search & Archives"
-msgstr ""
+msgstr "Disable on 404, Search & Archives"
 
 #: inc/customizer/sections/header/header-transparent.php:68
 msgid "Disable on Blog page"
-msgstr ""
+msgstr "Disable on Blog page"
 
 #: inc/customizer/sections/header/header-transparent.php:90
 msgid "Disable on Pages"
-msgstr ""
+msgstr "Disable on Pages"
 
 #: inc/customizer/sections/header/header-transparent.php:112
 msgid "Disable on Posts"
-msgstr ""
+msgstr "Disable on Posts"
 
 #: inc/customizer/sections/header/header-transparent.php:134
 msgid "Disable on Shop page"
-msgstr ""
+msgstr "Disable on Shop page"
 
 #: inc/customizer/sections/header/header-transparent.php:156
 msgid "Disable on Product page"
-msgstr ""
+msgstr "Disable on Product page"
 
 #: inc/customizer/sections/header/header-transparent.php:179
 msgid "Enable On"
-msgstr ""
+msgstr "Enable On"
 
 #: inc/customizer/sections/header/header-transparent.php:186
 msgid "Desktop + Mobile"
-msgstr ""
+msgstr "Desktop + Mobile"
 
 #: inc/customizer/sections/header/header-transparent.php:206
 msgid "Header Transparent Logo"
-msgstr ""
+msgstr "Header Transparent Logo"
 
 #: inc/customizer/sections/header/header-transparent.php:228
 msgid "Menu Transparent Color"
-msgstr ""
+msgstr "Menu Transparent Color"
 
 #: inc/customizer/sections/header/header-transparent.php:250
 msgid "Icon Transparent Color"
-msgstr ""
+msgstr "Icon Transparent Color"
 
 #: inc/customizer/sections/header/header-transparent.php:272
 msgid "Count Transparent Background"
-msgstr ""
+msgstr "Count Transparent Background"
 
 #: inc/customizer/sections/header/header-transparent.php:314
 msgid "Bottom Border Width"
-msgstr ""
+msgstr "Bottom Border Width"
 
 #: inc/customizer/sections/header/header-transparent.php:347
 #: inc/customizer/sections/shop/shop-page.php:224
 #: inc/customizer/sections/shop/shop-page.php:579
 msgid "Border Color"
-msgstr ""
+msgstr "Border Color"
 
 #: inc/customizer/sections/header/header.php:25
 msgid "Header Layout"
-msgstr ""
+msgstr "Header Layout"
 
 #: inc/customizer/sections/header/header.php:75
 msgid "Max Height"
-msgstr ""
+msgstr "Max Height"
 
 #: inc/customizer/sections/header/header.php:145
 msgid "Elements"
-msgstr ""
+msgstr "Elements"
 
 #: inc/customizer/sections/header/header.php:166
 msgid "Header Menu"
-msgstr ""
+msgstr "Header Menu"
 
 #: inc/customizer/sections/header/header.php:188
 msgid "Menu Breakpoint"
-msgstr ""
+msgstr "Menu Breakpoint"
 
 #: inc/customizer/sections/header/header.php:221
 msgid "Widget area"
-msgstr ""
+msgstr "Widget area"
 
 #: inc/customizer/sections/header/header.php:243
 msgid "Search Icon"
-msgstr ""
+msgstr "Search Icon"
 
 #: inc/customizer/sections/header/header.php:267
 msgid "Search Only Product"
-msgstr ""
+msgstr "Search Only Product"
 
 #: inc/customizer/sections/header/header.php:290
 msgid "Wishlist Icon"
-msgstr ""
+msgstr "Wishlist Icon"
 
 #: inc/customizer/sections/header/header.php:313
 msgid "Account Icon"
-msgstr ""
+msgstr "Account Icon"
 
 #: inc/customizer/sections/header/header.php:335
 msgid "Shopping Cart Icon"
-msgstr ""
+msgstr "Shopping Cart Icon"
 
 #: inc/customizer/sections/header/topbar.php:25
 msgid "Topbar Display"
-msgstr ""
+msgstr "Topbar Display"
 
 #: inc/customizer/sections/header/topbar.php:91
 msgid "Topbar Opacity"
-msgstr ""
+msgstr "Topbar Opacity"
 
 #: inc/customizer/sections/header/topbar.php:124
 msgid "Topbar Height"
-msgstr ""
+msgstr "Topbar Height"
 
 #: inc/customizer/sections/header/topbar.php:177
 msgid "Topbar Layout"
-msgstr ""
+msgstr "Topbar Layout"
 
 #: inc/customizer/sections/page-header/page-header.php:25
 msgid "Page Header Display"
-msgstr ""
+msgstr "Page Header Display"
 
 #: inc/customizer/sections/page-header/page-header.php:86
 #: inc/customizer/sections/shop/shop-page.php:74
 #: inc/customizer/sections/shop/shop-single.php:59
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Breadcrumb"
 
 #: inc/customizer/sections/page-header/page-header.php:108
 msgid "Text Align"
-msgstr ""
+msgstr "Text Align"
 
 #: inc/customizer/sections/page-header/page-header.php:113
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:88
@@ -1407,12 +1416,12 @@ msgstr ""
 #: inc/customizer/sections/shop/shop-page.php:690
 #: inc/customizer/sections/shop/shop-page.php:925
 msgid "Left"
-msgstr ""
+msgstr "Left"
 
 #: inc/customizer/sections/page-header/page-header.php:114
 #: inc/customizer/sections/shop/shop-page.php:281
 msgid "Center"
-msgstr ""
+msgstr "Center"
 
 #: inc/customizer/sections/page-header/page-header.php:115
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:87
@@ -1420,511 +1429,515 @@ msgstr ""
 #: inc/customizer/sections/shop/shop-page.php:691
 #: inc/customizer/sections/shop/shop-page.php:926
 msgid "Right"
-msgstr ""
+msgstr "Right"
 
 #: inc/customizer/sections/page-header/page-header.php:116
 msgid "Page Title / Breadcrumb"
-msgstr ""
+msgstr "Page Title / Breadcrumb"
 
 #: inc/customizer/sections/page-header/page-header.php:156
 msgid "Title Color"
-msgstr ""
+msgstr "Title Color"
 
 #: inc/customizer/sections/page-header/page-header.php:178
 msgid "Breadcrumb Color"
-msgstr ""
+msgstr "Breadcrumb Color"
 
 #: inc/customizer/sections/page-header/page-header.php:200
 msgid "Default Background Image"
-msgstr ""
+msgstr "Default Background Image"
 
 #: inc/customizer/sections/page-header/page-header.php:222
 msgid "Background Size"
-msgstr ""
+msgstr "Background Size"
 
 #: inc/customizer/sections/page-header/page-header.php:228
 msgid "Cover"
-msgstr ""
+msgstr "Cover"
 
 #: inc/customizer/sections/page-header/page-header.php:229
 msgid "Contain"
-msgstr ""
+msgstr "Contain"
 
 #: inc/customizer/sections/page-header/page-header.php:250
 msgid "Background Repeat"
-msgstr ""
+msgstr "Background Repeat"
 
 #: inc/customizer/sections/page-header/page-header.php:256
 msgid "No Repeat"
-msgstr ""
+msgstr "No Repeat"
 
 #: inc/customizer/sections/page-header/page-header.php:257
 msgid "Repeat X"
-msgstr ""
+msgstr "Repeat X"
 
 #: inc/customizer/sections/page-header/page-header.php:258
 msgid "Repeat Y"
-msgstr ""
+msgstr "Repeat Y"
 
 #: inc/customizer/sections/page-header/page-header.php:260
 msgid "Round"
-msgstr ""
+msgstr "Round"
 
 #: inc/customizer/sections/page-header/page-header.php:281
 msgid "Background Position"
-msgstr ""
+msgstr "Background Position"
 
 #: inc/customizer/sections/page-header/page-header.php:286
 msgid "Left Top"
-msgstr ""
+msgstr "Left Top"
 
 #: inc/customizer/sections/page-header/page-header.php:287
 msgid "Left Center"
-msgstr ""
+msgstr "Left Center"
 
 #: inc/customizer/sections/page-header/page-header.php:288
 msgid "Left Bottom"
-msgstr ""
+msgstr "Left Bottom"
 
 #: inc/customizer/sections/page-header/page-header.php:289
 msgid "Center Top"
-msgstr ""
+msgstr "Center Top"
 
 #: inc/customizer/sections/page-header/page-header.php:290
 msgid "Center Center"
-msgstr ""
+msgstr "Center Center"
 
 #: inc/customizer/sections/page-header/page-header.php:291
 msgid "Center Bottom"
-msgstr ""
+msgstr "Center Bottom"
 
 #: inc/customizer/sections/page-header/page-header.php:292
 msgid "Right Top"
-msgstr ""
+msgstr "Right Top"
 
 #: inc/customizer/sections/page-header/page-header.php:293
 msgid "Right Center"
-msgstr ""
+msgstr "Right Center"
 
 #: inc/customizer/sections/page-header/page-header.php:294
 msgid "Right Bottom"
-msgstr ""
+msgstr "Right Bottom"
 
 #: inc/customizer/sections/page-header/page-header.php:315
 msgid "Background Attachment"
-msgstr ""
+msgstr "Background Attachment"
 
 #: inc/customizer/sections/page-header/page-header.php:321
 msgid "Fixed"
-msgstr ""
+msgstr "Fixed"
 
 #: inc/customizer/sections/page-header/page-header.php:322
 msgid "Local"
-msgstr ""
+msgstr "Local"
 
 #: inc/customizer/sections/page-header/page-header.php:362
 msgid "Padding Top"
-msgstr ""
+msgstr "Padding Top"
 
 #: inc/customizer/sections/page-header/page-header.php:395
 msgid "Padding Bottom"
-msgstr ""
+msgstr "Padding Bottom"
 
 #: inc/customizer/sections/page-header/page-header.php:428
 msgid "Margin Bottom"
-msgstr ""
+msgstr "Margin Bottom"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:21
 msgid "Portfolio Post Type"
-msgstr ""
+msgstr "Portfolio Post Type"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:43
 #: inc/customizer/sections/posttypes/custom-post-types.php:127
 #: inc/customizer/sections/posttypes/custom-post-types.php:211
 #: inc/customizer/sections/posttypes/custom-post-types.php:295
 msgid "Has archive page"
-msgstr ""
+msgstr "Has archive page"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:64
 #: inc/customizer/sections/posttypes/custom-post-types.php:148
 #: inc/customizer/sections/posttypes/custom-post-types.php:232
 #: inc/customizer/sections/posttypes/custom-post-types.php:316
 msgid "Add categories"
-msgstr ""
+msgstr "Add categories"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:106
 msgid "Services Post Type"
-msgstr ""
+msgstr "Services Post Type"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:190
 msgid "Knowledge Base Post Type"
-msgstr ""
+msgstr "Knowledge Base Post Type"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:274
 msgid "Team Post Type"
-msgstr ""
+msgstr "Team Post Type"
 
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:48
 msgid "Scroll On"
-msgstr ""
+msgstr "Scroll On"
 
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:55
 msgid "Mobile + Desktop"
-msgstr ""
+msgstr "Mobile + Desktop"
 
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:80
 #: inc/customizer/sections/shop/shop-page.php:683
 #: inc/customizer/sections/shop/shop-page.php:1156
 #: inc/customizer/sections/shop/shop-page.php:1212
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:112
 msgid "Icon Size"
-msgstr ""
+msgstr "Icon Size"
 
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:181
 msgid "Offset Bottom"
-msgstr ""
+msgstr "Offset Bottom"
 
 #: inc/customizer/sections/shop/cart-page.php:29
 msgid "Cart Page Layout"
-msgstr ""
+msgstr "Cart Page Layout"
 
 #: inc/customizer/sections/shop/cart-page.php:58
 msgid "Sticky Proceed To Checkout Button"
-msgstr ""
+msgstr "Sticky Proceed To Checkout Button"
 
 #: inc/customizer/sections/shop/cart-page.php:59
 #: inc/customizer/sections/shop/checkout-page.php:74
 msgid "This option only available on mobile devices"
-msgstr ""
+msgstr "This option only available on mobile devices"
 
 #: inc/customizer/sections/shop/checkout-page.php:29
 msgid "Distraction Free Checkout"
-msgstr ""
+msgstr "Distraction Free Checkout"
 
 #: inc/customizer/sections/shop/checkout-page.php:51
 msgid "Multi Step Checkout"
-msgstr ""
+msgstr "Multi Step Checkout"
 
 #: inc/customizer/sections/shop/checkout-page.php:73
 msgid "Sticky Place Order Button"
-msgstr ""
+msgstr "Sticky Place Order Button"
 
 #: inc/customizer/sections/shop/product-catalog.php:46
 msgid "Products Per Row"
-msgstr ""
+msgstr "Products Per Row"
 
 #: inc/customizer/sections/shop/product-catalog.php:94
 msgid "Products Per Page"
-msgstr ""
+msgstr "Products Per Page"
 
 #: inc/customizer/sections/shop/shop-page.php:27
 msgid "Shop Structure"
-msgstr ""
+msgstr "Shop Structure"
 
 #: inc/customizer/sections/shop/shop-page.php:53
 msgid "Shop Title"
-msgstr ""
+msgstr "Shop Title"
 
 #: inc/customizer/sections/shop/shop-page.php:95
 msgid "Result Count"
-msgstr ""
+msgstr "Result Count"
 
 #: inc/customizer/sections/shop/shop-page.php:116
 msgid "Product Filtering"
-msgstr ""
+msgstr "Product Filtering"
 
 #: inc/customizer/sections/shop/shop-page.php:135
 msgid "Product Card"
-msgstr ""
+msgstr "Product Card"
 
 #: inc/customizer/sections/shop/shop-page.php:160
 #: inc/customizer/sections/shop/shop-page.php:515
 msgid "Border Style"
-msgstr ""
+msgstr "Border Style"
 
 #: inc/customizer/sections/shop/shop-page.php:167
 #: inc/customizer/sections/shop/shop-page.php:492
 #: inc/customizer/sections/shop/shop-page.php:522
 #: inc/customizer/sections/shop/shop-page.php:927
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: inc/customizer/sections/shop/shop-page.php:168
 #: inc/customizer/sections/shop/shop-page.php:523
 msgid "Solid"
-msgstr ""
+msgstr "Solid"
 
 #: inc/customizer/sections/shop/shop-page.php:169
 #: inc/customizer/sections/shop/shop-page.php:524
 msgid "Dashed"
-msgstr ""
+msgstr "Dashed"
 
 #: inc/customizer/sections/shop/shop-page.php:170
 #: inc/customizer/sections/shop/shop-page.php:525
 msgid "Dotted"
-msgstr ""
+msgstr "Dotted"
 
 #: inc/customizer/sections/shop/shop-page.php:171
 #: inc/customizer/sections/shop/shop-page.php:526
 msgid "Double"
-msgstr ""
+msgstr "Double"
 
 #: inc/customizer/sections/shop/shop-page.php:192
 #: inc/customizer/sections/shop/shop-page.php:547
 msgid "Border Width"
-msgstr ""
+msgstr "Border Width"
 
 #: inc/customizer/sections/shop/shop-page.php:243
 msgid "Product Content"
-msgstr ""
+msgstr "Product Content"
 
 #: inc/customizer/sections/shop/shop-page.php:273
 msgid "Alignment"
-msgstr ""
+msgstr "Alignment"
 
 #: inc/customizer/sections/shop/shop-page.php:322
 msgid "Product Title"
-msgstr ""
+msgstr "Product Title"
 
 #: inc/customizer/sections/shop/shop-page.php:343
 msgid "Product Category"
-msgstr ""
+msgstr "Product Category"
 
 #: inc/customizer/sections/shop/shop-page.php:364
 msgid "Product Rating"
-msgstr ""
+msgstr "Product Rating"
 
 #: inc/customizer/sections/shop/shop-page.php:385
 msgid "Product Price"
-msgstr ""
+msgstr "Product Price"
 
 #: inc/customizer/sections/shop/shop-page.php:406
 msgid "Equal Product Content"
-msgstr ""
+msgstr "Equal Product Content"
 
 #: inc/customizer/sections/shop/shop-page.php:427
 msgid "Product Content Min Height"
-msgstr ""
+msgstr "Product Content Min Height"
 
 #: inc/customizer/sections/shop/shop-page.php:457
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:864
 msgid "Product Image"
-msgstr ""
+msgstr "Product Image"
 
 #: inc/customizer/sections/shop/shop-page.php:485
 msgid "Hover Effect"
-msgstr ""
+msgstr "Hover Effect"
 
 #: inc/customizer/sections/shop/shop-page.php:493
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: inc/customizer/sections/shop/shop-page.php:494
 msgid "Swap"
-msgstr ""
+msgstr "Swap"
 
 #: inc/customizer/sections/shop/shop-page.php:600
 msgid "Equal Image Height"
-msgstr ""
+msgstr "Equal Image Height"
 
 #: inc/customizer/sections/shop/shop-page.php:622
 msgid "Image Height"
-msgstr ""
+msgstr "Image Height"
 
 #: inc/customizer/sections/shop/shop-page.php:652
 msgid "Sale Tag"
-msgstr ""
+msgstr "Sale Tag"
 
 #: inc/customizer/sections/shop/shop-page.php:713
 #: inc/customizer/sections/shop/shop-page.php:949
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: inc/customizer/sections/shop/shop-page.php:814
 msgid "Sale Percentage"
-msgstr ""
+msgstr "Sale Percentage"
 
 #: inc/customizer/sections/shop/shop-page.php:836
 msgid "Sale Square"
-msgstr ""
+msgstr "Sale Square"
 
 #: inc/customizer/sections/shop/shop-page.php:858
 #: inc/customizer/sections/shop/shop-page.php:1073
 msgid "Size"
-msgstr ""
+msgstr "Size"
 
 #: inc/customizer/sections/shop/shop-page.php:888
 msgid "Out Of Stock Label"
-msgstr ""
+msgstr "Out Of Stock Label"
 
 #: inc/customizer/sections/shop/shop-page.php:918
 #: inc/customizer/sections/shop/shop-single.php:544
 #: inc/customizer/sections/shop/shop-single.php:643
 msgid "Display"
-msgstr ""
+msgstr "Display"
 
 #: inc/customizer/sections/shop/shop-page.php:1051
 msgid "Square"
-msgstr ""
+msgstr "Square"
 
 #: inc/customizer/sections/shop/shop-page.php:1103
 msgid "Wishlist Button"
-msgstr ""
+msgstr "Wishlist Button"
 
 #: inc/customizer/sections/shop/shop-page.php:1127
 msgid "Support For Plugin"
-msgstr ""
+msgstr "Support For Plugin"
 
 #: inc/customizer/sections/shop/shop-page.php:1134
 msgid "YITH WooCommerce Wishlist"
-msgstr ""
+msgstr "YITH WooCommerce Wishlist"
 
 #: inc/customizer/sections/shop/shop-page.php:1135
 msgid "TI WooCommerce Wishlist"
-msgstr ""
+msgstr "TI WooCommerce Wishlist"
 
 #: inc/customizer/sections/shop/shop-page.php:1183
 msgid "Add To Cart Button"
-msgstr ""
+msgstr "Add To Cart Button"
 
 #: inc/customizer/sections/shop/shop-page.php:1243
 msgid "Cart Icon"
-msgstr ""
+msgstr "Cart Icon"
 
 #: inc/customizer/sections/shop/shop-page.php:1288
 #: inc/customizer/sections/shop/shop-single.php:758
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: inc/customizer/sections/shop/shop-page.php:1311
 #: inc/customizer/sections/shop/shop-single.php:781
 msgid "Hover Background"
-msgstr ""
+msgstr "Hover Background"
 
 #: inc/customizer/sections/shop/shop-page.php:1334
 #: inc/customizer/sections/shop/shop-single.php:804
 msgid "Hover Color"
-msgstr ""
+msgstr "Hover Color"
 
 #: inc/customizer/sections/shop/shop-single.php:27
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: inc/customizer/sections/shop/shop-single.php:80
 msgid "Product Navigation"
-msgstr ""
+msgstr "Product Navigation"
 
 #: inc/customizer/sections/shop/shop-single.php:101
 msgid "Ajax Single Add To Cart"
-msgstr ""
+msgstr "Ajax Single Add To Cart"
 
 #: inc/customizer/sections/shop/shop-single.php:122
 msgid "Stock Label"
-msgstr ""
+msgstr "Stock Label"
 
 #: inc/customizer/sections/shop/shop-single.php:143
 msgid "Loading Bar"
-msgstr ""
+msgstr "Loading Bar"
 
 #: inc/customizer/sections/shop/shop-single.php:164
 msgid "Min stock to show"
-msgstr ""
+msgstr "Min stock to show"
 
 #: inc/customizer/sections/shop/shop-single.php:165
 msgid "Default = 0 show stock"
-msgstr ""
+msgstr "Default = 0 show stock"
 
 #: inc/customizer/sections/shop/shop-single.php:187
 msgid "Additional Information Tab"
-msgstr ""
+msgstr "Additional Information Tab"
 
 #: inc/customizer/sections/shop/shop-single.php:208
 msgid "Content Background"
-msgstr ""
+msgstr "Content Background"
 
 #: inc/customizer/sections/shop/shop-single.php:229
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:542
 msgid "Trust Badge Image"
-msgstr ""
+msgstr "Trust Badge Image"
 
 #: inc/customizer/sections/shop/shop-single.php:248
 msgid "Product Images"
-msgstr ""
+msgstr "Product Images"
 
 #: inc/customizer/sections/shop/shop-single.php:277
 msgid "Gallery Layout"
-msgstr ""
+msgstr "Gallery Layout"
 
 #: inc/customizer/sections/shop/shop-single.php:311
 msgid "Product image height"
-msgstr ""
+msgstr "Product image height"
 
 #: inc/customizer/sections/shop/shop-single.php:346
 msgid "Gallery Zoom Effect"
-msgstr ""
+msgstr "Gallery Zoom Effect"
 
 #: inc/customizer/sections/shop/shop-single.php:367
 msgid "Gallery Lightbox Effect"
-msgstr ""
+msgstr "Gallery Lightbox Effect"
 
 #: inc/customizer/sections/shop/shop-single.php:388
 msgid "Top Space"
-msgstr ""
+msgstr "Top Space"
 
 #: inc/customizer/sections/shop/shop-single.php:410
 msgid "Bottom Space"
-msgstr ""
+msgstr "Bottom Space"
 
 #: inc/customizer/sections/shop/shop-single.php:430
 msgid "Product Meta"
-msgstr ""
+msgstr "Product Meta"
 
 #: inc/customizer/sections/shop/shop-single.php:456
 msgid "SKU"
-msgstr ""
+msgstr "SKU"
 
 #: inc/customizer/sections/shop/shop-single.php:519
 msgid "Related Products"
-msgstr ""
+msgstr "Related Products"
 
 #: inc/customizer/sections/shop/shop-single.php:565
 msgid "Total Products"
-msgstr ""
+msgstr "Total Products"
 
 #: inc/customizer/sections/shop/shop-single.php:587
 msgid "Columns"
-msgstr ""
+msgstr "Columns"
 
 #: inc/customizer/sections/shop/shop-single.php:667
 msgid "Section Title"
-msgstr ""
+msgstr "Section Title"
 
 #: inc/customizer/sections/shop/shop-single.php:689
 msgid "Total Product"
-msgstr ""
+msgstr "Total Product"
 
 #: inc/customizer/sections/shop/shop-single.php:706
 msgid "Button Add To Cart"
-msgstr ""
+msgstr "Button Add To Cart"
 
 #: inc/customizer/sections/shop/wholesale.php:30
 msgid "Only show price when logged in"
-msgstr ""
+msgstr "Only show price when logged in"
 
 #: inc/customizer/sections/shop/wholesale.php:31
 msgid "Hide price and add to cart for users that are not logged in"
-msgstr ""
+msgstr "Hide price and add to cart for users that are not logged in"
 
 #: inc/customizer/sections/shop/wholesale.php:55
 msgid "Add weight to price"
-msgstr ""
+msgstr "Add weight to price"
 
 #: inc/customizer/sections/shop/wholesale.php:56
-msgid "Show the per weight after the price so customers know how much they pay per kilo"
+msgid ""
+"Show the per weight after the price so customers know how much they pay per "
+"kilo"
 msgstr ""
+"Show the per weight after the price so customers know how much they pay per "
+"kilo"
 
 #: inc/customizer/sections/sidebar/sidebar.php:32
 #: inc/customizer/sections/sidebar/sidebar.php:63
@@ -1933,7 +1946,7 @@ msgstr ""
 #: inc/customizer/sections/sidebar/sidebar.php:196
 #: inc/customizer/sections/sidebar/sidebar.php:228
 msgid "No sidebar"
-msgstr ""
+msgstr "No sidebar"
 
 #: inc/customizer/sections/sidebar/sidebar.php:33
 #: inc/customizer/sections/sidebar/sidebar.php:64
@@ -1942,7 +1955,7 @@ msgstr ""
 #: inc/customizer/sections/sidebar/sidebar.php:197
 #: inc/customizer/sections/sidebar/sidebar.php:229
 msgid "Left sidebar"
-msgstr ""
+msgstr "Left sidebar"
 
 #: inc/customizer/sections/sidebar/sidebar.php:34
 #: inc/customizer/sections/sidebar/sidebar.php:65
@@ -1951,31 +1964,31 @@ msgstr ""
 #: inc/customizer/sections/sidebar/sidebar.php:198
 #: inc/customizer/sections/sidebar/sidebar.php:230
 msgid "Right sidebar"
-msgstr ""
+msgstr "Right sidebar"
 
 #: inc/customizer/sections/sidebar/sidebar.php:55
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: inc/customizer/sections/sidebar/sidebar.php:105
 msgid "Blog List"
-msgstr ""
+msgstr "Blog List"
 
 #: inc/customizer/sections/sidebar/sidebar.php:188
 msgid "Shop/Product Archive"
-msgstr ""
+msgstr "Shop/Product Archive"
 
 #: inc/customizer/sections/sidebar/sidebar.php:220
 msgid "Shop Single"
-msgstr ""
+msgstr "Shop Single"
 
 #: inc/customizer/sections/sidebar/sidebar.php:272
 msgid "Sidebar Width"
-msgstr ""
+msgstr "Sidebar Width"
 
 #: inc/customizer/sections/typography/body.php:74
 msgid "Body Font"
-msgstr ""
+msgstr "Body Font"
 
 #: inc/customizer/sections/typography/body.php:123
 #: inc/customizer/sections/typography/buttons.php:142
@@ -1983,7 +1996,7 @@ msgstr ""
 #: inc/customizer/sections/typography/primary-menu.php:162
 #: inc/customizer/sections/typography/primary-menu.php:345
 msgid "Font Size"
-msgstr ""
+msgstr "Font Size"
 
 #: inc/customizer/sections/typography/body.php:194
 #: inc/customizer/sections/typography/buttons.php:193
@@ -1991,71 +2004,71 @@ msgstr ""
 #: inc/customizer/sections/typography/primary-menu.php:233
 #: inc/customizer/sections/typography/primary-menu.php:416
 msgid "Line Height"
-msgstr ""
+msgstr "Line Height"
 
 #: inc/customizer/sections/typography/buttons.php:93
 msgid "Button Font"
-msgstr ""
+msgstr "Button Font"
 
 #: inc/customizer/sections/typography/heading.php:74
 msgid "Heading Font"
-msgstr ""
+msgstr "Heading Font"
 
 #: inc/customizer/sections/typography/primary-menu.php:72
 msgid "Menu Font"
-msgstr ""
+msgstr "Menu Font"
 
 #: inc/customizer/sections/typography/primary-menu.php:115
 msgid "Parent Menu"
-msgstr ""
+msgstr "Parent Menu"
 
 #: inc/customizer/sections/typography/primary-menu.php:298
 msgid "Sub Menu"
-msgstr ""
+msgstr "Sub Menu"
 
 #: inc/customizer/sections/wordpress/site-container.php:47
 msgid "Header width"
-msgstr ""
+msgstr "Header width"
 
 #: inc/customizer/sections/wordpress/site-container.php:76
 msgid "Container width"
-msgstr ""
+msgstr "Container width"
 
 #: inc/customizer/sections/wordpress/site-container.php:126
 msgid "Horizontal spacing"
-msgstr ""
+msgstr "Horizontal spacing"
 
 #: inc/customizer/sections/wordpress/site-container.php:177
 msgid "Vertical spacing"
-msgstr ""
+msgstr "Vertical spacing"
 
 #: inc/customizer/sections/wordpress/title-tagline.php:26
 msgid "Mobile Logo (Optional)"
-msgstr ""
+msgstr "Mobile Logo (Optional)"
 
 #: inc/customizer/sections/wordpress/title-tagline.php:88
 msgid "Logo Width"
-msgstr ""
+msgstr "Logo Width"
 
 #: inc/widget/class-SKDD-recent-post-thumbnail.php:23
 msgid "SKDD Recent Post With Thumbnail"
-msgstr ""
+msgstr "SKDD Recent Post With Thumbnail"
 
 #: inc/widget/class-SKDD-recent-post-thumbnail.php:26
 msgid "List the most recent posts with post titles, thumbnail"
-msgstr ""
+msgstr "List the most recent posts with post titles, thumbnail"
 
 #: inc/widget/class-SKDD-recent-post-thumbnail.php:38
 msgid "Recent Posts"
-msgstr ""
+msgstr "Recent Posts"
 
 #: inc/widget/class-SKDD-recent-post-thumbnail.php:49
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: inc/widget/class-SKDD-recent-post-thumbnail.php:58
 msgid "Number:"
-msgstr ""
+msgstr "Number:"
 
 #: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:96
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:315
@@ -2063,85 +2076,89 @@ msgstr ""
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:390
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:405
 msgid "Product image"
-msgstr ""
+msgstr "Product image"
 
 #: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:367
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:62
 msgid "Previous Product Image"
-msgstr ""
+msgstr "Previous Product Image"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:67
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:557
 msgid "Previous"
-msgstr ""
+msgstr "Previous"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:89
 msgid "Next Product Image"
-msgstr ""
+msgstr "Next Product Image"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:94
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:558
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:508
 #: inc/woocommerce/class-SKDD-woocommerce.php:275
 #, php-format
 msgid "Hurry! only %s left in stock."
-msgstr ""
+msgstr "Snel! We hebben nog maar %s op voorraad."
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:655
 #, php-format
-msgid "You cannot add that amount of this product to the cart. We have %1$s in stock and you already have %2$s in your cart"
+msgid ""
+"You cannot add that amount of this product to the cart. We have %1$s in "
+"stock and you already have %2$s in your cart"
 msgstr ""
+"Helaas, die hoeveelheid kun je niet toevoegen aan je winkelwagen. We hebben "
+"nog maar %1$s op voorraad en je hebt er al %2$s in je winkelwagen."
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:742
 msgid "This product can be used to"
-msgstr ""
+msgstr "Dit product kan gebruikt worden om te "
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:282
 msgid "Remove this item"
-msgstr ""
+msgstr "Verwijder dit item"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:327
 msgid "No products in the cart."
-msgstr ""
+msgstr "Geen producten in je winkelwagen"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:344
 msgid "Shopping cart"
-msgstr ""
+msgstr "Winkelwagen"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:465
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:470
 msgid "News"
-msgstr ""
+msgstr "Nieuws"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:475
 msgid "Products"
-msgstr ""
+msgstr "Produkten"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:922
 msgid "Billing Details"
-msgstr ""
+msgstr "Factuur gegevens"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:926
 msgid "Delivery"
-msgstr ""
+msgstr "Bezorging"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:930
 msgid "Payment"
-msgstr ""
+msgstr "Betaling"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1009
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1041
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1012
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1020
@@ -2149,118 +2166,140 @@ msgstr ""
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1052
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1060
 msgid "Change"
-msgstr ""
+msgstr "Veranderen"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1017
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1049
 msgid "Address"
-msgstr ""
+msgstr "Adres"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1057
 #: inc/woocommerce/class-SKDD-woocommerce.php:204
 msgid "Shipping"
-msgstr ""
+msgstr "Verzending"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1078
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1079
 msgid "Continue to"
-msgstr ""
+msgstr "Ga door naar"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1079
 msgid "Continue to Delivery"
-msgstr ""
+msgstr "Ga door naar verzending"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1080
 msgid "Place Order"
-msgstr ""
+msgstr "Plaatst bestelling"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1096
 #, php-format
 msgid "%s item"
 msgid_plural "%s items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s item"
+msgstr[1] "%s items"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1101
 msgid "Order Summary"
-msgstr ""
+msgstr "Samenvatting bestelling"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1174
 msgid "register"
-msgstr ""
+msgstr "Registreren"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1175
 msgid "See prices"
-msgstr ""
+msgstr "Bekijk de prijzen"
 
 #: inc/woocommerce/class-SKDD-woocommerce.php:202
 #: inc/woocommerce/class-SKDD-woocommerce.php:255
 msgid "Sorry, something went wrong. Please try again!"
-msgstr ""
+msgstr "Sorry, er ging iets mis. Probeer het alsjeblieft opnieuw!"
 
 #: inc/woocommerce/class-SKDD-woocommerce.php:203
 msgid "Please enter a valid quantity for this product"
-msgstr ""
+msgstr "Voer een geldig aantal in voor dit product"
 
 #: inc/woocommerce/class-SKDD-woocommerce.php:205
 msgid "Calculated at next step"
-msgstr ""
+msgstr "Berekend bij de volgende stap"
 
 #: inc/woocommerce/class-SKDD-woocommerce.php:502
 msgid "Product video url"
-msgstr ""
+msgstr "Product video url"
 
 #: inc/woocommerce/class-SKDD-woocommerce.php:524
 msgid "Enter Youtube or Vimeo video url"
-msgstr ""
+msgstr "Enter Youtube or Vimeo video url"
 
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Search Results for: %s"
 
 #: sidebar-shop.php:16 sidebar-shop.php:31 sidebar-shop.php:46
 msgid "Sidebar Shop Widget"
-msgstr ""
+msgstr "Sidebar Shop Widget"
 
 #: sidebar-shop.php:22 sidebar-shop.php:37 sidebar-shop.php:52
 #, php-format
-msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearance / Widgets / Woocommerce Sidebar</strong></a> and dragging widgets into this widget area."
+msgid ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Woocommerce Sidebar</strong></a> and "
+"dragging widgets into this widget area."
 msgstr ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Woocommerce Sidebar</strong></a> and "
+"dragging widgets into this widget area."
 
 #: sidebar.php:17 sidebar.php:32 sidebar.php:47
 msgid "Sidebar Widget"
-msgstr ""
+msgstr "Sidebar Widget"
 
 #: sidebar.php:23 sidebar.php:38 sidebar.php:53
 #, php-format
-msgid "Replace this widget content by going to <a href=\"%1$s\"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging widgets into this widget area."
+msgid ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging "
+"widgets into this widget area."
 msgstr ""
+"Replace this widget content by going to <a href=\"%1$s"
+"\"><strong>Appearance / Widgets / Main Sidebar</strong></a> and dragging "
+"widgets into this widget area."
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Niets gevonden"
 
 #: template-parts/content-none.php:23
 #, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 
 #: template-parts/content-none.php:29
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
+"Sorry, maar er kwam niets overeen met uw zoektermen. Probeer het opnieuw met "
+"andere zoektermen."
 
 #: template-parts/content-none.php:34
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
+"Het lijkt erop dat we niet kunnen vinden wat je zoekt. Probeer het met de "
+"zoekfunctie"
 
 #: template-parts/content-photoswipe.php:59
 msgid "Previous (arrow left)"
-msgstr ""
+msgstr "Vorige (arrow left)"
 
 #: template-parts/content-photoswipe.php:62
 msgid "Next (arrow right)"
-msgstr ""
+msgstr "Volgende (arrow right)"

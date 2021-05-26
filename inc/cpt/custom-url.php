@@ -10,7 +10,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
     if ( false !== strpos( $post_link, '%tax_portfolio%' ) && $options['cpt_portfolio_has_tax'] ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, __( 'tax_portfolio', 'SKDD' ) );
+		$taxonomy_terms = get_the_terms( $post->ID, 'tax_portfolio' );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {
@@ -21,7 +21,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
 	if ( false !== strpos( $post_link, '%services%' ) && $options['cpt_services_has_tax'] ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, __( 'services', 'SKDD' ) );
+		$taxonomy_terms = get_the_terms( $post->ID, 'services' );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {
@@ -32,7 +32,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
 	if ( false !== strpos( $post_link, '%tax_knowledge%' ) && $options['cpt_knowledge_has_tax'] ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, __( 'knowledge-base', 'SKDD' ) );
+		$taxonomy_terms = get_the_terms( $post->ID, 'tax_knowledge' );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {
@@ -43,7 +43,7 @@ function sk_update_permalink_structure( $post_link, $post )
 
     if ( false !== strpos( $post_link, '%team%' ) && $options['cpt_team_has_tax'] ) {
 
-		$taxonomy_terms = get_the_terms( $post->ID, __( 'team', 'SKDD' ) );
+		$taxonomy_terms = get_the_terms( $post->ID, 'team' );
 		
         foreach ((array) $taxonomy_terms as $term ) { 
             if ( ! $term->parent ) {

@@ -897,7 +897,7 @@ form {
 .page-content {
 
   .search-form {
-    background-color:var(--sidebar-background-color);
+    //background-color:var(--sidebar-background-color);
     border-radius:var(--border-radius);
     padding:var(--content-spacing);
     margin-top:5vh;
@@ -907,8 +907,8 @@ form {
 
     .search-field {
       margin:0;
-      background:var(--sidebar-offset-color);
-      color:var(--sidebar-text-color);
+      background:var(--offset-color);
+      color:var(--body-text-color);
       height:50px;
       min-width:50vw;
       border-radius: var(--border-radius) 0 0 var(--border-radius);
@@ -922,8 +922,8 @@ form {
 
   .search-form .search-submit, .search-form button[type="submit"], .woocommerce-product-search .search-submit, .woocommerce-product-search button[type="submit"] {
     position:relative;
-    background:var(--theme-color);
-    color:var(--background-color);
+    background:var(--button-background-color);
+    color:var(--button-text-color);
     height:50px;
     min-width:120px;
     padding:0 30px;
@@ -1254,6 +1254,23 @@ form {
 
     }
   }
+}
+
+.wp-block-cover {
+  border-radius: var(--border-radius);
+
+  img, picture, video {
+    border-radius: var(--border-radius);
+  }
+}
+
+.wp-block-cover.alignfull {
+  border-radius: 0;
+
+  img, picture, video {
+    border-radius: 0;
+  }
+  
 }
 
 .alignfull {
@@ -3645,10 +3662,6 @@ form.woocommerce-checkout {
   
   .entry-meta .post-meta-separator:last-child {
     display: none;
-  }
-  
-  .entry-content {
-    margin-top: 30px;
   }
   
   .post-read-more {
