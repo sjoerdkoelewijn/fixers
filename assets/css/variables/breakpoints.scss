@@ -41,7 +41,7 @@ $large-uhd-width: 3840px;
 }
 
 @mixin small-desktop {
-    @media (min-width: #{$small-tablet-width}) and (max-width: #{$small-desktop-width}) {
+    @media (min-width: #{$small-tablet-width}) and (max-width: #{$medium-desktop-width}) {
         @content;
     }
 }

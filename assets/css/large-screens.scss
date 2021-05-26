@@ -65,9 +65,18 @@
     align-items: center;
 
     @include small-desktop {
-        margin: 0 10px;
+        margin-left:10px;
+        margin-right:10px;
     }
 
+}
+
+.main-navigation .primary-navigation > .menu-item {
+    &:last-of-type {
+        a {
+            margin-right:0;
+        }
+    }
 }
 
 .site-navigation, .main-navigation, .primary-navigation {

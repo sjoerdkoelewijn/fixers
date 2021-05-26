@@ -485,15 +485,7 @@ button, .button, .wp-block-button__link {
   .product-loop-action .added_to_cart,
   .product-loop-image-wrapper .tinv-wraper .tinvwl_add_to_wishlist_button:hover {
     background-color: var(--button-hover-background-color);
-  }
-
-  @media (min-width: 992px) {
-    .main-navigation .primary-navigation > .menu-item ul:not(.sub-mega-menu) a.tinvwl_add_to_wishlist_button:hover {
-      background-color: var(--button-hover-background-color);
-    }
-  }
-
-  
+  } 
 
   @media ( max-width: 600px ) {
     .woocommerce-cart-form__contents [name="update_cart"],
@@ -533,11 +525,11 @@ button, .button, .wp-block-button__link {
           line-height: calc(var(--header-max-height) / 1.8);
 
           @include tablet {
-            line-height: calc(var(--menu-line-height-tablet) / 1.8);
+            line-height: var(--menu-line-height-tablet);
           }
         
           @include phone {
-            line-height: calc(var(--menu-line-height-tablet) / 1.8);
+            line-height: var(--menu-line-height-tablet);
           }
   
           &:hover {
@@ -1914,6 +1906,7 @@ form {
   justify-content: flex-end;
   -webkit-box-align: center;
   align-items: center;
+  margin-left:10px;
 }
 
 .site-tools .tools-icon {
