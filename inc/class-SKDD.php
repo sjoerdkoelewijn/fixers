@@ -733,7 +733,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			$classes[] = SKDD_sidebar_class();
 
 			// Blog page layout.
-			if ( ( SKDD_is_blog() || SKDD_is_cpt() ) && ! is_singular( 'post' ) && ! is_singular( 'portfolio' ) && ! is_singular( 'team' ) && ! is_singular( 'services' ) && ! is_singular( 'knowledge' ) ) {
+			if ( ( SKDD_is_blog() || is_search() || SKDD_is_cpt() ) && ! is_singular( 'post' ) && ! is_singular( 'portfolio' ) && ! is_singular( 'team' ) && ! is_singular( 'services' ) && ! is_singular( 'knowledge' ) ) {
 				$classes[] = 'blog-layout-' . $options['blog_list_layout'];
 			}
 

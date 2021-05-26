@@ -51,7 +51,7 @@ msgstr "Nieuwere reacties &rarr;"
 
 #: comments.php:51
 msgid "Comments are closed."
-msgstr "De reacties zijn gesloten"
+msgstr "De reacties zijn gesloten."
 
 #: comments.php:56
 msgid "Name"
@@ -189,7 +189,7 @@ msgstr "Y"
 
 #: inc/SKDD-template-functions.php:730
 msgid "Search results: "
-msgstr "Zoekresulaten:"
+msgstr "Zoekresulaten: "
 
 #: inc/SKDD-template-functions.php:735
 msgid "Tags: "
@@ -660,11 +660,11 @@ msgstr "Add New Info Item"
 #: inc/cpt/knowledge.php:31 inc/cpt/portfolio.php:31 inc/cpt/services.php:31
 #: inc/cpt/team.php:31
 msgid "Add New"
-msgstr "Add New"
+msgstr "Toevoegen"
 
 #: inc/cpt/knowledge.php:32 inc/cpt/portfolio.php:32 inc/cpt/services.php:32
 msgid "New Item"
-msgstr "New Item"
+msgstr "Nieuw item"
 
 #: inc/cpt/knowledge.php:33 inc/cpt/portfolio.php:33 inc/cpt/services.php:33
 msgid "Edit Item"
@@ -743,7 +743,7 @@ msgstr "Filter items list"
 #: inc/cpt/knowledge.php:89
 msgctxt "taxonomy general name"
 msgid "Knowledge Base categories"
-msgstr "Kennisbank categorieen"
+msgstr "Kennisbank categorieën"
 
 #: inc/cpt/knowledge.php:90
 msgctxt "taxonomy singular name"
@@ -753,12 +753,12 @@ msgstr "Kennisbank categorie"
 #: inc/cpt/knowledge.php:91 inc/cpt/portfolio.php:91 inc/cpt/services.php:91
 #: inc/cpt/team.php:90
 msgid "Search Categories"
-msgstr "Zoek in categorieen"
+msgstr "Zoek in categorieën"
 
 #: inc/cpt/knowledge.php:92 inc/cpt/portfolio.php:92 inc/cpt/services.php:92
 #: inc/cpt/team.php:91
 msgid "All Categories"
-msgstr "Alle categorieen"
+msgstr "Alle categorieën"
 
 #: inc/cpt/knowledge.php:93 inc/cpt/portfolio.php:93 inc/cpt/services.php:93
 #: inc/cpt/team.php:92
@@ -783,7 +783,7 @@ msgstr "Update Category"
 #: inc/cpt/knowledge.php:97 inc/cpt/portfolio.php:97 inc/cpt/services.php:97
 #: inc/cpt/team.php:96
 msgid "Add New Category"
-msgstr "Add New Category"
+msgstr "Voeg een categorie toe"
 
 #: inc/cpt/knowledge.php:98 inc/cpt/portfolio.php:98 inc/cpt/services.php:98
 #: inc/cpt/team.php:97
@@ -793,7 +793,7 @@ msgstr "New Category Name"
 #: inc/cpt/knowledge.php:99 inc/cpt/portfolio.php:99 inc/cpt/services.php:99
 #: inc/cpt/team.php:98 inc/customizer/sections/shop/shop-single.php:478
 msgid "Categories"
-msgstr "Categories"
+msgstr "Categorieën"
 
 #: inc/cpt/portfolio.php:10 inc/cpt/portfolio.php:16 inc/cpt/portfolio.php:18
 #: inc/cpt/portfolio.php:110
@@ -821,7 +821,7 @@ msgstr "Portfolio Items"
 #: inc/cpt/portfolio.php:89
 msgctxt "taxonomy general name"
 msgid "Portfolio categories"
-msgstr "Portfolio categories"
+msgstr "Portfolio categorieën"
 
 #: inc/cpt/portfolio.php:90
 msgctxt "taxonomy singular name"
@@ -849,7 +849,7 @@ msgstr "Diensten Items"
 #: inc/cpt/services.php:89
 msgctxt "taxonomy general name"
 msgid "Services categories"
-msgstr "Diensten categorieen"
+msgstr "Diensten categorieën"
 
 #: inc/cpt/services.php:90
 msgctxt "taxonomy singular name"
@@ -884,7 +884,7 @@ msgstr "Parent Member:"
 
 #: inc/cpt/team.php:30
 msgid "Add New Member"
-msgstr "Add New Member"
+msgstr "Voeg een teamlid toe"
 
 #: inc/cpt/team.php:32
 msgid "New Member"
@@ -921,7 +921,7 @@ msgstr "Members list navigation"
 #: inc/cpt/team.php:88
 msgctxt "taxonomy general name"
 msgid "Team categories"
-msgstr "Team categories"
+msgstr "Team categorieën"
 
 #: inc/cpt/team.php:89
 msgctxt "taxonomy singular name"
@@ -1559,7 +1559,7 @@ msgstr "Has archive page"
 #: inc/customizer/sections/posttypes/custom-post-types.php:232
 #: inc/customizer/sections/posttypes/custom-post-types.php:316
 msgid "Add categories"
-msgstr "Add categories"
+msgstr "Voeg categorieën toe"
 
 #: inc/customizer/sections/posttypes/custom-post-types.php:106
 msgid "Services Post Type"
@@ -2113,11 +2113,11 @@ msgid ""
 "stock and you already have %2$s in your cart"
 msgstr ""
 "Helaas, die hoeveelheid kun je niet toevoegen aan je winkelwagen. We hebben "
-"nog maar %1$s op voorraad en je hebt er al %2$s in je winkelwagen."
+"nog maar %1$s op voorraad en je hebt er al %2$s in je winkelwagen"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:742
 msgid "This product can be used to"
-msgstr "Dit product kan gebruikt worden om te "
+msgstr "Dit product kan gebruikt worden om te  "
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:282
 msgid "Remove this item"
@@ -2125,7 +2125,7 @@ msgstr "Verwijder dit item"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:327
 msgid "No products in the cart."
-msgstr "Geen producten in je winkelwagen"
+msgstr "Geen producten in je winkelwagen."
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:344
 msgid "Shopping cart"
@@ -2207,7 +2207,7 @@ msgstr "Samenvatting bestelling"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1174
 msgid "register"
-msgstr "Registreren"
+msgstr "registreren"
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:1175
 msgid "See prices"
@@ -2237,7 +2237,7 @@ msgstr "Enter Youtube or Vimeo video url"
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Search Results for: %s"
+msgstr "Zoek resultaten voor: %s"
 
 #: sidebar-shop.php:16 sidebar-shop.php:31 sidebar-shop.php:46
 msgid "Sidebar Shop Widget"
@@ -2294,7 +2294,7 @@ msgid ""
 "searching can help."
 msgstr ""
 "Het lijkt erop dat we niet kunnen vinden wat je zoekt. Probeer het met de "
-"zoekfunctie"
+"zoekfunctie."
 
 #: template-parts/content-photoswipe.php:59
 msgid "Previous (arrow left)"

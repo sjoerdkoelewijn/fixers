@@ -26,7 +26,7 @@ add_action( 'admin_notices', function () {
 	if ( 'publish' !== get_post_status( $post->ID ) && ! has_post_thumbnail( $post->ID ) ) { ?>
 		<div id="message" class="error">
 			<p>
-				<strong><?php _e( 'Please set a Featured Image. This post cannot be published without one.' ); ?></strong>
+				<strong><?php _e( 'Please set a featured image. This post cannot be published without one.' ); ?></strong>
 			</p>
 		</div>
 	<?php
