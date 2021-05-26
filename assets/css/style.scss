@@ -787,18 +787,6 @@ form {
   color: var(--theme-color);
 }
 
-.dialog-search-content .search-form,
-.dialog-search-content .woocommerce-product-search {
-  height: 60px;
-}
-
-.dialog-search-content .search-form .search-field,
-.dialog-search-content .woocommerce-product-search .search-field {
-  visibility: visible;
-  font-size: 1em;
-  font-style: italic;
-  min-height:45px;
-}
 
 .dialog-search-content .search-form .search-field:focus,
 .dialog-search-content .woocommerce-product-search .search-field:focus {
@@ -3241,12 +3229,6 @@ form.woocommerce-checkout {
   margin-top: 0;
 }
 
-.page-header .entry-title {
-  margin: 0;
-  font-size: 2em;
-  font-weight: normal;
-
-}
 
 
 
