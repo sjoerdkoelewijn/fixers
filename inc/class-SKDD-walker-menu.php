@@ -1,8 +1,6 @@
 <?php
 /**
- * SKDD Walker Menu Class
- *
- * @package  SKDD Pro
+ * SKDD Walker Menu Class 
  */
 
 defined( 'ABSPATH' ) || exit;
