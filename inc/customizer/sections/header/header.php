@@ -170,6 +170,28 @@ $wp_customize->add_control(
 	)
 );
 
+// Use Megamenu style for menus with depth > 2.
+$wp_customize->add_setting(
+	'SKDD_setting[header_mega_menu]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['header_mega_menu'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[header_mega_menu]',
+		array(
+			'priority' => 80,
+			'label'    => __( 'Use Mega Menu', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_mega_menu]',
+		)
+	)
+);
+
 // Menu Breakpoint.
 $wp_customize->add_setting(
 	'SKDD_setting[header_menu_breakpoint]',

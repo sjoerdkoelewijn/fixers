@@ -55,7 +55,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			// Nav menu walker.
 			require_once SKDD_THEME_DIR . 'inc/class-SKDD-walker-menu.php';			
 		}
-
+		
 		/**
 		 * Set the content width based on the theme's design and stylesheet.
 		 */
@@ -257,17 +257,17 @@ if ( ! class_exists( 'SKDD' ) ) {
 				array(
 					array(
 						'name'  => __( 'Primary Color', 'SKDD' ),
-						'slug'  => 'SKDD-primary',
+						'slug'  => 'SKDD-primary-theme',
 						'color' => $options['theme_color'],
 					),
 					array(
 						'name'  => __( 'Secondary Color', 'SKDD' ),
-						'slug'  => 'SKDD-secondary',
+						'slug'  => 'SKDD-secondary-theme',
 						'color' => $options['secondary_theme_color'],
 					),
 					array(
 						'name'  => __( 'Tertiary Color', 'SKDD' ),
-						'slug'  => 'SKDD-tertiary',
+						'slug'  => 'SKDD-tertiary-theme',
 						'color' => $options['tertiary_theme_color'],
 					),
 					array(
@@ -396,6 +396,20 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'before_widget' => '<div id="%1$s" class="topbar-item %2$s">',
 				'after_widget'  => '</div>',
 			);
+
+			$options = SKDD_options( false );
+
+			if ( $options['header_mega_menu'] ) {
+
+				$sidebar_args['mega_menu_widget'] = array(
+					'name'          => __( 'Mega Menu Widget', 'SKDD' ),
+					'id'            => 'mega_menu_widget',
+					'description'   => __( 'Appears in the mega menu', 'SKDD' ),
+					'before_widget' => '<div id="%1$s" class="megamenu-item %2$s">',
+					'after_widget'  => '</div>',
+				);
+				
+			}			
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
 				$widget_tags = array(

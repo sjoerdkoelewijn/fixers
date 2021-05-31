@@ -77,21 +77,24 @@ class SKDD_Get_CSS {
 
 				--header-width:'. esc_attr( $options['header_width'] ) .';
 
+				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
+				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
+				--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';
+
+				--background-color:' . esc_attr( $options['background_color'] ) . ';
+				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
+
+				--offset-color:' . esc_attr( $options['offset_color'] ) . ';
+
+				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--body-text-color:' . esc_attr( $options['text_color'] ) . ';
 				--link-color:' . esc_attr( $options['link_color'] ) . ';
 				--link-hover-color:' . esc_attr( $options['hover_color'] ) . ';
+
 				--heading-color:' . esc_attr( $options['heading_color'] ) . ';
 				--header-background-color:'. esc_attr( $options['header_background_color'] ) .';
-				--theme-color:' . esc_attr( $options['theme_color'] ) . ';
-				--secondary-theme-color:' . esc_attr( $options['secondary_theme_color'] ) . ';
-				--tertiary-theme-color:' . esc_attr( $options['tertiary_theme_color'] ) . ';				
-				--background-color:' . esc_attr( $options['background_color'] ) . ';
-				--text-color:' . esc_attr( $options['text_color'] ) . ';
 				--header-transparent-icon-color:' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				
-				--offset-color:' . esc_attr( $options['offset_color'] ) . ';
-				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
-
 				--gkt-color-brand:' . esc_attr( $options['theme_color'] ) . ';
 				--gkt-color-dark-gray:' . esc_attr( $options['background_color'] ) . ';
 				--gkt-color-light-gray:' . esc_attr( $options['second_background_color'] ) . ';

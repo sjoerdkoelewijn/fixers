@@ -57,6 +57,30 @@ p {
   outline:none;
 }
 
+a:focus {
+  box-shadow:0 0 5px 3px var(--theme-color);  
+}
+
+p, .primary-navigation {
+
+  a:focus {
+    box-shadow:none;  
+    color:var(--theme-color) !important;
+  }
+
+}
+
+.site-tools {
+  .tools-icon:focus {
+    &:before {
+      color:var(--theme-color);
+    }
+  }
+}
+
+input:focus {
+  border:3px solid var(--theme-color) !important; 
+}
   
 article,
 aside,
@@ -2478,118 +2502,97 @@ a:hover{
 
 
 
-.has-skdd-primary-background-color.has-background {
-  background: var(--theme-color); 
+
+// Color used in the sidebar of the editor
+
+
+.has-skdd-primary-theme-color {  
+  color: var(--theme-color);
+
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--theme-color);
+  }
 }
 
-.has-skdd-primary-background-color.has-text-color {
-  color:var(--theme-color);
+.has-skdd-secondary-theme-color {
+  color: var(--secondary-theme-color);
+
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--secondary-theme-color);
+  }
 }
 
+.has-skdd-tertiary-theme-color {
+  color: var(--tertiary-theme-color);
 
-//  theme color
-
-.has-skdd-theme-color.has-background{
-  background:var(--theme-color);
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--tertiary-theme-color);
+  }
 }
 
-.has-skdd-theme-color.has-text-color {
-  color:var(--theme-color);
+.has-skdd-offset-color {
+  color: var(--offset-color);
+
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--offset-color);
+  }
 }
 
+.has-skdd-text-color {
+  color: var(--body-text-color);
 
-// secondary theme color
-
-.has-skdd-secondary-theme-color.has-background{
-  background:var(--secondary-theme-color);
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--body-text-color);
+  }
 }
 
-.has-skdd-secondary-theme-color.has-text-color {
-  color:var(--secondary-theme-color);
+.has-skdd-background-color {
+  color: var(--background-color);
+
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--background-color);
+  }
 }
 
+.has-skdd-secondary-background-color {
+  color: var(--second-background-color);
 
-// tertiary theme color
-
-.has-skdd-tertiary-theme-color.has-background{
-  background:var(--tertiary-theme-color);
-}
-
-.has-skdd-tertiary-theme-color.has-text-color {
-  color:var(--tertiary-theme-color);
-}
-
-
-
-// tertiary theme color
-
-.has-skdd-tertiary-theme-color.has-background{
-  background:var(--tertiary-theme-color);
-}
-
-.has-skdd-tertiary-theme-color.has-text-color {
-  color:var(--tertiary-theme-color);
-}
-
-
-// primary background color
-
-.has-skdd-background-color.has-background{
-  background:var(--background-color);
-}
-
-.has-skdd-background-color.has-text-color {
-  color:var(--background-color);
-}
-
-// Secondary background color
-
-.has-skdd-secondary-background-color.has-background{
-  background:var(--second-background-color);
-}
-
-.has-skdd-secondary-background-color.has-text-color {
-  color:var(--second-background-color);
-}
-
-
-.has-skdd-secondary-background-background-color.has-background{
-  background:var(--second-background-color);
-}
-
-.has-skdd-secondary-background-background-color.has-text-color {
-  color:var(--second-background-color);
-}
-
-
-// tertiary background color
-
-.has-skdd-tertiary-background-color.has-background{
-  background:var(--tertiary-theme-color);
-}
-
-.has-skdd-tertiary-background-color.has-text-color {
-  color:var(--tertiary-theme-color);
+  p, h1, h2, h3, h4, h5, h6{
+    color: var(--second-background-color);
+  }
+  
 }
 
 
 
 
-
-
-// Offset color
-
-.has-skdd-offset-background-color.has-background{
-  background:var(--offset-color);
+.has-skdd-primary-theme-background-color {
+  background: var(--theme-color);
 }
 
-.has-skdd-offset-background-color.has-text-color {
-  color:var(--offset-color);
+.has-skdd-secondary-theme-background-color {
+  background: var(--secondary-theme-color);
 }
 
+.has-skdd-tertiary-theme-background-color {
+  background: var(--tertiary-theme-color);
+}
 
+.has-skdd-offset-background-color {
+  background: var(--offset-color);
+}
 
+.has-skdd-text-background-color {
+  background: var(--body-text-color);
+}
 
+.has-skdd-background-background-color {
+  background: var(--background-color);
+}
+
+.has-skdd-secondary-background-background-color {
+  background: var(--second-background-color);
+}
 
 
 

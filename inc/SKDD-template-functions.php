@@ -509,10 +509,19 @@ if ( ! function_exists( 'SKDD_primary_navigation' ) ) {
 		// Customize disable primary menu.
 		$options             = SKDD_options( false );
 		$header_primary_menu = $options['header_primary_menu'];
+		$header_mega_menu = $options['header_mega_menu'];
 
 		if ( ! $header_primary_menu ) {
 			return;
 		}
+		
+
+		if ( ! $header_mega_menu ) {
+			$SKDD_Primary_Menu_Walker = new SKDD_Walker_Menu();
+		} else {
+			$SKDD_Primary_Menu_Walker = new SKDD_Walker_Mega_Menu();
+		}
+
 		?>
 
 		<div class="site-navigation">
@@ -536,7 +545,7 @@ if ( ! function_exists( 'SKDD_primary_navigation' ) ) {
 						'theme_location' => 'primary',
 						'menu_class'     => 'primary-navigation',
 						'container'      => '',
-						'walker'         => new SKDD_Walker_Menu(),
+						'walker'         => $SKDD_Primary_Menu_Walker,
 					);
 
 					wp_nav_menu( $args );

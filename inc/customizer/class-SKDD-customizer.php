@@ -96,6 +96,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'header_layout'                           => 'layout-1',
 				'header_background_color'                 => '#ffffff',
 				'header_primary_menu'                     => true,
+				'header_mega_menu'                     	  => false,
 				'header_max_height'                    	  => '80',
 				'header_max_height_tablet'                => '60',
 				'header_max_height_mobile'                => '40',

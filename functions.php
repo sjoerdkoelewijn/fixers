@@ -41,15 +41,17 @@ if ( is_admin() ) {
 	require_once SKDD_THEME_DIR . 'inc/admin/SKDD-admin-menu-order.php';
 	//require_once SKDD_THEME_DIR . 'inc/admin/SKDD-dashboard-widgets.php';
 	//require_once SKDD_THEME_DIR . 'inc/admin/SKDD-require-featured-image.php';
+	require_once SKDD_THEME_DIR . 'inc/admin/SKDD-menu-checkbox.php'; // Add custom checkboxes to the menu items
 }
 
 require_once SKDD_THEME_DIR . 'inc/admin/SKDD-custom-login.php';
 
 // require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
 
-// Add Premade Custom Post Types
 
 $options = SKDD_options( false );
+
+// Add Premade Custom Post Types
 
 if ( $options['cpt_portfolio_display'] ) {
 	require_once SKDD_THEME_DIR . 'inc/cpt/portfolio.php';		
