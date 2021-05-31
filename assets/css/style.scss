@@ -120,7 +120,7 @@ ol.is-style-styled li+li, ul.is-style-styled li+li {
   --gkt-styled-lists--items__gap:0;
 }
 
-ul.has-skdd-primary-background-color.has-background, ul.has-skdd-secondary-background-color.has-background{
+ul.has-skdd-primary-background-color.has-background{
   li {
     &::marker {
       color:var(--second-background-color);
@@ -1886,6 +1886,7 @@ form {
   line-height: var(--submenu-line-height);
   font-size: var(--submenu-font-size);
   color: var(--submenu-color);
+  font-weight:var(--body-font-weight);
 
   @include tablet {
     font-size: var(--submenu-font-size-tablet);
@@ -2503,7 +2504,7 @@ a:hover{
 
 
 
-// Color used in the sidebar of the editor
+// Colors used in the sidebar of the editor
 
 
 .has-skdd-primary-theme-color {  
@@ -2562,9 +2563,6 @@ a:hover{
   }
   
 }
-
-
-
 
 .has-skdd-primary-theme-background-color {
   background: var(--theme-color);
