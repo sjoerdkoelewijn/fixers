@@ -19,6 +19,10 @@ a:focus {
   max-width: 75vw;
 }
 
+.block-library-block__reusable-block-container {
+  pointer-events: none;
+  opacity:.6;
+}
 
 
 /* Admin notice */

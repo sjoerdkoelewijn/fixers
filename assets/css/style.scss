@@ -588,7 +588,7 @@ form {
     background:#fff;
     border: 1px solid #e8e8e8;
     border-radius:3px;
-    padding:13px 10px;
+    padding:11px 10px;
     font-size:90%;
     color:var(--text-color);
   }
@@ -1285,6 +1285,10 @@ form {
   }
 }
 
+.wp-block-cover-image.has-background-dim:not(.has-background-gradient):before, .wp-block-cover-image .wp-block-cover__gradient-background, .wp-block-cover.has-background-dim:not(.has-background-gradient):before, .wp-block-cover .wp-block-cover__gradient-background {
+  border-radius: var(--border-radius);
+}
+
 .wp-block-cover.alignfull {
   border-radius: 0;
 
@@ -1378,10 +1382,20 @@ form {
 }
 
 .wp-block-media-text {
+
   .wp-block-media-text__content {
-      padding-top:var(--vertical-spacing);
-      padding-bottom:var(--vertical-spacing);
+      padding:var(--content-spacing) calc(var(--content-spacing) / 2) var(--content-spacing) var(--content-spacing);
   }
+
+}
+
+.wp-block-media-text.has-media-on-the-right {
+
+  .wp-block-media-text__content {
+    padding-left:0;
+    padding-right:var(--content-spacing)
+  }
+
 }
 
 
@@ -3929,6 +3943,7 @@ form.woocommerce-checkout {
     .forminator-error-message {
       font-size:70%;
       font-weight:400;
+      color:var(--body-text-color);
     }
 
     .forminator-row {
@@ -3956,6 +3971,7 @@ form.woocommerce-checkout {
 
     &:focus {
       opacity:1;
+      border:0 !important;
     }
   }
 
