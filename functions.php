@@ -73,3 +73,6 @@ if ( $options['cpt_portfolio_display'] || $options['cpt_knowledge_display'] ) {
 	require_once SKDD_THEME_DIR . 'inc/cpt/custom-url.php';	
 }
 
+
+// Add 
+require_once SKDD_THEME_DIR . 'inc/shortcodes/knowledge-base.php';	

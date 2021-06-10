@@ -104,13 +104,17 @@ class SKDD_Get_CSS {
 				--gkt-color-danger:' . esc_attr( $options['link_color'] ) . ';
 				--gkt-color-warning:' . esc_attr( $options['link_color'] ) . ';
 				--gkt-color-info:' . esc_attr( $options['secondary_theme_color'] ) . ';
-				--gkt-border-radius: '. esc_attr( $options['border_radius'] ) .'px;
+				--gkt-border-radius: '. esc_attr( $options['buttons_border_radius'] ) .'px;
 
 				--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
 				--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';
 				--button-hover-text-color:'. esc_attr( $options['button_hover_text_color'] ) . ';
 				--button-hover-background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
 				--button-border-radius:'. esc_attr( $options['buttons_border_radius'] ) .'px;
+
+				--button-font-size:'. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
+				--button-font-size-tablet:'. esc_attr( ($options['button_font_size_tablet']) / 10 ) . 'rem' .';
+				--button-font-size-mobile:'. esc_attr( ($options['button_font_size_mobile']) / 10 ) . 'rem' .';
 
 				--button-font-family:' . esc_attr( $options['button_font_family'] ) . ';
 				--button-font-weight:' . esc_attr( $options['button_font_weight'] ) . ';
@@ -206,14 +210,7 @@ class SKDD_Get_CSS {
 					margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
 				}	
 			
-			}
-
-			.ghostkit-button {				
-
-				--button-font-size:'. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
-				--button-font-size-tablet:'. esc_attr( ($options['button_font_size_tablet']) / 10 ) . 'rem' .';
-				--button-font-size-mobile:'. esc_attr( ($options['button_font_size_mobile']) / 10 ) . 'rem' .';
-			}
+			}		
 
 		';
 
@@ -596,7 +593,7 @@ class SKDD_Get_CSS {
 						--gkt-color-danger:' . esc_attr( $options['link_color'] ) . ';
 						--gkt-color-warning:' . esc_attr( $options['link_color'] ) . ';
 						--gkt-color-info:' . esc_attr( $options['secondary_theme_color'] ) . ';
-						--gkt-border-radius: '. esc_attr( $options['border_radius'] ) .'px;
+						--gkt-border-radius: '. esc_attr( $options['buttons_border_radius'] ) .'px;
 
 						--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
 						--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';
