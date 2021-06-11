@@ -774,13 +774,13 @@ form {
 .forminator-error-message {
   font-size:80%;
   font-weight:700;
-  color:rgb(223, 63, 0);
+  color:var(--tertiary-theme-color);
   margin-left:5px;
 
 }
 
 .forminator-required {
-  color:rgb(223, 63, 0);
+  color:var(--tertiary-theme-color);
 }
 
 .forminator-error {
@@ -2407,7 +2407,6 @@ a {
   color:var(--sidebar-text-color);
 
   &:hover {
-    font-weight:bold;
     color:var(--sidebar-text-color);
   }
 }

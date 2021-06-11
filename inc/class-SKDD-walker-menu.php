@@ -122,7 +122,7 @@ if ( ! class_exists( 'SKDD_Walker_Mega_Menu' ) ) {
 			$sidebar_html = ob_get_clean();
 		
 			if ($depth == 0) {
-				$output .= '<div class="sidebar">' . $sidebar_html . '</div>';
+				$output .= '<li class="sidebar">' . $sidebar_html . '</li>';
 			}	
 
 			$output .= '</ul>';

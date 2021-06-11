@@ -85,7 +85,7 @@ add_action( 'SKDD_footer_content', 'SKDD_credit', 20 );
 // Inside @SKDD_toggle_sidebar hook.
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_open', 10 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_search', 20 );
-add_action( 'SKDD_toggle_sidebar', 'SKDD_primary_navigation', 30 );
+add_action( 'SKDD_toggle_sidebar', 'SKDD_mobile_navigation', 30 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_action', 40 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_widget_area', 50 );
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_close', 60 );

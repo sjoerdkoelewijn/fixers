@@ -509,12 +509,11 @@ if ( ! function_exists( 'SKDD_primary_navigation' ) ) {
 		// Customize disable primary menu.
 		$options             = SKDD_options( false );
 		$header_primary_menu = $options['header_primary_menu'];
-		$header_mega_menu = $options['header_mega_menu'];
+		$header_mega_menu 	 = $options['header_mega_menu'];
 
 		if ( ! $header_primary_menu ) {
 			return;
-		}
-		
+		}		
 
 		if ( ! $header_mega_menu ) {
 			$SKDD_Primary_Menu_Walker = new SKDD_Walker_Menu();
@@ -522,6 +521,60 @@ if ( ! function_exists( 'SKDD_primary_navigation' ) ) {
 			$SKDD_Primary_Menu_Walker = new SKDD_Walker_Mega_Menu();
 		}
 
+		?>
+
+		<div class="site-navigation">
+			<?php do_action( 'SKDD_before_main_nav' ); ?>
+
+			<nav class="main-navigation" aria-label="<?php esc_attr_e( 'Primary navigation', 'SKDD' ); ?>">
+				<?php
+				if ( has_nav_menu( 'mobile' ) ) {
+					$mobile = array(
+						'theme_location' => 'mobile',
+						'menu_class'     => 'primary-navigation primary-mobile-navigation',
+						'container'      => '',
+						'walker'         => new SKDD_Walker_Menu(),
+					);
+
+					wp_nav_menu( $mobile );
+				}
+
+				if ( has_nav_menu( 'primary' ) ) {
+					$args = array(
+						'theme_location' => 'primary',
+						'menu_class'     => 'primary-navigation',
+						'container'      => '',
+						'walker'         => $SKDD_Primary_Menu_Walker,
+					);
+
+					wp_nav_menu( $args );
+				} elseif ( is_user_logged_in() ) {
+					?>
+					<a class="add-menu" href="<?php echo esc_url( get_admin_url() . 'nav-menus.php' ); ?>"><?php esc_html_e( 'Add a Primary Menu', 'SKDD' ); ?></a>
+				<?php } ?>
+			</nav>
+
+			<?php do_action( 'SKDD_after_main_nav' ); ?>
+		</div>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'SKDD_mobile_navigation' ) ) {
+	/**
+	 * Display Primary Navigation
+	 */
+	function SKDD_mobile_navigation() {
+		// Customize disable primary menu.
+		$options             = SKDD_options( false );
+		$header_primary_menu = $options['header_primary_menu'];
+
+		if ( ! $header_primary_menu ) {
+			return;
+		}		
+
+		$SKDD_Primary_Menu_Walker = new SKDD_Walker_Menu();
+		
 		?>
 
 		<div class="site-navigation">
