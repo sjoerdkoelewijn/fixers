@@ -453,7 +453,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 					'SKDD-woocommerce-style',
 					SKDD_THEME_URI . 'assets/css/woocommerce.css',
 					array(),
-					//SKDD_version()
+					SKDD_version()
 				);
 			}
 
@@ -463,7 +463,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			wp_enqueue_style(
 				'SKDD-style',
 				SKDD_THEME_URI . 'assets/css/style.css',
-				array(),
+				array()
 				//SKDD_version()
 			);
 
@@ -480,7 +480,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'SKDD-small-screen-styles',
 				SKDD_THEME_URI . 'assets/css/small-screens.css',
 				array(),
-				//SKDD_version(),
+				SKDD_version(),
 				'all and ( max-width: ' . esc_attr( $options['header_menu_breakpoint'] ) . 'px )'
 			);	
 			
@@ -488,7 +488,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'SKDD-large-screen-styles',
 				SKDD_THEME_URI . 'assets/css/large-screens.css',
 				array(),
-				//SKDD_version(),
+				SKDD_version(),
 				'all and ( min-width: ' . esc_attr( $options['header_menu_breakpoint'] + 1 ) . 'px )'
 			);
 
