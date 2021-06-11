@@ -4250,6 +4250,11 @@ form.woocommerce-checkout {
 
   .forminator-button-submit {
     float:right;
+
+    @include phone {
+      margin-top: 10px;
+      float:none;
+    }  
   }
 
 }
