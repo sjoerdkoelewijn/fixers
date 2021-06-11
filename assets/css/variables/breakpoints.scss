@@ -52,6 +52,12 @@ $large-uhd-width: 3840px;
     }
 }
 
+@mixin desktop-up {
+    @media (min-width: #{$small-desktop-width}) {
+        @content;
+    }
+}
+
 @mixin uhd {
     @media (min-width: #{$small-uhd-width}) {
         @content;
