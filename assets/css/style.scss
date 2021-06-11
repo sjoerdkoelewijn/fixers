@@ -449,6 +449,10 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
   text-transform: var(--button-font-transform);  
   border-radius:var(--button-border-radius);
 
+  @include phone {
+    width:100%;
+  }
+
   --gkt-button__color: var(--button-text-color);
   --gkt-button__background-color: var(--button-background-color);
 
