@@ -4304,7 +4304,7 @@ form.woocommerce-checkout {
   }
 
   input:focus, textarea:focus {
-    box-shadow: inset 0 0 0 2px var(--secondary-theme-color); 
+    box-shadow: none; 
   }
 
 }
