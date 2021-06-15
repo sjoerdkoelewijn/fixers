@@ -4290,7 +4290,7 @@ form.woocommerce-checkout {
 .ghostkit-col-with-bg {
   
   .forminator-input {
-    opacity:.8;
+    opacity:.85;
 
     &:focus {
       opacity:1;
@@ -4301,6 +4301,10 @@ form.woocommerce-checkout {
   .forminator-button-submit {
     background:var(--tertiary-theme-color);
     color:var(--background-color);
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: inset 0 0 0 2px var(--secondary-theme-color); 
   }
 
 }
