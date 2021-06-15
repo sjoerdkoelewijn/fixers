@@ -4225,52 +4225,50 @@ form.woocommerce-checkout {
 
 }
 
-.forminator-pagination-start {
-  width:100%;
 
-  @include desktop-up {
-    width:55%;
-    float:left;
-    margin-right:1%;
-  }
-}
+.single-line-form {
+  
+  .forminator-ui {
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
 
-.forminator-pagination-footer {
-  margin-top:30px;
+    @include phone {
+      flex-direction:column;
+    }
 
-  @include phone {
-    margin-top: 10px;
-  }
+    .forminator-error-message {
+      position:absolute;
+      left:-4px;
+      margin-top:calc(var(--body-line-height) * 2);
+      padding:0 10px;
+    }
 
-  .forminator-button-back {
-    background:var(--second-background-color);
-    color:var(--body-text-color);
-    margin-right:var(--content-spacing);
-  }
+    .forminator-row {
+      flex-grow:2;   
+    }
+    
+    .forminator-row-last {
+      flex-grow:1;
+      
+      @include phone {
+        margin-top: 10px;
+      }             
 
-  .forminator-button { 
-    width:100%;      
-
-    @include desktop-up { 
-      width:44%;
-      border-radius: 5px;
-      line-height:var(--body-line-height);
-      padding-top:11px;
-      padding-bottom:11px;
+        button {
+          margin-top:0;
+          border-radius: 5px;
+          padding-top:11px;
+          padding-bottom:11px;
+          line-height:var(--body-line-height);
+        }
+      
     }
 
   }
 
-  .forminator-button-submit {
-    float:right;
-
-    @include phone {
-      margin-top: 10px;
-      float:none;
-    }  
-  }
-
 }
+
 
 .wp-block-cover__inner-container {
 
