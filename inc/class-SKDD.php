@@ -42,12 +42,12 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Compatibility.
 			//add_filter( 'the_content', array( $this, 'SKDD_modify_the_content' ) );
+
+			
 		}
 
 
-	
-
-
+			
 		/**
 		 * Includes
 		 */
@@ -56,6 +56,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			require_once SKDD_THEME_DIR . 'inc/class-SKDD-walker-menu.php';			
 		}
 		
+ 	
 		/**
 		 * Set the content width based on the theme's design and stylesheet.
 		 */

@@ -74,5 +74,6 @@ if ( $options['cpt_portfolio_display'] || $options['cpt_knowledge_display'] ) {
 }
 
 
-// Add 
+// Add knowledgebase shortcut
 require_once SKDD_THEME_DIR . 'inc/shortcodes/knowledge-base.php';	
+

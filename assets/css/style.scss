@@ -4646,3 +4646,37 @@ form.woocommerce-checkout {
 #cancel-comment-reply-link {
   color: var(--theme-color);
 }
+
+
+/*************************** Cookie Melding Section ****************************************************************************/
+
+  #cc-banner-wrap {
+    
+    .cc-revoke, .cc-window, .cc-category, .cc-btn {
+      font-family: var(--body-font-family) !important;
+    }
+
+    .cc-btn{
+      border-radius:var(--button-border-radius) !important;
+      border:0 !important;
+      padding:0 30px;
+      line-height:calc(var(--button-line-height) * .8) !important;
+      font-weight: var(--button-font-weight) !important;
+
+      &:hover, &:focus {
+        background-color: var(--button-hover-background-color) !important;
+        color: var(--button-hover-text-color) !important; 
+        text-decoration:none !important;
+      }
+
+      .cc-category {
+        font-weight: var(--body-font-weight) !important;
+      }
+
+      .cc-bottom .cmplz-categories-wrap {
+        padding-top:10px !important;
+      }
+
+    }
+
+  }
