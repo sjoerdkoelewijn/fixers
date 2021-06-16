@@ -4659,7 +4659,7 @@ form.woocommerce-checkout {
     .cc-btn{
       border-radius:var(--button-border-radius) !important;
       border:0 !important;
-      padding:0 30px;
+      padding:0 30px !important;
       line-height:calc(var(--button-line-height) * .8) !important;
       font-weight: var(--button-font-weight) !important;
 
@@ -4669,14 +4669,17 @@ form.woocommerce-checkout {
         text-decoration:none !important;
       }
 
-      .cc-category {
-        font-weight: var(--body-font-weight) !important;
-      }
-
-      .cc-bottom .cmplz-categories-wrap {
-        padding-top:10px !important;
-      }
-
     }
+
+    .cc-category {
+      font-weight: var(--body-font-weight) !important;
+    }
+
+    .cmplz-categories-wrap {
+      padding-top:5px !important;
+      margin-right:25px;
+    }
+
+    
 
   
