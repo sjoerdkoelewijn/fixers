@@ -213,7 +213,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// Quantity button.
 			wp_enqueue_script( 'SKDD-quantity-button' );
-
+			
 			// Sticky sidebar.
 			if ( in_array( $options['shop_single_gallery_layout'], array( 'column', 'grid' ), true ) ) {
 				wp_enqueue_script( 'sticky-sidebar' );

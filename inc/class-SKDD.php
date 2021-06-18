@@ -151,6 +151,8 @@ if ( ! class_exists( 'SKDD' ) ) {
 			 */
 			add_theme_support( 'automatic-feed-links' );
 
+
+
 			/*
 			 * Enable support for Post Thumbnails on posts and pages.
 			 *
@@ -526,6 +528,15 @@ if ( ! class_exists( 'SKDD' ) ) {
 				true
 			);
 
+			// Lazy load.
+			wp_enqueue_script(
+				'SKDD-lazy-load',
+				SKDD_THEME_URI . 'assets/js/lazyload' . SKDD_suffix() . '.js',
+				array(),
+				SKDD_version(),
+				true
+			);
+			
 			// Mobile menu.
 			wp_enqueue_script(
 				'SKDD-navigation',
@@ -542,7 +553,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				array(),
 				SKDD_version(),
 				true
-			);
+			);			
 
 			// Multi step checkout.
 			wp_register_script(

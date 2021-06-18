@@ -77,3 +77,6 @@ if ( $options['cpt_portfolio_display'] || $options['cpt_knowledge_display'] ) {
 // Add knowledgebase shortcut
 require_once SKDD_THEME_DIR . 'inc/shortcodes/knowledge-base.php';	
 
+
+// low quality image placeholder
+require_once SKDD_THEME_DIR . 'inc/SKDD-image-placeholder.php';	

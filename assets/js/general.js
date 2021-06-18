@@ -247,7 +247,6 @@ function SKDDRemoveClassPrefix() {
 	selector.className = results.join( ' ' );
 }
 
-
 document.addEventListener(
 	'DOMContentLoaded',
 	function() {
@@ -255,7 +254,8 @@ document.addEventListener(
 		scrollAction( '#scroll-to-top', 200 );
 		scrollAction( '#masthead', 30 );
 		toTopButton();
-		scrollingDetect();				
+		scrollingDetect();
+		lazyload();
 	}
 );
 
@@ -284,5 +284,3 @@ function loadScript(url, callback){
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 };
-
-
