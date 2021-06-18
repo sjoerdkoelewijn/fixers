@@ -254,14 +254,10 @@ document.addEventListener(
 		scrollAction( '#scroll-to-top', 200 );
 		scrollAction( '#masthead', 30 );
 		toTopButton();
-		scrollingDetect();	
+		scrollingDetect();
+		//lazyload();	
 	}
 );
-
-window.addEventListener('load', (event) => {
-	lazyload();
-  });
-
 
 function loadScript(url, callback){
 
