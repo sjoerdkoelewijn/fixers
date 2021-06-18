@@ -376,6 +376,7 @@ h6, .has-skdd-heading-6-font-size{
   border-left: .25em solid var(--text-color);
 }
 
+
 /*************************** Buttons  ****************************************************************************/
 
 button, form button,  .button, .forminator-button, .wp-block-button__link {
@@ -1460,7 +1461,7 @@ form {
 .wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color]) {
   
   background-color: var(--background-color);
-  
+
 }
 
 .full-height--mobile {

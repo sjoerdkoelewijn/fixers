@@ -255,11 +255,13 @@ document.addEventListener(
 		scrollAction( '#masthead', 30 );
 		toTopButton();
 		scrollingDetect();	
-		
-		setTimeout(lazyload(), 2000);
-			
 	}
 );
+
+window.addEventListener('load', (event) => {
+	lazyload();
+  });
+
 
 function loadScript(url, callback){
 
