@@ -1456,6 +1456,35 @@ form {
 
 }
 
+
+.wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color]) {
+  
+  background-color: var(--background-color);
+  
+}
+
+.full-height--mobile {
+
+  @include phone {
+    min-height:100vw;
+  }
+  
+}
+
+.full-height--desktop {
+
+  @include desktop {
+    min-height:100vw;
+  }
+  
+}
+
+.full-height {
+
+  min-height:100vw;
+  
+}
+
 .wp-block-group.alignfull, .wp-block-cover.alignfull {
 
     .wp-block-group__inner-container, .wp-block-cover__inner-container > * { // Make all child elements the default width
@@ -4278,27 +4307,6 @@ form.woocommerce-checkout {
 
 }
 
-.full-height--mobile {
-
-  @include phone {
-    min-height:100vw;
-  }
-  
-}
-
-.full-height--desktop {
-
-  @include desktop {
-    min-height:100vw;
-  }
-  
-}
-
-.full-height {
-
-  min-height:100vw;
-  
-}
 
 .forminator-error-message {
   background:var(--secondary-theme-color);
