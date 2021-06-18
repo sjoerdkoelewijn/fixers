@@ -50,7 +50,7 @@ function filter_the_content_in_the_main_loop( $content ) {
                 $newImageProperties["data-src"] = $newImageProperties["src"];
                 $newImageProperties["src"] = $smallImageSize;
                 $newImageProperties["data-srcset"] = $newImageProperties["srcset"];
-                $newImageProperties["srcset"] = "#";
+                //$newImageProperties["srcset"] = "";
             
                 // Create a new image with all the original attributes
 
