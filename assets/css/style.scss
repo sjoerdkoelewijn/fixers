@@ -4278,6 +4278,28 @@ form.woocommerce-checkout {
 
 }
 
+.full-height--mobile {
+
+  @include phone {
+    min-height:100vw;
+  }
+  
+}
+
+.full-height--desktop {
+
+  @include desktop {
+    min-height:100vw;
+  }
+  
+}
+
+.full-height {
+
+  min-height:100vw;
+  
+}
+
 .forminator-error-message {
   background:var(--secondary-theme-color);
   padding:5px 10px;
@@ -4649,8 +4671,6 @@ form.woocommerce-checkout {
 
 
 /*************************** Cookie Melding Section ****************************************************************************/
-
-
     
     .cc-revoke, .cc-window, .cc-category, .cc-btn {
       font-family: var(--body-font-family) !important;
@@ -4681,5 +4701,3 @@ form.woocommerce-checkout {
     }
 
     
-
-  
