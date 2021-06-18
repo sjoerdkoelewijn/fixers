@@ -28,7 +28,7 @@ function filter_the_content_in_the_main_loop( $content ) {
                 $imgAttributes = $img->attributes;
 
                 $xpath = new DOMXPath($dom);
-                $imageClass = $xpath->evaluate("string(//img/@class)"); # "/images/image.jpg"
+                $imageClass = $xpath->evaluate("string(//img/@class)"); 
 
                 // Store all attributes of the image to an array
                 $newImageProperties = array();
@@ -41,7 +41,6 @@ function filter_the_content_in_the_main_loop( $content ) {
 
                 $imageId = substr($imageClass, strpos($imageClass, "wp-image-")+9, $end);          
                 
-                // $imageId = '1172';    
                 
                 $smallImageSize = wp_get_attachment_image_src($imageId, 'lqip')[0]; 
 
@@ -50,7 +49,8 @@ function filter_the_content_in_the_main_loop( $content ) {
                 $newImageProperties["data-src"] = $newImageProperties["src"];
                 $newImageProperties["src"] = $smallImageSize;
                 $newImageProperties["data-srcset"] = $newImageProperties["srcset"];
-                //$newImageProperties["srcset"] = "";
+                $newImageProperties["srcset"] = $smallImageSize . " 2000w";
+                
             
                 // Create a new image with all the original attributes
 

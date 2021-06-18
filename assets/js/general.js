@@ -255,7 +255,8 @@ document.addEventListener(
 		scrollAction( '#masthead', 30 );
 		toTopButton();
 		scrollingDetect();	
-		lazyload();	
+		lazyload();
+			
 	}
 );
 
