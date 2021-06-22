@@ -1023,7 +1023,7 @@ if ( ! function_exists( 'SKDD_get_post_thumbnail' ) ) {
 	 * @param string  $size The post thumbnail size.
 	 * @param boolean $echo Echo.
 	 */
-	function SKDD_get_post_thumbnail( $size = 'full', $echo = true ) {
+	function SKDD_get_post_thumbnail( $size = 'medium', $echo = true ) {
 		if ( ! has_post_thumbnail() ) {
 			return;
 		}
@@ -1093,7 +1093,7 @@ if ( ! function_exists( 'SKDD_get_post_structure' ) ) {
 	 * @param boolean $echo        Echo.
 	 */
 	function SKDD_get_post_structure( $option_name, $echo = true ) {
-		if ( ! is_search() && ! SKDD_is_blog() ) {
+		if ( ! is_search() && ! SKDD_is_blog() && ! SKDD_is_cpt() ) {
 			return;
 		}
 
@@ -1141,7 +1141,7 @@ if ( ! function_exists( 'SKDD_get_post_meta' ) ) {
 	 * @param boolean $echo        Echo.
 	 */
 	function SKDD_get_post_meta( $option_name, $echo = true ) {
-		if ( ! is_search() && ! SKDD_is_blog() ) {
+		if ( ! is_search() && ! SKDD_is_blog() && ! SKDD_is_cpt() ) {
 			return;
 		}
 
@@ -1250,7 +1250,15 @@ if ( ! function_exists( 'SKDD_post_content' ) ) {
 			?>
 				<div class="entry-summary summary-text">
 					<?php
-					the_excerpt();
+					//the_excerpt();
+
+					$custom_excerpt = get_the_content();
+
+					$custom_excerpt = substr( $custom_excerpt, strpos( $custom_excerpt, '<p>' ), (strpos( $custom_excerpt, '</p>' ) + 4) );
+
+					$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), 15 );
+
+					echo $custom_excerpt; 
 
 					// Add 'Read More' button in Grid layout.
 					$options = SKDD_options( false );

@@ -2640,7 +2640,6 @@ transform: translateX(0px);
 .woocommerce-form-login-toggle .woocommerce-info a:hover,
 .woocommerce-form-coupon-toggle .woocommerce-info a:hover,
 .has-skdd-primary-color,
-.blog-layout-grid .site-main .post-read-more a,
 .skdd-simple-subscribe-form input[type="submit"],
 .woocommerce-tabs li.active a,
 #secondary .widget .current-cat > span,
@@ -3694,6 +3693,27 @@ form.woocommerce-checkout {
   }
 }
 
+.blog, .archive {
+
+  .site_content {
+    margin-top:var(--vertical-spacing);
+
+    .entry-title {
+      font-weight:var(--heading-font-weight);
+      line-height:var(--heading-line-height);
+      margin:0; 
+
+    }
+
+    a:focus, a:hover {
+      box-shadow:none;
+      color:var(--theme-color);
+    }
+    
+  }
+
+}
+
 .blog-layout-grid .site-main {
   
     .post, .portfolio, .service, .team, .knowledge {
@@ -3709,14 +3729,14 @@ form.woocommerce-checkout {
       }
     
       .entry-title {
-        padding:var(--content-spacing) var(--content-spacing) 0 var(--content-spacing);
-        font-size:120%;
+        padding:calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
+        font-size:var(--header-size-3);
         
       }
     
       .entry-meta {
         padding:0 var(--content-spacing);
-        font-size:90%;
+        font-size:80%;
       }
     
       .summary-text {
@@ -3808,10 +3828,31 @@ form.woocommerce-checkout {
   }
   
   .post-read-more {
-    font-weight: 600;
     margin-top: 20px;
     clear: both;
     margin-bottom: 0;
+    display:block;
+
+    a {
+      font-family:var(--button-font-family);
+      border-radius:var(--button-border-radius);
+      padding:10px 30px;
+      text-decoration:none;
+      cursor: pointer;
+      border:0;
+      font-weight:var(--button-font-weight);
+      font-size:var(--button-font-size);
+      text-transform: var(--button-font-transform);
+      background:var(--theme-color);
+      color:var(--button-text-color);
+      transition: background .3s ease, color .3s ease ; 
+    
+      &:hover {
+        background:var(--button-hover-background-color);
+        color:var(--button-hover-text-color);
+      }
+    }
+
   } 
 
 }
@@ -4380,6 +4421,14 @@ form.woocommerce-checkout {
     }
     p {
       margin-top:0;
+    }
+
+  }
+
+  .ghostkit-carousel-slide {
+
+    .wp-block-image {
+      min-width:100%;
     }
 
   }

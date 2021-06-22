@@ -2782,13 +2782,7 @@
   .home.blog .site-main .post:first-child:last-child {
     border-bottom: 0;
   }
-  
-  .alpha.entry-title {
-    font-size: 24px;
-    font-weight: normal;
-    margin-top: 0;
-  }
-  
+
   
   .pagination, .woocommerce-pagination {
     margin-top: 70px;
@@ -2890,17 +2884,6 @@
     margin-bottom: 25px;
   }
   
-  .related-box .entry-title {
-    font-size: 16px;
-    margin-top: 18px;
-    margin-bottom: 25px;
-    font-weight: normal;
-    line-height: 27px;
-  }
-  
-  .related-box .entry-title:hover {
-    text-decoration: underline;
-  }
   
   .related-box .post-read-more {
     margin-top: 0;
@@ -2913,11 +2896,6 @@
   
   
   /* responsive */
-  @media (max-width: 991px) {
-    .single-post .entry-title {
-      font-size: 2em;
-    }
-  }
   
   @media (min-width: 992px) {
     .has-sidebar.left-sidebar .content-area {
@@ -2954,27 +2932,12 @@
     margin-top: 0;
   }
   
-  .blog-layout-grid .site-main .entry-title {
-    font-size: 18px;
-  }
+
   
   .blog-layout-grid .site-main .summary-text {
     padding: 0 20px 20px 20px;
   }
-  
-  .blog-layout-grid .site-main .post-read-more {
-    display: block;
-    margin-top: 15px;
-    font-weight: 700;
-  }
-  
-  .blog-layout-grid .site-main .post-read-more a {
-    text-decoration: underline;
-  }
-  
-  .blog-layout-grid .site-main .post-read-more a:hover {
-    text-decoration: none;
-  }
+
   
   .blog-layout-grid .site-main .post-navigation {
     flex: 0 0 100%;
