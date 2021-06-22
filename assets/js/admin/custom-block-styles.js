@@ -23,4 +23,9 @@ wp.domReady( () => {
 		label: 'Responsive Small',
 	} );
 
+     wp.blocks.registerBlockStyle( 'ghostkit/carousel', {
+		name: 'order-random',
+		label: 'Random order',
+	} );
+
 } );

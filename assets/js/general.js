@@ -247,19 +247,6 @@ function SKDDRemoveClassPrefix() {
 	selector.className = results.join( ' ' );
 }
 
-document.addEventListener(
-	'DOMContentLoaded',
-	function() {
-		dialogSearch();
-		scrollAction( '#scroll-to-top', 200 );
-		scrollAction( '#masthead', 30 );
-		toTopButton();
-		scrollingDetect();
-		//lazyload();
-		
-	}
-);
-
 function loadScript(url, callback){
 
 	// Add this js to page:  loadScript("URL", function() {});
@@ -284,3 +271,51 @@ function loadScript(url, callback){
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 };
+
+
+function shuffleCarousel() {
+
+	var ghostkitCarousel = document.querySelector('.ghostkit-carousel');
+
+	if (ghostkitCarousel.classList.contains('is-style-order-random')) {
+
+		var elems = document.querySelectorAll('.ghostkit-carousel-items > .ghostkit-carousel-slide');
+	
+		var allElems = (function(){
+			var ret = [], l = elems.length;
+			while (l--) { ret[ret.length] = elems[l]; }
+			return ret;
+		})();
+	
+		var shuffled = (function(){
+			var l = allElems.length, ret = [];
+			while (l--) {
+				var random = Math.floor(Math.random() * allElems.length),
+					randEl = allElems[random].cloneNode(true);
+				allElems.splice(random, 1);
+				ret[ret.length] = randEl;
+			}
+			return ret; 
+		})(), l = elems.length;
+	
+		while (l--) {
+			elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
+			elems[l].parentNode.removeChild(elems[l]);
+		}
+	}
+ 
+}
+ 
+document.addEventListener(
+	'DOMContentLoaded',
+	function() {
+		dialogSearch();
+		scrollAction( '#scroll-to-top', 200 );
+		scrollAction( '#masthead', 30 );
+		toTopButton();
+		scrollingDetect();
+		//lazyload();		
+		shuffleCarousel();						
+	}
+);
+
