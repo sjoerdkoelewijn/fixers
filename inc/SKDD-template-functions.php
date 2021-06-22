@@ -1251,17 +1251,20 @@ if ( ! function_exists( 'SKDD_post_content' ) ) {
 				<div class="entry-summary summary-text">
 					<?php
 					//the_excerpt();
+					$options = SKDD_options( false );
+
+					$excerpt_length = $options['blog_list_limit_exerpt'];
 
 					$custom_excerpt = get_the_content();
 
 					$custom_excerpt = substr( $custom_excerpt, strpos( $custom_excerpt, '<p>' ), (strpos( $custom_excerpt, '</p>' ) + 4) );
 
-					$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), 25 );
+					$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), $excerpt_length );
 
 					echo $custom_excerpt; 
 
 					// Add 'Read More' button in Grid layout.
-					$options = SKDD_options( false );
+					
 					if ( 'grid' === $options['blog_list_layout'] ) {
 						$read_more_text = apply_filters( 'SKDD_read_more_text', __( 'Read More', 'SKDD' ) );
 						?>
