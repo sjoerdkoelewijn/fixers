@@ -1256,7 +1256,7 @@ if ( ! function_exists( 'SKDD_post_content' ) ) {
 
 					$custom_excerpt = substr( $custom_excerpt, strpos( $custom_excerpt, '<p>' ), (strpos( $custom_excerpt, '</p>' ) + 4) );
 
-					$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), 15 );
+					$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), 25 );
 
 					echo $custom_excerpt; 
 
