@@ -84,6 +84,8 @@ class SKDD_Get_CSS {
 				--background-color:' . esc_attr( $options['background_color'] ) . ';
 				--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
 
+				--background-color-rgba: '. SKDD_hex_to_rgba(esc_attr( $options['background_color'] )) .'
+
 				--offset-color:' . esc_attr( $options['offset_color'] ) . ';
 
 				--text-color:' . esc_attr( $options['text_color'] ) . ';
