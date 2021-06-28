@@ -360,7 +360,7 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
 
 
 .edit-post-visual-editor__post-title-wrapper {
-  border-bottom:1px solid #efefef;
+  border-bottom:1px solid rgba(136, 136, 136, 0.2);
 }
 
 .edit-post-visual-editor__post-title-wrapper .editor-post-title {
