@@ -4004,6 +4004,10 @@ form.woocommerce-checkout {
 
     .footer-widget {
 
+      p {
+        font-size:90%;
+      }
+
       @include desktop-up {
         width:18%;
     
