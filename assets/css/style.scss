@@ -3973,12 +3973,13 @@ form.woocommerce-checkout {
     }
 
     .menu li:first-of-type {
+      margin-bottom: 20px;
+
       a {
         font-size: var(--header-size-5); 
         font-family: var(--heading-font-family);
         font-weight: var(--heading-font-weight);
-        color:var(--footer-heading-color);
-        margin-bottom: 20px;
+        color:var(--footer-heading-color);        
       }
 
     }
