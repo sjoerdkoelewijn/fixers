@@ -6,7 +6,7 @@
  */
 
 // Define constants.
-define( 'SKDD_VERSION', '1.0.0' );
+define( 'SKDD_VERSION', SKDD_get_current_git_commit( 'main' ) );
 define( 'SKDD_THEME_DIR', get_template_directory() . '/' );
 define( 'SKDD_THEME_URI', get_template_directory_uri() . '/' );
 

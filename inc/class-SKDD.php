@@ -466,8 +466,8 @@ if ( ! class_exists( 'SKDD' ) ) {
 			wp_enqueue_style(
 				'SKDD-style',
 				SKDD_THEME_URI . 'assets/css/style.css',
-				array()
-				//SKDD_version()
+				array(),
+				SKDD_version()
 			);
 
 			if ( is_rtl() ) {
