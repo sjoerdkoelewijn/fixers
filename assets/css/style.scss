@@ -1175,7 +1175,7 @@ form {
   }
 
   @include phone {
-    max-width:90vw !important;
+    max-width:94vw !important;
     margin: 0 auto !important;
   }
  
@@ -1260,7 +1260,7 @@ form {
 @include phone {
   .wp-block-media-text.is-stacked-on-mobile.has-background {
     border-radius:0;
-    margin-left:-5vw;
+    margin-left:-3vw;
     width:100vw;
     
     figure, img {
@@ -1306,7 +1306,7 @@ form {
     }
 
     @include phone {
-      margin-left:-5vw !important;
+      margin-left:-3vw !important;
     }
 
     video.wp-block-cover__video-background, img.wp-block-cover__image-background {
@@ -1363,7 +1363,7 @@ form {
   .wp-block-cover {
     min-height:auto !important;
 
-    margin-left:-5vw;
+    margin-left:-3vw;
     width:100vw;
     max-width:100vw;
     padding-top:var(--vertical-spacing);
@@ -1480,8 +1480,8 @@ form {
 
   .wp-block-group.has-background {
     padding:var(--vertical-spacing) var(--content-spacing-mobile);
-    margin-left:-5vw;
-    width:100vw;
+    //margin-left:-3vw;
+    //width:100vw;
     border-radius:0;
     margin-bottom:var(--vertical-spacing);
   }
@@ -4432,7 +4432,7 @@ form.woocommerce-checkout {
   } 
   
   .ghostkit-col-with-bg {
-    margin-left:-5vw;
+    margin-left:-3vw;
     width:100vw;
     max-width:100vw;
     padding-top:var(--vertical-spacing);
