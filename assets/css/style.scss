@@ -1480,11 +1480,20 @@ form {
 
   .wp-block-group.has-background {
     padding:var(--vertical-spacing) var(--content-spacing-mobile);
-    //margin-left:-3vw;
-    //width:100vw;
+    margin-left:-3vw;
+    width:100vw;
     border-radius:0;
     margin-bottom:var(--vertical-spacing);
   }
+
+  .ghostkit-carousel-slide {
+    .wp-block-group.has-background {
+      margin-left:0;
+      width:100%;
+      border-radius:var(--border-radius);
+    }
+  }
+  
 
 }
 
