@@ -6,7 +6,6 @@
  */
 
 // Define constants.
-define( 'SKDD_VERSION', SKDD_get_current_git_commit( 'main' ) );
 define( 'SKDD_THEME_DIR', get_template_directory() . '/' );
 define( 'SKDD_THEME_URI', get_template_directory_uri() . '/' );
 
@@ -16,6 +15,8 @@ require_once SKDD_THEME_DIR . 'inc/SKDD-template-hooks.php';
 require_once SKDD_THEME_DIR . 'inc/SKDD-template-builder.php';
 require_once SKDD_THEME_DIR . 'inc/SKDD-template-functions.php';
 require_once SKDD_THEME_DIR . 'inc/class-SKDD-custom-header.php';
+
+define( 'SKDD_VERSION', SKDD_get_current_git_commit() );
 
 // SKDD generate css.
 require_once SKDD_THEME_DIR . 'inc/customizer/class-SKDD-fonts-helpers.php';
