@@ -1241,147 +1241,6 @@ form {
   padding-top:0;
 }
 
-
-/*************************** Custom Animations ****************************************************************************/
-
-.blob--animated {
-  object-fit: cover;
-
-  @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
-    -webkit-mask-image: url(../images/svg/blob.svg#mask);
-    mask-image: url(../images/svg/blob.svg#mask);
-    
-    -webkit-mask-repeat: no-repeat;  
-    mask-repeat: no-repeat; 
-
-    --time:10s;
-    --amount:4;
-      
-    animation: blob-animate calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
-    transform-origin: center;   
-
-    img {
-      animation: blob-animate-invert calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
-
-      width:115%;
-      height:110%;
-
-      margin-top:-5%;
-      margin-left:-5%;
-    }
-    
-  } 
-  
-}
-
-@keyframes blob-animate {
-  0% {
-    transform: skewY(0deg);    
-  }
-  13% {
-    transform: skewY( calc( (1.8deg) * var(--amount, 2)) );
-  }
-  18% {
-    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
-  }
-  24% {
-    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
-  }
-  25% {
-    transform: skewY( calc( (2.5deg) * var(--amount, 2)) );
-  }
-  26% {
-    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
-  }
-  32% {
-    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
-  }
-  37% {
-    transform: skewY( calc( (1.5deg) * var(--amount, 2)) );
-  }
-  50% {
-    transform: skewY(0deg);
-  }
-  63% {
-    transform: skewY( calc( (-1.5deg) * var(--amount, 2)) );
-  }
-  68% {
-    transform: skewY( calc( (-2.4deg) * var(--amount, 2)) );
-  }
-  74% {
-    transform: skewY( calc( (-2.68deg) * var(--amount, 2)) );
-  }
-  75% {
-    transform: skewY( calc( (-2.7deg) * var(--amount, 2)) );
-  }
-  76% {
-    transform: skewY( calc( (-2.68deg) * var(--amount, 2)) );
-  }
-  82% {
-    transform: skewY( calc( (-2.4deg) * var(--amount, 2)) );
-  }
-  87% {
-    transform: skewY( calc( (-2deg) * var(--amount, 2)) );
-  }  
-  100% {
-    transform: skewY( calc( (-1deg) * var(--amount, 2)) );
-  }
-}
-
-@keyframes blob-animate-invert {
-  0% {
-    transform: skewY(0deg);    
-  }
-  13% {
-    transform: skewY( calc( (-1.8deg) * var(--amount, 2)) );
-  }
-  18% {
-    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
-  }
-  24% {
-    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
-  }
-  25% {
-    transform: skewY( calc( (-2.5deg) * var(--amount, 2)) );
-  }
-  26% {
-    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
-  }
-  32% {
-    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
-  }
-  37% {
-    transform: skewY( calc( (-1.5deg) * var(--amount, 2)) );
-  }
-  50% {
-    transform: skewY(0deg);
-  }
-  63% {
-    transform: skewY( calc( (1.5deg) * var(--amount, 2)) );
-  }
-  68% {
-    transform: skewY( calc( (2.4deg) * var(--amount, 2)) );
-  }
-  74% {
-    transform: skewY( calc( (2.68deg) * var(--amount, 2)) );
-  }
-  75% {
-    transform: skewY( calc( (2.7deg) * var(--amount, 2)) );
-  }
-  76% {
-    transform: skewY( calc( (2.68deg) * var(--amount, 2)) );
-  }
-  82% {
-    transform: skewY( calc( (2.4deg) * var(--amount, 2)) );
-  }
-  87% {
-    transform: skewY( calc( (2deg) * var(--amount, 2)) );
-  }  
-  100% {
-    transform: skewY( calc( (1deg) * var(--amount, 2)) );
-  }
-}
-
 /*************************** Block editor - block styles ****************************************************************************/
 
 .wp-block-media-text {
@@ -4115,10 +3974,11 @@ form.woocommerce-checkout {
 
     .menu li:first-of-type {
       a {
-        font-size: var(--header-size-6);
+        font-size: var(--header-size-5);
         font-family: var(--heading-font-family);
         font-weight: var(--heading-font-weight);
         color:var(--footer-heading-color);
+        margin-bottom: 20px;
       }
 
     }
@@ -4131,7 +3991,8 @@ form.woocommerce-checkout {
   h1, h2, h3, h4, h5, h6 {
     color:var(--footer-heading-color);
     font-size:var(--header-size-5);
-    font-weight:bold;
+    font-weight:var(--heading-font-weight);
+    font-family: var(--heading-font-family);
   }
 
   .site-footer-widget {
