@@ -4461,6 +4461,12 @@ form.woocommerce-checkout {
       padding-bottom:var(--vertical-spacing);
     }
   }
+
+  .has-background {
+    .ghostkit-col-with-bg {
+      width:100%;
+    }
+  }
   
 }
 
