@@ -4462,10 +4462,9 @@ form.woocommerce-checkout {
     }
   }
 
-  .has-background {
-    .ghostkit-col-with-bg {
-      width:95vw;
-    }
+  .has-background > .ghostkit-col-with-bg {
+    width:95vw;
+    margin-bottom:3vw;
   }
   
 }
