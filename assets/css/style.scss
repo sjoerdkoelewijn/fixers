@@ -1411,7 +1411,7 @@ form {
   }
 }
 
-.wp-block-media-text {
+.wp-block-media-text, .wp-block-media-text.has-media-on-the-right.has-background {
 
   .wp-block-media-text__content {
       padding:var(--content-spacing) calc(var(--content-spacing) / 2) var(--content-spacing) var(--content-spacing);
@@ -1419,7 +1419,7 @@ form {
 
 }
 
-.wp-block-media-text.has-media-on-the-right:not(.has-background) {
+.wp-block-media-text.has-media-on-the-right {
 
   .wp-block-media-text__content {
 
@@ -1429,6 +1429,7 @@ form {
   }
 
 }
+
 
 
 /*************************** Padding from screen edge on smaller screens **********************************/
