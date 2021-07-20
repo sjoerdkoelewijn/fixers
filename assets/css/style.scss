@@ -1440,7 +1440,7 @@ form {
     padding-right:var(--content-spacing-mobile);   
   }
 
-  .site_content > .has-background, .site_content > .wp-block-media-text {    
+  .site_content > .has-background, .site_content > .wp-block-media-text, .site_content > .has-background, .site_content > .wp-block-media-text.has-media-on-the-right.has-background {    
     padding-left:0;
     padding-right:0;  
   }
