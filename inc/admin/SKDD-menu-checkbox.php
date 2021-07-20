@@ -13,7 +13,9 @@ if ( ! function_exists( 'SKDD_add_megamenu_checkbox' ) ) {
         $options = SKDD_options( false );
 
         $show_as_button = get_post_meta($item_id, '_show-as-button', true);
+        $show_as_header = get_post_meta($item_id, '_show-as-header', true);
         $show_as_megamenu = get_post_meta($item_id, '_show-as-megamenu', true);
+        
         ?>
 
         <input type="hidden" name="nav-menu-nonce" value="<?php echo esc_attr( wp_create_nonce( 'nav-menu-nonce-name' ) ); ?>" />
@@ -25,6 +27,16 @@ if ( ! function_exists( 'SKDD_add_megamenu_checkbox' ) ) {
                     name="SKDD-menu-item-button[<?php echo $item_id; ?>]" 
                     <?php checked($show_as_button, true); ?> 
                 /><?php _e('Show as a button', 'SKDD'); ?>
+            </label>
+        </p>
+
+        <p class="SKDD-show-as-header description description-wide">
+            <label for="SKDD-menu-item-header-<?php echo $item_id; ?>" >
+                <input type="checkbox" 
+                    id="SKDD-menu-item-header-<?php echo $item_id; ?>" 
+                    name="SKDD-menu-item-header[<?php echo $item_id; ?>]" 
+                    <?php checked($show_as_header, true); ?> 
+                /><?php _e('Show as a header', 'SKDD'); ?>
             </label>
         </p>
 
@@ -58,6 +70,9 @@ if ( ! function_exists( 'SKDD_save_menu_item_checkbox' ) ) {
 
         $button_value = (isset($_POST['SKDD-menu-item-button'][$menu_item_db_id]) && $_POST['SKDD-menu-item-button'][$menu_item_db_id] == 'on') ? true : false;
         update_post_meta($menu_item_db_id, '_show-as-button', $button_value);
+
+        $header_value = (isset($_POST['SKDD-menu-item-header'][$menu_item_db_id]) && $_POST['SKDD-menu-item-header'][$menu_item_db_id] == 'on') ? true : false;
+        update_post_meta($menu_item_db_id, '_show-as-header', $header_value);
         
         $options = SKDD_options( false );
 
