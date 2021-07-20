@@ -4434,8 +4434,8 @@ form.woocommerce-checkout {
 
 @include phone {
 
-  .ghostkit-col {
-    --gkt-grid__gap:0px;
+  .ghostkit-col, .ghostkit-grid {
+    --gkt-grid__gap:0px; 
     padding-top:var(--content-spacing-mobile);   
 
   } 
