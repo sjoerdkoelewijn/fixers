@@ -4434,8 +4434,8 @@ form.woocommerce-checkout {
 
 @include phone {
 
-  .ghostkit-col, .ghostkit-grid {
-    --gkt-grid__gap:0px; 
+  .ghostkit-col {
+    --gkt-grid__gap:0px;
     padding-top:var(--content-spacing-mobile);   
 
   } 
@@ -4465,7 +4465,7 @@ form.woocommerce-checkout {
 }
 
 .ghostkit-grid-gap-sm {
-  --gkt-grid__gap: 20px;
+  --gkt-grid__gap: 20px; 
 }
 
 .ghostkit-grid-gap-md {
@@ -4474,6 +4474,12 @@ form.woocommerce-checkout {
 
 .ghostkit-grid-gap-lg {
   --gkt-grid__gap: 100px;
+}
+
+@include phone {
+  .ghostkit-grid-gap-sm, .ghostkit-grid-gap-md, .ghostkit-grid-gap-lg {
+    --gkt-grid__gap: 0;
+  }  
 }
 
 /*************************** Ghostkit Counter ****************************************************************************/
