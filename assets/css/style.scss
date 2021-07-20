@@ -1440,7 +1440,7 @@ form {
     padding-right:var(--content-spacing-mobile);   
   }
 
-  .site_content > .has-background, .site_content > .wp-block-media-text, .site_content > .has-background, .site_content > .wp-block-media-text.has-media-on-the-right.has-background {    
+  .site_content > .has-background, .site_content > .wp-block-media-text {    
     padding-left:0;
     padding-right:0;  
   }
@@ -1455,7 +1455,7 @@ form {
       }
   }
 
-  .wp-block-media-text {
+  .wp-block-media-text, .wp-block-media-text.has-media-on-the-right.has-background {
       .wp-block-media-text__content {
           padding:calc(var(--content-spacing-mobile) / 2) 0 0 0;
           
