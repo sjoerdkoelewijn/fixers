@@ -4448,7 +4448,8 @@ form.woocommerce-checkout {
   
   .ghostkit-col-with-bg {
     margin-left:-3vw;
-    width:100vw;
+    width:95vw;
+    margin-bottom:3vw;
     max-width:100vw;
     padding-top:var(--vertical-spacing);
 
@@ -4460,15 +4461,6 @@ form.woocommerce-checkout {
     &:last-of-type {
       padding-bottom:var(--vertical-spacing);
     }
-  }
-
-  .wp-block-group.has-background {
-
-    .ghostkit-col.ghostkit-col-with-bg {
-      width:95vw;
-      margin-bottom:3vw;
-    }
-
   }
   
 }
