@@ -2580,6 +2580,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--theme-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2588,6 +2592,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--secondary-theme-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2596,6 +2604,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--tertiary-theme-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2604,6 +2616,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--offset-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2612,6 +2628,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--body-text-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2620,6 +2640,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--background-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
@@ -2628,6 +2652,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--second-background-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
   
 }
