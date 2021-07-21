@@ -2678,15 +2678,15 @@ a:hover{
 .cart-sidebar-content .woocommerce-mini-cart__buttons a:not(.checkout),
 .product-loop-meta .button,
 .multi-step-checkout-button[data-action="back"],
-.review-information-link,
-a{
-  color: var(--link-color);
-
-  &:hover {
-    color: var(--link-hover-color);
-  }
+.review-information-link {
+  a{
+    color: var(--link-color);
+  
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }  
 }
-
 
 .has-skdd-background-color.has-background{
   background:var(--background-color);
