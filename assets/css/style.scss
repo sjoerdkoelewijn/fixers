@@ -639,8 +639,8 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
           //line-height:var(--button-line-height);
           text-transform: var(--button-font-transform);
           padding:0 33px;
-          background-color: var(--button-hover-background-color);
-          color: var(--button-hover-text-color);
+          background-color: var(--button-background-color);
+          color: var(--button-text-color);          
           border-radius: var(--button-border-radius);
           text-decoration: none;
           cursor: pointer;
@@ -662,14 +662,14 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
         }
       }
 
-      .menu-item.button.theme {
-        a {
-          background-color: var(--button-background-color);
-          color: var(--button-text-color);
+      .menu-item.button.reverse {
+        a {         
+          background-color: var(--button-hover-background-color);
+          color: var(--button-hover-text-color);
 
           &:focus, &:hover {
-            background-color: var(--button-hover-background-color);
-            color: var(--button-hover-text-color);
+            background-color: var(--button-background-color);
+            color: var(--button-text-color);
           }
         }
       }
