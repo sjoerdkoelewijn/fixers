@@ -27,6 +27,7 @@ if ( ! class_exists( 'SKDD_Walker_Menu' ) ) {
 			$class_names = '';
 			$value       = '';
 			$show_as_button = get_post_meta($item->ID, '_show-as-button', true);
+			$show_as_header = get_post_meta($item->ID, '_show-as-header', true);
 
 			// Classes name.
 			$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
@@ -35,6 +36,9 @@ if ( ! class_exists( 'SKDD_Walker_Menu' ) ) {
 			if ($show_as_button) {
 				$classes[] = 'button';
 			}	
+			if ($show_as_header) {
+				$classes[] = 'header';
+			}
 		
 			$classes = array_filter( $classes );
 

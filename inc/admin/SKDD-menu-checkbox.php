@@ -6,9 +6,9 @@
 defined( 'ABSPATH' ) || exit;
 
 
-if ( ! function_exists( 'SKDD_add_megamenu_checkbox' ) ) {
+if ( ! function_exists( 'SKDD_add_menu_checkboxes' ) ) {
 
-    function SKDD_add_megamenu_checkbox($item_id, $item) {
+    function SKDD_add_menu_checkboxes($item_id, $item) {
 
         $options = SKDD_options( false );
 
@@ -56,7 +56,7 @@ if ( ! function_exists( 'SKDD_add_megamenu_checkbox' ) ) {
 
     }
 
-    add_action('wp_nav_menu_item_custom_fields', 'SKDD_add_megamenu_checkbox', 10, 2);
+    add_action('wp_nav_menu_item_custom_fields', 'SKDD_add_menu_checkboxes', 10, 2);
 
 }
 
