@@ -58,17 +58,18 @@ p {
 }
 
 a:focus {
-  filter: drop-shadow(0 0 3px 2px var(--theme-color)); 
+  filter: drop-shadow(0 0 5px var(--theme-color)); 
 }
 
 .custom-logo-link:focus {
   box-shadow:none;
 }
 
-p, .primary-navigation {
+p, li, .primary-navigation {
 
   a:focus {
-    box-shadow:none;  
+    box-shadow:none;
+    filter: drop-shadow(0);  
     color:var(--theme-color) !important;
   }
 
