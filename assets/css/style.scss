@@ -2580,11 +2580,12 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--theme-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+  
 }
 
 .has-skdd-secondary-theme-color {
@@ -2592,11 +2593,12 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--secondary-theme-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+
 }
 
 .has-skdd-tertiary-theme-color {
@@ -2604,11 +2606,12 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--tertiary-theme-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+
 }
 
 .has-skdd-offset-color {
@@ -2616,11 +2619,12 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--offset-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+
 }
 
 .has-skdd-text-color {
@@ -2628,23 +2632,25 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--body-text-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+
 }
 
 .has-skdd-background-color {
   color: var(--background-color);
 
   p, h1, h2, h3, h4, h5, h6, a{
-    color: var(--background-color);
-
-    &:hover {
-      color:var(--link-hover-color);
-    }
+    color: var(--background-color);   
   }
+
+  a:hover {
+    color:var(--link-hover-color);
+  }
+
 }
 
 .has-skdd-secondary-background-color {
@@ -2652,10 +2658,10 @@ a:hover{
 
   p, h1, h2, h3, h4, h5, h6, a{
     color: var(--second-background-color);
+  }
 
-    &:hover {
-      color:var(--link-hover-color);
-    }
+  a:hover {
+    color:var(--link-hover-color);
   }
   
 }
