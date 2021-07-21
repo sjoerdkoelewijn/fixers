@@ -4130,6 +4130,10 @@ form.woocommerce-checkout {
   a {
     font-size:100%;
     color:var(--footer-text-color);
+
+    &:hover {
+      color:var(--link-hover-color);
+    }
   }
 }
 
