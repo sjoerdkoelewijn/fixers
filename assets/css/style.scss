@@ -656,8 +656,8 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
           }
   
           &:focus, &:hover {
-            background-color: var(--button-background-color);
-            color: var(--button-text-color);
+            background-color: var(--button-hover-background-color);
+            color: var(--button-hover-text-color);
           }
         }
       }
