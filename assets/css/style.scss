@@ -158,6 +158,10 @@ ol {
   padding:0;
 }
 
+ol {
+  --gkt-styled-lists-numbered--decoration__color:var(--text-color);
+}
+
 iframe,
 embed,
 figure,
