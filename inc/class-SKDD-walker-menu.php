@@ -36,6 +36,7 @@ if ( ! class_exists( 'SKDD_Walker_Menu' ) ) {
 			if ($show_as_button) {
 				$classes[] = 'button';
 			}	
+
 			if ($show_as_header) {
 				$classes[] = 'header';
 			}
@@ -140,6 +141,7 @@ if ( ! class_exists( 'SKDD_Walker_Mega_Menu' ) ) {
 			$value       = '';
 			$show_as_button = get_post_meta($item->ID, '_show-as-button', true);
 			$show_as_megamenu = get_post_meta($item->ID, '_show-as-megamenu', true);
+			$show_as_header = get_post_meta($item->ID, '_show-as-header', true);
 			
 
 			// Classes name.
@@ -153,6 +155,11 @@ if ( ! class_exists( 'SKDD_Walker_Mega_Menu' ) ) {
 			if ($show_as_megamenu) {
 				$classes[] = 'mega-menu';
 			}
+
+			if ($show_as_header) {
+				$classes[] = 'header';
+			}
+		
 		
 			$classes = array_filter( $classes );
 
