@@ -122,6 +122,7 @@ ol {
 
 ol.is-style-styled li+li, ul.is-style-styled li+li {
   --gkt-styled-lists--items__gap:0;
+  --gkt-styled-lists-dotted__padding-left:0;
 }
 
 ul.has-skdd-primary-background-color.has-background{
@@ -151,7 +152,7 @@ ul.is-style-styled {
 
 ul,
 ol {
-  padding-left: 20px;
+  // padding-left: 20px;
 }
 
 iframe,
