@@ -122,6 +122,9 @@ ol {
 
 ol.is-style-styled li+li, ul.is-style-styled li+li {
   --gkt-styled-lists--items__gap:0;
+}
+
+ol.is-style-styled li, ul.is-style-styled li {
   --gkt-styled-lists-dotted__padding-left:0;
 }
 
