@@ -35,11 +35,9 @@ if ( ! class_exists( 'SKDD_Walker_Menu' ) ) {
 
 			if ($show_as_button) {
 				$classes[] = 'button';
-			}	
-
-			if ($show_as_header) {
+			} elseif ($show_as_header) {
 				$classes[] = 'header';
-			}
+			}				
 		
 			$classes = array_filter( $classes );
 
@@ -150,16 +148,13 @@ if ( ! class_exists( 'SKDD_Walker_Mega_Menu' ) ) {
 			
 			if ($show_as_button) {
 				$classes[] = 'button';
+			} elseif ($show_as_header) {
+				$classes[] = 'header';
 			}		
 
 			if ($show_as_megamenu) {
 				$classes[] = 'mega-menu';
-			}
-
-			if ($show_as_header) {
-				$classes[] = 'header';
-			}
-		
+			}	
 		
 			$classes = array_filter( $classes );
 
