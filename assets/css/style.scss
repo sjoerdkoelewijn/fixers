@@ -63,13 +63,14 @@ a:focus {
 
 .custom-logo-link:focus {
   box-shadow:none;
+  filter: none; 
 }
 
 p, li, .primary-navigation {
 
   a:focus {
     box-shadow:none;
-    filter: drop-shadow(0);  
+    filter: none;  
     color:var(--theme-color) !important;
   }
 
@@ -3590,6 +3591,7 @@ form.woocommerce-checkout {
 
     a:focus, a:hover {
       box-shadow:none;
+      filter: none; 
       color:var(--theme-color);
     }
     
@@ -3873,6 +3875,7 @@ form.woocommerce-checkout {
             &:focus, &:hover {
               color:var(--theme-color);
               box-shadow:none;
+              filter: none; 
               transition: color .3s ease;
             }
           }  
@@ -3916,6 +3919,7 @@ form.woocommerce-checkout {
               &:focus, &:hover {
                 color:var(--theme-color);
                 box-shadow:none;
+                filter: none; 
                 transition: color .3s ease;
 
                 h3 {
