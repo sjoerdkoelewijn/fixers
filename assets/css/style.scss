@@ -3900,6 +3900,7 @@ form.woocommerce-checkout {
 
           @include phone {
             width:100%;
+            padding:calc(var(--content-spacing) / 2);
           }
 
           .category_header {
