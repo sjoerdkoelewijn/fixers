@@ -304,7 +304,7 @@ h1 {
   //line-height: calc(var(--heading-line-height) * 0.8);
 }
 
-h1, .has-SKDD-heading-1-font-size{
+h1, .has-SKDD-heading-1-font-size, .has-skdd-heading-1-font-size{
   font-size:var(--header-size-1);
 
   @include tablet {
@@ -316,7 +316,7 @@ h1, .has-SKDD-heading-1-font-size{
   }
 }
 
-h2, .has-SKDD-heading-2-font-size{
+h2, .has-SKDD-heading-2-font-size, .has-skdd-heading-2-font-size{
   font-size:var(--header-size-2);
   
   @include tablet {
@@ -328,7 +328,7 @@ h2, .has-SKDD-heading-2-font-size{
   }
 }
 
-h3, .has-SKDD-heading-3-font-size{
+h3, .has-SKDD-heading-3-font-size, .has-skdd-heading-3-font-size{
   font-size:var(--header-size-3);
   
   @include tablet {
@@ -340,7 +340,7 @@ h3, .has-SKDD-heading-3-font-size{
   }
 }
 
-h4, .has-SKDD-heading-4-font-size{
+h4, .has-SKDD-heading-4-font-size, .has-skdd-heading-4-font-size{
   font-size:var(--header-size-4);
 
   @include tablet {
@@ -352,7 +352,7 @@ h4, .has-SKDD-heading-4-font-size{
   }
 }
 
-h5, .has-SKDD-heading-5-font-size{
+h5, .has-SKDD-heading-5-font-size, .has-skdd-heading-5-font-size{
   font-size:var(--header-size-5);
 
   @include tablet {
@@ -365,7 +365,7 @@ h5, .has-SKDD-heading-5-font-size{
 
 }
 
-h6, .has-SKDD-heading-6-font-size{
+h6, .has-SKDD-heading-6-font-size, .has-skdd-heading-6-font-size{
   font-size:var(--header-size-6);
 
   @include tablet {
