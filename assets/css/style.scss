@@ -1477,8 +1477,8 @@ form {
       //padding-right:var(--content-spacing); 
   }
 
-  .wp-block-spacer.is-style-responsive-large {
-    height:calc(var(--vertical-spacing) * 2) !important;
+  .wp-block-spacer.is-style-responsive-hidden {
+    display: none !important;
   }
 
   .wp-block-spacer.is-style-responsive-medium {
