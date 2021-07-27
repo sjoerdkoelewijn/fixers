@@ -1501,6 +1501,13 @@ form {
     margin-bottom:var(--vertical-spacing);
   }
 
+  .wp-block-cover {
+    .wp-block-group.has-background {
+      margin-left:-2vw;    
+      width:96vw;    
+    }
+  }  
+
   .ghostkit-carousel-slide {
     .wp-block-group.has-background {
       margin-left:0;
