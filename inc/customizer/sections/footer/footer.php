@@ -135,3 +135,33 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+// Topbar layout.
+$wp_customize->add_setting(
+	'SKDD_setting[footer_layout]',
+	array(
+		'default'           => $defaults['footer_layout'],
+		'sanitize_callback' => 'SKDD_sanitize_choices',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Radio_Image_Control(
+		$wp_customize,
+		'SKDD_setting[footer_layout]',
+		array(
+			'label'    => __( 'Topbar Layout', 'SKDD' ),
+			'section'  => 'SKDD_footer',
+			'settings' => 'SKDD_setting[footer_layout]',
+			'choices'  => apply_filters(
+				'SKDD_setting_footer_layout_choices',
+				array(
+					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexstart.jpg',
+					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexend.jpg',
+					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexcenter.jpg',
+					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexspacebetween.jpg',
+				)
+			),
+		)
+	)
+);

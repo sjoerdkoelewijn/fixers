@@ -2594,11 +2594,11 @@ a:hover{
 .has-skdd-primary-theme-color {  
   color: var(--theme-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--theme-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
   
@@ -2607,11 +2607,11 @@ a:hover{
 .has-skdd-secondary-theme-color {
   color: var(--secondary-theme-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--secondary-theme-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
 
@@ -2620,11 +2620,11 @@ a:hover{
 .has-skdd-tertiary-theme-color {
   color: var(--tertiary-theme-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--tertiary-theme-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
 
@@ -2633,11 +2633,11 @@ a:hover{
 .has-skdd-offset-color {
   color: var(--offset-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--offset-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
 
@@ -2646,11 +2646,11 @@ a:hover{
 .has-skdd-text-color {
   color: var(--body-text-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--body-text-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
 
@@ -2659,11 +2659,11 @@ a:hover{
 .has-skdd-background-color {
   color: var(--background-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--background-color);   
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
 
@@ -2672,11 +2672,11 @@ a:hover{
 .has-skdd-secondary-background-color {
   color: var(--second-background-color);
 
-  p, h1, h2, h3, h4, h5, h6, a{
+  p, h1, h2, h3, h4, h5, h6, a:not(.ghostkit-button){
     color: var(--second-background-color);
   }
 
-  a:hover {
+  a:not(.ghostkit-button):hover {
     color:var(--link-hover-color);
   }
   
@@ -4131,7 +4131,7 @@ form.woocommerce-checkout {
   clear: both;
   padding: var(--content-spacing);
   display: flex;
-  justify-content: space-between;
+  justify-content: var(--footer-align);
   align-items: center;
 
   width:var(--header-width);
