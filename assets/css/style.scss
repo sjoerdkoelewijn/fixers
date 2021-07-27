@@ -46,6 +46,10 @@ p {
 
 }
 
+ul.align-right {
+  direction:rtl;
+}
+
 *,
 *::before,
 *::after {
@@ -1503,7 +1507,7 @@ form {
 
   .wp-block-cover {
     .wp-block-group.has-background {
-      margin-left:-2.5vw;    
+      margin-left:-2.7vw;    
       width:96vw;    
     }
   }  

@@ -4,8 +4,7 @@ wp.domReady( () => {
 
 	wp.blocks.registerBlockStyle( 'core/spacer', {
 		name: 'default',
-		label: 'Default',
-		isDefault: true,
+		label: 'Default',		
 	});
 
      wp.blocks.registerBlockStyle( 'core/spacer', {
@@ -16,6 +15,7 @@ wp.domReady( () => {
      wp.blocks.registerBlockStyle( 'core/spacer', {
 		name: 'responsive-small',
 		label: 'Responsive Small',
+		isDefault: true,
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/spacer', {
@@ -26,6 +26,11 @@ wp.domReady( () => {
      wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
 		name: 'order-random',
 		label: 'Shuffle',
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/list', { 
+		name: 'align-right',
+		label: 'Align Right',
 	} );
 
 } );
