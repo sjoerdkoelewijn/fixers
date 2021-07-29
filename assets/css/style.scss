@@ -51,6 +51,10 @@ ul.is-style-align-right {
   list-style-type:none;
 }
 
+ul:not(.is-style-icon) {
+  padding-left:1em;
+}
+
 *,
 *::before,
 *::after {
