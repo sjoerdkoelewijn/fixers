@@ -51,7 +51,7 @@ ul.is-style-align-right {
   list-style-type:none;
 }
 
-ul:not(.is-style-icon) {
+ul :not(.is-style-icon, .is-style-styled) {
   padding-left:1em;
 }
 
