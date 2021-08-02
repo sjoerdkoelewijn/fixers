@@ -79,14 +79,7 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
 @include desktop-up {
 
   h1, h2, h3, h4, h5, h6, .ghostkit-grid, .wp-block-group {
-    scroll-margin-top:calc(var(--header-max-height) * 2);
-
-    &:target {
-      display: block;
-      position: relative;
-      top: -120px; 
-      visibility: hidden;
-    }
+    scroll-padding-top:calc(var(--header-max-height) * 2);
   }
 
 }
