@@ -410,7 +410,7 @@ ul :not(.is-style-icon, .is-style-styled), ol :not(.is-style-icon, .is-style-sty
 
 /*************************** Buttons  ****************************************************************************/
 
-button, form button,  .button, .forminator-button, .wp-block-button__link {
+button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-button__link {
   font-family:var(--button-font-family);
   border-radius:var(--button-border-radius);
   padding:0 40px;
