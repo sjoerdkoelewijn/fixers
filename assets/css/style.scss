@@ -46,15 +46,6 @@ p {
 
 }
 
-ul.is-style-align-right {
-  direction:rtl;
-  list-style-type:none;
-}
-
-ul :not(.is-style-icon, .is-style-styled), ol :not(.is-style-icon, .is-style-styled) {
-  padding-left:1em;
-}
-
 *,
 *::before,
 *::after {
@@ -127,51 +118,6 @@ template {
   display: none;
 }
 
-ol {
-  list-style: decimal;
-}
-
-ol.is-style-styled li+li, ul.is-style-styled li+li {
-  --gkt-styled-lists--items__gap:0;
-}
-
-ol.is-style-styled li, ul.is-style-styled li {
-  --gkt-styled-lists-dotted__padding-left:0;
-}
-
-ul.has-skdd-primary-background-color.has-background{
-  li {
-    &::marker {
-      color:var(--second-background-color);
-    }
-  }
-}
-
-ul.is-style-styled {
-  margin-left:20px;
-
-  li {
-    list-style-type: square;
-    padding-left:10px;
-
-    &::marker {
-      color:var(--tertiary-theme-color);
-    }
-
-    &:before {
-      display:none;
-    }
-  }
-}
-
-ul,
-ol {
-  padding:0;
-}
-
-.is-style-styled {
-  --gkt-styled-lists-numbered--decoration__color:var(--text-color);  
-}
 
 iframe,
 embed,
@@ -393,6 +339,64 @@ h6, .has-SKDD-heading-6-font-size, .has-skdd-heading-6-font-size{
 
 .wp-block-quote {
   border-left: .25em solid var(--text-color);
+}
+
+
+
+/*************************** List Styles  ****************************************************************************/
+
+ol {
+  list-style: decimal;
+}
+
+ol.is-style-styled li+li, ul.is-style-styled li+li {
+  --gkt-styled-lists--items__gap:0;
+}
+
+ol.is-style-styled li, ul.is-style-styled li {
+  --gkt-styled-lists-dotted__padding-left:0;
+}
+
+ul.has-skdd-primary-background-color.has-background{
+  li {
+    &::marker {
+      color:var(--second-background-color);
+    }
+  }
+}
+
+ul.is-style-styled {
+  margin-left:20px;
+
+  li {
+    list-style-type: square;
+    padding-left:10px;
+
+    &::marker {
+      color:var(--tertiary-theme-color);
+    }
+
+    &:before {
+      display:none;
+    }
+  }
+}
+
+ul, ol, ol.has-background, ul.has-background {
+  padding:0;
+}
+
+.is-style-styled {
+  --gkt-styled-lists-numbered--decoration__color:var(--text-color);  
+}
+
+ul.is-style-align-right {
+  direction:rtl;
+  list-style-type:none;
+}
+
+ul :not(.is-style-icon, .is-style-styled), ol :not(.is-style-icon, .is-style-styled) {
+  //padding-left:1em;
 }
 
 
