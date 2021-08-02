@@ -427,7 +427,7 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
   
   svg {
       path {
-          // fill:var(--text-color);
+          fill:var(--button-text-color);
       }     
   }
 
@@ -438,7 +438,7 @@ button, form button,  .button, .forminator-button, .wp-block-button__link {
 
       svg {
           path {
-              // fill:var(--theme-color);
+              fill:var(--button-hover-text-color);
           }     
       }
   }
