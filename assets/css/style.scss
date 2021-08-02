@@ -403,12 +403,13 @@ ul.is-style-align-right {
   list-style-type:none;
 }
 
-ul :not(.is-style-styled), ol :not(.is-style-styled) {
-  li {
-    padding-left:1em;
+.content-area {
+  ul :not(.is-style-styled), ol :not(.is-style-styled) {
+    li {
+      padding-left:1em;
+    }
   }
 }
-
 
 /*************************** Buttons  ****************************************************************************/
 
