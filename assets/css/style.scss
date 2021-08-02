@@ -28,8 +28,8 @@ html {
   :target:before {
     content: '';
     display: block;
-    height: var(--header-max-height);
-    margin: calc(var(--header-max-height) * -1) 0 0;
+    height: 120px;
+    margin: -120px 0 0;
   }
 }
 
