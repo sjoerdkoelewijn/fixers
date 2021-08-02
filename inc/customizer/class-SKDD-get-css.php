@@ -151,7 +151,8 @@ class SKDD_Get_CSS {
 				--footer-text-color:' . esc_attr( $options['footer_text_color'] ) . ';
 				--footer-link-color:' . esc_attr( $options['footer_link_color'] ) . ';
 				--footer-heading-color:' . esc_attr( $options['footer_heading_color'] ) . ';
-				--footer-background-color:' . esc_attr( $options['footer_background_color'] ) . ';				
+				--footer-background-color:' . esc_attr( $options['footer_background_color'] ) . ';
+				--footer-align:' . esc_attr( $options['topbar_layout'] ) . '; 				
 			}
 
 			.site_header_inner {

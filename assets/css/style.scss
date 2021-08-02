@@ -1985,6 +1985,10 @@ form {
     font-weight:var(--button-font-weight);
   }
 
+  &:hover {
+    color: var(--link-hover-color);
+  }
+
   @include tablet {
     font-size: var(--submenu-font-size-tablet);
     line-height: var(--submenu-line-height-tablet);
