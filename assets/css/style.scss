@@ -4476,7 +4476,7 @@ form.woocommerce-checkout {
     }
 
     .ghostkit-accordion-item-collapse {
-      right:var(--content-spacing);
+      right:calc(var(--content-spacing) / 2);
     }
 
     
