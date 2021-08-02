@@ -405,10 +405,10 @@ ul.is-style-align-right {
 
 .content-area {
   ul :not(.is-style-styled), ol :not(.is-style-styled) {
-    margin-left:20px;
+    padding-inline-start: 20px;
 
     li {
-      padding-left:10px;
+      margin-bottom:10px;
     }
   }
 }
