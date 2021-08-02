@@ -24,11 +24,13 @@ html {
 
 }
 
-:target:before {
-  content: '';
-  display: block;
-  height: var(--header-max-height);
-  margin: calc(var(--header-max-height) * -1) 0 0;
+@include desktop-up {
+  :target:before {
+    content: '';
+    display: block;
+    height: var(--header-max-height);
+    margin: calc(var(--header-max-height) * -1) 0 0;
+  }
 }
 
 body {
