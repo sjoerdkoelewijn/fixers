@@ -24,14 +24,6 @@ html {
 
 }
 
-@include desktop-up {
-  :target:before {
-    content: '';
-    display: block;
-    height: 160px; 
-  }
-}
-
 body {
   margin: 0;
   word-break: break-word;
@@ -82,6 +74,10 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
     color:var(--theme-color) !important;
   }
 
+}
+
+h1, h2, h3, h4, h5, h6, section, div {
+  scroll-margin-top:var(--header-max-height);
 }
 
 .site-tools {
