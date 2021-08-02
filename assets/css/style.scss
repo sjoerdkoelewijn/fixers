@@ -391,7 +391,7 @@ ul.is-style-styled {
 }
 
 ul, ol, ol.has-background, ul.has-background {
-  padding:0;
+  padding:0 0 0 20px;
 }
 
 .is-style-styled {
@@ -403,13 +403,6 @@ ul.is-style-align-right {
   list-style-type:none;
 }
 
-.content-area {
-  ul :not(.is-style-styled), ol :not(.is-style-styled) {    
-    margin-block-start:10px;
-
-    
-  }
-}
 
 /*************************** Buttons  ****************************************************************************/
 
