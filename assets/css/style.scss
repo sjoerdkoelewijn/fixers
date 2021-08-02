@@ -76,8 +76,12 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
 
 }
 
-h1, h2, h3, h4, h5, h6, .ghostkit-grid, .wp-block-group {
-  scroll-margin-top:calc(var(--header-max-height) * 2);
+@include desktop-up {
+
+  h1, h2, h3, h4, h5, h6, .ghostkit-grid, .wp-block-group {
+    scroll-margin-top:calc(var(--header-max-height) * 2);
+  }
+
 }
 
 .site-tools {
@@ -4455,15 +4459,17 @@ form.woocommerce-checkout {
 /*************************** Ghostkit Accordion ****************************************************************************/
 
 .ghostkit-accordion-item {
-    --gkt-accordion--heading__padding-v:var(--content-spacing);
-    --gkt-accordion--heading__padding-h:var(--content-spacing);
+    --gkt-accordion--heading__padding-v:calc(var(--content-spacing) / 2);
+    --gkt-accordion--heading__padding-h:calc(var(--content-spacing) / 2);
     --gkt-accordion--heading-collapse-icon__width:30px;
     --gkt-accordion--heading__font-weight:var(----heading-font-weight);
 
-    --gkt-accordion--content__padding-v:var(--content-spacing);
-    --gkt-accordion--content__padding-h:var(--content-spacing);
+    --gkt-accordion--content__padding-v:calc(var(--content-spacing) / 2);
+    --gkt-accordion--content__padding-h:calc(var(--content-spacing) / 2);
 
     --gkt-accordion--heading-collapse-icon__font-size:25px;
+
+    margin-bottom:10px;
 
     .ghostkit-accordion-item-heading {
       background-color:var(--offset-color);
