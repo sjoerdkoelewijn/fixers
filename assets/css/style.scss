@@ -4091,15 +4091,7 @@ form.woocommerce-checkout {
 
       p {
         font-size:90%;
-      }
-
-      @include desktop-up {
-        width:18%;
-    
-        &:first-of-type{
-          flex-grow:2;
-        }
-      }      
+      }  
     
     }
 

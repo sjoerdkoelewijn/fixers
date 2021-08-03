@@ -357,6 +357,16 @@ body[class*="SKDD-welcome"] #wpcontent, body[class*="SKDD-options_page"] #wpcont
     
 }
 
+/* ************ Widget Blocks ******************************* */
+
+.wp-block[data-type="core/widget-area"] {
+  max-width:1200px;
+}
+
+.blocks-widgets-container .editor-styles-wrapper {
+  max-width:1200px;
+}
+
 
 
 .edit-post-visual-editor__post-title-wrapper {
