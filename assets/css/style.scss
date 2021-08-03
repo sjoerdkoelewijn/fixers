@@ -4084,7 +4084,6 @@ form.woocommerce-checkout {
     //width:var(--content-width);
     max-width:100%;
     margin:0 auto;
-    display:flex;
     padding:70px var(--content-spacing);
 
     .footer-widget {
@@ -4097,7 +4096,7 @@ form.woocommerce-checkout {
 
 
     @include uhd {
-      width:calc(var(--content-width) * 1.2);
+      //width:calc(var(--content-width) * 1.2);
     }
 
     @include phone {
