@@ -69,6 +69,10 @@
         margin-right:7px;
     }
 
+    @include tablet-down {
+        line-height: var(--header-max-height-tablet); 
+    }
+
 }
 
 .main-navigation .primary-navigation > .menu-item {
@@ -81,6 +85,10 @@
 
 .site-navigation, .main-navigation, .primary-navigation {
     height:var(--header-max-height);
+
+    @include tablet-down {
+        height: var(--header-max-height-tablet); 
+    }
 }
 
 .main-navigation .primary-navigation > .menu-item {
@@ -89,6 +97,11 @@
     line-height:var(--header-max-height);
     align-items: center;
     flex-direction: column;
+
+    @include tablet-down {
+        height: var(--header-max-height-tablet);
+        line-height: var(--header-max-height-tablet);  
+    }
 
 }
 
