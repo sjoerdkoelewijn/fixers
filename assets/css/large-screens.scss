@@ -172,6 +172,10 @@
     z-index: -1;
     border-radius:0 0 var(--border-radius) var(--border-radius);
     padding:20px;
+
+    @include tablet-down {
+        top:calc(var(--header-max-height-tablet) + 25px); 
+    }
 }
 
 .main-navigation .primary-navigation > .menu-item .sub-menu .menu-item-has-children .menu-item-arrow {
@@ -218,6 +222,10 @@
     z-index: 5;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
+
+    @include tablet-down {
+        top:var(--header-max-height-tablet); 
+    }
 }
 
 .main-navigation .primary-navigation .sub-menu {
