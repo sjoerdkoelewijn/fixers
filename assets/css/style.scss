@@ -3365,13 +3365,14 @@ form.woocommerce-checkout {
 
 
 .product img, .product-loop-image, .product-loop-hover-image {
-  border-radius:var(--border-radius);
+  //border-radius:var(--border-radius);
   width:100%;
   
 }
 
 .product-loop-image-wrapper {
   max-height: 300px;
+  border-radius:var(--border-radius);
 }
 
 .product-images {
