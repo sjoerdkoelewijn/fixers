@@ -373,19 +373,7 @@ class SKDD_Get_CSS {
 					'. $page_header_background_image .'					
 					'. $page_header_margin .'
 					position:relative;
-				}
-
-				.page-header:before {
-					content:"";	
-					background:#000000;
-					position:absolute;
-					top:0;
-					bottom:0;
-					left:0;
-					right:0;
-					z-index:0;			
-					
-				}
+				}				
 
 				.page-header .entry-title{
 					color: ' . esc_attr( $options['page_header_title_color'] ) . ';
