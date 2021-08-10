@@ -370,14 +370,19 @@ class SKDD_Get_CSS {
 
 			$styles .= '
 				.page-header{
-					background:#000000;					
+					'. $page_header_background_image .'					
 					'. $page_header_margin .'
 				}
 
 				.page-header:before {
 					content:"";	
-					opacity:.9;				
-					'. $page_header_background_image .'
+					background:#000000;
+					position:absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;			
+					
 				}
 
 				.page-header .entry-title{
