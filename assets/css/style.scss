@@ -785,39 +785,6 @@ form {
 
 }
 
-.forminator-row {
-  margin-bottom: 5px !important;
-
-  button {
-    margin-top:30px;
-  }
-}
-
-.forminator-checkbox {
-  input {
-    width:auto;
-    margin-right:10px;
-  }
-  p {
-    display:inline;
-  }
-}
-
-.forminator-error-message {
-  font-size:80%;
-  font-weight:700;
-  color:var(--tertiary-theme-color);
-  margin-left:5px;
-
-}
-
-.forminator-required {
-  color:var(--tertiary-theme-color);
-}
-
-.forminator-error {
-  display:none;
-}
 
 .select2-container .select2-selection--single {
   height: 50px;
@@ -899,6 +866,149 @@ form {
   min-width: 130px;
 }
 
+
+/*************************** Forminator styling ****************************************************************************/
+
+.forminator-ui {
+
+  .forminator-label {
+    color:var(--body-text-color);
+    font-size:85%;
+    font-weight:400;
+  }
+
+  .forminator-error-message {
+    font-size:70%;
+    font-weight:400;
+    color:var(--tertiary-theme-color);
+    margin-left:5px;
+  }
+
+  .forminator-row {
+    margin-bottom:10px;
+  }
+
+  .forminator-input {
+    border:0;
+    border-radius:3px;
+    background:var(--second-background-color); 
+  }
+
+  .forminator-button-submit, .forminator-button-submit-next {
+    border-radius: var(--button-border-radius);    
+  }
+
+}
+
+
+.forminator-row {
+  margin-bottom: 5px !important;
+
+  button {
+    margin-top:30px;
+  }
+}
+
+.forminator-checkbox {
+  input {
+    width:auto;
+    margin-right:10px;
+  }
+  p {
+    display:inline;
+  }
+}
+
+.forminator-required {
+  color:var(--tertiary-theme-color);
+}
+
+.forminator-error {
+  display:none;
+}
+
+
+.single-line-form {
+  
+  .forminator-ui {
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+
+    @include phone {
+      flex-direction:column;
+    }
+
+    .forminator-error-message {
+      position:absolute;
+      left:-4px;
+      margin-top:calc(var(--body-line-height) * 2);
+      padding:0 10px;
+    }
+
+    .forminator-row {
+      flex-grow:2;   
+    }
+    
+    .forminator-row-last {
+      flex-grow:1;
+      
+      @include phone {
+        margin-top: 10px;
+      }             
+
+        button {
+          margin-top:0;
+          border-radius: 5px;
+          padding-top:11px;
+          padding-bottom:11px;
+          line-height:var(--body-line-height);
+        }
+      
+    }
+
+  }
+
+}
+
+
+.wp-block-cover__inner-container {
+
+  .forminator-label {
+    color:var(--background-color);
+  }
+
+}
+
+
+.forminator-error-message {
+  background:var(--secondary-theme-color);
+  padding:5px 10px;
+  border-radius:2px;
+}
+
+
+.ghostkit-col-with-bg {
+  
+  .forminator-input {
+    opacity:.85;
+
+    &:focus {
+      opacity:1;
+      border:0 !important;
+    }
+  }
+
+  .forminator-button-submit {
+    background:var(--tertiary-theme-color);
+    color:var(--background-color);
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: none; 
+  }
+
+}
 
 /*************************** Search ****************************************************************************/
 
@@ -4230,120 +4340,7 @@ form.woocommerce-checkout {
   top: 2px
 }
 
-/*************************** Forminator styling ****************************************************************************/
 
-.forminator-ui {
-
-  .forminator-label {
-    color:var(--body-text-color);
-    font-size:85%;
-    font-weight:400;
-  }
-
-  .forminator-error-message {
-    font-size:70%;
-    font-weight:400;
-    color:var(--body-text-color);
-  }
-
-  .forminator-row {
-    margin-bottom:10px;
-  }
-
-  .forminator-input {
-    border:0;
-    border-radius:3px;
-    background:var(--second-background-color); 
-  }
-
-  .forminator-button-submit, .forminator-button-submit-next {
-    border-radius: var(--button-border-radius);    
-  }
-
-}
-
-
-.single-line-form {
-  
-  .forminator-ui {
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-
-    @include phone {
-      flex-direction:column;
-    }
-
-    .forminator-error-message {
-      position:absolute;
-      left:-4px;
-      margin-top:calc(var(--body-line-height) * 2);
-      padding:0 10px;
-    }
-
-    .forminator-row {
-      flex-grow:2;   
-    }
-    
-    .forminator-row-last {
-      flex-grow:1;
-      
-      @include phone {
-        margin-top: 10px;
-      }             
-
-        button {
-          margin-top:0;
-          border-radius: 5px;
-          padding-top:11px;
-          padding-bottom:11px;
-          line-height:var(--body-line-height);
-        }
-      
-    }
-
-  }
-
-}
-
-
-.wp-block-cover__inner-container {
-
-  .forminator-label {
-    color:var(--background-color);
-  }
-
-}
-
-
-.forminator-error-message {
-  background:var(--secondary-theme-color);
-  padding:5px 10px;
-  border-radius:2px;
-}
-
-
-.ghostkit-col-with-bg {
-  
-  .forminator-input {
-    opacity:.85;
-
-    &:focus {
-      opacity:1;
-      border:0 !important;
-    }
-  }
-
-  .forminator-button-submit {
-    background:var(--tertiary-theme-color);
-    color:var(--background-color);
-  }
-
-  input:focus, textarea:focus {
-    box-shadow: none; 
-  }
-
-}
 
 /*************************** ghostkit carousel slider ****************************************************************************/
 
