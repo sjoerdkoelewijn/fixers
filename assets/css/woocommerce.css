@@ -924,6 +924,8 @@ address {
 
 .product-category.product {
   text-align: center; }
+  .product-category.product img {
+    border-radius: var(--border-radius); }
 
 .product-loop-image-wrapper {
   position: relative;

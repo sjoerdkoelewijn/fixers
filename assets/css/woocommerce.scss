@@ -1160,6 +1160,10 @@
   
   .product-category.product {
     text-align: center;
+
+    img {
+      border-radius: var(--border-radius);
+    }
   }
   
   .product-loop-image-wrapper {
