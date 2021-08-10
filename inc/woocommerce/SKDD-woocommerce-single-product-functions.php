@@ -739,7 +739,7 @@ if ( ! function_exists( 'SKDD_single_product_tags' ) ) {
 					
 				<p class="header">
 
-					<?php esc_attr_e( 'This product can be used to', 'SKDD' ); ?>
+					<?php esc_attr_e( 'Industrial usages for this product include:', 'SKDD' ); ?>
 					
 				</p>
 

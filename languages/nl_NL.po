@@ -2116,8 +2116,8 @@ msgstr ""
 "nog maar %1$s op voorraad en je hebt er al %2$s in je winkelwagen"
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:742
-msgid "This product can be used to"
-msgstr "Dit product kan gebruikt worden om te  "
+msgid "Industrial usages for this product include:"
+msgstr "Industriele toepassingen voor dit product zijn oa:  "
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:282
 msgid "Remove this item"
