@@ -372,7 +372,7 @@ class SKDD_Get_CSS {
 				.page-header{
 					'. $page_header_background_image .'					
 					'. $page_header_margin .'
-					position:relative;
+					
 				}				
 
 				.page-header .entry-title{
