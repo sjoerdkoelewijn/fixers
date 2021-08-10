@@ -3282,7 +3282,7 @@ form.woocommerce-checkout {
   padding-bottom: var(--page-header-padding-bottom);
   margin-bottom: var(--page-header-margin-bottom);
 
-  .page-header:before {
+  &:before {
     content:"";	
     background:#000000;
     position:absolute;
@@ -3303,6 +3303,7 @@ form.woocommerce-checkout {
     width:var(--content-width);
     max-width:100%;
     z-index:1;
+    text-shadow: 1px 1px 3px #000000;
 
     @include uhd {
       width:calc(var(--content-width) * 1.2);
