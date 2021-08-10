@@ -746,8 +746,7 @@ form {
 
   input, select {
     width:100%;
-    background:var(--background-color);
-    border: 1px solid var(--offset-color);
+    background: var(--second-background-color);
     border-radius:3px;
     padding:11px 17px;
     
@@ -775,8 +774,7 @@ form {
 
   textarea {
     width:100%;
-    background:var(--background-color);
-    border: 1px solid var(--offset-color);
+    background: var(--second-background-color);
     border-radius:3px;
     font-size:90%;
     color:var(--text-color);
