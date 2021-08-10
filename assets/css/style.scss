@@ -3409,8 +3409,8 @@ form.woocommerce-checkout {
     position: absolute;
     top: 50%;
     background: #fff;
-    width: 50px;
-    height: 58px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: var(--text-color);
     border: 0;
@@ -3436,6 +3436,7 @@ form.woocommerce-checkout {
   
   .tns-controls [data-controls="prev"]:before {
     content: "\e64a";
+    position: absolute;
   }
   
   .tns-controls [data-controls="next"] {
@@ -3444,6 +3445,7 @@ form.woocommerce-checkout {
   
   .tns-controls [data-controls="next"]:before {
     content: "\e649";
+    position: absolute;
   }
 
 .tns-outer {
