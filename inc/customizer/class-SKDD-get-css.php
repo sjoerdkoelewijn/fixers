@@ -372,6 +372,7 @@ class SKDD_Get_CSS {
 				.page-header{
 					'. $page_header_background_image .'					
 					'. $page_header_margin .'
+					position:relative;
 				}
 
 				.page-header:before {
@@ -381,7 +382,8 @@ class SKDD_Get_CSS {
 					top:0;
 					bottom:0;
 					left:0;
-					right:0;			
+					right:0;
+					z-index:0;			
 					
 				}
 
