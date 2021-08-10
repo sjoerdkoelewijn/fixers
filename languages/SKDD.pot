@@ -2099,7 +2099,7 @@ msgid "You cannot add that amount of this product to the cart. We have %1$s in s
 msgstr ""
 
 #: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:742
-msgid "Industrial usages for this product include:"
+msgid "This product can be used for:"
 msgstr ""
 
 #: inc/woocommerce/SKDD-woocommerce-template-functions.php:282
