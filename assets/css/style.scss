@@ -3408,8 +3408,7 @@ form.woocommerce-checkout {
   .tns-controls [data-controls] {
     position: absolute;
     top: 50%;
-    background: #fff;
-    width: 40px;
+    background: rgba(255, 255, 255, 0.8);
     height: 75px;
     border-radius: 50%;
     color: var(--text-color);
