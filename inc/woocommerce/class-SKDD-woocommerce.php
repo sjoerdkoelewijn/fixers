@@ -39,6 +39,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_scripts' ), 200 );
 			add_filter( 'body_class', array( $this, 'woocommerce_body_class' ) );
+			$options    = SKDD_options( false );
 
 			// GENERAL.			
 			add_action( 'init', 'SKDD_detect_clear_cart_submit' );
@@ -123,15 +124,18 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			if (function_exists('rank_math_the_breadcrumbs')) {				
 				
 				add_action( 'wp', 'custom_rank_math_the_breadcrumbs' );	
-				add_action( 'SKDD_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				if ( $options['shop_taxonomy_page_description_placement'] === 'under_breadcrumb') { 
+					add_action( 'SKDD_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				}				
 				add_filter( 'woocommerce_breadcrumb_defaults', 'SKDD_modifided_woocommerce_breadcrumb' );
-				add_filter( 'woocommerce_get_breadcrumb', 'SKDD_get_modifided_woocommerce_breadcrumb' );
-				
+				add_filter( 'woocommerce_get_breadcrumb', 'SKDD_get_modifided_woocommerce_breadcrumb' );				
 
 			} else {
 
 				add_action( 'wp', 'SKDD_breadcrumb_for_product_page' );
-				add_action( 'SKDD_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				if ( $options['shop_taxonomy_page_description_placement'] === 'under_breadcrumb') { 
+					add_action( 'SKDD_page_header_breadcrumb', 'woocommerce_taxonomy_archive_description', 30 );
+				}
 				add_filter( 'woocommerce_breadcrumb_defaults', 'SKDD_modifided_woocommerce_breadcrumb' );
 				add_filter( 'woocommerce_get_breadcrumb', 'SKDD_get_modifided_woocommerce_breadcrumb' );
 
@@ -139,8 +143,15 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			
 			// Archive Page
 
-			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
+			if ( $options['shop_taxonomy_page_description_placement'] === 'above_products') { 
+				add_action( 'woocommerce_before_main_content', 'woocommerce_taxonomy_archive_description', 10 );
+			}
 
+			if ( $options['shop_taxonomy_page_description_placement'] === 'below_products') { 
+				add_action( 'woocommerce_after_main_content', 'woocommerce_taxonomy_archive_description', 10 );
+			}
+
+			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
 
 			add_action( 'woocommerce_single_product_summary', 'SKDD_trust_badge_image', 200 );
 			add_action( 'template_redirect', 'SKDD_product_recently_viewed', 20 );

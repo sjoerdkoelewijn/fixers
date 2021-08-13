@@ -228,6 +228,61 @@ $wp_customize->add_control(
 	)
 );
 
+
+
+// TAXONOMY ARCHIVE PAGE SECTION.
+$wp_customize->add_setting(
+	'shop_taxonomy_page_section',
+	array(
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Section_Control(
+		$wp_customize,
+		'shop_taxonomy_page_section',
+		array(
+			'label'      => __( 'Taxonomy Page', 'SKDD' ),
+			'section'    => 'SKDD_shop_page',
+			'dependency' => array(
+				'SKDD_setting[shop_taxonomy_page_description_placement]',
+			),
+		)
+	)
+);
+
+// Description Placement.
+$wp_customize->add_setting(
+	'SKDD_setting[shop_page_product_alignment]',
+	array(
+		'default'           => $defaults['shop_taxonomy_page_description_placement'],
+		'sanitize_callback' => 'SKDD_sanitize_choices',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'SKDD_setting[shop_taxonomy_page_description_placement]',
+		array(
+			'label'    => __( 'Description Placement', 'SKDD' ),
+			'section'  => 'SKDD_shop_page',
+			'settings' => 'SKDD_setting[shop_taxonomy_page_description_placement]',
+			'type'     => 'select',
+			'choices'  => apply_filters(
+				'SKDD_setting_shop_taxonomy_page_description_placement_choices',
+				array(
+					'under_breadcrumb'   => __( 'Under Breadcrumb', 'SKDD' ),
+					'above_products' => __( 'Above Products', 'SKDD' ),
+					'below_products'  => __( 'Below Products', 'SKDD' ),
+				)
+			),
+		)
+	)
+);
+
+
+
 // PRODUCT CONTENT SECTION.
 $wp_customize->add_setting(
 	'shop_page_product_meta_section',
