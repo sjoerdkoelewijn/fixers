@@ -1211,12 +1211,14 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 			 
 			$price_per_kilo = $product_price / $product_packaging_weight;
 
-			$after_price = '<span class="price_per_kilo"> (€ '. $price_per_kilo .' <sup>/ kg</sup>) </span>';
+			$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. $price_per_kilo .' <span class="unit">/ kg </span>) </span>';
 		
 		} elseif ( $options['single_product_weight'] === 'gram' ) {
 
-			$after_price = '<span class="price_per_gram"> / gr </span>';
-		
+			$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
+
+			$after_price = '<span class="price_per_weight price_per_gram"> (€ '. $price_per_gram .' <span class="unit">/ kg </span>) </span>';
+				
 		}		
 		
 		return $price . $after_price;	
