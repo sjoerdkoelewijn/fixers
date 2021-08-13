@@ -451,7 +451,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				);
 			}
 			// Import woocommerce css if applicable
-			if ( class_exists( 'woocommerce' )  && is_woocommerce() ) {
+			if ( class_exists( 'woocommerce' ) /* && is_woocommerce() */ ) {
 				wp_enqueue_style(
 					'SKDD-woocommerce-style',
 					SKDD_THEME_URI . 'assets/css/woocommerce.css',
