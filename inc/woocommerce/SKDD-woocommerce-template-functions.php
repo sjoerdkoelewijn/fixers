@@ -1196,6 +1196,8 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 	function custom_template_single_product_weight($price) {
 		$options = SKDD_options( false );
 		global $product;
+		$product_packaging_weight = $product->get_weight();
+		$product_price = $product->get_price();
 		
 		if ( $options['single_product_weight'] === 'none') {
 
@@ -1203,15 +1205,17 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 
 		} elseif ( $options['single_product_weight'] === 'actual' ) {
 
-			$after_price = '<span class="price_per_weight"> / ' . $product->get_weight() . ' kg </span>';
+			$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
 
 		} elseif ( $options['single_product_weight'] === 'kilo' ) {
+			 
+			$price_per_kilo = $product_price / $product_packaging_weight 
 
-			$after_price = '<span class="price_per_weight"> / kg </span>';
+			$after_price = '<span class="price_per_kilo"> ('. $price_per_kilo .' / kg) </span>';
 		
 		} elseif ( $options['single_product_weight'] === 'gram' ) {
 
-			$after_price = '<span class="price_per_weight"> / gr </span>';
+			$after_price = '<span class="price_per_gram"> / gr </span>';
 		
 		}		
 		
