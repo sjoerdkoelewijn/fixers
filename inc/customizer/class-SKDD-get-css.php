@@ -428,6 +428,18 @@ class SKDD_Get_CSS {
 
 			';
 
+			if ( $options['single_product_weight'] ) {
+
+				$styles .= '
+				
+					.woocommerce-product-attributes-item--weight {
+						display:none;
+					}
+
+				';
+
+			}
+
 			// Product card.
 			if ( 'none' !== $options['shop_page_product_card_border_style'] ) {
 				$styles .= '
