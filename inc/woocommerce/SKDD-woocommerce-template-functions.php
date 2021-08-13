@@ -1191,17 +1191,29 @@ if ( ! function_exists( 'custom_template_single_add_to_cart' ) ) {
 
 if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 	/**
-	 * Add 
+	 * TODO convert to switch statement
 	 */
 	function custom_template_single_product_weight($price) {
 		$options = SKDD_options( false );
 		global $product;
 		
-		if ( $options['single_product_weight'] ) {
+		if ( $options['single_product_weight'] === 'none') {
+
+			return;
+
+		} elseif ( $options['single_product_weight'] === 'actual' ) {
 
 			$after_price = '<span class="price_per_weight"> / ' . $product->get_weight() . ' kg </span>';
 
-		}
+		} elseif ( $options['single_product_weight'] === 'kilo' ) {
+
+			$after_price = '<span class="price_per_weight"> / kg </span>';
+		
+		} elseif ( $options['single_product_weight'] === 'gram' ) {
+
+			$after_price = '<span class="price_per_weight"> / gr </span>';
+		
+		}		
 		
 		return $price . $after_price;	
 		

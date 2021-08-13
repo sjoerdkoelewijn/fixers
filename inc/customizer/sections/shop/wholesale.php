@@ -43,12 +43,12 @@ $wp_customize->add_setting(
 	[
 		'default'           => $defaults['single_product_weight'],
 		'type'              => 'option',
-		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
 	]
 );
 
 $wp_customize->add_control(
-	new SKDD_Switch_Control(
+	new WP_Customize_Control(
 		$wp_customize,
 		'SKDD_setting[single_product_weight]',
 		[
@@ -56,6 +56,16 @@ $wp_customize->add_control(
 			'description' => __( 'Show the per weight after the price so customers know how much they pay per kilo', 'SKDD' ),
 			'settings'    => 'SKDD_setting[single_product_weight]',
 			'section'     => 'SKDD_wholesale_page',
+			'type'     => 'select',
+			'choices'  => apply_filters(
+				'SKDD_setting_single_product_weight_choices',
+				array(
+					'none'   => __( 'Do not show', 'SKDD' ),
+					'actual' => __( 'Show actual amount', 'SKDD' ),
+					'kilo'  => __( 'Show per kilo', 'SKDD' ),
+					'gram'  => __( 'Show per gram', 'SKDD' ),
+				)
+			),
 		]
 	)
 );
