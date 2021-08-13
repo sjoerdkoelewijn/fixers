@@ -29,7 +29,7 @@ $large-uhd-width: 3840px;
 }
 
 @mixin tablet-down {
-    @media (max-width: #{$small-desktop-width}) {
+    @media (max-width: #{$small-desktop-width - 1}) {
         @content;
     }
 }
