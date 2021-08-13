@@ -253,7 +253,7 @@ $wp_customize->add_control(
 
 // Description Placement.
 $wp_customize->add_setting(
-	'SKDD_setting[shop_page_product_alignment]',
+	'SKDD_setting[shop_taxonomy_page_description_placement]',
 	array(
 		'default'           => $defaults['shop_taxonomy_page_description_placement'],
 		'sanitize_callback' => 'SKDD_sanitize_choices',
