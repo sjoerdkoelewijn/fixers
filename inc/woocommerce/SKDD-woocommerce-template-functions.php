@@ -1198,30 +1198,34 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 		global $product;
 		$product_packaging_weight = $product->get_weight();
 		$product_price = $product->get_price();
-		
-		if ( $options['single_product_weight'] === 'none') {
 
-			return;
+		if ( $product->get_weight() != null && $product->get_price() !=null ) {
 
-		} elseif ( $options['single_product_weight'] === 'actual' ) {
+			if ( $options['single_product_weight'] === 'none') {
 
-			$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
+				return;
+	
+			} elseif ( $options['single_product_weight'] === 'actual' ) {
+	
+				$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
+	
+			} elseif ( $options['single_product_weight'] === 'kilo' ) {
+				 
+				$price_per_kilo = $product_price / $product_packaging_weight;
+	
+				$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. $price_per_kilo .' <span class="unit">/ kg </span>) </span>';
+			
+			} elseif ( $options['single_product_weight'] === 'gram' ) {
+	
+				$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
+	
+				$after_price = '<span class="price_per_weight price_per_gram"> (€ '. $price_per_gram .' <span class="unit">/ kg </span>) </span>';
+					
+			}		
+			
+			return $price . $after_price;
 
-		} elseif ( $options['single_product_weight'] === 'kilo' ) {
-			 
-			$price_per_kilo = $product_price / $product_packaging_weight;
-
-			$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. $price_per_kilo .' <span class="unit">/ kg </span>) </span>';
-		
-		} elseif ( $options['single_product_weight'] === 'gram' ) {
-
-			$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
-
-			$after_price = '<span class="price_per_weight price_per_gram"> (€ '. $price_per_gram .' <span class="unit">/ kg </span>) </span>';
-				
-		}		
-		
-		return $price . $after_price;	
+		}
 		
 	}
 }
