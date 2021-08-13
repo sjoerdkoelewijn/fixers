@@ -1197,7 +1197,6 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 		$options = SKDD_options( false );
 		global $product;
 		$product_packaging_weight = $product->get_weight();
-		$product_price = $product->get_price();
 		
 		if ( $options['single_product_weight'] === 'none') {
 
@@ -1211,7 +1210,7 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 			 
 			
 
-			$after_price = '<span class="price_per_kilo"> ('. $price_per_kilo .' / kg) </span>';
+			$after_price = '<span class="price_per_kilo"> / kg </span>';
 		
 		} elseif ( $options['single_product_weight'] === 'gram' ) {
 
