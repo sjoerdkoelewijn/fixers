@@ -4255,6 +4255,8 @@ form.woocommerce-checkout {
       @include tablet-down {
         flex-direction: column !important;
         align-items: left !important;
+        ms-flex-align: left !important;
+        -ms-flex-direction: column !important;
 
         .cc-compliance {
           margin-top:20px !important;
