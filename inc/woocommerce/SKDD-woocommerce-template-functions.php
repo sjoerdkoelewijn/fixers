@@ -1209,9 +1209,9 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 
 		} elseif ( $options['single_product_weight'] === 'kilo' ) {
 			 
-			$price_per_kilo = 750 / 15;
+			$price_per_kilo = $product_price / 15;
 
-			$after_price = '<span class="price_per_kilo"> ('. $price_per_kilo .' / kg) </span>';
+			$after_price = '<span class="price_per_kilo"> (€ '. $price_per_kilo .' / kg) </span>';
 		
 		} elseif ( $options['single_product_weight'] === 'gram' ) {
 
