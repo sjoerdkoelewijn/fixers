@@ -4340,7 +4340,7 @@
   
   .term-description {
     margin-top:var(--content-spacing);
-    margin-bottom:var(--vertical-content-spacing);
+    margin-bottom:calc(var(--content-spacing) * 2);
     color:var(--body-text-color);
   }
 
