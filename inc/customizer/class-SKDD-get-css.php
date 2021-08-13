@@ -193,7 +193,7 @@ class SKDD_Get_CSS {
 				.alignfull {
 					margin-left:calc(var(--content-spacing) * -0.5);
 				}
-				.site_content {
+				.site_content, .page-header .content-align-left {
 					max-width:var(--content-width);
 					margin:0 calc(var(--content-spacing) / 2);
 				}
@@ -205,7 +205,7 @@ class SKDD_Get_CSS {
 			}
 			
 			@media (min-width: '. esc_attr( $options['container_width'] ) .') {
-				.site_content {
+				.site_content, .page-header .content-align-left {
 					max-width: ' . esc_attr( $options['container_width'] ) . ';
 					margin:0 auto;
 				}

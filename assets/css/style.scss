@@ -1318,6 +1318,20 @@ form {
  
 }
 
+.page-header .content-align-left {
+  max-width:var(--content-width);
+  margin:0 auto;
+
+  @include uhd {
+    max-width:calc(var(--content-width) * 1.2);
+  }
+
+  @include phone {
+    max-width:94vw !important;
+    margin: 0 auto !important;
+  }
+}
+
 .loop-post-inner {
   padding:0;
 }
