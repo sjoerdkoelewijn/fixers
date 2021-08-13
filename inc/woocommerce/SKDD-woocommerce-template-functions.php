@@ -1209,7 +1209,7 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 
 		} elseif ( $options['single_product_weight'] === 'kilo' ) {
 			 
-			$price_per_kilo = $product_price / $product_packaging_weight 
+			
 
 			$after_price = '<span class="price_per_kilo"> ('. $price_per_kilo .' / kg) </span>';
 		
