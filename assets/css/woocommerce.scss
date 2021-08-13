@@ -1681,11 +1681,18 @@
   .variations select {
     display: block;
     clear: both;
-    height: 36px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: #fff;
     position: static !important;
+  }
+
+  .variation-Availableas {
+    p {
+      margin:0;
+      line-height: 18px;
+      font-size:16px;
+    }
   }
   
   .variations label {
