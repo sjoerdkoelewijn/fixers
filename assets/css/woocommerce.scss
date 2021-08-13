@@ -4340,8 +4340,7 @@
   
   .term-description {
     margin-top:var(--content-spacing);
-    margin-bottom:var(--content-spacing);
-    max-width:750px;
+    margin-bottom:var(--vertical-content-spacing);
     color:var(--body-text-color);
   }
 
@@ -4351,7 +4350,7 @@
   
   .term-description {
     margin-top:var(--content-spacing);
-    max-width:750px;
+    max-width:800px;
     color:var(--background-color);
   }
 
