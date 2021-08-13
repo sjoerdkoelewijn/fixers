@@ -460,6 +460,16 @@ if ( ! class_exists( 'SKDD' ) ) {
 				);
 			}
 
+			// Import woocommerce css if applicable
+			if ( class_exists( 'ghostkit' ) && is_woocommerce() ) {
+				wp_enqueue_style(
+					'ghostkit-block-grid-css',
+					'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
+					array(),
+					SKDD_version()
+				);
+			}
+
 			/**
 			 * Styles
 			 */
