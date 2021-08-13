@@ -275,7 +275,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				// WHOLESALE
 				'only_show_price_when_logged_in'          => false,
 				'single_product_weight'					  => 'none',
-				'shop_taxonomy_page_description_placement'=> 'above_products',
+				'shop_taxonomy_page_description_placement' => 'above_products',
+				'wc_tab_order'							  => 'default',
 				// CHECKOUT PAGE.
 				'checkout_distraction_free'               => false,
 				'checkout_multi_step'                     => false,

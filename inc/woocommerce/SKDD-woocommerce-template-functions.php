@@ -1229,3 +1229,25 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 		
 	}
 }
+
+
+if ( ! function_exists( 'SKDD_change_tabs_order' ) ) {
+
+function SKDD_change_tabs_order( $tabs ) {
+	$options = SKDD_options( false );
+
+	if ( $options['wc_tab_order'] === 'specs_first') { 
+
+		$tabs['additional_information']['priority'] = 5;
+
+	} elseif ( $options['wc_tab_order'] === 'reviews_first' ) {
+
+		$tabs['reviews']['priority'] = 5;
+
+	}	
+
+	return $tabs;
+
+}
+
+}

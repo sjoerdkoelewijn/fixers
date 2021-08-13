@@ -470,6 +470,8 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			add_filter( 'woocommerce_get_price_html', 'custom_template_single_product_weight' );
 
+			add_filter( 'woocommerce_product_tabs', 'SKDD_change_tabs_order', 98 );
+
 			add_action( 'woocommerce_single_product_summary', 'custom_template_single_title', 5 );
 			
 			add_action( 'woocommerce_before_main_content', 'SKDD_before_content', 10 );

@@ -69,3 +69,35 @@ $wp_customize->add_control(
 		]
 	)
 );
+
+// Tab Order
+$wp_customize->add_setting(
+	'SKDD_setting[wc_tab_order]',
+	[
+		'default'           => $defaults['wc_tab_order'],
+		'type'              => 'option',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
+	]
+);
+
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'SKDD_setting[wc_tab_order]',
+		[
+			'label'       => __( 'Add weight to price', 'SKDD' ),
+			'description' => __( 'Show the per weight after the price so customers know how much they pay per kilo', 'SKDD' ),
+			'settings'    => 'SKDD_setting[wc_tab_order]',
+			'section'     => 'SKDD_wholesale_page',
+			'type'     => 'select',
+			'choices'  => apply_filters(
+				'SKDD_setting_wc_tab_order_choices',
+				array(
+					'default'   => __( 'Default Order', 'SKDD' ),
+					'specs_first' => __( 'Product Specs First', 'SKDD' ),
+					'reviews_first' => __( 'Product Reviews First', 'SKDD' ),
+				)
+			),
+		]
+	)
+);
