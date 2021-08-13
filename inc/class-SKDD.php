@@ -460,7 +460,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				);
 			}
 
-			// Import woocommerce css if applicable
+			// load ghostkit grid css on woocommerce pages if applicable
 			if ( class_exists( 'ghostkit' ) && is_woocommerce() ) {
 				wp_enqueue_style(
 					'ghostkit-block-grid-css',
