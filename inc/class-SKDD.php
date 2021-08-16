@@ -462,16 +462,28 @@ if ( ! class_exists( 'SKDD' ) ) {
 				}	
 			}
 
-			// load ghostkit grid css on woocommerce pages if applicable
+			// load ghostkit grid css on woocommerce and other pages if applicable
 			if ( class_exists( 'ghostkit' ) ) {
-				if (is_woocommerce() || is_404() || is_search()) {
+
+				if ( SKDD_is_woocommerce_activated() ) { 
+
+					if (is_woocommerce() ) {
+						wp_enqueue_style(
+							'ghostkit-block-grid-css',
+							'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
+							array(),
+							SKDD_version()
+						);
+					}
+
+				} elseif ( is_404() || is_search() ) {
 					wp_enqueue_style(
 						'ghostkit-block-grid-css',
 						'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
 						array(),
 						SKDD_version()
 					);
-				}
+				}				
 			}
 
 			/**
