@@ -461,13 +461,15 @@ if ( ! class_exists( 'SKDD' ) ) {
 			}
 
 			// load ghostkit grid css on woocommerce pages if applicable
-			if ( class_exists( 'ghostkit' ) && is_woocommerce() ) {
-				wp_enqueue_style(
-					'ghostkit-block-grid-css',
-					'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
-					array(),
-					SKDD_version()
-				);
+			if ( class_exists( 'ghostkit' ) ) {
+				if (is_woocommerce() || is_404() || is_search()) {
+					wp_enqueue_style(
+						'ghostkit-block-grid-css',
+						'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
+						array(),
+						SKDD_version()
+					);
+				}
 			}
 
 			/**
