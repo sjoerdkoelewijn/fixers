@@ -1753,7 +1753,8 @@ form {
 .site_header {    
     background:var(--header-background-color);
     z-index:199;
-    max-width:100vw;  
+    max-width:100vw; 
+    position:relative; 
     
     .site_header_top {
         background:var(--primary-color);
