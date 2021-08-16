@@ -451,13 +451,15 @@ if ( ! class_exists( 'SKDD' ) ) {
 				);
 			}
 			// Import woocommerce css if applicable
-			if ( class_exists( 'woocommerce' ) && is_woocommerce() ) {
-				wp_enqueue_style(
-					'SKDD-woocommerce-style',
-					SKDD_THEME_URI . 'assets/css/woocommerce.css',
-					array(),
-					SKDD_version()
-				);
+			if ( class_exists( 'woocommerce' )) {
+				if is_woocommerce() {
+					wp_enqueue_style(
+						'SKDD-woocommerce-style',
+						SKDD_THEME_URI . 'assets/css/woocommerce.css',
+						array(),
+						SKDD_version()
+					);
+				}	
 			}
 
 			// load ghostkit grid css on woocommerce pages if applicable
