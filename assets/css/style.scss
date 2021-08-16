@@ -3720,6 +3720,10 @@ form.woocommerce-checkout {
 
   @include phone {
     position:relative;
+
+    ol.has-background, ul.has-background {
+      padding: 0;
+    }
   }
    
 
