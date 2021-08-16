@@ -401,6 +401,18 @@ ul, ol, ol.has-background, ul.has-background {
 ul.is-style-align-right {
   direction:rtl;
   list-style-type:none;
+
+  @include phone{
+    direction:ltr;
+  }
+}
+
+.has-text-align-right {
+
+  @include phone{
+    text-align:left;
+  }
+  
 }
 
 
