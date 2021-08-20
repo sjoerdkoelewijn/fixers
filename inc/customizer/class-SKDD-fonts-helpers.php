@@ -292,12 +292,8 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 			}
 
 			// Create our URL using the arguments.
-
-			if ( class_exists( 'OMGF' ) ) {
-				$fonts_url = '/wp-content/uploads/omgf/SKDD-fonts/SKDD-fonts.css';
-			} else {
-				$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
-			}			
+			$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+					
 
 			// Enqueue our fonts.
 			if ( $google_fonts ) {
