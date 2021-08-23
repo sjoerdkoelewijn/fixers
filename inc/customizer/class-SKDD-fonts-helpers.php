@@ -298,7 +298,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 			// Enqueue our fonts.
 			if ( $google_fonts ) {
 				wp_enqueue_style(
-					'SKDD-fonts',
+					'skdd-fonts',
 					$fonts_url,
 					array(),
 					SKDD_version()
