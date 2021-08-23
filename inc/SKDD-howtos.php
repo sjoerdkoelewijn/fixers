@@ -13,7 +13,7 @@ if ( ! class_exists( 'SKDD_customer_service_submenu' ) ) {
           'customer-service',
           'Customer Service',
           'administrator',
-          'SKDD-customer-service',
+          'skdd-customer-service',
           'SKDD_customer_service_page' );
   }
 

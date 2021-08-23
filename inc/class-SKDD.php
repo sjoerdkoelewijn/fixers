@@ -53,7 +53,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		 */
 		public function SKDD_includes() {
 			// Nav menu walker.
-			require_once SKDD_THEME_DIR . 'inc/class-SKDD-walker-menu.php';			
+			require_once SKDD_THEME_DIR . 'inc/class-skdd-walker-menu.php';			
 		}
 		
  	
@@ -137,7 +137,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 			 */
 
-			// Loads wp-content/languages/themes/SKDD-it_IT.mo.
+			// Loads wp-content/languages/themes/skdd-it_IT.mo.
 			load_theme_textdomain( 'SKDD', WP_LANG_DIR . '/themes/' );
 
 			// Loads wp-content/themes/child-theme-name/languages/it_IT.mo.
@@ -260,37 +260,37 @@ if ( ! class_exists( 'SKDD' ) ) {
 				array(
 					array(
 						'name'  => __( 'Primary Color', 'SKDD' ),
-						'slug'  => 'SKDD-primary-theme',
+						'slug'  => 'skdd-primary-theme',
 						'color' => $options['theme_color'],
 					),
 					array(
 						'name'  => __( 'Secondary Color', 'SKDD' ),
-						'slug'  => 'SKDD-secondary-theme',
+						'slug'  => 'skdd-secondary-theme',
 						'color' => $options['secondary_theme_color'],
 					),
 					array(
 						'name'  => __( 'Tertiary Color', 'SKDD' ),
-						'slug'  => 'SKDD-tertiary-theme',
+						'slug'  => 'skdd-tertiary-theme',
 						'color' => $options['tertiary_theme_color'],
 					),
 					array(
 						'name'  => __( 'Background Color', 'SKDD' ),
-						'slug'  => 'SKDD-background',
+						'slug'  => 'skdd-background',
 						'color' => $options['background_color'],
 					),
 					array(
 						'name'  => __( 'Secondary Background Color', 'SKDD' ),
-						'slug'  => 'SKDD-secondary-background',
+						'slug'  => 'skdd-secondary-background',
 						'color' => $options['second_background_color'],
 					),
 					array(
 						'name'  => __( 'Text Color', 'SKDD' ),
-						'slug'  => 'SKDD-text',
+						'slug'  => 'skdd-text',
 						'color' => $options['text_color'],
 					),		
 					array(
 						'name'  => __( 'Offset Color', 'SKDD' ),
-						'slug'  => 'SKDD-offset',
+						'slug'  => 'skdd-offset',
 						'color' => $options['offset_color'],
 					),				
 				)
@@ -303,32 +303,32 @@ if ( ! class_exists( 'SKDD' ) ) {
 					array(
 						'name' => __( 'H6', 'SKDD' ),
 						'size' => $options['heading_h6_font_size'],
-						'slug' => 'SKDD-heading-6',
+						'slug' => 'skdd-heading-6',
 					),
 					array(
 						'name' => __( 'H5', 'SKDD' ),
 						'size' => $options['heading_h5_font_size'],
-						'slug' => 'SKDD-heading-5',
+						'slug' => 'skdd-heading-5',
 					),
 					array(
 						'name' => __( 'H4', 'SKDD' ),
 						'size' => $options['heading_h4_font_size'],
-						'slug' => 'SKDD-heading-4',
+						'slug' => 'skdd-heading-4',
 					),
 					array(
 						'name' => __( 'H3', 'SKDD' ),
 						'size' => $options['heading_h3_font_size'],
-						'slug' => 'SKDD-heading-3',
+						'slug' => 'skdd-heading-3',
 					),
 					array(
 						'name' => __( 'H2', 'SKDD' ),
 						'size' => $options['heading_h2_font_size'],
-						'slug' => 'SKDD-heading-2',
+						'slug' => 'skdd-heading-2',
 					),
 					array(
 						'name' => __( 'H1', 'SKDD' ),
 						'size' => $options['heading_h1_font_size'],
-						'slug' => 'SKDD-heading-1',
+						'slug' => 'skdd-heading-1',
 					),
 				)
 			);
@@ -347,7 +347,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		 */
 		public function SKDD_widgets_init() {
 			// SKDD widgets.
-			require_once SKDD_THEME_DIR . 'inc/widget/class-SKDD-recent-post-thumbnail.php';
+			require_once SKDD_THEME_DIR . 'inc/widget/class-skdd-recent-post-thumbnail.php';
 
 			// Setup.
 			$sidebar_args['sidebar'] = array(
@@ -444,7 +444,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			// Import parent theme if using child-theme.
 			if ( is_child_theme() ) {
 				wp_enqueue_style(
-					'SKDD-parent-style',
+					'skdd-parent-style',
 					get_template_directory_uri() . '/style.css',
 					array(),
 					SKDD_version()
@@ -454,7 +454,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			if ( SKDD_is_woocommerce_activated() ) {
 				if ( is_woocommerce() ) {
 					wp_enqueue_style(
-						'SKDD-woocommerce-style',
+						'skdd-woocommerce-style',
 						SKDD_THEME_URI . 'assets/css/woocommerce.css',
 						array(),
 						SKDD_version()
@@ -490,7 +490,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			 * Styles
 			 */
 			wp_enqueue_style(
-				'SKDD-style',
+				'skdd-style',
 				SKDD_THEME_URI . 'assets/css/style.css',
 				array(),
 				SKDD_version()
@@ -498,7 +498,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			if ( is_rtl() ) {
 				wp_enqueue_style(
-					'SKDD-rtl',
+					'skdd-rtl',
 					SKDD_THEME_URI . 'rtl.css',
 					array(),
 					SKDD_version()
@@ -506,7 +506,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			}
 
 			wp_enqueue_style(
-				'SKDD-small-screen-styles',
+				'skdd-small-screen-styles',
 				SKDD_THEME_URI . 'assets/css/small-screens.css',
 				array(),
 				SKDD_version(),
@@ -514,7 +514,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			);	
 			
 			wp_enqueue_style(
-				'SKDD-large-screen-styles',
+				'skdd-large-screen-styles',
 				SKDD_THEME_URI . 'assets/css/large-screens.css',
 				array(),
 				SKDD_version(),
@@ -528,7 +528,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			if ( 'ie' === SKDD_browser_detection() ) {
 				// Fetch API polyfill.
 				wp_enqueue_script(
-					'SKDD-fetch-api-polyfill',
+					'skdd-fetch-api-polyfill',
 					SKDD_THEME_URI . 'assets/js/fetch-api-polyfill' . SKDD_suffix() . '.js',
 					array(),
 					SKDD_version(),
@@ -537,7 +537,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 				// Foreach polyfill.
 				wp_enqueue_script(
-					'SKDD-for-each-polyfill',
+					'skdd-for-each-polyfill',
 					SKDD_THEME_URI . 'assets/js/for-each-polyfill' . SKDD_suffix() . '.js',
 					array(),
 					SKDD_version(),
@@ -547,7 +547,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// General script.
 			wp_enqueue_script(
-				'SKDD-general',
+				'skdd-general',
 				SKDD_THEME_URI . 'assets/js/general' . SKDD_suffix() . '.js',
 				array( 'jquery' ),
 				SKDD_version(),
@@ -557,7 +557,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		
 			// Mobile menu.
 			wp_enqueue_script(
-				'SKDD-navigation',
+				'skdd-navigation',
 				SKDD_THEME_URI . 'assets/js/navigation' . SKDD_suffix() . '.js',
 				array( 'jquery' ),
 				SKDD_version(),
@@ -566,7 +566,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Quantity button.
 			wp_register_script(
-				'SKDD-quantity-button',
+				'skdd-quantity-button',
 				SKDD_THEME_URI . 'assets/js/woocommerce/quantity-button' . SKDD_suffix() . '.js',
 				array(),
 				SKDD_version(),
@@ -575,7 +575,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Multi step checkout.
 			wp_register_script(
-				'SKDD-multi-step-checkout',
+				'skdd-multi-step-checkout',
 				SKDD_THEME_URI . 'assets/js/woocommerce/multi-step-checkout' . SKDD_suffix() . '.js',
 				array(),
 				SKDD_version(),
@@ -587,7 +587,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				$price    = (float) $wc_total['total'] - (float) $wc_total['discount_total'];
 
 				wp_localize_script(
-					'SKDD-multi-step-checkout',
+					'skdd-multi-step-checkout',
 					'SKDD_multi_step_checkout',
 					array(
 						'ajax_none'     => wp_create_nonce( 'SKDD_update_checkout_nonce' ),
@@ -600,7 +600,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Woocommerce sidebar for mobile.
 			wp_register_script(
-				'SKDD-woocommerce-sidebar',
+				'skdd-woocommerce-sidebar',
 				SKDD_THEME_URI . 'assets/js/woocommerce/woocommerce-sidebar' . SKDD_suffix() . '.js',
 				array(),
 				SKDD_version(),
@@ -609,9 +609,9 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Woocommerce.
 			wp_register_script(
-				'SKDD-woocommerce',
+				'skdd-woocommerce',
 				SKDD_THEME_URI . 'assets/js/woocommerce/woocommerce' . SKDD_suffix() . '.js',
-				array( 'jquery', 'SKDD-quantity-button' ),
+				array( 'jquery', 'skdd-quantity-button' ),
 				SKDD_version(),
 				true
 			);
@@ -620,7 +620,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 			// Product variations.
 			wp_register_script(
-				'SKDD-product-variation',
+				'skdd-product-variation',
 				SKDD_THEME_URI . 'assets/js/woocommerce/product-variation' . SKDD_suffix() . '.js',
 				array( 'jquery' ),
 				SKDD_version(),
@@ -679,7 +679,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 
 				// Product images ( Tiny slider ).
 				wp_register_script(
-					'SKDD-product-images',
+					'skdd-product-images',
 					SKDD_THEME_URI . 'assets/js/woocommerce/product-images' . SKDD_suffix() . '.js',
 					array( 'jquery', 'tiny-slider' ),
 					SKDD_version(),
@@ -702,7 +702,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			// Ajax single add to cart.
 			if ( $options['shop_single_ajax_add_to_cart'] ) {
 				wp_register_script(
-					'SKDD-single-add-to-cart',
+					'skdd-single-add-to-cart',
 					SKDD_THEME_URI . 'assets/js/woocommerce/ajax-single-add-to-cart' . SKDD_suffix() . '.js',
 					array(),
 					SKDD_version(),
@@ -802,7 +802,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		 */
 		public function SKDD_customize_live_preview() {
 			wp_enqueue_script(
-				'SKDD-customizer-preview',
+				'skdd-customizer-preview',
 				SKDD_THEME_URI . 'assets/js/customizer-preview' . SKDD_suffix() . '.js',
 				array( 'jquery' ),
 				SKDD_version(),

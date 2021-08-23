@@ -177,7 +177,7 @@ if ( ! function_exists( 'SKDD_sorting_wrapper' ) ) {
 	 * @return  void
 	 */
 	function SKDD_sorting_wrapper() {
-		echo '<div class="SKDD-sorting">';
+		echo '<div class="skdd-sorting">';
 	}
 }
 
@@ -445,7 +445,7 @@ if ( ! function_exists( 'SKDD_modifided_woocommerce_breadcrumb' ) ) {
 	 */
 	function SKDD_modifided_woocommerce_breadcrumb( $default ) {
 		$default['delimiter']   = '<span class="item-bread delimiter">' . apply_filters( 'SKDD_breadcrumb_delimiter', '&#47;' ) . '</span>';
-		$default['wrap_before'] = '<nav class="SKDD-breadcrumb">';
+		$default['wrap_before'] = '<nav class="skdd-breadcrumb">';
 		$default['wrap_after']  = '</nav>';
 		$default['before']      = '<span class="item-bread">';
 		$default['after']       = '</span>';
@@ -607,7 +607,7 @@ if ( ! function_exists( 'SKDD_print_out_of_stock_label' ) ) {
 
 		if ( 'outofstock' === $out_of_stock ) {
 			?>
-			<span class="SKDD-out-of-stock-label position-<?php echo esc_attr( $options['shop_page_out_of_stock_position'] ); ?> <?php echo esc_attr( $is_square ); ?>"><?php echo esc_html( $options['shop_page_out_of_stock_text'] ); ?></span>
+			<span class="skdd-out-of-stock-label position-<?php echo esc_attr( $options['shop_page_out_of_stock_position'] ); ?> <?php echo esc_attr( $is_square ); ?>"><?php echo esc_html( $options['shop_page_out_of_stock_text'] ); ?></span>
 			<?php
 		}
 	}
@@ -657,7 +657,7 @@ if ( ! function_exists( 'SKDD_change_sale_flash' ) ) {
 				return;
 			}
 
-			$classes[] = 'SKDD-tag-on-sale onsale';
+			$classes[] = 'skdd-tag-on-sale onsale';
 			$classes[] = 'sale-' . $options['shop_page_sale_tag_position'];
 			$classes[] = $options['shop_page_sale_square'] ? 'is-square' : '';
 			?>
@@ -684,7 +684,7 @@ if ( ! function_exists( 'SKDD_product_video_button_play' ) ) {
 
 		if ( 'default' !== $video_url ) {
 			?>
-			<a href="<?php echo esc_url( $video_url ); ?>" data-lity class="ti-control-play SKDD-lightbox-button"></a>
+			<a href="<?php echo esc_url( $video_url ); ?>" data-lity class="ti-control-play skdd-lightbox-button"></a>
 			<?php
 		}
 	}
@@ -1096,13 +1096,13 @@ if ( ! function_exists( 'SKDD_checkout_before_order_review' ) ) {
 		$cart_count = sprintf( /* translators: 1: single item, 2: plural items */ _n( '%s item', '%s items', count( $cart ), 'SKDD' ), count( $cart ) );
 		?>
 
-		<div class="SKDD-before-order-review">
-			<div class="SKDD-before-order-review-summary">
+		<div class="skdd-before-order-review">
+			<div class="skdd-before-order-review-summary">
 				<strong><?php esc_html_e( 'Order Summary', 'SKDD' ); ?></strong>
-				<span class="SKDD-before-order-review-cart-count">(<?php echo esc_html( $cart_count ); ?>)</span>
+				<span class="skdd-before-order-review-cart-count">(<?php echo esc_html( $cart_count ); ?>)</span>
 			</div>
-			<span class="SKDD-before-order-review-total-price"><?php wc_cart_totals_order_total_html(); ?></span>
-			<span class="SKDD-before-order-review-icon ti-angle-down"></span>
+			<span class="skdd-before-order-review-total-price"><?php wc_cart_totals_order_total_html(); ?></span>
+			<span class="skdd-before-order-review-icon ti-angle-down"></span>
 		</div>
 		<?php
 	}

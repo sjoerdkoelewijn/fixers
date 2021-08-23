@@ -1,12 +1,12 @@
-.customize-control-SKDD-color .wp-picker-open+.wp-picker-input-wrap {
+.customize-control-skdd-color .wp-picker-open+.wp-picker-input-wrap {
 	display: inline-flex;
 }
 
-.customize-control-SKDD-color .SKDD-color-picker-alpha.wp-color-picker {
+.customize-control-skdd-color .skdd-color-picker-alpha.wp-color-picker {
 	max-width: 96px;
 	line-height: 17px;
 }
 
-.customize-control-SKDD-color .wp-picker-clear {
+.customize-control-skdd-color .wp-picker-clear {
 	margin-left: 2%;
 }

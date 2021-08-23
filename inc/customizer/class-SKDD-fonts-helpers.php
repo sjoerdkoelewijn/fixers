@@ -71,7 +71,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 		 */
 		public function SKDD_do_control_inline_scripts() {
 			wp_localize_script(
-				'SKDD-typography-customizer',
+				'skdd-typography-customizer',
 				'SKDD_customize',
 				array(
 					'nonce' => wp_create_nonce( 'SKDD_customize_nonce' ),
@@ -79,7 +79,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 			);
 
 			wp_localize_script(
-				'SKDD-typography-customizer',
+				'skdd-typography-customizer',
 				'typography_defaults',
 				$this->SKDD_typography_default_fonts()
 			);

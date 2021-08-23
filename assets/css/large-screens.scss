@@ -127,7 +127,7 @@
       position: absolute;
 }
 
-.SKDD-nav-menu-widget .SKDD-toggle-nav-menu-button, .SKDD-nav-menu-widget .site-search, .SKDD-nav-menu-widget .SKDD-nav-menu-account-action {
+.skdd-nav-menu-widget .skdd-toggle-nav-menu-button, .skdd-nav-menu-widget .site-search, .skdd-nav-menu-widget .skdd-nav-menu-account-action {
     display: none;
 }
 
@@ -361,8 +361,8 @@
 }
 
 
-.has-header-layout-1 .site-navigation .site-search:not(.SKDD-search-form-widget),
-.has-header-layout-1 .site-navigation .mobile-my-account, .has-header-layout-2 .site-navigation .site-search:not(.SKDD-search-form-widget),
+.has-header-layout-1 .site-navigation .site-search:not(.skdd-search-form-widget),
+.has-header-layout-1 .site-navigation .mobile-my-account, .has-header-layout-2 .site-navigation .site-search:not(.skdd-search-form-widget),
 .has-header-layout-2 .site-navigation .mobile-my-account {
     display: none;
 }

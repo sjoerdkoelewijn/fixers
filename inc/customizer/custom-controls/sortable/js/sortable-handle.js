@@ -6,7 +6,7 @@
 
 'use strict';
 
-wp.customize.controlConstructor['SKDD-sortable'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['skdd-sortable'] = wp.customize.Control.extend({
 	ready: function() {
 		var control = this;
 
@@ -26,7 +26,7 @@ wp.customize.controlConstructor['SKDD-sortable'] = wp.customize.Control.extend({
 	dragend: function() {
 		var control  = this,
 			selector = document.querySelector( control.selector ),
-			input     = selector ? selector.querySelector( '.SKDD-sortable-control-value' ) : false;
+			input     = selector ? selector.querySelector( '.skdd-sortable-control-value' ) : false;
 
 		if ( ! input ) {
 			return;
@@ -43,7 +43,7 @@ wp.customize.controlConstructor['SKDD-sortable'] = wp.customize.Control.extend({
 	initSortable: function() {
 		var control  = this,
 			selector = document.querySelector( control.selector ),
-			list     = selector ? selector.querySelector( '.SKDD-sortable-control-list' ) : false;
+			list     = selector ? selector.querySelector( '.skdd-sortable-control-list' ) : false;
 
 		if ( ! list ) {
 			return;
@@ -58,14 +58,14 @@ wp.customize.controlConstructor['SKDD-sortable'] = wp.customize.Control.extend({
 	updateState: function() {
 		var control  = this,
 			selector = document.querySelector( control.selector ),
-			input    = selector ? selector.querySelectorAll( '.SKDD-sortable-control-list [type=checkbox]' ) : [];
+			input    = selector ? selector.querySelectorAll( '.skdd-sortable-control-list [type=checkbox]' ) : [];
 
 		if ( ! input.length ) {
 			return;
 		}
 
 		input.forEach( function( el ) {
-			var parentInput = el.closest( '.SKDD-sortable-list-item' ),
+			var parentInput = el.closest( '.skdd-sortable-list-item' ),
 				label       = el.closest( '.sortable-item-icon-visibility' );
 
 			el.addEventListener( 'click', function() {
@@ -96,7 +96,7 @@ wp.customize.controlConstructor['SKDD-sortable'] = wp.customize.Control.extend({
 		var control  = this,
 			newValue = [],
 			selector = document.querySelector( control.selector ),
-			list     = selector ? selector.querySelectorAll( '.SKDD-sortable-list-item' ) : [];
+			list     = selector ? selector.querySelectorAll( '.skdd-sortable-list-item' ) : [];
 
 		if ( ! list.length ) {
 			return;

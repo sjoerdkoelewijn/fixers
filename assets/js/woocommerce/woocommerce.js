@@ -59,7 +59,7 @@ var SKDDConditionScrolling = function() {
 
 // Stock progress bar.
 var SKDDStockQuantityProgressBar = function() {
-	var selector = document.querySelectorAll( '.SKDD-single-product-stock-progress-bar' );
+	var selector = document.querySelectorAll( '.skdd-single-product-stock-progress-bar' );
 	if ( ! selector.length ) {
 		return;
 	}

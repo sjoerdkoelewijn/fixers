@@ -33,7 +33,7 @@ function productVariation( selector, form ) {
 	}
 
 	// Support Product meta widget.
-	var productMetaSku        = document.querySelector( '.elementor-widget-SKDD-product-meta .sku' ),
+	var productMetaSku        = document.querySelector( '.elementor-widget-skdd-product-meta .sku' ),
 		productMetaSkuDefault = productMetaSku ? productMetaSku.innerHTML : '',
 		wpmGtinCodeWrapper    = document.querySelector( '.wpm_gtin_code_wrapper .wpm_pgw_code' );
 
@@ -88,8 +88,8 @@ function productVariation( selector, form ) {
 
 			var jsSelector    = document.querySelector( selector ),
 				productImages = jsSelector ? jsSelector.querySelector( '.product-images' ) : false,
-				outStockLabel = productImages ? productImages.querySelector( '.SKDD-out-of-stock-label' ) : false,
-				onSaleLabel   = productImages ? productImages.querySelector( '.SKDD-tag-on-sale' ) : false;
+				outStockLabel = productImages ? productImages.querySelector( '.skdd-out-of-stock-label' ) : false,
+				onSaleLabel   = productImages ? productImages.querySelector( '.skdd-tag-on-sale' ) : false;
 
 			// In stock.
 			if ( inStock ) {
@@ -113,7 +113,7 @@ function productVariation( selector, form ) {
 					onSaleLabel.innerHTML = '-' + Math.round( ( ( variation.display_regular_price - variation.display_price ) / variation.display_regular_price ) * 100 ) + '%';
 				}
 			} else if ( SKDD_woocommerce_variable_product_data ) {
-				var outStockLabelHtml = '<span class="SKDD-out-of-stock-label position-' + SKDD_woocommerce_variable_product_data.out_of_stock_display + ' ' + SKDD_woocommerce_variable_product_data.out_of_stock_square + '">' + SKDD_woocommerce_variable_product_data.out_of_stock_text + '</span>';
+				var outStockLabelHtml = '<span class="skdd-out-of-stock-label position-' + SKDD_woocommerce_variable_product_data.out_of_stock_display + ' ' + SKDD_woocommerce_variable_product_data.out_of_stock_square + '">' + SKDD_woocommerce_variable_product_data.out_of_stock_text + '</span>';
 
 				if ( ! outStockLabel ) {
 					productImages.insertAdjacentHTML( 'beforeend', outStockLabelHtml );

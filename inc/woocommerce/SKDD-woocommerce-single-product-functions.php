@@ -108,7 +108,7 @@ if ( ! function_exists( 'SKDD_product_navigation' ) ) {
 		}
 		?>
 
-		<div class="SKDD-product-navigation <?php echo esc_attr( $classes ); ?>">
+		<div class="skdd-product-navigation <?php echo esc_attr( $classes ); ?>">
 			<?php echo $content; // phpcs:ignore ?>
 		</div>
 		<?php
@@ -285,14 +285,14 @@ if ( ! function_exists( 'SKDD_global_for_vartiation_gallery' ) ) {
 
 		// SKDD Variation gallery.
 		wp_localize_script(
-			'SKDD-product-variation',
+			'skdd-product-variation',
 			'SKDD_variation_gallery',
 			SKDD_get_variation_gallery( $product )
 		);
 
 		// SKDD default gallery.
 		wp_localize_script(
-			'SKDD-product-variation',
+			'skdd-product-variation',
 			'SKDD_default_gallery',
 			SKDD_get_default_gallery( $product )
 		);
@@ -499,12 +499,12 @@ if ( ! function_exists( 'SKDD_modified_quantity_stock' ) ) {
 		ob_start();
 		if ( $limit >= $number || ! $limit ) {
 			?>
-				<div class="SKDD-single-product-stock stock">
+				<div class="skdd-single-product-stock stock">
 
 					<?php
 					if ( $options['shop_single_stock_label'] ) {
 						?>
-							<span class="SKDD-single-product-stock-label">
+							<span class="skdd-single-product-stock-label">
 								<?php echo esc_html( sprintf( /* translators: %s stock quantity */ __( 'Hurry! only %s left in stock.', 'SKDD' ), $stock_quantity ) ); ?>
 							</span>
 						<?php
@@ -512,8 +512,8 @@ if ( ! function_exists( 'SKDD_modified_quantity_stock' ) ) {
 
 					if ( $options['shop_single_loading_bar'] ) {
 						?>
-							<div class="SKDD-product-stock-progress">
-								<span class="SKDD-single-product-stock-progress-bar" data-number="<?php echo esc_attr( $number ); ?>"></span>
+							<div class="skdd-product-stock-progress">
+								<span class="skdd-single-product-stock-progress-bar" data-number="<?php echo esc_attr( $number ); ?>"></span>
 							</div>
 						<?php
 					}
@@ -538,7 +538,7 @@ if ( ! function_exists( 'SKDD_trust_badge_image' ) ) {
 			return;
 		}
 		?>
-		<div class="SKDD-trust-badge-box">
+		<div class="skdd-trust-badge-box">
 			<img src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Trust Badge Image', 'SKDD' ); ?>">
 		</div>
 		<?php
@@ -600,10 +600,10 @@ if ( ! function_exists( 'SKDD_product_recently_viewed_template' ) ) {
 		}
 		?>
 
-		<div class="SKDD-product-recently-viewed-section recently_viewed">
+		<div class="skdd-product-recently-viewed-section recently_viewed">
 			<div class="recently_viewed_inner">
-				<div class="SKDD-product-recently-viewed-inner">
-					<h2 class="SKDD-product-recently-viewed-title"><?php echo esc_html( $options['shop_single_recently_viewed_title'] ); ?></h2>
+				<div class="skdd-product-recently-viewed-inner">
+					<h2 class="skdd-product-recently-viewed-title"><?php echo esc_html( $options['shop_single_recently_viewed_title'] ); ?></h2>
 					<?php
 					woocommerce_product_loop_start();
 

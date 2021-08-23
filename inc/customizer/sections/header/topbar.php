@@ -180,10 +180,10 @@ $wp_customize->add_control(
 			'choices'  => apply_filters(
 				'SKDD_setting_topbar_layout_choices',
 				array(
-					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexstart.jpg',
-					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexend.jpg',
-					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexcenter.jpg',
-					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-topbar-flexspacebetween.jpg',
+					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexstart.jpg',
+					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexend.jpg',
+					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexcenter.jpg',
+					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexspacebetween.jpg',
 				)
 			),
 		)

@@ -1,5 +1,5 @@
-.SKDD-font-weight,
-.SKDD-font-transform{
+.skdd-font-weight,
+.skdd-font-transform{
     float: left;
     width: 50%;
     clear: none;
@@ -8,7 +8,7 @@
     line-height: 20px;
 }
 
-.SKDD-font-weight select {
+.skdd-font-weight select {
     border-right: 0;
 }
 

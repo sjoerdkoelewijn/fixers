@@ -6,7 +6,7 @@
 
 'use strict';
 
-wp.customize.controlConstructor['SKDD-section'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['skdd-section'] = wp.customize.Control.extend({
 	/**
 	 * Ready
 	 */
@@ -58,9 +58,9 @@ wp.customize.controlConstructor['SKDD-section'] = wp.customize.Control.extend({
 			}
 
 			if ( 1 === state ) {
-				depenSelector.classList.add( 'SKDD-section-hide' );
+				depenSelector.classList.add( 'skdd-section-hide' );
 			} else {
-				depenSelector.classList.remove( 'SKDD-section-hide' );
+				depenSelector.classList.remove( 'skdd-section-hide' );
 			}
 		}
 	}

@@ -121,7 +121,7 @@ add_action( 'SKDD_page_after', 'SKDD_display_comments', 10 );
 
 
 
-// Template builder. See inc/SKDD-template-builder.php.
+// Template builder. See inc/skdd-template-builder.php.
 add_action( 'SKDD_theme_single', 'SKDD_template_single' );
 add_action( 'SKDD_theme_archive', 'SKDD_template_archive' );
 add_action( 'SKDD_theme_404', 'SKDD_template_404' );

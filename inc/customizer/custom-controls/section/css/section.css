@@ -1,17 +1,17 @@
-.customize-control-SKDD-section {
+.customize-control-skdd-section {
 	transition-duration: 0.3s;
 }
 
-.customize-control-SKDD-section.active,
-.customize-control-SKDD-section:hover {
+.customize-control-skdd-section.active,
+.customize-control-skdd-section:hover {
 	box-shadow: 0 3px 8px -7px #777;
 }
 
-.customize-control-SKDD-section.active .SKDD-section-control-arrow:before {
+.customize-control-skdd-section.active .skdd-section-control-arrow:before {
 	transform: rotate( 90deg );
 }
 
-.SKDD-section-control {
+.skdd-section-control {
 	user-select: none;
 	background-color: #fff;
 	margin: 0 -12px;
@@ -23,11 +23,11 @@
 	cursor: pointer;
 }
 
-.SKDD-section-control .SKDD-section-control-label {
+.skdd-section-control .skdd-section-control-label {
 	text-transform: uppercase;
 }
 
-.SKDD-section-control .SKDD-section-control-arrow {
+.skdd-section-control .skdd-section-control-arrow {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -40,7 +40,7 @@
 	height: auto;
 }
 
-.SKDD-section-control .SKDD-section-control-arrow:before {
+.skdd-section-control .skdd-section-control-arrow:before {
 	transition-duration: 0.1s;
 }
 

@@ -32,7 +32,7 @@ function closeAll() {
 	}
 
 	// Use overlay.
-	var overlay = document.getElementById( 'SKDD-overlay' );
+	var overlay = document.getElementById( 'skdd-overlay' );
 
 	if ( overlay ) {
 		overlay.addEventListener(

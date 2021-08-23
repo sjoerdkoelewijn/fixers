@@ -39,14 +39,14 @@ class SKDD_Radio_Image_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_style(
-			'SKDD-radio-image-control',
+			'skdd-radio-image-control',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/radio-image/css/radio-image.css',
 			[],
 			SKDD_version()
 		);
 
 		wp_enqueue_script(
-			'SKDD-radio-image',
+			'skdd-radio-image',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/radio-image/js/radio-image.js',
 			[],
 			SKDD_version(),

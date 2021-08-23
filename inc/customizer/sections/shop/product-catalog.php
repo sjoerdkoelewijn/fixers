@@ -42,7 +42,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[products_per_row]',
 		array(
-			'type'     => 'SKDD-range-slider',
+			'type'     => 'skdd-range-slider',
 			'label'    => __( 'Products Per Row', 'SKDD' ),
 			'section'  => 'woocommerce_product_catalog',
 			'settings' => array(

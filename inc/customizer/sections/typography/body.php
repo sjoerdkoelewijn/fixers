@@ -119,7 +119,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[body_font_size]',
 		array(
-			'type'     => 'SKDD-range-slider',
+			'type'     => 'skdd-range-slider',
 			'label'    => __( 'Font Size', 'SKDD' ),
 			'section'  => 'body_font_section',
 			'settings' => array(
@@ -190,7 +190,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[body_line_height]',
 		array(
-			'type'           => 'SKDD-range-slider',
+			'type'           => 'skdd-range-slider',
 			'description'    => __( 'Line Height', 'SKDD' ),
 			'section'        => 'body_font_section',
 			'settings'       => array(

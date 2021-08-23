@@ -1,10 +1,10 @@
-.customize-control-SKDD-range-slider .SKDD-range-slider-areas .range-option-area .wrapper {
+.customize-control-skdd-range-slider .skdd-range-slider-areas .range-option-area .wrapper {
 	display: flex;
 	width: 100%;
 	align-items: center;
 }
 
-.customize-control-SKDD-range-slider .SKDD-slider {
+.customize-control-skdd-range-slider .skdd-slider {
 	flex-grow: 1;
 	position: relative;
 	height: 6px;
@@ -15,7 +15,7 @@
 	margin-right: 15px;
 }
 
-.customize-control-SKDD-range-slider .SKDD_range_value {
+.customize-control-skdd-range-slider .SKDD_range_value {
 	font-size: 14px;
 	padding: 0;
 	font-weight: 400;
@@ -25,11 +25,11 @@
 	align-items: center;
 }
 
-.customize-control-SKDD-range-slider .SKDD_range_value input {
+.customize-control-skdd-range-slider .SKDD_range_value input {
 	min-width: 50px;
 }
 
-.customize-control-SKDD-range-slider .SKDD-slider .ui-slider-handle {
+.customize-control-skdd-range-slider .skdd-slider .ui-slider-handle {
 	height: 16px;
 	width: 16px;
 	background-color: #3498D9;
@@ -42,7 +42,7 @@
 	cursor: pointer;
 }
 
-.customize-control-SKDD-range-slider .SKDD_range_value span.value {
+.customize-control-skdd-range-slider .SKDD_range_value span.value {
 	font-size: 12px;
 	width: calc(100% - 2px);
 	text-align: center;
@@ -52,13 +52,13 @@
 	border: 1px solid #DDD;
 }
 
-.customize-control-SKDD-range-slider .has-unit .SKDD_range_value span.value {
+.customize-control-skdd-range-slider .has-unit .SKDD_range_value span.value {
 	width: calc(100% - 32px);
 	float: left;
 	display: block;
 }
 
-.customize-control-SKDD-range-slider .SKDD_range_value .unit {
+.customize-control-skdd-range-slider .SKDD_range_value .unit {
 	width: 29px;
 	display: block;
 	float: left;
@@ -74,23 +74,23 @@
 	margin-left: 5px;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-slider-reset span {
+.customize-control-skdd-range-slider .skdd-range-slider-reset span {
 	font-size: 16px;
 	line-height: 22px;
 }
 
-.customize-control-SKDD-range-slider .SKDD_range_value input {
+.customize-control-skdd-range-slider .SKDD_range_value input {
 	font-size: 12px;
 	padding: 0px;
 	text-align: center;
 	height: 24px;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-title-info {
+.customize-control-skdd-range-slider .skdd-range-title-info {
 	display: inline-block;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-title-area .dashicons {
+.customize-control-skdd-range-slider .skdd-range-title-area .dashicons {
 	cursor: pointer;
 	font-size: 11px;
 	width: 20px;
@@ -102,19 +102,19 @@
 	top: 2px;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-title-area .dashicons:hover {
+.customize-control-skdd-range-slider .skdd-range-title-area .dashicons:hover {
 	background: #fafafa;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-title-area .dashicons.selected {
+.customize-control-skdd-range-slider .skdd-range-title-area .dashicons.selected {
 	background: #fff;
 	color: #222;
 }
 
-.customize-control-SKDD-range-slider .SKDD-range-slider-controls {
+.customize-control-skdd-range-slider .skdd-range-slider-controls {
 	float: right;
 }
 
-.customize-control-SKDD-range-slider .SKDD-device-controls>span:first-child:last-child {
+.customize-control-skdd-range-slider .skdd-device-controls>span:first-child:last-child {
 	display: none;
 }

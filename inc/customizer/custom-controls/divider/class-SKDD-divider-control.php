@@ -35,7 +35,7 @@ class SKDD_Divider_Control extends WP_Customize_Control {
 	 */
 	public function render_content() {
 		?>
-		<div class="SKDD-divider-customize-control">
+		<div class="skdd-divider-customize-control">
 			<?php
 			switch ( $this->type ) {
 				case 'text':

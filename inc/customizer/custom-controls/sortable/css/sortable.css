@@ -1,8 +1,8 @@
-.SKDD-sortable-control-list {
+.skdd-sortable-control-list {
 	position: relative !important;
 }
 
-.SKDD-sortable-list-item {
+.skdd-sortable-list-item {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -12,21 +12,21 @@
 	background-color: #fafafa;
 }
 
-.SKDD-sortable-list-item {
+.skdd-sortable-list-item {
 	border: 1px dashed #ccc;
 }
 
-.SKDD-sortable-list-item * {
+.skdd-sortable-list-item * {
 	color: #aaa
 }
 
-.SKDD-sortable-list-item.checked {
+.skdd-sortable-list-item.checked {
 	border-style: solid;
 	border-color: #333;
 	background-color: #fff;
 }
 
-.SKDD-sortable-list-item.checked * {
+.skdd-sortable-list-item.checked * {
 	color: #686868;
 }
 
@@ -41,17 +41,17 @@
 	pointer-events: none;
 }
 
-.SKDD-sortable-list-item.active{
+.skdd-sortable-list-item.active{
 	visibility: hidden;
 }
 
-.SKDD-sortable-control-list .dragging{
+.skdd-sortable-control-list .dragging{
 	margin-top: 0;
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 999;
 }
 
-.SKDD-sortable-control-list .sortable-item-input {
+.skdd-sortable-control-list .sortable-item-input {
 	display: none;
 }

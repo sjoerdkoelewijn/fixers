@@ -20,7 +20,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'SKDD-range-slider';
+	public $type = 'skdd-range-slider';
 
 	/**
 	 * Description
@@ -68,7 +68,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'SKDD-range-slider',
+			'skdd-range-slider',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/range/js/slider-control.js',
 			array( 'jquery', 'customize-base', 'jquery-ui-slider' ),
 			SKDD_version(),
@@ -76,7 +76,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 		);
 
 		wp_enqueue_style(
-			'SKDD-range-slider',
+			'skdd-range-slider',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/range/css/slider-customizer.css',
 			array(),
 			SKDD_version()
@@ -95,10 +95,10 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 	 */
 	protected function content_template() {
 		?>
-		<div class="SKDD-range-slider-control">
-			<div class="SKDD-range-title-area">
+		<div class="skdd-range-slider-control">
+			<div class="skdd-range-title-area">
 				<# if ( data.label || data.description ) { #>
-				<div class="SKDD-range-title-info">
+				<div class="skdd-range-title-info">
 					<# if ( data.label ) { #>
 					<span class="customize-control-title">{{{ data.label }}}</span>
 					<# } #>
@@ -109,26 +109,26 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 				</div>
 				<# } #>
 
-				<div class="SKDD-range-slider-controls">
-					<span class="SKDD-device-controls">
+				<div class="skdd-range-slider-controls">
+					<span class="skdd-device-controls">
 						<# if ( 'undefined' !== typeof( data.desktop ) ) { #>
-							<span class="SKDD-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
+							<span class="skdd-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof( data.tablet ) ) { #>
-							<span class="SKDD-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
+							<span class="skdd-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof( data.mobile ) ) { #>
-							<span class="SKDD-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
+							<span class="skdd-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
 						<# } #>
 					</span>
 
-					<span title="{{ data.reset_label }}" class="SKDD-reset dashicons dashicons-image-rotate"></span>
+					<span title="{{ data.reset_label }}" class="skdd-reset dashicons dashicons-image-rotate"></span>
 				</div>
 			</div>
 
-			<div class="SKDD-range-slider-areas">
+			<div class="skdd-range-slider-areas">
 				<# if
 					( 'undefined' !== typeof( data.desktop ) ) {
 					var attrDesktop = ! data.choices['desktop']['edit'] ? 'disabled' : '';
@@ -143,7 +143,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="SKDD-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
+						<div class="skdd-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>
@@ -162,7 +162,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="SKDD-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
+						<div class="skdd-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>
@@ -181,7 +181,7 @@ class SKDD_Range_Slider_Control extends WP_Customize_Control {
 							<# } #>
 						</div>
 
-						<div class="SKDD-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
+						<div class="skdd-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
 					</div>
 				</label>
 				<# } #>

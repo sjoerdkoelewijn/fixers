@@ -28,10 +28,10 @@ $wp_customize->add_control(
 			'choices'  => apply_filters(
 				'SKDD_setting_header_layout_choices',
 				array(
-					'layout-1' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-1.jpg',
-					'layout-2' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-2.jpg',
-					'layout-3' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-3.jpg',
-					'layout-4' => SKDD_THEME_URI . 'assets/images/customizer/header/SKDD-header-4.jpg',
+					'layout-1' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-header-1.jpg',
+					'layout-2' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-header-2.jpg',
+					'layout-3' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-header-3.jpg',
+					'layout-4' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-header-4.jpg',
 				)
 			),
 		)

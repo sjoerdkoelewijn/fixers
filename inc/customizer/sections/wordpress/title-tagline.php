@@ -84,7 +84,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[logo_width]',
 		array(
-			'type'     => 'SKDD-range-slider',
+			'type'     => 'skdd-range-slider',
 			'label'    => __( 'Logo Width', 'SKDD' ),
 			'section'  => 'title_tagline',
 			'settings' => array(

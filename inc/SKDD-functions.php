@@ -46,7 +46,7 @@ if ( ! function_exists( 'SKDD_info' ) ) {
 	 * @param      string $output  The output.
 	 */
 	function SKDD_info( $output ) {
-		$output .= ' data-SKDD-version="' . SKDD_version() . '"';
+		$output .= ' data-skdd-version="' . SKDD_version() . '"';
 
 		return $output;
 	}

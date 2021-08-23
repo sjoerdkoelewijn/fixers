@@ -158,7 +158,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[parent_menu_font_size]',
 		array(
-			'type'           => 'SKDD-range-slider',
+			'type'           => 'skdd-range-slider',
 			'description'    => __( 'Font Size', 'SKDD' ),
 			'section'        => 'menu_font_section',
 			'settings'       => array(
@@ -229,7 +229,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[parent_menu_line_height]',
 		array(
-			'type'           => 'SKDD-range-slider',
+			'type'           => 'skdd-range-slider',
 			'description'    => __( 'Line Height', 'SKDD' ),
 			'section'        => 'menu_font_section',
 			'settings'       => array(
@@ -341,7 +341,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sub_menu_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'Font Size', 'SKDD' ),
 			'section'     => 'menu_font_section',
 			'settings'    => array(
@@ -412,7 +412,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[sub_menu_line_height]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'Line Height', 'SKDD' ),
 			'section'     => 'menu_font_section',
 			'settings'    => array(

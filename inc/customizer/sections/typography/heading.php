@@ -99,7 +99,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_line_height]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'Line Height', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -193,7 +193,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h1_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H1', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -264,7 +264,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h2_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H2', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -335,7 +335,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h3_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H3', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -406,7 +406,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h4_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H4', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -477,7 +477,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h5_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H5', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(
@@ -546,7 +546,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[heading_h6_font_size]',
 		array(
-			'type'        => 'SKDD-range-slider',
+			'type'        => 'skdd-range-slider',
 			'description' => __( 'H6', 'SKDD' ),
 			'section'     => 'heading_font_section',
 			'settings'    => array(

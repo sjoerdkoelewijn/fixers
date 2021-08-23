@@ -30,7 +30,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 		 */
 		public function SKDD_customize_controls_scripts() {
 			wp_enqueue_script(
-				'SKDD-condition-control',
+				'skdd-condition-control',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/conditional/js/condition.js',
 				array(),
 				SKDD_version(),
@@ -43,7 +43,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 		 */
 		public function SKDD_customize_controls_styles() {
 			wp_enqueue_style(
-				'SKDD-condition-control',
+				'skdd-condition-control',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/conditional/css/condition.css',
 				array(),
 				SKDD_version()

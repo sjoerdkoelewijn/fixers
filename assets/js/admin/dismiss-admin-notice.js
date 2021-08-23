@@ -10,7 +10,7 @@
 
 // Dismiss admin notice.
 var dismiss = function() {
-	var notice = document.querySelectorAll( '.SKDD-admin-notice' );
+	var notice = document.querySelectorAll( '.skdd-admin-notice' );
 	if ( ! notice.length ) {
 		return;
 	}

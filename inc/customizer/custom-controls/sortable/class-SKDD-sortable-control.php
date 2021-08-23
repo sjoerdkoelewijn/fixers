@@ -19,7 +19,7 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'SKDD-sortable';
+	public $type = 'skdd-sortable';
 
 	/**
 	 * Description
@@ -35,7 +35,7 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'SKDD-sortable',
+			'skdd-sortable',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable.js',
 			[],
 			SKDD_version(),
@@ -43,15 +43,15 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 		);
 
 		wp_enqueue_script(
-			'SKDD-sortable-handle',
+			'skdd-sortable-handle',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/js/sortable-handle.js',
-			[ 'SKDD-sortable' ],
+			[ 'skdd-sortable' ],
 			SKDD_version(),
 			true
 		);
 
 		wp_enqueue_style(
-			'SKDD-sortable',
+			'skdd-sortable',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/sortable/css/sortable.css',
 			[],
 			SKDD_version()
@@ -89,7 +89,7 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 				return;
 			}
 		#>
-		<div class="SKDD-sortable-control">
+		<div class="skdd-sortable-control">
 			<# if ( data.label ) { #>
 				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
@@ -98,12 +98,12 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 				<span class="description customize-control-description">{{ data.description }}</span>
 			<# } #>
 
-			<div class="SKDD-sortable-control-list">
+			<div class="skdd-sortable-control-list">
 				<#
 					_.each( data.value, function( choiceID ) {
 						var _choiceId = data.id + '_' + choiceID;
 					#>
-					<div class="SKDD-sortable-list-item checked" data-value="{{{ choiceID }}}">
+					<div class="skdd-sortable-list-item checked" data-value="{{{ choiceID }}}">
 						<label class="sortable-item-icon-visibility dashicons dashicons-visibility" for="{{{ _choiceId }}}">
 							<input class="sortable-item-input" type="checkbox" name="{{{ _choiceId }}}" id="{{{ _choiceId }}}" checked="checked">
 						</label>
@@ -120,7 +120,7 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 							return;
 						}
 					#>
-					<div class="SKDD-sortable-list-item" data-value="{{{ value }}}">
+					<div class="skdd-sortable-list-item" data-value="{{{ value }}}">
 						<label class="sortable-item-icon-visibility dashicons dashicons-hidden" for="{{{ _id }}}">
 							<input class="sortable-item-input" type="checkbox" name="{{{ _id }}}" id="{{{ _id }}}">
 						</label>
@@ -132,7 +132,7 @@ class SKDD_Sortable_Control extends WP_Customize_Control {
 			<#
 				var _value = ( Array.isArray( data.value ) && data.value.length ) ? data.value.join( ':' ) : '';
 			#>
-			<input type="hidden" value="{{{ _value }}}" class="SKDD-sortable-control-value">
+			<input type="hidden" value="{{{ _value }}}" class="skdd-sortable-control-value">
 		</div>
 		<?php
 	}

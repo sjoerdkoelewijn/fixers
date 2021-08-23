@@ -99,7 +99,7 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 		 */
 		public function SKDD_metabox_assets() {
 			wp_enqueue_style(
-				'SKDD-metabox-setting',
+				'skdd-metabox-setting',
 				SKDD_THEME_URI . 'assets/css/admin/metabox.css',
 				array(),
 				SKDD_version()
@@ -170,14 +170,14 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 			$site_footer = isset( $meta['site-footer']['default'] ) ? $meta['site-footer']['default'] : 'default';
 			?>
 
-			<div class="SKDD-metabox-setting">
+			<div class="skdd-metabox-setting">
 				<?php // Option: Container. ?>
-				<div class="SKDD-metabox-option">
-					<div class="SKDD-metabox-option-title">
+				<div class="skdd-metabox-option">
+					<div class="skdd-metabox-option-title">
 						<span><?php esc_html_e( 'Container', 'SKDD' ); ?>:</span>
 					</div>
 
-					<div class="SKDD-metabox-option-content">
+					<div class="skdd-metabox-option-content">
 						<select name="site-container" id="site-container">
 							<option value="default" <?php selected( $site_container, 'default' ); ?> >
 								<?php esc_html_e( 'Customizer Setting', 'SKDD' ); ?>
@@ -207,12 +207,12 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 				</div>
 
 				<?php // Option: Sidebar. ?>
-				<div class="SKDD-metabox-option">
-					<div class="SKDD-metabox-option-title">
+				<div class="skdd-metabox-option">
+					<div class="skdd-metabox-option-title">
 						<span><?php esc_html_e( 'Sidebar', 'SKDD' ); ?>:</span>
 					</div>
 
-					<div class="SKDD-metabox-option-content">
+					<div class="skdd-metabox-option-content">
 						<select name="site-sidebar" id="site-sidebar">
 							<option value="default" <?php selected( $site_sidebar, 'default' ); ?> >
 								<?php esc_html_e( 'Customizer Setting', 'SKDD' ); ?>
@@ -234,12 +234,12 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 				</div>
 
 				<?php // Option: Transparent Header. ?>
-				<div class="SKDD-metabox-option">
-					<div class="SKDD-metabox-option-title">
+				<div class="skdd-metabox-option">
+					<div class="skdd-metabox-option-title">
 						<span><?php esc_html_e( 'Transparent Header', 'SKDD' ); ?>:</span>
 					</div>
 
-					<div class="SKDD-metabox-option-content">
+					<div class="skdd-metabox-option-content">
 						<select name="site_header-transparent" id="site_header-transparent">
 							<option value="default" <?php selected( $site_header_transparent, 'default' ); ?> >
 								<?php esc_html_e( 'Customizer Setting', 'SKDD' ); ?>
@@ -257,12 +257,12 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 				</div>
 
 				<?php // Option: Page Header. ?>
-				<div class="SKDD-metabox-option">
-					<div class="SKDD-metabox-option-title">
+				<div class="skdd-metabox-option">
+					<div class="skdd-metabox-option-title">
 						<span><?php esc_html_e( 'Page Header', 'SKDD' ); ?>:</span>
 					</div>
 
-					<div class="SKDD-metabox-option-content">
+					<div class="skdd-metabox-option-content">
 						<select name="site-page-header" id="site-page-header">
 							<option value="default" <?php selected( $site_page_header, 'default' ); ?> >
 								<?php esc_html_e( 'Customizer Setting', 'SKDD' ); ?>
@@ -280,12 +280,12 @@ if ( ! class_exists( 'SKDD_Meta_Boxes' ) ) {
 				</div>
 
 				<?php // Option: Disable Sections - Primary Header, Title, Footer Widgets, Footer Bar. ?>
-				<div class="SKDD-metabox-option">
-					<div class="SKDD-metabox-option-title">
+				<div class="skdd-metabox-option">
+					<div class="skdd-metabox-option-title">
 						<span><?php esc_html_e( 'Disable Sections', 'SKDD' ); ?>:</span>
 					</div>
 
-					<div class="SKDD-metabox-option-content">
+					<div class="skdd-metabox-option-content">
 						<div class="disable-section-meta">
 							<div class="site-topbar-option-wrap">
 								<label for="site-topbar">

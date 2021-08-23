@@ -69,50 +69,50 @@ msgstr "Boodschap"
 msgid "Submit"
 msgstr "Verzenden"
 
-#: inc/SKDD-functions.php:342
+#: inc/skdd-functions.php:342
 msgid "Placeholder image"
 msgstr "Placeholder image"
 
-#: inc/SKDD-functions.php:344
+#: inc/skdd-functions.php:344
 msgid "Error image"
 msgstr "Error image"
 
-#: inc/SKDD-template-functions.php:23
+#: inc/skdd-template-functions.php:23
 msgid "Sjoerd Koelewijn"
 msgstr "Sjoerd Koelewijn"
 
-#: inc/SKDD-template-functions.php:33
+#: inc/skdd-template-functions.php:33
 msgid "ROXTAR Online Marketing"
 msgstr "ROXTAR Online Marketing"
 
-#: inc/SKDD-template-functions.php:72
+#: inc/skdd-template-functions.php:72
 msgid "Related Posts"
 msgstr "Gerelateerde Posts"
 
-#: inc/SKDD-template-functions.php:88
+#: inc/skdd-template-functions.php:88
 msgid "Read more"
 msgstr "Lees meer"
 
-#: inc/SKDD-template-functions.php:126
+#: inc/skdd-template-functions.php:126
 #, php-format
 msgid "%s ago"
 msgstr "%s geleden"
 
-#: inc/SKDD-template-functions.php:168
+#: inc/skdd-template-functions.php:168
 msgid "Your comment is awaiting moderation."
 msgstr "Je reactie wacht op moderatie."
 
-#: inc/SKDD-template-functions.php:194
+#: inc/skdd-template-functions.php:194
 msgid "Edit"
 msgstr "Bewerken"
 
-#: inc/SKDD-template-functions.php:229 inc/SKDD-template-functions.php:244
-#: inc/SKDD-template-functions.php:259 inc/class-SKDD.php:369
+#: inc/skdd-template-functions.php:229 inc/skdd-template-functions.php:244
+#: inc/skdd-template-functions.php:259 inc/class-SKDD.php:369
 msgid "Footer Widget"
 msgstr "Footer Widget"
 
-#: inc/SKDD-template-functions.php:235 inc/SKDD-template-functions.php:250
-#: inc/SKDD-template-functions.php:265
+#: inc/skdd-template-functions.php:235 inc/skdd-template-functions.php:250
+#: inc/skdd-template-functions.php:265
 #, php-format
 msgid ""
 "Replace this widget content by going to <a href=\"%1$s"
@@ -123,360 +123,360 @@ msgstr ""
 "\"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging "
 "widgets into this widget area."
 
-#: inc/SKDD-template-functions.php:285
+#: inc/skdd-template-functions.php:285
 msgid "Copyright &copy; [current_year] [site_title] | Made by [sjoerd_link] |"
 msgstr ""
 "Copyright &copy; [current_year] [site_title] | Gemaakt door [sjoerd_link] |"
 
-#: inc/SKDD-template-functions.php:377 inc/SKDD-template-functions.php:398
+#: inc/skdd-template-functions.php:377 inc/skdd-template-functions.php:398
 msgid "SKDD mobile logo"
 msgstr "SKDD mobile logo"
 
-#: inc/SKDD-template-functions.php:430
+#: inc/skdd-template-functions.php:430
 msgid "SKDD logo"
 msgstr "SKDD logo"
 
-#: inc/SKDD-template-functions.php:521
+#: inc/skdd-template-functions.php:521
 msgid "Primary navigation"
 msgstr "Primary navigation"
 
-#: inc/SKDD-template-functions.php:545
+#: inc/skdd-template-functions.php:545
 msgid "Add a Primary Menu"
 msgstr "Add a Primary Menu"
 
-#: inc/SKDD-template-functions.php:561
+#: inc/skdd-template-functions.php:561
 msgid "Skip to navigation"
 msgstr "Ga door naar navigatie"
 
-#: inc/SKDD-template-functions.php:562
+#: inc/skdd-template-functions.php:562
 msgid "Skip to content"
 msgstr "Ga door naar de content"
 
-#: inc/SKDD-template-functions.php:616 inc/SKDD-template-functions.php:666
-#: inc/SKDD-template-functions.php:733 inc/admin/class-SKDD-admin.php:236
+#: inc/skdd-template-functions.php:616 inc/skdd-template-functions.php:666
+#: inc/skdd-template-functions.php:733 inc/admin/class-skdd-admin.php:236
 msgid "Shop"
 msgstr "Shop"
 
-#: inc/SKDD-template-functions.php:641 inc/SKDD-template-functions.php:688
-#: inc/SKDD-template-functions.php:819 inc/customizer/register-sections.php:17
+#: inc/skdd-template-functions.php:641 inc/skdd-template-functions.php:688
+#: inc/skdd-template-functions.php:819 inc/customizer/register-sections.php:17
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/SKDD-template-functions.php:715
+#: inc/skdd-template-functions.php:715
 #, php-format
 msgid "Daily Archives: %s"
 msgstr "Daily Archives: %s"
 
-#: inc/SKDD-template-functions.php:718
+#: inc/skdd-template-functions.php:718
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr "Monthly Archives: %s"
 
-#: inc/SKDD-template-functions.php:718
+#: inc/skdd-template-functions.php:718
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: inc/SKDD-template-functions.php:728
+#: inc/skdd-template-functions.php:728
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "Yearly Archives: %s"
 
-#: inc/SKDD-template-functions.php:728
+#: inc/skdd-template-functions.php:728
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/SKDD-template-functions.php:730
+#: inc/skdd-template-functions.php:730
 msgid "Search results: "
 msgstr "Zoekresulaten: "
 
-#: inc/SKDD-template-functions.php:735
+#: inc/skdd-template-functions.php:735
 msgid "Tags: "
 msgstr "Tags: "
 
-#: inc/SKDD-template-functions.php:751
+#: inc/skdd-template-functions.php:751
 msgid "Archives"
 msgstr "Archives"
 
-#: inc/SKDD-template-functions.php:797
+#: inc/skdd-template-functions.php:797
 msgid "Orders"
 msgstr "Orders"
 
-#: inc/SKDD-template-functions.php:799
+#: inc/skdd-template-functions.php:799
 msgid "Downloads"
 msgstr "Downloads"
 
-#: inc/SKDD-template-functions.php:801
+#: inc/skdd-template-functions.php:801
 msgid "Account details"
 msgstr "Account details"
 
-#: inc/SKDD-template-functions.php:803
+#: inc/skdd-template-functions.php:803
 msgid "Addresses"
 msgstr "Addresses"
 
-#: inc/SKDD-template-functions.php:805 inc/SKDD-template-functions.php:1899
-#: inc/SKDD-template-functions.php:2058
+#: inc/skdd-template-functions.php:805 inc/skdd-template-functions.php:1899
+#: inc/skdd-template-functions.php:2058
 msgid "Logout"
 msgstr "Logout"
 
-#: inc/SKDD-template-functions.php:807
+#: inc/skdd-template-functions.php:807
 msgid "Lost password"
 msgstr "Wachtwoord vergeten"
 
-#: inc/SKDD-template-functions.php:821
+#: inc/skdd-template-functions.php:821
 msgid "Search"
 msgstr "Zoeken"
 
-#: inc/SKDD-template-functions.php:881 inc/SKDD-template-functions.php:1216
+#: inc/skdd-template-functions.php:881 inc/skdd-template-functions.php:1216
 msgid "Pages:"
 msgstr "Pages:"
 
-#: inc/SKDD-template-functions.php:1196 inc/SKDD-template-functions.php:1242
+#: inc/skdd-template-functions.php:1196 inc/skdd-template-functions.php:1242
 msgid "Read More"
 msgstr "Lees meer"
 
-#: inc/SKDD-template-functions.php:1260
+#: inc/skdd-template-functions.php:1260
 #: inc/customizer/sections/shop/shop-single.php:500
 msgid "Tags"
 msgstr "Tags"
 
-#: inc/SKDD-template-functions.php:1260 inc/SKDD-template-functions.php:1432
+#: inc/skdd-template-functions.php:1260 inc/skdd-template-functions.php:1432
 msgid ", "
 msgstr ", "
 
-#: inc/SKDD-template-functions.php:1282
+#: inc/skdd-template-functions.php:1282
 msgctxt "Next post"
 msgid "Next"
 msgstr "Volgende"
 
-#: inc/SKDD-template-functions.php:1283
+#: inc/skdd-template-functions.php:1283
 msgctxt "Previous post"
 msgid "Prev"
 msgstr "Vorige"
 
-#: inc/SKDD-template-functions.php:1300
+#: inc/skdd-template-functions.php:1300
 msgid "Next post:"
 msgstr "Volgende post:"
 
-#: inc/SKDD-template-functions.php:1301
+#: inc/skdd-template-functions.php:1301
 msgid "Previous post:"
 msgstr "Vorige post:"
 
-#: inc/SKDD-template-functions.php:1327
+#: inc/skdd-template-functions.php:1327
 msgid "Author Avatar"
 msgstr "Author Avatar"
 
-#: inc/SKDD-template-functions.php:1332
+#: inc/skdd-template-functions.php:1332
 msgid "Written by"
 msgstr "Geschreven door"
 
-#: inc/SKDD-template-functions.php:1364
+#: inc/skdd-template-functions.php:1364
 msgid "Posted on"
 msgstr "Geplaatst op"
 
-#: inc/SKDD-template-functions.php:1406
+#: inc/skdd-template-functions.php:1406
 msgid "by Unknown author"
 msgstr "by Unknown author"
 
-#: inc/SKDD-template-functions.php:1408
+#: inc/skdd-template-functions.php:1408
 msgid "by"
 msgstr "by"
 
-#: inc/SKDD-template-functions.php:1438
+#: inc/skdd-template-functions.php:1438
 msgid "Posted in"
 msgstr "Posted in"
 
-#: inc/SKDD-template-functions.php:1468
+#: inc/skdd-template-functions.php:1468
 msgid "No comments yet"
 msgstr "Nog geen reacties"
 
-#: inc/SKDD-template-functions.php:1469
+#: inc/skdd-template-functions.php:1469
 msgid "1 Comment"
 msgstr "1 Reactie"
 
-#: inc/SKDD-template-functions.php:1470
+#: inc/skdd-template-functions.php:1470
 msgid "% Comments"
 msgstr "% Reacties"
 
-#: inc/SKDD-template-functions.php:1628
+#: inc/skdd-template-functions.php:1628
 msgid "Type to search"
 msgstr "Typ om te zoeken"
 
-#: inc/SKDD-template-functions.php:1893 inc/SKDD-template-functions.php:2045
+#: inc/skdd-template-functions.php:1893 inc/skdd-template-functions.php:2045
 msgid "Login"
 msgstr "Login"
 
-#: inc/SKDD-template-functions.php:1894 inc/SKDD-template-functions.php:2048
+#: inc/skdd-template-functions.php:1894 inc/skdd-template-functions.php:2048
 msgid "Register"
 msgstr "Registreren"
 
-#: inc/SKDD-template-functions.php:1897 inc/SKDD-template-functions.php:2052
+#: inc/skdd-template-functions.php:1897 inc/skdd-template-functions.php:2052
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: inc/SKDD-template-functions.php:2048
+#: inc/skdd-template-functions.php:2048
 msgid "/register/"
 msgstr "/register/"
 
-#: inc/SKDD-template-functions.php:2294 inc/customizer/register-sections.php:22
+#: inc/skdd-template-functions.php:2294 inc/customizer/register-sections.php:22
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:25
 msgid "Scroll To Top"
 msgstr "Naar boven scrollen"
 
-#: inc/admin/SKDD-admin-menu-order.php:48
-#: inc/admin/SKDD-admin-menu-order.php:49
+#: inc/admin/skdd-admin-menu-order.php:48
+#: inc/admin/skdd-admin-menu-order.php:49
 msgid "Customizer"
 msgstr "Customizer"
 
-#: inc/admin/SKDD-admin-menu-order.php:58
-#: inc/admin/SKDD-admin-menu-order.php:59
-#: inc/admin/SKDD-admin-menu-order.php:93
-#: inc/admin/SKDD-admin-menu-order.php:94
+#: inc/admin/skdd-admin-menu-order.php:58
+#: inc/admin/skdd-admin-menu-order.php:59
+#: inc/admin/skdd-admin-menu-order.php:93
+#: inc/admin/skdd-admin-menu-order.php:94
 msgid "Menus"
 msgstr "Menus"
 
-#: inc/admin/SKDD-admin-menu-order.php:69
-#: inc/admin/SKDD-admin-menu-order.php:70
+#: inc/admin/skdd-admin-menu-order.php:69
+#: inc/admin/skdd-admin-menu-order.php:70
 msgid "Users"
 msgstr "Users"
 
-#: inc/admin/SKDD-admin-menu-order.php:77
-#: inc/admin/SKDD-admin-menu-order.php:78
+#: inc/admin/skdd-admin-menu-order.php:77
+#: inc/admin/skdd-admin-menu-order.php:78
 msgid "Tools"
 msgstr "Tools"
 
-#: inc/admin/SKDD-admin-menu-order.php:85
-#: inc/admin/SKDD-admin-menu-order.php:86
+#: inc/admin/skdd-admin-menu-order.php:85
+#: inc/admin/skdd-admin-menu-order.php:86
 msgid "Themes"
 msgstr "Themes"
 
-#: inc/admin/SKDD-admin-menu-order.php:101
-#: inc/admin/SKDD-admin-menu-order.php:102
+#: inc/admin/skdd-admin-menu-order.php:101
+#: inc/admin/skdd-admin-menu-order.php:102
 msgid "Widgets"
 msgstr "Widgets"
 
-#: inc/admin/SKDD-admin-menu-order.php:109
-#: inc/admin/SKDD-admin-menu-order.php:110
+#: inc/admin/skdd-admin-menu-order.php:109
+#: inc/admin/skdd-admin-menu-order.php:110
 msgid "Plugins"
 msgstr "Plugins"
 
-#: inc/admin/SKDD-dashboard-widgets.php:44
+#: inc/admin/skdd-dashboard-widgets.php:44
 msgid "Hulp nodig?"
 msgstr "Hulp nodig?"
 
-#: inc/admin/SKDD-dashboard-widgets.php:50
+#: inc/admin/skdd-dashboard-widgets.php:50
 msgid "Meest voorkomende taken"
 msgstr "Meest voorkomende taken"
 
-#: inc/admin/class-SKDD-admin.php:194
+#: inc/admin/class-skdd-admin.php:194
 msgid "Upload Logo"
 msgstr "Upload Logo"
 
-#: inc/admin/class-SKDD-admin.php:201
+#: inc/admin/class-skdd-admin.php:201
 msgid "Set Colors"
 msgstr "Set Colors"
 
-#: inc/admin/class-SKDD-admin.php:208 inc/customizer/register-sections.php:29
+#: inc/admin/class-skdd-admin.php:208 inc/customizer/register-sections.php:29
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/admin/class-SKDD-admin.php:215 inc/customizer/register-sections.php:57
+#: inc/admin/class-skdd-admin.php:215 inc/customizer/register-sections.php:57
 msgid "Buttons"
 msgstr "Buttons"
 
-#: inc/admin/class-SKDD-admin.php:222 inc/customizer/register-sections.php:66
+#: inc/admin/class-skdd-admin.php:222 inc/customizer/register-sections.php:66
 msgid "Custom Post Types"
 msgstr "Custom Post Types"
 
-#: inc/admin/class-SKDD-admin.php:229 inc/customizer/register-sections.php:75
+#: inc/admin/class-skdd-admin.php:229 inc/customizer/register-sections.php:75
 msgid "Typography"
 msgstr "Typography"
 
-#: inc/admin/class-SKDD-meta-boxes.php:122
+#: inc/admin/class-skdd-meta-boxes.php:122
 msgid " Settings"
 msgstr " Settings"
 
-#: inc/admin/class-SKDD-meta-boxes.php:177
+#: inc/admin/class-skdd-meta-boxes.php:177
 msgid "Container"
 msgstr "Container"
 
-#: inc/admin/class-SKDD-meta-boxes.php:183
-#: inc/admin/class-SKDD-meta-boxes.php:218
-#: inc/admin/class-SKDD-meta-boxes.php:245
-#: inc/admin/class-SKDD-meta-boxes.php:268
+#: inc/admin/class-skdd-meta-boxes.php:183
+#: inc/admin/class-skdd-meta-boxes.php:218
+#: inc/admin/class-skdd-meta-boxes.php:245
+#: inc/admin/class-skdd-meta-boxes.php:268
 msgid "Customizer Setting"
 msgstr "Customizer Setting"
 
-#: inc/admin/class-SKDD-meta-boxes.php:187
+#: inc/admin/class-skdd-meta-boxes.php:187
 msgid "Normal"
 msgstr "Normal"
 
-#: inc/admin/class-SKDD-meta-boxes.php:191
+#: inc/admin/class-skdd-meta-boxes.php:191
 msgid "Boxed"
 msgstr "Boxed"
 
-#: inc/admin/class-SKDD-meta-boxes.php:195
+#: inc/admin/class-skdd-meta-boxes.php:195
 msgid "Content Boxed"
 msgstr "Content Boxed"
 
-#: inc/admin/class-SKDD-meta-boxes.php:199
+#: inc/admin/class-skdd-meta-boxes.php:199
 msgid "Full Width / Contained"
 msgstr "Full Width / Contained"
 
-#: inc/admin/class-SKDD-meta-boxes.php:203
+#: inc/admin/class-skdd-meta-boxes.php:203
 msgid "Full Width / Stretched"
 msgstr "Full Width / Stretched"
 
-#: inc/admin/class-SKDD-meta-boxes.php:212
+#: inc/admin/class-skdd-meta-boxes.php:212
 #: inc/customizer/register-sections.php:19
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: inc/admin/class-SKDD-meta-boxes.php:222
+#: inc/admin/class-skdd-meta-boxes.php:222
 msgid "Left Sidebar"
 msgstr "Left Sidebar"
 
-#: inc/admin/class-SKDD-meta-boxes.php:226
+#: inc/admin/class-skdd-meta-boxes.php:226
 msgid "Right Sidebar"
 msgstr "Right Sidebar"
 
-#: inc/admin/class-SKDD-meta-boxes.php:230
+#: inc/admin/class-skdd-meta-boxes.php:230
 msgid "No Sidebar"
 msgstr "No Sidebar"
 
-#: inc/admin/class-SKDD-meta-boxes.php:239
+#: inc/admin/class-skdd-meta-boxes.php:239
 msgid "Transparent Header"
 msgstr "Transparent Header"
 
-#: inc/admin/class-SKDD-meta-boxes.php:249
-#: inc/admin/class-SKDD-meta-boxes.php:272
+#: inc/admin/class-skdd-meta-boxes.php:249
+#: inc/admin/class-skdd-meta-boxes.php:272
 msgid "Enabled"
 msgstr "Enabled"
 
-#: inc/admin/class-SKDD-meta-boxes.php:253
-#: inc/admin/class-SKDD-meta-boxes.php:276
+#: inc/admin/class-skdd-meta-boxes.php:253
+#: inc/admin/class-skdd-meta-boxes.php:276
 msgid "Disabled"
 msgstr "Disabled"
 
-#: inc/admin/class-SKDD-meta-boxes.php:262
+#: inc/admin/class-skdd-meta-boxes.php:262
 #: inc/customizer/register-sections.php:16
 msgid "Page Header"
 msgstr "Page Header"
 
-#: inc/admin/class-SKDD-meta-boxes.php:285
+#: inc/admin/class-skdd-meta-boxes.php:285
 msgid "Disable Sections"
 msgstr "Disable Sections"
 
-#: inc/admin/class-SKDD-meta-boxes.php:293
+#: inc/admin/class-skdd-meta-boxes.php:293
 msgid "Disable Topbar"
 msgstr "Disable Topbar"
 
-#: inc/admin/class-SKDD-meta-boxes.php:300
+#: inc/admin/class-skdd-meta-boxes.php:300
 msgid "Disable Header"
 msgstr "Disable Header"
 
-#: inc/admin/class-SKDD-meta-boxes.php:307
+#: inc/admin/class-skdd-meta-boxes.php:307
 msgid "Disable Footer"
 msgstr "Disable Footer"
 
@@ -928,40 +928,40 @@ msgctxt "taxonomy singular name"
 msgid "Team Category"
 msgstr "Team Category"
 
-#: inc/customizer/class-SKDD-customizer.php:223
+#: inc/customizer/class-skdd-customizer.php:223
 msgid "Sale!"
 msgstr "Sale!"
 
-#: inc/customizer/class-SKDD-customizer.php:231
+#: inc/customizer/class-skdd-customizer.php:231
 msgid "Out Of Stock"
 msgstr "Uitverkocht"
 
-#: inc/customizer/class-SKDD-customizer.php:263
+#: inc/customizer/class-skdd-customizer.php:263
 #: inc/customizer/sections/shop/shop-single.php:618
 msgid "Recently Viewed Products"
 msgstr "Recentelijk bekeken producten"
 
-#: inc/customizer/class-SKDD-customizer.php:294
+#: inc/customizer/class-skdd-customizer.php:294
 msgid "Oops! The page you are looking for cannot be found."
 msgstr "Helaas! We kunnen deze pagina niet vinden."
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:86
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:86
 msgid "Clear"
 msgstr "Clear"
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:87
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:87
 msgid "Clear color"
 msgstr "Clear color"
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:88
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:88
 msgid "Select default color"
 msgstr "Select default color"
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:89
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:89
 msgid "Color value"
 msgstr "Color value"
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:90
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:90
 #: inc/customizer/sections/page-header/page-header.php:227
 #: inc/customizer/sections/page-header/page-header.php:255
 #: inc/customizer/sections/page-header/page-header.php:320
@@ -974,51 +974,51 @@ msgstr "Color value"
 msgid "Default"
 msgstr "Default"
 
-#: inc/customizer/custom-controls/alpha-color-picker/class-SKDD-color-control.php:91
+#: inc/customizer/custom-controls/alpha-color-picker/class-skdd-color-control.php:91
 msgid "Select Color"
 msgstr "Select Color"
 
-#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:57
+#: inc/customizer/custom-controls/range/class-skdd-range-slider-control.php:57
 #: inc/customizer/sections/header/header-transparent.php:184
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:57
 msgid "Desktop"
 msgstr "Desktop"
 
-#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:58
+#: inc/customizer/custom-controls/range/class-skdd-range-slider-control.php:58
 msgid "Tablet"
 msgstr "Tablet"
 
-#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:59
+#: inc/customizer/custom-controls/range/class-skdd-range-slider-control.php:59
 #: inc/customizer/sections/header/header-transparent.php:185
 #: inc/customizer/sections/scroll-to-top/scroll-to-top.php:56
 msgid "Mobile"
 msgstr "Mobile"
 
-#: inc/customizer/custom-controls/range/class-SKDD-range-slider-control.php:60
+#: inc/customizer/custom-controls/range/class-skdd-range-slider-control.php:60
 msgid "Reset"
 msgstr "Reset"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:70
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:70
 msgid "System fonts"
 msgstr "System fonts"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:71
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:71
 msgid "Google fonts"
 msgstr "Google fonts"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:74
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:74
 msgid "Font family"
 msgstr "Font family"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:75
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:75
 msgid "Font weight"
 msgstr "Font weight"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:76
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:76
 msgid "Text transform"
 msgstr "Text transform"
 
-#: inc/customizer/custom-controls/typography/class-SKDD-typography-control.php:78
+#: inc/customizer/custom-controls/typography/class-skdd-typography-control.php:78
 msgid "Variants"
 msgstr "Variants"
 
@@ -1125,7 +1125,7 @@ msgstr "Author"
 
 #: inc/customizer/sections/blog/blog-single.php:62
 #: inc/customizer/sections/blog/blog.php:133
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:714
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:714
 msgid "Category"
 msgstr "Category"
 
@@ -1719,7 +1719,7 @@ msgid "Product Content Min Height"
 msgstr "Product Content Min Height"
 
 #: inc/customizer/sections/shop/shop-page.php:457
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:864
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:864
 msgid "Product Image"
 msgstr "Product Image"
 
@@ -1855,7 +1855,7 @@ msgid "Content Background"
 msgstr "Content Background"
 
 #: inc/customizer/sections/shop/shop-single.php:229
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:542
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:542
 msgid "Trust Badge Image"
 msgstr "Trust Badge Image"
 
@@ -2050,63 +2050,63 @@ msgstr "Mobile Logo (Optional)"
 msgid "Logo Width"
 msgstr "Logo Width"
 
-#: inc/widget/class-SKDD-recent-post-thumbnail.php:23
+#: inc/widget/class-skdd-recent-post-thumbnail.php:23
 msgid "SKDD Recent Post With Thumbnail"
 msgstr "SKDD Recent Post With Thumbnail"
 
-#: inc/widget/class-SKDD-recent-post-thumbnail.php:26
+#: inc/widget/class-skdd-recent-post-thumbnail.php:26
 msgid "List the most recent posts with post titles, thumbnail"
 msgstr "List the most recent posts with post titles, thumbnail"
 
-#: inc/widget/class-SKDD-recent-post-thumbnail.php:38
+#: inc/widget/class-skdd-recent-post-thumbnail.php:38
 msgid "Recent Posts"
 msgstr "Recent Posts"
 
-#: inc/widget/class-SKDD-recent-post-thumbnail.php:49
+#: inc/widget/class-skdd-recent-post-thumbnail.php:49
 msgid "Title:"
 msgstr "Title:"
 
-#: inc/widget/class-SKDD-recent-post-thumbnail.php:58
+#: inc/widget/class-skdd-recent-post-thumbnail.php:58
 msgid "Number:"
 msgstr "Number:"
 
-#: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:96
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:315
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:352
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:390
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:405
+#: inc/woocommerce/skdd-woocommerce-archive-product-functions.php:96
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:315
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:352
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:390
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:405
 msgid "Product image"
 msgstr "Product image"
 
-#: inc/woocommerce/SKDD-woocommerce-archive-product-functions.php:367
+#: inc/woocommerce/skdd-woocommerce-archive-product-functions.php:367
 msgid "Filter"
 msgstr "Filter"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:62
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:62
 msgid "Previous Product Image"
 msgstr "Previous Product Image"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:67
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:557
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:67
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:557
 msgid "Previous"
 msgstr "Previous"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:89
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:89
 msgid "Next Product Image"
 msgstr "Next Product Image"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:94
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:558
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:94
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:558
 msgid "Next"
 msgstr "Next"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:508
-#: inc/woocommerce/class-SKDD-woocommerce.php:275
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:508
+#: inc/woocommerce/class-skdd-woocommerce.php:275
 #, php-format
 msgid "Hurry! only %s left in stock."
 msgstr "Snel! We hebben nog maar %s op voorraad."
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:655
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:655
 #, php-format
 msgid ""
 "You cannot add that amount of this product to the cart. We have %1$s in "
@@ -2115,122 +2115,122 @@ msgstr ""
 "Helaas, die hoeveelheid kun je niet toevoegen aan je winkelwagen. We hebben "
 "nog maar %1$s op voorraad en je hebt er al %2$s in je winkelwagen"
 
-#: inc/woocommerce/SKDD-woocommerce-single-product-functions.php:742
+#: inc/woocommerce/skdd-woocommerce-single-product-functions.php:742
 msgid "This product can be used for:"
 msgstr "Dit product kan gebruikt worden voor:  "
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:282
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:282
 msgid "Remove this item"
 msgstr "Verwijder dit item"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:327
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:327
 msgid "No products in the cart."
 msgstr "Geen producten in je winkelwagen."
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:344
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:344
 msgid "Shopping cart"
 msgstr "Winkelwagen"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:465
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:465
 msgid "Home"
 msgstr "Home"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:470
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:470
 msgid "News"
 msgstr "Nieuws"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:475
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:475
 msgid "Products"
 msgstr "Produkten"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:922
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:922
 msgid "Billing Details"
 msgstr "Factuur gegevens"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:926
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:926
 msgid "Delivery"
 msgstr "Bezorging"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:930
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:930
 msgid "Payment"
 msgstr "Betaling"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1009
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1041
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1009
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1041
 msgid "Contact"
 msgstr "Contact"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1012
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1020
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1044
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1052
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1060
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1012
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1020
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1044
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1052
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1060
 msgid "Change"
 msgstr "Veranderen"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1017
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1049
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1017
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1049
 msgid "Address"
 msgstr "Adres"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1057
-#: inc/woocommerce/class-SKDD-woocommerce.php:204
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1057
+#: inc/woocommerce/class-skdd-woocommerce.php:204
 msgid "Shipping"
 msgstr "Verzending"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1078
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1078
 msgid "Back"
 msgstr "Terug"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1079
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1079
 msgid "Continue to"
 msgstr "Ga door naar"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1079
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1079
 msgid "Continue to Delivery"
 msgstr "Ga door naar verzending"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1080
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1080
 msgid "Place Order"
 msgstr "Plaatst bestelling"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1096
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1096
 #, php-format
 msgid "%s item"
 msgid_plural "%s items"
 msgstr[0] "%s item"
 msgstr[1] "%s items"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1101
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1101
 msgid "Order Summary"
 msgstr "Samenvatting bestelling"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1174
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1174
 msgid "register"
 msgstr "registreren"
 
-#: inc/woocommerce/SKDD-woocommerce-template-functions.php:1175
+#: inc/woocommerce/skdd-woocommerce-template-functions.php:1175
 msgid "See prices"
 msgstr "Bekijk de prijzen"
 
-#: inc/woocommerce/class-SKDD-woocommerce.php:202
-#: inc/woocommerce/class-SKDD-woocommerce.php:255
+#: inc/woocommerce/class-skdd-woocommerce.php:202
+#: inc/woocommerce/class-skdd-woocommerce.php:255
 msgid "Sorry, something went wrong. Please try again!"
 msgstr "Sorry, er ging iets mis. Probeer het alsjeblieft opnieuw!"
 
-#: inc/woocommerce/class-SKDD-woocommerce.php:203
+#: inc/woocommerce/class-skdd-woocommerce.php:203
 msgid "Please enter a valid quantity for this product"
 msgstr "Voer een geldig aantal in voor dit product"
 
-#: inc/woocommerce/class-SKDD-woocommerce.php:205
+#: inc/woocommerce/class-skdd-woocommerce.php:205
 msgid "Calculated at next step"
 msgstr "Berekend bij de volgende stap"
 
-#: inc/woocommerce/class-SKDD-woocommerce.php:502
+#: inc/woocommerce/class-skdd-woocommerce.php:502
 msgid "Product video url"
 msgstr "Product video url"
 
-#: inc/woocommerce/class-SKDD-woocommerce.php:524
+#: inc/woocommerce/class-skdd-woocommerce.php:524
 msgid "Enter Youtube or Vimeo video url"
 msgstr "Enter Youtube or Vimeo video url"
 

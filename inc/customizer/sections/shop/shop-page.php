@@ -673,7 +673,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[shop_page_product_image_height]',
 		array(
-			'type'     => 'SKDD-range-slider',
+			'type'     => 'skdd-range-slider',
 			'label'    => __( 'Image Height', 'SKDD' ),
 			'section'  => 'SKDD_shop_page',
 			'settings' => array(

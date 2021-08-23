@@ -41,7 +41,7 @@ var activatePlugin = function( url, redirect ) {
 
 // Download and Install plugin.
 var installPlugin = function() {
-	var installBtn = document.querySelector( '.SKDD-install-demo' );
+	var installBtn = document.querySelector( '.skdd-install-demo' );
 	if ( ! installBtn ) {
 		return;
 	}
@@ -71,7 +71,7 @@ var installPlugin = function() {
 
 // Activate plugin manual.
 var handleActivate = function() {
-	var activeButton = document.querySelector( '.SKDD-active-now' );
+	var activeButton = document.querySelector( '.skdd-active-now' );
 	if ( ! activeButton ) {
 		return;
 	}

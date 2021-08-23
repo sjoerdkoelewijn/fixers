@@ -8,7 +8,7 @@ jQuery( window ).on( 'load', function() {
 	jQuery( 'html' ).addClass( 'colorpicker-ready' );
 } );
 
-wp.customize.controlConstructor[ 'SKDD-color' ] = wp.customize.Control.extend( {
+wp.customize.controlConstructor[ 'skdd-color' ] = wp.customize.Control.extend( {
 
 	ready: function() {
 
@@ -20,7 +20,7 @@ wp.customize.controlConstructor[ 'SKDD-color' ] = wp.customize.Control.extend( {
 			inputDefault,
 			changeAction;
 
-		control.container.find( '.SKDD-color-picker-alpha' ).wpColorPicker( {
+		control.container.find( '.skdd-color-picker-alpha' ).wpColorPicker( {
 			/**
 			 * Jquery event
 			 *

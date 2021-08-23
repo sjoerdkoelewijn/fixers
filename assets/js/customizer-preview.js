@@ -382,13 +382,13 @@ document.addEventListener(
 
 		// PAGE HEADER.
 		// Text align.
-		SKDD_update_element_class( 'page_header_text_align', '.page-header .SKDD-container', 'content-align-' );
+		SKDD_update_element_class( 'page_header_text_align', '.page-header .skdd-container', 'content-align-' );
 
 		// Title color.
 		SKDD_colors_live_update( 'page_header_title_color', '.page-header .entry-title', 'color' );
 
 		// Breadcrumb text color.
-		SKDD_colors_live_update( 'page_header_breadcrumb_text_color', '.SKDD-breadcrumb, .SKDD-breadcrumb a', 'color' );
+		SKDD_colors_live_update( 'page_header_breadcrumb_text_color', '.skdd-breadcrumb, .skdd-breadcrumb a', 'color' );
 
 		// Background image.
 		SKDD_background_image_live_upload(
@@ -479,7 +479,7 @@ document.addEventListener(
 		// Border radius.
 		SKDD_unit_live_update(
 			'buttons_border_radius',
-			'.cart .quantity, .button, .woocommerce-widget-layered-nav-dropdown__submit, .form-submit .submit, .elementor-button-wrapper .elementor-button, .has-SKDD-contact-form input[type="submit"], #secondary .widget a.button, .product-loop-meta.no-transform .button',
+			'.cart .quantity, .button, .woocommerce-widget-layered-nav-dropdown__submit, .form-submit .submit, .elementor-button-wrapper .elementor-button, .has-skdd-contact-form input[type="submit"], #secondary .widget a.button, .product-loop-meta.no-transform .button',
 			'border-radius'
 		);
 
@@ -490,29 +490,29 @@ document.addEventListener(
 		SKDD_colors_live_update( 'shop_page_button_color_hover', '.product-loop-wrapper .button:hover,.product-loop-meta.no-transform .button:hover', 'color' );
 		SKDD_unit_live_update( 'shop_page_button_border_radius', '.product-loop-wrapper .button,.product-loop-meta.no-transform .button', 'border-radius' );
 		// Sale tag.
-		SKDD_update_element_class( 'shop_page_sale_tag_position', '.SKDD-tag-on-sale', 'sale-' );
-		SKDD_html_live_update( 'shop_page_sale_text', '.SKDD-tag-on-sale' );
-		SKDD_colors_live_update( 'shop_page_sale_color', '.SKDD-tag-on-sale', 'color' );
-		SKDD_colors_live_update( 'shop_page_sale_bg_color', '.SKDD-tag-on-sale', 'background-color' );
-		SKDD_unit_live_update( 'shop_page_sale_border_radius', '.SKDD-tag-on-sale', 'border-radius' );
-		SKDD_update_element_class( 'shop_page_sale_square', '.SKDD-tag-on-sale', 'is-square' );
-		SKDD_unit_live_update( 'shop_page_sale_size', '.SKDD-tag-on-sale.is-square', [ 'width', 'height' ] );
+		SKDD_update_element_class( 'shop_page_sale_tag_position', '.skdd-tag-on-sale', 'sale-' );
+		SKDD_html_live_update( 'shop_page_sale_text', '.skdd-tag-on-sale' );
+		SKDD_colors_live_update( 'shop_page_sale_color', '.skdd-tag-on-sale', 'color' );
+		SKDD_colors_live_update( 'shop_page_sale_bg_color', '.skdd-tag-on-sale', 'background-color' );
+		SKDD_unit_live_update( 'shop_page_sale_border_radius', '.skdd-tag-on-sale', 'border-radius' );
+		SKDD_update_element_class( 'shop_page_sale_square', '.skdd-tag-on-sale', 'is-square' );
+		SKDD_unit_live_update( 'shop_page_sale_size', '.skdd-tag-on-sale.is-square', [ 'width', 'height' ] );
 
 		// Out of stock label.
-		SKDD_update_element_class( 'shop_page_out_of_stock_position', '.SKDD-out-of-stock-label', 'position-' );
-		SKDD_html_live_update( 'shop_page_out_of_stock_text', '.SKDD-out-of-stock-label' );
-		SKDD_colors_live_update( 'shop_page_out_of_stock_color', '.SKDD-out-of-stock-label', 'color' );
-		SKDD_colors_live_update( 'shop_page_out_of_stock_bg_color', '.SKDD-out-of-stock-label', 'background-color' );
-		SKDD_unit_live_update( 'shop_page_out_of_stock_border_radius', '.SKDD-out-of-stock-label', 'border-radius' );
-		SKDD_update_element_class( 'shop_page_out_of_stock_square', '.SKDD-out-of-stock-label', 'is-square' );
-		SKDD_unit_live_update( 'shop_page_out_of_stock_size', '.SKDD-out-of-stock-label.is-square', [ 'width', 'height' ] );
+		SKDD_update_element_class( 'shop_page_out_of_stock_position', '.skdd-out-of-stock-label', 'position-' );
+		SKDD_html_live_update( 'shop_page_out_of_stock_text', '.skdd-out-of-stock-label' );
+		SKDD_colors_live_update( 'shop_page_out_of_stock_color', '.skdd-out-of-stock-label', 'color' );
+		SKDD_colors_live_update( 'shop_page_out_of_stock_bg_color', '.skdd-out-of-stock-label', 'background-color' );
+		SKDD_unit_live_update( 'shop_page_out_of_stock_border_radius', '.skdd-out-of-stock-label', 'border-radius' );
+		SKDD_update_element_class( 'shop_page_out_of_stock_square', '.skdd-out-of-stock-label', 'is-square' );
+		SKDD_unit_live_update( 'shop_page_out_of_stock_size', '.skdd-out-of-stock-label.is-square', [ 'width', 'height' ] );
 
 		// SHOP SINGLE.
 		// Single Product Add To Cart.
-		SKDD_colors_live_update( 'shop_single_button_cart_background', '.single_add_to_cart_button.button:not(.SKDD-buy-now)', 'background-color' );
-		SKDD_colors_live_update( 'shop_single_button_cart_color', '.single_add_to_cart_button.button:not(.SKDD-buy-now)', 'color' );
-		SKDD_colors_live_update( 'shop_single_button_background_hover', '.single_add_to_cart_button.button:not(.SKDD-buy-now):hover', 'background-color' );
-		SKDD_colors_live_update( 'shop_single_button_color_hover', '.single_add_to_cart_button.button:not(.SKDD-buy-now):hover', 'color' );
+		SKDD_colors_live_update( 'shop_single_button_cart_background', '.single_add_to_cart_button.button:not(.skdd-buy-now)', 'background-color' );
+		SKDD_colors_live_update( 'shop_single_button_cart_color', '.single_add_to_cart_button.button:not(.skdd-buy-now)', 'color' );
+		SKDD_colors_live_update( 'shop_single_button_background_hover', '.single_add_to_cart_button.button:not(.skdd-buy-now):hover', 'background-color' );
+		SKDD_colors_live_update( 'shop_single_button_color_hover', '.single_add_to_cart_button.button:not(.skdd-buy-now):hover', 'color' );
 		// Hidden product meta.
 		SKDD_hidden_product_meta( 'shop_single_skus', 'hid-skus' );
 		SKDD_hidden_product_meta( 'shop_single_categories', 'hid-categories' );
@@ -526,7 +526,7 @@ document.addEventListener(
 		SKDD_range_slider_update( ['scroll_to_top_border_radius'], '#scroll-to-top', 'border-radius', 'px' );
 		SKDD_range_slider_update( ['scroll_to_top_icon_size'], '#scroll-to-top:before', 'font-size', 'px' );
 		SKDD_range_slider_update( ['scroll_to_top_offset_bottom'], '#scroll-to-top', 'bottom', 'px' );
-		SKDD_range_slider_update( ['shop_single_button_border_radius'], '.single_add_to_cart_button.button:not(.SKDD-buy-now)', 'border-radius', 'px' );
+		SKDD_range_slider_update( ['shop_single_button_border_radius'], '.single_add_to_cart_button.button:not(.skdd-buy-now)', 'border-radius', 'px' );
 		SKDD_update_element_class( 'scroll_to_top_position', '#scroll-to-top', 'scroll-to-top-position-' );
 		SKDD_update_element_class( 'scroll_to_top_on', '#scroll-to-top', 'scroll-to-top-show-' );
 	}

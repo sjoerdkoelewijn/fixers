@@ -156,7 +156,7 @@ document.addEventListener(
 			onElementorLoaded(
 				function() {
 					window.elementorFrontend.hooks.addAction(
-						'frontend/element_ready/SKDD-product-add-to-cart.default',
+						'frontend/element_ready/skdd-product-add-to-cart.default',
 						function() {
 							customQuantity();
 						}

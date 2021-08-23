@@ -187,13 +187,13 @@ function SKDDAjaxSingleAddToCartButton() {
 							}
 
 							// Redirect to checkout page.
-							if ( button.classList.contains( 'SKDD-buy-now' ) ) {
+							if ( button.classList.contains( 'skdd-buy-now' ) ) {
 								var checkoutUrl = button.getAttribute( 'data-checkout_url' );
 								window.location = checkoutUrl;
 							}
 
 							// Update total price, for header-layout-6.
-							var totalPrice = document.querySelector( '.SKDD-total-price' );
+							var totalPrice = document.querySelector( '.skdd-total-price' );
 							if ( totalPrice ) {
 								totalPrice.innerHTML = data.total;
 							}

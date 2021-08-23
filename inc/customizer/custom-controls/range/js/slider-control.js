@@ -4,7 +4,7 @@
  * @package SKDD
  */
 
-wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['skdd-range-slider'] = wp.customize.Control.extend({
 
 	ready: function() {
 
@@ -15,11 +15,11 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 			thisInput,
 			inputDefault,
 			changeAction,
-			controlClass = '.customize-control-SKDD-range-slider',
+			controlClass = '.customize-control-skdd-range-slider',
 			footerActions = jQuery( '#customize-footer-actions' );
 
 		// Set up the sliders.
-		jQuery( '.SKDD-slider' ).each( function() {
+		jQuery( '.skdd-slider' ).each( function() {
 			var _this  = jQuery( this ),
 				_input = _this.closest( 'label' ).find( 'input[type="number"]' );
 
@@ -42,15 +42,15 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 				value = -1;
 			}
 
-			jQuery( this ).closest( 'label' ).find( '.SKDD-slider' ).slider( 'value', parseFloat( value ) ).change();
+			jQuery( this ).closest( 'label' ).find( '.skdd-slider' ).slider( 'value', parseFloat( value ) ).change();
 		});
 
 		// Handle the reset button.
-		jQuery( controlClass + ' .SKDD-reset' ).on( 'click', function() {
+		jQuery( controlClass + ' .skdd-reset' ).on( 'click', function() {
 			var icon         = jQuery( this ),
-				visible_area = icon.closest( '.SKDD-range-title-area' ).next( '.SKDD-range-slider-areas' ).children( 'label:visible' ),
+				visible_area = icon.closest( '.skdd-range-title-area' ).next( '.skdd-range-slider-areas' ).children( 'label:visible' ),
 				input        = visible_area.find( 'input[type=number]' ),
-				slider_value = visible_area.find( '.SKDD-slider' ),
+				slider_value = visible_area.find( '.skdd-slider' ),
 				visual_value = visible_area.find( '.SKDD_range_value' ),
 				reset_value  = input.attr( 'data-reset_value' );
 
@@ -65,17 +65,17 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 		});
 
 		// Figure out which device icon to make active on load.
-		jQuery( controlClass + ' .SKDD-range-slider-control' ).each( function() {
+		jQuery( controlClass + ' .skdd-range-slider-control' ).each( function() {
 			var _this = jQuery( this );
-			_this.find( '.SKDD-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
+			_this.find( '.skdd-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
 			_this.find( '.range-option-area:first-child' ).show();
 		});
 
 		// Do stuff when device icons are clicked.
-		jQuery( controlClass + ' .SKDD-device-controls > span' ).on( 'click', function( event ) {
+		jQuery( controlClass + ' .skdd-device-controls > span' ).on( 'click', function( event ) {
 			var device = jQuery( this ).data( 'option' );
 
-			jQuery( controlClass + ' .SKDD-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .skdd-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -83,7 +83,7 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 				}
 			});
 
-			jQuery( controlClass + ' .SKDD-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .skdd-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();
@@ -99,7 +99,7 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 		footerActions.find( '.devices button' ).on( 'click', function() {
 			var device = jQuery( this ).data( 'device' );
 
-			jQuery( controlClass + ' .SKDD-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .skdd-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -107,7 +107,7 @@ wp.customize.controlConstructor['SKDD-range-slider'] = wp.customize.Control.exte
 				}
 			});
 
-			jQuery( controlClass + ' .SKDD-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .skdd-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();

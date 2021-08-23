@@ -138,7 +138,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[button_font_size]',
 		array(
-			'type'     => 'SKDD-range-slider',
+			'type'     => 'skdd-range-slider',
 			'label'    => __( 'Font Size', 'SKDD' ),
 			'section'  => 'SKDD_buttons',
 			'settings' => array(
@@ -189,7 +189,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[button_line_height]',
 		array(
-			'type'           => 'SKDD-range-slider',
+			'type'           => 'skdd-range-slider',
 			'description'    => __( 'Line Height', 'SKDD' ),
 			'section'        => 'SKDD_buttons',
 			'settings'       => array(

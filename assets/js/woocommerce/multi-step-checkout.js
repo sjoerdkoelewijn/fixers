@@ -18,7 +18,7 @@ var SKDDValidateEmail = function( email ) {
 var SKDDExpandOrderReview = function() {
 	var multiStep = document.querySelector( '.has-multi-step-checkout' ),
 		checkout  = document.querySelector( 'form.woocommerce-checkout' ),
-		expand    = checkout ? checkout.querySelector( '.SKDD-before-order-review' ) : false,
+		expand    = checkout ? checkout.querySelector( '.skdd-before-order-review' ) : false,
 		state     = 1;
 
 	if ( ! multiStep || ! expand ) {
@@ -511,7 +511,7 @@ var SKDDMultiStepCheckout = function() {
 					wrapperContent.classList.add( 'first' );
 
 					// Update price first step on mobile.
-					var priceMobileFirstStep = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' );
+					var priceMobileFirstStep = document.querySelector( '.skdd-before-order-review .skdd-before-order-review-total-price strong' );
 					if ( priceMobileFirstStep ) {
 						priceMobileFirstStep.innerText = SKDD_multi_step_checkout.content_total;
 					}
@@ -651,7 +651,7 @@ var SKDDUpdateCheckout = function() {
 
 				var orderTotalTd     = document.querySelector( '.order-total td' ),
 					orderTotalTdText = orderTotalTd ? orderTotalTd.innerText : '',
-					priceOnMobile    = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' ),
+					priceOnMobile    = document.querySelector( '.skdd-before-order-review .skdd-before-order-review-total-price strong' ),
 					isFirstStep      = document.querySelector( '.multi-step-checkout-wrapper.first' ),
 					getTotalPrice    = orderTotalTd ? orderTotalTd.querySelector( 'strong' ) : false;
 
@@ -682,7 +682,7 @@ var SKDDUpdateCheckout = function() {
 var SKDDTotalPriceMobile = function( e, data ) {
 	var totalPrice      = document.querySelector( '.order-total td' ),
 		totalPriceInner = totalPrice ? totalPrice.innerText : '',
-		mobilePrice     = document.querySelector( '.SKDD-before-order-review .SKDD-before-order-review-total-price strong' ),
+		mobilePrice     = document.querySelector( '.skdd-before-order-review .skdd-before-order-review-total-price strong' ),
 		isFirstStep     = document.querySelector( '.multi-step-checkout-wrapper.first' ),
 		totalPriceValue = totalPrice ? totalPrice.querySelector( 'strong' ) : false;
 

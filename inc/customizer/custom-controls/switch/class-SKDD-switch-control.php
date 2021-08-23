@@ -27,7 +27,7 @@ class SKDD_Switch_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_style(
-			'SKDD-switch-control',
+			'skdd-switch-control',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/switch/css/switch.css',
 			array(),
 			SKDD_version()
@@ -45,19 +45,19 @@ class SKDD_Switch_Control extends WP_Customize_Control {
 		$desc    = $this->description;
 		?>
 
-		<div class="SKDD-switch-customize-control">
+		<div class="skdd-switch-customize-control">
 			<?php if ( ! empty( $label ) ) { ?>
 				<span class="customize-control-title">
 					<?php echo esc_html( $label ); ?>
 				</span>
 			<?php } ?>
 
-			<div class="SKDD-switch-toggle">
+			<div class="skdd-switch-toggle">
 				<input
 					id="<?php echo esc_attr( $id ); ?>"
 					type="checkbox"
 					name="<?php echo esc_attr( $name ); ?>"
-					class="SKDD-switch-control switch-control"
+					class="skdd-switch-control switch-control"
 					value="<?php echo esc_attr( $value ); ?>"
 					<?php
 						$this->link();

@@ -15,7 +15,7 @@ li#accordion-section-generatepress_upsell_section {
 	border-top: 1px solid #D54E21;
 	border-bottom: 1px solid #D54E21;
 }
-.SKDD-get-pro-version-accordion-section a {
+.skdd-get-pro-version-accordion-section a {
 	background: #FFF;
 	display: block;
 	padding: 10px 10px 11px 14px;
@@ -24,16 +24,16 @@ li#accordion-section-generatepress_upsell_section {
 	text-decoration: none;
 }
 
-.SKDD-get-pro-version-accordion-section a:hover {
+.skdd-get-pro-version-accordion-section a:hover {
 	background:#FAFAFA;
 }
 
-.SKDD-get-pro-version-accordion-section h3 {
+.skdd-get-pro-version-accordion-section h3 {
 	margin: 0;
 	position: relative;
 }
 
-.SKDD-get-pro-version-accordion-section h3 a:after {
+.skdd-get-pro-version-accordion-section h3 a:after {
 	content: "\f345";
 	color: #D54E21;
 	position: absolute;

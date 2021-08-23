@@ -73,14 +73,14 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 			// For theme options box.
 			if ( is_admin() && ! get_user_meta( get_current_user_id(), 'welcome_box' ) ) {
 				?>
-				<div class="SKDD-admin-notice SKDD-options-notice notice is-dismissible" data-notice="welcome_box">
-					<div class="SKDD-notice-content">
-						<div class="SKDD-notice-img">
+				<div class="skdd-admin-notice skdd-options-notice notice is-dismissible" data-notice="welcome_box">
+					<div class="skdd-notice-content">
+						<div class="skdd-notice-img">
 							<img src="<?php echo esc_url( SKDD_THEME_URI . 'assets/images/logo.svg' ); ?>" alt="<?php esc_attr_e( 'logo', 'SKDD' ); ?>">
 						</div>
 
-						<div class="SKDD-notice-text">
-							<div class="SKDD-notice-heading"><?php esc_html_e( 'Deze website is gemaakt door SKDD Online Marketing', 'SKDD' ); ?></div>
+						<div class="skdd-notice-text">
+							<div class="skdd-notice-heading"><?php esc_html_e( 'Deze website is gemaakt door SKDD Online Marketing', 'SKDD' ); ?></div>
 							<p>
 								<?php
 								echo wp_kses_post(
@@ -133,11 +133,11 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 		 * @param  obj $hook Hooks.
 		 */
 		public function SKDD_welcome_static( $hook ) {
-			$is_welcome = false !== strpos( $hook, 'SKDD-welcome' );
+			$is_welcome = false !== strpos( $hook, 'skdd-welcome' );
 
 			// Dismiss admin notice.
 			wp_enqueue_style(
-				'SKDD-admin-general',
+				'skdd-admin-general',
 				SKDD_THEME_URI . 'assets/css/admin/general.css',
 				array(),
 				SKDD_version()
@@ -145,7 +145,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 
 			// Dismiss admin notice.
 			wp_enqueue_script(
-				'SKDD-dismiss-admin-notice',
+				'skdd-dismiss-admin-notice',
 				SKDD_THEME_URI . 'assets/js/admin/dismiss-admin-notice' . SKDD_suffix() . '.js',
 				array(),
 				SKDD_version(),
@@ -154,7 +154,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 
 			// Add custom block styles
 			wp_enqueue_script(
-				'SKDD-custom-block-styles',
+				'skdd-custom-block-styles',
 				SKDD_THEME_URI . 'assets/js/admin/custom-block-styles.js',
 				array(),
 				SKDD_version(),
@@ -163,7 +163,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 			
 
 			wp_localize_script(
-				'SKDD-dismiss-admin-notice',
+				'skdd-dismiss-admin-notice',
 				'SKDD_dismiss_admin_notice',
 				array(
 					'nonce' => wp_create_nonce( 'SKDD_dismiss_admin_notice' ),
@@ -173,7 +173,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 			// Welcome screen style.
 			if ( $is_welcome ) {
 				wp_enqueue_style(
-					'SKDD-welcome-screen',
+					'skdd-welcome-screen',
 					SKDD_THEME_URI . 'assets/css/admin/welcome.css',
 					array(),
 					SKDD_version()

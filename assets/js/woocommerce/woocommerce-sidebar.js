@@ -10,7 +10,7 @@
 function SKDDSidebarMobile() {
 	var sidebar = document.querySelector( '#secondary.shop-widget' ),
 		button  = document.querySelector( '#toggle-sidebar-mobile-button' ),
-		overlay = document.getElementById( 'SKDD-overlay' ),
+		overlay = document.getElementById( 'skdd-overlay' ),
 		html    = document.documentElement;
 
 	if ( ! sidebar || ! button ) {

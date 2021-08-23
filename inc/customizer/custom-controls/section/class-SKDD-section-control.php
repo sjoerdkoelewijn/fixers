@@ -20,7 +20,7 @@ class SKDD_Section_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'SKDD-section';
+	public $type = 'skdd-section';
 
 	/**
 	 * The description var
@@ -43,7 +43,7 @@ class SKDD_Section_Control extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 		wp_enqueue_script(
-			'SKDD-section',
+			'skdd-section',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/section/js/section.js',
 			[],
 			SKDD_version(),
@@ -51,7 +51,7 @@ class SKDD_Section_Control extends WP_Customize_Control {
 		);
 
 		wp_enqueue_style(
-			'SKDD-section',
+			'skdd-section',
 			SKDD_THEME_URI . 'inc/customizer/custom-controls/section/css/section.css',
 			[],
 			SKDD_version()
@@ -71,11 +71,11 @@ class SKDD_Section_Control extends WP_Customize_Control {
 	 */
 	public function content_template() {
 		?>
-		<div class="SKDD-section-control">
+		<div class="skdd-section-control">
 			<# if ( data.label ) { #>
-			<span class="SKDD-section-control-label">{{ data.label }}</span>
+			<span class="skdd-section-control-label">{{ data.label }}</span>
 			<# } #>
-			<span class="SKDD-section-control-arrow dashicons dashicons-arrow-right-alt2"></span>
+			<span class="skdd-section-control-arrow dashicons dashicons-arrow-right-alt2"></span>
 		</div>
 		<?php
 	}

@@ -202,10 +202,10 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 
 			// Main woocommerce js file.
-			wp_enqueue_script( 'SKDD-woocommerce' );
+			wp_enqueue_script( 'skdd-woocommerce' );
 			// Quantity minicart.
 			wp_localize_script(
-				'SKDD-woocommerce',
+				'skdd-woocommerce',
 				'SKDD_woocommerce_general',
 				array(
 					'ajax_url'            => admin_url( 'admin-ajax.php' ),
@@ -220,10 +220,10 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			);
 
 			// Product variations.
-			wp_enqueue_script( 'SKDD-product-variation' );
+			wp_enqueue_script( 'skdd-product-variation' );
 
 			// Quantity button.
-			wp_enqueue_script( 'SKDD-quantity-button' );
+			wp_enqueue_script( 'skdd-quantity-button' );
 			
 			// Sticky sidebar.
 			if ( in_array( $options['shop_single_gallery_layout'], array( 'column', 'grid' ), true ) ) {
@@ -234,7 +234,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			wp_enqueue_script( 'lity' );
 
 			// Tiny slider: product images.
-			wp_enqueue_script( 'SKDD-product-images' );
+			wp_enqueue_script( 'skdd-product-images' );
 
 			// Easyzoom.
 			wp_enqueue_script( 'easyzoom-handle' );
@@ -243,7 +243,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			wp_enqueue_script( 'photoswipe-init' );
 
 			// Woocommerce sidebar.
-			wp_enqueue_script( 'SKDD-woocommerce-sidebar' );
+			wp_enqueue_script( 'skdd-woocommerce-sidebar' );
 
 			// Add to cart variation.
 			if ( wp_script_is( 'wc-add-to-cart-variation', 'registered' ) && ! wp_script_is( 'wc-add-to-cart-variation', 'enqueued' ) ) {
@@ -252,14 +252,14 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// Multi step checkout.
 			if ( is_checkout() && ! is_wc_endpoint_url( 'order-received' ) && $options['checkout_multi_step'] ) {
-				wp_enqueue_script( 'SKDD-multi-step-checkout' );
+				wp_enqueue_script( 'skdd-multi-step-checkout' );
 			}
 
 			// Single add to cart script.
 			if ( $options['shop_single_ajax_add_to_cart'] ) {
-				wp_enqueue_script( 'SKDD-single-add-to-cart' );
+				wp_enqueue_script( 'skdd-single-add-to-cart' );
 				wp_localize_script(
-					'SKDD-single-add-to-cart',
+					'skdd-single-add-to-cart',
 					'SKDD_ajax_single_add_to_cart_data',
 					array(
 						'ajax_url'   => admin_url( 'admin-ajax.php' ),
@@ -272,7 +272,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			// For variable product.
 			if ( $product && $product->is_type( 'variable' ) ) {
 				wp_localize_script(
-					'SKDD-woocommerce',
+					'skdd-woocommerce',
 					'SKDD_woocommerce_variable_product_data',
 					array(
 						'ajax_url'             => admin_url( 'admin-ajax.php' ),
@@ -511,7 +511,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 		 */
 		public function SKDD_add_product_metaboxes() {
 			add_meta_box(
-				'SKDD-product-video-metabox',
+				'skdd-product-video-metabox',
 				__( 'Product video url', 'SKDD' ),
 				array( $this, 'SKDD_product_metabox_content' ),
 				'product',
@@ -531,10 +531,10 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			$value = get_post_meta( $post->ID, 'SKDD_product_video_metabox', true );
 			?>
 
-			<div class="SKDD-metabox-setting">
-				<div class="SKDD-metabox-option-content">
-					<label for="SKDD-product-video-url" style="margin-top: 10px; display: block;">
-						<textarea class="widefat" id="SKDD-product-video-url" name="SKDD_product_video_metabox" rows="4" placeholder="<?php esc_attr_e( 'Enter Youtube or Vimeo video url', 'SKDD' ); ?>" ><?php echo esc_html( $value ); ?></textarea>
+			<div class="skdd-metabox-setting">
+				<div class="skdd-metabox-option-content">
+					<label for="skdd-product-video-url" style="margin-top: 10px; display: block;">
+						<textarea class="widefat" id="skdd-product-video-url" name="SKDD_product_video_metabox" rows="4" placeholder="<?php esc_attr_e( 'Enter Youtube or Vimeo video url', 'SKDD' ); ?>" ><?php echo esc_html( $value ); ?></textarea>
 					</label>
 				</div>
 			</div>

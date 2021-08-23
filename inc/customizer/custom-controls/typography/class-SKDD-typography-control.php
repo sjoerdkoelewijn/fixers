@@ -20,7 +20,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 		 *
 		 * @var $type
 		 */
-		public $type = 'SKDD-customizer-typography';
+		public $type = 'skdd-customizer-typography';
 
 
 		/**
@@ -28,7 +28,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 		 */
 		public function enqueue() {
 			wp_enqueue_script(
-				'SKDD-typography-selectWoo',
+				'skdd-typography-selectWoo',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/js/selectWoo.js',
 				array( 'customize-controls', 'jquery' ),
 				SKDD_version(),
@@ -36,22 +36,22 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 			);
 
 			wp_enqueue_style(
-				'SKDD-typography-selectWoo',
+				'skdd-typography-selectWoo',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/css/selectWoo.css',
 				array(),
 				SKDD_version()
 			);
 
 			wp_enqueue_script(
-				'SKDD-typography-customizer',
+				'skdd-typography-customizer',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/js/typography-customizer.js',
-				array( 'customize-controls', 'SKDD-typography-selectWoo' ),
+				array( 'customize-controls', 'skdd-typography-selectWoo' ),
 				SKDD_version(),
 				true
 			);
 
 			wp_enqueue_style(
-				'SKDD-typography-customizer',
+				'skdd-typography-customizer',
 				SKDD_THEME_URI . 'inc/customizer/custom-controls/typography/css/typography-customizer.css',
 				array(),
 				SKDD_version()
@@ -105,7 +105,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
 			<# if ( 'undefined' !== typeof( data.family ) ) { #>
-				<div class="SKDD-font-family">
+				<div class="skdd-font-family">
 					<label>
 						<select {{{ data.family.link }}} data-category="{{{ data.category.id }}}" data-variants="{{{ data.variant.id }}}" style="width:100%;">
 							<optgroup label="{{ data.default_fonts_title }}">
@@ -140,7 +140,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 					data.variant.value = data.variant.default;
 				}
 				#>
-				<div id={{{ data.variant.id }}}" class="SKDD-font-variant" data-saved-value="{{ data.variant.value }}">
+				<div id={{{ data.variant.id }}}" class="skdd-font-variant" data-saved-value="{{ data.variant.value }}">
 					<label>
 						<select name="{{{ data.variant.id }}}" multiple class="typography-multi-select" style="width:100%;" {{{ data.variant.link }}}>
 							<# _.each( variants, function( label, choice ) { #>
@@ -156,9 +156,9 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.category ) ) { #>
-				<div class="SKDD-font-category">
+				<div class="skdd-font-category">
 					<label>
-							<input name="{{{ data.category.id }}}" type="hidden" {{{ data.category.link }}} value="{{{ data.category.value }}}" class="SKDD-hidden-input" />
+							<input name="{{{ data.category.id }}}" type="hidden" {{{ data.category.link }}} value="{{{ data.category.value }}}" class="skdd-hidden-input" />
 						<# if ( '' !== data.category_title ) { #>
 							<p class="description">{{ data.category_title }}</p>
 						<# } #>
@@ -167,7 +167,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.weight ) ) { #>
-				<div class="SKDD-font-weight">
+				<div class="skdd-font-weight">
 					<label>
 						<select {{{ data.weight.link }}}>
 
@@ -186,7 +186,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'SKDD_Typography_
 			<# } #>
 
 			<# if ( 'undefined' !== typeof( data.transform ) ) { #>
-				<div class="SKDD-font-transform">
+				<div class="skdd-font-transform">
 					<label>
 						<select {{{ data.transform.link }}}>
 

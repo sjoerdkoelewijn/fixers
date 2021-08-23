@@ -16,7 +16,7 @@ class SKDD_Color_Control extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-	public $type = 'SKDD-color';
+	public $type = 'skdd-color';
 
 	/**
 	 * The control type.
@@ -57,14 +57,14 @@ class SKDD_Color_Control extends WP_Customize_Control {
 		$uri = SKDD_THEME_URI . 'inc/customizer/custom-controls/alpha-color-picker/';
 
 		wp_enqueue_style(
-			'SKDD-alpha-color',
+			'skdd-alpha-color',
 			$uri . 'css/alpha-color-picker.css',
 			array(),
 			SKDD_version()
 		);
 
 		wp_enqueue_script(
-			'SKDD-alpha-color',
+			'skdd-alpha-color',
 			$uri . 'js/alpha-color-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
 			SKDD_version(),
@@ -72,15 +72,15 @@ class SKDD_Color_Control extends WP_Customize_Control {
 		);
 
 		wp_enqueue_script(
-			'SKDD-customizer-color-control',
-			$uri . 'js/SKDD-color-control.js',
-			array( 'SKDD-alpha-color' ),
+			'skdd-customizer-color-control',
+			$uri . 'js/skdd-color-control.js',
+			array( 'skdd-alpha-color' ),
 			SKDD_version(),
 			true
 		);
 
 		wp_localize_script(
-			'SKDD-alpha-color',
+			'skdd-alpha-color',
 			'SKDD_customizer_color_control',
 			array(
 				'clear'            => esc_html__( 'Clear', 'SKDD' ),
@@ -116,7 +116,7 @@ class SKDD_Color_Control extends WP_Customize_Control {
 			<span class="description customize-control-description">{{{ data.description }}}</span>
 		<# } #>
 		<div class="customize-control-content">
-			<input class="SKDD-color-picker-alpha color-picker-hex" type="text" maxlength="7" data-alpha="true" placeholder="{{ defaultValue }}" {{ defaultValueAttr }} value="{{data.value}}" />
+			<input class="skdd-color-picker-alpha color-picker-hex" type="text" maxlength="7" data-alpha="true" placeholder="{{ defaultValue }}" {{ defaultValueAttr }} value="{{data.value}}" />
 		</div>
 
 		<?php

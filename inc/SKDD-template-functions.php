@@ -15,7 +15,7 @@ if ( ! function_exists( 'SKDD_replace_text' ) ) {
 	 */
 	function SKDD_replace_text( $output ) {
 		$output = str_replace( '[current_year]', date_i18n( 'Y' ), $output );
-		$output = str_replace( '[site_title]', '<span class="SKDD-site-title">' . get_bloginfo( 'name' ) . '</span>', $output );
+		$output = str_replace( '[site_title]', '<span class="skdd-site-title">' . get_bloginfo( 'name' ) . '</span>', $output );
 
 		$sjoerd_link = apply_filters(
 			'SKDD_sjoerd_link',
@@ -325,7 +325,7 @@ if ( ! function_exists( 'SKDD_credit' ) ) {
 					wp_nav_menu(
 						array(
 							'theme_location' => 'footer',
-							'menu_class'     => 'SKDD-footer-menu',
+							'menu_class'     => 'skdd-footer-menu',
 							'container'      => '',
 							'depth'          => 1,
 						)
@@ -444,7 +444,7 @@ if ( ! function_exists( 'SKDD_replace_logo_attr' ) ) {
 			if ( 'svg' === $file_extension ) {
 				//$attr['width']  = '100%';
 				//$attr['height'] = '100%';
-				$attr['class']  = 'SKDD-logo-svg';
+				$attr['class']  = 'skdd-logo-svg';
 			}
 
 		}
@@ -639,7 +639,7 @@ if ( ! function_exists( 'SKDD_breadcrumb' ) ) {
 		$blog_page_url = 0 !== $blog_page_url ? get_permalink( $blog_page_url ) : $home_url;
 		$shop_page_url = '#';
 		$breadcrumb    = $options['page_header_breadcrumb'];
-		$container[]   = 'SKDD-breadcrumb SKDD-theme-breadcrumb';
+		$container[]   = 'skdd-breadcrumb skdd-theme-breadcrumb';
 
 		if ( class_exists( 'woocommerce' ) ) {
 			$shop_page_url = wc_get_page_permalink( 'shop' );
@@ -1881,7 +1881,7 @@ if ( ! function_exists( 'SKDD_menu_toggle_btn' ) ) {
 	 * Menu toggle button
 	 */
 	function SKDD_menu_toggle_btn() {
-		$menu_toggle_icon  = apply_filters( 'SKDD_header_menu_toggle_icon', 'SKDD-icon-bar' );
+		$menu_toggle_icon  = apply_filters( 'SKDD_header_menu_toggle_icon', 'skdd-icon-bar' );
 		$SKDD_icon_bar = apply_filters( 'SKDD_header_icon_bar', '<span></span>' );
 		?>
 		<div class="wrap-toggle-sidebar-menu">
@@ -1915,7 +1915,7 @@ if ( ! function_exists( 'SKDD_overlay' ) ) {
 	 * SKDD overlay
 	 */
 	function SKDD_overlay() {
-		echo '<div id="SKDD-overlay"><span class="close-btn"></span></div>';
+		echo '<div id="skdd-overlay"><span class="close-btn"></span></div>';
 	}
 }
 

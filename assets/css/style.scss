@@ -173,7 +173,7 @@ video {
   clear: both;
 }
 
-.clearfix:after, .wpcf7 .row:after, .post-password-form p:after, .SKDD-container:after, .site_content:after, .widget_products li:after,
+.clearfix:after, .wpcf7 .row:after, .post-password-form p:after, .skdd-container:after, .site_content:after, .widget_products li:after,
 .widget_recent_reviews li:after,
 .widget_top_rated_products li:after,
 .widget_recently_viewed_products li:after, .price_slider_wrapper .price_slider:after, .related-box:after, .container:after, .products:after, .cart-sidebar-content .variation:after, .cart-collaterals:after, .checkout_coupon.woocommerce-form-coupon:after,
@@ -268,7 +268,7 @@ h1 {
   //line-height: calc(var(--heading-line-height) * 0.8);
 }
 
-h1, .has-SKDD-heading-1-font-size, .has-skdd-heading-1-font-size{
+h1, .has-skdd-heading-1-font-size, .has-skdd-heading-1-font-size{
   font-size:var(--header-size-1);
 
   @include tablet {
@@ -280,7 +280,7 @@ h1, .has-SKDD-heading-1-font-size, .has-skdd-heading-1-font-size{
   }
 }
 
-h2, .has-SKDD-heading-2-font-size, .has-skdd-heading-2-font-size{
+h2, .has-skdd-heading-2-font-size, .has-skdd-heading-2-font-size{
   font-size:var(--header-size-2);
   
   @include tablet {
@@ -292,7 +292,7 @@ h2, .has-SKDD-heading-2-font-size, .has-skdd-heading-2-font-size{
   }
 }
 
-h3, .has-SKDD-heading-3-font-size, .has-skdd-heading-3-font-size{
+h3, .has-skdd-heading-3-font-size, .has-skdd-heading-3-font-size{
   font-size:var(--header-size-3);
   
   @include tablet {
@@ -304,7 +304,7 @@ h3, .has-SKDD-heading-3-font-size, .has-skdd-heading-3-font-size{
   }
 }
 
-h4, .has-SKDD-heading-4-font-size, .has-skdd-heading-4-font-size{
+h4, .has-skdd-heading-4-font-size, .has-skdd-heading-4-font-size{
   font-size:var(--header-size-4);
 
   @include tablet {
@@ -316,7 +316,7 @@ h4, .has-SKDD-heading-4-font-size, .has-skdd-heading-4-font-size{
   }
 }
 
-h5, .has-SKDD-heading-5-font-size, .has-skdd-heading-5-font-size{
+h5, .has-skdd-heading-5-font-size, .has-skdd-heading-5-font-size{
   font-size:var(--header-size-5);
 
   @include tablet {
@@ -329,7 +329,7 @@ h5, .has-SKDD-heading-5-font-size, .has-skdd-heading-5-font-size{
 
 }
 
-h6, .has-SKDD-heading-6-font-size, .has-skdd-heading-6-font-size{
+h6, .has-skdd-heading-6-font-size, .has-skdd-heading-6-font-size{
   font-size:var(--header-size-6);
 
   @include tablet {
@@ -613,23 +613,23 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   
 }
 
-.SKDD-button-color,
+.skdd-button-color,
   .loop-add-to-cart-on-image+.added_to_cart {
     color: var(--button-text-color);
   }
 
-  .SKDD-button-bg-color,
+  .skdd-button-bg-color,
   .woocommerce-cart-form__contents:not(.elementor-menu-cart__products) .actions .coupon [name="apply_coupon"],
   .loop-add-to-cart-on-image+.added_to_cart {
     background-color: var(--button-background-color);
   }
 
-  .SKDD-button-hover-color,
+  .skdd-button-hover-color,
   .button[name="apply_coupon"]:hover{
     color: var(--button-hover-text-color);
   }
 
-  .SKDD-button-hover-bg-color,
+  .skdd-button-hover-bg-color,
   .loop-add-to-cart-on-image+.added_to_cart:hover,
   .button.loop-add-to-cart-icon-btn:hover,
   .product-loop-action .yith-wcwl-add-to-wishlist:hover,
@@ -2275,13 +2275,13 @@ form {
   cursor: pointer;
 }  
 
-.SKDD-icon-bar {
+.skdd-icon-bar {
   width: 30px;
   height: 30px;
 
 }
 
-.SKDD-icon-bar span {
+.skdd-icon-bar span {
   position: relative;
   background-color: #000;
   width: 100%;
@@ -2290,7 +2290,7 @@ form {
   border-radius: 2px;
 }
 
-.SKDD-icon-bar span:before, .SKDD-icon-bar span:after {
+.skdd-icon-bar span:before, .skdd-icon-bar span:after {
   content: '';
   position: absolute;
   left: 0;
@@ -2300,15 +2300,15 @@ form {
   border-radius: 2px;
 }
 
-.SKDD-icon-bar span:before {
+.skdd-icon-bar span:before {
   top: -10px;
 }
 
-.SKDD-icon-bar span:after {
+.skdd-icon-bar span:after {
   bottom: -10px;
 }
 
-.SKDD-icon-bar span {
+.skdd-icon-bar span {
   background-color:var(--theme-color);
 }
 
@@ -2334,7 +2334,7 @@ form {
 
 .has-header-transparent.header-transparent-for-all-devices {
   
-  .SKDD-icon-bar span {
+  .skdd-icon-bar span {
     background-color:var(--second-background-color); 
   }
 
@@ -2344,7 +2344,7 @@ form {
 
   .site_header.active {
     
-    .SKDD-icon-bar span {
+    .skdd-icon-bar span {
       background-color:var(--theme-color);                 
     }
 
@@ -2355,7 +2355,7 @@ form {
 
 }
 
-#SKDD-overlay {
+#skdd-overlay {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -2439,11 +2439,11 @@ color:var(--menu-color);
 overflow: hidden;
 }
 
-.sidebar-menu-open .SKDD-icon-bar span {
+.sidebar-menu-open .skdd-icon-bar span {
 display:none;
 }
 
-.sidebar-menu-open #SKDD-overlay {
+.sidebar-menu-open #skdd-overlay {
 opacity: 1;
 visibility: visible;
 pointer-events: auto;
@@ -2673,7 +2673,7 @@ transform: translateX(0px);
 
 /*************************** Custom Colors  ****************************************************************************/
 
-.SKDD-theme-color,
+.skdd-theme-color,
 .woocommerce-cart-form__contents tbody .product-subtotal,
 .woocommerce-checkout-review-order-table .order-total,
 .woocommerce-table--order-details .product-name a,
@@ -3802,15 +3802,15 @@ form.woocommerce-checkout {
 }
 
 .site-footer .widget-title,
-.SKDD-footer-social-icon a{
+.skdd-footer-social-icon a{
   color: var(--footer-heading-color);
 }
 
-.SKDD-footer-social-icon a:hover{
+.skdd-footer-social-icon a:hover{
   background-color: var(--footer-heading-color);
 }
 
-.SKDD-footer-social-icon a {
+.skdd-footer-social-icon a {
   border-color: var(--footer-heading-color);
 }
 
@@ -4322,7 +4322,7 @@ form.woocommerce-checkout {
     transform: translateX(0);
   }
   
-  .cart-sidebar-open #SKDD-overlay {
+  .cart-sidebar-open #skdd-overlay {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
