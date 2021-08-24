@@ -53,7 +53,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		 */
 		public function SKDD_includes() {
 			// Nav menu walker.
-			require_once SKDD_THEME_DIR . 'inc/class-skdd-walker-menu.php';			
+			require_once SKDD_THEME_DIR . 'inc/class-SKDD-walker-menu.php';			
 		}
 		
  	
@@ -347,7 +347,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 		 */
 		public function SKDD_widgets_init() {
 			// SKDD widgets.
-			require_once SKDD_THEME_DIR . 'inc/widget/class-skdd-recent-post-thumbnail.php';
+			require_once SKDD_THEME_DIR . 'inc/widget/class-SKDD-recent-post-thumbnail.php';
 
 			// Setup.
 			$sidebar_args['sidebar'] = array(
