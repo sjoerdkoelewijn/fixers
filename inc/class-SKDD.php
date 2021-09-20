@@ -466,7 +466,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			if ( class_exists( 'ghostkit' ) ) {
 
 				wp_enqueue_style(
-					'ghostkit-block-grid-css',
+					'ghostkit-block-grid-css-always',
 					'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
 					array(),
 					SKDD_version()
