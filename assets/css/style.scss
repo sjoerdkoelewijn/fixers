@@ -228,7 +228,7 @@ a {
 }
 
 body, select, button, input, textarea, p{
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family), sans-serif;
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
   text-transform: var(--body-text-transform);
