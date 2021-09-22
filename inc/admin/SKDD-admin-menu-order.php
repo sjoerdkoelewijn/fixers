@@ -90,10 +90,10 @@ function SKDD_move_admin_menu_items()
 
     add_submenu_page(
         'options-general.php', //$parent_slug
-        __( 'Menus', 'SKDD' ), //$page_title
-        __( 'Menus', 'SKDD' ), //$menu_title
-        'edit_posts', //$capability
-        'nav-menus.php' //$menu_slug
+        __( 'Search & Replace', 'SKDD' ), //$page_title
+        __( 'Search & Replace', 'SKDD' ), //$menu_title
+        'activate_plugins', //$capability
+        'tools.php?page=better-search-replace' //$menu_slug
     );
 
     add_submenu_page(
@@ -110,8 +110,7 @@ function SKDD_move_admin_menu_items()
         __( 'Plugins', 'SKDD' ), //$menu_title
         'edit_posts', //$capability
         'plugins.php' //$menu_slug
-    );
-
+    );    
 
 }
 

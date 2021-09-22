@@ -1570,6 +1570,10 @@ form {
 
   .wp-block-media-text__content {
       padding:var(--content-spacing) calc(var(--content-spacing) * 1.5);
+
+      @include tablet {
+        padding:var(--content-spacing);
+      }
   }
 
 }
@@ -3898,25 +3902,30 @@ form.woocommerce-checkout {
 /*************************** ghostkit carousel slider ****************************************************************************/
 
 .ghostkit-carousel {
-  --gkt-carousel--arrows__offset: 60px;
-  --gkt-carousel--arrows__width: 60px;
-  --gkt-carousel--arrows__height: 60px;
-  --gkt-carousel--arrows__background-color: var(--button-background-color);
+  --gkt-carousel--arrows__offset: 45%;
+  --gkt-carousel--arrows__width: 20px;
+  --gkt-carousel--arrows__height: 20px;
+  --gkt-carousel--arrows__font-size:22px;
+  --gkt-carousel--arrows__background-color:var(--background-color);
   --gkt-carousel--bullets__margin-top: 50px;
   --gkt-carousel--bullets__background-color: var(--theme-color);
+  --gkt-carousel--arrows__color:var(--theme-color);
+  --gkt-carousel--arrows__opacity:.5;
+  --gkt-carousel--arrows__box-shadow:none;
+  --gkt-carousel--arrows-hover__box-shadow:none;
   
   margin-top:var(--content-spacing);
 
   @include phone{
-    --gkt-carousel--arrows__width: 50px;
-    --gkt-carousel--arrows__height: 50px;
+    --gkt-carousel--arrows__width: 30px;
+    --gkt-carousel--arrows__height: 30px;
     --gkt-carousel--bullets__margin-top: 10px;
     --gkt-carousel--arrows__offset: 15px;
 
   }
 
   .ghostkit-carousel-arrow {
-    top:45%;
+    top:101.2%;
   }
 
   .ghostkit-carousel-arrow-prev {
