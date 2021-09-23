@@ -121,6 +121,7 @@ class SKDD_Get_CSS {
 				--button-font-family:' . esc_attr( $options['button_font_family'] ) . ';
 				--button-font-weight:' . esc_attr( $options['button_font_weight'] ) . ';
 				--button-line-height:'. esc_attr( ($options['button_line_height']) ) . 'px' .';
+				--button-letter-spacing:'. esc_attr( ($options['button_letter_spacing']) ) . 'em' .';
 				--button-font-transform:' . esc_attr( $options['button_font_transform'] ) . ';
 
 				--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
@@ -617,6 +618,7 @@ class SKDD_Get_CSS {
 						--button-font-family:' . esc_attr( $options['button_font_family'] ) . ';
 						--button-font-weight:' . esc_attr( $options['button_font_weight'] ) . ';
 						--button-line-height:'. esc_attr( ($options['button_line_height']) ) . 'px' .';
+						--button-letter-spacing:'. esc_attr( ($options['button_letter_spacing']) ) . 'em' .';
 						--button-font-transform:' . esc_attr( $options['button_font_transform'] ) . ';
 
 						--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';

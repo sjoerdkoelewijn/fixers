@@ -152,6 +152,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 				'button_font_size_mobile'        => 16,
 				'button_font_weight'             => 400,
 				'button_line_height'             => 28,
+				'button_letter_spacing'			 => 0,
 				'button_font_category'           => '',
 				'button_font_transform'          => 'none',
 

@@ -207,3 +207,37 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+// button font spacing.
+$wp_customize->add_setting(
+	'SKDD_setting[button_letter_spacing]',
+	array(
+		'default'           => $defaults['button_letter_spacing'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Range_Slider_Control(
+		$wp_customize,
+		'SKDD_setting[button_letter_spacing]',
+		array(
+			'type'           => 'skdd-range-slider',
+			'description'    => __( 'Letter Spacing', 'SKDD' ),
+			'section'        => 'SKDD_buttons',
+			'settings'       => array(
+				'desktop' => 'SKDD_setting[button_letter_spacing]',
+			),
+			'choices'        => array(
+				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_button_letter_spacing_space_min_step', -2 ),
+					'max'  => apply_filters( 'SKDD_button_letter_spacing_max_step', 2 ),
+					'step' => 0.01,
+					'edit' => true,
+					'unit' => 'em',
+				),
+			),
+		)
+	)
+);

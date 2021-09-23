@@ -59,7 +59,7 @@ p {
 }
 
 a:focus {
-  filter: drop-shadow(0 0 5px var(--theme-color)); 
+  filter: drop-shadow(0 0 1px var(--theme-color)); 
 }
 
 .custom-logo-link:focus {
@@ -75,6 +75,14 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
     color:var(--theme-color) !important;
   }
 
+}
+
+.ghostkit-accordion-item-heading:focus {
+  .ghostkit-accordion-item-label {
+    box-shadow:none;
+    filter: none; 
+    color:var(--theme-color);
+  }
 }
 
 @include desktop-up {
@@ -428,6 +436,7 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   border:0;
   font-weight:var(--button-font-weight);
   font-size:var(--button-font-size);
+  letter-spacing:var(--button-letter-spacing);
   line-height:var(--button-line-height);
   text-transform: var(--button-font-transform);
   background:var(--theme-color);
@@ -4043,7 +4052,7 @@ form.woocommerce-checkout {
     margin-bottom:10px;
 
     .ghostkit-accordion-item-heading {
-      background-color:var(--offset-color);
+      background-color:var(--offset-color);     
     }
 
     .ghostkit-accordion-item-collapse {
