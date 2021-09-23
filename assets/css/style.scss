@@ -2093,16 +2093,14 @@ form {
 /*************************** Site Header - Primary menu ****************************************************************************/
 
 .primary-navigation a{
-  font-family: var(--menu-font-family);
+  font-family: var(--menu-font-family);  
   text-transform: var(--menu-text-transform);
-}
-
-.primary-navigation > li > a {
-  font-weight: var(--menu-font-weight);
 }
 
 .primary-navigation > li > a{
   font-size: var(--menu-font-size);
+  font-weight: var(--menu-font-weight);
+  letter-spacing:var(--menu-letter-spacing);
   line-height: var(--header-max-height);
   color: var(--menu-color);
 
