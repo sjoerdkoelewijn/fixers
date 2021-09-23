@@ -2123,7 +2123,8 @@ form {
   line-height: var(--submenu-line-height);
   font-size: var(--submenu-font-size);
   color: var(--submenu-color);
-  font-weight:var(--heading-font-weight);
+  font-weight: var(--menu-font-weight);
+  letter-spacing:var(--menu-letter-spacing);
 
   .ghostkit-button-text {
     font-weight:var(--button-font-weight);
