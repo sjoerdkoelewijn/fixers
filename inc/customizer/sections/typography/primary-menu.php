@@ -264,6 +264,42 @@ $wp_customize->add_control(
 	)
 );
 
+
+// Menu letter spacing.
+$wp_customize->add_setting(
+	'SKDD_setting[SKDD_menu_letter_spacing]',
+	array(
+		'default'           => $defaults['SKDD_menu_letter_spacing'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Range_Slider_Control(
+		$wp_customize,
+		'SKDD_setting[SKDD_menu_letter_spacing]',
+		array(
+			'type'           => 'skdd-range-slider',
+			'description'    => __( 'Letter Spacing', 'SKDD' ),
+			'section'        => 'menu_font_section',
+			'settings'       => array(
+				'desktop' => 'SKDD_setting[SKDD_menu_letter_spacing]',
+			),
+			'choices'        => array(
+				'desktop' => array(
+					'min'  => apply_filters( 'SKDD_menu_letter_spacing_space_min_step', -2 ),
+					'max'  => apply_filters( 'SKDD_menu_letter_spacing_max_step', 2 ),
+					'step' => 0.01,
+					'edit' => true,
+					'unit' => 'em',
+				),
+			),
+		)
+	)
+);
+
+
 // Submenu divider.
 $wp_customize->add_setting(
 	'sub_menu_divider',

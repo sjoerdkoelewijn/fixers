@@ -158,7 +158,8 @@ class SKDD_Get_CSS {
 
 			.site_header_inner {
 				--menu-font-family:' . esc_attr( $options['menu_font_family'] ) . ';					
-				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';								
+				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';
+				--menu-letter-spacing:'. esc_attr( ($options['menu_letter_spacing']) ) . 'em' .';								
 				--menu-text-transform:' . esc_attr( $options['menu_font_transform'] ) . ';
 				--menu-color:' . esc_attr( $options['primary_menu_color'] ) . ';				
 				--submenu-color:' . esc_attr( $options['primary_sub_menu_color'] ) . ';

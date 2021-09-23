@@ -160,6 +160,7 @@ if ( ! class_exists( 'SKDD_Fonts_Helpers' ) ) :
 				'menu_font_family'               => 'Poppins',
 				'menu_font_family_variants'      => '',
 				'menu_font_weight'               => 400,
+				'menu_letter_spacing'            => 0,
 				'parent_menu_font_size'          => 20,
 				'parent_menu_font_size_tablet'   => 18,
 				'parent_menu_font_size_mobile'   => 16,
