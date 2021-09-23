@@ -78,9 +78,10 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
 }
 
 .ghostkit-accordion-item-heading:focus {
-  .ghostkit-accordion-item-label {
-    box-shadow:none;
-    filter: none; 
+  box-shadow:none;
+  filter: none; 
+
+  .ghostkit-accordion-item-label {    
     color:var(--theme-color);
   }
 }
