@@ -447,7 +447,7 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   letter-spacing:var(--button-letter-spacing);
   line-height:var(--button-line-height);
   text-transform: var(--button-font-transform);
-  background:var(--theme-color);
+  background:var(--button-background-color);
   color:var(--button-text-color);
   transition: background .3s ease, color .3s ease ; 
   
