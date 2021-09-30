@@ -18,7 +18,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[theme_color]',
 		array(
@@ -39,7 +39,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[secondary_theme_color]',
 		array(
@@ -60,7 +60,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[tertiary_theme_color]',
 		array(
@@ -81,7 +81,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[background_color]',
 		array(
@@ -103,7 +103,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[second_background_color]',
 		array(
@@ -144,7 +144,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[heading_color]',
 		array(
@@ -165,7 +165,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[text_color]',
 		array(
@@ -186,7 +186,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[link_color]',
 		array(
@@ -207,7 +207,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[hover_color]',
 		array(
@@ -228,7 +228,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[offset_color]',
 		array(
@@ -291,7 +291,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[primary_menu_color]',
 		array(
@@ -312,7 +312,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[primary_sub_menu_color]',
 		array(
@@ -421,7 +421,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[footer_heading_color]',
 		array(
@@ -442,7 +442,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[footer_link_color]',
 		array(
@@ -463,7 +463,7 @@ $wp_customize->add_setting(
 	)
 );
 $wp_customize->add_control(
-	new WP_Customize_Color_Control(
+	new SKDD_Color_Control(
 		$wp_customize,
 		'SKDD_setting[footer_text_color]',
 		array(

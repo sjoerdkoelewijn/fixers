@@ -1,5 +1,5 @@
 /**
- * SKDD alpha color picker
+ * skdd alpha color picker
  *
  * @package SKDD
  */
