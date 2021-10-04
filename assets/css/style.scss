@@ -1321,6 +1321,41 @@ form {
   height: 40px;
 }
 
+/*************************** Search block ****************************************************************************/
+
+.wp-block-search {
+  position:relative;
+
+  .wp-block-search__input {
+    border:0;
+    border-radius:100px;
+    padding:20px 20px 20px 80px;
+    opacity:.8;
+    box-shadow: 2px 2px 10px 1px rgba(72, 58, 88, 0.1);   
+  }
+
+  input::-webkit-input-placeholder {
+    opacity: 0.5; 
+  }
+
+  .wp-block-search__button {
+    border:0;
+    color:var(--body-text-color);
+    background-color:#fff;
+    position:absolute;
+    left:0;
+    padding:18px;
+    margin-top:5px;
+    font-size: 0;
+    background-image:url(../images/svg/search-icon.svg);
+    background-repeat:no-repeat;
+    background-position:10px 20px;
+    margin-left:20px;
+  }
+}
+
+
+
 /*************************** Search Results ****************************************************************************/
 
 .search-results {
