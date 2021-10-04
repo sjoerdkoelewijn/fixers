@@ -1331,7 +1331,8 @@ form {
     border-radius:100px;
     padding:20px 20px 20px 80px;
     opacity:.8;
-    box-shadow: 2px 2px 10px 1px rgba(72, 58, 88, 0.1);   
+    box-shadow: 2px 2px 10px 1px rgba(72, 58, 88, 0.1); 
+    background-color:#fff;  
   }
 
   input::-webkit-input-placeholder {
@@ -1340,9 +1341,9 @@ form {
 
   .wp-block-search__button {
     border:0;
-    color:var(--body-text-color);
-    background-color:#fff;
+    color:var(--body-text-color);    
     position:absolute;
+    background-color:transparent;
     left:0;
     padding:18px;
     margin-top:5px;
