@@ -33,4 +33,9 @@ wp.domReady( () => {
 		label: 'Align Right',
 	} );
 
+	wp.blocks.registerBlockStyle( 'core/search', { 
+		name: 'no-button',
+		label: 'No Button',
+	} );
+
 } );

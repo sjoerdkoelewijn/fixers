@@ -1323,7 +1323,7 @@ form {
 
 /*************************** Search block ****************************************************************************/
 
-.wp-block-search {
+.wp-block-search.is-style-no-button {
   position:relative;
 
   .wp-block-search__input {
@@ -1353,6 +1353,24 @@ form {
     background-position:10px 20px;
     margin-left:20px;
   }
+}
+
+.wp-block-search {
+
+  .wp-block-search__input {
+    border:1px solid var(--offset-color);
+    padding:20px;
+    border-radius:5px;
+  }
+
+  .wp-block-search__button {
+    background-color:var(--button-background-color);
+    color:var(--button-text-color);
+    border-radius:5px;
+    letter-spacing:0.05em;
+    padding:0 30px;
+  }
+
 }
 
 
