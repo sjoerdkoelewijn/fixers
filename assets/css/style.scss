@@ -2271,6 +2271,7 @@ form {
       .ghostkit-button-wrapper {
         display: flex;
         align-items: center;        
+        height: var(--header-max-height);
       }
   
     } 
