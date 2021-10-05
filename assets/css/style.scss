@@ -929,6 +929,18 @@ form {
 
 }
 
+.forminator-ui.forminator-design--material {
+
+  .forminator-textarea {
+    border-color:transparent !important;
+  }
+
+  .forminator-label.forminator-floating--textarea {
+    padding-left:0 !important;
+    
+  }
+  
+}
 
 .forminator-row {
   margin-bottom: 5px !important;
@@ -2249,6 +2261,21 @@ form {
   -webkit-box-align: center;
   align-items: center;
   margin-left:10px;
+
+  .header_widget_area {
+    height: var(--header-max-height);
+
+    .main_menu_widget {
+      height: var(--header-max-height);
+
+      .ghostkit-button-wrapper {
+        display: flex;
+        align-items: center;        
+      }
+  
+    } 
+  }
+
 }
 
 .site-tools .tools-icon {
