@@ -4021,7 +4021,8 @@ form.woocommerce-checkout {
   --gkt-carousel--arrows__box-shadow:none;
   --gkt-carousel--arrows-hover__box-shadow:none;
   
-  margin-top:var(--content-spacing);
+  margin-top:var(--content-spacing); 
+  
 
   @include phone{
     --gkt-carousel--arrows__width: 30px;
@@ -4067,7 +4068,30 @@ form.woocommerce-checkout {
 }
 
 
-.ghostkit-carousel.fade {
+.ghostkit-carousel.cut-off-right-fade {
+
+  width:104vw !important;
+  margin-left:calc( ((96vw - var(--content-width)) / 2) * -1 );
+
+    @include uhd {
+      margin-left:calc( ((96vw - (var(--content-width) * 1.2)) / 2) * -1 );
+    }
+
+  @include phone{
+    width:100% !important;
+    margin-left:0 !important;
+  }
+  
+  .ghostkit-carousel-arrow-next {
+    right:clamp(var(--content-spacing), 10vw, 200px );
+    z-index:20;
+
+    @include phone{
+      right:var(--content-spacing-mobile);
+    }
+
+  }
+
   &:before {
     content:'';
     width:100px;
@@ -4085,6 +4109,11 @@ form.woocommerce-checkout {
 }
 
 .ghostkit-carousel.alignfull {
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.ghostkit-carousel.cut-off-right {
   width:104vw !important;
   margin-left:calc( ((96vw - var(--content-width)) / 2) * -1 );
 
