@@ -25,7 +25,17 @@ wp.domReady( () => {
 
      wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
 		name: 'order-random',
-		label: 'Shuffle',
+		label: 'Default Shuffle',
+	} );
+
+	wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
+		name: 'cut-off-right',
+		label: 'Cut Off',
+	} );
+
+	wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
+		name: 'cut-off-right-fade',
+		label: 'Cut Off Fade',
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/list', { 
