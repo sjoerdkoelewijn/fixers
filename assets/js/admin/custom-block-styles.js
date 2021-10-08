@@ -29,8 +29,8 @@ wp.domReady( () => {
 	} );
 
 	wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
-		name: 'cut-off-right-fade',
-		label: 'Cut Off Fade',
+		name: 'cut-off-right-mobile',
+		label: 'Cut Off Mobile',
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/list', { 

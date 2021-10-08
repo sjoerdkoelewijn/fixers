@@ -4009,40 +4009,29 @@ form.woocommerce-checkout {
 /*************************** ghostkit carousel slider ****************************************************************************/
 
 .ghostkit-carousel {
-  --gkt-carousel--arrows__offset: 45%;
-  --gkt-carousel--arrows__width: 20px;
-  --gkt-carousel--arrows__height: 20px;
-  --gkt-carousel--arrows__font-size:22px;
+  --gkt-carousel--arrows__offset: 2%;
+  --gkt-carousel--arrows__opacity:1;
+  --gkt-carousel--arrows__width: 50px;
+  --gkt-carousel--arrows__height: 50px;
   --gkt-carousel--arrows__background-color:var(--background-color);
   --gkt-carousel--bullets__margin-top: 50px;
   --gkt-carousel--bullets__background-color: var(--theme-color);
-  --gkt-carousel--arrows__color:var(--theme-color);
-  --gkt-carousel--arrows__opacity:.5;
+  --gkt-carousel--arrows__color:var(--theme-color);  
+  --gkt-carousel--arrows__font-size:2.6rem;
   --gkt-carousel--arrows__box-shadow:none;
   --gkt-carousel--arrows-hover__box-shadow:none;
+
   
   margin-top:var(--content-spacing); 
   
-
   @include phone{
-    --gkt-carousel--arrows__width: 30px;
-    --gkt-carousel--arrows__height: 30px;
-    --gkt-carousel--bullets__margin-top: 10px;
-    --gkt-carousel--arrows__offset: 15px;
+    --gkt-carousel--arrows__width: 40px;
+    --gkt-carousel--arrows__height: 40px;
+    --gkt-carousel--bullets__margin-top: 15px;
+    --gkt-carousel--arrows__offset: 20px;
+    --gkt-carousel--bullets__margin-top: 55px;
 
   }
-
-  .ghostkit-carousel-arrow {
-    top:101.2%;
-  }
-
-  .ghostkit-carousel-arrow-prev {
-    
-    @include phone{
-      display:none;
-    }
-
-  } 
   
   .textblock {
     border-radius:var(--border-radius);  
@@ -4067,76 +4056,85 @@ form.woocommerce-checkout {
   
 }
 
+.ghostkit-carousel.arrows-at-bottom {
+  --gkt-carousel--arrows__offset: 45%;
+  --gkt-carousel--arrows__width: 20px;
+  --gkt-carousel--arrows__height: 20px;
+  --gkt-carousel--arrows__font-size:22px;
+  --gkt-carousel--arrows__opacity:.6;
+  --gkt-carousel--arrows__font-size:2rem;
 
-.ghostkit-carousel.cut-off-right-fade {
-
-  width:104vw !important;
-  margin-left:calc( ((96vw - var(--content-width)) / 2) * -1 );
-
-    @include uhd {
-      margin-left:calc( ((96vw - (var(--content-width) * 1.2)) / 2) * -1 );
-    }
-
-  @include phone{
-    width:100% !important;
-    margin-left:0 !important;
+  .ghostkit-carousel-arrow {
+    top:102%;
   }
   
-  .ghostkit-carousel-arrow-next {
-    right:clamp(var(--content-spacing), 10vw, 200px );
-    z-index:20;
-
-    @include phone{
-      right:var(--content-spacing-mobile);
+  @include phone {
+    --gkt-carousel--arrows__offset: 35%;
+    
+    .ghostkit-carousel-arrow {
+      top:104.5%;
     }
-
-  }
-
-  &:before {
-    content:'';
-    width:100px;
-    height:100%;
-    background:linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--background-color-rgba) 100%);
-    position:absolute;
-    right:4vw;
-    z-index:10;
-
-    @include phone{
-      display:none;
-    }
-
   }
 }
+
 
 .ghostkit-carousel.alignfull {
   margin-bottom:0;
   margin-top:0;
 }
 
-.ghostkit-carousel.cut-off-right {
-  width:104vw !important;
-  margin-left:calc( ((96vw - var(--content-width)) / 2) * -1 );
+.ghostkit-carousel.remove-arrows-on-mobile {
 
-    @include uhd {
-      margin-left:calc( ((96vw - (var(--content-width) * 1.2)) / 2) * -1 );
-    }
-
-  @include phone{
-    width:100% !important;
-    margin-left:0 !important;
-  }
-  
-  .ghostkit-carousel-arrow-next {
-    right:clamp(var(--content-spacing), 10vw, 200px );
-    z-index:20;
-
-    @include phone{
-      right:var(--content-spacing-mobile);
-    }
-
+  @include tablet-down {
+    .ghostkit-carousel-arrow-prev, .ghostkit-carousel-arrow-next {
+      display:none;
+    } 
   }
 
 }
+
+.ghostkit-carousel.is-style-cut-off-right {
+  width:105vw !important;
+  --gkt-carousel--arrows__offset: 12vw; 
+  
+  .ghostkit-carousel-arrow-next {
+    z-index:20;
+  }
+
+  .ghostkit-carousel-arrow-prev {
+    display:none;
+  } 
+
+  @include phone {
+    --gkt-carousel--arrows__offset: 14vw; 
+
+    .ghostkit-carousel-slide {
+        margin-left:-35px;
+        margin-right:30px !important;     
+    }
+  }
+
+}
+
+.ghostkit-carousel.is-style-cut-off-right.alignfull {
+  --gkt-carousel--arrows__offset: 8vw; 
+}
+
+
+.ghostkit-carousel.is-style-cut-off-right-mobile {
+
+  @include phone {    
+    --gkt-carousel--arrows__offset: 10%; 
+
+  
+      .ghostkit-carousel-slide {
+        width:95% !important;
+      }
+    
+  }
+
+}
+
 
 .ghostkit-carousel.image-with-text {
 
