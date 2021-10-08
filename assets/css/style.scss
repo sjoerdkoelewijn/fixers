@@ -965,11 +965,13 @@ form {
     color:var(--theme-color) !important;
   }
 
-  .forminator-is_active, .forminator-is_hover {
-
+  .forminator-is_active {
     .forminator-label {
       color:var(--secondary-theme-color) !important;
     }
+  }
+
+  .forminator-is_active, .forminator-is_hover {
 
     .forminator-input--wrap:after {
       background-color:var(--secondary-theme-color) !important;
