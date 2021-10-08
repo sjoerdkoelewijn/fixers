@@ -281,7 +281,7 @@ function shuffleCarousel() {
 
 		if (ghostkitCarousel.classList.contains('is-style-order-random')) {
 
-			var elems = document.querySelectorAll('.ghostkit-carousel-items > .ghostkit-carousel-slide');
+			var elems = document.querySelectorAll('.is-style-order-random > .ghostkit-carousel-items > .ghostkit-carousel-slide');
 		
 			var allElems = (function(){
 				var ret = [], l = elems.length;

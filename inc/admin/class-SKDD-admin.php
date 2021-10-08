@@ -39,6 +39,7 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 			//add_action( 'admin_notices', array( $this, 'SKDD_admin_notice' ) );
 			add_action( 'wp_ajax_dismiss_admin_notice', array( $this, 'SKDD_dismiss_admin_notice' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'SKDD_welcome_static' ) );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'skdd_gutenberg_filters' ) );
 			add_action( 'admin_body_class', array( $this, 'SKDD_admin_classes' ) );
 			add_filter('upload_mimes', array( $this, 'SKDD_mime_types' ) );
 		}
@@ -104,6 +105,16 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 		}
 		*/
 
+		public function skdd_gutenberg_filters() {
+
+			wp_enqueue_script(
+				'skdd-gutenberg-filters', 
+				SKDD_THEME_URI . 'assets/js/admin/gutenberg-filters.min.js', 
+				['wp-edit-post']
+			);
+			
+		}
+
 		/**
 		 * Dismiss admin notice
 		 */
@@ -160,7 +171,6 @@ if ( ! class_exists( 'SKDD_Admin' ) ) :
 				SKDD_version(),
 				true
 			);
-			
 
 			wp_localize_script(
 				'skdd-dismiss-admin-notice',

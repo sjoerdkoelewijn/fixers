@@ -23,11 +23,6 @@ wp.domReady( () => {
 		label: 'Responsive Hidden',
 	} );
 
-     wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
-		name: 'order-random',
-		label: 'Default Shuffle',
-	} );
-
 	wp.blocks.registerBlockStyle( 'ghostkit/carousel', { 
 		name: 'cut-off-right',
 		label: 'Cut Off',
