@@ -238,6 +238,59 @@ class SKDD_Get_CSS {
 			';			
 		}
 
+		$header_shadow = $options['header_shadow'];
+		
+		if ( $header_shadow ) {
+			$styles .= '
+						
+			.site_header .site_header_inner {
+				box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.06);
+			}
+			
+			';			
+		}
+
+		$header_sticky = $options['header_sticky'];
+		
+		if ( $header_sticky ) {
+			$styles .= '
+						
+			.site_header.active {
+				margin-bottom:var(--header-max-height);  
+			}
+			.site_header.active .site_header_inner{
+				position: fixed;
+    			top: 0;
+			}
+			
+			';			
+		}
+
+		$header_show_scroll_up = $options['header_show_scroll_up'];
+		
+		if ( $header_show_scroll_up ) {
+			$styles .= '
+						
+			.scrolling-up .site_header {
+				margin-bottom:var(--header-max-height);
+			}
+
+			.scrolling-up .site_header .site_header_inner {
+				position: fixed;
+    			top: 0;	
+				animation: fadeInDown .5s;
+    			max-width: 100vw; 
+    			height: var(--header-max-height);			
+			}
+
+			.scrolling-down .site_header .site_header_inner{
+				animation: fadeOut .5s;
+				max-width: 100vw; 
+			  }
+			
+			';			
+		}
+
 		// Logo width.
 		$logo_width        = $options['logo_width'];
 		$tablet_logo_width = $options['tablet_logo_width'];

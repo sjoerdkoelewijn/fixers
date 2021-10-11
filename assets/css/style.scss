@@ -1917,8 +1917,8 @@ form {
         padding:0 var(--content-spacing);
         margin:0 auto;  
         background:var(--header-background-color);
-        box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.03);
-        height: var(--header-max-height);    
+        height: var(--header-max-height);
+        max-width: 100vw;     
         
         @include tablet-down {
           height: var(--header-max-height-tablet); 
@@ -2087,13 +2087,35 @@ form {
 }
 
 
-.site_header.active { 
-  position: fixed;
-  top: 0;
-  margin-top:0;
+// Animations that are called in class-SKDD-get-css.php
+
+@keyframes fadeInDown {
+  0% {
+    opacity:0;
+    height:0;    
+  }
+  100% {
+    opacity:1;
+    height:var(--header-max-height);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+    
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+
+.site_header.active {
+  margin-top:0;   
   border-top:none;
   width:100%;
-  max-width: 100vw; 
+  max-width: 100vw;  
 
   .site_header_inner {
     background-color:var(--header-background-color);    
@@ -2102,7 +2124,7 @@ form {
     -webkit-transition-delay: .5s, color .5s ease-in;
     transition-delay: .5s, color .5s ease-in;
 
-    box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.06);
+    //box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.06);
     
     .site-branding {
       .normal-logo-active {
@@ -2122,7 +2144,7 @@ form {
 
   .scrolling-down {
 
-    .site_header.active {
+    .site_header {
       transform: translateY(calc(var(--header-max-height-mobile) * -1));
       transition:.3s ease-out;  
      
@@ -2132,7 +2154,7 @@ form {
 
   .scrolling-up {
 
-    .site_header.active {
+    .site_header {
       transform: translateY(0);
       transition:.3s ease-out;      
     }

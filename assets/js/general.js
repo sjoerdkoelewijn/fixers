@@ -103,7 +103,7 @@ function dialogSearch() {
 					}
 				);
 
-				// Use closr button.
+				// Use close button.
 				closeBtn.addEventListener(
 					'click',
 					function() {
@@ -124,12 +124,7 @@ function scrollAction( selector, position ) {
 		}
 
 		var pos = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : window.scrollY;
-
-		if ( pos > position ) {
-			item.classList.add( 'active' );
-		} else {
-			item.classList.remove( 'active' );
-		}
+		
 	}
 
 	window.addEventListener(
@@ -169,12 +164,15 @@ function scrollingDetect() {
 
 	// Add scroll event
 	window.addEventListener("scroll", function() {
+
+		const site_header = document.getElementById('masthead');
 	
 		const body = document.body;
 
 	  	if ((body.getBoundingClientRect()).top < scrollPos) {
 			body.classList.add( 'scrolling-down' );
 			body.classList.remove( 'scrolling-up' );
+			site_header.classList.add( 'active' );
 	  	}	else {
 			body.classList.remove( 'scrolling-down' );
 			body.classList.add( 'scrolling-up' );
@@ -315,7 +313,7 @@ document.addEventListener(
 	function() {
 		dialogSearch();
 		scrollAction( '#scroll-to-top', 200 );
-		scrollAction( '#masthead', 30 );
+		//scrollAction( '#masthead', 30 );
 		toTopButton();
 		scrollingDetect();
 		//lazyload();		

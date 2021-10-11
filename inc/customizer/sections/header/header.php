@@ -192,6 +192,74 @@ $wp_customize->add_control(
 	)
 );
 
+
+// Add a drop shadow to the main menu
+$wp_customize->add_setting(
+	'SKDD_setting[header_shadow]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['header_shadow'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[header_shadow]',
+		array(
+			'priority' => 80,
+			'label'    => __( 'Add drop shadow', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_shadow]',
+		)
+	)
+);
+
+
+// Make menu sticky
+$wp_customize->add_setting(
+	'SKDD_setting[header_sticky]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['header_sticky'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[header_sticky]',
+		array(
+			'priority' => 80,
+			'label'    => __( 'Make menu sticky', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_sticky]',
+		)
+	)
+);
+
+// Scroll up to show menu, hide when scroll down
+$wp_customize->add_setting(
+	'SKDD_setting[header_show_scroll_up]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['header_show_scroll_up'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[header_show_scroll_up]',
+		array(
+			'priority' => 80,
+			'label'    => __( 'Sticky menu when scrolling up', 'SKDD' ),
+			'section'  => 'SKDD_header',
+			'settings' => 'SKDD_setting[header_show_scroll_up]',
+		)
+	)
+);
+
 // Menu Breakpoint.
 $wp_customize->add_setting(
 	'SKDD_setting[header_menu_breakpoint]',
