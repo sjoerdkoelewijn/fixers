@@ -2142,12 +2142,17 @@ form {
 
 @include phone {
 
+  .site_header.active {
+    margin-bottom:0 !important;
+    position: fixed;
+    top: 0;
+  }
+
   .scrolling-down {
 
     .site_header {
       transform: translateY(calc(var(--header-max-height-mobile) * -1));
-      transition:.3s ease-out;  
-     
+      transition:.3s ease-out;       
     } 
 
   }
