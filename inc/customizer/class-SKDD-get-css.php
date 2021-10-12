@@ -256,7 +256,7 @@ class SKDD_Get_CSS {
 			$styles .= '
 						
 			.site_header.active {
-				margin-bottom:var(--header-max-height);  
+				margin-bottom:var(--header-max-height);
 			}
 			.site_header.active .site_header_inner{
 				position: fixed;

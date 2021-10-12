@@ -2142,15 +2142,24 @@ form {
 
 @include phone {
 
+  .site_header {
+    height:var(--header-max-height-mobile);
+    
+    .site_header_inner {
+      position: fixed;
+      top: 0;
+    }
+
+    
+  }
+
   .site_header.active {
     margin-bottom:0 !important;
-    position: fixed;
-    top: 0;
   }
 
   .scrolling-down {
 
-    .site_header {
+    .site_header .site_header_inner {
       transform: translateY(calc(var(--header-max-height-mobile) * -1));
       transition:.3s ease-out;       
     } 
@@ -2159,7 +2168,7 @@ form {
 
   .scrolling-up {
 
-    .site_header {
+    .site_header .site_header_inner {
       transform: translateY(0);
       transition:.3s ease-out;      
     }
