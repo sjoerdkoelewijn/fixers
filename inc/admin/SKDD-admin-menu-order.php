@@ -88,13 +88,17 @@ function SKDD_move_admin_menu_items()
         'themes.php' //$menu_slug
     );  
 
-    add_submenu_page(
-        'options-general.php', //$parent_slug
-        __( 'Search & Replace', 'SKDD' ), //$page_title
-        __( 'Search & Replace', 'SKDD' ), //$menu_title
-        'activate_plugins', //$capability
-        'tools.php?page=better-search-replace' //$menu_slug
-    );
+    if ( class_exists( 'Better_Search_Replace' ) ) {
+
+        add_submenu_page(
+            'options-general.php', //$parent_slug
+            __( 'Search & Replace', 'SKDD' ), //$page_title
+            __( 'Search & Replace', 'SKDD' ), //$menu_title
+            'activate_plugins', //$capability
+            'tools.php?page=better-search-replace' //$menu_slug
+        );
+
+    }
 
     add_submenu_page(
         'options-general.php', //$parent_slug
