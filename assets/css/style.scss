@@ -971,6 +971,7 @@ form {
 
     &:hover {
       background-color:var(--button-hover-background-color) !important;
+      color:var(--button-hover-color) !important;
     }
     
   }
@@ -989,7 +990,10 @@ form {
     }
   }
 
-  .forminator-label[class*="forminator-floating-"], .forminator-label:not([class*="forminator-floating-"]), .forminator-checkbox-label, .forminator-checkbox-label p {
+  .forminator-label[class*="forminator-floating-"], 
+  .forminator-label:not([class*="forminator-floating-"]), 
+  .forminator-checkbox-label, 
+  .forminator-checkbox-label p {
     font-size: calc(var(--body-font-size) *.8) !important;
     font-weight: var(--body-font-weight) !important;
     text-shadow:none !important;
