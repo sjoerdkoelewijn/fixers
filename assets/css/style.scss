@@ -1027,7 +1027,7 @@ form {
 
   .forminator-input {
     color:var(--text-color) !important;
-    border-color:var(--offset-color) !important;
+    border-color:var(--text-color) !important;
   }
 
   div[role=radiogroup], div[role=group] {
@@ -1052,7 +1052,7 @@ form {
   }
 
   .forminator-radio span[aria-hidden], .forminator-checkbox span[aria-hidden] {
-    border-color: var(--offset-color) !important;
+    border-color: var(--text-color) !important;
   }
   
   .forminator-checkbox input:checked + span[aria-hidden] {
@@ -1066,8 +1066,16 @@ form {
       color:var(--theme-color) !important;
     }
   }
+
+  .forminator-required {
+    color:var(--secondary-theme-color) !important;
+  }
   
 }
+
+
+
+
 
 .forminator-row {
   margin-bottom: 5px !important;
