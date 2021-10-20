@@ -1039,14 +1039,14 @@ form {
   }
 
   .forminator-radio input:checked + span[aria-hidden] {
-    border-color:var(--theme-color) !important;
+    border-color:var(--secondary-theme-color) !important;
 
     &:after {
-      background-color:var(--theme-color) !important;
+      background-color:var(--secondary-theme-color) !important;
     }
   
     &:before {
-      background-color:var(--theme-color) !important;
+      background-color:var(--secondary-theme-color) !important;
     }
   
   }
@@ -1056,19 +1056,24 @@ form {
   }
   
   .forminator-checkbox input:checked + span[aria-hidden] {
-    border-color:var(--theme-color) !important;
+    border-color:var(--secondary-theme-color) !important;
   
     &:after {
-      background-color:var(--theme-color) !important;
+      background-color:var(--secondary-theme-color) !important;
     }
 
     &:before {
-      color:var(--theme-color) !important;
+      color:var(--secondary-theme-color) !important;
     }
   }
 
   .forminator-required {
     color:var(--secondary-theme-color) !important;
+  }
+
+  .forminator-error-message {
+    color:var(--body-text-color) !important;
+    background:var(--theme-color) !important;
   }
   
 }
