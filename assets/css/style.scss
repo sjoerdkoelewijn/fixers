@@ -479,6 +479,9 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
 
 }
 
+
+
+
 .button,
 .woocommerce-widget-layered-nav-dropdown__submit,
 .form-submit .submit,
@@ -914,6 +917,10 @@ form {
     font-weight:400;
   }
 
+  .forminator-field {
+    outline: none !important;
+  }
+
   .forminator-error-message {
     font-size:70%;
     font-weight:400;
@@ -941,6 +948,10 @@ form {
 
   .forminator-textarea {
     border-color:transparent !important;
+  }
+
+  .forminator-row-last {
+    margin-top:var(--content-spacing);
   }
 
   .forminator-button-submit {
@@ -982,8 +993,57 @@ form {
       border-top-width: 0px !important;
       border-left-width: 0px !important;
       border-right-width: 0px !important;
+      text-shadow: none;
+    }  
+
+  }
+
+  .forminator-textarea {
+    border:0 !important;
+    padding:40px 0 9px 0 !important;
+    color:var(--text-color) !important;    
+  }
+
+  .forminator-input {
+    color:var(--text-color) !important;
+    border-color:var(--offset-color) !important;
+  }
+
+  div[role=radiogroup], div[role=group] {
+    margin:20px 0 20px 0 !important;
+  }
+
+  .forminator-radio-label, .forminator-checkbox-label {
+    color:var(--text-color) !important;
+  }
+
+  .forminator-radio input:checked + span[aria-hidden] {
+    border-color:var(--theme-color) !important;
+
+    &:after {
+      background-color:var(--theme-color) !important;
+    }
+  
+    &:before {
+      background-color:var(--theme-color) !important;
+    }
+  
+  }
+
+  .forminator-radio span[aria-hidden], .forminator-checkbox span[aria-hidden] {
+    border-color: var(--offset-color) !important;
+  }
+  
+  .forminator-checkbox input:checked + span[aria-hidden] {
+    border-color:var(--theme-color) !important;
+  
+    &:after {
+      background-color:var(--theme-color) !important;
     }
 
+    &:before {
+      color:var(--theme-color) !important;
+    }
   }
   
 }
