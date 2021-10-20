@@ -935,8 +935,11 @@ form {
   .forminator-input {
     border:0;
     border-radius:3px;
-    background:var(--second-background-color); 
+    background:var(--second-background-color);
+    font-size: var(--body-font-size) !important;
+    font-weight: var(--body-font-weight) !important;  
   }
+  
 
   .forminator-button-submit, .forminator-button-submit-next {
     border-radius: var(--button-border-radius);    
@@ -961,6 +964,7 @@ form {
     font-size: calc(var(--button-font-size) *.9) !important;
     letter-spacing:var(--button-letter-spacing) !important;
     background-color:var(--button-background-color) !important;
+    color:var(--button-color) !important;
 
     &:hover {
       background-color:var(--button-hover-background-color) !important;
@@ -980,6 +984,16 @@ form {
     .forminator-label {
       color:var(--secondary-theme-color) !important;
     }
+  }
+
+  .forminator-label[class*="forminator-floating-"], .forminator-label:not([class*="forminator-floating-"]) {
+    font-size: calc(var(--body-font-size) *.8) !important;
+    font-weight: var(--body-font-weight) !important;
+    text-shadow:none !important;
+  }
+
+  .forminator-label:not([class*="forminator-floating-"]) {
+    padding-bottom:10px !important;
   }
 
   .forminator-is_active, .forminator-is_hover {
