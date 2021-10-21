@@ -953,7 +953,7 @@ form {
 .forminator-ui.forminator-design--material {
 
   .forminator-textarea {
-    border-color:transparent !important;
+    //border-color:transparent !important;
   }
 
   .forminator-row-last {
@@ -966,12 +966,12 @@ form {
     padding: 0 25px !important;
     font-size: calc(var(--button-font-size) *.9) !important;
     letter-spacing:var(--button-letter-spacing) !important;
-    background-color:var(--button-background-color) !important;
-    color:var(--button-color) !important;
+    //background-color:var(--button-background-color) !important;
+    //color:var(--button-color) !important;
 
     &:hover {
-      background-color:var(--button-hover-background-color) !important;
-      color:var(--button-hover-color) !important;
+      //background-color:var(--button-hover-background-color) !important;
+      //color:var(--button-hover-color) !important;
     }
     
   }
@@ -981,12 +981,12 @@ form {
   }
 
   .forminator-label {
-    color:var(--theme-color) !important;
+    //color:var(--theme-color) !important;
   }
 
   .forminator-is_active {
     .forminator-label {
-      color:var(--secondary-theme-color) !important;
+      //color:var(--secondary-theme-color) !important;
     }
   }
 
@@ -1006,11 +1006,11 @@ form {
   .forminator-is_active, .forminator-is_hover {
 
     .forminator-input--wrap:after {
-      background-color:var(--secondary-theme-color) !important;
+      //background-color:var(--secondary-theme-color) !important;
     }
 
     .forminator-textarea--wrap:after {
-      border-color:var(--secondary-theme-color) !important;
+      //border-color:var(--secondary-theme-color) !important;
       border-top-width: 0px !important;
       border-left-width: 0px !important;
       border-right-width: 0px !important;
@@ -1022,11 +1022,11 @@ form {
   .forminator-textarea {
     border:0 !important;
     padding:40px 0 9px 0 !important;
-    color:var(--text-color) !important;    
+    //color:var(--text-color) !important;    
   }
 
   .forminator-input {
-    color:var(--text-color) !important;
+    //color:var(--text-color) !important;
     border-color:var(--text-color) !important;
   }
 
@@ -1035,45 +1035,45 @@ form {
   }
 
   .forminator-radio-label, .forminator-checkbox-label {
-    color:var(--text-color) !important;
+    //color:var(--text-color) !important;
   }
 
   .forminator-radio input:checked + span[aria-hidden] {
-    border-color:var(--secondary-theme-color) !important;
+    //border-color:var(--secondary-theme-color) !important;
 
     &:after {
-      background-color:var(--secondary-theme-color) !important;
+      //background-color:var(--secondary-theme-color) !important;
     }
   
     &:before {
-      background-color:var(--secondary-theme-color) !important;
+      //background-color:var(--secondary-theme-color) !important;
     }
   
   }
 
   .forminator-radio span[aria-hidden], .forminator-checkbox span[aria-hidden] {
-    border-color: var(--text-color) !important;
+    //border-color: var(--text-color) !important;
   }
   
   .forminator-checkbox input:checked + span[aria-hidden] {
-    border-color:var(--secondary-theme-color) !important;
+    //border-color:var(--secondary-theme-color) !important;
   
     &:after {
-      background-color:var(--secondary-theme-color) !important;
+      //background-color:var(--secondary-theme-color) !important;
     }
 
     &:before {
-      color:var(--secondary-theme-color) !important;
+     //color:var(--secondary-theme-color) !important;
     }
   }
 
   .forminator-required {
-    color:var(--secondary-theme-color) !important;
+    //color:var(--secondary-theme-color) !important;
   }
 
   .forminator-error-message {
-    color:var(--body-text-color) !important;
-    background:var(--theme-color) !important;
+    //color:var(--body-text-color) !important;
+    //background:var(--theme-color) !important;
   }
   
 }
