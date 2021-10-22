@@ -652,6 +652,8 @@ class SKDD_Get_CSS {
 						--offset-color:' . esc_attr( $options['offset_color'] ) . ';
 						--second-background-color:' . esc_attr( $options['second_background_color'] ) . ';
 
+						
+
 						--gkt-color-brand:' . esc_attr( $options['theme_color'] ) . ';
 						--gkt-color-dark-gray:' . esc_attr( $options['background_color'] ) . ';
 						--gkt-color-light-gray:' . esc_attr( $options['second_background_color'] ) . ';
@@ -662,6 +664,13 @@ class SKDD_Get_CSS {
 						--gkt-color-warning:' . esc_attr( $options['link_color'] ) . ';
 						--gkt-color-info:' . esc_attr( $options['secondary_theme_color'] ) . ';
 						--gkt-border-radius: '. esc_attr( $options['buttons_border_radius'] ) .'px;
+
+						--gkt-button__background-color:'. esc_attr( $options['button_background_color'] ) . ';
+    					--gkt-button__color: '. esc_attr( $options['button_text_color'] ) . ';
+    					--gkt-button-hover__background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
+    					--gkt-button-hover__color: '. esc_attr( $options['button_hover_text_color'] ) . ';
+    					--gkt-button-focus__background-color:'. esc_attr( $options['button_hover_background_color'] ) . ';
+    					--gkt-button-focus__color: '. esc_attr( $options['button_hover_text_color'] ) . ';
 
 						--button-text-color:'. esc_attr( $options['button_text_color'] ) . ';
 						--button-background-color:'. esc_attr( $options['button_background_color'] ) . ';

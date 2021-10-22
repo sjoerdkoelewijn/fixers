@@ -452,6 +452,7 @@ ul.is-style-align-right {
   }
 
   .ib-star-rating--icon {
+    margin-top:-1px;
     display: flex;
     align-items: center;
   }
@@ -482,13 +483,13 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   }
 
   &:hover, &:focus {
-      background-color: var(--button-hover-background-color);
-      color: var(--button-hover-text-color); 
+      background-color: var(--gkt-button-hover__background-color);
+      color: var(--gkt-button-hover__color); 
       transition: background .3s ease, color .3s ease ;   
 
       svg {
           path {
-              fill:var(--button-hover-text-color);
+              fill:var(--gkt-button-hover__color);
           }     
       }
   }
