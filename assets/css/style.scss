@@ -1027,9 +1027,17 @@ form {
   }
 
   .forminator-textarea {
-    border:0 !important;
+    //border:0 !important;
     padding:40px 0 9px 0 !important;
+    font-size: calc(var(--body-font-size) * .8) !important;
+    outline: 0;
+    box-shadow: none;
   }
+
+  .forminator-input {
+    font-size: calc(var(--body-font-size) * .8) !important;
+  }
+
 
   div[role=radiogroup], div[role=group] {
     margin:20px 0 20px 0 !important;
@@ -1060,7 +1068,7 @@ form {
 }
 
 .forminator-required {
-  //color:var(--tertiary-theme-color);
+  color:var(--secondary-theme-color);
 }
 
 .forminator-error {
