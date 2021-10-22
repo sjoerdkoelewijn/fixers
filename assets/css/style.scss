@@ -451,11 +451,11 @@ ul.is-style-align-right {
     margin-left:15px;
 
     @include tablet {
-      font-size:calc(var(--body-font-size-tablet) * .9);
+      font-size:calc(var(--body-font-size-tablet) * .85);
     }
 
     @include phone {
-      font-size:calc(var(--body-font-size-mobile) * .95);
+      font-size:calc(var(--body-font-size-mobile) * .9);
     }
   }
 
@@ -977,10 +977,6 @@ form {
 
 .forminator-ui.forminator-design--material {
 
-  .forminator-textarea {
-    //border-color:transparent !important;
-  }
-
   .forminator-row-last {
     margin-top:var(--content-spacing);
   }
@@ -991,13 +987,6 @@ form {
     padding: 0 25px !important;
     font-size: calc(var(--button-font-size) *.9) !important;
     letter-spacing:var(--button-letter-spacing) !important;
-    //background-color:var(--button-background-color) !important;
-    //color:var(--button-color) !important;
-
-    &:hover {
-      //background-color:var(--button-hover-background-color) !important;
-      //color:var(--button-hover-color) !important;
-    }
     
   }
 
@@ -1005,22 +994,12 @@ form {
     padding-left:0 !important;    
   }
 
-  .forminator-label {
-    //color:var(--theme-color) !important;
-  }
-
-  .forminator-is_active {
-    .forminator-label {
-      //color:var(--secondary-theme-color) !important;
-    }
-  }
-
   .forminator-label[class*="forminator-floating-"], 
   .forminator-label:not([class*="forminator-floating-"]), 
   .forminator-checkbox-label, 
   .forminator-checkbox-label p {
-    font-size: calc(var(--body-font-size) *.8) !important;
-    font-weight: var(--body-font-weight) !important;
+    //font-size: calc(var(--body-font-size) *.8) !important;
+    //font-weight: var(--body-font-weight) !important;
     text-shadow:none !important;
   }
 
@@ -1030,12 +1009,7 @@ form {
 
   .forminator-is_active, .forminator-is_hover {
 
-    .forminator-input--wrap:after {
-      //background-color:var(--secondary-theme-color) !important;
-    }
-
     .forminator-textarea--wrap:after {
-      //border-color:var(--secondary-theme-color) !important;
       border-top-width: 0px !important;
       border-left-width: 0px !important;
       border-right-width: 0px !important;
@@ -1047,60 +1021,12 @@ form {
   .forminator-textarea {
     border:0 !important;
     padding:40px 0 9px 0 !important;
-    //color:var(--text-color) !important;    
-  }
-
-  .forminator-input {
-    //color:var(--text-color) !important;
-    border-color:var(--text-color) !important;
   }
 
   div[role=radiogroup], div[role=group] {
     margin:20px 0 20px 0 !important;
   }
 
-  .forminator-radio-label, .forminator-checkbox-label {
-    //color:var(--text-color) !important;
-  }
-
-  .forminator-radio input:checked + span[aria-hidden] {
-    //border-color:var(--secondary-theme-color) !important;
-
-    &:after {
-      //background-color:var(--secondary-theme-color) !important;
-    }
-  
-    &:before {
-      //background-color:var(--secondary-theme-color) !important;
-    }
-  
-  }
-
-  .forminator-radio span[aria-hidden], .forminator-checkbox span[aria-hidden] {
-    //border-color: var(--text-color) !important;
-  }
-  
-  .forminator-checkbox input:checked + span[aria-hidden] {
-    //border-color:var(--secondary-theme-color) !important;
-  
-    &:after {
-      //background-color:var(--secondary-theme-color) !important;
-    }
-
-    &:before {
-     //color:var(--secondary-theme-color) !important;
-    }
-  }
-
-  .forminator-required {
-    //color:var(--secondary-theme-color) !important;
-  }
-
-  .forminator-error-message {
-    //color:var(--body-text-color) !important;
-    //background:var(--theme-color) !important;
-  }
-  
 }
 
 
