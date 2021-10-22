@@ -1035,6 +1035,12 @@ form {
     font-weight: var(--body-font-weight) !important; 
     outline: 0;
     box-shadow: none;
+
+    &:active, &:hover {
+      border-top: transparent !important;
+      border-right: transparent !important;
+      border-left: transparent !important;
+    }
   }
 
   .forminator-input {
