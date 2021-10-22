@@ -440,6 +440,22 @@ ul.is-style-align-right {
   
 }
 
+/*************************** Manual Rating Block   ****************************************************************************/
+
+.ib-star-rating-block {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  .ib-star-rating--title {
+    font-size:calc(var(--body-font-size) * .8);
+    margin-left:15px;
+  }
+
+  .ib-star-rating--icon {
+    display: flex;
+    align-items: center;
+  }
+}
 
 /*************************** Buttons  ****************************************************************************/
 
