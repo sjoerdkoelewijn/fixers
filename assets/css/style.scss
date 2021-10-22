@@ -1027,9 +1027,12 @@ form {
   }
 
   .forminator-textarea {
-    //border:0 !important;
+    border-top: transparent !important;
+    border-right: transparent !important;
+    border-left: transparent !important;
     padding:40px 0 9px 0 !important;
     font-size: calc(var(--body-font-size) * .8) !important;
+    font-weight: var(--body-font-weight) !important; 
     outline: 0;
     box-shadow: none;
   }
