@@ -1018,9 +1018,9 @@ form {
   .forminator-is_active, .forminator-is_hover {
 
     .forminator-textarea--wrap:after {
-      border-top-width: 0px !important;
-      border-left-width: 0px !important;
-      border-right-width: 0px !important;
+      border-top: transparent;
+      border-left: transparent;
+      border-right: transparent;
       text-shadow: none;
     }  
 
