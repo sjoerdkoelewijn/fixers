@@ -449,6 +449,14 @@ ul.is-style-align-right {
   .ib-star-rating--title {
     font-size:calc(var(--body-font-size) * .8);
     margin-left:15px;
+
+    @include tablet {
+      font-size:calc(var(--body-font-size-tablet) * .9);
+    }
+
+    @include phone {
+      font-size:calc(var(--body-font-size-mobile) * .95);
+    }
   }
 
   .ib-star-rating--icon {
