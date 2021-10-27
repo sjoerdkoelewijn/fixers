@@ -284,8 +284,10 @@ class SKDD_Get_CSS {
 			}
 
 			.scrolling-down .site_header .site_header_inner{
-				animation: fadeOut .5s;
-				max-width: 100vw; 
+				animation: fadeOutUp .5s;
+				animation-iteration-count: 1;
+				max-width: 100vw;
+				 
 			  }
 			
 			';			

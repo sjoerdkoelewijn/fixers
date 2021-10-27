@@ -2173,7 +2173,6 @@ form {
 @keyframes fadeOut {
   0% {
     opacity:1;
-    
   }
   100% {
     opacity:0;
@@ -2210,6 +2209,12 @@ form {
 
 }
 
+.scrolling-up {
+  .site_header .site_header_inner {
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.06);
+  }
+}
+
 @include phone {
 
   .site_header {
@@ -2240,7 +2245,7 @@ form {
 
     .site_header .site_header_inner {
       transform: translateY(0);
-      transition:.3s ease-out;      
+      transition:.3s ease-out;           
     }
 
   }
@@ -4329,6 +4334,16 @@ form.woocommerce-checkout {
     }
 
     
+  
+}
+
+/*************************** Ghostkit Google Maps ****************************************************************************/
+
+.ghostkit-google-maps {
+  
+  @include phone {
+    min-height:75vh !important;
+  }
   
 }
 
