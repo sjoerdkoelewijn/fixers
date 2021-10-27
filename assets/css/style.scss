@@ -1213,8 +1213,8 @@ form {
   font-weight: 700;
   position: relative;
   z-index: 10;
-  -webkit-box-shadow: 0 -3px 15px 6px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 -3px 15px 6px rgba(0, 0, 0, 0.03);
+  //-webkit-box-shadow: 0 -3px 15px 6px rgba(0, 0, 0, 0.03);
+  //box-shadow: 0 -3px 15px 6px rgba(0, 0, 0, 0.03);
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -3599,7 +3599,7 @@ form.woocommerce-checkout {
 
 .blog-layout-grid .site-main {
   
-    .post, .portfolio, .service, .team, .knowledge {
+    .post, .portfolio, .service, .team, .knowledge, .page {
       margin-bottom: 75px;
       padding-bottom: 0;
       border-bottom: 0;
@@ -3639,7 +3639,7 @@ form.woocommerce-checkout {
 .single {
   .site-main {
 
-    .post, .portfolio, .service, .team, .knowledge {
+    .post, .portfolio, .service, .team, .knowledge, .page {
       border-bottom: 0;
       padding-bottom: 0;
 
@@ -3658,7 +3658,7 @@ form.woocommerce-checkout {
 
 .site-main {
 
-  .post, .portfolio, .service, .team, .knowledge {
+  .post, .portfolio, .service, .team, .knowledge, .page {
     border-bottom: 1px solid var(--offset-color);
     padding-bottom: 74px;
   }
@@ -3670,7 +3670,7 @@ form.woocommerce-checkout {
 }
 
 
-.post, .portfolio, .service, .team, .knowledge {
+.post, .portfolio, .service, .team, .knowledge, .page {
 
   .post-cover-image {
     margin-bottom: 35px;
@@ -3745,7 +3745,7 @@ form.woocommerce-checkout {
 @media (min-width: 600px) {
   .blog-layout-grid .site-main {
 
-    .post, .portfolio, .service, .team, .knowledge {
+    .post, .portfolio, .service, .team, .knowledge, .page {
 
       flex-basis: calc( ( 100%  - 30px ) / 2);
     
@@ -3760,7 +3760,7 @@ form.woocommerce-checkout {
 
   .blog-layout-grid .site-main {
 
-    .post, .portfolio, .service, .team, .knowledge {
+    .post, .portfolio, .service, .team, .knowledge, .page {
 
       flex-basis: calc( ( 100%  - 60px ) / 3);
     

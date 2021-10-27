@@ -1024,26 +1024,47 @@ if ( ! function_exists( 'SKDD_get_post_thumbnail' ) ) {
 	 * @param boolean $echo Echo.
 	 */
 	function SKDD_get_post_thumbnail( $size = 'medium', $echo = true ) {
-		if ( ! has_post_thumbnail() ) {
-			return;
-		}
-
 		$image   = '';
 		$options = SKDD_options( false );
+		
 		ob_start();
 
 		if ( ! is_single() ) {
 			if ( in_array( $options['blog_list_layout'], array( 'zigzag', 'standard' ), true ) ) {
 				return $image;
 			} else {
-				?>
+
+				if ( ! has_post_thumbnail() ) { ?>
+					<div class="entry-header-item post-cover-image fallback">
+							
+							<?php
+		
+								if ( ! empty( $options['default_image'] ) ) {
+									$default_image_src = $options['default_image'];					
+							
+									?>
+										<a class="default_image_url" href="<?php echo esc_url( get_permalink() ); ?>"  >
+											<img class="default_image" src="<?php echo esc_url( $default_image_src ); ?>" alt="default image">
+										</a>
+									<?php
+								}
+		
+							?>
+		
+					</div>
+
+				<?php } else { ?>
+
 					<div class="entry-header-item post-cover-image">
 						<a href="<?php echo esc_url( get_permalink() ); ?>">
 							<?php the_post_thumbnail( $size ); ?>
 						</a>
 					</div>
-				<?php
+
+				<?php }			
+
 			}
+
 		} else {
 			?>
 				<div class="entry-header-item post-cover-image">

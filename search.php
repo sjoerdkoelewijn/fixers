@@ -7,8 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="content-area">		
 
 		<?php if ( have_posts() ) : ?>
 
@@ -21,15 +20,24 @@ get_header(); ?>
 				</h1>
 			</header><!-- .page-header -->
 
-			<?php
-			get_template_part( 'template-parts/loop' );
 
-		else :
+			<?php // get_search_form(); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<main id="main" class="site-main">
 
-		endif;
-		?>
+				<?php get_template_part( 'template-parts/loop' ); ?>
+
+			</div>
+
+		<?php else : ?>
+
+			<main id="main" class="site-main">
+
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+			</div>
+
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -31,6 +31,30 @@ $wp_customize->add_control(
 	)
 );
 
+
+// Default Image.
+$wp_customize->add_setting(
+	'SKDD_setting[default_image]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['default_image'],
+		'sanitize_callback' => 'esc_url_raw',
+	)
+);
+$wp_customize->add_control(
+	new WP_Customize_Image_Control(
+		$wp_customize,
+		'SKDD_setting[default_image]',
+		array(
+			'label'    => __( 'Default Image', 'SKDD' ),
+			'section'  => 'title_tagline',
+			'settings' => 'SKDD_setting[default_image]',
+			'priority' => 8,
+		)
+	)
+);
+
+
 // Above logo width divider.
 $wp_customize->add_setting(
 	'above_logo_with_color_divider',
