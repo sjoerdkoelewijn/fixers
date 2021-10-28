@@ -210,20 +210,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			 * Switch default core markup to output valid HTML5.
 			 */
 			add_theme_support(
-				'html5',
-				apply_filters(
-					'SKDD_html5_args',
-					array(
-						'search-form',
-						'comment-form',
-						'comment-list',
-						'gallery',
-						'caption',
-						'widgets',
-						'script',
-						'style',
-					)
-				)
+				'html5'
 			);
 
 
