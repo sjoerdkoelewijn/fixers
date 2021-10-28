@@ -480,8 +480,8 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   letter-spacing:var(--button-letter-spacing);
   line-height:var(--button-line-height);
   text-transform: var(--button-font-transform);
-  background:var(--gkt-button__background-color, --button-background-color);
-  color:var(--gkt-button__color, --button-text-color);
+  background:var(--gkt-button__background-color, var(--button-background-color));
+  color:var(--gkt-button__color, var(--button-text-color));
   transition: background .3s ease, color .3s ease ; 
   
   svg {
@@ -491,8 +491,8 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
   }
 
   &:hover, &:focus {
-      background-color: var(--gkt-button-hover__background-color, --button-hover-background-color);
-      color: var(--gkt-button-hover__color, --button-hover-text-color); 
+      background-color: var(--gkt-button-hover__background-color, var(--button-hover-background-color));
+      color: var(--gkt-button-hover__color, var(--button-hover-text-color)); 
       transition: background .3s ease, color .3s ease ;   
 
       svg {
