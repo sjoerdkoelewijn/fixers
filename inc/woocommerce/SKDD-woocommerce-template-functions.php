@@ -56,7 +56,7 @@ if ( ! function_exists( 'SKDD_force_html5_no_type' ) ) {
 			return $buffer;
 		});
 
-	}
+	 }
 }
 
 if ( ! function_exists( 'SKDD_ajax_update_quantity_in_mini_cart' ) ) {
