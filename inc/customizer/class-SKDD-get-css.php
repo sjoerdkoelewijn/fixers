@@ -132,7 +132,7 @@ class SKDD_Get_CSS {
 				--content-spacing-tablet:'. esc_attr( $options['tablet_content_spacing'] ) .'px;
 				--content-spacing-mobile:'. esc_attr( $options['mobile_content_spacing'] ) .'px;
 
-				--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
+				--vertical-spacing:'. esc_attr( $options['vertical_spacing'] ) . 'vh' .';
 				
 				--page-header-padding-top:'. esc_attr( $options['page_header_padding_top']) . 'px' .';
 				--page-header-padding-bottom:'. esc_attr( $options['page_header_padding_bottom']) . 'px' .';
@@ -691,7 +691,7 @@ class SKDD_Get_CSS {
 						--content-width:'. esc_attr( $options['container_width'] ) .';
 						--content-spacing:'. esc_attr( $options['content_spacing'] ) .'px;
 
-						--vertical-spacing:clamp(var(--content-spacing), '. esc_attr( $options['vertical_spacing'] ) . 'vh' .', calc(var(--content-spacing) * 4) );
+						--vertical-spacing:'. esc_attr( $options['vertical_spacing'] ) . 'vh' .';
 						
 						--page-header-padding-top:'. esc_attr( $options['page_header_padding_top']) . 'px' .';
 						--page-header-padding-bottom:'. esc_attr( $options['page_header_padding_bottom']) . 'px' .';
