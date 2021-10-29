@@ -4149,8 +4149,12 @@ form.woocommerce-checkout {
 
 }
 
-.site_footer .site-footer-widget .wp-block-group.has-background {
-  padding:0 !important;
+.site_footer .wp-block-group.has-background {
+  padding:0;
+
+  @include phone {
+    padding:0;
+  }
 }
 
 
