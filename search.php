@@ -21,7 +21,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 
-			<?php // get_search_form(); ?>
+			<?php get_search_form(); ?>
 
 			<main id="main" class="site-main">
 
