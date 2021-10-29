@@ -3639,7 +3639,7 @@ form.woocommerce-checkout {
 .single {
   .site-main {
 
-    .post, .portfolio, .service, .team, .knowledge, .page {
+    .post, .portfolio, .service, .team, .knowledge {
       border-bottom: 0;
       padding-bottom: 0;
 
@@ -3658,9 +3658,9 @@ form.woocommerce-checkout {
 
 .site-main {
 
-  .post, .portfolio, .service, .team, .knowledge, .page {
-    border-bottom: 1px solid var(--offset-color);
-    padding-bottom: 74px;
+  .post, .portfolio, .service, .team, .knowledge {
+    //border-bottom: 1px solid var(--offset-color);
+    //padding-bottom: 74px;
   }
   
 } 
