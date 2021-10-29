@@ -1523,6 +1523,16 @@ form {
 
   }
 
+  .post-cover-image {
+    height: 30vh;
+    overflow: hidden;
+  
+    img {
+      min-height: 30vh;
+      object-fit: cover;
+    }
+  }
+
 }
 
 /*************************** Content Styles ****************************************************************************/
