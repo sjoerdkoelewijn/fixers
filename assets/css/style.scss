@@ -3644,7 +3644,7 @@ form.woocommerce-checkout {
     
       .entry-title {
         padding:calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
-        font-size:var(--header-size-3);
+        font-size:var(--header-size-4);
         
       }
     
@@ -3751,12 +3751,12 @@ form.woocommerce-checkout {
     a {
       font-family:var(--button-font-family);
       border-radius:var(--button-border-radius);
-      padding:10px 30px;
+      padding:8px 20px;
       text-decoration:none;
       cursor: pointer;
       border:0;
       font-weight:var(--button-font-weight);
-      font-size:var(--button-font-size);
+      font-size:calc(var(--button-font-size) * .8);
       text-transform: var(--button-font-transform);
       background:var(--button-background-color);
       color:var(--button-text-color);
