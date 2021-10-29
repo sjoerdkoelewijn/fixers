@@ -4139,7 +4139,7 @@ form.woocommerce-checkout {
 
     @include phone {
       flex-direction: column;
-      
+      padding:70px var(--content-spacing-mobile);
       //text-align:center;
 
     }
