@@ -3643,7 +3643,12 @@ form.woocommerce-checkout {
 }
 
 .category_heading {
+  padding-top:2vh;
   margin-bottom:5vh;
+
+  @include phone {
+    padding-top:4vh;
+  }
 
   p {
     width:80%;
