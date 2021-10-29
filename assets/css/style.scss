@@ -1538,9 +1538,13 @@ form {
     .search-form {
 
       margin:0 10vw 8vh 10vw;
-
+      
       @include phone {
         margin:0 2vw 5vh 2vw;
+      }
+
+      &:after {
+        content:'';
       }
 
       .search-field {
@@ -1554,9 +1558,7 @@ form {
         margin:0;
         font-size:var(--body-font-size);
 
-        &:after {
-          display:none;
-        }
+        
       }
 
       .search-submit {
