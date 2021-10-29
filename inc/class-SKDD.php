@@ -209,6 +209,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			/*
 			 * Switch default core markup to output valid HTML5.
 			 */
+			
 			add_theme_support(
 				'html5',
 				apply_filters(
