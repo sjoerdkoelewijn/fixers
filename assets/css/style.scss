@@ -1511,6 +1511,17 @@ form {
     display:none;
   }
 
+  .site-main {
+    margin-bottom:10vh;
+  }
+
+  h1.page-title {
+    font-size: var(--header-size-2);
+    text-align: center;
+    margin:5vh auto 8vh auto;
+
+  }
+
 }
 
 /*************************** Content Styles ****************************************************************************/
