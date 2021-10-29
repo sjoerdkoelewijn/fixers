@@ -1793,6 +1793,13 @@ form {
     padding-top:var(--vertical-spacing);
     padding-bottom:var(--vertical-spacing);
   }
+
+  .ghostkit-carousel-slide {
+    .wp-block-cover {
+      margin-left:0;
+      height:30vh;
+    }
+  }
 }
 
 .wp-block-group.has-background {
