@@ -3642,6 +3642,18 @@ form.woocommerce-checkout {
   }
 }
 
+.category_heading {
+  margin-bottom:5vh;
+
+  p {
+    width:80%;
+
+    @include phone {
+      width:100%;
+    }
+  }
+}
+
 
 
 /*************************** Blog ****************************************************************************/
