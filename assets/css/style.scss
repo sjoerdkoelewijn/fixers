@@ -3562,8 +3562,17 @@ form.woocommerce-checkout {
 
 
 
+/*************************** Archive Pages ****************************************************************************/
 
+.wp-block-post-featured-image {
+  height: 30vh;
+  overflow: hidden;
 
+  img {
+    min-height: 30vh;
+    object-fit: cover;
+  }
+}
 
 
 
