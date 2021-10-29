@@ -4149,6 +4149,10 @@ form.woocommerce-checkout {
 
 }
 
+.site_footer + .wp-block-group.has-background {
+  padding:0;
+}
+
 
 .site-footer{
   background-color:var(--footer-background-color);
