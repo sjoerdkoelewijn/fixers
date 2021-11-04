@@ -4491,13 +4491,14 @@ form.woocommerce-checkout {
     align-items: center;
 
     &:after {
-      content:'';      
+      content: '';
+      mask:url(../images/svg/dropdown-icon.svg) no-repeat;
+      -webkit-mask:url(../images/svg/dropdown-icon.svg) no-repeat;
+      background-color:var(--heading-color);
       margin-right:calc(var(--content-spacing) / 4);
-      background:url(../images/svg/dropdown-icon.svg) no-repeat;
       width:23px;
       height:12px;
       z-index:10;
-      opacity:.3;
       align-items: center;
     }
   }
@@ -4505,13 +4506,15 @@ form.woocommerce-checkout {
   .open {
     .rank-math-question {
       &:after {
-        content:'';
-        background:url(../images/svg/dropdown-icon-up.svg) no-repeat;
+        content: '';
+        mask:url(../images/svg/dropdown-icon-up.svg) no-repeat;
+        -webkit-mask:url(../images/svg/dropdown-icon-up.svg) no-repeat;
+        background-color:var(--heading-color);
+        margin-right:calc(var(--content-spacing) / 4);
         width:23px;
         height:12px;
-        z-index:10;                
-        opacity:.3;
-        align-items: center;        
+        z-index:10;
+        align-items: center;       
       }      
     }
   }
