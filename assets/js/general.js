@@ -317,9 +317,10 @@ function faqAccordion() {
 	if (rankmathFAQ !== null) {
 
 		var rankmathListItems = document.querySelectorAll('.rank-math-list-item');
+		var accordionClassNames = ['is-style-accordion-1', 'is-style-accordion-2'];
 
-		if (rankmathFAQ.classList.contains('is-style-accordion')) {
-
+		if (accordionClassNames.some(className => rankmathFAQ.classList.contains(className))) {
+		
 			rankmathListItems.forEach(rankmathListItem => {
 				rankmathListItem.addEventListener(
 					'click',
