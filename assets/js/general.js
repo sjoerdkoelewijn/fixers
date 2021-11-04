@@ -318,7 +318,7 @@ function faqAccordion() {
 
 		var rankmathListItems = document.querySelectorAll('.rank-math-list-item');
 
-		if (rankmathFAQ.classList.contains('faq-accordion')) {
+		if (rankmathFAQ.classList.contains('is-style-accordion')) {
 
 			rankmathListItems.forEach(rankmathListItem => {
 				rankmathListItem.addEventListener(
