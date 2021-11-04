@@ -6,6 +6,11 @@
   --scrollbar-width:17px;
 }
 
+::selection {
+  color: var(--background-color);
+  background: var(--theme-color);
+}
+
 /*************************** Global Styles ****************************************************************************/
 
 html {    
@@ -4431,11 +4436,89 @@ form.woocommerce-checkout {
 
     .ghostkit-accordion-item-collapse {
       right:calc(var(--content-spacing) / 2);
-    }
-
-    
+    }   
   
 }
+
+/*************************** Rankmath FAQ (Frequently Asked Questions) Accordion ****************************************************************************/
+
+.rank-math-block.is-style-accordion-1, .rank-math-block.is-style-accordion-2 {
+
+  .rank-math-answer {
+    height:0;
+    overflow: hidden;
+  } 
+
+  .rank-math-question {
+    cursor:pointer;
+  }
+
+  .rank-math-list-item.open .rank-math-question + .rank-math-answer {
+    height:auto;
+  }
+
+}
+
+.rank-math-block.is-style-default-2, .rank-math-block.is-style-accordion-1 {
+
+  .rank-math-answer p {
+    margin-top:10px;
+  }
+
+  .rank-math-list-item {
+    background:rgba(0, 0, 0, 0.04);
+    border-radius:var(--border-radius);
+    padding:calc(var(--content-spacing) / 4) calc(var(--content-spacing) / 2);
+    margin-bottom:calc(var(--content-spacing) / 4);
+  }
+  
+}
+
+.rank-math-block.is-style-accordion-2 {
+  
+  .rank-math-list-item {
+    border-bottom:1px solid var(--offset-color);
+    padding:calc(var(--content-spacing) / 2);
+  }
+
+}
+
+.rank-math-block.is-style-accordion-1, .rank-math-block.is-style-accordion-2 {
+
+  .rank-math-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content:'';      
+      margin-right:calc(var(--content-spacing) / 4);
+      background:url(../images/svg/dropdown-icon.svg) no-repeat;
+      width:23px;
+      height:12px;
+      z-index:10;
+      opacity:.3;
+      align-items: center;
+    }
+  }
+
+  .open {
+    .rank-math-question {
+      &:after {
+        content:'';
+        background:url(../images/svg/dropdown-icon-up.svg) no-repeat;
+        width:23px;
+        height:12px;
+        z-index:10;                
+        opacity:.3;
+        align-items: center;        
+      }      
+    }
+  }
+}
+
+
+
 
 /*************************** Ghostkit Google Maps ****************************************************************************/
 

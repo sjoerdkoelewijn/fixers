@@ -307,6 +307,39 @@ function shuffleCarousel() {
 	}
  
 }
+
+
+
+function faqAccordion() {
+
+	var rankmathFAQ = document.getElementById('rank-math-faq');	
+
+	if (rankmathFAQ !== null) {
+
+		var rankmathListItems = document.querySelectorAll('.rank-math-list-item');
+
+		if (rankmathFAQ.classList.contains('faq-accordion')) {
+
+			rankmathListItems.forEach(rankmathListItem => {
+				rankmathListItem.addEventListener(
+					'click',
+					function() {
+						if (rankmathListItem.classList.contains( 'open' )) {
+							rankmathListItem.classList.remove( 'open' );
+						} else {
+							rankmathListItem.classList.add( 'open' );
+						}
+						
+					}
+				);				
+
+			});			
+
+		}
+	}	
+
+}
+
  
 document.addEventListener(
 	'DOMContentLoaded',
@@ -317,7 +350,7 @@ document.addEventListener(
 		toTopButton();
 		scrollingDetect();
 		//lazyload();		
-		shuffleCarousel();						
+		shuffleCarousel();
+		faqAccordion();						
 	}
 );
-

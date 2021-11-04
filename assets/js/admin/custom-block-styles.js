@@ -43,4 +43,19 @@ wp.domReady( () => {
 		label: 'No Button',
 	} );
 
+	wp.blocks.registerBlockStyle( 'rank-math/faq-block', { 
+		name: 'default-2',
+		label: 'Default 2',
+	} );
+
+	wp.blocks.registerBlockStyle( 'rank-math/faq-block', { 
+		name: 'accordion-1',
+		label: 'Accordion 1',
+	} );
+
+	wp.blocks.registerBlockStyle( 'rank-math/faq-block', { 
+		name: 'accordion-2',
+		label: 'Accordion 2',
+	} );
+
 } );

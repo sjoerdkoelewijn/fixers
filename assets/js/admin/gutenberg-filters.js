@@ -67,6 +67,13 @@ wp.hooks.addFilter(
 
 
 
+
+
+
+
+
+
+
 // Add arrows at bottom checkbox to the ghostkit carousel
 
 function addArrowAttribute(settings, name) {
@@ -155,6 +162,7 @@ wp.hooks.addFilter(
 	'skdd/removearrow-custom-attribute',
 	addRemoveArrowAttribute
 );
+
 
 const carouselAdvancedControlsRemoveArrows = wp.compose.createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
