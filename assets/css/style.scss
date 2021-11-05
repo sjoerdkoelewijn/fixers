@@ -1230,7 +1230,7 @@ form {
 }
 
 .dialog-search-content .dialog-search-close-icon:hover {
-  color: var(--sidebar-close-icon-color, var(--theme-color));
+  color: var(--theme-color);
 }
 
 
@@ -2688,7 +2688,7 @@ form {
   .close-btn {
     width:25px;
     height:25px;
-    color:var(--sidebar-background-color);
+    color: var(--sidebar-close-icon-color, var(--sidebar-background-color));
     position: fixed;
     top:4vw;
     left:92vw;
