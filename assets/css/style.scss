@@ -2819,7 +2819,9 @@ transform: translateX(0);
     color:var(--sidebar-button-color, var(--button-text-color));
 
     .ghostkit-svg-icon {
-      fill:var(--sidebar-button-color, var(--button-text-color));
+      path {
+        fill:var(--sidebar-button-color, var(--button-text-color));
+      }
     }
   }
 
