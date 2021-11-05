@@ -292,8 +292,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_background_color'				  => '#000000',
 				'sidebar_text_color'				  	  => '#ffffff',
 				'sidebar_offset_color'				  	  => '#181818',
-				'sidebar_button_color'					  => 'var(--sidebar-text-color)',
-				'sidebar_button_background_color'		  => 'var(--gkt-button__background-color, var(--button-background-color))',
+				'sidebar_button_color'					  => esc_attr( $options['sidebar_text_color'] ),
+				'sidebar_button_background_color'		  => esc_attr( $options['button_background_color'] ),
 				
 				// 404.
 				'error_404_image'                         => '',
