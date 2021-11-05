@@ -4475,6 +4475,10 @@ form.woocommerce-checkout {
     border-radius:var(--border-radius);
     padding:calc(var(--content-spacing) / 4) calc(var(--content-spacing) / 2);
     margin-bottom:calc(var(--content-spacing) / 4);
+
+    @include phone {
+      padding:calc(var(--content-spacing-mobile) / 2) calc(var(--content-spacing-mobile) * 2) calc(var(--content-spacing-mobile) / 2) var(--content-spacing-mobile) ;
+    }
   }
   
 }
@@ -4495,6 +4499,10 @@ form.woocommerce-checkout {
     justify-content: space-between;
     align-items: center;
 
+    @include phone {
+      font-size:100%;
+    }
+
     &:after {
       content: '';
       mask:url(../images/svg/dropdown-icon.svg) no-repeat;
@@ -4505,6 +4513,12 @@ form.woocommerce-checkout {
       height:12px;
       z-index:10;
       align-items: center;
+
+      @include phone {
+        margin-right:calc(var(--content-spacing-mobile) * 1.4);
+        position:absolute;
+        right:0;
+      }
     }
   }
 
@@ -4519,7 +4533,13 @@ form.woocommerce-checkout {
         width:23px;
         height:12px;
         z-index:10;
-        align-items: center;       
+        align-items: center; 
+        
+        @include phone {
+          margin-right:calc(var(--content-spacing-mobile) * 1.4);
+          position:absolute;
+          right:0;
+        }
       }      
     }
   }
