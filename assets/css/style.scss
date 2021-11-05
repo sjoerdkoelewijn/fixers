@@ -798,17 +798,6 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
     
   }
   
-  .sidebar-menu {  
-  
-    .primary-navigation {
-  
-      .menu-item.button{
-        margin-top:20px;    
-        text-align:center;
-      }
-    }
-    
-  }
 
 
 /*************************** Forms  ****************************************************************************/
@@ -2710,7 +2699,7 @@ form {
   .close-btn {
     width:25px;
     height:25px;
-    color:var(--theme-color);
+    color:var(--sidebar-background-color);
     position: fixed;
     top:4vw;
     left:92vw;
@@ -2806,24 +2795,37 @@ transform: translateX(0);
 }
 
 .sidebar-menu {
-position: fixed;  
-bottom: 0;
-top: 0;
-background:var(--sidebar-background-color);
-z-index: 200;
-padding: 30px;
--webkit-transform: translateX(-100%);
-transform: translateX(-100%);
-overflow-y: scroll;
-color:var(--sidebar-text-color);
-
-a {
+  position: fixed;  
+  bottom: 0;
+  top: 0;
+  background:var(--sidebar-background-color);
+  z-index: 200;
+  padding: 30px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  overflow-y: scroll;
   color:var(--sidebar-text-color);
 
-  &:hover {
+  a {
     color:var(--sidebar-text-color);
+
+    &:hover {
+      color:var(--sidebar-text-color);
+    }
   }
-}
+
+  .ghostkit-button {
+    background:var(--sidebar-button-background-color);
+    color:var(--sidebar-button-color);
+  }
+
+  .primary-navigation {
+
+    .menu-item.button{
+      margin-top:20px;    
+      text-align:center;
+    }
+  }
 
 }
 

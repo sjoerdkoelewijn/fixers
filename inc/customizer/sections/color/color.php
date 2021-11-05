@@ -654,3 +654,50 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+// Sidebar button color color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_button_color]',
+	array(
+		'default'           => $defaults['sidebar_button_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_button_color]',
+		array(
+			'label'    => __( 'Sidebar Button Color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_button_color]',
+		)
+	)
+);
+
+
+// Sidebar button background color color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_button_background_color]',
+	array(
+		'default'           => $defaults['sidebar_button_background_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_button_background_color]',
+		array(
+			'label'    => __( 'Sidebar Button Background', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_button_background_color]',
+		)
+	)
+);

@@ -144,7 +144,9 @@ class SKDD_Get_CSS {
 			
 				--sidebar-background-color:' . esc_attr( $options['sidebar_background_color'] ) . ';
 				--sidebar-text-color:' . esc_attr( $options['sidebar_text_color'] ) . ';
-				--sidebar-offset-color:' . esc_attr( $options['sidebar_offset_color'] ) . ';					
+				--sidebar-offset-color:' . esc_attr( $options['sidebar_offset_color'] ) . ';
+				--sidebar-button-color:' . esc_attr( $options['sidebar_button_color'] ) . ';
+				--sidebar-button-background-color:' . esc_attr( $options['sidebar_button_background_color'] ) . ';					
 
 			} 			
 
