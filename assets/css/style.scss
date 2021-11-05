@@ -2815,8 +2815,12 @@ transform: translateX(0);
   }
 
   .ghostkit-button {
-    background:var(--sidebar-button-background-color);
-    color:var(--sidebar-button-color);
+    background:var(--sidebar-button-background-color, var(--button-background-color));
+    color:var(--sidebar-button-color, var(--button-text-color));
+
+    .ghostkit-svg-icon {
+      fill:var(--sidebar-button-color, var(--button-text-color));
+    }
   }
 
   .primary-navigation {
