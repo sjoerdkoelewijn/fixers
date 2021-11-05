@@ -56,6 +56,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 		 * @return array
 		 */
 		public static function SKDD_get_SKDD_default_setting_values() {
+		
 			$args = array(
 				// CONTAINER.
 				'header_width'                         	  => '1920px',
@@ -292,8 +293,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_background_color'				  => '#000000',
 				'sidebar_text_color'				  	  => '#ffffff',
 				'sidebar_offset_color'				  	  => '#181818',
-				'sidebar_button_color'					  => esc_attr( $options['sidebar_text_color'] ),
-				'sidebar_button_background_color'		  => esc_attr( $options['button_background_color'] ),
+				'sidebar_button_color'					  => '',
+				'sidebar_button_background_color'		  => '',
 				
 				// 404.
 				'error_404_image'                         => '',
