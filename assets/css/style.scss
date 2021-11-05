@@ -79,7 +79,7 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
   a:focus {
     box-shadow:none;
     filter: none;  
-    color:var(--theme-color) !important;
+    color:var(--theme-color);
   }
 
 }
@@ -2830,6 +2830,14 @@ transform: translateX(0);
     .menu-item.button{
       margin-top:20px;    
       text-align:center;
+    }
+
+    a {
+      color:var(--sidebar-text-color);
+  
+      &:hover {
+        color:var(--sidebar-text-color);
+      }
     }
   }
 
