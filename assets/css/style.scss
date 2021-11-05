@@ -4601,6 +4601,12 @@ form.woocommerce-checkout {
     &:last-of-type {
       padding-bottom:var(--vertical-spacing);
     }
+
+    @include phone {
+      .ghostkit-grid-inner {
+        padding:3vw;
+      }
+    }
   }
 
   .has-background {
