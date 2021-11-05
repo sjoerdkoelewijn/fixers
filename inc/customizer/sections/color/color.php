@@ -679,7 +679,7 @@ $wp_customize->add_control(
 );
 
 
-// Sidebar button background color color
+// Sidebar button background color
 $wp_customize->add_setting(
 	'SKDD_setting[sidebar_button_background_color]',
 	array(
@@ -698,6 +698,30 @@ $wp_customize->add_control(
 			'label'    => __( 'Sidebar Button Background', 'SKDD' ),
 			'section'  => 'SKDD_color',
 			'settings' => 'SKDD_setting[sidebar_button_background_color]',
+		)
+	)
+);
+
+
+// Sidebar close icon color
+$wp_customize->add_setting(
+	'SKDD_setting[sidebar_close_icon_color]',
+	array(
+		'default'           => $defaults['sidebar_close_icon_color'],
+		'type'              => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	)
+);
+
+$wp_customize->add_control(
+	new SKDD_Color_Control(
+		$wp_customize,
+		'SKDD_setting[sidebar_close_icon_color]',
+		array(
+			'label'    => __( 'Sidebar close icon color', 'SKDD' ),
+			'section'  => 'SKDD_color',
+			'settings' => 'SKDD_setting[sidebar_close_icon_color]',
 		)
 	)
 );

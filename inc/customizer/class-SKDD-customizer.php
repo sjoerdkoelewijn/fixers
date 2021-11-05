@@ -295,6 +295,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_offset_color'				  	  => '#181818',
 				'sidebar_button_color'					  => '',
 				'sidebar_button_background_color'		  => '',
+				'sidebar_close_icon_color'				  => '',
 				
 				// 404.
 				'error_404_image'                         => '',

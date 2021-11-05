@@ -1230,7 +1230,7 @@ form {
 }
 
 .dialog-search-content .dialog-search-close-icon:hover {
-  color: var(--theme-color);
+  color: var(--sidebar-close-icon-color, var(--theme-color));
 }
 
 
