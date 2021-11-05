@@ -1809,17 +1809,6 @@ form {
 }
 
 
-.wp-block-kioken-rowlayout.alignfull {
-  width:100vw !important;
-  padding:1em;
-}
-
-@include phone {
-  .wp-block-kioken-rowlayout {
-    padding:1em;
-  }
-}
-
 .wp-block-embed .wp-block-embed__wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -1863,8 +1852,8 @@ form {
 
 @include phone {
   .site_content .page > p {    
-    padding-left:var(--content-spacing-mobile);
-    padding-right:var(--content-spacing-mobile);   
+    //padding-left:var(--content-spacing-mobile);
+    //padding-right:var(--content-spacing-mobile);   
   }
 
   .site_content > .has-background, .site_content > .wp-block-media-text {    
@@ -4584,7 +4573,7 @@ form.woocommerce-checkout {
   .ghostkit-grid-inner {
     width:100%;
     margin-left:0;
-    display:block;
+    display:block;    
   } 
   
   .ghostkit-col-with-bg {
@@ -4600,12 +4589,13 @@ form.woocommerce-checkout {
 
     &:last-of-type {
       padding-bottom:var(--vertical-spacing);
-    }
+    } 
+       
+  }
 
-    @include phone {
-      .ghostkit-grid-inner {
-        padding:3vw;
-      }
+  .alignfull.ghostkit-grid-with-bg {
+    .ghostkit-col-content {
+      padding:0 3vw;
     }
   }
 
