@@ -1195,11 +1195,12 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 	 */
 	function custom_template_single_product_weight($price) {
 		$options = SKDD_options( false );
-		global $product;		
+		global $product;
+		$product_packaging_weight = $product->get_weight();		
 
 		if ($product->is_type( 'simple' )) { 
 
-			$product_packaging_weight = $product->get_weight();
+			
 			$product_price = $product->get_price();
 
 			if ( $product->get_weight() != null && $product->get_price() !=null ) {
@@ -1232,7 +1233,9 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 
 		} elseif ($product->is_type( 'variable' )) {
 
-			return $price;		
+			$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
+
+			return $price . $after_price; 
 
 		}
 		
