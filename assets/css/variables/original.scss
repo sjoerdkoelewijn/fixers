@@ -2823,36 +2823,7 @@
     }
   }
   
-  /* Grid Layout */
-  .blog-layout-grid .site-main {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  
 
-  
-  .blog-layout-grid .site-main .post + .post {
-    margin-top: 0;
-  }
-  
-
-  
-  .blog-layout-grid .site-main .summary-text {
-    padding: 0 20px 20px 20px;
-  }
-
-  
-  .blog-layout-grid .site-main .post-navigation {
-    flex: 0 0 100%;
-    margin-top: 0;
-  }
-  
   /* Grid Standard */
   @media (min-width: 768px) {
     .blog-layout-standard .site-main {

@@ -1804,7 +1804,7 @@ form {
 .post-cover-image, .entry-image-link {
   img {
     width:100%;
-    max-height:350px;
+    height:350px;    
   }
 }
 
@@ -3709,6 +3709,15 @@ form.woocommerce-checkout {
 }
 
 .blog-layout-grid .site-main {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: flex-start;
+    -webkit-box-align: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
   
     .post, .portfolio, .service, .team, .knowledge, .page {
       margin-bottom: 75px;
@@ -3717,6 +3726,7 @@ form.woocommerce-checkout {
       background-color: var(--offset-color);
       text-align: left;
       border-radius:var(--border-radius);
+      margin-right:20px;
     
       .post-cover-image img {
         border-radius:var(--border-radius) var(--border-radius) 0 0;
@@ -3738,6 +3748,24 @@ form.woocommerce-checkout {
       }
     }
   }
+
+    
+  .blog-layout-grid .site-main .post + .post {
+    margin-top: 0;
+  }
+  
+
+  
+  .blog-layout-grid .site-main .summary-text {
+    padding: 0 20px 20px 20px;
+  }
+
+  
+  .blog-layout-grid .site-main .post-navigation {
+    flex: 0 0 100%;
+    margin-top: 0;
+  }
+  
 
 
 .single {
