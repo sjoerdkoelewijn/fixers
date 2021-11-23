@@ -689,6 +689,9 @@ class SKDD_Get_CSS {
 						--button-letter-spacing:'. esc_attr( ($options['button_letter_spacing']) ) . 'em' .';
 						--button-font-transform:' . esc_attr( $options['button_font_transform'] ) . ';
 
+						--button-font-size:'. esc_attr( ($options['button_font_size']) / 10 ) . 'rem' .';
+						--button-line-height:'. esc_attr( ($options['button_line_height']) ) . 'px' .';
+
 						--border-radius:'. esc_attr( $options['border_radius'] ) . 'px' .';
 					
 						--content-width:'. esc_attr( $options['container_width'] ) .';

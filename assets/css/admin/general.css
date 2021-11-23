@@ -466,12 +466,112 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
   background:var(--button-hover-background-color);
 }
 
+.ghostkit-button.ghostkit-button-xs {
+  line-height:calc(var(--button-line-height) / 2);
+  padding:0 10px;
+  font-size:calc((var(--button-font-size) *.8) * 0.625);
+}
+
+.ghostkit-button.ghostkit-button-sm {
+  line-height:calc(var(--button-line-height) / 1.5);
+  padding:0 15px;
+  font-size:calc((var(--button-font-size) *.85) * 0.625);
+}
+
+.ghostkit-button.ghostkit-button-md {
+  line-height:calc(var(--button-line-height) / 1.2);
+  padding:0 25px;
+  font-size:calc((var(--button-font-size) *.9) * 0.625);
+}
+
+.ghostkit-button.ghostkit-button-lg {
+  line-height:var(--button-line-height);
+  padding:0 40px;
+  font-size:calc((var(--button-font-size) *.95) * 0.625);
+}
+
+.ghostkit-button.ghostkit-button-xl {
+  line-height:calc(var(--button-line-height) * 1.25);
+  padding:0 50px;
+  font-size:calc(var(--button-font-size) * 0.625);
+}
+
+
+
 /*************************** Editor Styles ****************************************************************************/
 
 .editor-styles-wrapper {
   background:var(--background-color);
   color:var(--text-color) !important;
+  
 }
+
+.editor-styles-wrapper p {
+  font-family: var(--body-font-family), sans-serif;
+  font-weight: var(--body-font-weight);
+  line-height: calc(var(--body-line-height) * 0.625);
+  text-transform: var(--body-text-transform);
+  font-size: calc(var(--body-font-size) * 0.625);
+  color: var(--body-text-color);
+}
+
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4, .editor-styles-wrapper h5, .editor-styles-wrapper h6 {
+  font-family: var(--heading-font-family), sans-serif;
+  font-weight: var(--heading-font-weight);
+  text-transform: var(--heading-font-transform);
+  line-height: var(--heading-line-height);
+  color: var(--heading-color);
+}
+
+.editor-styles-wrapper h2.has-skdd-heading-1-font-size,
+.editor-styles-wrapper h3.has-skdd-heading-1-font-size,
+.editor-styles-wrapper h4.has-skdd-heading-1-font-size,
+.editor-styles-wrapper h5.has-skdd-heading-1-font-size,
+.editor-styles-wrapper h6.has-skdd-heading-1-font-size {
+  font-size:var(--header-size-1) !important;
+}
+
+.editor-styles-wrapper h1.has-skdd-heading-2-font-size,
+.editor-styles-wrapper h3.has-skdd-heading-2-font-size,
+.editor-styles-wrapper h4.has-skdd-heading-2-font-size,
+.editor-styles-wrapper h5.has-skdd-heading-2-font-size,
+.editor-styles-wrapper h6.has-skdd-heading-2-font-size {
+  font-size:var(--header-size-2) !important;
+}
+
+.editor-styles-wrapper h1.has-skdd-heading-3-font-size,
+.editor-styles-wrapper h2.has-skdd-heading-3-font-size,
+.editor-styles-wrapper h4.has-skdd-heading-3-font-size,
+.editor-styles-wrapper h5.has-skdd-heading-3-font-size,
+.editor-styles-wrapper h6.has-skdd-heading-3-font-size {
+  font-size:var(--header-size-3) !important;
+}
+
+.editor-styles-wrapper h1.has-skdd-heading-4-font-size,
+.editor-styles-wrapper h2.has-skdd-heading-4-font-size,
+.editor-styles-wrapper h3.has-skdd-heading-4-font-size,
+.editor-styles-wrapper h5.has-skdd-heading-4-font-size,
+.editor-styles-wrapper h6.has-skdd-heading-4-font-size {
+  font-size:var(--header-size-4) !important;
+}
+
+.editor-styles-wrapper h1.has-skdd-heading-5-font-size,
+.editor-styles-wrapper h2.has-skdd-heading-5-font-size,
+.editor-styles-wrapper h3.has-skdd-heading-5-font-size,
+.editor-styles-wrapper h4.has-skdd-heading-5-font-size,
+.editor-styles-wrapper h6.has-skdd-heading-5-font-size, {
+  font-size:var(--header-size-5) !important;
+}
+
+.editor-styles-wrapper h1.has-skdd-heading-6-font-size,
+.editor-styles-wrapper h2.has-skdd-heading-6-font-size,
+.editor-styles-wrapper h3.has-skdd-heading-6-font-size,
+.editor-styles-wrapper h4.has-skdd-heading-6-font-size,
+.editor-styles-wrapper h5.has-skdd-heading-6-font-size, {
+  font-size:var(--header-size-6) !important;
+}
+
+
 
 /*************************** Editor Styles ****************************************************************************/
 
