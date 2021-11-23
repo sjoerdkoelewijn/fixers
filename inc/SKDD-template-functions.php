@@ -1666,6 +1666,67 @@ if ( ! function_exists( 'SKDD_topbar' ) ) {
 	}
 }
 
+
+if ( ! function_exists( 'SKDD_remove_post_admin_menus' ) ) {
+	/**
+	 * Display posts section in backend
+	 */
+	function SKDD_remove_post_admin_menus() {
+		$options = SKDD_options( false );
+		$display = $options['blog_section_enabled'];
+
+		if ( ! $display ) { // if disabled
+
+			remove_menu_page( 'edit.php' );		
+			
+		} 
+	
+		
+	}
+}
+
+
+if ( ! function_exists( 'SKDD_remove_post_toolbar_menus' ) ) {
+	/**
+	 * Display posts section in backend
+	 */
+	function SKDD_remove_post_toolbar_menus() {
+		$options = SKDD_options( false );
+		$display = $options['blog_section_enabled'];
+
+		if ( ! $display ) { // if disabled
+
+			global $wp_admin_bar;
+			$wp_admin_bar->remove_menu( 'new-post' );	
+			
+		} 
+	
+		
+	}
+}
+
+if ( ! function_exists( 'SKDD_remove_post_dashboard_widgets' ) ) {
+	/**
+	 * Display posts section in backend
+	 */
+	function SKDD_remove_post_dashboard_widgets() {
+		$options = SKDD_options( false );
+		$display = $options['blog_section_enabled'];
+
+		if ( ! $display ) { // if disabled
+
+			global $wp_meta_boxes;
+			remove_meta_box( 'dashboard_quick_press', 'dashboard', 'normal' );
+			remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+			remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+			
+		} 
+	
+		
+	}
+}
+
+
 if ( ! function_exists( 'SKDD_search' ) ) {
 	/**
 	 * Display Product Search

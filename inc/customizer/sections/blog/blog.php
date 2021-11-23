@@ -8,6 +8,27 @@
 // Default values.
 $defaults = SKDD_options();
 
+// Enable/disable posts section.
+$wp_customize->add_setting(
+	'SKDD_setting[blog_section_enabled]',
+	array(
+		'default'           => $defaults['blog_section_enabled'],
+		'type'              => 'option',
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[blog_section_enabled]',
+		array(
+			'label'    => __( 'Enable posts section', 'SKDD' ),
+			'settings' => 'SKDD_setting[blog_section_enabled]',
+			'section'  => 'SKDD_blog',
+		)
+	)
+);
+
 // Blog layout.
 $wp_customize->add_setting(
 	'SKDD_setting[blog_list_layout]',

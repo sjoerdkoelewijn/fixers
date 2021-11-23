@@ -93,6 +93,10 @@ add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_close', 60 );
 /**
  * Posts
  */
+add_action( 'admin_menu', 'SKDD_remove_post_admin_menus' );
+add_action( 'wp_before_admin_bar_render', 'SKDD_remove_post_toolbar_menus' );
+add_action( 'wp_dashboard_setup', 'SKDD_remove_post_dashboard_widgets' );
+
 add_action( 'SKDD_loop_post', 'SKDD_post_loop_image_thumbnail', 10 );
 add_action( 'SKDD_loop_post', 'SKDD_post_loop_inner_open', 20 );
 add_action( 'SKDD_loop_post', 'SKDD_post_header_open', 30 );
