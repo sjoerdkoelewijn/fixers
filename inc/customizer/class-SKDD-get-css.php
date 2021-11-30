@@ -159,7 +159,7 @@ class SKDD_Get_CSS {
 				--footer-align:' . esc_attr( $options['topbar_layout'] ) . '; 				
 			}
 
-			.site_header_inner {
+			.site_header {
 				--menu-font-family:' . esc_attr( $options['menu_font_family'] ) . ';					
 				--menu-font-weight:' . esc_attr( $options['menu_font_weight'] ) . ';
 				--menu-letter-spacing:'. esc_attr( ($options['menu_letter_spacing']) ) . 'em' .';								
@@ -222,25 +222,6 @@ class SKDD_Get_CSS {
 
 		';
 
-		$topbar_display = $options['topbar_display'];
-		
-		if ( $topbar_display ) {
-			$styles .= '
-			
-			.topbar {
-				--topbar-background-color:' . esc_attr( $options['topbar_background_color'] ) . ';
-				--topbar-text-color:' . esc_attr( $options['topbar_text_color'] ) . ';
-				--topbar-height:'. esc_attr( $options['topbar_height']) . 'px' .';
-				--topbar-align:' . esc_attr( $options['topbar_layout'] ) . '; 
-			}
-
-			.has-header-transparent.header-transparent-for-all-devices .site_header {
-				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .';
-			}
-			
-			';			
-		}
-
 		$header_shadow = $options['header_shadow'];
 		
 		if ( $header_shadow ) {
@@ -258,12 +239,13 @@ class SKDD_Get_CSS {
 		if ( $header_sticky ) {
 			$styles .= '
 						
-			.site_header.active {
-				margin-bottom:var(--header-max-height);
-			}
-			.site_header.active .site_header_inner{
+			.site_header.active{
 				position: fixed;
-    			top: 0;
+				top:0;
+			}
+
+			.scrolling-down .site_content, .scrolling-up .site_content {
+				margin-top:var(--header-max-height);
 			}
 			
 			';			
@@ -273,25 +255,53 @@ class SKDD_Get_CSS {
 		
 		if ( $header_show_scroll_up ) {
 			$styles .= '
-						
+
 			.scrolling-up .site_header {
-				margin-bottom:var(--header-max-height);
-			}
-
-			.scrolling-up .site_header .site_header_inner {
 				position: fixed;
-    			top: 0;	
-				animation: fadeInDown .5s;
-    			max-width: 100vw; 
-    			height: var(--header-max-height);			
+    			top:0;
+				animation: fadeInDown .3s;
+    			max-width:var(--header-width); 
+				transform: translateY(0%);			
 			}
 
-			.scrolling-down .site_header .site_header_inner{
+			.site_header.active {
+				transform: translateY(-100%);
+			}
+
+			.scrolling-down .site_header {
+				position: fixed;
+    			top:0;
 				animation: fadeOutUp .5s;
-				animation-iteration-count: 1;
-				max-width: 100vw;
-				 
+				max-width: var(--header-width);
+				overflow:hidden;			
 			  }
+
+			.scrolling-down .site_content, .scrolling-up .site_content {
+				margin-top:var(--header-max-height);
+			}
+			
+			';			
+		}	
+
+		$topbar_display = $options['topbar_display'];
+		
+		if ( $topbar_display ) {
+			$styles .= '
+			
+			:root {
+				--topbar-background-color:' . esc_attr( $options['topbar_background_color'] ) . ';
+				--topbar-text-color:' . esc_attr( $options['topbar_text_color'] ) . ';
+				--topbar-height:'. esc_attr( $options['topbar_height']) . 'px' .';
+				--topbar-align:' . esc_attr( $options['topbar_layout'] ) . '; 
+			}
+
+			.has-header-transparent.header-transparent-for-all-devices .site_header {
+				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .';
+			}
+
+			.scrolling-down .site_content, .scrolling-up .site_content {
+				margin-top:calc(var(--header-max-height) + var(--topbar-height));
+			}
 			
 			';			
 		}

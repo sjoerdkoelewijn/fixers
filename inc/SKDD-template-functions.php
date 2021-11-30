@@ -1649,6 +1649,10 @@ if ( ! function_exists( 'SKDD_topbar' ) ) {
 	function SKDD_topbar() {
 		$options = SKDD_options( false );
 		$display = $options['topbar_display'];
+		
+		if ( $options['topbar_close_btn'] ) { 
+			$topbar_close_btn = ' topbar_close_btn';
+		} 
 
 		if ( ! $display ) {
 			return;
@@ -2335,6 +2339,17 @@ if ( ! function_exists( 'SKDD_site_header' ) ) {
 		}
 		?>
 			<header id="masthead" class="<?php SKDD_header_class(); ?>">
+
+				<?php 
+					/**
+						 * Functions hooked into SKDD_site_header action
+						 *
+						 * @hooked SKDD_skip_links              - 5
+						 * @hooked SKDD_topbar              - 10
+						 */
+						do_action( 'SKDD_above_site_header' );
+				?>
+
 				<div class="site_header_inner">
 					<?php
 						/**

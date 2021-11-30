@@ -30,14 +30,17 @@ add_action( 'SKDD_theme_header', 'SKDD_after_header', 100 );
 
 // Header template part.
 add_action( 'SKDD_template_part_header', 'SKDD_view_open', 10 ); // Open #view.
-add_action( 'SKDD_template_part_header', 'SKDD_topbar', 20 );
 add_action( 'SKDD_template_part_header', 'SKDD_site_header', 30 );
 
+//inside @SKDD_above_site_header hook.
+add_action( 'SKDD_above_site_header', 'SKDD_skip_links', 5 );
+add_action( 'SKDD_above_site_header', 'SKDD_topbar', 10 );
+
 // Inside @SKDD_site_header hook.
-add_action( 'SKDD_site_header', 'SKDD_skip_links', 5 );
 add_action( 'SKDD_site_header', 'SKDD_menu_toggle_btn', 10 );
 add_action( 'SKDD_site_header', 'SKDD_site_branding', 20 );
-add_action( 'SKDD_site_header', 'SKDD_primary_navigation', 30 );
+add_action( 'SKDD_site_header', 'SKDD_primary_navigation', 30 ); 
+
 
 add_action( 'SKDD_site_header', 'SKDD_header_action', 50 );
 

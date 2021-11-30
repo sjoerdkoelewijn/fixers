@@ -29,6 +29,27 @@ $wp_customize->add_control(
 	)
 );
 
+// Display close btn on topbar.
+$wp_customize->add_setting(
+	'SKDD_setting[topbar_close_btn]',
+	array(
+		'type'              => 'option',
+		'default'           => $defaults['topbar_close_btn'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[topbar_close_btn]',
+		array(
+			'label'    => __( 'Display close button', 'SKDD' ),
+			'section'  => 'SKDD_topbar',
+			'settings' => 'SKDD_setting[topbar_close_btn]',
+		)
+	)
+);
+
 // Topbar color.
 $wp_customize->add_setting(
 	'SKDD_setting[topbar_text_color]',
@@ -134,57 +155,6 @@ $wp_customize->add_control(
 					'edit' => true,
 					'unit' => 'px',
 				),
-			),
-		)
-	)
-);
-
-
-// Content divider.
-$wp_customize->add_setting(
-	'topbar_content_divider',
-	array(
-		'sanitize_callback' => 'sanitize_text_field',
-	)
-);
-$wp_customize->add_control(
-	new SKDD_Divider_Control(
-		$wp_customize,
-		'topbar_content_divider',
-		array(
-			'section'  => 'SKDD_topbar',
-			'settings' => 'topbar_content_divider',
-			'type'     => 'divider',
-		)
-	)
-);
-
-
-// Topbar layout.
-$wp_customize->add_setting(
-	'SKDD_setting[topbar_layout]',
-	array(
-		'default'           => $defaults['topbar_layout'],
-		'sanitize_callback' => 'SKDD_sanitize_choices',
-		'type'              => 'option',
-	)
-);
-$wp_customize->add_control(
-	new SKDD_Radio_Image_Control(
-		$wp_customize,
-		'SKDD_setting[topbar_layout]',
-		array(
-			'label'    => __( 'Topbar Layout', 'SKDD' ),
-			'section'  => 'SKDD_topbar',
-			'settings' => 'SKDD_setting[topbar_layout]',
-			'choices'  => apply_filters(
-				'SKDD_setting_topbar_layout_choices',
-				array(
-					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexstart.jpg',
-					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexend.jpg',
-					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexcenter.jpg',
-					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexspacebetween.jpg',
-				)
 			),
 		)
 	)
