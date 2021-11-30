@@ -165,18 +165,23 @@ function scrollingDetect() {
 	// Add scroll event
 	window.addEventListener("scroll", function() {
 
-		const site_header = document.getElementById('masthead');
-	
+		const site_header = document.getElementById('masthead');		
+			
 		const body = document.body;
 
 	  	if ((body.getBoundingClientRect()).top < scrollPos) {
 			body.classList.add( 'scrolling-down' );
 			body.classList.remove( 'scrolling-up' );
 			site_header.classList.add( 'active' );
-	  	}	else {
+		} else {
 			body.classList.remove( 'scrolling-down' );
 			body.classList.add( 'scrolling-up' );
 	  	}
+
+		if(window.scrollY == 0){
+			site_header.classList.remove( 'active' );
+			body.classList.remove( 'scrolling-up' );
+		}
 			
 		//saves the new state	
 		scrollPos = (document.body.getBoundingClientRect()).top;
