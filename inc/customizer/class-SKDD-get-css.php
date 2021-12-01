@@ -259,21 +259,19 @@ class SKDD_Get_CSS {
 			.scrolling-up .site_header {
 				position: fixed;
     			top:0;
-				animation: fadeInDown .3s;
+				transition:.3s ease-out; 
     			max-width:var(--header-width); 
 				transform: translateY(0%);			
 			}
 
-			.site_header.active {
-				transform: translateY(-100%);
-			}
 
 			.scrolling-down .site_header {
 				position: fixed;
     			top:0;
-				animation: fadeOutUp .5s;
+				transition:.3s ease-out; 
 				max-width: var(--header-width);
-				overflow:hidden;			
+				overflow:hidden;
+				transform: translateY(-100%);			
 			  }
 
 			.scrolling-down .site_content, .scrolling-up .site_content {
