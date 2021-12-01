@@ -33,6 +33,7 @@ $wp_customize->add_control(
 				'SKDD_setting[shop_single_ajax_add_to_cart]',
 				'SKDD_setting[shop_single_stock_label]',
 				'SKDD_setting[shop_single_stock_product_limit]',
+				'SKDD_setting[shop_single_show_weight]',
 				'SKDD_setting[shop_single_loading_bar]',
 				'SKDD_setting[shop_single_additional_information]',
 				'SKDD_setting[shop_single_content_background]',
@@ -143,6 +144,27 @@ $wp_customize->add_control(
 			'label'    => __( 'Loading Bar', 'SKDD' ),
 			'section'  => 'SKDD_shop_single',
 			'settings' => 'SKDD_setting[shop_single_loading_bar]',
+		)
+	)
+);
+
+// Show weight in KG after product price.
+$wp_customize->add_setting(
+	'SKDD_setting[shop_single_show_weight]',
+	array(
+		'default'           => $defaults['shop_single_show_weight'],
+		'sanitize_callback' => 'SKDD_sanitize_checkbox',
+		'type'              => 'option',
+	)
+);
+$wp_customize->add_control(
+	new SKDD_Switch_Control(
+		$wp_customize,
+		'SKDD_setting[shop_single_show_weight]',
+		array(
+			'label'    => __( 'Price in KG', 'SKDD' ),
+			'section'  => 'SKDD_shop_single',
+			'settings' => 'SKDD_setting[shop_single_show_weight]',
 		)
 	)
 );

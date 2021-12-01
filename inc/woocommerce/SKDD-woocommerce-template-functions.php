@@ -1196,46 +1196,54 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 	function custom_template_single_product_weight($price) {
 		$options = SKDD_options( false );
 		global $product;
-		$product_packaging_weight = $product->get_weight();		
+		
+		if ($options['shop_single_show_weight']) {
 
-		if ($product->is_type( 'simple' )) { 
+			$product_packaging_weight = $product->get_weight();		
 
+			if ($product->is_type( 'simple' )) { 		
+				
+				$product_price = $product->get_price();
+	
+				if ( $product->get_weight() != null && $product->get_price() !=null ) {
+	
+					if ( $options['single_product_weight'] === 'none') {
+	
+						return;
 			
-			$product_price = $product->get_price();
-
-			if ( $product->get_weight() != null && $product->get_price() !=null ) {
-
-				if ( $options['single_product_weight'] === 'none') {
-
-					return;
-		
-				} elseif ( $options['single_product_weight'] === 'actual' ) {
-		
-					$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
-		
-				} elseif ( $options['single_product_weight'] === 'kilo' ) {
-					
-					$price_per_kilo = $product_price / $product_packaging_weight;
-		
-					$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. round($price_per_kilo, 2) .' <span class="unit">/ kg </span>) </span>';
-				
-				} elseif ( $options['single_product_weight'] === 'gram' ) {
-		
-					$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
-		
-					$after_price = '<span class="price_per_weight price_per_gram"> (€ '. round($price_per_gram, 2) .' <span class="unit">/ kg </span>) </span>';
+					} elseif ( $options['single_product_weight'] === 'actual' ) {
+			
+						$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
+			
+					} elseif ( $options['single_product_weight'] === 'kilo' ) {
 						
-				}		
-				
-				return $price . $after_price;
-
+						$price_per_kilo = $product_price / $product_packaging_weight;
+			
+						$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. round($price_per_kilo, 2) .' <span class="unit">/ kg </span>) </span>';
+					
+					} elseif ( $options['single_product_weight'] === 'gram' ) {
+			
+						$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
+			
+						$after_price = '<span class="price_per_weight price_per_gram"> (€ '. round($price_per_gram, 2) .' <span class="unit">/ kg </span>) </span>';
+							
+					}		
+					
+					return $price . $after_price;
+	
+				}
+	
+			} elseif ($product->is_type( 'variable' )) {
+	
+				$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
+	
+				return $price . $after_price; 
+	
 			}
 
-		} elseif ($product->is_type( 'variable' )) {
+		} else { // if weight per KG is disabled show normal price
 
-			$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
-
-			return $price . $after_price; 
+			return $price;
 
 		}
 		

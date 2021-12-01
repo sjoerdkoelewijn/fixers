@@ -243,6 +243,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'shop_single_stock_label'                 => true,
 				'shop_single_stock_product_limit'         => 0,
 				'shop_single_loading_bar'                 => true,
+				'shop_single_show_weight'				  => false,
 				'shop_single_additional_information'      => true,
 				'shop_single_content_background'          => '#f3f3f3',
 				'shop_single_trust_badge_image'           => '',
