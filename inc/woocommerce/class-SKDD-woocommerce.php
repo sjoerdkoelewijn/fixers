@@ -120,8 +120,6 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			add_action( 'woocommerce_after_single_product_summary', 'SKDD_single_product_wrapper_summary_close', 0 );
 
-			add_filter( 'woocommerce_variation_prices_price', 'filter_woocommerce_variation_prices_price', 10, 3 ); 
-
 			// Breadcrumbs
 			if (function_exists('rank_math_the_breadcrumbs')) {				
 				
