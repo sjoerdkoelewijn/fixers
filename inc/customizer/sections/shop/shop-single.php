@@ -162,12 +162,13 @@ $wp_customize->add_control(
 		$wp_customize,
 		'SKDD_setting[shop_single_show_weight]',
 		array(
-			'label'    => __( 'Price in KG', 'SKDD' ),
+			'label'    => __( 'Show weight after price', 'SKDD' ),
 			'section'  => 'SKDD_shop_single',
 			'settings' => 'SKDD_setting[shop_single_show_weight]',
 		)
 	)
 );
+
 
 // Stock product limit.
 $wp_customize->add_setting(
@@ -523,6 +524,38 @@ $wp_customize->add_control(
 			'section'  => 'SKDD_shop_single',
 			'settings' => 'SKDD_setting[shop_single_tags]',
 		)
+	)
+);
+
+// Tab Order
+$wp_customize->add_setting(
+	'SKDD_setting[wc_tab_order]',
+	[
+		'default'           => $defaults['wc_tab_order'],
+		'type'              => 'option',
+		'sanitize_callback' => 'SKDD_sanitize_choices',
+	]
+);
+
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'SKDD_setting[wc_tab_order]',
+		[
+			'label'       => __( 'Order of additional information', 'SKDD' ),
+			'description' => __( 'The tab order for specs & downloads', 'SKDD' ),
+			'settings'    => 'SKDD_setting[wc_tab_order]',
+			'section'     => 'SKDD_shop_single',
+			'type'     => 'select',
+			'choices'  => apply_filters(
+				'SKDD_setting_wc_tab_order_choices',
+				array(
+					'default'   => __( 'Default Order', 'SKDD' ),
+					'specs_first' => __( 'Product Specs First', 'SKDD' ),
+					'reviews_first' => __( 'Product Reviews First', 'SKDD' ),
+				)
+			),
+		]
 	)
 );
 

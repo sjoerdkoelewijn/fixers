@@ -70,9 +70,6 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'SKDD_update_quantity_mini_cart', 10, 3 );
 
-			// Remove reset variantion - clear button
-			//add_filter('woocommerce_reset_variations_link', '__return_empty_string');
-
 			// Remove type from script tags so it always passes validation.
 			add_action( 'template_redirect', 'SKDD_force_html5_no_type');
 
@@ -122,6 +119,8 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_wrapper_summary_open', 200 );
 
 			add_action( 'woocommerce_after_single_product_summary', 'SKDD_single_product_wrapper_summary_close', 0 );
+
+			add_filter( 'woocommerce_variation_prices_price', 'filter_woocommerce_variation_prices_price', 10, 3 ); 
 
 			// Breadcrumbs
 			if (function_exists('rank_math_the_breadcrumbs')) {				

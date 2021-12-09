@@ -1196,59 +1196,43 @@ if ( ! function_exists( 'custom_template_single_product_weight' ) ) {
 	function custom_template_single_product_weight($price) {
 		$options = SKDD_options( false );
 		global $product;
+
+		$weight_unit = get_option('woocommerce_weight_unit');
 		
-		if ($options['shop_single_show_weight']) {
+		if ($options['shop_single_show_weight'] && $product->get_weight() != null && $product->get_price() !=null ) {		
 
-			$product_packaging_weight = $product->get_weight();		
+			$product_packaging_weight = $product->get_weight();
 
-			if ($product->is_type( 'simple' )) { 		
+			if ($product->is_type( 'simple' )) { 	
 				
-				$product_price = $product->get_price();
-	
-				if ( $product->get_weight() != null && $product->get_price() !=null ) {
-	
-					if ( $options['single_product_weight'] === 'none') {
-	
-						return;
-			
-					} elseif ( $options['single_product_weight'] === 'actual' ) {
-			
-						$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
-			
-					} elseif ( $options['single_product_weight'] === 'kilo' ) {
-						
-						$price_per_kilo = $product_price / $product_packaging_weight;
-			
-						$after_price = '<span class="price_per_weight price_per_kilo"> (€ '. round($price_per_kilo, 2) .' <span class="unit">/ kg </span>) </span>';
-					
-					} elseif ( $options['single_product_weight'] === 'gram' ) {
-			
-						$price_per_gram = $product_price * $product_packaging_weight; // This is multiplied because product weight should be entered in kilo. so 100gr = 0.1 kilo
-			
-						$after_price = '<span class="price_per_weight price_per_gram"> (€ '. round($price_per_gram, 2) .' <span class="unit">/ kg </span>) </span>';
-							
-					}		
-					
-					return $price . $after_price;
-	
-				}
-	
+				$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' <span class="unit"> ' . $weight_unit . ' </span> </span>';	
+
+				return $price . $after_price;	
+
 			} elseif ($product->is_type( 'variable' )) {
-	
-				$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' kg </span>';
-	
-				return $price . $after_price; 
-	
-			}
 
-		} else { // if weight per KG is disabled show normal price
+				// TODO - Add exception if variety has a different weight.
+			
+				$after_price = '<span class="price_per_weight"> / ' . $product_packaging_weight . ' <span class="unit"> ' . $weight_unit . ' </span> </span>';	
 
-			return $price;
+				return $price . $after_price;	
+
+			}			
+			
+			
+		} else { 
+			
+			// if show weight after price setting is disabled or weight/price is not set.
+
+			return $price;			
 
 		}
 		
 	}
 }
+
+
+
 
 
 if ( ! function_exists( 'SKDD_change_tabs_order' ) ) {

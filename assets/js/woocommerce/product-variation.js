@@ -49,7 +49,7 @@ function productVariation( selector, form ) {
 			var fullSrc  = variation.image.full_src,
 				imgSrc   = variation.image.src,
 				thumbSrc = variation.image.thumb_src,
-				inStock  = variation.is_in_stock;
+				inStock  = variation.is_in_stock;				
 
 			// Support Product meta widget.
 			if ( productMetaSku ) {
