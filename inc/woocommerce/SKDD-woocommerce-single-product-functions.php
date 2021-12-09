@@ -115,6 +115,7 @@ if ( ! function_exists( 'SKDD_product_navigation' ) ) {
 	}
 }
 
+
 if ( ! function_exists( 'SKDD_remove_additional_information_tabs' ) ) {
 	/**
 	 * Remove additional information

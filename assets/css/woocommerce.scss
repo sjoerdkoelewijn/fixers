@@ -1649,12 +1649,52 @@
   .woocommerce-grouped-product-list ins {
     background-color: rgba(0, 0, 0, 0);
   }
-  
+
   .variations {
     border: 0;
     margin-top: 0;
     margin-bottom: 20px;
+
+    // Styling for WC Variations Radio Buttons plugin - https://wordpress.org/plugins/wc-variations-radio-buttons/
+
+    .value div { 
+   
+      input[type="radio"]{
+        display:none; 
+      }
+
+      label {
+        margin-right:5px;
+        border:solid 1px var(--offset-color);
+        color:var(--body-font-color);
+        background:white;
+        padding:5px 10px;
+        border-radius:3px;
+        cursor:pointer;
+      }
+
+      input[type="radio"]:checked+label {
+        color:white;
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+      }
+
+      input[type="radio"]:disabled+label {
+        opacity:.5;
+        cursor:default;
+      }
+
+    }
+
   }
+
+  .reset_variations {
+    display:none;
+  }
+
+  .add_to_wishlist:focus {
+    
+  } 
   
   .variations tr {
     display: block;

@@ -70,6 +70,9 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			add_filter( 'woocommerce_widget_cart_item_quantity', 'SKDD_update_quantity_mini_cart', 10, 3 );
 
+			// Remove reset variantion - clear button
+			//add_filter('woocommerce_reset_variations_link', '__return_empty_string');
+
 			// Remove type from script tags so it always passes validation.
 			add_action( 'template_redirect', 'SKDD_force_html5_no_type');
 
