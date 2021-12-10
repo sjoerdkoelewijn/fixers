@@ -260,3 +260,25 @@ document.addEventListener(
 		);
 	}
 );
+
+
+if (jQuery('form.variations_form').length !== 0) {
+
+    var form = jQuery('form.variations_form');
+    var variable_product_price = '';
+
+    jQuery('.variations_form').on('woocommerce_variation_has_changed', function () {
+
+        if (jQuery('.single_variation_wrap span.price span.amount').length !== 0) {
+			
+            if (jQuery('.single_variation_wrap .single_variation').html() !== variable_product_price) {
+				
+                variable_product_price = jQuery('.single_variation_wrap .single_variation').html();
+
+                jQuery('.product-summary p.price').html(variable_product_price);
+
+            }
+
+        }
+    });
+}

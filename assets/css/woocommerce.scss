@@ -1829,6 +1829,10 @@
   .single_variation:empty {
     display: none;
   }
+
+  .single_variation_wrap .single_variation {
+    display: none !important;
+  }
   
   .shop_table .variation {
     margin: 0;
@@ -4433,6 +4437,10 @@
   border-left: 0;
   border-right: 0;
   padding: 10px 0;
+
+  p:first-of-type {
+    margin-top:0;
+  }
 }
 
 .woocommerce-product-details__short-description p:last-child {

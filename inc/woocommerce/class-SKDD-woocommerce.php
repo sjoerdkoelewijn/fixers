@@ -57,6 +57,8 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			add_action( 'SKDD_product_loop_item_action_item', 'SKDD_product_loop_item_add_to_cart_icon', 10 );
 			add_action( 'SKDD_product_loop_item_action_item', 'SKDD_product_loop_item_wishlist_icon', 30 );
 			//add_action(	'admin_menu', 'SKDD_customer_service_submenu', 10);
+
+			
 			
 			// Ajax single add to cart.
 			add_action( 'wp_ajax_single_add_to_cart', 'SKDD_ajax_single_add_to_cart' );
@@ -496,12 +498,15 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// SHOP SINGLE.
 			// Swap position price and rating star.
-			add_action( 'woocommerce_single_product_summary', 'custom_template_single_price', 10 );
-			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+			add_action( 'woocommerce_single_product_summary', 'custom_template_single_price', 20 );
+			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 5 );
 
 			add_action( 'woocommerce_single_product_summary', 'custom_template_single_add_to_cart', 30 );
 
-			$options = SKDD_options( false );
+			
+
+
+
 			
 
 		}
