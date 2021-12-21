@@ -190,6 +190,16 @@ video {
   zoom: 1;
 }
 
+.ghostkit-video {
+  --gkt-video--play-icon__background-color:rgba(0,0,0,0.3);
+  transition:background-color .5s ease;
+
+    &:hover {
+      --gkt-video--play-icon__background-color:rgba(0,0,0,0.6);
+      transition:background-color .5s ease;
+    }
+}
+
 .clear {
   clear: both;
 }
