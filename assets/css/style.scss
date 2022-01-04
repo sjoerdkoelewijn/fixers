@@ -114,9 +114,7 @@ p, li, .primary-navigation, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-input:focus, textarea:focus {
-  box-shadow: inset 0 0 0 3px var(--theme-color); 
-}
+
   
 article,
 aside,
@@ -816,7 +814,7 @@ form {
 
   input, select {
     width:100%;
-    background: var(--second-background-color);
+    background: var(--offset-color);
     border-radius:3px;
     padding:11px 17px;
     
@@ -837,19 +835,23 @@ form {
 
   label {
     margin-left:3px;
-    font-size:80%;
+    font-size:90%;
     font-weight:700;
     display:block;
   }
 
   textarea {
     width:100%;
-    background: var(--second-background-color);
+    background: var(--offset-color);
     border:0;
     border-radius:3px;
     font-size:90%;
     color:var(--text-color);
     padding:11px 17px;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: inset 0 0 0 2px var(--theme-color); 
   }
 
 }
@@ -881,42 +883,26 @@ form {
 #commentform {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 #commentform #comment {
   flex-basis: 100%;
-  border: 1px solid var(--offset-color);
+  
   padding: 15px;
   height: 200px;
-  font-size: 12px;
   margin-bottom: 20px;
   resize: none;
   border-radius: 2px;
 }
 
-#commentform #comment:focus {
-  border-color: rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-}
-
 #commentform #email,
 #commentform #author {
-  flex: 5;
-  height: 50px;
-  border: 1px solid var(--offset-color);
+  flex:1;
+  min-height: 50px;
   padding: 0 15px;
-  font-size: 12px;
   margin-bottom: 20px;
   border-radius: 2px;
-}
-
-#commentform #email:focus,
-#commentform #author:focus {
-  border-color: rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 #commentform #author {
@@ -924,16 +910,38 @@ form {
 }
 
 #commentform .form-submit {
-  margin-bottom: 0;
+  flex-basis: 100%;
+
+  input {   
+    font-family:var(--button-font-family);
+    border-radius:var(--button-border-radius);
+    padding:0 40px;
+    text-decoration:none;
+    cursor: pointer;
+    border:0;
+    font-weight:var(--button-font-weight);
+    font-size:var(--button-font-size);
+    letter-spacing:var(--button-letter-spacing);
+    line-height:var(--button-line-height);
+    text-transform: var(--button-font-transform);
+    background:var(--gkt-button__background-color, var(--button-background-color));
+    color:var(--gkt-button__color, var(--button-text-color));
+    transition: background .3s ease, color .3s ease ; 
+
+    &:hover, &:focus {
+      background-color: var(--gkt-button-hover__background-color, var(--button-hover-background-color));
+      color: var(--gkt-button-hover__color, var(--button-hover-text-color)); 
+      transition: background .3s ease, color .3s ease ;   
+      border:0;
+    }
+
+  }
+  
 }
 
-#commentform input[type="submit"] {
-  height: 50px;
-  padding: 0 15px;
-  border: 0;
-  font-weight: 600;
-  min-width: 130px;
-}
+
+
+
 
 
 /*************************** Forminator styling ****************************************************************************/
