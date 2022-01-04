@@ -3675,7 +3675,8 @@ form.woocommerce-checkout {
 
 .category {
   .site_content {
-    margin:var(--vertical-spacing) auto;
+    margin-top:var(--vertical-spacing);
+    margin-bottom:var(--vertical-spacing);
   }
 }
 
