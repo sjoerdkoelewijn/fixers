@@ -880,6 +880,13 @@ form {
 }
 
 
+@include desktop-up {
+  .comments-area {
+    width:50vw;
+    margin:0 auto;
+  }
+}
+
 #commentform {
   display: flex;
   flex-wrap: wrap;
@@ -912,7 +919,7 @@ form {
 #commentform .form-submit {
   flex-basis: 100%;
 
-  input {   
+  input {    
     font-family:var(--button-font-family);
     border-radius:var(--button-border-radius);
     padding:0 40px;
@@ -927,6 +934,12 @@ form {
     background:var(--gkt-button__background-color, var(--button-background-color));
     color:var(--gkt-button__color, var(--button-text-color));
     transition: background .3s ease, color .3s ease ; 
+    
+   
+    
+    @include desktop-up {
+      max-width:12vw;
+    }
 
     &:hover, &:focus {
       background-color: var(--gkt-button-hover__background-color, var(--button-hover-background-color));
@@ -935,8 +948,10 @@ form {
       border:0;
     }
 
+    
+
   }
-  
+
 }
 
 
@@ -4726,6 +4741,15 @@ form.woocommerce-checkout {
   list-style: none;
 }
 
+.comment-list .children {
+  margin-left:100px;
+
+  @include phone {
+    margin-left:60px;
+  }
+
+}
+
 .comment {
   display: block;
 }
@@ -4738,7 +4762,7 @@ form.woocommerce-checkout {
 
 .comment-body #respond {
   flex-basis: 100%;
-  margin-top: 33px;
+  margin-top: 30px;
   margin-left: 100px;
   padding-bottom: 45px;
   border-bottom: 1px solid var(--offset-color);
@@ -4747,14 +4771,26 @@ form.woocommerce-checkout {
 .comment-body .comment-author {
   max-width: 70px;
   min-width: 70px;
+
+  @include phone {
+    min-width: 30px;
+  }
 }
 
 .comment-body .comment-author img {
   border-radius: 50%;
+
+  @include phone {
+    max-width: 40px;
+  }
 }
 
 .comment-body .comment-author + .comment-content {
   margin-left: 30px;
+
+  @include phone {
+    margin-left: 20px;
+  }
 }
 
 .comment-body .comment-content {
