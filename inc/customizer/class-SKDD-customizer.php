@@ -89,6 +89,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'offset_color'						  	  => '#efefef',
 				// TOPBAR.
 				'topbar_display'                          => false,
+				'topbar_close_btn'							=> false,
 				'topbar_text_color'                       => '#ffffff',
 				'topbar_background_color'                 => '#292f34',
 				'topbar_opacity'						  => 100,
@@ -97,6 +98,9 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				// HEADER.
 				'header_layout'                           => 'layout-1',
 				'header_background_color'                 => '#ffffff',
+				'header_shadow'								=> false,
+				'header_sticky'								=> false,
+				'header_show_scroll_up'						=> false,
 				'header_primary_menu'                     => true,
 				'header_mega_menu'                     	  => false,
 				'header_max_height'                    	  => '80',
@@ -147,6 +151,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'page_header_padding_bottom'              => 50,
 				'page_header_margin_bottom'               => 50,
 				// FOOTER.
+				'footer_layout'							  => 'space-between',
 				'footer_display'                          => true,
 				'footer_space'                            => 100,
 				'footer_column'                           => 0,
@@ -299,6 +304,8 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_button_color'					  => '',
 				'sidebar_button_background_color'		  => '',
 				'sidebar_close_icon_color'				  => '',
+
+				'default_image'                         => '',
 				
 				// 404.
 				'error_404_image'                         => '',
@@ -308,6 +315,14 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'cpt_services_display'					  => false,
 				'cpt_knowledge_display'					  => false,
 				'cpt_team_display'					  	  => false,
+				'cpt_portfolio_has_archive'				=> false,
+				'cpt_portfolio_has_tax'					  => false,
+				'cpt_services_has_archive'					  => false,
+				'cpt_services_has_tax'					  	  => false,
+				'cpt_knowledge_has_archive'					  => false,
+				'cpt_knowledge_has_tax'					  => false,
+				'cpt_team_has_archive'					  => false,
+				'cpt_team_has_tax'					  	  => false,
 			);
 
 			return apply_filters( 'SKDD_setting_default_values', $args );
