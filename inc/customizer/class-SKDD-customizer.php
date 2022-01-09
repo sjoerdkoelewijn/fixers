@@ -75,6 +75,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				// COLOR.
 				'theme_color'                             => '#1346af',
 				'secondary_theme_color'                   => '#FFE45E',
+				'tertiary_theme_color'                    => '#FFE45E',
 				'primary_menu_color'                      => '#2b2b2b',
 				'primary_sub_menu_color'                  => '#2b2b2b',
 				'submenu_background_color'                => '#2b2b2b',
@@ -170,6 +171,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'button_hover_background_color'           => '#3a3a3a',
 				'buttons_border_radius'                   => 50,
 				// BLOG.
+				'blog_section_enabled'                    => false,
 				'blog_list_layout'                        => 'list',
 				'blog_list_limit_exerpt'                  => 20,
 				'blog_list_structure'                     => array( 'image', 'title-meta', 'post-meta' ),

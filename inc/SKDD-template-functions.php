@@ -1650,9 +1650,7 @@ if ( ! function_exists( 'SKDD_topbar' ) ) {
 		$options = SKDD_options( false );
 		$display = $options['topbar_display'];
 		
-		if ( $options['topbar_close_btn'] ) { 
-			$topbar_close_btn = ' topbar_close_btn';
-		} 
+		
 
 		if ( ! $display ) {
 			return;
