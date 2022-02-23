@@ -29,8 +29,10 @@ if ( ! function_exists( 'SKDD_version' ) ) {
 
 if ( ! function_exists( 'SKDD_get_current_git_commit' ) ) {
 
+	$hash = file_get_contents( sprintf( get_stylesheet_directory() . '/.git/refs/heads/%s', $branch ) )
+
 	function SKDD_get_current_git_commit( $branch='main' ) {
-		if ( $hash = file_get_contents( sprintf( get_stylesheet_directory() . '/.git/refs/heads/%s', $branch ) ) ) {
+		if ( isset($hash) ) {
 			return trim($hash);
 		  } else {
 			return false;
