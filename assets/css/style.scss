@@ -1630,30 +1630,6 @@ form {
 
 }
 
-/*************************** Content Styles ****************************************************************************/
-
-.site_content {
-  max-width:var(--content-width);
-  margin:0 auto;
- 
-  @include uhd {
-    max-width:calc(var(--content-width) * 1.2);
-  }
-
-  @include phone {
-    max-width:94vw !important;
-    margin: 0 auto !important;
-  }
- 
-}
-
-.loop-post-inner {
-  padding:0;
-}
-
-.wp-block-social-links.alignright .wp-social-link {
-  margin: 4px 0 4px 8px !important;  
-}
 
 
 /*************************** Testimonial ****************************************************************************/
@@ -1770,33 +1746,6 @@ form {
   
 }
 
-.alignfull {
-    width:100vw !important;
-    
-    
-    @include uhd {
-      //margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
-    }
-
-    @include phone {
-      margin-left:-3vw !important;
-    }
-
-    video.wp-block-cover__video-background, img.wp-block-cover__image-background {
-      width:100%;
-      max-width:100vw;
-    }
-
-}
-
-.alignfull {
-  .alignfull {
-    @include uhd {
-      // margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
-    }
-  }
-}
-
 
 .wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color]) {
   
@@ -1909,7 +1858,153 @@ form {
 
 }
 
+/*************************** Content Styles ****************************************************************************/
 
+.site_content {
+  max-width:var(--content-width);
+  margin:0 auto;
+ 
+  @include uhd {
+    max-width:calc(var(--content-width) * 1.2);
+  }
+
+  @include phone {
+    //max-width:calc(100vw - var(--content-spacing-mobile)) !important;
+    padding:0 var(--content-spacing-mobile);
+    margin:0 !important;
+
+    //max-width:94vw !important;
+    //margin: 0 auto !important;
+  }
+ 
+}
+
+.loop-post-inner {
+  padding:0;
+}
+
+.wp-block-social-links.alignright .wp-social-link {
+  margin: 4px 0 4px 8px !important;  
+}
+
+
+.alignfull {
+  width:100vw !important;
+  
+  
+  @include uhd {
+    //margin-left:calc( ((100vw - (var(--content-width) * 1.2)) / 2) * -1 );
+  }
+
+  @include phone {
+    //margin-left:-3vw !important;   
+    margin-left:calc(var(--content-spacing-mobile) * -1) !important;
+  }
+
+  video.wp-block-cover__video-background, img.wp-block-cover__image-background {
+    width:100%;
+    max-width:100vw;
+  }
+
+}
+
+.alignfull {
+.alignfull {
+  @include uhd {
+    // margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+  }
+}
+}
+
+/*************************** Ghostkit Grid ****************************************************************************/
+
+.ghostkit-col-with-bg {
+  padding:var(--content-spacing);
+
+  .nk-awb-overlay {
+    border-radius: var(--border-radius);
+
+    @include phone {
+      border-radius: 0;
+    }
+
+  }
+  
+  @include tablet {
+    padding:var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
+  }
+
+  @include phone {
+    padding:var(--content-spacing-mobile) calc(var(--content-spacing-mobile) / 2);
+  }
+
+}
+
+@include phone {
+
+  .ghostkit-col {
+    --gkt-grid__gap:0px;
+    padding-top:var(--content-spacing-mobile);   
+    padding-bottom:var(--content-spacing-mobile);
+  } 
+
+  .ghostkit-grid-inner {
+    width:100%;
+    margin-left:0;
+    display:block;    
+  } 
+  
+  .ghostkit-col-with-bg {
+    margin-left:calc(var(--content-spacing-mobile) * -1);
+    width:100vw;
+    max-width:100vw;
+    padding-top:var(--vertical-spacing);
+
+    .ghostkit-col-content {
+      width:100%;
+      padding:0;
+    }
+
+    &:last-of-type {
+      padding-bottom:var(--vertical-spacing);
+    } 
+       
+  }
+
+  .alignfull.ghostkit-grid-with-bg {
+    .ghostkit-col-content {
+      padding:0 var(--content-spacing-mobile);
+    }
+  }
+
+  .has-background {
+
+    .ghostkit-col-with-bg {
+      //width:95vw;
+      margin-bottom:3vw;
+    }
+
+  }
+  
+}
+
+.ghostkit-grid-gap-sm {
+  --gkt-grid__gap: 20px; 
+}
+
+.ghostkit-grid-gap-md {
+  --gkt-grid__gap: 50px;
+}
+
+.ghostkit-grid-gap-lg {
+  --gkt-grid__gap: 100px;
+}
+
+@include phone {
+  .ghostkit-grid-gap-sm, .ghostkit-grid-gap-md, .ghostkit-grid-gap-lg {
+    --gkt-grid__gap: 0;
+  }  
+}
 
 /*************************** Padding from screen edge on smaller screens **********************************/
 
@@ -1964,10 +2059,21 @@ form {
 
   .wp-block-group.has-background {
     padding:var(--vertical-spacing) var(--content-spacing-mobile);
-    margin-left:-3vw;
+    //margin-left:-3vw;
     width:100vw;
     border-radius:0;
     margin-bottom:var(--vertical-spacing);
+
+    @include phone {
+
+      .wp-block-group.has-background, .wp-block-group.has-background.alignfull {
+        //width:calc(100vw - var(--content-spacing-mobile)) !important;
+        //margin-left:calc((var(--content-spacing-mobile) / 2) * -1) !important;
+        width:100vw !important;
+        margin-left:calc(var(--content-spacing-mobile) * -1) !important;
+      }
+    }
+    
   }
 
   .wp-block-cover {
@@ -4635,95 +4741,7 @@ form.woocommerce-checkout {
   
 }
 
-/*************************** Ghostkit Grid ****************************************************************************/
 
-.ghostkit-col-with-bg {
-  padding:var(--content-spacing);
-
-  .nk-awb-overlay {
-    border-radius: var(--border-radius);
-
-    @include phone {
-      border-radius: 0;
-    }
-
-  }
-  
-  @include tablet {
-    padding:var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
-  }
-
-  @include phone {
-    padding:var(--content-spacing-mobile) calc(var(--content-spacing-mobile) / 2);
-  }
-
-}
-
-@include phone {
-
-  .ghostkit-col {
-    --gkt-grid__gap:0px;
-    padding-top:var(--content-spacing-mobile);   
-    padding-bottom:var(--content-spacing-mobile);
-  } 
-
-  .ghostkit-grid-inner {
-    width:100%;
-    margin-left:0;
-    display:block;    
-  } 
-  
-  .ghostkit-col-with-bg {
-    margin-left:-2.6vw;
-    width:100vw;
-    max-width:100vw;
-    padding-top:var(--vertical-spacing);
-
-    .ghostkit-col-content {
-      width:100%;
-      padding:0 5%;
-    }
-
-    &:last-of-type {
-      padding-bottom:var(--vertical-spacing);
-    } 
-       
-  }
-
-  .alignfull.ghostkit-grid-with-bg {
-    .ghostkit-col-content {
-      padding:0 3vw;
-    }
-  }
-
-  .has-background {
-
-    .ghostkit-col-with-bg {
-      width:95vw;
-      margin-bottom:3vw;
-    }
-
-  }
-  
-}
-
-.ghostkit-grid-gap-sm {
-  --gkt-grid__gap: 20px; 
-}
-
-.ghostkit-grid-gap-md {
-  --gkt-grid__gap: 50px;
-}
-
-.ghostkit-grid-gap-lg {
-  --gkt-grid__gap: 100px;
-}
-
-@include phone {
-  .ghostkit-grid-gap-sm, .ghostkit-grid-gap-md, .ghostkit-grid-gap-lg {
-    --gkt-grid__gap: 0;
-  }  
-}
 
 /*************************** Ghostkit Counter ****************************************************************************/
 
