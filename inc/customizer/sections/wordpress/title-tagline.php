@@ -119,21 +119,21 @@ $wp_customize->add_control(
 			'choices' => array(
 				'desktop' => array(
 					'min'  => apply_filters( 'SKDD_logo_desktop_width_min_step', 50 ),
-					'max'  => apply_filters( 'SKDD_logo_desktop_width_max_step', 500 ),
+					'max'  => apply_filters( 'SKDD_logo_desktop_width_max_step', 1200 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
 				),
 				'tablet' => array(
 					'min'  => apply_filters( 'SKDD_logo_tablet_width_min_step', 50 ),
-					'max'  => apply_filters( 'SKDD_logo_tablet_width_max_step', 500 ),
+					'max'  => apply_filters( 'SKDD_logo_tablet_width_max_step', 800 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',
 				),
 				'mobile' => array(
 					'min'  => apply_filters( 'SKDD_logo_mobile_width_min_step', 50 ),
-					'max'  => apply_filters( 'SKDD_logo_mobile_width_max_step', 500 ),
+					'max'  => apply_filters( 'SKDD_logo_mobile_width_max_step', 320 ),
 					'step' => 1,
 					'edit' => true,
 					'unit' => 'px',

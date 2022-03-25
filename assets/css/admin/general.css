@@ -360,11 +360,11 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
 /* ************ Widget Blocks ******************************* */
 
 .wp-block[data-type="core/widget-area"] {
-  max-width:1200px;
+  max-width:98%;
 }
 
 .blocks-widgets-container .editor-styles-wrapper {
-  max-width:1200px;
+  max-width:98%;
 }
 
 

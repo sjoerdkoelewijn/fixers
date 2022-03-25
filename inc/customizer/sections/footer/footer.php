@@ -62,39 +62,6 @@ $wp_customize->add_control(
 	)
 );
 
-// Footer widget columns.
-$wp_customize->add_setting(
-	'SKDD_setting[footer_column]',
-	array(
-		'default'           => $defaults['footer_column'],
-		'type'              => 'option',
-		'sanitize_callback' => 'SKDD_sanitize_choices',
-	)
-);
-$wp_customize->add_control(
-	new WP_Customize_Control(
-		$wp_customize,
-		'SKDD_setting[footer_column]',
-		array(
-			'label'    => __( 'Widget Columns', 'SKDD' ),
-			'settings' => 'SKDD_setting[footer_column]',
-			'section'  => 'SKDD_footer',
-			'type'     => 'select',
-			'choices'  => apply_filters(
-				'SKDD_setting_footer_column_choices',
-				array(
-					0 => 0,
-					1 => 1,
-					2 => 2,
-					3 => 3,
-					4 => 4,
-					5 => 5,
-				)
-			),
-		)
-	)
-);
-
 // Footer text divider.
 $wp_customize->add_setting(
 	'footer_text_divider',
@@ -136,32 +103,3 @@ $wp_customize->add_control(
 	)
 );
 
-// Topbar layout.
-$wp_customize->add_setting(
-	'SKDD_setting[footer_layout]',
-	array(
-		'default'           => $defaults['footer_layout'],
-		'sanitize_callback' => 'SKDD_sanitize_choices',
-		'type'              => 'option',
-	)
-);
-$wp_customize->add_control(
-	new SKDD_Radio_Image_Control(
-		$wp_customize,
-		'SKDD_setting[footer_layout]',
-		array(
-			'label'    => __( 'Topbar Layout', 'SKDD' ),
-			'section'  => 'SKDD_footer',
-			'settings' => 'SKDD_setting[footer_layout]',
-			'choices'  => apply_filters(
-				'SKDD_setting_footer_layout_choices',
-				array(
-					'flex-start' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexstart.jpg',
-					'flex-end' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexend.jpg',
-					'center' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexcenter.jpg',
-					'space-between' => SKDD_THEME_URI . 'assets/images/customizer/header/skdd-topbar-flexspacebetween.jpg',
-				)
-			),
-		)
-	)
-);

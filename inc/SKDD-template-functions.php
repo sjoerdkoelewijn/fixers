@@ -209,69 +209,13 @@ if ( ! function_exists( 'SKDD_footer_widgets' ) ) {
 	function SKDD_footer_widgets() {
 
 		// Default values.
-		$option        = SKDD_options( false );
-		$footer_column = (int) $option['footer_column'];
-
-		if ( 0 === $footer_column ) {
-			return;
-		}
+		$option        = SKDD_options( false );	
 
 		if ( is_active_sidebar( 'footer' ) ) {
-			?>
-			<div class="site-footer-widget footer-widget-col-<?php echo esc_attr( $footer_column ); ?>">
-				<?php dynamic_sidebar( 'footer' ); ?>
-			</div>
-			<?php
-		} elseif ( is_user_logged_in() ) {
-			?>
-			<div class="site-footer-widget footer-widget-col-<?php echo esc_attr( $footer_column ); ?>">
-				<div class="widget widget_text default-widget">
-					<h6 class="widgettitle"><?php esc_html_e( 'Footer Widget', 'SKDD' ); ?></h6>
-					<div class="textwidget">
-						<p>
-							<?php
-							printf(
-								/* translators: 1: admin URL */
-								__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging widgets into this widget area.', 'SKDD' ), // phpcs:ignore
-								esc_url( admin_url( 'widgets.php' ) )
-							);
-							?>
-						</p>
-					</div>
-				</div>
+				
+				dynamic_sidebar( 'footer' ); 
 
-				<div class="widget widget_text default-widget">
-					<h6 class="widgettitle"><?php esc_html_e( 'Footer Widget', 'SKDD' ); ?></h6>
-					<div class="textwidget">
-						<p>
-							<?php
-							printf(
-								/* translators: 1: admin URL */
-								__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging widgets into this widget area.', 'SKDD' ), // phpcs:ignore
-								esc_url( admin_url( 'widgets.php' ) )
-							);
-							?>
-						</p>
-					</div>
-				</div>
-
-				<div class="widget widget_text default-widget">
-					<h6 class="widgettitle"><?php esc_html_e( 'Footer Widget', 'SKDD' ); ?></h6>
-					<div class="textwidget">
-						<p>
-							<?php
-							printf(
-								/* translators: 1: admin URL */
-								__( 'Replace this widget content by going to <a href="%1$s"><strong>Appearance / Widgets / Footer Widget</strong></a> and dragging widgets into this widget area.', 'SKDD' ), // phpcs:ignore
-								esc_url( admin_url( 'widgets.php' ) )
-							);
-							?>
-						</p>
-					</div>
-				</div>
-			</div>
-			<?php
-		}
+		} 
 	}
 }
 

@@ -472,7 +472,6 @@
 			'SKDD_setting[footer_display]',
 			[
 				'SKDD_setting[footer_space]',
-				'SKDD_setting[footer_column]',
 				'SKDD_setting[footer_background_color]',
 				'SKDD_setting[footer_heading_color]',
 				'SKDD_setting[footer_link_color]',

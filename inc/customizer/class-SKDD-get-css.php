@@ -215,7 +215,7 @@ class SKDD_Get_CSS {
 					margin:0 auto;
 				}
 				.alignfull {
-					margin-left:calc( ((100vw - var(--content-width)) / 2) * -1 );
+					margin-left:calc( ((100vw - ' . esc_attr( $options['container_width'] ) . ') / 2) * -1 );
 				}	
 			
 			}		
