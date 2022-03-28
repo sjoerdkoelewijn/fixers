@@ -58,7 +58,7 @@ if ( ! function_exists( 'SKDD_post_related' ) ) {
 		$args = array(
 			'post_type'           => 'post',
 			'post__not_in'        => array( $id ),
-			'posts_per_page'      => 3,
+			'posts_per_page'      => 6,
 			'post_status'         => 'publish',
 			'ignore_sticky_posts' => 1,
 		);
@@ -67,28 +67,61 @@ if ( ! function_exists( 'SKDD_post_related' ) ) {
 
 		if ( $query->have_posts() ) :
 			?>
-			<div class="related-box">
-				<div class="row">
-					<h3 class="related-title"><?php esc_html_e( 'Related Posts', 'SKDD' ); ?></h3>
+
+			
+			<h6 class="related_posts_header">
+				<?php esc_html_e( 'Related Posts', 'SKDD' ); ?>
+			</h6>
+
+			<div class="related_posts">
+					
 					<?php
 					while ( $query->have_posts() ) :
 						$query->the_post();
 
 						$post_id = get_the_ID();
 						?>
-						<div class="related-post col-md-4">
+						<div class="related_post">
 							<?php if ( has_post_thumbnail() ) { ?>
-								<a href="<?php echo esc_url( get_permalink() ); ?>" class="entry-header">
+								<a href="<?php echo esc_url( get_permalink() ); ?>" class="post-cover-image">
 									<?php the_post_thumbnail( 'medium' ); ?>
 								</a>
 							<?php } ?>
 
-							<div class="posted-on"><?php echo get_the_date(); ?></div>
-							<h2 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h2>
-							<a class="post-read-more" href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'Read more', 'SKDD' ); ?></a>
+							<div class="inner_wrap">
+
+							<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+
+							<div class="entry-summary summary-text">
+
+								<?php 
+									
+									$options = SKDD_options( false );
+
+									$excerpt_length = $options['blog_list_limit_exerpt'];
+
+									$custom_excerpt = get_the_content();
+
+									$custom_excerpt = substr( $custom_excerpt, strpos( $custom_excerpt, '<p>' ), (strpos( $custom_excerpt, '</p>' ) + 4) );
+
+									$custom_excerpt = wp_trim_words( strip_tags( $custom_excerpt ), $excerpt_length );
+
+									echo $custom_excerpt; 
+
+								?>
+									
+							</div>
+
+							<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">
+								<?php esc_html_e( 'Read more', 'SKDD' ); ?>							
+							</a>
+
+							</div>
+
+
 						</div>
 					<?php endwhile; ?>
-				</div>
+				
 			</div>
 			<?php
 			wp_reset_postdata();

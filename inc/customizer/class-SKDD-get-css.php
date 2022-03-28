@@ -198,6 +198,9 @@ class SKDD_Get_CSS {
 				.alignfull {
 					margin-left:calc(var(--content-spacing) * -0.5);
 				}
+				.alignfull .alignfull  {
+					margin-left:calc(var(--content-spacing) * -1);
+				}
 				.site_content, .page-header .content-align-left {
 					max-width:var(--content-width);
 					margin:0 calc(var(--content-spacing) / 2);

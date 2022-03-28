@@ -3908,9 +3908,7 @@ form.woocommerce-checkout {
   .blog-layout-grid .site-main .post + .post {
     margin-top: 0;
   }
-  
-
-  
+    
   .blog-layout-grid .site-main .summary-text {
     padding: 0 20px 20px 20px;
   }
@@ -3921,7 +3919,49 @@ form.woocommerce-checkout {
     margin-top: 0;
   }
   
+.related_posts_header {
+  text-align: center;
+  margin:var(--vertical-spacing) auto;
+  padding-top:var(--vertical-spacing);
+}
 
+.related_posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+    .related_post {
+      
+      background-color: var(--offset-color);
+      text-align: left;
+      border-radius:var(--border-radius);
+          
+      .post-cover-image img {
+        border-radius:var(--border-radius) var(--border-radius) 0 0;
+      }
+
+      .inner_wrap {        
+        padding: 20px;
+
+        .entry-title {
+          font-size:var(--header-size-5);        
+        }
+
+        .entry-summary {
+          margin-bottom:var(--content-spacing);
+        }
+  
+        .button {
+          padding:10px 20px;
+          
+        }
+
+      }      
+
+    }
+}
 
 .single {
   .entry-meta {
