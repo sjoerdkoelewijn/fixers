@@ -84,7 +84,7 @@ if ( ! function_exists( 'SKDD_post_related' ) ) {
 						<div class="related_post">
 							<?php if ( has_post_thumbnail() ) { ?>
 								<a href="<?php echo esc_url( get_permalink() ); ?>" class="post-cover-image">
-									<?php the_post_thumbnail( 'medium' ); ?>
+									<?php the_post_thumbnail( 'large' ); ?>
 								</a>
 							<?php } ?>
 
