@@ -4493,6 +4493,11 @@ form.woocommerce-checkout {
 }
 
 
+#cmplz-document {
+  li, p, td {
+    font-size:var(--body-font-size);
+  }
+}
 
 /*************************** ghostkit carousel slider ****************************************************************************/
 
@@ -4663,8 +4668,8 @@ form.woocommerce-checkout {
     --gkt-accordion--heading-collapse-icon__font-size:25px;
 
     @include phone {
-      --gkt-accordion--heading__padding-v:0;
-      --gkt-accordion--content__padding-v:0;
+      --gkt-accordion--heading__padding-h:0;
+      --gkt-accordion--content__padding-h:0;
     }
 
     margin-bottom:10px;
