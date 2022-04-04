@@ -2078,7 +2078,7 @@ form {
 
   @include phone {
     .wp-block-group.has-background {
-      margin-left:calc(var(--content-spacing-mobile) * -1);
+      //margin-left:calc(var(--content-spacing-mobile) * -1);
     }
   }
 
