@@ -36,6 +36,19 @@ add_filter( 'custom_menu_order', 'SKDD_custom_menu_order', 10, 1 );
 add_filter( 'menu_order', 'SKDD_custom_menu_order', 10, 1 );
 
 
+function get_customizer_link() {
+    $link = add_query_arg(
+        array(
+            'url'             => urlencode( site_url( '/?mailtpl_display=true' ) ),
+            'return'          => urlencode( admin_url() ),
+            'mailtpl_display' => 'true'
+        ),
+        'customize.php'
+    );
+
+    return $link;
+}
+
 function SKDD_move_admin_menu_items()
 {
     // Remove existing parent menu.
@@ -96,6 +109,19 @@ function SKDD_move_admin_menu_items()
             __( 'Search & Replace', 'SKDD' ), //$menu_title
             'activate_plugins', //$capability
             'tools.php?page=better-search-replace' //$menu_slug
+        );
+
+    }
+
+    if ( class_exists( 'Mailtpl_Mailer' ) ) {
+
+        add_submenu_page(
+            'options-general.php', //$parent_slug
+            __( 'Email Template Options', 'SKDD' ), //$page_title
+            __( 'Email Template', 'SKDD' ), //$menu_title
+            'edit_theme_options', //$capability
+            get_customizer_link()
+            
         );
 
     }
