@@ -14,4 +14,5 @@
 	<body <?php body_class(); ?>>
 		<?php
 			wp_body_open();
+			do_action( 'SKDD_GTM' );
 			do_action( 'SKDD_theme_header' );
