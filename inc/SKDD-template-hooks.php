@@ -25,7 +25,6 @@ add_action( 'wp_enqueue_scripts', 'SKDD_dequeue_scripts_and_styles' );
 /**
  * Header
  */
-add_action( 'SKDD_GTM', 'SKDD_GTM_NoJsCode' );
 add_action( 'SKDD_theme_header', 'SKDD_template_header' );
 add_action( 'SKDD_theme_header', 'SKDD_after_header', 100 );
 

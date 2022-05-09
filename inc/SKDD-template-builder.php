@@ -7,17 +7,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'SKDD_GTM_NoJsCode' ) ) {
-	/**
-	 * Header template
-	 */
-	function SKDD_GTM_NoJsCode() {
-		if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { 
-			gtm4wp_the_gtm_tag(); 
-		} 
-	}
-}
-
 if ( ! function_exists( 'SKDD_template_header' ) ) {
 	/**
 	 * Header template
