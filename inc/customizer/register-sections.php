@@ -140,3 +140,12 @@ $wp_customize->add_section(
 		'panel' => 'woocommerce',
 	)
 );
+
+// Custom Code in the HEAD section.
+$wp_customize->add_section(
+	'SKDD_head_code',
+	array(
+		'title'    => __( 'Head section', 'SKDD' ),
+		'priority' => 40,
+	)
+);

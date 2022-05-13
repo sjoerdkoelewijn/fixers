@@ -20,7 +20,7 @@ $wp_customize->add_control(
 		array(
 			'label'    => __( 'Add custom meta tags to the head section', 'SKDD' ),
 			'type'     => 'textarea',
-			'section'  => 'SKDD_header',
+			'section'  => 'SKDD_head_code',
 			'settings' => 'SKDD_setting[custom_meta_tags]',
 		)
 	)
