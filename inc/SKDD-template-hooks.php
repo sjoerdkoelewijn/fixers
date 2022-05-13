@@ -17,7 +17,9 @@ add_action( 'wp_head', 'SKDD_meta_charset', 0 );
 add_action( 'wp_head', 'SKDD_meta_viewport', 220 );
 add_action( 'wp_head', 'SKDD_rel_profile', 230 );
 add_action( 'wp_head', 'SKDD_facebook_social', 240 );
-add_action( 'wp_head', 'SKDD_pingback', 250 );
+add_action( 'wp_head', 'SKDD_custom_meta_tags', 250 );
+add_action( 'wp_head', 'SKDD_pingback', 260 );
+
 
 // Performance.
 add_action( 'wp_enqueue_scripts', 'SKDD_dequeue_scripts_and_styles' );

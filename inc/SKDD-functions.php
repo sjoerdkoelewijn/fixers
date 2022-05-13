@@ -609,6 +609,17 @@ if ( ! function_exists( 'SKDD_facebook_social' ) ) {
 	}
 }
 
+if ( ! function_exists( 'SKDD_custom_meta_tags' ) ) {
+
+	function SKDD_custom_meta_tags() {
+		$options = SKDD_options( false );
+		$meta_tags   = $options['custom_meta_tags'];
+
+		echo $meta_tags;
+
+	}
+}
+
 if ( ! function_exists( 'SKDD_array_insert' ) ) {
 	/**
 	 * Insert an array into another array before/after a certain key
