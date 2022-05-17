@@ -7477,10 +7477,6 @@ form.woocommerce-checkout {
   margin-top: 30px;
 }
 
-.site-main .post + .post {
-  margin-top: 80px;
-}
-
 .post .post-cover-image, .portfolio .post-cover-image, .service .post-cover-image, .team .post-cover-image, .knowledge .post-cover-image, .page .post-cover-image {
   margin-bottom: 35px;
 }
