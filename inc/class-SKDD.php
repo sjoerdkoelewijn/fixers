@@ -489,7 +489,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'skdd-style',
 				SKDD_THEME_URI . 'assets/css/style.css',
 				array(),
-				SKDD_version()
+				SKDD_version()				
 			);
 
 			if ( is_rtl() ) {

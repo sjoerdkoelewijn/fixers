@@ -33,6 +33,8 @@ if ( ! function_exists( 'SKDD_get_current_git_commit' ) ) {
 
 		if (file_exists(get_stylesheet_directory() . '/.git/refs/heads/main' ) ) {
 			$hash = file_get_contents( sprintf( get_stylesheet_directory() . '/.git/refs/heads/%s', $branch ) );
+		} else {
+			return 'no-git-version'; 
 		}	
 
 		if ( isset($hash) ) {
