@@ -289,7 +289,7 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
 .ghostkit-carousel>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block {
  
   min-width: calc(33% - 10px);
-  max-width: calc(33% - 10px);
+  max-width: calc(50% - 10px);
  
 }
 
@@ -567,7 +567,7 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
 .editor-styles-wrapper h2.has-skdd-heading-5-font-size,
 .editor-styles-wrapper h3.has-skdd-heading-5-font-size,
 .editor-styles-wrapper h4.has-skdd-heading-5-font-size,
-.editor-styles-wrapper h6.has-skdd-heading-5-font-size, {
+.editor-styles-wrapper h6.has-skdd-heading-5-font-size {
   font-size:var(--header-size-5) !important;
 }
 
@@ -575,7 +575,7 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
 .editor-styles-wrapper h2.has-skdd-heading-6-font-size,
 .editor-styles-wrapper h3.has-skdd-heading-6-font-size,
 .editor-styles-wrapper h4.has-skdd-heading-6-font-size,
-.editor-styles-wrapper h5.has-skdd-heading-6-font-size, {
+.editor-styles-wrapper h5.has-skdd-heading-6-font-size {
   font-size:var(--header-size-6) !important;
 }
 

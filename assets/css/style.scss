@@ -3869,7 +3869,7 @@ form.woocommerce-checkout {
 
 }
 
-.blog-layout-grid .site-main {
+.blog-layout-grid .site-main  {
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -3911,7 +3911,7 @@ form.woocommerce-checkout {
   }
 
     
-  .blog-layout-grid .site-main .post + .post {
+  .blog-layout-grid .site-main .post + .post, .is-flex-container .site-main .post + .post {
     margin-top: 0;
   }
     
