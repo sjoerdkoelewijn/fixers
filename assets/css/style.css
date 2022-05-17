@@ -4645,7 +4645,6 @@ button, form button, .button, .forminator-button, .ghostkit-button, .wp-block-bu
   padding: 0 40px;
   text-decoration: none;
   cursor: pointer;
-  border: 0;
   font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
   letter-spacing: var(--button-letter-spacing);

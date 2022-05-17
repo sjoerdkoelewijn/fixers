@@ -262,7 +262,7 @@ class SKDD_Get_CSS {
 			.scrolling-up .site_header {
 				position: fixed;
     			top:0;
-				transition:.3s ease-out; 
+				transition:.5s ease-out; 
     			max-width:var(--header-width); 
 				transform: translateY(0%);			
 			}
@@ -271,15 +271,13 @@ class SKDD_Get_CSS {
 			.scrolling-down .site_header {
 				position: fixed;
     			top:0;
-				transition:.3s ease-out; 
+				transition:.2s ease-out; 
 				max-width: var(--header-width);
 				overflow:hidden;
 				transform: translateY(-100%);			
 			  }
 
-			.scrolling-down .site_content, .scrolling-up .site_content {
-				margin-top:var(--header-max-height);
-			}
+			
 			
 			';			
 		}	
