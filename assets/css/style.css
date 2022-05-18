@@ -4422,10 +4422,6 @@ a svg path {
   fill: var(--text-color);
 }
 
-footer svg path {
-  fill: currentColor;
-}
-
 .content-area p a {
   font-weight: bold;
   text-decoration: underline;
