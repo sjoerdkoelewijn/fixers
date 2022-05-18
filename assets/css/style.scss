@@ -4347,21 +4347,13 @@ form.woocommerce-checkout {
       margin-bottom: 20px;
 
       a {
-        font-size: var(--header-size-5); 
         font-family: var(--heading-font-family);
         font-weight: var(--heading-font-weight);
-        color:var(--footer-heading-color);        
       }
 
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    color:var(--footer-heading-color);
-    font-size:var(--header-size-5);
-    font-weight:var(--heading-font-weight);
-    font-family: var(--heading-font-family);
-  }
 
   .site-footer-widget {
     //width:var(--content-width);
@@ -4369,23 +4361,9 @@ form.woocommerce-checkout {
     margin:0 auto;
     padding:70px var(--content-spacing);
 
-    .footer-widget {
-
-      p {
-        font-size:90%;
-      }  
-    
-    }
-
-
-    @include uhd {
-      //width:calc(var(--content-width) * 1.2);
-    }
-
     @include phone {
       flex-direction: column;
       padding:70px var(--content-spacing-mobile);
-      //text-align:center;
 
     }
   }
@@ -4398,22 +4376,6 @@ form.woocommerce-checkout {
   background-color:var(--footer-background-color);
   color: var(--footer-text-color);
 }
-
-.site-footer .widget-title,
-.skdd-footer-social-icon a{
-  color: var(--footer-heading-color);
-}
-
-.skdd-footer-social-icon a:hover{
-  background-color: var(--footer-heading-color);
-}
-
-.skdd-footer-social-icon a {
-  border-color: var(--footer-heading-color);
-}
-
-
-
 
 
 .site-info {
