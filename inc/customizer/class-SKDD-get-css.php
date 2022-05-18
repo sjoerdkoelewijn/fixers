@@ -732,7 +732,7 @@ class SKDD_Get_CSS {
 				}			
 				
 				.block-editor-writing-flow h1 {
-					font-size:2rem;
+					font-size:2.5rem !important;
 					font-weight:var(--heading-font-weight);
 				}
 				
