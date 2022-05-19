@@ -7709,6 +7709,37 @@ form.woocommerce-checkout {
   margin: 0;
 }
 
+/*************************** Knowledge base shortcode ****************************************************************************/
+.shortcode.latest_posts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.shortcode.latest_posts .post {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  background-color: var(--offset-color);
+  text-align: left;
+  border-radius: var(--border-radius);
+  margin-right: 20px;
+}
+.shortcode.latest_posts .post .post-cover-image img {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.shortcode.latest_posts .post .text {
+  padding: 0 30px 30px 30px;
+}
+.shortcode.latest_posts .post .text .entry-title {
+  padding: calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
+  font-size: var(--header-size-4);
+}
+.shortcode.latest_posts .post .text .summary-text {
+  padding: 0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
+}
+
 /*************************** Footer ****************************************************************************/
 .site-footer {
   margin-top: var(--footer-space);
