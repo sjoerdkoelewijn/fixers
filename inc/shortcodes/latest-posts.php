@@ -37,13 +37,13 @@ function SKDD_latestposts_shortcode( $atts ) {
 
                         <div class="post">
 
-                            <a class="image_link_wrap" title="<?php echo get_the_title(); ?>" href="<?php echo the_permalink(); ?>">
+                            <a aria-label="<?php echo get_the_title(); ?>" class="image_link_wrap" title="<?php echo get_the_title(); ?>" href="<?php echo the_permalink(); ?>">
 
                                 <?php if ( has_post_thumbnail() ) { ?>
 
-                                    <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>
+                                    <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>
                                     <div class="post-cover-image">
-                                        <img src="<?php echo $image ?>" />
+                                        <img alt="<?php echo get_the_title(); ?>" src="<?php echo $image ?>" />
                                     </div>
 
                                 <?php } else {?>
