@@ -731,7 +731,7 @@ class SKDD_Get_CSS {
 					font-weight:var(--heading-font-weight);
 				}			
 				
-				.block-editor-writing-flow h1 {
+				.block-editor-writing-flow .editor-post-title {
 					font-size:2.5rem !important;
 					font-weight:var(--heading-font-weight);
 				}
