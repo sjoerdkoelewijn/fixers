@@ -7739,6 +7739,16 @@ form.woocommerce-checkout {
 .shortcode.latest_posts .post .text .summary-text {
   padding: 0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
 }
+@media (min-width: 480px) and (max-width: 1024px) {
+  .shortcode.latest_posts .post {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .shortcode.latest_posts .post {
+    flex-basis: 100%;
+  }
+}
 
 /*************************** Footer ****************************************************************************/
 .site-footer {

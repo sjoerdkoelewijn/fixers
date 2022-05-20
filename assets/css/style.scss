@@ -4345,6 +4345,14 @@ form.woocommerce-checkout {
       }      
 
     }
+
+    @include tablet {
+      flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @include phone {
+      flex-basis: 100%;
+    }
     
 
   }  
