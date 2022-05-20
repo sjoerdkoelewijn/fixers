@@ -388,7 +388,7 @@ body[class*="skdd-welcome"] #wpcontent, body[class*="skdd-options_page"] #wpcont
 
 .editor-post-title__block .editor-post-title__input, .wp-block-heading, .editor-rich-text__tinymce {
   font-weight: 400;
-  font-size:1.2em;
+  font-size:var(--header-size-1);
 }
 
 

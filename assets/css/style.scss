@@ -1832,7 +1832,11 @@ form {
       padding:var(--content-spacing) calc(var(--content-spacing) * 1.5);
 
       @include tablet {
-        padding:var(--content-spacing);
+        padding:var(--content-spacing-tablet);
+      }
+
+      @include phone {
+        padding:var(--content-spacing-mobile);
       }
   }
 
@@ -4303,7 +4307,7 @@ form.woocommerce-checkout {
   }   
 
 
-/*************************** Knowledge base shortcode ****************************************************************************/
+/*************************** Latest posts shortcode ****************************************************************************/
 
 
 .shortcode.latest_posts {
@@ -4346,11 +4350,11 @@ form.woocommerce-checkout {
 
     }
 
-    @include tablet {
+    @include small-desktop {
       flex-basis: calc((100% - 60px) / 2);
     }
-
-    @include phone {
+    
+    @include tablet-down {
       flex-basis: 100%;
     }
     

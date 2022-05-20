@@ -5678,7 +5678,12 @@ form input:focus, form textarea:focus {
 }
 @media (min-width: 480px) and (max-width: 1024px) {
   .wp-block-media-text .wp-block-media-text__content, .wp-block-media-text.has-media-on-the-right.has-background .wp-block-media-text__content {
-    padding: var(--content-spacing);
+    padding: var(--content-spacing-tablet);
+  }
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .wp-block-media-text .wp-block-media-text__content, .wp-block-media-text.has-media-on-the-right.has-background .wp-block-media-text__content {
+    padding: var(--content-spacing-mobile);
   }
 }
 
@@ -7709,7 +7714,7 @@ form.woocommerce-checkout {
   margin: 0;
 }
 
-/*************************** Knowledge base shortcode ****************************************************************************/
+/*************************** Latest posts shortcode ****************************************************************************/
 .shortcode.latest_posts {
   display: flex;
   justify-content: flex-start;
@@ -7739,12 +7744,12 @@ form.woocommerce-checkout {
 .shortcode.latest_posts .post .text .summary-text {
   padding: 0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
 }
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .shortcode.latest_posts .post {
     flex-basis: calc((100% - 60px) / 2);
   }
 }
-@media (min-width: 280px) and (max-width: 479px) {
+@media (max-width: 1023px) {
   .shortcode.latest_posts .post {
     flex-basis: 100%;
   }

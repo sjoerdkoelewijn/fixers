@@ -18,6 +18,7 @@
 		 * @hooked SKDD_post_header_close   - 30
 		 * @hooked SKDD_post_content        - 40
 		 */
+		
 		do_action( 'SKDD_loop_post' );
 	?>
 

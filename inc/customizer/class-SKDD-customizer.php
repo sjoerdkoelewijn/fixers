@@ -305,7 +305,9 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'sidebar_button_background_color'		  => '',
 				'sidebar_close_icon_color'				  => '',
 
-				'default_image'                         => '',
+				'default_image'                           => '',
+
+				'custom_meta_tags'                        => '',
 				
 				// 404.
 				'error_404_image'                         => '',
