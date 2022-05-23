@@ -6619,10 +6619,12 @@ form input:focus, form textarea:focus {
   text-align: center;
 }
 .sidebar-menu .primary-navigation a {
-  color: var(--sidebar-text-color);
+  color: var(--sidebar-button-color);
+  background: var(--sidebar-button-background-color, var(--button-background-color));
 }
 .sidebar-menu .primary-navigation a:hover {
-  color: var(--sidebar-text-color);
+  color: var(--sidebar-button-color);
+  background: var(--sidebar-button-background-color, var(--button-background-color));
 }
 
 .has-header-layout-1 .sidebar-menu, .has-header-layout-2 .sidebar-menu {

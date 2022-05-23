@@ -2977,10 +2977,12 @@ transform: translateX(0);
     }
 
     a {
-      color:var(--sidebar-text-color);
+      color:var(--sidebar-button-color);
+      background:var(--sidebar-button-background-color, var(--button-background-color));
   
       &:hover {
-        color:var(--sidebar-text-color);
+        color:var(--sidebar-button-color);
+        background:var(--sidebar-button-background-color, var(--button-background-color)); 
       }
     }
   }
