@@ -6618,13 +6618,15 @@ form input:focus, form textarea:focus {
   margin-top: 20px;
   text-align: center;
 }
-.sidebar-menu .primary-navigation a {
+.sidebar-menu .primary-navigation .menu-item.button a {
   color: var(--sidebar-button-color);
   background: var(--sidebar-button-background-color, var(--button-background-color));
 }
+.sidebar-menu .primary-navigation a {
+  color: var(--sidebar-text-color);
+}
 .sidebar-menu .primary-navigation a:hover {
-  color: var(--sidebar-button-color);
-  background: var(--sidebar-button-background-color, var(--button-background-color));
+  color: var(--sidebar-text-color);
 }
 
 .has-header-layout-1 .sidebar-menu, .has-header-layout-2 .sidebar-menu {
@@ -6633,7 +6635,7 @@ form input:focus, form textarea:focus {
 }
 
 .has-header-layout-3 .sidebar-menu {
-  width: 285px;
+  min-width: 300px;
 }
 @media (min-width: 280px) and (max-width: 479px) {
   .has-header-layout-3 .site-tools {

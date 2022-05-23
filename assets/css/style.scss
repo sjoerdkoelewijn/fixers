@@ -2974,15 +2974,19 @@ transform: translateX(0);
     .menu-item.button{
       margin-top:20px;    
       text-align:center;
+
+      a {
+        color:var(--sidebar-button-color);
+        background:var(--sidebar-button-background-color, var(--button-background-color));
+      }
     }
 
     a {
-      color:var(--sidebar-button-color);
-      background:var(--sidebar-button-background-color, var(--button-background-color));
+      color:var(--sidebar-text-color);
+      
   
       &:hover {
-        color:var(--sidebar-button-color);
-        background:var(--sidebar-button-background-color, var(--button-background-color)); 
+        color:var(--sidebar-text-color);
       }
     }
   }
@@ -3001,7 +3005,7 @@ transform: translateX(0);
 .has-header-layout-3 {
 
   .sidebar-menu {
-    width:285px;
+    min-width:300px;
     //right: 0;    
   }
 
