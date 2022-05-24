@@ -3908,11 +3908,11 @@ form.woocommerce-checkout {
       }
     
       .entry-meta {
-        padding:var(--content-spacing);
+        padding:var(--content-spacing) calc(var(--content-spacing) / 2)  var(--content-spacing) calc(var(--content-spacing) / 2) ;
         font-size:80%;
 
         @include tablet-down {
-          padding:var(--content-spacing-mobile) var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
+          padding:0 var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
         }
       }
     
@@ -3920,7 +3920,7 @@ form.woocommerce-checkout {
         padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
 
         @include tablet-down {
-          padding:var(--content-spacing-mobile);
+          padding:0 var(--content-spacing-mobile) var(--content-spacing-mobile) var(--content-spacing-mobile);
         }
       }
 
