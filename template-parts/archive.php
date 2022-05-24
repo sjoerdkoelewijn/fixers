@@ -17,13 +17,13 @@
 			$post = get_page($page_for_posts_id);
 			setup_postdata($post);
 			?>
-			<div id="post-<?php the_ID(); ?>">
-				
-					<?php the_content(); ?>					
-				
-			</div>
+							
+				<?php the_content(); ?>					
+			
+			
 			<?php
 			rewind_posts();
+
 		} else { ?>
 
 			<div class="category_heading">

@@ -1658,6 +1658,8 @@ form {
   --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
   display:flex;
   align-items: center;
+  border:0;
+  padding:0;
 
   .ghostkit-icon-box-icon-align-left {
     //padding-top:.6em;    
@@ -3897,16 +3899,25 @@ form.woocommerce-checkout {
       .entry-title {
         padding:calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
         font-size:var(--header-size-4);
+
+        @include tablet-down {
+          padding:calc(var(--content-spacing-mobile) / 2);
+          font-size:var(--header-size-4);
+        }
         
       }
     
       .entry-meta {
-        padding:0 var(--content-spacing);
+        padding:var(--content-spacing-mobile);
         font-size:80%;
       }
     
       .summary-text {
         padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
+
+        @include tablet-down {
+          padding:calc(var(--content-spacing-mobile) / 2);
+        }
       }
     }
   }
@@ -4346,12 +4357,22 @@ form.woocommerce-checkout {
 
       .entry-title {
         padding:calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
-        font-size:var(--header-size-4);
+        font-size:var(--header-size-3);
+
+        @include tablet-down {
+          padding:calc(var(--content-spacing-mobile) / 2);
+          font-size:var(--header-size-4);
+        }
         
       }
 
       .summary-text {
         padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
+        
+        @include tablet-down {
+          padding:0 var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
+        }
+
       }      
 
     }
@@ -4362,6 +4383,7 @@ form.woocommerce-checkout {
     
     @include tablet-down {
       flex-basis: 100%;
+      margin-right:0;
     }
     
 

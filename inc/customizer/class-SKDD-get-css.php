@@ -358,6 +358,10 @@ class SKDD_Get_CSS {
 					color: ' . esc_attr( $options['header_transparent_menu_color'] ) . ';
 				}
 
+				.has-header-transparent .primary-navigation > li > a:hover {
+					color: ' . esc_attr( $options['hover_color'] ) . ';
+				}
+
 				.has-header-transparent .site-tools .tools-icon {
 					color: ' . esc_attr( $options['header_transparent_icon_color'] ) . ';
 				}

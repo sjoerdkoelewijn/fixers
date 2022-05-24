@@ -462,7 +462,7 @@ if ( ! function_exists( 'SKDD_site_title_or_logo' ) ) {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			// Image logo.
 			$logo = get_custom_logo();
-			$html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+			$html = $logo;
 		} else {
 			$tag = is_home() ? 'h1' : 'div';
 
