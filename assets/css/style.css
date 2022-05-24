@@ -7407,7 +7407,7 @@ form.woocommerce-checkout {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 .blog-layout-grid .site-main .post .entry-title, .blog-layout-grid .site-main .portfolio .entry-title, .blog-layout-grid .site-main .service .entry-title, .blog-layout-grid .site-main .team .entry-title, .blog-layout-grid .site-main .knowledge .entry-title, .blog-layout-grid .site-main .page .entry-title {
-  padding: calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
+  padding: calc(var(--content-spacing) / 6) var(--content-spacing) 0 var(--content-spacing);
   font-size: var(--header-size-4);
 }
 @media (max-width: 1023px) {

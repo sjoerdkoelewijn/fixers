@@ -3897,7 +3897,7 @@ form.woocommerce-checkout {
       }
     
       .entry-title {
-        padding:calc(var(--content-spacing) / 2) var(--content-spacing) 0 var(--content-spacing);
+        padding:calc(var(--content-spacing) / 6) var(--content-spacing) 0 var(--content-spacing);
         font-size:var(--header-size-4);
 
         @include tablet-down {
