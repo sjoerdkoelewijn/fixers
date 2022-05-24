@@ -3901,23 +3901,31 @@ form.woocommerce-checkout {
         font-size:var(--header-size-4);
 
         @include tablet-down {
-          padding:calc(var(--content-spacing-mobile) / 2);
+          padding:var(--content-spacing-mobile) var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
           font-size:var(--header-size-4);
         }
         
       }
     
       .entry-meta {
-        padding:var(--content-spacing-mobile);
+        padding:var(--content-spacing);
         font-size:80%;
+
+        @include tablet-down {
+          padding:var(--content-spacing-mobile) var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
+        }
       }
     
       .summary-text {
         padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
 
         @include tablet-down {
-          padding:calc(var(--content-spacing-mobile) / 2);
+          padding:var(--content-spacing-mobile);
         }
+      }
+
+      @include tablet-down {
+        margin-right:0;
       }
     }
   }
@@ -4360,7 +4368,7 @@ form.woocommerce-checkout {
         font-size:var(--header-size-3);
 
         @include tablet-down {
-          padding:calc(var(--content-spacing-mobile) / 2);
+          padding:var(--content-spacing-mobile) var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
           font-size:var(--header-size-4);
         }
         
@@ -4370,7 +4378,7 @@ form.woocommerce-checkout {
         padding:0 var(--content-spacing) var(--content-spacing) var(--content-spacing);
         
         @include tablet-down {
-          padding:0 var(--content-spacing-mobile) 0 var(--content-spacing-mobile);
+          padding:var(--content-spacing-mobile);
         }
 
       }      
