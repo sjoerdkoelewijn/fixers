@@ -3908,7 +3908,7 @@ form.woocommerce-checkout {
       }
     
       .entry-meta {
-        padding:var(--content-spacing) calc(var(--content-spacing) / 2)  var(--content-spacing) calc(var(--content-spacing) / 2) ;
+        padding:calc(var(--content-spacing) / 2) var(--content-spacing);
         font-size:80%;
 
         @include tablet-down {

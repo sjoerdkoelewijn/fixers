@@ -7417,7 +7417,7 @@ form.woocommerce-checkout {
   }
 }
 .blog-layout-grid .site-main .post .entry-meta, .blog-layout-grid .site-main .portfolio .entry-meta, .blog-layout-grid .site-main .service .entry-meta, .blog-layout-grid .site-main .team .entry-meta, .blog-layout-grid .site-main .knowledge .entry-meta, .blog-layout-grid .site-main .page .entry-meta {
-  padding: var(--content-spacing) calc(var(--content-spacing) / 2) var(--content-spacing) calc(var(--content-spacing) / 2);
+  padding: calc(var(--content-spacing) / 2) var(--content-spacing);
   font-size: 80%;
 }
 @media (max-width: 1023px) {
