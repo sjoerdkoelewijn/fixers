@@ -1786,12 +1786,16 @@ form {
   .wp-block-cover {
     min-height:auto !important;
 
-    //margin-left:-3vw;
-    width:100vw;
+    
     max-width:100vw;
     padding-top:var(--vertical-spacing);
     padding-bottom:var(--vertical-spacing);
   }
+
+  .wp-block-cover.alignwide {
+    margin-left:-3vw;
+    width:100vw;
+  } 
 
   .ghostkit-carousel-slide {
     .wp-block-cover {
@@ -2057,13 +2061,13 @@ form {
   .wp-block-group.has-background {
     padding:var(--vertical-spacing) var(--content-spacing-mobile);
     //margin-left:-3vw;
-    width:100vw;
+    //width:100vw;
     border-radius:0;
     margin-bottom:var(--vertical-spacing);
 
     @include phone {
 
-      .wp-block-group.has-background, .wp-block-group.has-background.alignfull {
+      .wp-block-group.has-background, .wp-block-group.has-background.alignfull .wp-block-group.has-background.alignwide {
         //width:calc(100vw - var(--content-spacing-mobile)) !important;
         //margin-left:calc((var(--content-spacing-mobile) / 2) * -1) !important;
         width:100vw !important;

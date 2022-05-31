@@ -500,7 +500,7 @@ if ( ! function_exists( 'SKDD_primary_navigation' ) ) {
 
 		?>
 
-		<div class="site-navigation">
+		<div id="site-navigation" class="site-navigation">
 			<?php do_action( 'SKDD_before_main_nav' ); ?>
 
 			<nav class="main-navigation" aria-label="<?php esc_attr_e( 'Primary navigation', 'SKDD' ); ?>">

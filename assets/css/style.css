@@ -5640,10 +5640,14 @@ form input:focus, form textarea:focus {
 @media (min-width: 280px) and (max-width: 479px) {
   .wp-block-cover {
     min-height: auto !important;
-    width: 100vw;
     max-width: 100vw;
     padding-top: var(--vertical-spacing);
     padding-bottom: var(--vertical-spacing);
+  }
+
+  .wp-block-cover.alignwide {
+    margin-left: -3vw;
+    width: 100vw;
   }
 
   .ghostkit-carousel-slide .wp-block-cover {
@@ -5835,13 +5839,12 @@ form input:focus, form textarea:focus {
 
   .wp-block-group.has-background {
     padding: var(--vertical-spacing) var(--content-spacing-mobile);
-    width: 100vw;
     border-radius: 0;
     margin-bottom: var(--vertical-spacing);
   }
 }
 @media (min-width: 280px) and (max-width: 479px) and (min-width: 280px) and (max-width: 479px) {
-  .wp-block-group.has-background .wp-block-group.has-background, .wp-block-group.has-background .wp-block-group.has-background.alignfull {
+  .wp-block-group.has-background .wp-block-group.has-background, .wp-block-group.has-background .wp-block-group.has-background.alignfull .wp-block-group.has-background.alignwide {
     width: 100vw !important;
     margin-left: calc(var(--content-spacing-mobile) * -1) !important;
   }
