@@ -5844,9 +5844,13 @@ form input:focus, form textarea:focus {
   }
 }
 @media (min-width: 280px) and (max-width: 479px) and (min-width: 280px) and (max-width: 479px) {
-  .wp-block-group.has-background .wp-block-group.has-background, .wp-block-group.has-background .wp-block-group.has-background.alignfull, .wp-block-group.has-background .wp-block-group.has-background.alignwide {
+  .wp-block-group.has-background .wp-block-group.has-background.alignfull, .wp-block-group.has-background .wp-block-group.has-background.alignwide {
     width: 100vw !important;
     margin-left: calc(var(--content-spacing-mobile) * -1) !important;
+  }
+  .wp-block-group.has-background .ghostkit-carousel-slide .wp-block-group.has-background {
+    width: 100% !important;
+    margin-left: 0;
   }
 }
 @media (min-width: 280px) and (max-width: 479px) {
