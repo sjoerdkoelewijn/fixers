@@ -10,6 +10,7 @@ defined( 'ABSPATH' ) || exit;
 function SKDD_readspeaker_shortcode( $atts ) { 
     $options = SKDD_options( false );
     $readspeaker = $options['readspeaker_enabled'];
+    $readspeaker_id = $options['readspeaker_id'];
 
     if ( ! $readspeaker ) {
         return;
@@ -17,10 +18,7 @@ function SKDD_readspeaker_shortcode( $atts ) {
 
         global $wp;
 
-        $page_url = urlencode(trailingslashit(home_url( $wp->request )));
- 
-        
-        $readspeaker_id = $options['readspeaker_id'];
+        $page_url = urlencode(trailingslashit(home_url( $wp->request ))); 
     
         $a = shortcode_atts( array(
             'language' => 'NL',
@@ -33,7 +31,7 @@ function SKDD_readspeaker_shortcode( $atts ) {
                      
         <div id="<?php echo $a['button_id'] ?>" class="rs_skip rsbtn rs_preserve">
     
-            <a class="rsbtn_play" accesskey="L" rel="nofollow" title="<?php _e( 'Luister naar deze pagina', 'SKDD' ) ?>" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=13159&amp;lang=NL&amp;readid=<?php echo $a['container_id'] ?>&amp;url=<?php echo $page_url ?>">
+            <a class="rsbtn_play" accesskey="L" rel="nofollow" title="<?php _e( 'Luister naar deze pagina', 'SKDD' ) ?>" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=<?php echo $readspeaker_id ?>&amp;lang=NL&amp;readid=<?php echo $a['container_id'] ?>&amp;url=<?php echo $page_url ?>">
     
                 <span class="rsbtn_left rsimg rspart">
                     <span class="rsbtn_text">
