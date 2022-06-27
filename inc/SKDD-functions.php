@@ -622,6 +622,27 @@ if ( ! function_exists( 'SKDD_custom_meta_tags' ) ) {
 	}
 }
 
+if ( ! function_exists( 'SKDD_enqueue_readspeaker' ) ) {
+
+	function SKDD_enqueue_readspeaker() {
+
+		$options = SKDD_options( false );
+		$readspeaker = $options['readspeaker_enabled'];
+		$readspeaker_id = $options['readspeaker_id'];
+				
+		if ( ! $readspeaker ) {
+			return;
+		}
+		
+		?>
+
+		<script src="//cdn-eu.readspeaker.com/script/<?php echo $readspeaker_id ?>/webReader/webReader.js?pids=wr" type="text/javascript" id="rs_req_Init"></script>
+		
+		<?php
+	}
+
+}
+
 if ( ! function_exists( 'SKDD_array_insert' ) ) {
 	/**
 	 * Insert an array into another array before/after a certain key

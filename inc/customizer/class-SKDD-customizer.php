@@ -94,7 +94,10 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'topbar_background_color'                 => '#292f34',
 				'topbar_opacity'						  => 100,
 				'topbar_height'                           => 0,
-				'topbar_layout'                           => 'flex-start',
+				'topbar_layout'                           => 'flex-start',				
+				// READSPEAKER							  
+				'readspeaker_enabled'                     => false,
+				'readspeaker_id'                          => '',				
 				// HEADER.
 				'header_layout'                           => 'layout-1',
 				'header_background_color'                 => '#ffffff',

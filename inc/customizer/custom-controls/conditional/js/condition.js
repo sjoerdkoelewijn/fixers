@@ -204,6 +204,15 @@
 			false
 		);
 
+		// Topbar.
+		condition(
+			'SKDD_setting[readspeaker_enabled]',
+			[
+				'SKDD_setting[readspeaker_id]',				
+			],
+			false
+		);
+
 		// CPT.
 		condition(
 			'SKDD_setting[cpt_portfolio_display]',

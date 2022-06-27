@@ -19,6 +19,7 @@ add_action( 'wp_head', 'SKDD_rel_profile', 230 );
 add_action( 'wp_head', 'SKDD_facebook_social', 240 );
 add_action( 'wp_head', 'SKDD_custom_meta_tags', 250 );
 add_action( 'wp_head', 'SKDD_pingback', 260 );
+add_action( 'wp_head', 'SKDD_enqueue_readspeaker', 270 );
 
 
 // Performance.
