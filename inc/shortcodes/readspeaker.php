@@ -35,7 +35,7 @@ function SKDD_readspeaker_shortcode( $atts ) {
     
                 <span class="rsbtn_left rsimg rspart">
                     <span class="rsbtn_text">
-                        <span><?php _e( 'Luister', 'SKDD' ) ?></span>
+                        <span><?php _e( 'Lees voor', 'SKDD' ) ?></span>
                     </span>
                 </span>
                 <span class="rsbtn_right rsimg rsplay rspart"></span>
