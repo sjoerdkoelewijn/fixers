@@ -1810,6 +1810,10 @@ form {
   border-radius:var(--border-radius);
 }
 
+.wp-block-group.has-background.alignfull {
+  border-radius:0;
+}
+
 .post-cover-image, .entry-image-link {
   img {
     width:100%;
@@ -1854,6 +1858,14 @@ form {
 
       padding-left:0;
       padding-right:var(--content-spacing);
+
+      @include tablet {
+        padding:var(--content-spacing-tablet); 
+      }
+
+      @include phone {
+        padding:var(--content-spacing-mobile);
+      }
         
   }
 
