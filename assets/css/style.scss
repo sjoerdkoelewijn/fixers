@@ -1658,8 +1658,8 @@ form {
   --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
   display:flex;
   align-items: center;
-  border:0;
-  padding:0;
+  border:0 !important;
+  padding:var(--gkt-icon-box__padding-v) 0  !important;
 
   .ghostkit-icon-box-icon-align-left {
     //padding-top:.6em;    
@@ -1672,10 +1672,7 @@ form {
       //margin-top:.25em;
     }
   }
-
-  @include phone {
-    padding: var(--gkt-icon-box__padding-v) 0;
-  }  
+ 
 
 }
 

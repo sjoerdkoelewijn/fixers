@@ -5542,15 +5542,9 @@ form input:focus, form textarea:focus {
   --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
   display: flex;
   align-items: center;
-  border: 0;
-  padding: 0;
+  border: 0 !important;
+  padding: var(--gkt-icon-box__padding-v) 0 !important;
 }
-@media (min-width: 280px) and (max-width: 479px) {
-  .ghostkit-icon-box {
-    padding: var(--gkt-icon-box__padding-v) 0;
-  }
-}
-
 .ghostkit-icon-box ~ .ghostkit-icon-box {
   padding-top: 0;
 }
