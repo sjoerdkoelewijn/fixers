@@ -463,25 +463,6 @@ if ( ! class_exists( 'SKDD' ) ) {
 				}	
 			}
 
-			// Always load ghostkit grid & button css
-			if ( class_exists( 'ghostkit' ) ) {
-
-				wp_enqueue_style(
-					'ghostkit-block-grid-css-always',
-					'/wp-content/plugins/ghostkit/gutenberg/blocks/grid/styles/style.min.css',
-					array(),
-					SKDD_version()
-				);
-
-				wp_enqueue_style(
-					'ghostkit-block-button-css-always',
-					'/wp-content/plugins/ghostkit/gutenberg/blocks/button/styles/style.min.css',
-					array(),
-					SKDD_version()
-				);
-
-			}
-
 			/**
 			 * Styles
 			 */
