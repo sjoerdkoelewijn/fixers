@@ -65,7 +65,7 @@ function cpt_location() {
 			'show_ui'               => true,
 			'show_in_menu'          => true,
 			'menu_position'         => 2,
-			'menu_icon'             => 'dashicons-analytics',
+			'menu_icon'             => 'dashicons-location',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
