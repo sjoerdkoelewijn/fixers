@@ -305,11 +305,11 @@ if ( ! function_exists( 'SKDD_is_cpt' ) ) {
 
 		$post_type = get_post_type( $post );
 
-		// 'portfolio|services|team|knowledge';
+		// 'portfolio|services|team|knowledge|location|support';
 
 		$custom_post_type = $post_type && ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() );
 
-		if ( 'portfolio' === $post_type && $custom_post_type || 'services' === $post_type && $custom_post_type || 'team' === $post_type && $custom_post_type || 'knowledge' === $post_type && $custom_post_type )  {
+		if ( 'portfolio' === $post_type && $custom_post_type || 'services' === $post_type && $custom_post_type || 'team' === $post_type && $custom_post_type || 'knowledge' === $post_type && $custom_post_type || 'location' === $post_type && $custom_post_type || 'support' === $post_type && $custom_post_type )  {
 			$is_cpt = true;
 			return apply_filters( 'SKDD_is_cpt', $is_cpt );
 		} 		
