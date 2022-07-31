@@ -18,6 +18,8 @@ function SKDD_custom_menu_order( $menu_order ) {
         'edit.php?post_type=portfolio', 
         'edit.php?post_type=services', 
         'edit.php?post_type=knowledge', 
+        'edit.php?post_type=support', 
+        'edit.php?post_type=location', 
         'edit.php?post_type=team', 
         'edit.php', // Posts
         'edit-comments.php', // Comments
