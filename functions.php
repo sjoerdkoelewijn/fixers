@@ -48,6 +48,9 @@ if ( is_admin() ) {
 
 require_once SKDD_THEME_DIR . 'inc/admin/SKDD-custom-login.php';
 
+require_once SKDD_THEME_DIR . 'inc/admin/SKDD-reusable-block.php';
+
+
 // require_once SKDD_THEME_DIR . 'inc/SKDD-howtos.php';
 
 
@@ -92,3 +95,26 @@ require_once SKDD_THEME_DIR . 'inc/shortcodes/readspeaker.php';
 
 // low quality image placeholder
 //require_once SKDD_THEME_DIR . 'inc/SKDD-image-placeholder.php';	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

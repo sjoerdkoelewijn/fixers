@@ -752,3 +752,125 @@ if ( ! function_exists( 'SKDD_single_product_tags' ) ) {
 		
 	}
 }
+
+
+
+
+if ( ! function_exists( 'skdd_product_image' ) ) {
+	
+	function skdd_product_image($product) { ?>
+		<div class="product_image_wrap">
+			<?php 
+			
+				global $product;
+				$attachment_ids = $product->get_gallery_attachment_ids();
+				$secondary_image = '';
+				if ($attachment_ids) {
+					$secondary_image_id = $attachment_ids['0'];
+					$secondary_image = wp_get_attachment_image($secondary_image_id, apply_filters('woocommerce_full_size', 'woocommerce_full_size'));
+				}
+
+				if (!empty($secondary_image)) {
+				
+					echo wp_kses_post($secondary_image);
+			
+					
+				} else {
+
+					echo woocommerce_get_product_thumbnail('woocommerce_full_size'); 
+
+				}	
+				
+			?>
+
+		</div>	
+	<?php	
+	}
+}
+
+if ( ! function_exists( 'skdd_product_info_wrap_open' ) ) {
+
+	function skdd_product_info_wrap_open() { ?>
+		<div class="product_info_wrap">				
+	<?php	
+	}
+}
+
+if ( ! function_exists( 'skdd_product_info_wrap_close' ) ) {
+
+	function skdd_product_info_wrap_close() { ?>
+		</div>			
+	<?php	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// Enable Gutenberg editor for WooCommerce
+function skdd_activate_gutenberg_product( $can_edit, $post_type ) {
+	if ( $post_type == 'product' ) {
+		   $can_edit = true;
+	   }
+	   return $can_edit;
+   }
+   add_filter( 'use_block_editor_for_post_type', 'skdd_activate_gutenberg_product', 20, 2 );
+   
+   // enable taxonomy fields for woocommerce with gutenberg on
+   function skdd_enable_taxonomy_rest( $args ) {
+	   $args['show_in_rest'] = true;
+	   return $args;
+   }
+   add_filter( 'woocommerce_taxonomy_args_product_cat', 'skdd_enable_taxonomy_rest' );
+   add_filter( 'woocommerce_taxonomy_args_product_tag', 'skdd_enable_taxonomy_rest' );
+
+
+
+
+
+
+
+	
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+
+    return __( 'Maak nu een afspraak', 'woocommerce' ); 
+}
+	
+	
+
+	
+
+
+
+add_action( 'woocommerce_grouped_product_list_before_label', 'wc_grouped_product_thumbnail' );
+  
+function wc_grouped_product_thumbnail( $product ) {
+    $image_size = array( 120, 120 );
+    $attachment_id = get_post_meta( $product->get_id(), '_thumbnail_id', true );
+    
+    ?>
+    
+    	<?php echo wp_get_attachment_image( $attachment_id, $image_size ); ?>
+    
+    <?php
+}
+
+
+
+function skdd_single_product_main_content() { ?>
+
+	<div class="main_content">
+
+		<?php echo the_content(); ?>
+
+	</div>
+
+<?php } ?>

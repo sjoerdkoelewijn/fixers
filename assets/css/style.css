@@ -4311,13 +4311,6 @@ figcaption {
   max-width: 100%;
 }
 
-caption,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-}
-
 blockquote,
 blockquote:before,
 blockquote:after,
@@ -7192,20 +7185,19 @@ form.woocommerce-checkout {
 }
 
 /*************************** Breadcrumb ****************************************************************************/
+.skdd-breadcrumb p, .rank-math-breadcrumb p {
+  margin: 0;
+}
 .skdd-breadcrumb a, .skdd-breadcrumb .delimiter, .skdd-breadcrumb .separator, .rank-math-breadcrumb a, .rank-math-breadcrumb .delimiter, .rank-math-breadcrumb .separator {
-  font-weight: 700;
-  font-size: 80%;
+  font-weight: 400;
+  font-size: 75%;
 }
 .skdd-breadcrumb .last, .rank-math-breadcrumb .last {
-  font-size: 80%;
+  display: none;
 }
 .skdd-breadcrumb .delimiter, .skdd-breadcrumb .separator, .rank-math-breadcrumb .delimiter, .rank-math-breadcrumb .separator {
   margin: 0 5px;
-}
-
-/* Breadcrumb */
-.single-product .skdd-breadcrumb {
-  padding-bottom: 20px;
+  color: var(--theme-color);
 }
 
 .skdd-breadcrumb .item-bread {
@@ -7229,7 +7221,6 @@ form.woocommerce-checkout {
 
 @media (max-width: 991px) {
   .product-summary {
-    margin-top: 50px;
     width: 100%;
   }
   .single-product .skdd-breadcrumb, .single-product .rank-math-breadcrumb {
@@ -8023,8 +8014,8 @@ form.woocommerce-checkout {
 }
 @media (min-width: 280px) and (max-width: 479px) {
   .ghostkit-accordion-item {
-    --gkt-accordion--heading__padding-h:0;
-    --gkt-accordion--content__padding-h:0;
+    --gkt-accordion--heading__padding-h:20px;
+    --gkt-accordion--content__padding-h:20px;
   }
 }
 .ghostkit-accordion-item .ghostkit-accordion-item-heading {
@@ -8032,6 +8023,26 @@ form.woocommerce-checkout {
 }
 .ghostkit-accordion-item .ghostkit-accordion-item-collapse {
   right: calc(var(--content-spacing) / 2);
+}
+
+/*************************** Block Table ****************************************************************************/
+.wp-block-table.is-style-stripes {
+  border-bottom: 0;
+}
+.wp-block-table.is-style-stripes thead {
+  border-bottom: 0 !important;
+}
+.wp-block-table.is-style-stripes td {
+  font-size: calc(var(--body-font-size) * 0.9);
+  font-weight: 400;
+  padding: 16px;
+}
+.wp-block-table.is-style-stripes .ghostkit-pro-tooltip[aria-label] {
+  border-bottom: 0;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: var(--offset-color);
 }
 
 /*************************** Rankmath FAQ (Frequently Asked Questions) Accordion ****************************************************************************/

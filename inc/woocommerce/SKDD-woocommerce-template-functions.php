@@ -1113,11 +1113,62 @@ if ( ! function_exists( 'custom_template_single_title' ) ) {
 	 * Custom title
 	 */
 	function custom_template_single_title() {
-		?>
-			<h1 class="product_title entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		<?php
+		global $product;
+
+		if ( $product->get_type() === 'variable' ) {
+			
+			$custom_title = get_the_title(); 
+			$title_array = explode('|', $custom_title);
+			$product_name = $title_array[0];
+			$repair_name = $title_array[1];
+
+			?>
+
+			<h1>
+				<span class="product_name">
+					<?php echo $product_name; ?>
+				</span>
+				<?php echo $repair_name; ?>
+			</h1>	
+			
+		<?php } else {
+
+			the_title( '<h1>', '</h1>' );
+
+		} 
+
 	}
 }
+
+
+if ( ! function_exists( 'custom_template_wc_product_grid_block' ) ) {
+	/**
+	 * Custom woocommerce grid block
+	 */
+	function custom_template_wc_product_grid_block($html, $data, $product) {
+
+		$custom_title = $data->title; 
+		$title_array = explode('|', $custom_title);
+		$product_name = $title_array[0];
+		$repair_name = $title_array[1];
+
+		$html = '<li><a class="wc-block-grid__product" href="'. $data->permalink .'">
+        <div class="image-wrap">
+            ' . $data->image . '
+            ' . $data->button . '
+        </div>
+        <h3>' . $product_name . '<span class="repair_name">'. $repair_name .'</span></h3>
+        ' . $data->badge . '
+        ' . $data->price . '
+        ' . $data->rating . '
+    	</a></li>';
+    	return $html;
+
+	}
+}
+
+
+
 
 if ( ! function_exists( 'custom_template_single_price' ) ) {
 	/**
@@ -1143,7 +1194,10 @@ if ( ! function_exists( 'custom_template_single_price' ) ) {
 			<?php }
 
 		} else {
+			
 			?>
+
+			
 				<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>">
 					<?php echo wp_kses_post( $price_html ); ?>
 				</p>
@@ -1153,6 +1207,41 @@ if ( ! function_exists( 'custom_template_single_price' ) ) {
 	}
 }
 
+   // Show default variation price
+   function custom_variation_price( $price, $product ) {
+
+	foreach($product->get_available_variations() as $pav){
+		$def=true;
+		foreach($product->get_variation_default_attributes() as $defkey=>$defval){
+			if($pav['attributes']['attribute_'.$defkey]!=$defval){
+				$def=false;             
+			}   
+		}
+		if($def){
+			$price = $pav['display_price'];         
+		}
+	}   
+
+	return woocommerce_price($price);
+
+}
+
+
+function custom_variable_price() {
+	global $product;
+	
+	if ( $product->get_type() === 'variable' ) {
+		add_filter('woocommerce_variable_price_html', 'custom_variation_price', 10, 2);
+	} else {
+		add_filter('woocommerce_variable_price_html','shop_variable_product_price', 10, 2 );
+	}
+
+}
+
+add_action( 'woocommerce_after_add_to_cart_quantity', 'custom_variable_price', 30 );
+
+
+
 
 
 if ( ! function_exists( 'custom_template_single_add_to_cart' ) ) {
@@ -1160,29 +1249,23 @@ if ( ! function_exists( 'custom_template_single_add_to_cart' ) ) {
 	 * Custom title
 	 */
 	function custom_template_single_add_to_cart() {
-		$options = SKDD_options( false );
 		global $product;
 		
-		if ( $options['only_show_price_when_logged_in'] ) {
+		if ( $product->get_type() === 'variable' ) {
 
-			if ( is_user_logged_in() ) {
-				?>
-					<?php do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' ); ?>					
-				<?php
-			} else { ?>
+			do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );
+			
+			
+		} elseif ( $product->get_type() === 'grouped' ) {	
+			
+			do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' ); 
+		
 
-				<a href="/<?php esc_html_e( 'register', 'SKDD' ); ?>/" class="not_logged_in_btn button">
-					<?php esc_html_e( 'See prices', 'SKDD' ); ?>
-				</a>
-				
-			<?php }
+		} else {			
 
-		} else {
-			?>
-
-				<?php do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );  ?>
-				
-			<?php
+			do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );
+			
+			
 		}
 		
 	}

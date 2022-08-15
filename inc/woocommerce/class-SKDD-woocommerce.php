@@ -109,15 +109,15 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// PRODUCT PAGE.
 			// Product images box.
-			add_action( 'SKDD_product_images_box_end', 'SKDD_change_sale_flash', 10 );
-			add_action( 'SKDD_product_images_box_end', 'SKDD_print_out_of_stock_label', 20 );
-			add_action( 'SKDD_product_images_box_end', 'SKDD_product_video_button_play', 30 );
+			//add_action( 'SKDD_product_images_box_end', 'SKDD_change_sale_flash', 10 );
+			//add_action( 'SKDD_product_images_box_end', 'SKDD_print_out_of_stock_label', 20 );
+			//add_action( 'SKDD_product_images_box_end', 'SKDD_product_video_button_play', 30 );
 
-			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_open', 20 );
-			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_image_slide', 30 );
-			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_thumb_slide', 40 );
-			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_close', 50 );
-			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_dependency', 100 );
+			//add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_open', 20 );
+			//add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_image_slide', 30 );
+			//add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_thumb_slide', 40 );
+			//add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_close', 50 );
+			//add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_gallery_dependency', 100 );
 			add_action( 'woocommerce_before_single_product_summary', 'SKDD_single_product_wrapper_summary_open', 200 );
 
 			add_action( 'woocommerce_after_single_product_summary', 'SKDD_single_product_wrapper_summary_close', 0 );
@@ -155,7 +155,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
 
-			add_action( 'woocommerce_single_product_summary', 'SKDD_trust_badge_image', 200 );
+			//add_action( 'woocommerce_single_product_summary', 'SKDD_trust_badge_image', 200 );
 			add_action( 'template_redirect', 'SKDD_product_recently_viewed', 20 );
 			add_action( 'woocommerce_after_single_product', 'SKDD_product_recently_viewed_template', 20 );
 
@@ -233,16 +233,16 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			}
 
 			// Lightbox.
-			wp_enqueue_script( 'lity' );
+			//wp_enqueue_script( 'lity' );
 
 			// Tiny slider: product images.
-			wp_enqueue_script( 'skdd-product-images' );
+			//wp_enqueue_script( 'skdd-product-images' );
 
 			// Easyzoom.
-			wp_enqueue_script( 'easyzoom-handle' );
+			//wp_enqueue_script( 'easyzoom-handle' );
 
 			// Photoswipe.
-			wp_enqueue_script( 'photoswipe-init' );
+			//wp_enqueue_script( 'photoswipe-init' );
 
 			// Woocommerce sidebar.
 			wp_enqueue_script( 'skdd-woocommerce-sidebar' );
@@ -460,6 +460,8 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			// Single product.
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 			remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+
+
 			remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
@@ -472,9 +474,29 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			add_filter( 'woocommerce_get_price_html', 'custom_template_single_product_weight' );
 
-			add_filter( 'woocommerce_product_tabs', 'SKDD_change_tabs_order', 98 );
+			//add_filter( 'woocommerce_product_tabs', 'SKDD_change_tabs_order', 98 );
 
+			remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+
+			add_action( 'woocommerce_before_single_product_summary', 'skdd_product_info_wrap_open', 5 );
+
+			add_action( 'woocommerce_after_single_product_summary', 'skdd_product_image', 5 );
+
+			add_action( 'woocommerce_after_single_product_summary', 'skdd_product_info_wrap_close', 10 );
+			
+
+			add_action( 'woocommerce_after_single_product_summary', 'skdd_single_product_main_content', 15 );
+
+			
 			add_action( 'woocommerce_single_product_summary', 'custom_template_single_title', 5 );
+
+
+			add_filter( 'woocommerce_blocks_product_grid_item_html', 'custom_template_wc_product_grid_block', 10, 3 );
+
+			
+
+			 
 			
 			add_action( 'woocommerce_before_main_content', 'SKDD_before_content', 10 );
 			add_action( 'woocommerce_after_main_content', 'SKDD_after_content', 10 );
@@ -483,7 +505,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			add_action( 'woocommerce_before_shop_loop', 'SKDD_sorting_wrapper', 9 );
 			add_action( 'woocommerce_before_shop_loop', 'SKDD_sorting_wrapper_close', 31 );
 
-			add_action( 'woocommerce_single_product_summary', 'SKDD_single_product_tags', 60 );
+			//add_action( 'woocommerce_single_product_summary', 'SKDD_single_product_tags', 60 );
 			
 			add_action( 'woocommerce_product_additional_information', 'SKDD_single_product_categories', 200 );
 
@@ -498,10 +520,10 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// SHOP SINGLE.
 			// Swap position price and rating star.
-			add_action( 'woocommerce_single_product_summary', 'custom_template_single_price', 20 );
+			//add_action( 'woocommerce_after_add_to_cart_quantity', 'custom_template_single_price', 30 );
 			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 5 );
 
-			add_action( 'woocommerce_single_product_summary', 'custom_template_single_add_to_cart', 30 );
+			add_action( 'woocommerce_single_product_summary', 'custom_template_single_add_to_cart', 20 );
 
 			
 
@@ -568,4 +590,32 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 		}
 	}
 	SKDD_WooCommerce::get_instance();
+
 }
+
+
+/**
+ * Exclude products from a particular category on the shop page
+ */
+function custom_pre_get_posts_query( $q ) {
+
+    $tax_query = (array) $q->get( 'tax_query' );
+
+    $tax_query[] = array(
+           'taxonomy' => 'product_cat',
+           'field' => 'slug',
+           'terms' => array( 'reparaties-detail' ), // Don't display products in this category on the shop page.
+           'operator' => 'NOT IN'
+    );
+
+
+    $q->set( 'tax_query', $tax_query );
+
+}
+add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
+
+
+
+
+
+

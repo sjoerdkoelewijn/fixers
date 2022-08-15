@@ -58,6 +58,8 @@ function SKDD_move_admin_menu_items()
     remove_menu_page( 'tools.php' );
     remove_menu_page( 'themes.php' );
     remove_menu_page( 'plugins.php' );
+    remove_menu_page( 'wpclever' );
+    
 
     add_menu_page(
         __( 'Customizer', 'SKDD' ), //$page_title
@@ -111,6 +113,30 @@ function SKDD_move_admin_menu_items()
             __( 'Search & Replace', 'SKDD' ), //$menu_title
             'activate_plugins', //$capability
             'tools.php?page=better-search-replace' //$menu_slug
+        );
+
+    }
+
+    if ( class_exists( 'WPClever_Woovr' ) ) {
+
+        add_submenu_page(
+            'options-general.php', //$parent_slug
+            __( 'WooCommerce variations radio buttons', 'SKDD' ), //$page_title
+            __( 'WC Radio Buttons', 'SKDD' ), //$menu_title
+            'activate_plugins', //$capability
+            'admin.php?page=wpclever-woovr' //$menu_slug
+        );
+
+    }
+
+    if ( class_exists( 'Permalink_Manager_Class' ) ) {
+
+        add_submenu_page(
+            'options-general.php', //$parent_slug
+            __( 'Permalinks Manager', 'SKDD' ), //$page_title
+            __( 'Permalinks Manager', 'SKDD' ), //$menu_title
+            'activate_plugins', //$capability
+            'tools.php?page=permalink-manager&section=settings' //$menu_slug
         );
 
     }

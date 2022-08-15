@@ -91,7 +91,7 @@ if ( ! function_exists( 'SKDD_loop_product_image' ) ) {
 			return '';
 		}
 
-		$size       = 'woocommerce_thumbnail';
+		$size       = 'woocommerce_single';
 		$img_id     = $product->get_image_id();
 		$img_alt    = SKDD_image_alt( $img_id, esc_attr__( 'Product image', 'SKDD' ) );
 		$img_origin = wp_get_attachment_image_src( $img_id, $size );

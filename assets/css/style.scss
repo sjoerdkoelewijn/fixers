@@ -156,12 +156,6 @@ figcaption {
   max-width: 100%;
 }
 
-caption,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-}
 
 blockquote,
 blockquote:before,
@@ -3661,27 +3655,27 @@ form.woocommerce-checkout {
 
 
 .skdd-breadcrumb, .rank-math-breadcrumb {
+
+  p {
+    margin:0;
+  }
   
   a, .delimiter, .separator {
-    font-weight:700;
-    font-size:80%;    
+    font-weight:400;
+    font-size:75%;    
   }
 
   .last {
-    font-size:80%;
+    display:none;
   }
 
   .delimiter, .separator {
     margin: 0 5px;
+    color:var(--theme-color);
   }
   
 }
 
-  /* Breadcrumb */
-  .single-product .skdd-breadcrumb {
-    padding-bottom: 20px;
-  }
-  
   .skdd-breadcrumb .item-bread {
     display: inline-block;
   }
@@ -3704,7 +3698,6 @@ form.woocommerce-checkout {
   
   @media (max-width: 991px) {
     .product-summary {
-      margin-top: 50px;
       width: 100%;
     }
     .single-product .skdd-breadcrumb, .single-product .rank-math-breadcrumb {
@@ -4738,8 +4731,8 @@ form.woocommerce-checkout {
     --gkt-accordion--heading-collapse-icon__font-size:25px;
 
     @include phone {
-      --gkt-accordion--heading__padding-h:0;
-      --gkt-accordion--content__padding-h:0;
+      --gkt-accordion--heading__padding-h:20px;
+      --gkt-accordion--content__padding-h:20px;
     }
 
     margin-bottom:10px;
@@ -4752,6 +4745,33 @@ form.woocommerce-checkout {
       right:calc(var(--content-spacing) / 2);
     }   
   
+}
+
+
+/*************************** Block Table ****************************************************************************/
+
+.wp-block-table.is-style-stripes {
+  border-bottom:0;
+
+  thead {
+    border-bottom:0 !important;
+
+  }
+
+  td {
+    font-size:calc(var(--body-font-size) * .9);
+    font-weight:400;
+    padding:16px;
+  }
+
+  .ghostkit-pro-tooltip[aria-label] {
+    border-bottom:0;
+  }
+
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: var(--offset-color);
 }
 
 /*************************** Rankmath FAQ (Frequently Asked Questions) Accordion ****************************************************************************/
