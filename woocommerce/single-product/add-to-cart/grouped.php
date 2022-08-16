@@ -54,13 +54,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 				// Output columns for each product.
 				foreach ( $grouped_product_columns as $column_id ) {
+					global $product;
 					do_action( 'woocommerce_grouped_product_list_before_' . $column_id, $grouped_product_child );
+
+
+					if ( $grouped_product_child->get_type() === 'variable' ) {
+						$price_html = __( 'Vanaf ', 'woocommerce' ) . get_woocommerce_currency_symbol() . $grouped_product_child->get_variation_regular_price('min', true);
+					} else {
+						$price_html = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
+					}
+					 
 
 					switch ( $column_id ) {						
 						case 'label':
-
-							
-
 							$custom_title = $grouped_product_child->get_name(); 
 							$title_array = explode('|', $custom_title);
 							$product_name = $title_array[0];
@@ -73,7 +79,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							$value .= '</label>';
 							break;
 						case 'price':
-							$value = __( 'Vanaf ', 'woocommerce' ) . $grouped_product_child->get_variation_regular_price('min', true); // $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
+							$value = $price_html;
 							break;
 						default:
 							$value = '';

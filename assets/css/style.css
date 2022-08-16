@@ -5677,12 +5677,6 @@ form input:focus, form textarea:focus {
     padding: var(--content-spacing-tablet);
   }
 }
-@media (min-width: 280px) and (max-width: 479px) {
-  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-    padding: var(--content-spacing-mobile);
-  }
-}
-
 /*************************** Content Styles ****************************************************************************/
 .site_content {
   max-width: var(--content-width);
@@ -5735,7 +5729,7 @@ form input:focus, form textarea:focus {
 }
 @media (min-width: 480px) and (max-width: 1024px) {
   .ghostkit-col-with-bg {
-    padding: var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
+    padding: var(--content-spacing-tablet);
   }
 }
 @media (min-width: 280px) and (max-width: 479px) {

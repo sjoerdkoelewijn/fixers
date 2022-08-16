@@ -1855,7 +1855,7 @@ form {
       }
 
       @include phone {
-        padding:var(--content-spacing-mobile);
+        //padding:var(--content-spacing-mobile);
       }
         
   }
@@ -1935,7 +1935,7 @@ form {
   }
   
   @include tablet {
-    padding:var(--content-spacing-tablet) calc(var(--content-spacing-tablet) / 2);
+    padding:var(--content-spacing-tablet);
   }
 
   @include phone {
