@@ -257,6 +257,36 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 				wp_enqueue_script( 'skdd-multi-step-checkout' );
 			}
 
+			if ( is_checkout() ) {
+				wp_enqueue_script( 'skdd-appointments' );
+			}		
+
+			
+			if ( is_checkout() ) { 
+				// Dit voegt een variable toe die in appointments.js gebruikt wordt. 
+				$totaalPrijsValue = WC()->cart->total;
+				$cartInhoudOverzicht = array ();
+					
+				foreach ( WC()->cart->get_cart() as $cart_item ) {
+
+					$cartInhoudOverzicht[] = array(		
+			
+						$item_name = $cart_item['data']->get_title(), 
+						$variation = $cart_item['data']->get_attribute('Opties'),							
+						$price = $cart_item['data']->get_price(),
+						
+					);
+
+					
+				}		
+
+				?> 
+				<script>
+					var totaalPrijs = <?php echo json_encode($totaalPrijsValue, JSON_HEX_TAG); ?>;
+					var cartInhoud = <?php echo json_encode($cartInhoudOverzicht, JSON_HEX_TAG); ?>;
+				</script>
+			<? }
+
 			// Single add to cart script.
 			if ( $options['shop_single_ajax_add_to_cart'] ) {
 				wp_enqueue_script( 'skdd-single-add-to-cart' );
@@ -617,5 +647,12 @@ add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
 
 
 
+add_action( 'ea_new_app_from_customer', 'custom_callback_function', 10, 2 );
+
+function custom_callback_function() {
+	global $woocommerce;
+
+	$woocommerce->cart->empty_cart();
+}
 
 

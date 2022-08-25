@@ -559,6 +559,15 @@ if ( ! class_exists( 'SKDD' ) ) {
 				true
 			);
 
+			// Multi step checkout.
+			wp_register_script(
+				'skdd-appointments',
+				SKDD_THEME_URI . 'assets/js/woocommerce/appointments.js',
+				array(),
+				SKDD_version(),
+				true
+			);
+
 			if ( class_exists( 'woocommerce' ) && is_checkout() ) {
 				$wc_total = WC()->cart->get_totals();
 				$price    = (float) $wc_total['total'] - (float) $wc_total['discount_total'];
