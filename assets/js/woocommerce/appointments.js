@@ -38,3 +38,21 @@ document.addEventListener(
 		SKDDAppointmentData();
 	}
 );
+
+const checkoutOption = document.querySelectorAll('.option');
+
+checkoutOption.forEach(function(elem) {
+
+    elem.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.classList.add('active');
+        //mainMenu.classList.remove('visible');
+    });  
+
+});
+
+var SKDDoptionSelector = function() {
+	
+	addEventListener("click")
+
+}

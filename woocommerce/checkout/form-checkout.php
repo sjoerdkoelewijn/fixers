@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="column options">
 
-		<div class="option active">
+		<div class="option">
 
 			<h2 class="title">
 				<?php esc_html_e( 'Afspraak maken in de winkel', 'woocommerce' ); ?>

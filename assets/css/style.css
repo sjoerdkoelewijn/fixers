@@ -4455,7 +4455,7 @@ ul.inline li:last-of-type {
   align-items: center;
 }
 .woocommerce-checkout .afspraken_wrap .ea-standard .disabled .block {
-  display: none;
+  opacity: 0.7;
 }
 .woocommerce-checkout .afspraken_wrap .ea-standard .date .ui-datepicker {
   padding: 0;
@@ -4986,7 +4986,7 @@ button:hover svg path, button:focus svg path, form button:hover svg path, form b
 
 .ghostkit-button.ghostkit-button-sm {
   line-height: calc(var(--button-line-height) / 1.5);
-  padding: 0 15px;
+  padding: 0 30px;
   font-size: calc(var(--button-font-size) * 0.85);
 }
 @media (min-width: 480px) and (max-width: 1024px) {
@@ -6716,11 +6716,11 @@ form input:focus, form textarea:focus {
 
 .custom-shopping-cart:before {
   content: "";
-  width: 28px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   margin-top: -4px;
-  mask: url(../images/svg/shopping-basket-icon.svg);
-  -webkit-mask: url(../images/svg/shopping-basket-icon.svg);
+  mask: url(../images/svg/agenda-cart-icon.svg);
+  -webkit-mask: url(../images/svg/agenda-cart-icon.svg);
   background-color: var(--text-color);
   transition: background-color 0.5s ease;
 }
@@ -8790,9 +8790,7 @@ form.woocommerce-checkout {
 }
 .cart-sidebar-content .mini_cart_item img {
   max-width: 75px;
-  max-height: 75px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 100px;
 }
 
 @media (max-width: 599px) {
