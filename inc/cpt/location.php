@@ -7,15 +7,15 @@ function cpt_location() {
 	$options = SKDD_options( false );
 
 	if ( $options['cpt_location_has_archive'] ) {
-		$has_archive =	__( 'location', 'SKDD' );
+		$has_archive =	__( 'locaties', 'SKDD' );
 	} else {
 		$has_archive =	false;
 	}
 
 	if ( $options['cpt_location_has_tax'] ) {
-		$slug = __( 'location', 'SKDD' ) . '/' . '%tax_location%';
+		$slug = __( 'locaties', 'SKDD' ) . '/' . '%tax_location%';
 	} else {
-		$slug =	__( 'location', 'SKDD' );
+		$slug =	__( 'locaties', 'SKDD' );
 	}
 
 	$labels = array(
@@ -56,8 +56,8 @@ function cpt_location() {
 	);	
 
 	$args = array(
-			'label'                 => __( 'Location', 'SKDD' ),
-			'description'           => __( 'Location', 'SKDD' ),
+			'label'                 => __( 'Locaties', 'SKDD' ),
+			'description'           => __( 'Locaties', 'SKDD' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', ),
 			'hierarchical'          => false,
@@ -86,7 +86,7 @@ add_action( 'init', 'cpt_location', 10 );
 function cpt_location_taxonomy() { 
  
 	  $labels = array(
-		'name' => _x( 'Location categories', 'taxonomy general name', 'SKDD' ),
+		'name' => _x( 'Locaties categories', 'taxonomy general name', 'SKDD' ),
 		'singular_name' => _x( 'Location Category', 'taxonomy singular name', 'SKDD' ),
 		'search_items' =>  __( 'Search Categories', 'SKDD' ),
 		'all_items' => __( 'All Categories', 'SKDD' ),
@@ -107,7 +107,7 @@ function cpt_location_taxonomy() {
 		'show_admin_column' => true,
 		'query_var' 		=> true,
 		'show_in_rest'      => true,
-		'rewrite' 			=> array( 'slug' => __( 'location', 'SKDD' ) ),
+		'rewrite' 			=> array( 'slug' => __( 'locaties', 'SKDD' ) ),
 	  ));
 	 
 }

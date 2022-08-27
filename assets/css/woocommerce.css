@@ -84,6 +84,7 @@ address {
 @media (min-width: 280px) and (max-width: 479px) {
   .single-product .woocommerce-message {
     position: static;
+    width: 100%;
   }
 }
 
@@ -2567,6 +2568,13 @@ address {
     font-size: 12px;
   }
 }
+.woocommerce-checkout {
+  background: red;
+}
+.woocommerce-checkout .woocommerce-checkout-payment {
+  display: none;
+}
+
 .woocommerce-checkout .woocommerce {
   position: relative;
 }

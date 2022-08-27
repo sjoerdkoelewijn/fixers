@@ -228,6 +228,375 @@ ul.inline {
   clear: both;
 }
 
+
+.woocommerce-checkout {
+  background:#F5F7F8;
+
+  .site_header .site_header_inner {
+    background:#F5F7F8;
+  }
+
+  h1 {
+    font-size:2.8rem;
+  }
+
+  .afspraken_wrap {
+    position: relative;
+    margin-top:2vw;
+    display:flex;
+    justify-content:space-between;
+
+    .column {
+      width:46%;
+    }
+
+    .options {
+
+      .option {
+        margin-bottom:20px;
+        position: relative;
+        background:#ffffff;
+        padding:20px 30px 30px 90px;
+        border-radius:5px; 
+
+        max-height:140px;
+        overflow:hidden;
+
+        &:before {
+          content:'';
+          position:absolute;
+          left:35px;
+          top:42px;
+          width:24px;
+          height:24px;
+          background:var(--offset-color);
+          border:1px solid var(--theme-color);
+          border-radius:50px;
+        }
+
+        .title {
+          margin-bottom:0;
+          font-size:2.2rem;
+        }
+      }
+
+      .active {
+        border:1px solid var(--theme-color);
+
+        max-height:none;
+
+        &:after {
+          content:'';
+          position:absolute;
+          left:41px;
+          top:48px;
+          width:12px;
+          height:12px;
+          background:var(--theme-color);
+          border:1px solid var(--theme-color);
+          border-radius:50px;
+        }
+      }
+    }
+
+    .ea-standard {
+      width:100%;
+
+      .ea-label {
+        display:block;
+        text-align:left;
+      }
+
+      select {
+        background:#ffffff;
+        border:1px solid #CED4D7;
+        width:100%;
+        appearance: none;
+
+        &:before {
+          content: '';
+          mask:url(../images/svg/chevron-down.svg) no-repeat;
+          -webkit-mask:url(../images/svg/chevron-down.svg) no-repeat;
+          background-color:var(--heading-color);
+          margin-right:calc(var(--content-spacing) / 4);
+          width:23px;
+          height:12px;
+          z-index:10;
+          align-items: center;
+        }
+        
+      }
+
+      .disabled .block {
+        display: none;
+      }
+
+      .date {
+
+        .ui-datepicker {
+          padding:0;
+          margin-top:20px;
+        }
+
+        .ui-datepicker-prev, .ui-datepicker-next {
+          background-color:#092737;
+          width:16px;
+          height:16px;
+          cursor:pointer;
+          margin-top:13px;
+
+          &:hover {
+            background-color:var(--theme-color);
+          }
+        }
+
+        .ui-datepicker-prev {
+          mask:url(../images/svg/chevron-left.svg) no-repeat;
+          -webkit-mask:url(../images/svg/chevron-left.svg) no-repeat;
+        }
+
+        .ui-datepicker-next.ui-state-hover {          
+          background-color:var(--theme-color);
+        }
+
+        .ui-datepicker-prev.ui-state-disabled {
+          opacity:.2;
+
+          &:hover {
+            background-color:#092737;
+          }
+        }
+        
+        .ui-widget-header .ui-icon {
+          background:none;
+        }
+
+        .ui-datepicker-next {
+          mask:url(../images/svg/chevron-right.svg) no-repeat;
+          -webkit-mask:url(../images/svg/chevron-right.svg) no-repeat;
+        }
+
+        .ui-widget-content {
+          border:0;
+          background:none;
+        }
+
+        .ui-datepicker-header {
+          border:0;
+          background:#ffffff;
+          font-size:2.2rem;
+          font-weight:600;
+        }
+
+        thead {
+          th {
+            font-size:1.5rem;
+          }
+        }
+
+        td {
+          padding:3px;
+        }
+
+        .ui-state-default {
+          border:1px solid var(--theme-color);
+          border-radius:3px;
+          background:var(--offset-color);
+          font-size:1.8rem;
+          color:#092737;
+          text-align:center;
+          height:50px;
+          line-height: 40px;
+
+          &:hover {
+            border:1px solid var(--theme-color);
+            border-radius:3px;
+            background:var(--theme-color);
+            color:#ffffff;
+          }         
+
+        }
+
+        .ui-state-active {
+            border:1px solid var(--theme-color);
+            border-radius:3px;
+            background:var(--theme-color);
+            color:#ffffff;
+        }
+
+        .ui-state-disabled {
+          opacity:1;
+
+          .ui-state-default {
+            border:1px solid #CED4D7;
+            background:#F5F7F8;
+            color:#CED4D7;
+            
+            &:hover {
+              border:1px solid #CED4D7;
+              background:#F5F7F8;
+              color:#CED4D7;
+            }
+          } 
+
+        }
+
+      }
+
+      .time {
+        border:0;
+        margin-top:20px;
+
+        .time-value {
+          margin:3px;
+          border:1px solid var(--theme-color);
+          border-radius:3px;
+          background:var(--offset-color);
+          font-size:1.8rem;
+          color:#092737;
+          text-align:center;
+          height:50px;
+          line-height: 40px;
+          max-width:109px;
+
+          &:hover {
+            border:1px solid var(--theme-color);
+            border-radius:3px;
+            background:var(--theme-color);
+            color:#ffffff;
+          }
+        }
+
+        .time-disabled {
+          margin:3px;
+          border:1px solid #CED4D7;
+          border-radius:3px;
+          background:#F5F7F8;
+          font-size:1.8rem;
+          color:#CED4D7;
+          text-align:center;
+          height:50px;
+          line-height: 40px;
+          max-width:109px;
+        }
+
+        .selected-time {
+          border:1px solid var(--theme-color);
+          border-radius:3px;
+          background:var(--theme-color);
+          color:#ffffff;
+        }
+
+      }
+
+      .final {
+        margin-top:20px;
+        margin-bottom:2vw;
+
+        label {
+          display:block;
+          text-align:left;
+          margin-top:20px;
+        }
+
+        .error {
+          color:var(--theme-color);
+          margin-top:0;
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+
+        input {
+          width:100%;
+          border:1px solid #CED4D7;
+          background:#ffffff;
+        }
+
+        .section {
+          font-size:2.2rem;
+          font-weight:bold;
+          color:#092737;
+        }
+
+        .ea-cancel {
+          display:none;
+        }
+
+        .ea-submit {
+          font-size: var(--button-font-size);          
+        }
+
+        .row-service, .row-price {
+          display:none;
+        }
+        
+      }
+
+      .final.disabled {
+        display:none;
+      }
+    }
+
+    .kostenoverzicht {
+      position:fixed;
+      width:40%;
+      background:#ffffff;
+      border:1px solid #ffffff;
+      border-radius:5px;
+      padding:2vw;    
+      
+      .title {
+        margin-bottom:0;
+        font-size:2.2rem;
+      }
+
+      hr {
+        width:100%;
+        height:1px;
+        background:#CED4D7;
+      }
+
+      .cart_item {
+        display:flex;
+        justify-content:space-between;
+        padding:10px 10px 20px 10px;
+
+        .product-total {
+          font-weight:bold;
+        }
+      }
+
+      .order-total { 
+        display:flex;
+        justify-content:space-between;
+        border-top:1px solid #CED4D7;
+        padding:20px 10px;
+        text-align:right;
+
+        .includes_tax {
+          display: block;
+        }
+
+      }      
+      
+    }
+
+    
+
+  }
+
+
+  
+
+
+  
+  // TODO verwijderen uit PHP
+  .woocommerce-checkout-payment {
+    display:none;
+  }
+
+}
+
 // Remove outline select on Firefox.
 select:-moz-focusring{
   text-shadow: 0 0 0 var(--body-text-color);
@@ -1534,7 +1903,6 @@ form {
   }
 
 }
-
 
 
 /*************************** Search Results ****************************************************************************/
@@ -3194,59 +3562,6 @@ transform: translateX(0px);
 
 /*************************** Custom Colors  ****************************************************************************/
 
-.skdd-theme-color,
-.woocommerce-cart-form__contents tbody .product-subtotal,
-.woocommerce-checkout-review-order-table .order-total,
-.woocommerce-table--order-details .product-name a,
-.woocommerce-mini-cart__total .amount,
-.woocommerce-form-login-toggle .woocommerce-info a:hover,
-.woocommerce-form-coupon-toggle .woocommerce-info a:hover,
-.has-skdd-primary-color,
-.skdd-simple-subscribe-form input[type="submit"],
-.woocommerce-tabs li.active a,
-#secondary .widget .current-cat > span,
-.site-tools .header-search-icon:hover,
-.product-loop-meta .button:hover,
-.cart-sidebar-content .woocommerce-mini-cart__buttons a:not(.checkout):hover,
-.product-nav-item:hover > a,
-.product-nav-item .product-nav-item-price,
-.woocommerce-thankyou-order-received,
-.site-tools .tools-icon:hover,
-.tools-icon.my-account:hover > a,
-.multi-step-checkout-button[data-action="back"]:hover,
-.review-information-link:hover,
-.has-multi-step-checkout .multi-step-item,
-#secondary .chosen a,
-#secondary .chosen .count,
-.cart_totals .shop_table .woocommerce-Price-amount,
-#order_review .shop_table .woocommerce-Price-amount,
-a:hover{
-  color: var(--theme-color);
-}
-
-.onsale,
-.pagination li .page-numbers.current,
-.woocommerce-pagination li .page-numbers.current,
-.tagcloud a:hover,
-.price_slider_wrapper .ui-widget-header,
-.price_slider_wrapper .ui-slider-handle,
-.cart-sidebar-head .shop-cart-count,
-.wishlist-item-count,
-.shop-cart-count,
-.sidebar-menu .primary-navigation a:before,
-.woocommerce-message,
-.woocommerce-info,
-#scroll-to-top,
-.woocommerce-store-notice,
-.skdd-simple-subscribe-form input[type="submit"]:hover,
-.has-multi-step-checkout .multi-step-item .item-text:before,
-.has-multi-step-checkout .multi-step-item:before,
-.has-multi-step-checkout .multi-step-item:after,
-.has-multi-step-checkout .multi-step-item.active:before,
-.skdd-single-product-stock .skdd-single-product-stock-progress-bar {
-  background-color: var(--theme-color);  
-}
-
 
 
 
@@ -3537,7 +3852,7 @@ a:hover{
 
 .mini-cart-product-infor .mini-cart-product-qty {
   cursor: pointer;
-  border: 1px solid var(--offset-color);
+  //border: 1px solid var(--offset-color);
   width: 30px;
   font-size: 10px;
   user-select: none;
