@@ -232,6 +232,10 @@ ul.inline {
 .woocommerce-checkout {
   background:#F5F7F8;
 
+  #ui-datepicker-div {
+    display:none;
+  }
+
   .site_header .site_header_inner {
     background:#F5F7F8;
   }
@@ -252,32 +256,37 @@ ul.inline {
 
     .options {
 
-      .option {
+      .checkout_option {
+        border:1px solid #ffffff;
         margin-bottom:20px;
         position: relative;
         background:#ffffff;
-        padding:20px 30px 30px 90px;
+        padding:20px 30px 30px 90px; 
         border-radius:5px; 
 
         max-height:140px;
         overflow:hidden;
-
-        &:before {
-          content:'';
-          position:absolute;
-          left:35px;
-          top:42px;
-          width:24px;
-          height:24px;
-          background:var(--offset-color);
-          border:1px solid var(--theme-color);
-          border-radius:50px;
-        }
+        transition: all 1s ease;
 
         .title {
           margin-bottom:0;
           font-size:2.2rem;
-        }
+          cursor:pointer;
+        
+          &:before {
+            content:'';
+            position:absolute;
+            left:35px;
+            top:42px;
+            width:24px;
+            height:24px;
+            background:var(--offset-color);
+            border:1px solid var(--theme-color);
+            border-radius:50px;
+          }
+
+        }        
+
       }
 
       .active {
@@ -307,24 +316,31 @@ ul.inline {
         text-align:left;
       }
 
-      select {
-        background:#ffffff;
-        border:1px solid #CED4D7;
-        width:100%;
-        appearance: none;
+      .step:first-of-type {
 
         &:before {
-          content: '';
+          content:'X';
           mask:url(../images/svg/chevron-down.svg) no-repeat;
           -webkit-mask:url(../images/svg/chevron-down.svg) no-repeat;
           background-color:var(--heading-color);
           margin-right:calc(var(--content-spacing) / 4);
           width:23px;
           height:12px;
-          z-index:10;
-          align-items: center;
+          z-index:1;
+          position:absolute;
+          right:11px;
+          top:70px;
+          pointer-events: none;
         }
-        
+      }
+
+      select {
+        position:relative;
+        background:#ffffff;
+        border:1px solid #CED4D7;
+        width:100%;
+        appearance: none;
+ 
       }
 
       .disabled .block {
@@ -3172,11 +3188,10 @@ form {
 
   &:before {
     content:'';
-    width:22px;
-    height:22px;
-    margin-top:-4px;
-    mask:url(../images/svg/agenda-cart-icon.svg);
-    -webkit-mask:url(../images/svg/agenda-cart-icon.svg);
+    width:26px;
+    height:26px;
+    mask:url(../images/svg/agenda-cart-icon.svg) no-repeat;
+    -webkit-mask:url(../images/svg/agenda-cart-icon.svg) no-repeat;
     background-color:var(--text-color);
     transition: background-color .5s ease;
   }  

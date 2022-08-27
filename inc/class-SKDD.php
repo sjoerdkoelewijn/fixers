@@ -401,6 +401,40 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'after_widget'  => '</div>',
 			);
 
+			$sidebar_args['checkout_afspraak'] = array(
+				'name'          => __( 'Checkout - Afspraak maken', 'SKDD' ),
+				'id'            => 'checkout_afspraak',
+				'description'   => __( 'Optie op de checkout pagina', 'SKDD' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			);
+
+			$sidebar_args['checkout_ophalen'] = array(
+				'name'          => __( 'Checkout - Ophalen', 'SKDD' ),
+				'id'            => 'checkout_ophalen',
+				'description'   => __( 'Optie op de checkout pagina', 'SKDD' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			);
+
+			$sidebar_args['checkout_versturen'] = array(
+				'name'          => __( 'Checkout - Zelf versturen', 'SKDD' ),
+				'id'            => 'checkout_versturen',
+				'description'   => __( 'Optie op de checkout pagina', 'SKDD' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			);
+
+			$sidebar_args['checkout_winkel'] = array(
+				'name'          => __( 'Checkout - Winkel zonder afspraak', 'SKDD' ),
+				'id'            => 'checkout_winkel',
+				'description'   => __( 'Optie op de checkout pagina', 'SKDD' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			);
+
+
+
 			$options = SKDD_options( false );
 
 			if ( $options['header_mega_menu'] ) {

@@ -39,20 +39,25 @@ document.addEventListener(
 	}
 );
 
-const checkoutOption = document.querySelectorAll('.option');
 
-checkoutOption.forEach(function(elem) {
 
-    elem.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.classList.add('active');
-        //mainMenu.classList.remove('visible');
-    });  
 
-});
+var checkoutOption = document.getElementsByClassName('checkout_option');
+var checkoutOptionHeading = document.getElementsByClassName('checkout_option_heading');
 
-var SKDDoptionSelector = function() {
+for (let i = 0; i < checkoutOption.length; i++) {
+	checkoutOptionHeading[i].addEventListener('click', toggleItem, false);
+}
 	
-	addEventListener("click")
 
+
+function toggleItem() {
+	console.log('clicked');
+	var itemClass = this.parentNode.className;
+	for (let i = 0; i < checkoutOption.length; i++) {
+		checkoutOption[i].className = 'checkout_option close';
+	}
+	if (itemClass == 'checkout_option close') {
+		this.parentNode.className = 'checkout_option active';
+	}
 }

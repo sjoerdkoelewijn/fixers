@@ -2053,12 +2053,6 @@ footer#colophon {
   line-height: 36px;
 }
 
-.widget select {
-  width: 100%;
-  height: 40px;
-  border-radius: 0;
-}
-
 .widget-area .widget {
   margin-bottom: 40px;
 }
@@ -2732,4 +2726,4 @@ footer#colophon {
 }
 .blog-layout-zigzag .site-main .loop-post-inner {
   flex-grow: 1;
-}
+}/*# sourceMappingURL=original.css.map */

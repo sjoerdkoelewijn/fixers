@@ -31,52 +31,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="column options">
 
-		<div class="option">
+		<div class="checkout_option close">
 
-			<h2 class="title">
-				<?php esc_html_e( 'Afspraak maken in de winkel', 'woocommerce' ); ?>
-			</h2>
 
-			<p>
-				<?php esc_html_e( 'Vooraf aanmelden en tijd besparen aan de balie.', 'woocommerce' ); ?>
-			</p>
-
-			<?php echo do_shortcode('[ea_standard]'); ?>
-		</div>
-
-		<div class="option">
-
-			<h2 class="title">
-				<?php esc_html_e( 'Gratis laten ophalen', 'woocommerce' ); ?>
-			</h2>
-
-			<p>
-				<?php esc_html_e( 'Plan een gratis ophaalafspraak in. Kies zelf de datum en dagdeel. ', 'woocommerce' ); ?>
-			</p>
+			<?php dynamic_sidebar( 'checkout_afspraak' ); ?>
 
 		</div>
 
-		<div class="option">
+		<div class="checkout_option close">
 
-			<h2 class="title">
-				<?php esc_html_e( 'Gratis zelf opsturen', 'woocommerce' ); ?>
-			</h2>
+		
 
-			<p>
-				<?php esc_html_e( 'Plan een gratis ophaalafspraak in. Kies zelf de datum en dagdeel.', 'woocommerce' ); ?>
-			</p>
+			<?php dynamic_sidebar( 'checkout_ophalen' ); ?>
+
+	
 
 		</div>
 
-		<div class="option">
+		<div class="checkout_option close">
 
-			<h2 class="title">
-				<?php esc_html_e( 'Langskomen in de winkel zonder afspraak', 'woocommerce' ); ?>
-			</h2>
+			<?php dynamic_sidebar( 'checkout_versturen' ); ?>			
 
-			<p>
-				<?php esc_html_e( 'Het kan zijn dat je niet direct geholpen kan worden', 'woocommerce' ); ?>
-			</p>
+		</div>
+
+		<div class="checkout_option close">	
+
+			<?php dynamic_sidebar( 'checkout_winkel' ); ?>
 
 		</div>
 
