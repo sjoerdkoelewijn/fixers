@@ -433,6 +433,14 @@ if ( ! class_exists( 'SKDD' ) ) {
 				'after_widget'  => '',
 			);
 
+			$sidebar_args['checkout_onder_kostenoverzicht'] = array(
+				'name'          => __( 'Checkout - Onder kostenoverzicht', 'SKDD' ),
+				'id'            => 'checkout_onder_kostenoverzicht',
+				'description'   => __( 'Onder het kosten blok op de checkout pagina', 'SKDD' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			);
+
 
 
 			$options = SKDD_options( false );

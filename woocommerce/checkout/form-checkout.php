@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 
-		
+		<?php dynamic_sidebar( 'checkout_onder_kostenoverzicht' ); ?>
 
 	</div>
 
