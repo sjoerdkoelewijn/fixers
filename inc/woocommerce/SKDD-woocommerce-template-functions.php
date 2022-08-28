@@ -318,10 +318,12 @@ if ( ! function_exists( 'SKDD_mini_cart' ) ) {
 
 			<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
-			<p class="woocommerce-mini-cart__buttons buttons"><?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p>
+			<p class="woocommerce-mini-cart__buttons buttons">
+				<?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?>
+			</p>
 
-			<?php
-			do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
+			<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
+			
 		} else {
 			?>
 			<p class="woocommerce-mini-cart__empty-message"><?php esc_html_e( 'No products in the cart.', 'SKDD' ); ?></p>

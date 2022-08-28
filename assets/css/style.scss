@@ -912,41 +912,6 @@ button, form button,  .button, .forminator-button, .ghostkit-button, .wp-block-b
 
 
 
-
-.button,
-.woocommerce-widget-layered-nav-dropdown__submit,
-.form-submit .submit,
-.elementor-button-wrapper .elementor-button,
-.has-skdd-contact-form input[type="submit"],
-#secondary .widget a.button,
-.product-loop-meta.no-transform .button,
-.product-loop-meta.no-transform .added_to_cart{
-  //background-color: var(--button-background-color);
-  //color: var(--button-text-color);
-  //border-radius: var(--button-border-radius);
-}
-
-.cart:not(.elementor-menu-cart__products) .quantity,
-.loop-add-to-cart-on-image+.added_to_cart{
-  //border-radius: var(--button-border-radius);
-}
-
-.button:hover,
-.single_add_to_cart_button.button:not(.skdd-buy-now):hover,
-.woocommerce-widget-layered-nav-dropdown__submit:hover,
-#commentform input[type="submit"]:hover,
-.form-submit .submit:hover,
-.forminator-button:hover,
-#secondary .widget a.button:hover,
-.skdd-contact-form input[type="submit"]:hover,
-.loop-add-to-cart-on-image+.added_to_cart:hover,
-.product-loop-meta.no-transform .button:hover,
-.product-loop-meta.no-transform .added_to_cart:hover{
-  //background-color: var(--button-hover-background-color);
-  //color: var(--button-hover-text-color);
-}
-
-
 .ghostkit-button {	
   font-family:var(--button-font-family);
   font-weight:var(--button-font-weight);
@@ -3076,6 +3041,7 @@ form {
   position: absolute;
   top: -7px;
   right: -10px;
+  background:var(--theme-color);
 }
 
 .my-account {
@@ -3189,8 +3155,8 @@ form {
 
   &:before {
     content:'';
-    width:28px;
-    height:28px;
+    width:32px;
+    height:32px;
     mask:url(../images/svg/agenda-cart-icon.svg) no-repeat;
     -webkit-mask:url(../images/svg/agenda-cart-icon.svg) no-repeat;
     background-color:var(--text-color);
@@ -4361,17 +4327,6 @@ form.woocommerce-checkout {
 } 
 
 .site-main {
-
-  .post, .portfolio, .service, .team, .knowledge {
-    //border-bottom: 1px solid var(--offset-color);
-    //padding-bottom: 74px;
-  }
-  
-} 
-
-.site-main .post + .post {
-  //margin-top: 80px;
-}
 
 
 .post, .portfolio, .service, .team, .knowledge, .page {

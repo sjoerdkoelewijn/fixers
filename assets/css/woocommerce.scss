@@ -89,12 +89,18 @@
 
 .single-product {
 
-  .single_variation_wrap {  
+  .quantity {
+    display:none !important;
+  }  
 
-    .quantity {
+  .cart {
+    margin-top:20px;
+  }
+
+  .product-type-variable {
+    .price {
       display:none !important;
-    }    
-
+    }
   }
 
   .woocommerce-message {
@@ -1486,36 +1492,9 @@
 
 .single-product {
 
-  .woocommerce-variation-add-to-cart {    
-    position:relative;
-    margin-bottom:50px;
-
-    @include phone {
-      position:fixed;
-      background:var(--theme-color);
-      padding:20px;
-        bottom:0;
-        left:0;        
-        width:100vw; 
-        z-index:20;
-        margin:0;
-    }
-
-    .single_add_to_cart_button {
-      margin-top:-100px;
-      right:5vw;      
-      position:absolute;
-      z-index:100;
-      background-color:var(--theme-color) !important;
-      padding-left:55px;   
-      
-      @include phone {
-        position:relative;
-        margin:0;
-        right:0;
-        color:var(--heading-color) !important;
-        background-color:var(--background-color) !important;
-      }
+  .single_add_to_cart_button {
+    background-color:var(--theme-color) !important;
+      padding-left:55px;
 
       &:hover {
         background-color:var(--heading-color) !important;
@@ -1536,9 +1515,43 @@
         }
         
       }
+  }
+  
+
+  .woocommerce-variation-add-to-cart {    
+    position:relative;
+    margin-bottom:50px;
+
+    @include phone {
+      position:fixed;
+      background:var(--theme-color);
+      padding:20px;
+        bottom:0;
+        left:0;        
+        width:100vw; 
+        z-index:20;
+        margin:0;
+    }
+
+    .single_add_to_cart_button {
+      margin-top:-100px;
+      right:5vw;      
+      position:absolute;
+      z-index:100;
+      
+      @include phone {
+        position:relative;
+        margin:0;
+        right:0;
+        color:var(--heading-color) !important;
+        background-color:var(--background-color) !important;
+      }
+     
     }        
   
   }
+
+
 
   .variations_form {
     padding:0 0 0 5px;
@@ -1635,7 +1648,10 @@
 
 .product-summary .price {
   font-size: 24px;
-  margin-bottom: 18px;
+  margin:0 30px 18px 0;
+  display:inline;
+  font-weight:bold;
+  line-height: 50px;
 }
 
 .wc-block-grid__products {
@@ -1728,6 +1744,11 @@
 
 
 
+.product-type-grouped {
+  .single_add_to_cart_button {
+    display:none;
+  }
+}
 
 .woocommerce-grouped-product-list {
   display: flex;
@@ -1735,8 +1756,6 @@
   flex-flow: row wrap;  
   margin:0 0 60px 0;  
 }
-
-
 
 
 .woocommerce-grouped-product-list-item {

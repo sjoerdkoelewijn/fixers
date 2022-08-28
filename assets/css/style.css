@@ -6614,6 +6614,7 @@ form input:focus, form textarea:focus {
   position: absolute;
   top: -7px;
   right: -10px;
+  background: var(--theme-color);
 }
 
 .my-account {
@@ -6720,8 +6721,8 @@ form input:focus, form textarea:focus {
 
 .custom-shopping-cart:before {
   content: "";
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   mask: url(../images/svg/agenda-cart-icon.svg) no-repeat;
   -webkit-mask: url(../images/svg/agenda-cart-icon.svg) no-repeat;
   background-color: var(--text-color);

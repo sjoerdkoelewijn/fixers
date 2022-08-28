@@ -63,8 +63,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					} else {
 						$price_html = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
 					}
-					 
-
+					
 					switch ( $column_id ) {						
 						case 'label':
 							$custom_title = $grouped_product_child->get_name(); 
