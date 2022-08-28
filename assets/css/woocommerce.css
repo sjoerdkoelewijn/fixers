@@ -4048,6 +4048,13 @@ ul.products li.product .product-loop-image-wrapper .tinvwl_add_to_wishlist_butto
   pointer-events: none;
 }
 
+.woocommerce-mini-cart__buttons .button {
+  display: none !important;
+}
+.woocommerce-mini-cart__buttons .button.checkout {
+  display: flex !important;
+}
+
 @media (min-width: 767px) {
   .download-file .button {
     display: inline-block;

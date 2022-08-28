@@ -1489,7 +1489,6 @@
     margin: 20px 0;
   }
   
-
 .single-product {
 
   .single_add_to_cart_button {
@@ -4359,6 +4358,15 @@
   
   .woocommerce-mini-cart-item.woosb-item-child .input-text {
     pointer-events: none;
+  }
+
+  .woocommerce-mini-cart__buttons {
+    .button {
+      display:none !important;
+    }
+    .button.checkout {
+      display:flex !important;
+    }
   }
   
    
