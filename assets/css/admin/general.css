@@ -24,6 +24,10 @@ a:focus {
   opacity:.6;
 }
 
+.skdd-reusable-instances {
+  height:120px;
+  overflow:hidden;
+}
 
 /* Admin notice */
 .skdd-options-notice {

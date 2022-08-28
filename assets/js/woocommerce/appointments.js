@@ -26,8 +26,8 @@ var SKDDAppointmentData = function() {
 	
 
 
-	const reparaties_input_forminator = document.querySelector('#forminator-module-4323');
-	reparaties_input_forminator.querySelector('#textarea-2').value = cartInhoud;
+	const reparaties_input_forminator = document.getElementsByClassName('forminator-custom-form');
+	reparaties_input_forminator.getElementById('#textarea-2').value = cartInhoud;
 	
 }
 
@@ -51,7 +51,6 @@ for (let i = 0; i < checkoutOption.length; i++) {
 
 
 function toggleItem() {
-	console.log('clicked');
 	var itemClass = this.parentNode.className;
 	for (let i = 0; i < checkoutOption.length; i++) {
 		checkoutOption[i].className = 'checkout_option close';

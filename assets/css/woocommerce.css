@@ -1480,11 +1480,11 @@ address {
 }
 .single-product .product_info_wrap .product_image_wrap {
   position: absolute;
-  right: 16vw;
-  margin-top: -10vh;
+  right: 17vw;
+  margin-top: -1vh;
 }
 .single-product .product_info_wrap .product_image_wrap img {
-  width: 20vw;
+  width: 17vw;
   max-width: 100%;
 }
 @media (min-width: 280px) and (max-width: 479px) {

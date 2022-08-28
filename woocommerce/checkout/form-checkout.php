@@ -79,9 +79,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 
-		</div>
+			<?php dynamic_sidebar( 'checkout_onder_kostenoverzicht' ); ?>
 
-		<?php dynamic_sidebar( 'checkout_onder_kostenoverzicht' ); ?>
+		</div>		
 
 	</div>
 
