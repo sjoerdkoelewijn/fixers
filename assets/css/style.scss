@@ -248,6 +248,7 @@ ul.inline {
   .afspraken_wrap {
     position: relative;
     margin-top:2vw;
+    margin-bottom:2vw;
     display:flex;
     justify-content:space-between;
 
@@ -555,8 +556,8 @@ ul.inline {
     }
 
     .kostenoverzicht {
-      position:fixed;
-      width:40%;
+      //position:fixed;
+      width:100%;
       background:#ffffff;
       border:1px solid #ffffff;
       border-radius:5px;
