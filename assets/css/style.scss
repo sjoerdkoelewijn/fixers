@@ -2573,11 +2573,21 @@ form {
         margin:0 auto;  
         background:var(--header-background-color);
         height: var(--header-max-height);
-        max-width: 99vw;     
+        //max-width: 99vw;     
         
         @include tablet-down {
           height: var(--header-max-height-tablet); 
           //padding:var(--content-spacing);
+
+          .site-branding {
+            order: 2;
+          }          
+          .wrap-toggle-sidebar-menu {
+            order: 1;
+          }
+          .site-tools {
+            order: 3;
+          }
         }
 
         @include phone {
@@ -2590,7 +2600,7 @@ form {
           height: var(--header-max-height);  
 
           @include tablet {
-            height: var(--header-max-height-tablet); 
+            height: var(--header-max-height-tablet);
           }
         
           @include phone {

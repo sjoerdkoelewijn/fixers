@@ -1588,7 +1588,7 @@ hr {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 20px 0;
+  margin: 0;
   table-layout: fixed;
   max-width: 100%;
 }
@@ -6207,11 +6207,19 @@ form input:focus, form textarea:focus {
   margin: 0 auto;
   background: var(--header-background-color);
   height: var(--header-max-height);
-  max-width: 99vw;
 }
 @media (max-width: 1023px) {
   .site_header .site_header_inner {
     height: var(--header-max-height-tablet);
+  }
+  .site_header .site_header_inner .site-branding {
+    order: 2;
+  }
+  .site_header .site_header_inner .wrap-toggle-sidebar-menu {
+    order: 1;
+  }
+  .site_header .site_header_inner .site-tools {
+    order: 3;
   }
 }
 @media (min-width: 280px) and (max-width: 479px) {
