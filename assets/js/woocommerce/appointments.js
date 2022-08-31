@@ -23,9 +23,6 @@ var SKDDAppointmentData = function() {
 	forminator.querySelectorAll('#textarea-2').value = cartInhoudInnerHTML;	
 
 	reparaties_input.querySelector('.custom-field[name="prijs"').value = totaalPrijs;
-
-	const reparaties_input_forminator = document.getElementsByClassName('forminator-custom-form');
-	reparaties_input_forminator.getElementById('#textarea-2').value = cartInhoud;
 	
 }
 
