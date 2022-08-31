@@ -13,18 +13,16 @@
 // Multi step checkout.
 var SKDDAppointmentData = function() {
 
-	
-
 	const reparaties_input = document.querySelector('.ea-standard');
-	reparaties_input.querySelector('.custom-field[name="description"').value = cartInhoud;
-	
+	const forminator = document.querySelector('.forminator-custom-form');
 
+	const cartInhoudInnerHTML = document.querySelector('.woocommerce-checkout-review-order-table').innerText;
+	  
+	reparaties_input.querySelector('.custom-field[name="description"').value = cartInhoudInnerHTML;
 
-	const prijs_input = document.querySelector('.ea-standard');
-	prijs_input.querySelector('.custom-field[name="prijs"').value = totaalPrijs;
-	
-	
+	forminator.querySelectorAll('#textarea-2').value = cartInhoudInnerHTML;	
 
+	reparaties_input.querySelector('.custom-field[name="prijs"').value = totaalPrijs;
 
 	const reparaties_input_forminator = document.getElementsByClassName('forminator-custom-form');
 	reparaties_input_forminator.getElementById('#textarea-2').value = cartInhoud;
