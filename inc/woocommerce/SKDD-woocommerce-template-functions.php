@@ -1340,3 +1340,212 @@ function SKDD_change_tabs_order( $tabs ) {
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+function custom_product_tabs( $tabs) {
+
+	$tabs['minmax'] = array(
+		'label'		=> __( 'Min Max Product', 'woocommerce' ),
+		'target'	=> 'minmax_options',
+		'class'		=> array( 'show_if_min_max' ),
+// 		'priority'	=> 55, // Not yet
+	);
+
+	// Code to reposition
+	$insert_at_position = 2; // This can be changed
+	return $tabs;
+
+}
+add_filter( 'woocommerce_product_data_tabs', 'custom_product_tabs' );
+
+
+/**
+ * Contents of the gift card options product tab.
+ */
+function minmax_options_product_tab_content() {
+
+	global $post;
+
+	// Note the 'id' attribute needs to match the 'target' parameter set above
+	?><div id='minmax_options' class='panel woocommerce_options_panel'><?php
+
+		?><div class='options_group'><?php
+
+			woocommerce_wp_checkbox( array(
+				'id' 			=> '_add_max_price',
+				'label' 		=> __( 'Toon vanaf prijs', 'woocommerce' ),
+				'desc_tip' 		=> true,
+				'description'	=> __( 'Laat zien dat dit een vanaf prijs is', 'woocommerce' ),
+			) );
+
+			woocommerce_wp_text_input( array(
+				'id'				=> '_max_prijs',
+				'label'				=> __( 'Maximale prijs van reparatie', 'woocommerce' ),
+				'desc_tip'			=> 'true',
+				'description'		=> __( 'Wanneer je hier een getal invoert zal er ook een maximale prijs getoond worden.', 'woocommerce' ),
+				'type' 				=> 'number',
+				'custom_attributes'	=> array(
+					'min'	=> '1',
+					'step'	=> '1',
+				),
+			) );
+
+			?>
+		</div>
+
+	</div><?php
+
+}
+add_action( 'woocommerce_product_data_panels', 'minmax_options_product_tab_content' );
+
+
+/**
+ * Save the custom fields.
+ */
+function save_minmax_option_fields( $post_id ) {
+
+	$allow_personal_message = isset( $_POST['_add_max_price'] ) ? 'yes' : 'no';
+	update_post_meta( $post_id, '_add_max_price', $allow_personal_message );
+
+	if ( isset( $_POST['_max_prijs'] ) ) :
+		update_post_meta( $post_id, '_max_prijs', abs( $_POST['_max_prijs'] ) );
+	endif;
+
+	$is_min_max = isset( $_POST['_min_max'] ) ? 'yes' : 'no';
+	update_post_meta( $post_id, '_min_max', $is_min_max );
+
+}
+add_action( 'woocommerce_process_product_meta_simple', 'save_minmax_option_fields'  );
+add_action( 'woocommerce_process_product_meta_variable', 'save_minmax_option_fields'  );
+
+
+/**
+ * Add a bit of style
+ */
+function wcpp_custom_style() {
+
+	?><style>
+		#woocommerce-product-data ul.wc-tabs li.minmax_options a:before { font-family: WooCommerce; content: '\e600'; }
+	</style>
+
+	<script>
+		jQuery( document ).ready( function( $ ) {
+
+			$( 'input#_min_max' ).change( function() {
+				var is_min_max = $( 'input#_min_max:checked' ).size();
+
+				$( '.show_if_min_max' ).hide();
+				$( '.hide_if_min_max' ).hide();
+
+				if ( is_min_max ) {
+					$( '.hide_if_min_max' ).hide();
+				}
+				if ( is_min_max ) {
+					$( '.show_if_min_max' ).show();
+				}
+			});
+			$( 'input#_min_max' ).trigger( 'change' );
+		});
+	</script><?php
+
+}
+add_action( 'admin_head', 'wcpp_custom_style' );
+
+
+/**
+ * Add 'Min Max' product option
+ */
+function add_min_max_product_option( $product_type_options ) {
+
+	$product_type_options['min_max'] = array(
+		'id'            => '_min_max',
+		'wrapper_class' => 'show_if_simple show_if_variable',
+		'label'         => __( 'Min Max', 'woocommerce' ),
+		'description'   => __( 'Hiermee kun je een prijs schatting toevoegen aan een product', 'woocommerce' ),
+		'default'       => 'no'
+	);
+
+	return $product_type_options;
+
+}
+add_filter( 'product_type_options', 'add_min_max_product_option' );
+
+
+
+
+function output_custom_woocommerce_fields($price) {
+	
+	$toon_max_prijs = get_post_meta( get_the_ID(), '_add_max_price', true );
+	$max_prijs        = get_post_meta( get_the_ID(), '_max_prijs', true );
+
+	$max_prijs_string = sprintf( __( ' tot €%.2f', 'woocommerce' ), abs( $max_prijs ) );
+
+	?>
+	<?php
+
+		if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
+			
+			return __( 'Vanaf ', 'SKDD' ) . $price . $max_prijs_string;
+
+		} elseif ( 'yes' === $toon_max_prijs ) {	
+
+			return __( 'Vanaf ', 'SKDD' ) . $price;
+			
+		} else {
+
+			return $price;
+		
+		};
+
+		?>
+	<?php
+
+
+
+}
+
+add_filter( 'woocommerce_get_price_html', 'output_custom_woocommerce_fields' );
+add_filter( 'woocommerce_cart_item_price', 'output_custom_woocommerce_fields' );
+
+
+function woocommerce_custom_fields_add_cart_item_meta( $cart_item_data, $product_id, $variation_id ) {
+
+	$toon_max_prijs = get_post_meta( $product_id, '_add_max_price', true );
+	$max_prijs        = get_post_meta( $product_id, '_max_prijs', true );
+
+	if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
+
+		$cart_item_data['max_price'] = abs( get_post_meta( $product_id, '_max_prijs', true ) );
+
+		return $cart_item_data;
+
+	} 
+
+}
+add_filter( 'woocommerce_add_cart_item_data', 'woocommerce_custom_fields_add_cart_item_meta', 10, 3 );
+
+/**
+ * Display custom fields in the cart
+ */
+function woocommerce_custom_fields_display_meta_in_cart( $meta, $cart_item ) {
+
+	if ( isset( $cart_item['max_price'] ) ) :
+		$meta[] = array(
+			'name' 	=> __( 'Maximale reparatie kosten ', 'woocommerce' ),
+			'value' => __( '€', 'woocommerce' ) . $cart_item['max_price'],
+		);
+	endif;
+
+	return $meta;
+
+}
+add_filter( 'woocommerce_get_item_data', 'woocommerce_custom_fields_display_meta_in_cart', 10, 2 );

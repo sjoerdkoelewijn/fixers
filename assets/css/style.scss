@@ -582,6 +582,26 @@ ul.inline {
         .product-total {
           font-weight:bold;
         }
+
+        dl.variation {
+          margin-top:-8px;
+        }
+
+        dt.variation-Maximalereparatiekosten {
+          float:left;
+          font-weight: 400;
+          font-size:16px;
+          line-height: 20px;
+        }
+
+        dd.variation-Maximalereparatiekosten p{
+          float:left;
+          font-weight: 400;
+          font-size:16px;
+          line-height: 20px;
+          margin-left:5px;
+        }
+
       }
 
       .order-total { 
@@ -594,6 +614,7 @@ ul.inline {
         .includes_tax {
           display: block;
         }
+        
 
       }      
       
@@ -5577,6 +5598,14 @@ left:20px;
     overflow-x: hidden;
     height: -webkit-calc( 100% - 210px);
     height: calc( 100% - 210px);
+  
+    .variation-Maximalekosten {
+      p {
+        font-size:12px;
+        font-weight:400;
+        line-height:19px;
+      }
+    }
   }
   
   @media (max-width: 599px) {
@@ -5665,6 +5694,13 @@ left:20px;
   .cart-sidebar-content .variation dd {
     float: left;
     line-height: 18px;
+
+    p {
+      font-size:13px;
+      font-weight:400;
+      line-height: 18px;
+    }
+    
   }
   
   .cart-sidebar-content .variation dt {

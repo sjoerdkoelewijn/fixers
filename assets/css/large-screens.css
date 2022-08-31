@@ -46,8 +46,8 @@
 }
 @media (min-width: 768px) and (max-width: 1440px) {
   .main-navigation .primary-navigation > .menu-item > a {
-    margin-left: 7px;
-    margin-right: 7px;
+    margin-left: 14px;
+    margin-right: 14px;
   }
 }
 @media (max-width: 1023px) {

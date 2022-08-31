@@ -4648,6 +4648,22 @@ ul.inline li:last-of-type {
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item .product-total {
   font-weight: bold;
 }
+.woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item dl.variation {
+  margin-top: -8px;
+}
+.woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item dt.variation-Maximalereparatiekosten {
+  float: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item dd.variation-Maximalereparatiekosten p {
+  float: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 5px;
+}
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .order-total {
   display: flex;
   justify-content: space-between;
@@ -8720,6 +8736,11 @@ form.woocommerce-checkout {
   overflow-x: hidden;
   height: calc(100% - 210px);
 }
+.cart-sidebar-content .variation-Maximalekosten p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+}
 
 @media (max-width: 599px) {
   .cart-sidebar-content {
@@ -8800,6 +8821,12 @@ form.woocommerce-checkout {
 .cart-sidebar-content .variation dt,
 .cart-sidebar-content .variation dd {
   float: left;
+  line-height: 18px;
+}
+.cart-sidebar-content .variation dt p,
+.cart-sidebar-content .variation dd p {
+  font-size: 13px;
+  font-weight: 400;
   line-height: 18px;
 }
 
