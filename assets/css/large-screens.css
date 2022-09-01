@@ -188,6 +188,7 @@
   top: var(--header-max-height);
   z-index: 5;
   transform: translateY(0px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 1023px) {
   .main-navigation .primary-navigation .menu-item:hover > .sub-menu {

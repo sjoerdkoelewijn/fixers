@@ -222,6 +222,7 @@
     z-index: 5;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 
     @include tablet-down {
         top:var(--header-max-height-tablet); 
