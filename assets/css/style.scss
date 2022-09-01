@@ -14,7 +14,8 @@
 
 /*************************** Global Styles ****************************************************************************/
 
-html {    
+html {  
+  content-visibility: auto;  
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -250,10 +251,19 @@ ul.inline {
     margin-top:2vw;
     margin-bottom:2vw;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-between;    
+
+    @include tablet-down {
+      flex-direction: column;
+    }
 
     .column {
-      width:46%;
+      min-width:46%;
+      max-width:49%;
+      
+      @include tablet-down{
+        max-width:100%;
+      }
     }
 
     .options {
@@ -265,15 +275,35 @@ ul.inline {
         background:#ffffff;
         padding:20px 50px 30px 90px; 
         border-radius:5px; 
-
-        max-height:140px;
+        max-height: 140px;
         overflow:hidden;
         transition: all 1s ease;
 
+        @include small-desktop {
+          padding:10px 30px 15px 65px;
+          
+          p {
+            font-size:90%;
+            line-height: 26px;
+          }
+        }
+
+        @include tablet-down {
+          padding:10px 30px 15px 65px;          
+        }
+        
         .title {
-          margin-bottom:0;
+          margin:15px 0 0 0;
           font-size:2.2rem;
           cursor:pointer;
+
+          @include tablet-down {
+            font-size:2rem;         
+          }
+
+          @include phone{
+            font-size:1.8rem;
+          }
         
           &:before {
             content:'';
@@ -285,6 +315,20 @@ ul.inline {
             background:var(--offset-color);
             border:1px solid var(--theme-color);
             border-radius:50px;
+
+            @include small-desktop {
+              left:24px;
+              top:30px;
+            }
+
+            @include tablet-down {
+              left:24px;
+              top:30px;
+              width:20px;
+              height:20px;
+            }
+
+    
           }
 
         }        
@@ -301,17 +345,36 @@ ul.inline {
           position:absolute;
           left:41px;
           top:48px;
+
           width:12px;
           height:12px;
           background:var(--theme-color);
           border:1px solid var(--theme-color);
           border-radius:50px;
+
+          @include small-desktop {
+            left:30px;
+            top:36px;
+          }
+          
+          @include tablet-down {
+            left:29px;
+            top:35px;
+            width:10px;
+            height:10px;
+          }
         }
       }
     }
 
     .ea-standard {
       width:100%;
+
+      @include phone {
+        width:117%;
+        margin-left:-17%;
+
+      }
 
       .ea-label {
         display:block;
@@ -321,7 +384,7 @@ ul.inline {
       .step:first-of-type {
 
         &:before {
-          content:'X';
+          content:'';
           mask:url(../images/svg/chevron-down.svg) no-repeat;
           -webkit-mask:url(../images/svg/chevron-down.svg) no-repeat;
           background-color:var(--heading-color);
@@ -333,6 +396,10 @@ ul.inline {
           right:11px;
           top:70px;
           pointer-events: none;
+
+          @include phone {
+            top:60px;    
+          }
         }
       }
 
@@ -581,6 +648,10 @@ ul.inline {
 
         .product-total {
           font-weight:bold;
+        }
+
+        .product-name {
+          width:80%;
         }
 
         dl.variation {
@@ -2236,7 +2307,7 @@ form {
 
 /*************************** Content Styles ****************************************************************************/
 
-.site_content {
+.site_content {  
   max-width:var(--content-width);
   margin:0 auto;
  
@@ -3066,7 +3137,7 @@ form {
 .site-tools .shopping-bag-button.cart-icon-rotate:before {
   position: relative;
   transform: rotate3d(0, 1, 0, 180deg);
-}
+} 
 
 .site-tools .shop-cart-count,
 .site-tools .wishlist-item-count {

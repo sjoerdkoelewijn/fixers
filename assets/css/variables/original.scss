@@ -2684,49 +2684,6 @@
   }
 
   
-  .pagination, .woocommerce-pagination {
-    margin-top: 70px;
-  }
-  
-  .pagination ul, .woocommerce-pagination ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .pagination ul .page-numbers, .woocommerce-pagination ul .page-numbers {
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  
-  .pagination ul .page-numbers:not(.prev):not(.next), .woocommerce-pagination ul .page-numbers:not(.prev):not(.next) {
-    width: 29px;
-    height: 29px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0);
-  }
-  
-  .pagination li, .woocommerce-pagination li {
-    list-style: none;
-    display: inline-flex;
-  }
-  
-  .pagination li .current, .woocommerce-pagination li .current {
-    color: #fff;
-  }
-  
-  .pagination .nav-links, .woocommerce-pagination .nav-links {
-    text-align: center;
-  }
-  
-  /* responsive */
-  @media (max-width: 991px) {
-    #primary + #secondary {
-      margin-top: 40px;
-    }
-  }
-  
-
-  
 
   /* author box */
   .post-author-box {

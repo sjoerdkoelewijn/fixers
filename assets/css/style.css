@@ -2549,46 +2549,6 @@ footer#colophon {
   border-bottom: 0;
 }
 
-.pagination, .woocommerce-pagination {
-  margin-top: 70px;
-}
-
-.pagination ul, .woocommerce-pagination ul {
-  margin: 0;
-  padding: 0;
-}
-
-.pagination ul .page-numbers, .woocommerce-pagination ul .page-numbers {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.pagination ul .page-numbers:not(.prev):not(.next), .woocommerce-pagination ul .page-numbers:not(.prev):not(.next) {
-  width: 29px;
-  height: 29px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.pagination li, .woocommerce-pagination li {
-  list-style: none;
-  display: inline-flex;
-}
-
-.pagination li .current, .woocommerce-pagination li .current {
-  color: #fff;
-}
-
-.pagination .nav-links, .woocommerce-pagination .nav-links {
-  text-align: center;
-}
-
-/* responsive */
-@media (max-width: 991px) {
-  #primary + #secondary {
-    margin-top: 40px;
-  }
-}
 /* author box */
 .post-author-box {
   display: flex;
@@ -2654,23 +2614,6 @@ footer#colophon {
   text-decoration: underline;
 }
 
-/* responsive */
-@media (min-width: 992px) {
-  .has-sidebar.left-sidebar .content-area {
-    float: right;
-    padding-left: 60px;
-  }
-  .has-sidebar.left-sidebar .widget-area {
-    float: left;
-  }
-  .has-sidebar.right-sidebar .content-area {
-    float: left;
-    padding-right: 60px;
-  }
-  .has-sidebar.right-sidebar .widget-area {
-    float: right;
-  }
-}
 /* Grid Standard */
 @media (min-width: 768px) {
   .blog-layout-standard .site-main .post, .blog-layout-standard .site-main .portfolio, .blog-layout-standard .site-main .service, .blog-layout-standard .site-main .team, .blog-layout-standard .site-main .knowledge {
@@ -4177,6 +4120,7 @@ footer#colophon {
 
 /*************************** Global Styles ****************************************************************************/
 html {
+  content-visibility: auto;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -4384,8 +4328,19 @@ ul.inline li:last-of-type {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap {
+    flex-direction: column;
+  }
+}
 .woocommerce-checkout .afspraken_wrap .column {
-  width: 46%;
+  min-width: 46%;
+  max-width: 49%;
+}
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap .column {
+    max-width: 100%;
+  }
 }
 .woocommerce-checkout .afspraken_wrap .options .checkout_option {
   border: 1px solid #ffffff;
@@ -4398,10 +4353,34 @@ ul.inline li:last-of-type {
   overflow: hidden;
   transition: all 1s ease;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option {
+    padding: 10px 30px 15px 65px;
+  }
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option p {
+    font-size: 90%;
+    line-height: 26px;
+  }
+}
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option {
+    padding: 10px 30px 15px 65px;
+  }
+}
 .woocommerce-checkout .afspraken_wrap .options .checkout_option .title {
-  margin-bottom: 0;
+  margin: 15px 0 0 0;
   font-size: 2.2rem;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option .title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option .title {
+    font-size: 1.8rem;
+  }
 }
 .woocommerce-checkout .afspraken_wrap .options .checkout_option .title:before {
   content: "";
@@ -4413,6 +4392,20 @@ ul.inline li:last-of-type {
   background: var(--offset-color);
   border: 1px solid var(--theme-color);
   border-radius: 50px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option .title:before {
+    left: 24px;
+    top: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap .options .checkout_option .title:before {
+    left: 24px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+  }
 }
 .woocommerce-checkout .afspraken_wrap .options .active {
   border: 1px solid var(--theme-color);
@@ -4429,15 +4422,35 @@ ul.inline li:last-of-type {
   border: 1px solid var(--theme-color);
   border-radius: 50px;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .woocommerce-checkout .afspraken_wrap .options .active:after {
+    left: 30px;
+    top: 36px;
+  }
+}
+@media (max-width: 1023px) {
+  .woocommerce-checkout .afspraken_wrap .options .active:after {
+    left: 29px;
+    top: 35px;
+    width: 10px;
+    height: 10px;
+  }
+}
 .woocommerce-checkout .afspraken_wrap .ea-standard {
   width: 100%;
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .woocommerce-checkout .afspraken_wrap .ea-standard {
+    width: 117%;
+    margin-left: -17%;
+  }
 }
 .woocommerce-checkout .afspraken_wrap .ea-standard .ea-label {
   display: block;
   text-align: left;
 }
 .woocommerce-checkout .afspraken_wrap .ea-standard .step:first-of-type:before {
-  content: "X";
+  content: "";
   mask: url(../images/svg/chevron-down.svg) no-repeat;
   -webkit-mask: url(../images/svg/chevron-down.svg) no-repeat;
   background-color: var(--heading-color);
@@ -4449,6 +4462,11 @@ ul.inline li:last-of-type {
   right: 11px;
   top: 70px;
   pointer-events: none;
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .woocommerce-checkout .afspraken_wrap .ea-standard .step:first-of-type:before {
+    top: 60px;
+  }
 }
 .woocommerce-checkout .afspraken_wrap .ea-standard select {
   position: relative;
@@ -4647,6 +4665,9 @@ ul.inline li:last-of-type {
 }
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item .product-total {
   font-weight: bold;
+}
+.woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item .product-name {
+  width: 80%;
 }
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item dl.variation {
   margin-top: -8px;
