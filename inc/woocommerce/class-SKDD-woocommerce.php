@@ -146,14 +146,14 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 			// Archive Page
 
 			if ( $options['shop_taxonomy_page_description_placement'] === 'above_products') { 
-				add_action( 'woocommerce_before_main_content', 'woocommerce_taxonomy_archive_description', 10 );
+				// add_action( 'woocommerce_before_main_content', 'woocommerce_taxonomy_archive_description', 10 );
 			}
 
 			if ( $options['shop_taxonomy_page_description_placement'] === 'below_products') { 
-				add_action( 'woocommerce_after_main_content', 'woocommerce_taxonomy_archive_description', 10 );
+				// add_action( 'woocommerce_after_main_content', 'woocommerce_taxonomy_archive_description', 10 );
 			}
 
-			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
+			// remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );		
 
 			//add_action( 'woocommerce_single_product_summary', 'SKDD_trust_badge_image', 200 );
 			add_action( 'template_redirect', 'SKDD_product_recently_viewed', 20 );
@@ -550,7 +550,7 @@ if ( ! class_exists( 'SKDD_WooCommerce' ) ) {
 
 			// SHOP SINGLE.
 			// Swap position price and rating star.
-			add_action( 'woocommerce_after_add_to_cart_quantity', 'custom_template_single_price', 30 );
+			//add_action( 'woocommerce_after_add_to_cart_quantity', 'custom_template_single_price', 30 );
 			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 5 );
 
 			add_action( 'woocommerce_single_product_summary', 'custom_template_single_add_to_cart', 20 );
@@ -656,18 +656,3 @@ function custom_callback_function() {
 }
 
 
-
-
-/**
- * Allow HTML in term (category, tag) descriptions
- */
-foreach ( array( 'pre_term_description' ) as $filter ) {
-	remove_filter( $filter, 'wp_filter_kses' );
-	if ( ! current_user_can( 'unfiltered_html' ) ) {
-		add_filter( $filter, 'wp_filter_post_kses' );
-	}
-}
- 
-foreach ( array( 'term_description' ) as $filter ) {
-	remove_filter( $filter, 'wp_kses_data' );
-}

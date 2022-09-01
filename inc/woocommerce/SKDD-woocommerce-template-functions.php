@@ -148,8 +148,8 @@ if ( ! function_exists( 'SKDD_before_content' ) ) {
 		$class = apply_filters( 'SKDD_site_main_class', 'site-main' );
 		?>
 		<div id="primary" class="content-area">
-			<main id="main" class="<?php echo esc_attr( $class ); ?>">
-			<?php
+		<?php
+
 	}
 }
 
@@ -162,11 +162,14 @@ if ( ! function_exists( 'SKDD_after_content' ) ) {
 	 */
 	function SKDD_after_content() {
 		?>
-			</main><!-- #main -->
+			<?php do_action( 'SKDD_sidebar' ); ?>
+		
+			</div><!-- #main -->
+					
 		</div><!-- #primary -->
 
 		<?php
-		do_action( 'SKDD_sidebar' );
+		
 	}
 }
 

@@ -469,13 +469,15 @@ class SKDD_Get_CSS {
 		$styles .= '
 			@media (min-width: 992px) {
 
-				.has-sidebar #secondary {
+				.has-sidebar .product_overview {
+					width: calc( 100% - ' . esc_attr( $options['sidebar_width'] ) . '%);
+				}
+
+				.has-sidebar .shop-widget {
 				width: ' . esc_attr( $options['sidebar_width'] ) . '%;
 				}
 
-				.has-sidebar #primary {
-					width: calc( 100% - ' . esc_attr( $options['sidebar_width'] ) . '%);
-				}
+				
 			}
 		';
 

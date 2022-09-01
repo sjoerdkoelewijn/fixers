@@ -2654,23 +2654,6 @@ footer#colophon {
   text-decoration: underline;
 }
 
-/* responsive */
-@media (min-width: 992px) {
-  .has-sidebar.left-sidebar .content-area {
-    float: right;
-    padding-left: 60px;
-  }
-  .has-sidebar.left-sidebar .widget-area {
-    float: left;
-  }
-  .has-sidebar.right-sidebar .content-area {
-    float: left;
-    padding-right: 60px;
-  }
-  .has-sidebar.right-sidebar .widget-area {
-    float: right;
-  }
-}
 /* Grid Standard */
 @media (min-width: 768px) {
   .blog-layout-standard .site-main .post, .blog-layout-standard .site-main .portfolio, .blog-layout-standard .site-main .service, .blog-layout-standard .site-main .team, .blog-layout-standard .site-main .knowledge {
