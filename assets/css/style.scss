@@ -2917,7 +2917,7 @@ form {
   .scrolling-down {
 
     .site_header {
-      transform: translateY(-100%);
+      //transform: translateY(-100%);
       transition:.3s ease-out;       
     } 
 
@@ -4273,6 +4273,10 @@ left:20px;
   height: 50px;
   border-radius: 30px;
   padding-left:20px;
+}
+
+.dgwt-wcas-open .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+  border-radius: 30px 30px 0 0;
 }
 
 

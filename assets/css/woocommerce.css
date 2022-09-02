@@ -1620,6 +1620,11 @@ address {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
+@media (min-width: 280px) and (max-width: 479px) {
+  .woocommerce-grouped-product-list-item {
+    width: 100%;
+  }
+}
 .woocommerce-grouped-product-list-item label {
   display: block;
   text-align: center;
