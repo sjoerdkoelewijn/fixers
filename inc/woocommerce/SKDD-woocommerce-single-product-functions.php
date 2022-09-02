@@ -770,11 +770,13 @@ if ( ! function_exists( 'skdd_product_image' ) ) {
 					$secondary_image = wp_get_attachment_image($secondary_image_id, apply_filters('woocommerce_full_size', 'woocommerce_full_size'));
 				}
 
-				if (!empty($secondary_image)) {
+				if (!empty($secondary_image)) { ?>
 				
 					//echo wp_kses_post($secondary_image);
+					
 					<img class="fixers_slogan" src="/wp-content/uploads/fixers-jouw-device-zo-gefixt-blauw-oranje-nl.svg">
 
+					<?php 
 					
 				} else { ?>
 
