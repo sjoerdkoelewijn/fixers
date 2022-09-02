@@ -6893,7 +6893,7 @@ form input:focus, form textarea:focus {
   }
 }
 .sidebar-menu {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   top: 0;
   background: var(--sidebar-background-color);
