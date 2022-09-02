@@ -1492,32 +1492,21 @@ function output_custom_woocommerce_fields($price) {
 
 	$max_prijs_string = sprintf( __( ' tot €%.2f', 'woocommerce' ), abs( $max_prijs ) );
 
-	?>
-	<?php
-
-		if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
-			
-			return __( 'Vanaf ', 'SKDD' ) . $price . $max_prijs_string;
-
-		} elseif ( 'yes' === $toon_max_prijs ) {	
-
-			return __( 'Vanaf ', 'SKDD' ) . $price;
-			
-		} else {
-
-			return $price;
+	if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
 		
-		};
+		return __( 'Vanaf ', 'SKDD' ) . $price . $max_prijs_string;
 
-		?>
-	<?php
+	} elseif ( 'yes' === $toon_max_prijs ) {	
 
+		return __( 'Vanaf ', 'SKDD' ) . $price;
+		
+	} else {
 
+		return $price; 
+	
+	};
 
 }
-
-add_filter( 'woocommerce_get_price_html', 'output_custom_woocommerce_fields' );
-add_filter( 'woocommerce_cart_item_price', 'output_custom_woocommerce_fields' );
 
 
 function woocommerce_custom_fields_add_cart_item_meta( $cart_item_data, $product_id, $variation_id ) {
