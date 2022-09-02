@@ -1410,11 +1410,6 @@ address {
   margin-left: -20px;
   margin-right: 10px;
 }
-@media (min-width: 280px) and (max-width: 479px) {
-  .single-product .single_add_to_cart_button:before {
-    background-color: var(--heading-color);
-  }
-}
 .single-product .woocommerce-variation-add-to-cart {
   position: relative;
   margin-bottom: 50px;

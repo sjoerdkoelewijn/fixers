@@ -2391,8 +2391,8 @@ form {
 
   .ghostkit-col {
     --gkt-grid__gap:0px;
-    padding-top:var(--content-spacing-mobile);   
-    padding-bottom:var(--content-spacing-mobile);
+    //padding-top:var(--content-spacing-mobile);   
+    //padding-bottom:var(--content-spacing-mobile);
   } 
 
   .ghostkit-grid-inner {
@@ -3480,7 +3480,7 @@ transform: translateX(0);
 
   @include phone{
     .site-tools {
-      display:none;
+      //display:none;
     }
   }
   

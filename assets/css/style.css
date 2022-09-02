@@ -6062,8 +6062,6 @@ form input:focus, form textarea:focus {
 @media (min-width: 280px) and (max-width: 479px) {
   .ghostkit-col {
     --gkt-grid__gap:0px;
-    padding-top: var(--content-spacing-mobile);
-    padding-bottom: var(--content-spacing-mobile);
   }
   .ghostkit-grid-inner {
     width: 100%;
@@ -6939,12 +6937,6 @@ form input:focus, form textarea:focus {
 .has-header-layout-3 .sidebar-menu {
   min-width: 300px;
 }
-@media (min-width: 280px) and (max-width: 479px) {
-  .has-header-layout-3 .site-tools {
-    display: none;
-  }
-}
-
 .sidebar-menu .arrow-icon {
   transform: rotate(0deg);
 }
