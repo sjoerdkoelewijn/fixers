@@ -5878,7 +5878,7 @@ form input:focus, form textarea:focus {
 @media (min-width: 280px) and (max-width: 479px) {
   .wp-block-media-text.is-stacked-on-mobile.has-background {
     border-radius: 0;
-    margin-left: -3vw;
+    margin-left: calc(var(--content-spacing-mobile) * -1);
     width: 100vw;
   }
   .wp-block-media-text.is-stacked-on-mobile.has-background figure, .wp-block-media-text.is-stacked-on-mobile.has-background img {

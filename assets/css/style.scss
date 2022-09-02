@@ -2136,7 +2136,7 @@ form {
 @include phone {
   .wp-block-media-text.is-stacked-on-mobile.has-background {
     border-radius:0;
-    margin-left:-3vw;
+    margin-left:calc(var(--content-spacing-mobile) * -1);
     width:100vw;
     
     figure, img {
