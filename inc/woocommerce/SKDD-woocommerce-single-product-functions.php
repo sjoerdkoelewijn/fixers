@@ -772,8 +772,9 @@ if ( ! function_exists( 'skdd_product_image' ) ) {
 
 				if (!empty($secondary_image)) {
 				
-					echo wp_kses_post($secondary_image);
-			
+					//echo wp_kses_post($secondary_image);
+					<img class="fixers_slogan" src="/wp-content/uploads/fixers-jouw-device-zo-gefixt-blauw-oranje-nl.svg">
+
 					
 				} else { ?>
 
