@@ -4120,7 +4120,6 @@ footer#colophon {
 
 /*************************** Global Styles ****************************************************************************/
 html {
-  content-visibility: auto;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
