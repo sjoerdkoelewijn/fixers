@@ -95,6 +95,7 @@
 
   .cart {
     margin-top:20px;
+    display:inline;
   }
 
   .product-type-variable {
@@ -4567,6 +4568,7 @@
 }
 
 .products {
+  content-visibility: auto;  // speed optimization
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;  

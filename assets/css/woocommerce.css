@@ -77,6 +77,7 @@ address {
 }
 .single-product .cart {
   margin-top: 20px;
+  display: inline;
 }
 .single-product .product-type-variable .price {
   display: none !important;
@@ -4148,6 +4149,7 @@ table.shop_table {
 }
 
 .products {
+  content-visibility: auto;
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
