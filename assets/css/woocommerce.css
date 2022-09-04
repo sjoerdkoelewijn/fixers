@@ -4161,7 +4161,6 @@ table.shop_table {
 }
 
 .products {
-  content-visibility: auto;
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;

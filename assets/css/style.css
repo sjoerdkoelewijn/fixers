@@ -4722,10 +4722,6 @@ a svg path {
   fill: var(--text-color);
 }
 
-.content-area {
-  content-visibility: auto;
-}
-
 .content-area p a {
   font-weight: bold;
   text-decoration: underline;
