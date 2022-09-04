@@ -4722,6 +4722,10 @@ a svg path {
   fill: var(--text-color);
 }
 
+.content-area {
+  content-visibility: auto;
+}
+
 .content-area p a {
   font-weight: bold;
   text-decoration: underline;
@@ -6143,7 +6147,7 @@ form input:focus, form textarea:focus {
 @media (min-width: 280px) and (max-width: 479px) {
   .wp-block-cover .wp-block-group.has-background {
     margin-left: -2vw;
-    width: 96vw;
+    width: 94vw;
   }
 }
 @media (min-width: 280px) and (max-width: 479px) {

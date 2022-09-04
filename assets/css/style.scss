@@ -744,6 +744,10 @@ a {
     }
 }
 
+.content-area {
+  content-visibility: auto; 
+}
+
 .content-area p {
   a {
     font-weight:bold;
@@ -2539,7 +2543,7 @@ form {
   .wp-block-cover {
     .wp-block-group.has-background {
       margin-left:-2vw;    
-      width:96vw;    
+      width:94vw;    
     }
   }  
 
