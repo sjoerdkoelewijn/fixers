@@ -2091,8 +2091,8 @@ form {
 .ghostkit-icon-box {
   --gkt-icon-box__border-width: 0;
   --gkt-blocks-margin-bottom: 0;
-  --gkt-icon-box__padding-h:calc(var(--content-spacing) / 10 );
-  --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
+  --gkt-icon-box__padding-h:calc(var(--content-spacing) / 10 ) !important;
+  --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 ) !important;
   display:flex;
   align-items: center;
   border:0 !important;
@@ -5671,7 +5671,7 @@ left:20px;
   .cart-sidebar-content {
     overflow-y: auto;
     overflow-x: hidden;
-    height: -webkit-calc( 100% - 210px);
+    height: -webkit-calc( 100% - 210px); 
     height: calc( 100% - 210px);
   
     .variation-Maximalekosten {
@@ -5745,7 +5745,7 @@ left:20px;
     }
   }
   
-  .cart-sidebar-content .woocommerce-mini-cart__buttons a.checkout {
+  .cart-sidebar-content .woocommerce-mini-cart__buttons a.checkout { 
     height: 50px;
   }
   

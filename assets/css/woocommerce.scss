@@ -4412,7 +4412,7 @@
     padding: 0;
   }
   
-  .woocommerce-mini-cart-item.woosb-item-child {
+  .woocommerce-mini-cart-item.woosb-item-child { 
     list-style: none;
     margin-left: 30px;
   }
@@ -4424,6 +4424,20 @@
   
   .woocommerce-mini-cart-item.woosb-item-child .input-text {
     pointer-events: none;
+  }
+
+  .woocommerce_minicart_btns {
+    position:absolute;
+    bottom:30px;
+    left:30px;
+    right:30px;
+    height: 55px;
+    line-height: 25px;
+
+    .checkout-button {
+      font-size:16px;
+    }
+
   }
 
   .woocommerce-mini-cart__buttons {

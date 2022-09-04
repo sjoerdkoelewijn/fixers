@@ -2200,7 +2200,6 @@ footer#colophon {
 }
 
 .woocommerce-mini-cart__total {
-  text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2215,7 +2214,7 @@ footer#colophon {
 }
 
 .woocommerce-mini-cart__buttons .button {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -2223,7 +2222,6 @@ footer#colophon {
   width: 50%;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .woocommerce-mini-cart__buttons a.checkout {
@@ -5852,8 +5850,8 @@ form input:focus, form textarea:focus {
 .ghostkit-icon-box {
   --gkt-icon-box__border-width: 0;
   --gkt-blocks-margin-bottom: 0;
-  --gkt-icon-box__padding-h:calc(var(--content-spacing) / 10 );
-  --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 );
+  --gkt-icon-box__padding-h:calc(var(--content-spacing) / 10 ) !important;
+  --gkt-icon-box__padding-v:calc(var(--content-spacing) / 10 ) !important;
   display: flex;
   align-items: center;
   border: 0 !important;

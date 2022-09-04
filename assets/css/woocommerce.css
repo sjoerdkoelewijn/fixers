@@ -4047,6 +4047,18 @@ ul.products li.product .product-loop-image-wrapper .tinvwl_add_to_wishlist_butto
   pointer-events: none;
 }
 
+.woocommerce_minicart_btns {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  height: 55px;
+  line-height: 25px;
+}
+.woocommerce_minicart_btns .checkout-button {
+  font-size: 16px;
+}
+
 .woocommerce-mini-cart__buttons .button {
   display: none !important;
 }

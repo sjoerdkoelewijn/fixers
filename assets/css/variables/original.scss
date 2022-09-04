@@ -2327,7 +2327,6 @@
   }
   
   .woocommerce-mini-cart__total {
-    text-transform: uppercase;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -2345,8 +2344,8 @@
     margin-bottom: 0;
   }
   
-  .woocommerce-mini-cart__buttons .button {
-    font-size: 12px;
+  .woocommerce-mini-cart__buttons .button { 
+    font-size: 16px;
     font-weight: 700;
   }
   
@@ -2354,7 +2353,6 @@
     width: 50%;
     display: inline-block;
     text-align: center;
-    text-transform: uppercase;
   }
   
   .woocommerce-mini-cart__buttons a.checkout {

@@ -321,8 +321,11 @@ if ( ! function_exists( 'SKDD_mini_cart' ) ) {
 
 			<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
-			<p class="woocommerce-mini-cart__buttons buttons">
-				<?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?>
+			<p class="woocommerce_minicart_btns buttons">
+
+				<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward">
+					<?php esc_html_e( 'Afspraak inplannen', 'woocommerce' ); ?>
+				</a>
 			</p>
 
 			<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' );
