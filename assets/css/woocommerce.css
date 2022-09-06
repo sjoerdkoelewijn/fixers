@@ -1475,13 +1475,13 @@ address {
   }
 }
 .single-product .product_info_wrap .product_image_wrap {
-  width: 40vw;
+  width: clamp(100px, 40vw, 750px);
 }
 .single-product .product_info_wrap .product_image_wrap img {
   width: 100%;
-  max-width: 25vw;
+  max-width: 600px;
 }
-@media (min-width: 280px) and (max-width: 479px) {
+@media (max-width: 1023px) {
   .single-product .product_info_wrap .product_image_wrap {
     display: none;
   }

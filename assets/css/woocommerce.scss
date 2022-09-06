@@ -1654,15 +1654,15 @@
       //position:absolute;
       //right:17vw;
       //margin-top:-1vh;
-      width:40vw;
+      width:clamp(100px, 40vw, 750px);
 
       img {
         //width:17vw;
         width:100%;
-        max-width:25vw;
+        max-width:600px;
       }
 
-      @include phone {
+      @include tablet-down {
         display:none;
       }
       

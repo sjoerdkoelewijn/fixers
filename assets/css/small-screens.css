@@ -6,6 +6,13 @@
   display: none;
 }
 
+div:not(.sidebar-menu) .site-navigation {
+  display: none;
+}
+div:not(.sidebar-menu) .site-navigation .sub-menu {
+  display: none;
+}
+
 .has-header-layout-1 .wrap-toggle-sidebar-menu {
   display: block;
 }

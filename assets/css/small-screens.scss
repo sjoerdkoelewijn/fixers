@@ -6,6 +6,16 @@
     display:none;
 }
 
+div:not(.sidebar-menu){
+    .site-navigation {
+        display:none;
+        
+        .sub-menu {
+            display:none;
+        }
+    }
+}
+
 // Layout 1
 
 .has-header-layout-1 .wrap-toggle-sidebar-menu {
