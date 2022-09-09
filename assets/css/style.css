@@ -4664,7 +4664,7 @@ ul.inline li:last-of-type {
   font-weight: bold;
 }
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item .product-name {
-  width: 80%;
+  width: 75%;
 }
 .woocommerce-checkout .afspraken_wrap .kostenoverzicht .cart_item dl.variation {
   margin-top: -8px;
@@ -8777,7 +8777,7 @@ form.woocommerce-checkout {
   .cart-sidebar-content .woocommerce-mini-cart__total {
     right: 15px;
     left: 15px;
-    bottom: 85px;
+    bottom: 125px;
     height: 30px;
   }
 }
