@@ -2208,7 +2208,7 @@ if ( ! function_exists( 'SKDD_header_action' ) ) {
 				// Shopping cart icon.
 				if ( $options['header_shop_cart_icon'] ) {
 					?>
-					<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="tools-icon shopping-bag-button <?php echo esc_attr( $shop_bag_icon ); ?>">
+					<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="tools-icon shopping-bag-button <?php echo esc_attr( $shop_bag_icon ); ?>">
 						<span class="shop-cart-count"><?php echo esc_html( $count ); ?></span>
 					</a>
 					<?php
