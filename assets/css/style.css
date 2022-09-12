@@ -8295,6 +8295,10 @@ form.woocommerce-checkout {
   margin-top: 0;
 }
 
+.wp-block-separator {
+  margin-left: 0;
+}
+
 /*************************** Ghostkit Accordion ****************************************************************************/
 .ghostkit-accordion-item {
   --gkt-accordion--heading__padding-v:calc(var(--content-spacing) / 2);
