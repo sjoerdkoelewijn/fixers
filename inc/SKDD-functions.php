@@ -73,14 +73,12 @@ if ( ! function_exists( 'SKDD_suffix' ) ) {
 }
 
 
-
 if ( ! function_exists( 'SKDD_is_woocommerce_activated' ) ) {
-	/**
-	 * Query WooCommerce activation
-	 */
+
 	function SKDD_is_woocommerce_activated() {
 		return class_exists( 'woocommerce' ) ? true : false;
 	}
+
 }
 
 if ( ! function_exists( 'SKDD_get_product_id' ) ) {
@@ -669,6 +667,19 @@ if ( ! function_exists( 'SKDD_array_insert' ) ) {
 		return $result;
 	}
 }
+
+
+// Remove woocommerce schema for products
+
+add_filter( 'woocommerce_structured_data_product', 'SKDD_structured_data_product_nulled', 10, 2 );
+
+function SKDD_structured_data_product_nulled( $markup, $product ){
+    if( is_product() ) {
+        $markup = '';
+    }
+    return $markup;
+}
+
 
 if ( ! function_exists( 'SKDD_support_wishlist_plugin' ) ) {
 	/**
