@@ -731,7 +731,7 @@ if ( ! class_exists( 'SKDD' ) ) {
 			if ( $options['shop_single_ajax_add_to_cart'] ) {
 				wp_register_script(
 					'skdd-single-add-to-cart',
-					SKDD_THEME_URI . 'assets/js/woocommerce/ajax-single-add-to-cart' . SKDD_suffix() . '.js',
+					SKDD_THEME_URI . 'assets/js/woocommerce/ajax-single-add-to-cart.js',
 					array(),
 					SKDD_version(),
 					true

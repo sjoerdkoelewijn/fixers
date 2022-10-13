@@ -109,15 +109,15 @@ function SKDDAjaxSingleAddToCartButton() {
 
 				// Events.
 				if ( 'function' === typeof( eventCartSidebarOpen ) ) {
-					eventCartSidebarOpen();
+					//eventCartSidebarOpen();
 				}
 
 				if ( 'function' === typeof( cartSidebarOpen ) ) {
-					cartSidebarOpen();
+					//cartSidebarOpen();
 				}
 
 				if ( 'function' === typeof( closeAll ) ) {
-					closeAll();
+					//closeAll();
 				}
 
 				// Data.
@@ -187,10 +187,7 @@ function SKDDAjaxSingleAddToCartButton() {
 							}
 
 							// Redirect to checkout page.
-							if ( button.classList.contains( 'skdd-buy-now' ) ) {
-								var checkoutUrl = button.getAttribute( 'data-checkout_url' );
-								window.location = checkoutUrl;
-							}
+							location.href='/checkout/'
 
 							// Update total price, for header-layout-6.
 							var totalPrice = document.querySelector( '.skdd-total-price' );
@@ -215,7 +212,8 @@ function SKDDAjaxSingleAddToCartButton() {
 							// Hide quick view popup when product added to cart.
 							document.documentElement.classList.remove( 'quick-view-open' );
 
-							jQuery( document.body ).trigger( 'added_to_cart' );
+							jQuery( document.body ).trigger( 'added_to_cart' );							
+
 						}
 					);
 			}

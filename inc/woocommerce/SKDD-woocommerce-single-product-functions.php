@@ -754,8 +754,6 @@ if ( ! function_exists( 'SKDD_single_product_tags' ) ) {
 }
 
 
-
-
 if ( ! function_exists( 'skdd_product_image' ) ) {
 	
 	function skdd_product_image($product) { ?>
