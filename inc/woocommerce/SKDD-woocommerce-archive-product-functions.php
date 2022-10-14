@@ -240,9 +240,9 @@ if ( ! function_exists( 'SKDD_add_template_loop_product_title' ) ) {
 		?>
 		<h2 class="woocommerce-loop-product__title">
 			<?php
-				woocommerce_template_loop_product_link_open();
+				//woocommerce_template_loop_product_link_open();
 				the_title();
-				woocommerce_template_loop_product_link_close();
+				//woocommerce_template_loop_product_link_close();
 			?>
 		</h2>
 		<?php

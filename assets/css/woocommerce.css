@@ -1123,11 +1123,6 @@ address {
   /* Add to cart ( On image ) */
 }
 
-.product-loop-image-wrapper .woocommerce-loop-product__link {
-  display: block;
-  text-align: center;
-}
-
 .product-loop-image-wrapper.zoom-hover:hover img {
   transform: scale(1.1);
 }
@@ -4180,16 +4175,21 @@ table.shop_table {
   border: 1px solid #ffffff;
   max-width: 230px;
   margin-right: 2%;
-  padding: 40px 5px 10px 5px;
   background: #FFFFFF;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 .products .product img {
   width: 75%;
+  margin: 0 auto;
+  display: block;
 }
 .products .product .woocommerce-loop-product__title {
   font-weight: var(--body-font-weight);
+}
+.products .product .woocommerce-loop-product__link {
+  padding: 40px 5px 10px 5px;
+  min-height: 320px;
 }
 
 .onsale {
