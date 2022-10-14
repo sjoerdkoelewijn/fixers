@@ -1419,7 +1419,6 @@ address {
 }
 .single-product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
   margin-top: -100px;
-  right: 10vw;
   position: absolute;
   z-index: 100;
 }
@@ -4190,6 +4189,11 @@ table.shop_table {
 .products .product .woocommerce-loop-product__link {
   padding: 40px 5px 10px 5px;
   min-height: 320px;
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .products .product .woocommerce-loop-product__link {
+    min-height: 275px;
+  }
 }
 
 .onsale {

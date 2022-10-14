@@ -1588,7 +1588,7 @@
 
     .single_add_to_cart_button {
       margin-top:-100px;
-      right:10vw;      
+      //right:10vw;      
       position:absolute;
       z-index:100;
       
@@ -4626,7 +4626,11 @@
     .woocommerce-loop-product__link {
       padding:40px 5px 10px 5px;
       min-height:320px;
-    }
+      
+      @include phone {
+        min-height:275px;
+      }
+    }    
     
   }
 
