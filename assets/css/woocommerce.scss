@@ -1582,14 +1582,14 @@
     margin-bottom:50px;
 
     @include phone {
-      position:fixed;
-      background:var(--theme-color);
+      //position:fixed;
+      //background:var(--theme-color);
       padding:20px;
         bottom:0;
         left:0;        
-        width:100vw; 
+        //width:100vw; 
         z-index:20;
-        margin:0;
+        margin:20px 0 30px 0;
     }
 
     .single_add_to_cart_button {
@@ -1601,9 +1601,9 @@
       @include phone {
         position:relative;
         margin:0;
-        right:0;
-        color:var(--heading-color) !important;
-        background-color:var(--background-color) !important;
+        //right:0;
+        color:white !important;
+        background-color:var(--theme-color) !important;
       }
      
     }        
