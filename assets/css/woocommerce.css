@@ -1421,6 +1421,7 @@ address {
 }
 .single-product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
   margin-top: -100px;
+  right: 8vw;
   position: absolute;
   z-index: 100;
 }
@@ -1428,6 +1429,7 @@ address {
   .single-product .woocommerce-variation-add-to-cart .single_add_to_cart_button {
     position: relative;
     margin: 0;
+    right: auto;
     color: white !important;
     background-color: var(--theme-color) !important;
   }

@@ -1588,14 +1588,14 @@
 
     .single_add_to_cart_button {
       margin-top:-100px;
-      //right:10vw;      
+      right:8vw;      
       position:absolute;
       z-index:100;
       
       @include phone {
         position:relative;
         margin:0;
-        //right:0;
+        right:auto;
         color:white !important;
         background-color:var(--theme-color) !important;
       }
