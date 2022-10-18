@@ -81,25 +81,5 @@ $wp_customize->add_control(
 	)
 );
 
-// Custom text.
-$wp_customize->add_setting(
-	'SKDD_setting[footer_custom_text]',
-	array(
-		'default'           => $defaults['footer_custom_text'],
-		'sanitize_callback' => 'SKDD_sanitize_raw_html',
-		'type'              => 'option',
-	)
-);
-$wp_customize->add_control(
-	new WP_Customize_Control(
-		$wp_customize,
-		'SKDD_setting[footer_custom_text]',
-		array(
-			'label'    => __( 'Custom Text', 'SKDD' ),
-			'type'     => 'textarea',
-			'section'  => 'SKDD_footer',
-			'settings' => 'SKDD_setting[footer_custom_text]',
-		)
-	)
-);
+
 

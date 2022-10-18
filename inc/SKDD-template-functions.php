@@ -252,66 +252,47 @@ if ( ! function_exists( 'SKDD_footer_widgets' ) ) {
 	}
 }
 
-if ( ! function_exists( 'SKDD_footer_custom_text' ) ) {
+
+if ( ! function_exists( 'SKDD_footer_content' ) ) {
 	/**
-	 * Footer custom text
-	 *
-	 * @return string $content Footer custom text
+	 * Display the footer widget regions.
 	 */
-	function SKDD_footer_custom_text() {
-		$content = __( 'Copyright &copy; [current_year] [site_title] | Made by [sjoerd_link] |', 'SKDD' );
+	function SKDD_footer_content() {
 
-		if ( apply_filters( 'SKDD_credit_info', true ) ) {
+		// Default values.
+		$option        = SKDD_options( false );
 
-			if ( apply_filters( 'SKDD_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
-				$content .= get_the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-			}
+		if ( function_exists( 'pll_the_languages' ) ) {
+
+			$FooterObj = get_page_by_title( 'Footer '.pll_current_language(), OBJECT, 'wp_block' );
+
+		} else {
+
+			$FooterObj = get_page_by_title( 'Footer', OBJECT, 'wp_block' );
+
+		}
+		
+		$FooterHomeObj = get_page_by_title( 'Footer Home', OBJECT, 'wp_block' );
+		
+		$FooterContent = apply_filters('the_content', $FooterObj->post_content);			
+		$FooterHomeContent = apply_filters('the_content', $FooterHomeObj->post_content);	
+
+		if ( $FooterContent !== "" ) {
+
+			echo $FooterContent;
+		
+		} elseif ( is_active_sidebar( 'footer' ) ) {
+				
+			dynamic_sidebar( 'footer' ); 
+
+		} 
+
+		if ( $FooterHomeContent !== "" && is_front_page() ) {
+
+			echo $FooterHomeContent;
+
 		}
 
-		return $content;
-
-	}
-}
-
-if ( ! function_exists( 'SKDD_credit' ) ) {
-	/**
-	 * Display the theme credit
-	 *
-	 * @return void
-	 */
-	function SKDD_credit() {
-		$options = SKDD_options( false );
-		if ( ! $options['footer_custom_text'] && ! has_nav_menu( 'footer' ) ) {
-			return;
-		}
-		?>
-
-		<div class="site-info">
-			<?php
-			if ( $options['footer_custom_text'] ) {
-				$footer_text = SKDD_replace_text( $options['footer_custom_text'] );
-				?>
-				<div class="site-infor-col">
-					<?php echo do_shortcode( $footer_text ); ?>
-				</div>
-			<?php } ?>
-
-			<?php
-			if ( has_nav_menu( 'footer' ) ) {
-				echo '<div class="site-infor-col">';
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'skdd-footer-menu',
-							'container'      => '',
-							'depth'          => 1,
-						)
-					);
-				echo '</div>';
-			}
-			?>
-		</div>
-		<?php
 	}
 }
 

@@ -162,7 +162,7 @@ if ( ! class_exists( 'SKDD_Customizer' ) ) :
 				'footer_heading_color'                    => '#2b2b2b',
 				'footer_link_color'                       => '#8f8f8f',
 				'footer_text_color'                       => '#8f8f8f',
-				'footer_custom_text'                      => SKDD_footer_custom_text(),
+				
 				// Scroll To Top.
 				'scroll_to_top'                           => true,
 				'scroll_to_top_background'                => '#000000',
