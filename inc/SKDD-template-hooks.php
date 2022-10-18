@@ -85,7 +85,7 @@ add_action( 'SKDD_after_footer', 'SKDD_dialog_search', 30 );
 add_action( 'SKDD_footer_action', 'SKDD_scroll_to_top', 40 );
 
 // Inside @SKDD_site_footer hook.
-add_action( 'SKDD_footer_content', 'SKDD_footer_widgets', 10 );
+add_action( 'SKDD_footer_content', 'SKDD_footer_content', 10 );
 
 // Inside @SKDD_toggle_sidebar hook.
 add_action( 'SKDD_toggle_sidebar', 'SKDD_sidebar_menu_open', 10 );

@@ -287,9 +287,9 @@ if ( ! function_exists( 'SKDD_footer_content' ) ) {
 
 		} 
 
-		if ( $FooterHomeContent !== "" && is_front_page() ) {
+		if ( $FooterHomeContent && is_front_page() ) {
 
-			echo $FooterHomeContent;
+			echo $FooterHomeContent;			
 
 		}
 
