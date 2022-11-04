@@ -297,13 +297,22 @@ class SKDD_Get_CSS {
 			.has-header-transparent.header-transparent-for-all-devices .site_header {
 				margin-top:'. esc_attr( $options['topbar_height']) . 'px' .';
 			}
+			
+			';			
+		}
+
+		if ( $topbar_display && $header_sticky ) {
+			$styles .= '
 
 			.scrolling-down .site_content, .scrolling-up .site_content {
 				margin-top:calc(var(--header-max-height) + var(--topbar-height));
 			}
-			
-			';			
-		}
+
+			';
+		
+		}	
+
+		
 
 		// Logo width.
 		$logo_width        = $options['logo_width'];
