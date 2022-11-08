@@ -1423,7 +1423,7 @@ function save_minmax_option_fields( $post_id ) {
 	update_post_meta( $post_id, '_add_max_price', $allow_personal_message );
 
 	if ( isset( $_POST['_max_prijs'] ) ) :
-		update_post_meta( $post_id, '_max_prijs', abs( $_POST['_max_prijs'] ) );
+		update_post_meta( $post_id, '_max_prijs', abs((float) $_POST['_max_prijs'] ) );
 	endif;
 
 	$is_min_max = isset( $_POST['_min_max'] ) ? 'yes' : 'no';
@@ -1493,7 +1493,7 @@ function output_custom_woocommerce_fields($price) {
 	$toon_max_prijs = get_post_meta( get_the_ID(), '_add_max_price', true );
 	$max_prijs        = get_post_meta( get_the_ID(), '_max_prijs', true );
 
-	$max_prijs_string = sprintf( __( ' tot €%.2f', 'woocommerce' ), abs( $max_prijs ) );
+	$max_prijs_string = sprintf( __( ' tot €%.2f', 'woocommerce' ), abs((float) $max_prijs ) );
 
 	if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
 		
@@ -1519,7 +1519,7 @@ function woocommerce_custom_fields_add_cart_item_meta( $cart_item_data, $product
 
 	if ( 'yes' === $toon_max_prijs && $max_prijs != 0 ) {	
 
-		$cart_item_data['max_price'] = abs( get_post_meta( $product_id, '_max_prijs', true ) );
+		$cart_item_data['max_price'] = abs((float) get_post_meta( $product_id, '_max_prijs', true ) );
 
 		return $cart_item_data;
 
