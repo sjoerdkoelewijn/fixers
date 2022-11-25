@@ -6064,7 +6064,6 @@ form input:focus, form textarea:focus {
   .ghostkit-grid-inner {
     width: 100%;
     margin-left: 0 !important;
-    display: block;
   }
   .ghostkit-col-with-bg {
     margin-left: calc(var(--content-spacing-mobile) * -1);
