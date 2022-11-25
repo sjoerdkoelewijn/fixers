@@ -272,26 +272,36 @@ if ( ! function_exists( 'SKDD_footer_content' ) ) {
 
 		}
 		
+		
+		if ( $FooterObj !== "" ) {
+
+			$FooterContent = apply_filters('the_content', $FooterObj->post_content);			
+
+			if ( $FooterContent !== "" ) {
+
+				echo $FooterContent;
+			
+			} elseif ( is_active_sidebar( 'footer' ) ) {
+					
+				dynamic_sidebar( 'footer' ); 
+	
+			} 
+		}
+
 		$FooterHomeObj = get_page_by_title( 'Footer Home', OBJECT, 'wp_block' );
-		
-		$FooterContent = apply_filters('the_content', $FooterObj->post_content);			
-		$FooterHomeContent = apply_filters('the_content', $FooterHomeObj->post_content);	
 
-		if ( $FooterContent !== "" ) {
+		if ( $FooterHomeObj !== "" ) {
 
-			echo $FooterContent;
-		
-		} elseif ( is_active_sidebar( 'footer' ) ) {
-				
-			dynamic_sidebar( 'footer' ); 
+			$FooterHomeContent = apply_filters('the_content', $FooterHomeObj->post_content);	
 
-		} 
+			if ( $FooterHomeContent !== "" && is_front_page() ) {
 
-		if ( $FooterHomeContent !== "" && is_front_page() ) {
+				echo $FooterHomeContent;
 
-			echo $FooterHomeContent;
+			}
 
 		}
+		
 
 	}
 }
