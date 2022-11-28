@@ -1591,6 +1591,18 @@
       right:8vw;      
       position:absolute;
       z-index:100;
+
+      @include small-desktop {
+        position:relative;
+        margin:20px 0 0 0;
+        right:auto;
+      }
+
+      @include tablet {
+        position:relative;
+        margin:20px 0 0 0;
+        right:auto;
+      }
       
       @include phone {
         position:relative;
