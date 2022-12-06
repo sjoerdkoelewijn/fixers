@@ -11,6 +11,10 @@ a:focus {
   box-shadow: none !important;
 }
 
+* .ghostkit-d-none {
+  display: block !important;
+}
+
 .wp-block {
   max-width: 75vw; 
 }
