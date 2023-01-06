@@ -5466,19 +5466,8 @@ form input:focus, form textarea:focus {
   border-radius: 2px;
 }
 
-.ghostkit-col-with-bg .forminator-input {
-  opacity: 0.85;
-}
-.ghostkit-col-with-bg .forminator-input:focus {
-  opacity: 1;
-  border: 0 !important;
-}
-.ghostkit-col-with-bg .forminator-button-submit {
-  background: var(--tertiary-theme-color);
-  color: var(--background-color);
-}
-.ghostkit-col-with-bg input:focus, .ghostkit-col-with-bg textarea:focus {
-  box-shadow: none;
+.forminator-edit-module {
+  display: none;
 }
 
 /*************************** Search ****************************************************************************/

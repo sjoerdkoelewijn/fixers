@@ -1625,26 +1625,8 @@ form {
 }
 
 
-.ghostkit-col-with-bg {
-  
-  .forminator-input {
-    opacity:.85;
-
-    &:focus {
-      opacity:1;
-      border:0 !important;
-    }
-  }
-
-  .forminator-button-submit {
-    background:var(--tertiary-theme-color);
-    color:var(--background-color);
-  }
-
-  input:focus, textarea:focus {
-    box-shadow: none; 
-  }
-
+.forminator-edit-module {
+  display:none;
 }
 
 /*************************** Search ****************************************************************************/
